@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: 1eb8059@2021-06-08 20:08:35  # noqa: E501
+    Git version: e474704@2021-06-09 05:40:56  # noqa: E501
 
     OpenAPI spec version: 0.0.0
     
@@ -22,6 +22,7 @@ VERSION = "1.0.0"
 # http://pypi.python.org/pypi/setuptools
 
 REQUIRES = ["urllib3 >= 1.15", "six >= 1.10", "certifi", "python-dateutil"]
+REQUIRES.append("aiohttp")
 
 setup(
     name=NAME,
@@ -34,6 +35,6 @@ setup(
     packages=find_packages(),
     include_package_data=True,
     long_description="""\
-    Git version: 1eb8059@2021-06-08 20:08:35  # noqa: E501
+    Git version: e474704@2021-06-09 05:40:56  # noqa: E501
     """
 )

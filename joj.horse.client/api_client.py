@@ -2,7 +2,7 @@
 """
     JOJ Horse
 
-    Git version: 1eb8059@2021-06-08 20:08:35  # noqa: E501
+    Git version: e474704@2021-06-09 05:40:56  # noqa: E501
 
     OpenAPI spec version: 0.0.0
     
@@ -90,7 +90,7 @@ class ApiClient(object):
     def set_default_header(self, header_name, header_value):
         self.default_headers[header_name] = header_value
 
-    def __call_api(
+    async def __call_api(
             self, resource_path, method, path_params=None,
             query_params=None, header_params=None, body=None, post_params=None,
             files=None, response_type=None, auth_settings=None,
@@ -145,7 +145,7 @@ class ApiClient(object):
         url = self.configuration.host + resource_path
 
         # perform request and return response
-        response_data = self.request(
+        response_data = await self.request(
             method, url, query_params=query_params, headers=header_params,
             post_params=post_params, body=body,
             _preload_content=_preload_content,
