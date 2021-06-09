@@ -1,10 +1,11 @@
 # coding: utf-8
 
 # flake8: noqa
+
 """
     JOJ Horse
 
-    Git version: e474704@2021-06-09 05:40:56  # noqa: E501
+    Git version: f65cd26@2021-06-09 05:56:00  # noqa: E501
 
     OpenAPI spec version: 0.0.0
     
@@ -13,7 +14,20 @@
 
 from __future__ import absolute_import
 
-# import models into model package
+# import apis into sdk package
+from joj.horse.client.api.admin_api import AdminApi
+from joj.horse.client.api.default_api import DefaultApi
+from joj.horse.client.api.domain_api import DomainApi
+from joj.horse.client.api.miscellaneous_api import MiscellaneousApi
+from joj.horse.client.api.problem_api import ProblemApi
+from joj.horse.client.api.problem_group_api import ProblemGroupApi
+from joj.horse.client.api.problem_set_api import ProblemSetApi
+from joj.horse.client.api.record_api import RecordApi
+from joj.horse.client.api.user_api import UserApi
+# import ApiClient
+from joj.horse.client.api_client import ApiClient
+from joj.horse.client.configuration import Configuration
+# import models into sdk package
 from joj.horse.client.models.all_of_problem_create_data_version import AllOfProblemCreateDataVersion
 from joj.horse.client.models.all_of_problem_data_version import AllOfProblemDataVersion
 from joj.horse.client.models.all_of_record_case_status import AllOfRecordCaseStatus
