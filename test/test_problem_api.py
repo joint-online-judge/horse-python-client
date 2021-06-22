@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: 9bf7723@2021-06-19 11:44:15  # noqa: E501
+    Git version: cb3a7ee@2021-06-22 09:30:15  # noqa: E501
 
     OpenAPI spec version: 0.0.0
     
@@ -28,50 +28,50 @@ class TestProblemApi(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def test_clone_problem_api_v1_problems_clone_post(self):
-        """Test case for clone_problem_api_v1_problems_clone_post
+    def test_clone_problem_api_v1_domains_domain_problems_clone_post(self):
+        """Test case for clone_problem_api_v1_domains_domain_problems_clone_post
 
         Clone Problem  # noqa: E501
         """
         pass
 
-    def test_create_problem_api_v1_problems_post(self):
-        """Test case for create_problem_api_v1_problems_post
+    def test_create_problem_api_v1_domains_domain_problems_post(self):
+        """Test case for create_problem_api_v1_domains_domain_problems_post
 
         Create Problem  # noqa: E501
         """
         pass
 
-    def test_delete_problem_api_v1_problems_problem_delete(self):
-        """Test case for delete_problem_api_v1_problems_problem_delete
+    def test_delete_problem_api_v1_domains_domain_problems_problem_delete(self):
+        """Test case for delete_problem_api_v1_domains_domain_problems_problem_delete
 
         Delete Problem  # noqa: E501
         """
         pass
 
-    def test_get_problem_api_v1_problems_problem_get(self):
-        """Test case for get_problem_api_v1_problems_problem_get
+    def test_get_problem_api_v1_domains_domain_problems_problem_get(self):
+        """Test case for get_problem_api_v1_domains_domain_problems_problem_get
 
         Get Problem  # noqa: E501
         """
         pass
 
-    def test_list_problems_api_v1_problems_get(self):
-        """Test case for list_problems_api_v1_problems_get
+    def test_list_problems_api_v1_domains_domain_problems_get(self):
+        """Test case for list_problems_api_v1_domains_domain_problems_get
 
         List Problems  # noqa: E501
         """
         pass
 
-    def test_submit_solution_to_problem_api_v1_problems_problem_post(self):
-        """Test case for submit_solution_to_problem_api_v1_problems_problem_post
+    def test_submit_solution_to_problem_api_v1_domains_domain_problems_problem_post(self):
+        """Test case for submit_solution_to_problem_api_v1_domains_domain_problems_problem_post
 
         Submit Solution To Problem  # noqa: E501
         """
         pass
 
-    def test_update_problem_api_v1_problems_problem_patch(self):
-        """Test case for update_problem_api_v1_problems_problem_patch
+    def test_update_problem_api_v1_domains_domain_problems_problem_patch(self):
+        """Test case for update_problem_api_v1_domains_domain_problems_problem_patch
 
         Update Problem  # noqa: E501
         """
