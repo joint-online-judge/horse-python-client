@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: 55b1698@2021-07-11 05:05:35  # noqa: E501
+    Git version: ce24503@2021-07-11 18:04:50  # noqa: E501
 
     OpenAPI spec version: 0.0.0
     
@@ -41,7 +41,7 @@ class ProblemApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param CloneProblem body: (required)
+        :param ProblemClone body: (required)
         :param str domain: url or ObjectId of the domain (required)
         :return: ListProblemsResp
                  If the method is called asynchronously,
@@ -63,7 +63,7 @@ class ProblemApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param CloneProblem body: (required)
+        :param ProblemClone body: (required)
         :param str domain: url or ObjectId of the domain (required)
         :return: ListProblemsResp
                  If the method is called asynchronously,

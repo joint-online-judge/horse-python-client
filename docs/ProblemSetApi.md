@@ -28,7 +28,7 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = joj.horse.client.ProblemSetApi(joj.horse.client.ApiClient(configuration))
-body = joj.horse.client.CloneProblemSet() # CloneProblemSet | 
+body = joj.horse.client.ProblemSetClone() # ProblemSetClone | 
 
 try:
     # Clone Problem Set
@@ -42,7 +42,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**CloneProblemSet**](CloneProblemSet.md)|  | 
+ **body** | [**ProblemSetClone**](ProblemSetClone.md)|  | 
 
 ### Return type
 

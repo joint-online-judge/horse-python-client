@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: 55b1698@2021-07-11 05:05:35  # noqa: E501
+    Git version: ce24503@2021-07-11 18:04:50  # noqa: E501
 
     OpenAPI spec version: 0.0.0
     
@@ -42,7 +42,7 @@ class DomainApi(object):
 
         :param async_req bool
         :param str domain: url or ObjectId of the domain (required)
-        :param BodyAddDomainUserApiV1DomainsDomainUsersPost body:
+        :param DomainUserAdd body:
         :return: DomainUserResp
                  If the method is called asynchronously,
                  returns the request thread.
@@ -64,7 +64,7 @@ class DomainApi(object):
 
         :param async_req bool
         :param str domain: url or ObjectId of the domain (required)
-        :param BodyAddDomainUserApiV1DomainsDomainUsersPost body:
+        :param DomainUserAdd body:
         :return: DomainUserResp
                  If the method is called asynchronously,
                  returns the request thread.

@@ -40,7 +40,7 @@ from pprint import pprint
 # create an instance of the API class
 api_instance = joj.horse.client.DomainApi(joj.horse.client.ApiClient(configuration))
 domain = 'domain_example' # str | url or ObjectId of the domain
-body = joj.horse.client.BodyAddDomainUserApiV1DomainsDomainUsersPost() # BodyAddDomainUserApiV1DomainsDomainUsersPost |  (optional)
+body = joj.horse.client.DomainUserAdd() # DomainUserAdd |  (optional)
 
 try:
     # Add Domain User
@@ -55,7 +55,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **domain** | **str**| url or ObjectId of the domain | 
- **body** | [**BodyAddDomainUserApiV1DomainsDomainUsersPost**](BodyAddDomainUserApiV1DomainsDomainUsersPost.md)|  | [optional] 
+ **body** | [**DomainUserAdd**](DomainUserAdd.md)|  | [optional] 
 
 ### Return type
 

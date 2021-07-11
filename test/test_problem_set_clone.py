@@ -15,12 +15,12 @@ from __future__ import absolute_import
 import unittest
 
 import joj.horse.client
-from joj.horse.client.models.version import Version  # noqa: E501
+from joj.horse.client.models.problem_set_clone import ProblemSetClone  # noqa: E501
 from joj.horse.client.rest import ApiException
 
 
-class TestVersion(unittest.TestCase):
-    """Version unit test stubs"""
+class TestProblemSetClone(unittest.TestCase):
+    """ProblemSetClone unit test stubs"""
 
     def setUp(self):
         pass
@@ -28,10 +28,10 @@ class TestVersion(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testVersion(self):
-        """Test Version"""
+    def testProblemSetClone(self):
+        """Test ProblemSetClone"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = joj.horse.client.models.version.Version()  # noqa: E501
+        # model = joj.horse.client.models.problem_set_clone.ProblemSetClone()  # noqa: E501
         pass
 
 

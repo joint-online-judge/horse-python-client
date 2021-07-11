@@ -28,7 +28,7 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = joj.horse.client.ProblemApi(joj.horse.client.ApiClient(configuration))
-body = joj.horse.client.CloneProblem() # CloneProblem | 
+body = joj.horse.client.ProblemClone() # ProblemClone | 
 domain = 'domain_example' # str | url or ObjectId of the domain
 
 try:
@@ -43,7 +43,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**CloneProblem**](CloneProblem.md)|  | 
+ **body** | [**ProblemClone**](ProblemClone.md)|  | 
  **domain** | **str**| url or ObjectId of the domain | 
 
 ### Return type
