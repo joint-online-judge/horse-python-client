@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: 6475f25@2021-07-12 13:40:27  # noqa: E501
+    Git version: a2191d6@2021-07-12 14:52:30  # noqa: E501
 
     OpenAPI spec version: 0.0.0
     
@@ -32,45 +32,45 @@ class DomainApi(object):
             api_client = ApiClient()
         self.api_client = api_client
 
-    def add_domain_user_api_v1_domains_domain_users_post(self, domain, **kwargs):  # noqa: E501
+    def add_domain_user_api_v1_domains_domain_users_post(self, body, domain, **kwargs):  # noqa: E501
         """Add Domain User  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.add_domain_user_api_v1_domains_domain_users_post(domain, async_req=True)
+        >>> thread = api.add_domain_user_api_v1_domains_domain_users_post(body, domain, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
+        :param DomainUserAdd body: (required)
         :param str domain: url or ObjectId of the domain (required)
-        :param DomainUserAdd body:
         :return: DomainUserResp
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.add_domain_user_api_v1_domains_domain_users_post_with_http_info(domain, **kwargs)  # noqa: E501
+            return self.add_domain_user_api_v1_domains_domain_users_post_with_http_info(body, domain, **kwargs)  # noqa: E501
         else:
-            (data) = self.add_domain_user_api_v1_domains_domain_users_post_with_http_info(domain, **kwargs)  # noqa: E501
+            (data) = self.add_domain_user_api_v1_domains_domain_users_post_with_http_info(body, domain, **kwargs)  # noqa: E501
             return data
 
-    def add_domain_user_api_v1_domains_domain_users_post_with_http_info(self, domain, **kwargs):  # noqa: E501
+    def add_domain_user_api_v1_domains_domain_users_post_with_http_info(self, body, domain, **kwargs):  # noqa: E501
         """Add Domain User  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.add_domain_user_api_v1_domains_domain_users_post_with_http_info(domain, async_req=True)
+        >>> thread = api.add_domain_user_api_v1_domains_domain_users_post_with_http_info(body, domain, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
+        :param DomainUserAdd body: (required)
         :param str domain: url or ObjectId of the domain (required)
-        :param DomainUserAdd body:
         :return: DomainUserResp
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['domain', 'body']  # noqa: E501
+        all_params = ['body', 'domain']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -85,6 +85,10 @@ class DomainApi(object):
                 )
             params[key] = val
         del params['kwargs']
+        # verify the required parameter 'body' is set
+        if ('body' not in params or
+                params['body'] is None):
+            raise ValueError("Missing the required parameter `body` when calling `add_domain_user_api_v1_domains_domain_users_post`")  # noqa: E501
         # verify the required parameter 'domain' is set
         if ('domain' not in params or
                 params['domain'] is None):

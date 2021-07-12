@@ -15,12 +15,12 @@ from __future__ import absolute_import
 import unittest
 
 import joj.horse.client
-from joj.horse.client.models.score_board import ScoreBoard  # noqa: E501
+from joj.horse.client.models.all_of_domain_user_add_role import AllOfDomainUserAddRole  # noqa: E501
 from joj.horse.client.rest import ApiException
 
 
-class TestScoreBoard(unittest.TestCase):
-    """ScoreBoard unit test stubs"""
+class TestAllOfDomainUserAddRole(unittest.TestCase):
+    """AllOfDomainUserAddRole unit test stubs"""
 
     def setUp(self):
         pass
@@ -28,10 +28,10 @@ class TestScoreBoard(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testScoreBoard(self):
-        """Test ScoreBoard"""
+    def testAllOfDomainUserAddRole(self):
+        """Test AllOfDomainUserAddRole"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = joj.horse.client.models.score_board.ScoreBoard()  # noqa: E501
+        # model = joj.horse.client.models.all_of_domain_user_add_role.AllOfDomainUserAddRole()  # noqa: E501
         pass
 
 

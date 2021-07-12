@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: 6475f25@2021-07-12 13:40:27  # noqa: E501
+    Git version: a2191d6@2021-07-12 14:52:30  # noqa: E501
 
     OpenAPI spec version: 0.0.0
     
@@ -15,12 +15,12 @@ from __future__ import absolute_import
 import unittest
 
 import joj.horse.client
-from joj.horse.client.models.problem_set_clone import ProblemSetClone  # noqa: E501
+from joj.horse.client.models.default_role import DefaultRole  # noqa: E501
 from joj.horse.client.rest import ApiException
 
 
-class TestProblemSetClone(unittest.TestCase):
-    """ProblemSetClone unit test stubs"""
+class TestDefaultRole(unittest.TestCase):
+    """DefaultRole unit test stubs"""
 
     def setUp(self):
         pass
@@ -28,10 +28,10 @@ class TestProblemSetClone(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testProblemSetClone(self):
-        """Test ProblemSetClone"""
+    def testDefaultRole(self):
+        """Test DefaultRole"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = joj.horse.client.models.problem_set_clone.ProblemSetClone()  # noqa: E501
+        # model = joj.horse.client.models.default_role.DefaultRole()  # noqa: E501
         pass
 
 

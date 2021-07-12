@@ -24,7 +24,7 @@ Method | HTTP request | Description
 [**update_domain_user_api_v1_domains_domain_users_user_patch**](DomainApi.md#update_domain_user_api_v1_domains_domain_users_user_patch) | **PATCH** /api/v1/domains/{domain}/users/{user} | Update Domain User
 
 # **add_domain_user_api_v1_domains_domain_users_post**
-> DomainUserResp add_domain_user_api_v1_domains_domain_users_post(domain, body=body)
+> DomainUserResp add_domain_user_api_v1_domains_domain_users_post(body, domain)
 
 Add Domain User
 
@@ -39,12 +39,12 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = joj.horse.client.DomainApi(joj.horse.client.ApiClient(configuration))
+body = joj.horse.client.DomainUserAdd() # DomainUserAdd | 
 domain = 'domain_example' # str | url or ObjectId of the domain
-body = joj.horse.client.DomainUserAdd() # DomainUserAdd |  (optional)
 
 try:
     # Add Domain User
-    api_response = api_instance.add_domain_user_api_v1_domains_domain_users_post(domain, body=body)
+    api_response = api_instance.add_domain_user_api_v1_domains_domain_users_post(body, domain)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling DomainApi->add_domain_user_api_v1_domains_domain_users_post: %s\n" % e)
@@ -54,8 +54,8 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **body** | [**DomainUserAdd**](DomainUserAdd.md)|  | 
  **domain** | **str**| url or ObjectId of the domain | 
- **body** | [**DomainUserAdd**](DomainUserAdd.md)|  | [optional] 
 
 ### Return type
 

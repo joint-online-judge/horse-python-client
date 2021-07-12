@@ -1,4 +1,4 @@
-# BodyUpdateProblemConfigApiV1DomainsDomainProblemsProblemConfigPatch
+# ProblemConfigEdit
 
 ## Properties
 Name | Type | Description | Notes

@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: 6475f25@2021-07-12 13:40:27  # noqa: E501
+    Git version: a2191d6@2021-07-12 14:52:30  # noqa: E501
 
     OpenAPI spec version: 0.0.0
     
@@ -28,50 +28,27 @@ class ProblemClone(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'new_group': 'bool',
         'problems': 'list[str]',
-        'problem_set': 'str'
+        'problem_set': 'str',
+        'new_group': 'bool'
     }
 
     attribute_map = {
-        'new_group': 'new_group',
         'problems': 'problems',
-        'problem_set': 'problem_set'
+        'problem_set': 'problem_set',
+        'new_group': 'new_group'
     }
 
-    def __init__(self, new_group=False, problems=None, problem_set=None):  # noqa: E501
+    def __init__(self, problems=None, problem_set=None, new_group=False):  # noqa: E501
         """ProblemClone - a model defined in Swagger"""  # noqa: E501
-        self._new_group = None
         self._problems = None
         self._problem_set = None
+        self._new_group = None
         self.discriminator = None
-        if new_group is not None:
-            self.new_group = new_group
         self.problems = problems
         self.problem_set = problem_set
-
-    @property
-    def new_group(self):
-        """Gets the new_group of this ProblemClone.  # noqa: E501
-
-        whether to create new problem group  # noqa: E501
-
-        :return: The new_group of this ProblemClone.  # noqa: E501
-        :rtype: bool
-        """
-        return self._new_group
-
-    @new_group.setter
-    def new_group(self, new_group):
-        """Sets the new_group of this ProblemClone.
-
-        whether to create new problem group  # noqa: E501
-
-        :param new_group: The new_group of this ProblemClone.  # noqa: E501
-        :type: bool
-        """
-
-        self._new_group = new_group
+        if new_group is not None:
+            self.new_group = new_group
 
     @property
     def problems(self):
@@ -120,6 +97,29 @@ class ProblemClone(object):
             raise ValueError("Invalid value for `problem_set`, must not be `None`")  # noqa: E501
 
         self._problem_set = problem_set
+
+    @property
+    def new_group(self):
+        """Gets the new_group of this ProblemClone.  # noqa: E501
+
+        whether to create new problem group  # noqa: E501
+
+        :return: The new_group of this ProblemClone.  # noqa: E501
+        :rtype: bool
+        """
+        return self._new_group
+
+    @new_group.setter
+    def new_group(self, new_group):
+        """Sets the new_group of this ProblemClone.
+
+        whether to create new problem group  # noqa: E501
+
+        :param new_group: The new_group of this ProblemClone.  # noqa: E501
+        :type: bool
+        """
+
+        self._new_group = new_group
 
     def to_dict(self):
         """Returns the model properties as a dict"""

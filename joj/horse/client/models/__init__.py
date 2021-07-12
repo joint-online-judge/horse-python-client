@@ -4,7 +4,7 @@
 """
     JOJ Horse
 
-    Git version: 6475f25@2021-07-12 13:40:27  # noqa: E501
+    Git version: a2191d6@2021-07-12 14:52:30  # noqa: E501
 
     OpenAPI spec version: 0.0.0
     
@@ -14,6 +14,7 @@
 from __future__ import absolute_import
 
 # import models into model package
+from joj.horse.client.models.all_of_domain_user_add_role import AllOfDomainUserAddRole
 from joj.horse.client.models.all_of_problem_config import AllOfProblemConfig
 from joj.horse.client.models.all_of_problem_data_version import AllOfProblemDataVersion
 from joj.horse.client.models.all_of_record_case_status import AllOfRecordCaseStatus
@@ -33,9 +34,9 @@ from joj.horse.client.models.any_of_record_domain import AnyOfRecordDomain
 from joj.horse.client.models.any_of_record_judge_user import AnyOfRecordJudgeUser
 from joj.horse.client.models.any_of_record_problem import AnyOfRecordProblem
 from joj.horse.client.models.any_of_record_user import AnyOfRecordUser
-from joj.horse.client.models.body_update_problem_config_api_v1_domains_domain_problems_problem_config_patch import BodyUpdateProblemConfigApiV1DomainsDomainProblemsProblemConfigPatch
 from joj.horse.client.models.config import Config
 from joj.horse.client.models.data_version import DataVersion
+from joj.horse.client.models.default_role import DefaultRole
 from joj.horse.client.models.detail import Detail
 from joj.horse.client.models.domain import Domain
 from joj.horse.client.models.domain_create import DomainCreate
@@ -77,12 +78,12 @@ from joj.horse.client.models.list_users import ListUsers
 from joj.horse.client.models.list_users_resp import ListUsersResp
 from joj.horse.client.models.problem import Problem
 from joj.horse.client.models.problem_clone import ProblemClone
+from joj.horse.client.models.problem_config_edit import ProblemConfigEdit
 from joj.horse.client.models.problem_create import ProblemCreate
 from joj.horse.client.models.problem_edit import ProblemEdit
 from joj.horse.client.models.problem_group import ProblemGroup
 from joj.horse.client.models.problem_resp import ProblemResp
 from joj.horse.client.models.problem_set import ProblemSet
-from joj.horse.client.models.problem_set_clone import ProblemSetClone
 from joj.horse.client.models.problem_set_create import ProblemSetCreate
 from joj.horse.client.models.problem_set_edit import ProblemSetEdit
 from joj.horse.client.models.problem_set_resp import ProblemSetResp

@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: 6475f25@2021-07-12 13:40:27  # noqa: E501
+    Git version: a2191d6@2021-07-12 14:52:30  # noqa: E501
 
     OpenAPI spec version: 0.0.0
     
@@ -28,7 +28,7 @@ class DomainUserAdd(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'role': 'str',
+        'role': 'AllOfDomainUserAddRole',
         'user': 'str'
     }
 
@@ -37,15 +37,14 @@ class DomainUserAdd(object):
         'user': 'user'
     }
 
-    def __init__(self, role='user', user='me'):  # noqa: E501
+    def __init__(self, role=None, user=None):  # noqa: E501
         """DomainUserAdd - a model defined in Swagger"""  # noqa: E501
         self._role = None
         self._user = None
         self.discriminator = None
         if role is not None:
             self.role = role
-        if user is not None:
-            self.user = user
+        self.user = user
 
     @property
     def role(self):
@@ -53,7 +52,7 @@ class DomainUserAdd(object):
 
 
         :return: The role of this DomainUserAdd.  # noqa: E501
-        :rtype: str
+        :rtype: AllOfDomainUserAddRole
         """
         return self._role
 
@@ -63,7 +62,7 @@ class DomainUserAdd(object):
 
 
         :param role: The role of this DomainUserAdd.  # noqa: E501
-        :type: str
+        :type: AllOfDomainUserAddRole
         """
 
         self._role = role
@@ -88,6 +87,8 @@ class DomainUserAdd(object):
         :param user: The user of this DomainUserAdd.  # noqa: E501
         :type: str
         """
+        if user is None:
+            raise ValueError("Invalid value for `user`, must not be `None`")  # noqa: E501
 
         self._user = user
 

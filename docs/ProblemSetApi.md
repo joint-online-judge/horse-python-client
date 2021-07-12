@@ -4,62 +4,12 @@ All URIs are relative to */*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**clone_problem_set_api_v1_domains_domain_problem_sets_clone_post**](ProblemSetApi.md#clone_problem_set_api_v1_domains_domain_problem_sets_clone_post) | **POST** /api/v1/domains/{domain}/problem_sets/clone | Clone Problem Set
 [**create_problem_set_api_v1_domains_domain_problem_sets_post**](ProblemSetApi.md#create_problem_set_api_v1_domains_domain_problem_sets_post) | **POST** /api/v1/domains/{domain}/problem_sets | Create Problem Set
 [**delete_problem_set_api_v1_domains_domain_problem_sets_problem_set_delete**](ProblemSetApi.md#delete_problem_set_api_v1_domains_domain_problem_sets_problem_set_delete) | **DELETE** /api/v1/domains/{domain}/problem_sets/{problem_set} | Delete Problem Set
 [**get_problem_set_api_v1_domains_domain_problem_sets_problem_set_get**](ProblemSetApi.md#get_problem_set_api_v1_domains_domain_problem_sets_problem_set_get) | **GET** /api/v1/domains/{domain}/problem_sets/{problem_set} | Get Problem Set
 [**get_scoreboard_api_v1_domains_domain_problem_sets_problem_set_scoreboard_get**](ProblemSetApi.md#get_scoreboard_api_v1_domains_domain_problem_sets_problem_set_scoreboard_get) | **GET** /api/v1/domains/{domain}/problem_sets/{problem_set}/scoreboard | Get Scoreboard
 [**list_problem_sets_api_v1_domains_domain_problem_sets_get**](ProblemSetApi.md#list_problem_sets_api_v1_domains_domain_problem_sets_get) | **GET** /api/v1/domains/{domain}/problem_sets | List Problem Sets
 [**update_problem_set_api_v1_domains_domain_problem_sets_problem_set_patch**](ProblemSetApi.md#update_problem_set_api_v1_domains_domain_problem_sets_problem_set_patch) | **PATCH** /api/v1/domains/{domain}/problem_sets/{problem_set} | Update Problem Set
-
-# **clone_problem_set_api_v1_domains_domain_problem_sets_clone_post**
-> ProblemSetResp clone_problem_set_api_v1_domains_domain_problem_sets_clone_post(body, domain)
-
-Clone Problem Set
-
-### Example
-```python
-from __future__ import print_function
-import time
-import joj.horse.client
-from joj.horse.client.rest import ApiException
-from pprint import pprint
-
-
-# create an instance of the API class
-api_instance = joj.horse.client.ProblemSetApi(joj.horse.client.ApiClient(configuration))
-body = joj.horse.client.ProblemSetClone() # ProblemSetClone | 
-domain = 'domain_example' # str | url or ObjectId of the domain
-
-try:
-    # Clone Problem Set
-    api_response = api_instance.clone_problem_set_api_v1_domains_domain_problem_sets_clone_post(body, domain)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling ProblemSetApi->clone_problem_set_api_v1_domains_domain_problem_sets_clone_post: %s\n" % e)
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**ProblemSetClone**](ProblemSetClone.md)|  | 
- **domain** | **str**| url or ObjectId of the domain | 
-
-### Return type
-
-[**ProblemSetResp**](ProblemSetResp.md)
-
-### Authorization
-
-[HTTPBearer](../README.md#HTTPBearer)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_problem_set_api_v1_domains_domain_problem_sets_post**
 > ProblemSetResp create_problem_set_api_v1_domains_domain_problem_sets_post(body, domain)

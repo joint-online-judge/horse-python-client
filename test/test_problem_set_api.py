@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: 6475f25@2021-07-12 13:40:27  # noqa: E501
+    Git version: a2191d6@2021-07-12 14:52:30  # noqa: E501
 
     OpenAPI spec version: 0.0.0
     
@@ -26,13 +26,6 @@ class TestProblemSetApi(unittest.TestCase):
         self.api = ProblemSetApi()  # noqa: E501
 
     def tearDown(self):
-        pass
-
-    def test_clone_problem_set_api_v1_domains_domain_problem_sets_clone_post(self):
-        """Test case for clone_problem_set_api_v1_domains_domain_problem_sets_clone_post
-
-        Clone Problem Set  # noqa: E501
-        """
         pass
 
     def test_create_problem_set_api_v1_domains_domain_problem_sets_post(self):

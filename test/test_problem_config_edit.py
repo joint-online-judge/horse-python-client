@@ -15,12 +15,12 @@ from __future__ import absolute_import
 import unittest
 
 import joj.horse.client
-from joj.horse.client.models.score_board import ScoreBoard  # noqa: E501
+from joj.horse.client.models.problem_config_edit import ProblemConfigEdit  # noqa: E501
 from joj.horse.client.rest import ApiException
 
 
-class TestScoreBoard(unittest.TestCase):
-    """ScoreBoard unit test stubs"""
+class TestProblemConfigEdit(unittest.TestCase):
+    """ProblemConfigEdit unit test stubs"""
 
     def setUp(self):
         pass
@@ -28,10 +28,10 @@ class TestScoreBoard(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testScoreBoard(self):
-        """Test ScoreBoard"""
+    def testProblemConfigEdit(self):
+        """Test ProblemConfigEdit"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = joj.horse.client.models.score_board.ScoreBoard()  # noqa: E501
+        # model = joj.horse.client.models.problem_config_edit.ProblemConfigEdit()  # noqa: E501
         pass
 
 
