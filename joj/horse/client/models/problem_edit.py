@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: 91e2928@2021-07-12 08:03:35  # noqa: E501
+    Git version: 545e91f@2021-07-12 10:49:50  # noqa: E501
 
     OpenAPI spec version: 0.0.0
     
@@ -29,38 +29,23 @@ class ProblemEdit(object):
     """
     swagger_types = {
         'title': 'str',
-        'content': 'str',
-        'data': 'int',
-        'data_version': 'DataVersion',
-        'languages': 'list[str]'
+        'content': 'str'
     }
 
     attribute_map = {
         'title': 'title',
-        'content': 'content',
-        'data': 'data',
-        'data_version': 'data_version',
-        'languages': 'languages'
+        'content': 'content'
     }
 
-    def __init__(self, title=None, content=None, data=None, data_version=None, languages=None):  # noqa: E501
+    def __init__(self, title=None, content=None):  # noqa: E501
         """ProblemEdit - a model defined in Swagger"""  # noqa: E501
         self._title = None
         self._content = None
-        self._data = None
-        self._data_version = None
-        self._languages = None
         self.discriminator = None
         if title is not None:
             self.title = title
         if content is not None:
             self.content = content
-        if data is not None:
-            self.data = data
-        if data_version is not None:
-            self.data_version = data_version
-        if languages is not None:
-            self.languages = languages
 
     @property
     def title(self):
@@ -103,69 +88,6 @@ class ProblemEdit(object):
         """
 
         self._content = content
-
-    @property
-    def data(self):
-        """Gets the data of this ProblemEdit.  # noqa: E501
-
-
-        :return: The data of this ProblemEdit.  # noqa: E501
-        :rtype: int
-        """
-        return self._data
-
-    @data.setter
-    def data(self, data):
-        """Sets the data of this ProblemEdit.
-
-
-        :param data: The data of this ProblemEdit.  # noqa: E501
-        :type: int
-        """
-
-        self._data = data
-
-    @property
-    def data_version(self):
-        """Gets the data_version of this ProblemEdit.  # noqa: E501
-
-
-        :return: The data_version of this ProblemEdit.  # noqa: E501
-        :rtype: DataVersion
-        """
-        return self._data_version
-
-    @data_version.setter
-    def data_version(self, data_version):
-        """Sets the data_version of this ProblemEdit.
-
-
-        :param data_version: The data_version of this ProblemEdit.  # noqa: E501
-        :type: DataVersion
-        """
-
-        self._data_version = data_version
-
-    @property
-    def languages(self):
-        """Gets the languages of this ProblemEdit.  # noqa: E501
-
-
-        :return: The languages of this ProblemEdit.  # noqa: E501
-        :rtype: list[str]
-        """
-        return self._languages
-
-    @languages.setter
-    def languages(self, languages):
-        """Sets the languages of this ProblemEdit.
-
-
-        :param languages: The languages of this ProblemEdit.  # noqa: E501
-        :type: list[str]
-        """
-
-        self._languages = languages
 
     def to_dict(self):
         """Returns the model properties as a dict"""

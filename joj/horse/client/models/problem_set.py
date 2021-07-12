@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: 91e2928@2021-07-12 08:03:35  # noqa: E501
+    Git version: 545e91f@2021-07-12 10:49:50  # noqa: E501
 
     OpenAPI spec version: 0.0.0
     
@@ -29,7 +29,6 @@ class ProblemSet(object):
     """
     swagger_types = {
         'id': 'str',
-        'domain': 'AnyOfProblemSetDomain',
         'url': 'str',
         'title': 'str',
         'content': 'str',
@@ -37,14 +36,15 @@ class ProblemSet(object):
         'scoreboard_hidden': 'bool',
         'available_time': 'datetime',
         'due_time': 'datetime',
+        'domain': 'AnyOfProblemSetDomain',
         'owner': 'AnyOfProblemSetOwner',
         'num_submit': 'int',
-        'num_accept': 'int'
+        'num_accept': 'int',
+        'problems': 'list[AnyOfProblemSetProblemsItems]'
     }
 
     attribute_map = {
         'id': 'id',
-        'domain': 'domain',
         'url': 'url',
         'title': 'title',
         'content': 'content',
@@ -52,15 +52,16 @@ class ProblemSet(object):
         'scoreboard_hidden': 'scoreboard_hidden',
         'available_time': 'available_time',
         'due_time': 'due_time',
+        'domain': 'domain',
         'owner': 'owner',
         'num_submit': 'num_submit',
-        'num_accept': 'num_accept'
+        'num_accept': 'num_accept',
+        'problems': 'problems'
     }
 
-    def __init__(self, id=None, domain=None, url=None, title=None, content='', hidden=False, scoreboard_hidden=None, available_time=None, due_time=None, owner=None, num_submit=0, num_accept=0):  # noqa: E501
+    def __init__(self, id=None, url=None, title=None, content='', hidden=False, scoreboard_hidden=False, available_time=None, due_time=None, domain=None, owner=None, num_submit=0, num_accept=0, problems=None):  # noqa: E501
         """ProblemSet - a model defined in Swagger"""  # noqa: E501
         self._id = None
-        self._domain = None
         self._url = None
         self._title = None
         self._content = None
@@ -68,28 +69,34 @@ class ProblemSet(object):
         self._scoreboard_hidden = None
         self._available_time = None
         self._due_time = None
+        self._domain = None
         self._owner = None
         self._num_submit = None
         self._num_accept = None
+        self._problems = None
         self.discriminator = None
         if id is not None:
             self.id = id
-        self.domain = domain
-        if url is not None:
-            self.url = url
+        self.url = url
         self.title = title
         if content is not None:
             self.content = content
         if hidden is not None:
             self.hidden = hidden
-        self.scoreboard_hidden = scoreboard_hidden
-        self.available_time = available_time
-        self.due_time = due_time
+        if scoreboard_hidden is not None:
+            self.scoreboard_hidden = scoreboard_hidden
+        if available_time is not None:
+            self.available_time = available_time
+        if due_time is not None:
+            self.due_time = due_time
+        self.domain = domain
         self.owner = owner
         if num_submit is not None:
             self.num_submit = num_submit
         if num_accept is not None:
             self.num_accept = num_accept
+        if problems is not None:
+            self.problems = problems
 
     @property
     def id(self):
@@ -113,33 +120,9 @@ class ProblemSet(object):
         self._id = id
 
     @property
-    def domain(self):
-        """Gets the domain of this ProblemSet.  # noqa: E501
-
-
-        :return: The domain of this ProblemSet.  # noqa: E501
-        :rtype: AnyOfProblemSetDomain
-        """
-        return self._domain
-
-    @domain.setter
-    def domain(self, domain):
-        """Sets the domain of this ProblemSet.
-
-
-        :param domain: The domain of this ProblemSet.  # noqa: E501
-        :type: AnyOfProblemSetDomain
-        """
-        if domain is None:
-            raise ValueError("Invalid value for `domain`, must not be `None`")  # noqa: E501
-
-        self._domain = domain
-
-    @property
     def url(self):
         """Gets the url of this ProblemSet.  # noqa: E501
 
-        (in domain unique) url of the problem  # noqa: E501
 
         :return: The url of this ProblemSet.  # noqa: E501
         :rtype: str
@@ -150,11 +133,12 @@ class ProblemSet(object):
     def url(self, url):
         """Sets the url of this ProblemSet.
 
-        (in domain unique) url of the problem  # noqa: E501
 
         :param url: The url of this ProblemSet.  # noqa: E501
         :type: str
         """
+        if url is None:
+            raise ValueError("Invalid value for `url`, must not be `None`")  # noqa: E501
 
         self._url = url
 
@@ -233,6 +217,7 @@ class ProblemSet(object):
     def scoreboard_hidden(self):
         """Gets the scoreboard_hidden of this ProblemSet.  # noqa: E501
 
+        whether the scoreboard of the problem set is hidden  # noqa: E501
 
         :return: The scoreboard_hidden of this ProblemSet.  # noqa: E501
         :rtype: bool
@@ -243,12 +228,11 @@ class ProblemSet(object):
     def scoreboard_hidden(self, scoreboard_hidden):
         """Sets the scoreboard_hidden of this ProblemSet.
 
+        whether the scoreboard of the problem set is hidden  # noqa: E501
 
         :param scoreboard_hidden: The scoreboard_hidden of this ProblemSet.  # noqa: E501
         :type: bool
         """
-        if scoreboard_hidden is None:
-            raise ValueError("Invalid value for `scoreboard_hidden`, must not be `None`")  # noqa: E501
 
         self._scoreboard_hidden = scoreboard_hidden
 
@@ -256,6 +240,7 @@ class ProblemSet(object):
     def available_time(self):
         """Gets the available_time of this ProblemSet.  # noqa: E501
 
+        the problem set is available from  # noqa: E501
 
         :return: The available_time of this ProblemSet.  # noqa: E501
         :rtype: datetime
@@ -266,12 +251,11 @@ class ProblemSet(object):
     def available_time(self, available_time):
         """Sets the available_time of this ProblemSet.
 
+        the problem set is available from  # noqa: E501
 
         :param available_time: The available_time of this ProblemSet.  # noqa: E501
         :type: datetime
         """
-        if available_time is None:
-            raise ValueError("Invalid value for `available_time`, must not be `None`")  # noqa: E501
 
         self._available_time = available_time
 
@@ -279,6 +263,7 @@ class ProblemSet(object):
     def due_time(self):
         """Gets the due_time of this ProblemSet.  # noqa: E501
 
+        the problem set is due at  # noqa: E501
 
         :return: The due_time of this ProblemSet.  # noqa: E501
         :rtype: datetime
@@ -289,14 +274,36 @@ class ProblemSet(object):
     def due_time(self, due_time):
         """Sets the due_time of this ProblemSet.
 
+        the problem set is due at  # noqa: E501
 
         :param due_time: The due_time of this ProblemSet.  # noqa: E501
         :type: datetime
         """
-        if due_time is None:
-            raise ValueError("Invalid value for `due_time`, must not be `None`")  # noqa: E501
 
         self._due_time = due_time
+
+    @property
+    def domain(self):
+        """Gets the domain of this ProblemSet.  # noqa: E501
+
+
+        :return: The domain of this ProblemSet.  # noqa: E501
+        :rtype: AnyOfProblemSetDomain
+        """
+        return self._domain
+
+    @domain.setter
+    def domain(self, domain):
+        """Sets the domain of this ProblemSet.
+
+
+        :param domain: The domain of this ProblemSet.  # noqa: E501
+        :type: AnyOfProblemSetDomain
+        """
+        if domain is None:
+            raise ValueError("Invalid value for `domain`, must not be `None`")  # noqa: E501
+
+        self._domain = domain
 
     @property
     def owner(self):
@@ -362,6 +369,27 @@ class ProblemSet(object):
         """
 
         self._num_accept = num_accept
+
+    @property
+    def problems(self):
+        """Gets the problems of this ProblemSet.  # noqa: E501
+
+
+        :return: The problems of this ProblemSet.  # noqa: E501
+        :rtype: list[AnyOfProblemSetProblemsItems]
+        """
+        return self._problems
+
+    @problems.setter
+    def problems(self, problems):
+        """Sets the problems of this ProblemSet.
+
+
+        :param problems: The problems of this ProblemSet.  # noqa: E501
+        :type: list[AnyOfProblemSetProblemsItems]
+        """
+
+        self._problems = problems
 
     def to_dict(self):
         """Returns the model properties as a dict"""

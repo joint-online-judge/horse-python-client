@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: 91e2928@2021-07-12 08:03:35  # noqa: E501
+    Git version: 545e91f@2021-07-12 10:49:50  # noqa: E501
 
     OpenAPI spec version: 0.0.0
     
@@ -41,7 +41,7 @@ class DomainCreate(object):
         'gravatar': 'gravatar'
     }
 
-    def __init__(self, url=None, name=None, bulletin='', gravatar=''):  # noqa: E501
+    def __init__(self, url='', name=None, bulletin='', gravatar=''):  # noqa: E501
         """DomainCreate - a model defined in Swagger"""  # noqa: E501
         self._url = None
         self._name = None

@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **str** |  | [optional] 
-**url** | **str** | (unique) url of the domain | [optional] 
+**url** | **str** |  | 
 **name** | **str** | displayed name of the domain | 
 **bulletin** | **str** | bulletin of the domain | [optional] [default to '']
 **gravatar** | **str** | gravatar url of the domain | [optional] [default to '']

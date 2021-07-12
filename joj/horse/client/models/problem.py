@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: 91e2928@2021-07-12 08:03:35  # noqa: E501
+    Git version: 545e91f@2021-07-12 10:49:50  # noqa: E501
 
     OpenAPI spec version: 0.0.0
     
@@ -29,65 +29,63 @@ class Problem(object):
     """
     swagger_types = {
         'id': 'str',
+        'url': 'str',
         'title': 'str',
         'content': 'str',
-        'data_version': 'AllOfProblemDataVersion',
-        'languages': 'list[str]',
-        'problem_set': 'AnyOfProblemProblemSet',
         'domain': 'AnyOfProblemDomain',
         'owner': 'AnyOfProblemOwner',
         'problem_group': 'AnyOfProblemProblemGroup',
+        'config': 'AllOfProblemConfig',
         'num_submit': 'int',
         'num_accept': 'int',
         'data': 'int',
-        'total_score': 'int'
+        'total_score': 'int',
+        'data_version': 'AllOfProblemDataVersion'
     }
 
     attribute_map = {
         'id': 'id',
+        'url': 'url',
         'title': 'title',
         'content': 'content',
-        'data_version': 'data_version',
-        'languages': 'languages',
-        'problem_set': 'problem_set',
         'domain': 'domain',
         'owner': 'owner',
         'problem_group': 'problem_group',
+        'config': 'config',
         'num_submit': 'num_submit',
         'num_accept': 'num_accept',
         'data': 'data',
-        'total_score': 'total_score'
+        'total_score': 'total_score',
+        'data_version': 'data_version'
     }
 
-    def __init__(self, id=None, title=None, content='', data_version=None, languages=None, problem_set=None, domain=None, owner=None, problem_group=None, num_submit=0, num_accept=0, data=None, total_score=0):  # noqa: E501
+    def __init__(self, id=None, url=None, title=None, content='', domain=None, owner=None, problem_group=None, config=None, num_submit=0, num_accept=0, data=None, total_score=0, data_version=None):  # noqa: E501
         """Problem - a model defined in Swagger"""  # noqa: E501
         self._id = None
+        self._url = None
         self._title = None
         self._content = None
-        self._data_version = None
-        self._languages = None
-        self._problem_set = None
         self._domain = None
         self._owner = None
         self._problem_group = None
+        self._config = None
         self._num_submit = None
         self._num_accept = None
         self._data = None
         self._total_score = None
+        self._data_version = None
         self.discriminator = None
         if id is not None:
             self.id = id
+        self.url = url
         self.title = title
         if content is not None:
             self.content = content
-        if data_version is not None:
-            self.data_version = data_version
-        if languages is not None:
-            self.languages = languages
-        self.problem_set = problem_set
         self.domain = domain
         self.owner = owner
         self.problem_group = problem_group
+        if config is not None:
+            self.config = config
         if num_submit is not None:
             self.num_submit = num_submit
         if num_accept is not None:
@@ -96,6 +94,8 @@ class Problem(object):
             self.data = data
         if total_score is not None:
             self.total_score = total_score
+        if data_version is not None:
+            self.data_version = data_version
 
     @property
     def id(self):
@@ -117,6 +117,29 @@ class Problem(object):
         """
 
         self._id = id
+
+    @property
+    def url(self):
+        """Gets the url of this Problem.  # noqa: E501
+
+
+        :return: The url of this Problem.  # noqa: E501
+        :rtype: str
+        """
+        return self._url
+
+    @url.setter
+    def url(self, url):
+        """Sets the url of this Problem.
+
+
+        :param url: The url of this Problem.  # noqa: E501
+        :type: str
+        """
+        if url is None:
+            raise ValueError("Invalid value for `url`, must not be `None`")  # noqa: E501
+
+        self._url = url
 
     @property
     def title(self):
@@ -165,73 +188,6 @@ class Problem(object):
         """
 
         self._content = content
-
-    @property
-    def data_version(self):
-        """Gets the data_version of this Problem.  # noqa: E501
-
-
-        :return: The data_version of this Problem.  # noqa: E501
-        :rtype: AllOfProblemDataVersion
-        """
-        return self._data_version
-
-    @data_version.setter
-    def data_version(self, data_version):
-        """Sets the data_version of this Problem.
-
-
-        :param data_version: The data_version of this Problem.  # noqa: E501
-        :type: AllOfProblemDataVersion
-        """
-
-        self._data_version = data_version
-
-    @property
-    def languages(self):
-        """Gets the languages of this Problem.  # noqa: E501
-
-        acceptable language of the problem  # noqa: E501
-
-        :return: The languages of this Problem.  # noqa: E501
-        :rtype: list[str]
-        """
-        return self._languages
-
-    @languages.setter
-    def languages(self, languages):
-        """Sets the languages of this Problem.
-
-        acceptable language of the problem  # noqa: E501
-
-        :param languages: The languages of this Problem.  # noqa: E501
-        :type: list[str]
-        """
-
-        self._languages = languages
-
-    @property
-    def problem_set(self):
-        """Gets the problem_set of this Problem.  # noqa: E501
-
-
-        :return: The problem_set of this Problem.  # noqa: E501
-        :rtype: AnyOfProblemProblemSet
-        """
-        return self._problem_set
-
-    @problem_set.setter
-    def problem_set(self, problem_set):
-        """Sets the problem_set of this Problem.
-
-
-        :param problem_set: The problem_set of this Problem.  # noqa: E501
-        :type: AnyOfProblemProblemSet
-        """
-        if problem_set is None:
-            raise ValueError("Invalid value for `problem_set`, must not be `None`")  # noqa: E501
-
-        self._problem_set = problem_set
 
     @property
     def domain(self):
@@ -301,6 +257,27 @@ class Problem(object):
             raise ValueError("Invalid value for `problem_group`, must not be `None`")  # noqa: E501
 
         self._problem_group = problem_group
+
+    @property
+    def config(self):
+        """Gets the config of this Problem.  # noqa: E501
+
+
+        :return: The config of this Problem.  # noqa: E501
+        :rtype: AllOfProblemConfig
+        """
+        return self._config
+
+    @config.setter
+    def config(self, config):
+        """Sets the config of this Problem.
+
+
+        :param config: The config of this Problem.  # noqa: E501
+        :type: AllOfProblemConfig
+        """
+
+        self._config = config
 
     @property
     def num_submit(self):
@@ -385,6 +362,27 @@ class Problem(object):
         """
 
         self._total_score = total_score
+
+    @property
+    def data_version(self):
+        """Gets the data_version of this Problem.  # noqa: E501
+
+
+        :return: The data_version of this Problem.  # noqa: E501
+        :rtype: AllOfProblemDataVersion
+        """
+        return self._data_version
+
+    @data_version.setter
+    def data_version(self, data_version):
+        """Sets the data_version of this Problem.
+
+
+        :param data_version: The data_version of this Problem.  # noqa: E501
+        :type: AllOfProblemDataVersion
+        """
+
+        self._data_version = data_version
 
     def to_dict(self):
         """Returns the model properties as a dict"""

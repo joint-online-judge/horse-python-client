@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: 91e2928@2021-07-12 08:03:35  # noqa: E501
+    Git version: 545e91f@2021-07-12 10:49:50  # noqa: E501
 
     OpenAPI spec version: 0.0.0
     
@@ -28,7 +28,6 @@ class ProblemSetCreate(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'domain': 'str',
         'url': 'str',
         'title': 'str',
         'content': 'str',
@@ -39,7 +38,6 @@ class ProblemSetCreate(object):
     }
 
     attribute_map = {
-        'domain': 'domain',
         'url': 'url',
         'title': 'title',
         'content': 'content',
@@ -49,9 +47,8 @@ class ProblemSetCreate(object):
         'due_time': 'due_time'
     }
 
-    def __init__(self, domain=None, url=None, title=None, content='', hidden=False, scoreboard_hidden=False, available_time=None, due_time=None):  # noqa: E501
+    def __init__(self, url=None, title=None, content='', hidden=False, scoreboard_hidden=False, available_time=None, due_time=None):  # noqa: E501
         """ProblemSetCreate - a model defined in Swagger"""  # noqa: E501
-        self._domain = None
         self._url = None
         self._title = None
         self._content = None
@@ -60,7 +57,6 @@ class ProblemSetCreate(object):
         self._available_time = None
         self._due_time = None
         self.discriminator = None
-        self.domain = domain
         if url is not None:
             self.url = url
         self.title = title
@@ -76,35 +72,10 @@ class ProblemSetCreate(object):
             self.due_time = due_time
 
     @property
-    def domain(self):
-        """Gets the domain of this ProblemSetCreate.  # noqa: E501
-
-        url or the id of the domain  # noqa: E501
-
-        :return: The domain of this ProblemSetCreate.  # noqa: E501
-        :rtype: str
-        """
-        return self._domain
-
-    @domain.setter
-    def domain(self, domain):
-        """Sets the domain of this ProblemSetCreate.
-
-        url or the id of the domain  # noqa: E501
-
-        :param domain: The domain of this ProblemSetCreate.  # noqa: E501
-        :type: str
-        """
-        if domain is None:
-            raise ValueError("Invalid value for `domain`, must not be `None`")  # noqa: E501
-
-        self._domain = domain
-
-    @property
     def url(self):
         """Gets the url of this ProblemSetCreate.  # noqa: E501
 
-        (in domain unique) url of the problem  # noqa: E501
+        (unique in domain) url of the problem set  # noqa: E501
 
         :return: The url of this ProblemSetCreate.  # noqa: E501
         :rtype: str
@@ -115,7 +86,7 @@ class ProblemSetCreate(object):
     def url(self, url):
         """Sets the url of this ProblemSetCreate.
 
-        (in domain unique) url of the problem  # noqa: E501
+        (unique in domain) url of the problem set  # noqa: E501
 
         :param url: The url of this ProblemSetCreate.  # noqa: E501
         :type: str

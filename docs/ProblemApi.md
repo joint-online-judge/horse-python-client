@@ -11,6 +11,7 @@ Method | HTTP request | Description
 [**list_problems_api_v1_domains_domain_problems_get**](ProblemApi.md#list_problems_api_v1_domains_domain_problems_get) | **GET** /api/v1/domains/{domain}/problems | List Problems
 [**submit_solution_to_problem_api_v1_domains_domain_problems_problem_post**](ProblemApi.md#submit_solution_to_problem_api_v1_domains_domain_problems_problem_post) | **POST** /api/v1/domains/{domain}/problems/{problem} | Submit Solution To Problem
 [**update_problem_api_v1_domains_domain_problems_problem_patch**](ProblemApi.md#update_problem_api_v1_domains_domain_problems_problem_patch) | **PATCH** /api/v1/domains/{domain}/problems/{problem} | Update Problem
+[**update_problem_config_api_v1_domains_domain_problems_problem_config_patch**](ProblemApi.md#update_problem_config_api_v1_domains_domain_problems_problem_config_patch) | **PATCH** /api/v1/domains/{domain}/problems/{problem}/config | Update Problem Config
 
 # **clone_problem_api_v1_domains_domain_problems_clone_post**
 > ListProblemsResp clone_problem_api_v1_domains_domain_problems_clone_post(body, domain)
@@ -365,6 +366,57 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **update_problem_config_api_v1_domains_domain_problems_problem_config_patch**
+> ProblemResp update_problem_config_api_v1_domains_domain_problems_problem_config_patch(config, domain, problem)
+
+Update Problem Config
+
+### Example
+```python
+from __future__ import print_function
+import time
+import joj.horse.client
+from joj.horse.client.rest import ApiException
+from pprint import pprint
+
+
+# create an instance of the API class
+api_instance = joj.horse.client.ProblemApi(joj.horse.client.ApiClient(configuration))
+config = 'config_example' # str | 
+domain = 'domain_example' # str | url or ObjectId of the domain
+problem = 'problem_example' # str | 
+
+try:
+    # Update Problem Config
+    api_response = api_instance.update_problem_config_api_v1_domains_domain_problems_problem_config_patch(config, domain, problem)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling ProblemApi->update_problem_config_api_v1_domains_domain_problems_problem_config_patch: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **config** | **str**|  | 
+ **domain** | **str**| url or ObjectId of the domain | 
+ **problem** | **str**|  | 
+
+### Return type
+
+[**ProblemResp**](ProblemResp.md)
+
+### Authorization
+
+[HTTPBearer](../README.md#HTTPBearer)
+
+### HTTP request headers
+
+ - **Content-Type**: multipart/form-data
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

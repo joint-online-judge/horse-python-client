@@ -4,7 +4,7 @@
 """
     JOJ Horse
 
-    Git version: 91e2928@2021-07-12 08:03:35  # noqa: E501
+    Git version: 545e91f@2021-07-12 10:49:50  # noqa: E501
 
     OpenAPI spec version: 0.0.0
     
@@ -14,7 +14,7 @@
 from __future__ import absolute_import
 
 # import models into model package
-from joj.horse.client.models.all_of_problem_create_data_version import AllOfProblemCreateDataVersion
+from joj.horse.client.models.all_of_problem_config import AllOfProblemConfig
 from joj.horse.client.models.all_of_problem_data_version import AllOfProblemDataVersion
 from joj.horse.client.models.all_of_record_case_status import AllOfRecordCaseStatus
 from joj.horse.client.models.all_of_record_status import AllOfRecordStatus
@@ -26,13 +26,15 @@ from joj.horse.client.models.any_of_domain_user_user import AnyOfDomainUserUser
 from joj.horse.client.models.any_of_problem_domain import AnyOfProblemDomain
 from joj.horse.client.models.any_of_problem_owner import AnyOfProblemOwner
 from joj.horse.client.models.any_of_problem_problem_group import AnyOfProblemProblemGroup
-from joj.horse.client.models.any_of_problem_problem_set import AnyOfProblemProblemSet
 from joj.horse.client.models.any_of_problem_set_domain import AnyOfProblemSetDomain
 from joj.horse.client.models.any_of_problem_set_owner import AnyOfProblemSetOwner
+from joj.horse.client.models.any_of_problem_set_problems_items import AnyOfProblemSetProblemsItems
 from joj.horse.client.models.any_of_record_domain import AnyOfRecordDomain
 from joj.horse.client.models.any_of_record_judge_user import AnyOfRecordJudgeUser
 from joj.horse.client.models.any_of_record_problem import AnyOfRecordProblem
 from joj.horse.client.models.any_of_record_user import AnyOfRecordUser
+from joj.horse.client.models.body_update_problem_config_api_v1_domains_domain_problems_problem_config_patch import BodyUpdateProblemConfigApiV1DomainsDomainProblemsProblemConfigPatch
+from joj.horse.client.models.config import Config
 from joj.horse.client.models.data_version import DataVersion
 from joj.horse.client.models.detail import Detail
 from joj.horse.client.models.domain import Domain
@@ -53,6 +55,8 @@ from joj.horse.client.models.domain_user_resp import DomainUserResp
 from joj.horse.client.models.empty import Empty
 from joj.horse.client.models.empty_resp import EmptyResp
 from joj.horse.client.models.error_code import ErrorCode
+from joj.horse.client.models.file import File
+from joj.horse.client.models.file_type import FileType
 from joj.horse.client.models.http_validation_error import HTTPValidationError
 from joj.horse.client.models.jwt import JWT
 from joj.horse.client.models.list_domain_roles import ListDomainRoles

@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: 91e2928@2021-07-12 08:03:35  # noqa: E501
+    Git version: 545e91f@2021-07-12 10:49:50  # noqa: E501
 
     OpenAPI spec version: 0.0.0
     
@@ -29,26 +29,22 @@ class ProblemSetClone(object):
     """
     swagger_types = {
         'url': 'str',
-        'problem_set': 'str',
-        'domain': 'str'
+        'problem_set': 'str'
     }
 
     attribute_map = {
         'url': 'url',
-        'problem_set': 'problem_set',
-        'domain': 'domain'
+        'problem_set': 'problem_set'
     }
 
-    def __init__(self, url=None, problem_set=None, domain=None):  # noqa: E501
+    def __init__(self, url=None, problem_set=None):  # noqa: E501
         """ProblemSetClone - a model defined in Swagger"""  # noqa: E501
         self._url = None
         self._problem_set = None
-        self._domain = None
         self.discriminator = None
         if url is not None:
             self.url = url
         self.problem_set = problem_set
-        self.domain = domain
 
     @property
     def url(self):
@@ -97,31 +93,6 @@ class ProblemSetClone(object):
             raise ValueError("Invalid value for `problem_set`, must not be `None`")  # noqa: E501
 
         self._problem_set = problem_set
-
-    @property
-    def domain(self):
-        """Gets the domain of this ProblemSetClone.  # noqa: E501
-
-        url or ObjectId of the domain  # noqa: E501
-
-        :return: The domain of this ProblemSetClone.  # noqa: E501
-        :rtype: str
-        """
-        return self._domain
-
-    @domain.setter
-    def domain(self, domain):
-        """Sets the domain of this ProblemSetClone.
-
-        url or ObjectId of the domain  # noqa: E501
-
-        :param domain: The domain of this ProblemSetClone.  # noqa: E501
-        :type: str
-        """
-        if domain is None:
-            raise ValueError("Invalid value for `domain`, must not be `None`")  # noqa: E501
-
-        self._domain = domain
 
     def to_dict(self):
         """Returns the model properties as a dict"""

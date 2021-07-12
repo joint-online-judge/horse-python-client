@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: 91e2928@2021-07-12 08:03:35  # noqa: E501
+    Git version: 545e91f@2021-07-12 10:49:50  # noqa: E501
 
     OpenAPI spec version: 0.0.0
     
@@ -56,8 +56,7 @@ class Domain(object):
         self.discriminator = None
         if id is not None:
             self.id = id
-        if url is not None:
-            self.url = url
+        self.url = url
         self.name = name
         if bulletin is not None:
             self.bulletin = bulletin
@@ -90,7 +89,6 @@ class Domain(object):
     def url(self):
         """Gets the url of this Domain.  # noqa: E501
 
-        (unique) url of the domain  # noqa: E501
 
         :return: The url of this Domain.  # noqa: E501
         :rtype: str
@@ -101,11 +99,12 @@ class Domain(object):
     def url(self, url):
         """Sets the url of this Domain.
 
-        (unique) url of the domain  # noqa: E501
 
         :param url: The url of this Domain.  # noqa: E501
         :type: str
         """
+        if url is None:
+            raise ValueError("Invalid value for `url`, must not be `None`")  # noqa: E501
 
         self._url = url
 

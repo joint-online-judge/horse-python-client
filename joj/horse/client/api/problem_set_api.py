@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: 91e2928@2021-07-12 08:03:35  # noqa: E501
+    Git version: 545e91f@2021-07-12 10:49:50  # noqa: E501
 
     OpenAPI spec version: 0.0.0
     
@@ -32,43 +32,45 @@ class ProblemSetApi(object):
             api_client = ApiClient()
         self.api_client = api_client
 
-    def clone_problem_set_api_v1_problem_sets_clone_post(self, body, **kwargs):  # noqa: E501
+    def clone_problem_set_api_v1_domains_domain_problem_sets_clone_post(self, body, domain, **kwargs):  # noqa: E501
         """Clone Problem Set  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.clone_problem_set_api_v1_problem_sets_clone_post(body, async_req=True)
+        >>> thread = api.clone_problem_set_api_v1_domains_domain_problem_sets_clone_post(body, domain, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
         :param ProblemSetClone body: (required)
+        :param str domain: url or ObjectId of the domain (required)
         :return: ProblemSetResp
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.clone_problem_set_api_v1_problem_sets_clone_post_with_http_info(body, **kwargs)  # noqa: E501
+            return self.clone_problem_set_api_v1_domains_domain_problem_sets_clone_post_with_http_info(body, domain, **kwargs)  # noqa: E501
         else:
-            (data) = self.clone_problem_set_api_v1_problem_sets_clone_post_with_http_info(body, **kwargs)  # noqa: E501
+            (data) = self.clone_problem_set_api_v1_domains_domain_problem_sets_clone_post_with_http_info(body, domain, **kwargs)  # noqa: E501
             return data
 
-    def clone_problem_set_api_v1_problem_sets_clone_post_with_http_info(self, body, **kwargs):  # noqa: E501
+    def clone_problem_set_api_v1_domains_domain_problem_sets_clone_post_with_http_info(self, body, domain, **kwargs):  # noqa: E501
         """Clone Problem Set  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.clone_problem_set_api_v1_problem_sets_clone_post_with_http_info(body, async_req=True)
+        >>> thread = api.clone_problem_set_api_v1_domains_domain_problem_sets_clone_post_with_http_info(body, domain, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
         :param ProblemSetClone body: (required)
+        :param str domain: url or ObjectId of the domain (required)
         :return: ProblemSetResp
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['body']  # noqa: E501
+        all_params = ['body', 'domain']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -79,18 +81,24 @@ class ProblemSetApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method clone_problem_set_api_v1_problem_sets_clone_post" % key
+                    " to method clone_problem_set_api_v1_domains_domain_problem_sets_clone_post" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'body' is set
         if ('body' not in params or
                 params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `clone_problem_set_api_v1_problem_sets_clone_post`")  # noqa: E501
+            raise ValueError("Missing the required parameter `body` when calling `clone_problem_set_api_v1_domains_domain_problem_sets_clone_post`")  # noqa: E501
+        # verify the required parameter 'domain' is set
+        if ('domain' not in params or
+                params['domain'] is None):
+            raise ValueError("Missing the required parameter `domain` when calling `clone_problem_set_api_v1_domains_domain_problem_sets_clone_post`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
+        if 'domain' in params:
+            path_params['domain'] = params['domain']  # noqa: E501
 
         query_params = []
 
@@ -114,7 +122,7 @@ class ProblemSetApi(object):
         auth_settings = ['HTTPBearer']  # noqa: E501
 
         return self.api_client.call_api(
-            '/api/v1/problem_sets/clone', 'POST',
+            '/api/v1/domains/{domain}/problem_sets/clone', 'POST',
             path_params,
             query_params,
             header_params,
@@ -129,43 +137,45 @@ class ProblemSetApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def create_problem_set_api_v1_problem_sets_post(self, body, **kwargs):  # noqa: E501
+    def create_problem_set_api_v1_domains_domain_problem_sets_post(self, body, domain, **kwargs):  # noqa: E501
         """Create Problem Set  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.create_problem_set_api_v1_problem_sets_post(body, async_req=True)
+        >>> thread = api.create_problem_set_api_v1_domains_domain_problem_sets_post(body, domain, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
         :param ProblemSetCreate body: (required)
+        :param str domain: url or ObjectId of the domain (required)
         :return: ProblemSetResp
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.create_problem_set_api_v1_problem_sets_post_with_http_info(body, **kwargs)  # noqa: E501
+            return self.create_problem_set_api_v1_domains_domain_problem_sets_post_with_http_info(body, domain, **kwargs)  # noqa: E501
         else:
-            (data) = self.create_problem_set_api_v1_problem_sets_post_with_http_info(body, **kwargs)  # noqa: E501
+            (data) = self.create_problem_set_api_v1_domains_domain_problem_sets_post_with_http_info(body, domain, **kwargs)  # noqa: E501
             return data
 
-    def create_problem_set_api_v1_problem_sets_post_with_http_info(self, body, **kwargs):  # noqa: E501
+    def create_problem_set_api_v1_domains_domain_problem_sets_post_with_http_info(self, body, domain, **kwargs):  # noqa: E501
         """Create Problem Set  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.create_problem_set_api_v1_problem_sets_post_with_http_info(body, async_req=True)
+        >>> thread = api.create_problem_set_api_v1_domains_domain_problem_sets_post_with_http_info(body, domain, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
         :param ProblemSetCreate body: (required)
+        :param str domain: url or ObjectId of the domain (required)
         :return: ProblemSetResp
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['body']  # noqa: E501
+        all_params = ['body', 'domain']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -176,18 +186,24 @@ class ProblemSetApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method create_problem_set_api_v1_problem_sets_post" % key
+                    " to method create_problem_set_api_v1_domains_domain_problem_sets_post" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'body' is set
         if ('body' not in params or
                 params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `create_problem_set_api_v1_problem_sets_post`")  # noqa: E501
+            raise ValueError("Missing the required parameter `body` when calling `create_problem_set_api_v1_domains_domain_problem_sets_post`")  # noqa: E501
+        # verify the required parameter 'domain' is set
+        if ('domain' not in params or
+                params['domain'] is None):
+            raise ValueError("Missing the required parameter `domain` when calling `create_problem_set_api_v1_domains_domain_problem_sets_post`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
+        if 'domain' in params:
+            path_params['domain'] = params['domain']  # noqa: E501
 
         query_params = []
 
@@ -211,7 +227,7 @@ class ProblemSetApi(object):
         auth_settings = ['HTTPBearer']  # noqa: E501
 
         return self.api_client.call_api(
-            '/api/v1/problem_sets', 'POST',
+            '/api/v1/domains/{domain}/problem_sets', 'POST',
             path_params,
             query_params,
             header_params,
@@ -226,15 +242,16 @@ class ProblemSetApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def delete_problem_set_api_v1_problem_sets_problem_set_delete(self, problem_set, **kwargs):  # noqa: E501
+    def delete_problem_set_api_v1_domains_domain_problem_sets_problem_set_delete(self, domain, problem_set, **kwargs):  # noqa: E501
         """Delete Problem Set  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.delete_problem_set_api_v1_problem_sets_problem_set_delete(problem_set, async_req=True)
+        >>> thread = api.delete_problem_set_api_v1_domains_domain_problem_sets_problem_set_delete(domain, problem_set, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
+        :param str domain: url or ObjectId of the domain (required)
         :param str problem_set: url or ObjectId of the problem set (required)
         :return: EmptyResp
                  If the method is called asynchronously,
@@ -242,27 +259,28 @@ class ProblemSetApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.delete_problem_set_api_v1_problem_sets_problem_set_delete_with_http_info(problem_set, **kwargs)  # noqa: E501
+            return self.delete_problem_set_api_v1_domains_domain_problem_sets_problem_set_delete_with_http_info(domain, problem_set, **kwargs)  # noqa: E501
         else:
-            (data) = self.delete_problem_set_api_v1_problem_sets_problem_set_delete_with_http_info(problem_set, **kwargs)  # noqa: E501
+            (data) = self.delete_problem_set_api_v1_domains_domain_problem_sets_problem_set_delete_with_http_info(domain, problem_set, **kwargs)  # noqa: E501
             return data
 
-    def delete_problem_set_api_v1_problem_sets_problem_set_delete_with_http_info(self, problem_set, **kwargs):  # noqa: E501
+    def delete_problem_set_api_v1_domains_domain_problem_sets_problem_set_delete_with_http_info(self, domain, problem_set, **kwargs):  # noqa: E501
         """Delete Problem Set  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.delete_problem_set_api_v1_problem_sets_problem_set_delete_with_http_info(problem_set, async_req=True)
+        >>> thread = api.delete_problem_set_api_v1_domains_domain_problem_sets_problem_set_delete_with_http_info(domain, problem_set, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
+        :param str domain: url or ObjectId of the domain (required)
         :param str problem_set: url or ObjectId of the problem set (required)
         :return: EmptyResp
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['problem_set']  # noqa: E501
+        all_params = ['domain', 'problem_set']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -273,18 +291,24 @@ class ProblemSetApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method delete_problem_set_api_v1_problem_sets_problem_set_delete" % key
+                    " to method delete_problem_set_api_v1_domains_domain_problem_sets_problem_set_delete" % key
                 )
             params[key] = val
         del params['kwargs']
+        # verify the required parameter 'domain' is set
+        if ('domain' not in params or
+                params['domain'] is None):
+            raise ValueError("Missing the required parameter `domain` when calling `delete_problem_set_api_v1_domains_domain_problem_sets_problem_set_delete`")  # noqa: E501
         # verify the required parameter 'problem_set' is set
         if ('problem_set' not in params or
                 params['problem_set'] is None):
-            raise ValueError("Missing the required parameter `problem_set` when calling `delete_problem_set_api_v1_problem_sets_problem_set_delete`")  # noqa: E501
+            raise ValueError("Missing the required parameter `problem_set` when calling `delete_problem_set_api_v1_domains_domain_problem_sets_problem_set_delete`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
+        if 'domain' in params:
+            path_params['domain'] = params['domain']  # noqa: E501
         if 'problem_set' in params:
             path_params['problem_set'] = params['problem_set']  # noqa: E501
 
@@ -304,7 +328,7 @@ class ProblemSetApi(object):
         auth_settings = ['HTTPBearer']  # noqa: E501
 
         return self.api_client.call_api(
-            '/api/v1/problem_sets/{problem_set}', 'DELETE',
+            '/api/v1/domains/{domain}/problem_sets/{problem_set}', 'DELETE',
             path_params,
             query_params,
             header_params,
@@ -319,15 +343,16 @@ class ProblemSetApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_problem_set_api_v1_problem_sets_problem_set_get(self, problem_set, **kwargs):  # noqa: E501
+    def get_problem_set_api_v1_domains_domain_problem_sets_problem_set_get(self, domain, problem_set, **kwargs):  # noqa: E501
         """Get Problem Set  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_problem_set_api_v1_problem_sets_problem_set_get(problem_set, async_req=True)
+        >>> thread = api.get_problem_set_api_v1_domains_domain_problem_sets_problem_set_get(domain, problem_set, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
+        :param str domain: url or ObjectId of the domain (required)
         :param str problem_set: (required)
         :return: ProblemSetResp
                  If the method is called asynchronously,
@@ -335,27 +360,28 @@ class ProblemSetApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.get_problem_set_api_v1_problem_sets_problem_set_get_with_http_info(problem_set, **kwargs)  # noqa: E501
+            return self.get_problem_set_api_v1_domains_domain_problem_sets_problem_set_get_with_http_info(domain, problem_set, **kwargs)  # noqa: E501
         else:
-            (data) = self.get_problem_set_api_v1_problem_sets_problem_set_get_with_http_info(problem_set, **kwargs)  # noqa: E501
+            (data) = self.get_problem_set_api_v1_domains_domain_problem_sets_problem_set_get_with_http_info(domain, problem_set, **kwargs)  # noqa: E501
             return data
 
-    def get_problem_set_api_v1_problem_sets_problem_set_get_with_http_info(self, problem_set, **kwargs):  # noqa: E501
+    def get_problem_set_api_v1_domains_domain_problem_sets_problem_set_get_with_http_info(self, domain, problem_set, **kwargs):  # noqa: E501
         """Get Problem Set  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_problem_set_api_v1_problem_sets_problem_set_get_with_http_info(problem_set, async_req=True)
+        >>> thread = api.get_problem_set_api_v1_domains_domain_problem_sets_problem_set_get_with_http_info(domain, problem_set, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
+        :param str domain: url or ObjectId of the domain (required)
         :param str problem_set: (required)
         :return: ProblemSetResp
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['problem_set']  # noqa: E501
+        all_params = ['domain', 'problem_set']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -366,18 +392,24 @@ class ProblemSetApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method get_problem_set_api_v1_problem_sets_problem_set_get" % key
+                    " to method get_problem_set_api_v1_domains_domain_problem_sets_problem_set_get" % key
                 )
             params[key] = val
         del params['kwargs']
+        # verify the required parameter 'domain' is set
+        if ('domain' not in params or
+                params['domain'] is None):
+            raise ValueError("Missing the required parameter `domain` when calling `get_problem_set_api_v1_domains_domain_problem_sets_problem_set_get`")  # noqa: E501
         # verify the required parameter 'problem_set' is set
         if ('problem_set' not in params or
                 params['problem_set'] is None):
-            raise ValueError("Missing the required parameter `problem_set` when calling `get_problem_set_api_v1_problem_sets_problem_set_get`")  # noqa: E501
+            raise ValueError("Missing the required parameter `problem_set` when calling `get_problem_set_api_v1_domains_domain_problem_sets_problem_set_get`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
+        if 'domain' in params:
+            path_params['domain'] = params['domain']  # noqa: E501
         if 'problem_set' in params:
             path_params['problem_set'] = params['problem_set']  # noqa: E501
 
@@ -397,7 +429,7 @@ class ProblemSetApi(object):
         auth_settings = ['HTTPBearer']  # noqa: E501
 
         return self.api_client.call_api(
-            '/api/v1/problem_sets/{problem_set}', 'GET',
+            '/api/v1/domains/{domain}/problem_sets/{problem_set}', 'GET',
             path_params,
             query_params,
             header_params,
@@ -412,43 +444,45 @@ class ProblemSetApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_scoreboard_api_v1_problem_sets_problem_set_scoreboard_get(self, problem_set, **kwargs):  # noqa: E501
+    def get_scoreboard_api_v1_domains_domain_problem_sets_problem_set_scoreboard_get(self, problem_set, domain, **kwargs):  # noqa: E501
         """Get Scoreboard  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_scoreboard_api_v1_problem_sets_problem_set_scoreboard_get(problem_set, async_req=True)
+        >>> thread = api.get_scoreboard_api_v1_domains_domain_problem_sets_problem_set_scoreboard_get(problem_set, domain, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
         :param str problem_set: (required)
+        :param str domain: url or ObjectId of the domain (required)
         :return: ScoreBoardResp
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.get_scoreboard_api_v1_problem_sets_problem_set_scoreboard_get_with_http_info(problem_set, **kwargs)  # noqa: E501
+            return self.get_scoreboard_api_v1_domains_domain_problem_sets_problem_set_scoreboard_get_with_http_info(problem_set, domain, **kwargs)  # noqa: E501
         else:
-            (data) = self.get_scoreboard_api_v1_problem_sets_problem_set_scoreboard_get_with_http_info(problem_set, **kwargs)  # noqa: E501
+            (data) = self.get_scoreboard_api_v1_domains_domain_problem_sets_problem_set_scoreboard_get_with_http_info(problem_set, domain, **kwargs)  # noqa: E501
             return data
 
-    def get_scoreboard_api_v1_problem_sets_problem_set_scoreboard_get_with_http_info(self, problem_set, **kwargs):  # noqa: E501
+    def get_scoreboard_api_v1_domains_domain_problem_sets_problem_set_scoreboard_get_with_http_info(self, problem_set, domain, **kwargs):  # noqa: E501
         """Get Scoreboard  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_scoreboard_api_v1_problem_sets_problem_set_scoreboard_get_with_http_info(problem_set, async_req=True)
+        >>> thread = api.get_scoreboard_api_v1_domains_domain_problem_sets_problem_set_scoreboard_get_with_http_info(problem_set, domain, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
         :param str problem_set: (required)
+        :param str domain: url or ObjectId of the domain (required)
         :return: ScoreBoardResp
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['problem_set']  # noqa: E501
+        all_params = ['problem_set', 'domain']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -459,20 +493,26 @@ class ProblemSetApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method get_scoreboard_api_v1_problem_sets_problem_set_scoreboard_get" % key
+                    " to method get_scoreboard_api_v1_domains_domain_problem_sets_problem_set_scoreboard_get" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'problem_set' is set
         if ('problem_set' not in params or
                 params['problem_set'] is None):
-            raise ValueError("Missing the required parameter `problem_set` when calling `get_scoreboard_api_v1_problem_sets_problem_set_scoreboard_get`")  # noqa: E501
+            raise ValueError("Missing the required parameter `problem_set` when calling `get_scoreboard_api_v1_domains_domain_problem_sets_problem_set_scoreboard_get`")  # noqa: E501
+        # verify the required parameter 'domain' is set
+        if ('domain' not in params or
+                params['domain'] is None):
+            raise ValueError("Missing the required parameter `domain` when calling `get_scoreboard_api_v1_domains_domain_problem_sets_problem_set_scoreboard_get`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
         if 'problem_set' in params:
             path_params['problem_set'] = params['problem_set']  # noqa: E501
+        if 'domain' in params:
+            path_params['domain'] = params['domain']  # noqa: E501
 
         query_params = []
 
@@ -490,7 +530,7 @@ class ProblemSetApi(object):
         auth_settings = ['HTTPBearer']  # noqa: E501
 
         return self.api_client.call_api(
-            '/api/v1/problem_sets/{problem_set}/scoreboard', 'GET',
+            '/api/v1/domains/{domain}/problem_sets/{problem_set}/scoreboard', 'GET',
             path_params,
             query_params,
             header_params,
@@ -505,16 +545,16 @@ class ProblemSetApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def list_problem_sets_api_v1_problem_sets_get(self, **kwargs):  # noqa: E501
+    def list_problem_sets_api_v1_domains_domain_problem_sets_get(self, domain, **kwargs):  # noqa: E501
         """List Problem Sets  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.list_problem_sets_api_v1_problem_sets_get(async_req=True)
+        >>> thread = api.list_problem_sets_api_v1_domains_domain_problem_sets_get(domain, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param str domain:
+        :param str domain: url or ObjectId of the domain (required)
         :param SortEnum sort:
         :param int skip:
         :param int limit:
@@ -524,21 +564,21 @@ class ProblemSetApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.list_problem_sets_api_v1_problem_sets_get_with_http_info(**kwargs)  # noqa: E501
+            return self.list_problem_sets_api_v1_domains_domain_problem_sets_get_with_http_info(domain, **kwargs)  # noqa: E501
         else:
-            (data) = self.list_problem_sets_api_v1_problem_sets_get_with_http_info(**kwargs)  # noqa: E501
+            (data) = self.list_problem_sets_api_v1_domains_domain_problem_sets_get_with_http_info(domain, **kwargs)  # noqa: E501
             return data
 
-    def list_problem_sets_api_v1_problem_sets_get_with_http_info(self, **kwargs):  # noqa: E501
+    def list_problem_sets_api_v1_domains_domain_problem_sets_get_with_http_info(self, domain, **kwargs):  # noqa: E501
         """List Problem Sets  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.list_problem_sets_api_v1_problem_sets_get_with_http_info(async_req=True)
+        >>> thread = api.list_problem_sets_api_v1_domains_domain_problem_sets_get_with_http_info(domain, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param str domain:
+        :param str domain: url or ObjectId of the domain (required)
         :param SortEnum sort:
         :param int skip:
         :param int limit:
@@ -558,18 +598,22 @@ class ProblemSetApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method list_problem_sets_api_v1_problem_sets_get" % key
+                    " to method list_problem_sets_api_v1_domains_domain_problem_sets_get" % key
                 )
             params[key] = val
         del params['kwargs']
+        # verify the required parameter 'domain' is set
+        if ('domain' not in params or
+                params['domain'] is None):
+            raise ValueError("Missing the required parameter `domain` when calling `list_problem_sets_api_v1_domains_domain_problem_sets_get`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
+        if 'domain' in params:
+            path_params['domain'] = params['domain']  # noqa: E501
 
         query_params = []
-        if 'domain' in params:
-            query_params.append(('domain', params['domain']))  # noqa: E501
         if 'sort' in params:
             query_params.append(('sort', params['sort']))  # noqa: E501
         if 'skip' in params:
@@ -591,7 +635,7 @@ class ProblemSetApi(object):
         auth_settings = ['HTTPBearer']  # noqa: E501
 
         return self.api_client.call_api(
-            '/api/v1/problem_sets', 'GET',
+            '/api/v1/domains/{domain}/problem_sets', 'GET',
             path_params,
             query_params,
             header_params,
@@ -606,16 +650,17 @@ class ProblemSetApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def update_problem_set_api_v1_problem_sets_problem_set_patch(self, body, problem_set, **kwargs):  # noqa: E501
+    def update_problem_set_api_v1_domains_domain_problem_sets_problem_set_patch(self, body, domain, problem_set, **kwargs):  # noqa: E501
         """Update Problem Set  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.update_problem_set_api_v1_problem_sets_problem_set_patch(body, problem_set, async_req=True)
+        >>> thread = api.update_problem_set_api_v1_domains_domain_problem_sets_problem_set_patch(body, domain, problem_set, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
         :param ProblemSetEdit body: (required)
+        :param str domain: url or ObjectId of the domain (required)
         :param str problem_set: url or ObjectId of the problem set (required)
         :return: ProblemSetResp
                  If the method is called asynchronously,
@@ -623,28 +668,29 @@ class ProblemSetApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.update_problem_set_api_v1_problem_sets_problem_set_patch_with_http_info(body, problem_set, **kwargs)  # noqa: E501
+            return self.update_problem_set_api_v1_domains_domain_problem_sets_problem_set_patch_with_http_info(body, domain, problem_set, **kwargs)  # noqa: E501
         else:
-            (data) = self.update_problem_set_api_v1_problem_sets_problem_set_patch_with_http_info(body, problem_set, **kwargs)  # noqa: E501
+            (data) = self.update_problem_set_api_v1_domains_domain_problem_sets_problem_set_patch_with_http_info(body, domain, problem_set, **kwargs)  # noqa: E501
             return data
 
-    def update_problem_set_api_v1_problem_sets_problem_set_patch_with_http_info(self, body, problem_set, **kwargs):  # noqa: E501
+    def update_problem_set_api_v1_domains_domain_problem_sets_problem_set_patch_with_http_info(self, body, domain, problem_set, **kwargs):  # noqa: E501
         """Update Problem Set  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.update_problem_set_api_v1_problem_sets_problem_set_patch_with_http_info(body, problem_set, async_req=True)
+        >>> thread = api.update_problem_set_api_v1_domains_domain_problem_sets_problem_set_patch_with_http_info(body, domain, problem_set, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
         :param ProblemSetEdit body: (required)
+        :param str domain: url or ObjectId of the domain (required)
         :param str problem_set: url or ObjectId of the problem set (required)
         :return: ProblemSetResp
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['body', 'problem_set']  # noqa: E501
+        all_params = ['body', 'domain', 'problem_set']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -655,22 +701,28 @@ class ProblemSetApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method update_problem_set_api_v1_problem_sets_problem_set_patch" % key
+                    " to method update_problem_set_api_v1_domains_domain_problem_sets_problem_set_patch" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'body' is set
         if ('body' not in params or
                 params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `update_problem_set_api_v1_problem_sets_problem_set_patch`")  # noqa: E501
+            raise ValueError("Missing the required parameter `body` when calling `update_problem_set_api_v1_domains_domain_problem_sets_problem_set_patch`")  # noqa: E501
+        # verify the required parameter 'domain' is set
+        if ('domain' not in params or
+                params['domain'] is None):
+            raise ValueError("Missing the required parameter `domain` when calling `update_problem_set_api_v1_domains_domain_problem_sets_problem_set_patch`")  # noqa: E501
         # verify the required parameter 'problem_set' is set
         if ('problem_set' not in params or
                 params['problem_set'] is None):
-            raise ValueError("Missing the required parameter `problem_set` when calling `update_problem_set_api_v1_problem_sets_problem_set_patch`")  # noqa: E501
+            raise ValueError("Missing the required parameter `problem_set` when calling `update_problem_set_api_v1_domains_domain_problem_sets_problem_set_patch`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
+        if 'domain' in params:
+            path_params['domain'] = params['domain']  # noqa: E501
         if 'problem_set' in params:
             path_params['problem_set'] = params['problem_set']  # noqa: E501
 
@@ -696,7 +748,7 @@ class ProblemSetApi(object):
         auth_settings = ['HTTPBearer']  # noqa: E501
 
         return self.api_client.call_api(
-            '/api/v1/problem_sets/{problem_set}', 'PATCH',
+            '/api/v1/domains/{domain}/problem_sets/{problem_set}', 'PATCH',
             path_params,
             query_params,
             header_params,

@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: 91e2928@2021-07-12 08:03:35  # noqa: E501
+    Git version: 545e91f@2021-07-12 10:49:50  # noqa: E501
 
     OpenAPI spec version: 0.0.0
     
@@ -28,37 +28,51 @@ class ProblemCreate(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'url': 'str',
         'title': 'str',
-        'content': 'str',
-        'data_version': 'AllOfProblemCreateDataVersion',
-        'languages': 'list[str]',
-        'problem_set': 'str'
+        'content': 'str'
     }
 
     attribute_map = {
+        'url': 'url',
         'title': 'title',
-        'content': 'content',
-        'data_version': 'data_version',
-        'languages': 'languages',
-        'problem_set': 'problem_set'
+        'content': 'content'
     }
 
-    def __init__(self, title=None, content='', data_version=None, languages=None, problem_set=None):  # noqa: E501
+    def __init__(self, url=None, title=None, content=''):  # noqa: E501
         """ProblemCreate - a model defined in Swagger"""  # noqa: E501
+        self._url = None
         self._title = None
         self._content = None
-        self._data_version = None
-        self._languages = None
-        self._problem_set = None
         self.discriminator = None
+        if url is not None:
+            self.url = url
         self.title = title
         if content is not None:
             self.content = content
-        if data_version is not None:
-            self.data_version = data_version
-        if languages is not None:
-            self.languages = languages
-        self.problem_set = problem_set
+
+    @property
+    def url(self):
+        """Gets the url of this ProblemCreate.  # noqa: E501
+
+        (unique in domain) url of the problem  # noqa: E501
+
+        :return: The url of this ProblemCreate.  # noqa: E501
+        :rtype: str
+        """
+        return self._url
+
+    @url.setter
+    def url(self, url):
+        """Sets the url of this ProblemCreate.
+
+        (unique in domain) url of the problem  # noqa: E501
+
+        :param url: The url of this ProblemCreate.  # noqa: E501
+        :type: str
+        """
+
+        self._url = url
 
     @property
     def title(self):
@@ -107,75 +121,6 @@ class ProblemCreate(object):
         """
 
         self._content = content
-
-    @property
-    def data_version(self):
-        """Gets the data_version of this ProblemCreate.  # noqa: E501
-
-
-        :return: The data_version of this ProblemCreate.  # noqa: E501
-        :rtype: AllOfProblemCreateDataVersion
-        """
-        return self._data_version
-
-    @data_version.setter
-    def data_version(self, data_version):
-        """Sets the data_version of this ProblemCreate.
-
-
-        :param data_version: The data_version of this ProblemCreate.  # noqa: E501
-        :type: AllOfProblemCreateDataVersion
-        """
-
-        self._data_version = data_version
-
-    @property
-    def languages(self):
-        """Gets the languages of this ProblemCreate.  # noqa: E501
-
-        acceptable language of the problem  # noqa: E501
-
-        :return: The languages of this ProblemCreate.  # noqa: E501
-        :rtype: list[str]
-        """
-        return self._languages
-
-    @languages.setter
-    def languages(self, languages):
-        """Sets the languages of this ProblemCreate.
-
-        acceptable language of the problem  # noqa: E501
-
-        :param languages: The languages of this ProblemCreate.  # noqa: E501
-        :type: list[str]
-        """
-
-        self._languages = languages
-
-    @property
-    def problem_set(self):
-        """Gets the problem_set of this ProblemCreate.  # noqa: E501
-
-        problem set it belongs to  # noqa: E501
-
-        :return: The problem_set of this ProblemCreate.  # noqa: E501
-        :rtype: str
-        """
-        return self._problem_set
-
-    @problem_set.setter
-    def problem_set(self, problem_set):
-        """Sets the problem_set of this ProblemCreate.
-
-        problem set it belongs to  # noqa: E501
-
-        :param problem_set: The problem_set of this ProblemCreate.  # noqa: E501
-        :type: str
-        """
-        if problem_set is None:
-            raise ValueError("Invalid value for `problem_set`, must not be `None`")  # noqa: E501
-
-        self._problem_set = problem_set
 
     def to_dict(self):
         """Returns the model properties as a dict"""

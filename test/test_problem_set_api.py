@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: 91e2928@2021-07-12 08:03:35  # noqa: E501
+    Git version: 545e91f@2021-07-12 10:49:50  # noqa: E501
 
     OpenAPI spec version: 0.0.0
     
@@ -28,50 +28,50 @@ class TestProblemSetApi(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def test_clone_problem_set_api_v1_problem_sets_clone_post(self):
-        """Test case for clone_problem_set_api_v1_problem_sets_clone_post
+    def test_clone_problem_set_api_v1_domains_domain_problem_sets_clone_post(self):
+        """Test case for clone_problem_set_api_v1_domains_domain_problem_sets_clone_post
 
         Clone Problem Set  # noqa: E501
         """
         pass
 
-    def test_create_problem_set_api_v1_problem_sets_post(self):
-        """Test case for create_problem_set_api_v1_problem_sets_post
+    def test_create_problem_set_api_v1_domains_domain_problem_sets_post(self):
+        """Test case for create_problem_set_api_v1_domains_domain_problem_sets_post
 
         Create Problem Set  # noqa: E501
         """
         pass
 
-    def test_delete_problem_set_api_v1_problem_sets_problem_set_delete(self):
-        """Test case for delete_problem_set_api_v1_problem_sets_problem_set_delete
+    def test_delete_problem_set_api_v1_domains_domain_problem_sets_problem_set_delete(self):
+        """Test case for delete_problem_set_api_v1_domains_domain_problem_sets_problem_set_delete
 
         Delete Problem Set  # noqa: E501
         """
         pass
 
-    def test_get_problem_set_api_v1_problem_sets_problem_set_get(self):
-        """Test case for get_problem_set_api_v1_problem_sets_problem_set_get
+    def test_get_problem_set_api_v1_domains_domain_problem_sets_problem_set_get(self):
+        """Test case for get_problem_set_api_v1_domains_domain_problem_sets_problem_set_get
 
         Get Problem Set  # noqa: E501
         """
         pass
 
-    def test_get_scoreboard_api_v1_problem_sets_problem_set_scoreboard_get(self):
-        """Test case for get_scoreboard_api_v1_problem_sets_problem_set_scoreboard_get
+    def test_get_scoreboard_api_v1_domains_domain_problem_sets_problem_set_scoreboard_get(self):
+        """Test case for get_scoreboard_api_v1_domains_domain_problem_sets_problem_set_scoreboard_get
 
         Get Scoreboard  # noqa: E501
         """
         pass
 
-    def test_list_problem_sets_api_v1_problem_sets_get(self):
-        """Test case for list_problem_sets_api_v1_problem_sets_get
+    def test_list_problem_sets_api_v1_domains_domain_problem_sets_get(self):
+        """Test case for list_problem_sets_api_v1_domains_domain_problem_sets_get
 
         List Problem Sets  # noqa: E501
         """
         pass
 
-    def test_update_problem_set_api_v1_problem_sets_problem_set_patch(self):
-        """Test case for update_problem_set_api_v1_problem_sets_problem_set_patch
+    def test_update_problem_set_api_v1_domains_domain_problem_sets_problem_set_patch(self):
+        """Test case for update_problem_set_api_v1_domains_domain_problem_sets_problem_set_patch
 
         Update Problem Set  # noqa: E501
         """

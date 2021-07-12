@@ -3,8 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**domain** | **str** | url or the id of the domain | 
-**url** | **str** | (in domain unique) url of the problem | [optional] 
+**url** | **str** | (unique in domain) url of the problem set | [optional] 
 **title** | **str** | title of the problem set | 
 **content** | **str** | content of the problem set | [optional] [default to '']
 **hidden** | **bool** | whether the problem set is hidden | [optional] [default to False]

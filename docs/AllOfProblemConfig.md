@@ -1,4 +1,4 @@
-# AllOfProblemCreateDataVersion
+# AllOfProblemConfig
 
 ## Properties
 Name | Type | Description | Notes
