@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**url** | **str** | (unique in domain) url of the problem | [optional] 
+**url** | **str** | (unique in domain) url of the problem | [optional] [default to '']
 **title** | **str** | title of the problem | 
 **content** | **str** | content of the problem | [optional] [default to '']
 
