@@ -15,12 +15,12 @@ from __future__ import absolute_import
 import unittest
 
 import joj.horse.client
-from joj.horse.client.models.problem_group import ProblemGroup  # noqa: E501
+from joj.horse.client.models.domain_transfer import DomainTransfer  # noqa: E501
 from joj.horse.client.rest import ApiException
 
 
-class TestProblemGroup(unittest.TestCase):
-    """ProblemGroup unit test stubs"""
+class TestDomainTransfer(unittest.TestCase):
+    """DomainTransfer unit test stubs"""
 
     def setUp(self):
         pass
@@ -28,10 +28,10 @@ class TestProblemGroup(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testProblemGroup(self):
-        """Test ProblemGroup"""
+    def testDomainTransfer(self):
+        """Test DomainTransfer"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = joj.horse.client.models.problem_group.ProblemGroup()  # noqa: E501
+        # model = joj.horse.client.models.domain_transfer.DomainTransfer()  # noqa: E501
         pass
 
 

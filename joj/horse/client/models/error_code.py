@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: 335bcde@2021-07-15 17:24:35  # noqa: E501
+    Git version: 9e94d56@2021-07-16 06:38:54  # noqa: E501
 
     OpenAPI spec version: 0.0.0
     
@@ -43,12 +43,13 @@ class ErrorCode(object):
     PROBLEMSETBEFOREAVAILABLEERROR = "ProblemSetBeforeAvailableError"
     PROBLEMSETAFTERDUEERROR = "ProblemSetAfterDueError"
     USERNOTJUDGERERROR = "UserNotJudgerError"
+    DOMAINNOTOWNERERROR = "DomainNotOwnerError"
+    DOMAINNOTROOTERROR = "DomainNotRootError"
     DOMAINROLENOTFOUNDERROR = "DomainRoleNotFoundError"
     DOMAINROLENOTUNIQUEERROR = "DomainRoleNotUniqueError"
     DOMAINROLEREADONLYERROR = "DomainRoleReadOnlyError"
     DOMAINROLEUSEDERROR = "DomainRoleUsedError"
     DOMAINUSERNOTFOUNDERROR = "DomainUserNotFoundError"
-    DOMAINUSERROOTERROR = "DomainUserRootError"
     """
     Attributes:
       swagger_types (dict): The key is attribute name

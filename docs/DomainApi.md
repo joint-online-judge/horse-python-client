@@ -18,6 +18,7 @@ Method | HTTP request | Description
 [**list_domain_users_api_v1_domains_domain_users_get**](DomainApi.md#list_domain_users_api_v1_domains_domain_users_get) | **GET** /api/v1/domains/{domain}/users | List Domain Users
 [**list_domains_api_v1_domains_get**](DomainApi.md#list_domains_api_v1_domains_get) | **GET** /api/v1/domains | List Domains
 [**remove_domain_user_api_v1_domains_domain_users_user_delete**](DomainApi.md#remove_domain_user_api_v1_domains_domain_users_user_delete) | **DELETE** /api/v1/domains/{domain}/users/{user} | Remove Domain User
+[**transfer_domain_api_v1_domains_domain_transfer_post**](DomainApi.md#transfer_domain_api_v1_domains_domain_transfer_post) | **POST** /api/v1/domains/{domain}/transfer | Transfer Domain
 [**update_domain_api_v1_domains_domain_patch**](DomainApi.md#update_domain_api_v1_domains_domain_patch) | **PATCH** /api/v1/domains/{domain} | Update Domain
 [**update_domain_invitation_api_v1_domains_domain_invitations_invitation_patch**](DomainApi.md#update_domain_invitation_api_v1_domains_domain_invitations_invitation_patch) | **PATCH** /api/v1/domains/{domain}/invitations/{invitation} | Update Domain Invitation
 [**update_domain_role_api_v1_domains_domain_roles_role_patch**](DomainApi.md#update_domain_role_api_v1_domains_domain_roles_role_patch) | **PATCH** /api/v1/domains/{domain}/roles/{role} | Update Domain Role
@@ -703,6 +704,55 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **transfer_domain_api_v1_domains_domain_transfer_post**
+> DomainResp transfer_domain_api_v1_domains_domain_transfer_post(body, domain)
+
+Transfer Domain
+
+### Example
+```python
+from __future__ import print_function
+import time
+import joj.horse.client
+from joj.horse.client.rest import ApiException
+from pprint import pprint
+
+
+# create an instance of the API class
+api_instance = joj.horse.client.DomainApi(joj.horse.client.ApiClient(configuration))
+body = joj.horse.client.DomainTransfer() # DomainTransfer | 
+domain = 'domain_example' # str | url or ObjectId of the domain
+
+try:
+    # Transfer Domain
+    api_response = api_instance.transfer_domain_api_v1_domains_domain_transfer_post(body, domain)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling DomainApi->transfer_domain_api_v1_domains_domain_transfer_post: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**DomainTransfer**](DomainTransfer.md)|  | 
+ **domain** | **str**| url or ObjectId of the domain | 
+
+### Return type
+
+[**DomainResp**](DomainResp.md)
+
+### Authorization
+
+[HTTPBearer](../README.md#HTTPBearer)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

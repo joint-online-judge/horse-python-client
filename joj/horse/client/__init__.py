@@ -5,7 +5,7 @@
 """
     JOJ Horse
 
-    Git version: 335bcde@2021-07-15 17:24:35  # noqa: E501
+    Git version: 9e94d56@2021-07-16 06:38:54  # noqa: E501
 
     OpenAPI spec version: 0.0.0
     
@@ -64,6 +64,7 @@ from joj.horse.client.models.domain_role import DomainRole
 from joj.horse.client.models.domain_role_create import DomainRoleCreate
 from joj.horse.client.models.domain_role_edit import DomainRoleEdit
 from joj.horse.client.models.domain_role_resp import DomainRoleResp
+from joj.horse.client.models.domain_transfer import DomainTransfer
 from joj.horse.client.models.domain_user import DomainUser
 from joj.horse.client.models.domain_user_add import DomainUserAdd
 from joj.horse.client.models.domain_user_resp import DomainUserResp
