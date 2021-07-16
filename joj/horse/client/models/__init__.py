@@ -4,7 +4,7 @@
 """
     JOJ Horse
 
-    Git version: 8fbec78@2021-07-16 09:35:08  # noqa: E501
+    Git version: 8a4e1ee@2021-07-16 09:35:37  # noqa: E501
 
     OpenAPI spec version: 0.0.0
     
@@ -23,6 +23,8 @@ from joj.horse.client.models.any_of_domain_invitation_domain import AnyOfDomainI
 from joj.horse.client.models.any_of_domain_owner import AnyOfDomainOwner
 from joj.horse.client.models.any_of_domain_role_domain import AnyOfDomainRoleDomain
 from joj.horse.client.models.any_of_domain_user_domain import AnyOfDomainUserDomain
+from joj.horse.client.models.any_of_domain_user_permission_domain import AnyOfDomainUserPermissionDomain
+from joj.horse.client.models.any_of_domain_user_permission_user import AnyOfDomainUserPermissionUser
 from joj.horse.client.models.any_of_domain_user_user import AnyOfDomainUserUser
 from joj.horse.client.models.any_of_problem_domain import AnyOfProblemDomain
 from joj.horse.client.models.any_of_problem_owner import AnyOfProblemOwner
@@ -53,6 +55,8 @@ from joj.horse.client.models.domain_role_resp import DomainRoleResp
 from joj.horse.client.models.domain_transfer import DomainTransfer
 from joj.horse.client.models.domain_user import DomainUser
 from joj.horse.client.models.domain_user_add import DomainUserAdd
+from joj.horse.client.models.domain_user_permission import DomainUserPermission
+from joj.horse.client.models.domain_user_permission_resp import DomainUserPermissionResp
 from joj.horse.client.models.domain_user_resp import DomainUserResp
 from joj.horse.client.models.empty import Empty
 from joj.horse.client.models.empty_resp import EmptyResp
