@@ -7,7 +7,7 @@ Method | HTTP request | Description
 [**list_problem_groups_api_v1_problem_groups_get**](ProblemGroupApi.md#list_problem_groups_api_v1_problem_groups_get) | **GET** /api/v1/problem_groups | List Problem Groups
 
 # **list_problem_groups_api_v1_problem_groups_get**
-> ListProblemGroupsResp list_problem_groups_api_v1_problem_groups_get(sort=sort, skip=skip, limit=limit)
+> ListProblemGroupsResp list_problem_groups_api_v1_problem_groups_get(offset=offset, limit=limit)
 
 List Problem Groups
 
@@ -22,13 +22,12 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = joj.horse.client.ProblemGroupApi(joj.horse.client.ApiClient(configuration))
-sort = joj.horse.client.SortEnum() # SortEnum |  (optional)
-skip = 56 # int |  (optional)
-limit = 56 # int |  (optional)
+offset = 0 # int |  (optional) (default to 0)
+limit = 100 # int |  (optional) (default to 100)
 
 try:
     # List Problem Groups
-    api_response = api_instance.list_problem_groups_api_v1_problem_groups_get(sort=sort, skip=skip, limit=limit)
+    api_response = api_instance.list_problem_groups_api_v1_problem_groups_get(offset=offset, limit=limit)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling ProblemGroupApi->list_problem_groups_api_v1_problem_groups_get: %s\n" % e)
@@ -38,9 +37,8 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **sort** | [**SortEnum**](.md)|  | [optional] 
- **skip** | **int**|  | [optional] 
- **limit** | **int**|  | [optional] 
+ **offset** | **int**|  | [optional] [default to 0]
+ **limit** | **int**|  | [optional] [default to 100]
 
 ### Return type
 

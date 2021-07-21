@@ -52,7 +52,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **test_sentry_api_v1_test_sentry_get**
-> str test_sentry_api_v1_test_sentry_get()
+> Null test_sentry_api_v1_test_sentry_get()
 
 Test Sentry
 
@@ -80,7 +80,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-**str**
+[**Null**](Null.md)
 
 ### Authorization
 

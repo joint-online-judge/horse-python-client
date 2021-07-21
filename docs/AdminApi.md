@@ -210,7 +210,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **list_domain_roles_api_v1_admin_domain_roles_get**
-> ListDomainRolesResp list_domain_roles_api_v1_admin_domain_roles_get(sort=sort, skip=skip, limit=limit)
+> ListDomainRolesResp list_domain_roles_api_v1_admin_domain_roles_get(offset=offset, limit=limit)
 
 List Domain Roles
 
@@ -225,13 +225,12 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = joj.horse.client.AdminApi(joj.horse.client.ApiClient(configuration))
-sort = joj.horse.client.SortEnum() # SortEnum |  (optional)
-skip = 56 # int |  (optional)
-limit = 56 # int |  (optional)
+offset = 0 # int |  (optional) (default to 0)
+limit = 100 # int |  (optional) (default to 100)
 
 try:
     # List Domain Roles
-    api_response = api_instance.list_domain_roles_api_v1_admin_domain_roles_get(sort=sort, skip=skip, limit=limit)
+    api_response = api_instance.list_domain_roles_api_v1_admin_domain_roles_get(offset=offset, limit=limit)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling AdminApi->list_domain_roles_api_v1_admin_domain_roles_get: %s\n" % e)
@@ -241,9 +240,8 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **sort** | [**SortEnum**](.md)|  | [optional] 
- **skip** | **int**|  | [optional] 
- **limit** | **int**|  | [optional] 
+ **offset** | **int**|  | [optional] [default to 0]
+ **limit** | **int**|  | [optional] [default to 100]
 
 ### Return type
 
@@ -261,7 +259,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **list_domain_users_api_v1_admin_domain_users_get**
-> ListDomainUsersResp list_domain_users_api_v1_admin_domain_users_get(sort=sort, skip=skip, limit=limit)
+> ListDomainUsersResp list_domain_users_api_v1_admin_domain_users_get(offset=offset, limit=limit)
 
 List Domain Users
 
@@ -276,13 +274,12 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = joj.horse.client.AdminApi(joj.horse.client.ApiClient(configuration))
-sort = joj.horse.client.SortEnum() # SortEnum |  (optional)
-skip = 56 # int |  (optional)
-limit = 56 # int |  (optional)
+offset = 0 # int |  (optional) (default to 0)
+limit = 100 # int |  (optional) (default to 100)
 
 try:
     # List Domain Users
-    api_response = api_instance.list_domain_users_api_v1_admin_domain_users_get(sort=sort, skip=skip, limit=limit)
+    api_response = api_instance.list_domain_users_api_v1_admin_domain_users_get(offset=offset, limit=limit)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling AdminApi->list_domain_users_api_v1_admin_domain_users_get: %s\n" % e)
@@ -292,9 +289,8 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **sort** | [**SortEnum**](.md)|  | [optional] 
- **skip** | **int**|  | [optional] 
- **limit** | **int**|  | [optional] 
+ **offset** | **int**|  | [optional] [default to 0]
+ **limit** | **int**|  | [optional] [default to 100]
 
 ### Return type
 
@@ -312,7 +308,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **list_judgers_api_v1_admin_judgers_get**
-> ListUsersResp list_judgers_api_v1_admin_judgers_get(sort=sort, skip=skip, limit=limit)
+> ListUsersResp list_judgers_api_v1_admin_judgers_get(offset=offset, limit=limit)
 
 List Judgers
 
@@ -327,13 +323,12 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = joj.horse.client.AdminApi(joj.horse.client.ApiClient(configuration))
-sort = joj.horse.client.SortEnum() # SortEnum |  (optional)
-skip = 56 # int |  (optional)
-limit = 56 # int |  (optional)
+offset = 0 # int |  (optional) (default to 0)
+limit = 100 # int |  (optional) (default to 100)
 
 try:
     # List Judgers
-    api_response = api_instance.list_judgers_api_v1_admin_judgers_get(sort=sort, skip=skip, limit=limit)
+    api_response = api_instance.list_judgers_api_v1_admin_judgers_get(offset=offset, limit=limit)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling AdminApi->list_judgers_api_v1_admin_judgers_get: %s\n" % e)
@@ -343,9 +338,8 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **sort** | [**SortEnum**](.md)|  | [optional] 
- **skip** | **int**|  | [optional] 
- **limit** | **int**|  | [optional] 
+ **offset** | **int**|  | [optional] [default to 0]
+ **limit** | **int**|  | [optional] [default to 100]
 
 ### Return type
 
@@ -363,7 +357,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **list_users_api_v1_admin_users_get**
-> ListUsersResp list_users_api_v1_admin_users_get(sort=sort, skip=skip, limit=limit)
+> ListUsersResp list_users_api_v1_admin_users_get(offset=offset, limit=limit)
 
 List Users
 
@@ -378,13 +372,12 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = joj.horse.client.AdminApi(joj.horse.client.ApiClient(configuration))
-sort = joj.horse.client.SortEnum() # SortEnum |  (optional)
-skip = 56 # int |  (optional)
-limit = 56 # int |  (optional)
+offset = 0 # int |  (optional) (default to 0)
+limit = 100 # int |  (optional) (default to 100)
 
 try:
     # List Users
-    api_response = api_instance.list_users_api_v1_admin_users_get(sort=sort, skip=skip, limit=limit)
+    api_response = api_instance.list_users_api_v1_admin_users_get(offset=offset, limit=limit)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling AdminApi->list_users_api_v1_admin_users_get: %s\n" % e)
@@ -394,9 +387,8 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **sort** | [**SortEnum**](.md)|  | [optional] 
- **skip** | **int**|  | [optional] 
- **limit** | **int**|  | [optional] 
+ **offset** | **int**|  | [optional] [default to 0]
+ **limit** | **int**|  | [optional] [default to 100]
 
 ### Return type
 

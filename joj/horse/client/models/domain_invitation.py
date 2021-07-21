@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: b209977@2021-07-17 02:38:22  # noqa: E501
+    Git version: 7a3f584@2021-07-21 04:28:13  # noqa: E501
 
     OpenAPI spec version: 0.0.0
     
@@ -29,37 +29,44 @@ class DomainInvitation(object):
     """
     swagger_types = {
         'id': 'str',
+        'created_at': 'datetime',
+        'updated_at': 'datetime',
         'code': 'str',
-        'expire_at': 'datetime',
         'role': 'str',
-        'domain': 'AnyOfDomainInvitationDomain'
+        'expire_at': 'datetime',
+        'domain_id': 'str'
     }
 
     attribute_map = {
         'id': 'id',
+        'created_at': 'created_at',
+        'updated_at': 'updated_at',
         'code': 'code',
-        'expire_at': 'expire_at',
         'role': 'role',
-        'domain': 'domain'
+        'expire_at': 'expire_at',
+        'domain_id': 'domain_id'
     }
 
-    def __init__(self, id=None, code='', expire_at=None, role='user', domain=None):  # noqa: E501
+    def __init__(self, id=None, created_at=None, updated_at=None, code=None, role=None, expire_at=None, domain_id=None):  # noqa: E501
         """DomainInvitation - a model defined in Swagger"""  # noqa: E501
         self._id = None
+        self._created_at = None
+        self._updated_at = None
         self._code = None
-        self._expire_at = None
         self._role = None
-        self._domain = None
+        self._expire_at = None
+        self._domain_id = None
         self.discriminator = None
         if id is not None:
             self.id = id
-        if code is not None:
-            self.code = code
-        if expire_at is not None:
-            self.expire_at = expire_at
-        if role is not None:
-            self.role = role
-        self.domain = domain
+        if created_at is not None:
+            self.created_at = created_at
+        if updated_at is not None:
+            self.updated_at = updated_at
+        self.code = code
+        self.role = role
+        self.expire_at = expire_at
+        self.domain_id = domain_id
 
     @property
     def id(self):
@@ -83,10 +90,51 @@ class DomainInvitation(object):
         self._id = id
 
     @property
+    def created_at(self):
+        """Gets the created_at of this DomainInvitation.  # noqa: E501
+
+
+        :return: The created_at of this DomainInvitation.  # noqa: E501
+        :rtype: datetime
+        """
+        return self._created_at
+
+    @created_at.setter
+    def created_at(self, created_at):
+        """Sets the created_at of this DomainInvitation.
+
+
+        :param created_at: The created_at of this DomainInvitation.  # noqa: E501
+        :type: datetime
+        """
+
+        self._created_at = created_at
+
+    @property
+    def updated_at(self):
+        """Gets the updated_at of this DomainInvitation.  # noqa: E501
+
+
+        :return: The updated_at of this DomainInvitation.  # noqa: E501
+        :rtype: datetime
+        """
+        return self._updated_at
+
+    @updated_at.setter
+    def updated_at(self, updated_at):
+        """Sets the updated_at of this DomainInvitation.
+
+
+        :param updated_at: The updated_at of this DomainInvitation.  # noqa: E501
+        :type: datetime
+        """
+
+        self._updated_at = updated_at
+
+    @property
     def code(self):
         """Gets the code of this DomainInvitation.  # noqa: E501
 
-        invitation code  # noqa: E501
 
         :return: The code of this DomainInvitation.  # noqa: E501
         :rtype: str
@@ -97,42 +145,19 @@ class DomainInvitation(object):
     def code(self, code):
         """Sets the code of this DomainInvitation.
 
-        invitation code  # noqa: E501
 
         :param code: The code of this DomainInvitation.  # noqa: E501
         :type: str
         """
+        if code is None:
+            raise ValueError("Invalid value for `code`, must not be `None`")  # noqa: E501
 
         self._code = code
-
-    @property
-    def expire_at(self):
-        """Gets the expire_at of this DomainInvitation.  # noqa: E501
-
-        expire time of invitation  # noqa: E501
-
-        :return: The expire_at of this DomainInvitation.  # noqa: E501
-        :rtype: datetime
-        """
-        return self._expire_at
-
-    @expire_at.setter
-    def expire_at(self, expire_at):
-        """Sets the expire_at of this DomainInvitation.
-
-        expire time of invitation  # noqa: E501
-
-        :param expire_at: The expire_at of this DomainInvitation.  # noqa: E501
-        :type: datetime
-        """
-
-        self._expire_at = expire_at
 
     @property
     def role(self):
         """Gets the role of this DomainInvitation.  # noqa: E501
 
-        domain role after invitation  # noqa: E501
 
         :return: The role of this DomainInvitation.  # noqa: E501
         :rtype: str
@@ -143,36 +168,60 @@ class DomainInvitation(object):
     def role(self, role):
         """Sets the role of this DomainInvitation.
 
-        domain role after invitation  # noqa: E501
 
         :param role: The role of this DomainInvitation.  # noqa: E501
         :type: str
         """
+        if role is None:
+            raise ValueError("Invalid value for `role`, must not be `None`")  # noqa: E501
 
         self._role = role
 
     @property
-    def domain(self):
-        """Gets the domain of this DomainInvitation.  # noqa: E501
+    def expire_at(self):
+        """Gets the expire_at of this DomainInvitation.  # noqa: E501
 
 
-        :return: The domain of this DomainInvitation.  # noqa: E501
-        :rtype: AnyOfDomainInvitationDomain
+        :return: The expire_at of this DomainInvitation.  # noqa: E501
+        :rtype: datetime
         """
-        return self._domain
+        return self._expire_at
 
-    @domain.setter
-    def domain(self, domain):
-        """Sets the domain of this DomainInvitation.
+    @expire_at.setter
+    def expire_at(self, expire_at):
+        """Sets the expire_at of this DomainInvitation.
 
 
-        :param domain: The domain of this DomainInvitation.  # noqa: E501
-        :type: AnyOfDomainInvitationDomain
+        :param expire_at: The expire_at of this DomainInvitation.  # noqa: E501
+        :type: datetime
         """
-        if domain is None:
-            raise ValueError("Invalid value for `domain`, must not be `None`")  # noqa: E501
+        if expire_at is None:
+            raise ValueError("Invalid value for `expire_at`, must not be `None`")  # noqa: E501
 
-        self._domain = domain
+        self._expire_at = expire_at
+
+    @property
+    def domain_id(self):
+        """Gets the domain_id of this DomainInvitation.  # noqa: E501
+
+
+        :return: The domain_id of this DomainInvitation.  # noqa: E501
+        :rtype: str
+        """
+        return self._domain_id
+
+    @domain_id.setter
+    def domain_id(self, domain_id):
+        """Sets the domain_id of this DomainInvitation.
+
+
+        :param domain_id: The domain_id of this DomainInvitation.  # noqa: E501
+        :type: str
+        """
+        if domain_id is None:
+            raise ValueError("Invalid value for `domain_id`, must not be `None`")  # noqa: E501
+
+        self._domain_id = domain_id
 
     def to_dict(self):
         """Returns the model properties as a dict"""

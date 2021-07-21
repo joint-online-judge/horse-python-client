@@ -5,7 +5,7 @@
 """
     JOJ Horse
 
-    Git version: b209977@2021-07-17 02:38:22  # noqa: E501
+    Git version: 7a3f584@2021-07-21 04:28:13  # noqa: E501
 
     OpenAPI spec version: 0.0.0
     
@@ -28,30 +28,14 @@ from joj.horse.client.api.user_api import UserApi
 from joj.horse.client.api_client import ApiClient
 from joj.horse.client.configuration import Configuration
 # import models into sdk package
+from joj.horse.client.models.all_of_domain_permission_general import AllOfDomainPermissionGeneral
+from joj.horse.client.models.all_of_domain_permission_problem import AllOfDomainPermissionProblem
+from joj.horse.client.models.all_of_domain_permission_problem_set import AllOfDomainPermissionProblemSet
+from joj.horse.client.models.all_of_domain_permission_record import AllOfDomainPermissionRecord
+from joj.horse.client.models.all_of_domain_role_create_permission import AllOfDomainRoleCreatePermission
+from joj.horse.client.models.all_of_domain_role_permission import AllOfDomainRolePermission
 from joj.horse.client.models.all_of_domain_user_add_role import AllOfDomainUserAddRole
-from joj.horse.client.models.all_of_problem_config import AllOfProblemConfig
-from joj.horse.client.models.all_of_problem_data_version import AllOfProblemDataVersion
 from joj.horse.client.models.all_of_record_case_status import AllOfRecordCaseStatus
-from joj.horse.client.models.all_of_record_status import AllOfRecordStatus
-from joj.horse.client.models.any_of_domain_invitation_domain import AnyOfDomainInvitationDomain
-from joj.horse.client.models.any_of_domain_owner import AnyOfDomainOwner
-from joj.horse.client.models.any_of_domain_role_domain import AnyOfDomainRoleDomain
-from joj.horse.client.models.any_of_domain_user_domain import AnyOfDomainUserDomain
-from joj.horse.client.models.any_of_domain_user_permission_domain import AnyOfDomainUserPermissionDomain
-from joj.horse.client.models.any_of_domain_user_permission_user import AnyOfDomainUserPermissionUser
-from joj.horse.client.models.any_of_domain_user_user import AnyOfDomainUserUser
-from joj.horse.client.models.any_of_problem_domain import AnyOfProblemDomain
-from joj.horse.client.models.any_of_problem_owner import AnyOfProblemOwner
-from joj.horse.client.models.any_of_problem_problem_group import AnyOfProblemProblemGroup
-from joj.horse.client.models.any_of_problem_set_domain import AnyOfProblemSetDomain
-from joj.horse.client.models.any_of_problem_set_owner import AnyOfProblemSetOwner
-from joj.horse.client.models.any_of_problem_set_problems_items import AnyOfProblemSetProblemsItems
-from joj.horse.client.models.any_of_record_domain import AnyOfRecordDomain
-from joj.horse.client.models.any_of_record_judge_user import AnyOfRecordJudgeUser
-from joj.horse.client.models.any_of_record_problem import AnyOfRecordProblem
-from joj.horse.client.models.any_of_record_user import AnyOfRecordUser
-from joj.horse.client.models.config import Config
-from joj.horse.client.models.data_version import DataVersion
 from joj.horse.client.models.default_role import DefaultRole
 from joj.horse.client.models.detail import Detail
 from joj.horse.client.models.domain import Domain
@@ -61,30 +45,34 @@ from joj.horse.client.models.domain_invitation import DomainInvitation
 from joj.horse.client.models.domain_invitation_create import DomainInvitationCreate
 from joj.horse.client.models.domain_invitation_edit import DomainInvitationEdit
 from joj.horse.client.models.domain_invitation_resp import DomainInvitationResp
+from joj.horse.client.models.domain_list import DomainList
+from joj.horse.client.models.domain_list_resp import DomainListResp
+from joj.horse.client.models.domain_permission import DomainPermission
 from joj.horse.client.models.domain_resp import DomainResp
 from joj.horse.client.models.domain_role import DomainRole
 from joj.horse.client.models.domain_role_create import DomainRoleCreate
 from joj.horse.client.models.domain_role_edit import DomainRoleEdit
+from joj.horse.client.models.domain_role_list import DomainRoleList
+from joj.horse.client.models.domain_role_list_resp import DomainRoleListResp
 from joj.horse.client.models.domain_role_resp import DomainRoleResp
 from joj.horse.client.models.domain_transfer import DomainTransfer
 from joj.horse.client.models.domain_user import DomainUser
 from joj.horse.client.models.domain_user_add import DomainUserAdd
+from joj.horse.client.models.domain_user_list import DomainUserList
+from joj.horse.client.models.domain_user_list_resp import DomainUserListResp
 from joj.horse.client.models.domain_user_permission import DomainUserPermission
 from joj.horse.client.models.domain_user_permission_resp import DomainUserPermissionResp
 from joj.horse.client.models.domain_user_resp import DomainUserResp
 from joj.horse.client.models.empty import Empty
 from joj.horse.client.models.empty_resp import EmptyResp
 from joj.horse.client.models.error_code import ErrorCode
-from joj.horse.client.models.file import File
-from joj.horse.client.models.file_type import FileType
+from joj.horse.client.models.general_permission import GeneralPermission
 from joj.horse.client.models.http_validation_error import HTTPValidationError
 from joj.horse.client.models.jwt import JWT
 from joj.horse.client.models.list_domain_roles import ListDomainRoles
 from joj.horse.client.models.list_domain_roles_resp import ListDomainRolesResp
 from joj.horse.client.models.list_domain_users import ListDomainUsers
 from joj.horse.client.models.list_domain_users_resp import ListDomainUsersResp
-from joj.horse.client.models.list_domains import ListDomains
-from joj.horse.client.models.list_domains_resp import ListDomainsResp
 from joj.horse.client.models.list_problem_groups import ListProblemGroups
 from joj.horse.client.models.list_problem_groups_resp import ListProblemGroupsResp
 from joj.horse.client.models.list_problem_sets import ListProblemSets
@@ -101,16 +89,19 @@ from joj.horse.client.models.problem_config_edit import ProblemConfigEdit
 from joj.horse.client.models.problem_create import ProblemCreate
 from joj.horse.client.models.problem_edit import ProblemEdit
 from joj.horse.client.models.problem_group import ProblemGroup
+from joj.horse.client.models.problem_permission import ProblemPermission
 from joj.horse.client.models.problem_resp import ProblemResp
 from joj.horse.client.models.problem_set import ProblemSet
 from joj.horse.client.models.problem_set_create import ProblemSetCreate
 from joj.horse.client.models.problem_set_edit import ProblemSetEdit
+from joj.horse.client.models.problem_set_permission import ProblemSetPermission
 from joj.horse.client.models.problem_set_resp import ProblemSetResp
 from joj.horse.client.models.problem_solution_submit import ProblemSolutionSubmit
 from joj.horse.client.models.record import Record
 from joj.horse.client.models.record_case import RecordCase
 from joj.horse.client.models.record_case_result import RecordCaseResult
 from joj.horse.client.models.record_code_type import RecordCodeType
+from joj.horse.client.models.record_permission import RecordPermission
 from joj.horse.client.models.record_resp import RecordResp
 from joj.horse.client.models.record_result import RecordResult
 from joj.horse.client.models.record_status import RecordStatus
@@ -118,7 +109,6 @@ from joj.horse.client.models.redirect_model import RedirectModel
 from joj.horse.client.models.score import Score
 from joj.horse.client.models.score_board import ScoreBoard
 from joj.horse.client.models.score_board_resp import ScoreBoardResp
-from joj.horse.client.models.sort_enum import SortEnum
 from joj.horse.client.models.user import User
 from joj.horse.client.models.user_base import UserBase
 from joj.horse.client.models.user_base_resp import UserBaseResp

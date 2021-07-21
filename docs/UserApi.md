@@ -104,7 +104,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_user_domains_api_v1_users_uid_domains_get**
-> ListDomainUsersResp get_user_domains_api_v1_users_uid_domains_get(uid, role=role, sort=sort, skip=skip, limit=limit)
+> ListDomainUsersResp get_user_domains_api_v1_users_uid_domains_get(uid, role=role, offset=offset, limit=limit)
 
 Get User Domains
 
@@ -121,13 +121,12 @@ from pprint import pprint
 api_instance = joj.horse.client.UserApi(joj.horse.client.ApiClient(configuration))
 uid = 'uid_example' # str | 
 role = ['[]'] # list[str] |  (optional) (default to [])
-sort = joj.horse.client.SortEnum() # SortEnum |  (optional)
-skip = 56 # int |  (optional)
-limit = 56 # int |  (optional)
+offset = 0 # int |  (optional) (default to 0)
+limit = 100 # int |  (optional) (default to 100)
 
 try:
     # Get User Domains
-    api_response = api_instance.get_user_domains_api_v1_users_uid_domains_get(uid, role=role, sort=sort, skip=skip, limit=limit)
+    api_response = api_instance.get_user_domains_api_v1_users_uid_domains_get(uid, role=role, offset=offset, limit=limit)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling UserApi->get_user_domains_api_v1_users_uid_domains_get: %s\n" % e)
@@ -139,9 +138,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **uid** | **str**|  | 
  **role** | [**list[str]**](str.md)|  | [optional] [default to []]
- **sort** | [**SortEnum**](.md)|  | [optional] 
- **skip** | **int**|  | [optional] 
- **limit** | **int**|  | [optional] 
+ **offset** | **int**|  | [optional] [default to 0]
+ **limit** | **int**|  | [optional] [default to 100]
 
 ### Return type
 
@@ -159,7 +157,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_user_problems_api_v1_user_problems_get**
-> ListProblemsResp get_user_problems_api_v1_user_problems_get(sort=sort, skip=skip, limit=limit)
+> ListProblemsResp get_user_problems_api_v1_user_problems_get(offset=offset, limit=limit)
 
 Get User Problems
 
@@ -174,13 +172,12 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = joj.horse.client.UserApi(joj.horse.client.ApiClient(configuration))
-sort = joj.horse.client.SortEnum() # SortEnum |  (optional)
-skip = 56 # int |  (optional)
-limit = 56 # int |  (optional)
+offset = 0 # int |  (optional) (default to 0)
+limit = 100 # int |  (optional) (default to 100)
 
 try:
     # Get User Problems
-    api_response = api_instance.get_user_problems_api_v1_user_problems_get(sort=sort, skip=skip, limit=limit)
+    api_response = api_instance.get_user_problems_api_v1_user_problems_get(offset=offset, limit=limit)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling UserApi->get_user_problems_api_v1_user_problems_get: %s\n" % e)
@@ -190,9 +187,8 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **sort** | [**SortEnum**](.md)|  | [optional] 
- **skip** | **int**|  | [optional] 
- **limit** | **int**|  | [optional] 
+ **offset** | **int**|  | [optional] [default to 0]
+ **limit** | **int**|  | [optional] [default to 100]
 
 ### Return type
 
@@ -210,7 +206,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_user_problems_api_v1_users_uid_problems_get**
-> ListProblemsResp get_user_problems_api_v1_users_uid_problems_get(uid, sort=sort, skip=skip, limit=limit)
+> ListProblemsResp get_user_problems_api_v1_users_uid_problems_get(uid, offset=offset, limit=limit)
 
 Get User Problems
 
@@ -226,13 +222,12 @@ from pprint import pprint
 # create an instance of the API class
 api_instance = joj.horse.client.UserApi(joj.horse.client.ApiClient(configuration))
 uid = 'uid_example' # str | 
-sort = joj.horse.client.SortEnum() # SortEnum |  (optional)
-skip = 56 # int |  (optional)
-limit = 56 # int |  (optional)
+offset = 0 # int |  (optional) (default to 0)
+limit = 100 # int |  (optional) (default to 100)
 
 try:
     # Get User Problems
-    api_response = api_instance.get_user_problems_api_v1_users_uid_problems_get(uid, sort=sort, skip=skip, limit=limit)
+    api_response = api_instance.get_user_problems_api_v1_users_uid_problems_get(uid, offset=offset, limit=limit)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling UserApi->get_user_problems_api_v1_users_uid_problems_get: %s\n" % e)
@@ -243,9 +238,8 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **uid** | **str**|  | 
- **sort** | [**SortEnum**](.md)|  | [optional] 
- **skip** | **int**|  | [optional] 
- **limit** | **int**|  | [optional] 
+ **offset** | **int**|  | [optional] [default to 0]
+ **limit** | **int**|  | [optional] [default to 100]
 
 ### Return type
 

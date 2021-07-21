@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: b209977@2021-07-17 02:38:22  # noqa: E501
+    Git version: 7a3f584@2021-07-21 04:28:13  # noqa: E501
 
     OpenAPI spec version: 0.0.0
     
@@ -450,8 +450,7 @@ class ProblemSetApi(object):
 
         :param async_req bool
         :param str domain: url or ObjectId of the domain (required)
-        :param SortEnum sort:
-        :param int skip:
+        :param int offset:
         :param int limit:
         :return: ListProblemSetsResp
                  If the method is called asynchronously,
@@ -474,15 +473,14 @@ class ProblemSetApi(object):
 
         :param async_req bool
         :param str domain: url or ObjectId of the domain (required)
-        :param SortEnum sort:
-        :param int skip:
+        :param int offset:
         :param int limit:
         :return: ListProblemSetsResp
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['domain', 'sort', 'skip', 'limit']  # noqa: E501
+        all_params = ['domain', 'offset', 'limit']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -509,10 +507,8 @@ class ProblemSetApi(object):
             path_params['domain'] = params['domain']  # noqa: E501
 
         query_params = []
-        if 'sort' in params:
-            query_params.append(('sort', params['sort']))  # noqa: E501
-        if 'skip' in params:
-            query_params.append(('skip', params['skip']))  # noqa: E501
+        if 'offset' in params:
+            query_params.append(('offset', params['offset']))  # noqa: E501
         if 'limit' in params:
             query_params.append(('limit', params['limit']))  # noqa: E501
 

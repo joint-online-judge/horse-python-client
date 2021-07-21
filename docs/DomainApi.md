@@ -561,7 +561,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **list_domain_roles_api_v1_domains_domain_roles_get**
-> ListDomainRolesResp list_domain_roles_api_v1_domains_domain_roles_get(domain)
+> DomainRoleListResp list_domain_roles_api_v1_domains_domain_roles_get(domain)
 
 List Domain Roles
 
@@ -594,7 +594,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ListDomainRolesResp**](ListDomainRolesResp.md)
+[**DomainRoleListResp**](DomainRoleListResp.md)
 
 ### Authorization
 
@@ -608,7 +608,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **list_domain_users_api_v1_domains_domain_users_get**
-> ListDomainUsersResp list_domain_users_api_v1_domains_domain_users_get(domain)
+> DomainUserListResp list_domain_users_api_v1_domains_domain_users_get(domain)
 
 List Domain Users
 
@@ -641,7 +641,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ListDomainUsersResp**](ListDomainUsersResp.md)
+[**DomainUserListResp**](DomainUserListResp.md)
 
 ### Authorization
 
@@ -655,7 +655,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **list_domains_api_v1_domains_get**
-> ListDomainsResp list_domains_api_v1_domains_get(role=role, sort=sort, skip=skip, limit=limit)
+> DomainListResp list_domains_api_v1_domains_get(role=role, ordering=ordering, offset=offset, limit=limit)
 
 List Domains
 
@@ -673,13 +673,13 @@ from pprint import pprint
 # create an instance of the API class
 api_instance = joj.horse.client.DomainApi(joj.horse.client.ApiClient(configuration))
 role = ['role_example'] # list[str] |  (optional)
-sort = joj.horse.client.SortEnum() # SortEnum |  (optional)
-skip = 56 # int |  (optional)
-limit = 56 # int |  (optional)
+ordering = '' # str | Comma seperated list of ordering the results. You may also specify reverse orderings by prefixing the field name with '-'. (optional)
+offset = 0 # int |  (optional) (default to 0)
+limit = 100 # int |  (optional) (default to 100)
 
 try:
     # List Domains
-    api_response = api_instance.list_domains_api_v1_domains_get(role=role, sort=sort, skip=skip, limit=limit)
+    api_response = api_instance.list_domains_api_v1_domains_get(role=role, ordering=ordering, offset=offset, limit=limit)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling DomainApi->list_domains_api_v1_domains_get: %s\n" % e)
@@ -690,13 +690,13 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **role** | [**list[str]**](str.md)|  | [optional] 
- **sort** | [**SortEnum**](.md)|  | [optional] 
- **skip** | **int**|  | [optional] 
- **limit** | **int**|  | [optional] 
+ **ordering** | **str**| Comma seperated list of ordering the results. You may also specify reverse orderings by prefixing the field name with &#x27;-&#x27;. | [optional] 
+ **offset** | **int**|  | [optional] [default to 0]
+ **limit** | **int**|  | [optional] [default to 100]
 
 ### Return type
 
-[**ListDomainsResp**](ListDomainsResp.md)
+[**DomainListResp**](DomainListResp.md)
 
 ### Authorization
 

@@ -210,7 +210,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **list_problems_api_v1_domains_domain_problems_get**
-> ListProblemsResp list_problems_api_v1_domains_domain_problems_get(domain, problem_set=problem_set, problem_group=problem_group, sort=sort, skip=skip, limit=limit)
+> ListProblemsResp list_problems_api_v1_domains_domain_problems_get(domain, problem_set=problem_set, problem_group=problem_group, offset=offset, limit=limit)
 
 List Problems
 
@@ -228,13 +228,12 @@ api_instance = joj.horse.client.ProblemApi(joj.horse.client.ApiClient(configurat
 domain = 'domain_example' # str | url or ObjectId of the domain
 problem_set = 'problem_set_example' # str |  (optional)
 problem_group = 'problem_group_example' # str |  (optional)
-sort = joj.horse.client.SortEnum() # SortEnum |  (optional)
-skip = 56 # int |  (optional)
-limit = 56 # int |  (optional)
+offset = 0 # int |  (optional) (default to 0)
+limit = 100 # int |  (optional) (default to 100)
 
 try:
     # List Problems
-    api_response = api_instance.list_problems_api_v1_domains_domain_problems_get(domain, problem_set=problem_set, problem_group=problem_group, sort=sort, skip=skip, limit=limit)
+    api_response = api_instance.list_problems_api_v1_domains_domain_problems_get(domain, problem_set=problem_set, problem_group=problem_group, offset=offset, limit=limit)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling ProblemApi->list_problems_api_v1_domains_domain_problems_get: %s\n" % e)
@@ -247,9 +246,8 @@ Name | Type | Description  | Notes
  **domain** | **str**| url or ObjectId of the domain | 
  **problem_set** | **str**|  | [optional] 
  **problem_group** | **str**|  | [optional] 
- **sort** | [**SortEnum**](.md)|  | [optional] 
- **skip** | **int**|  | [optional] 
- **limit** | **int**|  | [optional] 
+ **offset** | **int**|  | [optional] [default to 0]
+ **limit** | **int**|  | [optional] [default to 100]
 
 ### Return type
 

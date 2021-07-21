@@ -203,7 +203,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **list_records_api_v1_records_get**
-> ListRecordsResp list_records_api_v1_records_get(domain=domain, problem_set=problem_set, problem=problem, sort=sort, skip=skip, limit=limit, uid=uid)
+> ListRecordsResp list_records_api_v1_records_get(domain=domain, problem_set=problem_set, problem=problem, offset=offset, limit=limit, uid=uid)
 
 List Records
 
@@ -221,14 +221,13 @@ api_instance = joj.horse.client.RecordApi(joj.horse.client.ApiClient(configurati
 domain = 'domain_example' # str |  (optional)
 problem_set = 'problem_set_example' # str |  (optional)
 problem = 'problem_example' # str |  (optional)
-sort = joj.horse.client.SortEnum() # SortEnum |  (optional)
-skip = 56 # int |  (optional)
-limit = 56 # int |  (optional)
+offset = 0 # int |  (optional) (default to 0)
+limit = 100 # int |  (optional) (default to 100)
 uid = '' # str | uid or 'me' or empty (optional)
 
 try:
     # List Records
-    api_response = api_instance.list_records_api_v1_records_get(domain=domain, problem_set=problem_set, problem=problem, sort=sort, skip=skip, limit=limit, uid=uid)
+    api_response = api_instance.list_records_api_v1_records_get(domain=domain, problem_set=problem_set, problem=problem, offset=offset, limit=limit, uid=uid)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling RecordApi->list_records_api_v1_records_get: %s\n" % e)
@@ -241,9 +240,8 @@ Name | Type | Description  | Notes
  **domain** | **str**|  | [optional] 
  **problem_set** | **str**|  | [optional] 
  **problem** | **str**|  | [optional] 
- **sort** | [**SortEnum**](.md)|  | [optional] 
- **skip** | **int**|  | [optional] 
- **limit** | **int**|  | [optional] 
+ **offset** | **int**|  | [optional] [default to 0]
+ **limit** | **int**|  | [optional] [default to 100]
  **uid** | **str**| uid or &#x27;me&#x27; or empty | [optional] 
 
 ### Return type

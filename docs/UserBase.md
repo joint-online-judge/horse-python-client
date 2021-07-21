@@ -7,9 +7,9 @@ Name | Type | Description | Notes
 **scope** | **str** |  | 
 **uname** | **str** |  | 
 **mail** | **str** |  | 
-**uname_lower** | **str** |  | [optional] [default to '']
-**mail_lower** | **str** |  | [optional] [default to '']
-**gravatar** | **str** |  | [optional] [default to '']
+**uname_lower** | **str** |  | 
+**mail_lower** | **str** |  | 
+**gravatar** | **str** |  | 
 **student_id** | **str** |  | [optional] [default to '']
 **real_name** | **str** |  | [optional] [default to '']
 

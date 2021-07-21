@@ -4,8 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **role** | **str** |  | 
-**permission** | **object** |  | [optional] 
-**updated_at** | **datetime** |  | [optional] 
+**permission** | [**AllOfDomainRoleCreatePermission**](AllOfDomainRoleCreatePermission.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

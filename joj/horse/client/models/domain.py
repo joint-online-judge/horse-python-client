@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: b209977@2021-07-17 02:38:22  # noqa: E501
+    Git version: 7a3f584@2021-07-21 04:28:13  # noqa: E501
 
     OpenAPI spec version: 0.0.0
     
@@ -29,39 +29,53 @@ class Domain(object):
     """
     swagger_types = {
         'id': 'str',
+        'created_at': 'datetime',
+        'updated_at': 'datetime',
         'url': 'str',
         'name': 'str',
-        'bulletin': 'str',
         'gravatar': 'str',
-        'owner': 'AnyOfDomainOwner'
+        'bulletin': 'str',
+        'owner_id': 'str',
+        'owner': 'UserBase'
     }
 
     attribute_map = {
         'id': 'id',
+        'created_at': 'created_at',
+        'updated_at': 'updated_at',
         'url': 'url',
         'name': 'name',
-        'bulletin': 'bulletin',
         'gravatar': 'gravatar',
+        'bulletin': 'bulletin',
+        'owner_id': 'owner_id',
         'owner': 'owner'
     }
 
-    def __init__(self, id=None, url=None, name=None, bulletin='', gravatar='', owner=None):  # noqa: E501
+    def __init__(self, id=None, created_at=None, updated_at=None, url=None, name=None, gravatar='', bulletin='', owner_id=None, owner=None):  # noqa: E501
         """Domain - a model defined in Swagger"""  # noqa: E501
         self._id = None
+        self._created_at = None
+        self._updated_at = None
         self._url = None
         self._name = None
-        self._bulletin = None
         self._gravatar = None
+        self._bulletin = None
+        self._owner_id = None
         self._owner = None
         self.discriminator = None
         if id is not None:
             self.id = id
+        if created_at is not None:
+            self.created_at = created_at
+        if updated_at is not None:
+            self.updated_at = updated_at
         self.url = url
         self.name = name
-        if bulletin is not None:
-            self.bulletin = bulletin
         if gravatar is not None:
             self.gravatar = gravatar
+        if bulletin is not None:
+            self.bulletin = bulletin
+        self.owner_id = owner_id
         self.owner = owner
 
     @property
@@ -84,6 +98,48 @@ class Domain(object):
         """
 
         self._id = id
+
+    @property
+    def created_at(self):
+        """Gets the created_at of this Domain.  # noqa: E501
+
+
+        :return: The created_at of this Domain.  # noqa: E501
+        :rtype: datetime
+        """
+        return self._created_at
+
+    @created_at.setter
+    def created_at(self, created_at):
+        """Sets the created_at of this Domain.
+
+
+        :param created_at: The created_at of this Domain.  # noqa: E501
+        :type: datetime
+        """
+
+        self._created_at = created_at
+
+    @property
+    def updated_at(self):
+        """Gets the updated_at of this Domain.  # noqa: E501
+
+
+        :return: The updated_at of this Domain.  # noqa: E501
+        :rtype: datetime
+        """
+        return self._updated_at
+
+    @updated_at.setter
+    def updated_at(self, updated_at):
+        """Sets the updated_at of this Domain.
+
+
+        :param updated_at: The updated_at of this Domain.  # noqa: E501
+        :type: datetime
+        """
+
+        self._updated_at = updated_at
 
     @property
     def url(self):
@@ -112,7 +168,6 @@ class Domain(object):
     def name(self):
         """Gets the name of this Domain.  # noqa: E501
 
-        displayed name of the domain  # noqa: E501
 
         :return: The name of this Domain.  # noqa: E501
         :rtype: str
@@ -123,7 +178,6 @@ class Domain(object):
     def name(self, name):
         """Sets the name of this Domain.
 
-        displayed name of the domain  # noqa: E501
 
         :param name: The name of this Domain.  # noqa: E501
         :type: str
@@ -134,33 +188,9 @@ class Domain(object):
         self._name = name
 
     @property
-    def bulletin(self):
-        """Gets the bulletin of this Domain.  # noqa: E501
-
-        bulletin of the domain  # noqa: E501
-
-        :return: The bulletin of this Domain.  # noqa: E501
-        :rtype: str
-        """
-        return self._bulletin
-
-    @bulletin.setter
-    def bulletin(self, bulletin):
-        """Sets the bulletin of this Domain.
-
-        bulletin of the domain  # noqa: E501
-
-        :param bulletin: The bulletin of this Domain.  # noqa: E501
-        :type: str
-        """
-
-        self._bulletin = bulletin
-
-    @property
     def gravatar(self):
         """Gets the gravatar of this Domain.  # noqa: E501
 
-        gravatar url of the domain  # noqa: E501
 
         :return: The gravatar of this Domain.  # noqa: E501
         :rtype: str
@@ -171,7 +201,6 @@ class Domain(object):
     def gravatar(self, gravatar):
         """Sets the gravatar of this Domain.
 
-        gravatar url of the domain  # noqa: E501
 
         :param gravatar: The gravatar of this Domain.  # noqa: E501
         :type: str
@@ -180,12 +209,56 @@ class Domain(object):
         self._gravatar = gravatar
 
     @property
+    def bulletin(self):
+        """Gets the bulletin of this Domain.  # noqa: E501
+
+
+        :return: The bulletin of this Domain.  # noqa: E501
+        :rtype: str
+        """
+        return self._bulletin
+
+    @bulletin.setter
+    def bulletin(self, bulletin):
+        """Sets the bulletin of this Domain.
+
+
+        :param bulletin: The bulletin of this Domain.  # noqa: E501
+        :type: str
+        """
+
+        self._bulletin = bulletin
+
+    @property
+    def owner_id(self):
+        """Gets the owner_id of this Domain.  # noqa: E501
+
+
+        :return: The owner_id of this Domain.  # noqa: E501
+        :rtype: str
+        """
+        return self._owner_id
+
+    @owner_id.setter
+    def owner_id(self, owner_id):
+        """Sets the owner_id of this Domain.
+
+
+        :param owner_id: The owner_id of this Domain.  # noqa: E501
+        :type: str
+        """
+        if owner_id is None:
+            raise ValueError("Invalid value for `owner_id`, must not be `None`")  # noqa: E501
+
+        self._owner_id = owner_id
+
+    @property
     def owner(self):
         """Gets the owner of this Domain.  # noqa: E501
 
 
         :return: The owner of this Domain.  # noqa: E501
-        :rtype: AnyOfDomainOwner
+        :rtype: UserBase
         """
         return self._owner
 
@@ -195,7 +268,7 @@ class Domain(object):
 
 
         :param owner: The owner of this Domain.  # noqa: E501
-        :type: AnyOfDomainOwner
+        :type: UserBase
         """
         if owner is None:
             raise ValueError("Invalid value for `owner`, must not be `None`")  # noqa: E501

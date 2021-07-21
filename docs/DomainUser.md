@@ -4,10 +4,11 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **str** |  | [optional] 
-**domain** | [**AnyOfDomainUserDomain**](AnyOfDomainUserDomain.md) |  | 
-**user** | [**AnyOfDomainUserUser**](AnyOfDomainUserUser.md) |  | 
+**created_at** | **datetime** |  | [optional] 
+**updated_at** | **datetime** |  | [optional] 
 **role** | **str** |  | 
-**join_at** | **datetime** |  | [optional] 
+**domain_id** | **str** |  | 
+**user_id** | **str** |  | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

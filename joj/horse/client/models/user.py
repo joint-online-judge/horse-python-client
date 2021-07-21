@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: b209977@2021-07-17 02:38:22  # noqa: E501
+    Git version: 7a3f584@2021-07-21 04:28:13  # noqa: E501
 
     OpenAPI spec version: 0.0.0
     
@@ -29,6 +29,8 @@ class User(object):
     """
     swagger_types = {
         'id': 'str',
+        'created_at': 'datetime',
+        'updated_at': 'datetime',
         'scope': 'str',
         'uname': 'str',
         'mail': 'str',
@@ -41,13 +43,14 @@ class User(object):
         'hash': 'str',
         'role': 'str',
         'register_ip': 'str',
-        'login_ip': 'str',
-        'register_timestamp': 'datetime',
-        'login_timestamp': 'datetime'
+        'login_at': 'datetime',
+        'login_ip': 'str'
     }
 
     attribute_map = {
         'id': 'id',
+        'created_at': 'created_at',
+        'updated_at': 'updated_at',
         'scope': 'scope',
         'uname': 'uname',
         'mail': 'mail',
@@ -60,14 +63,15 @@ class User(object):
         'hash': 'hash',
         'role': 'role',
         'register_ip': 'register_ip',
-        'login_ip': 'login_ip',
-        'register_timestamp': 'register_timestamp',
-        'login_timestamp': 'login_timestamp'
+        'login_at': 'login_at',
+        'login_ip': 'login_ip'
     }
 
-    def __init__(self, id=None, scope=None, uname=None, mail=None, uname_lower='', mail_lower='', gravatar='', student_id='', real_name='', salt='', hash='', role='user', register_ip='0.0.0.0', login_ip='0.0.0.0', register_timestamp=None, login_timestamp=None):  # noqa: E501
+    def __init__(self, id=None, created_at=None, updated_at=None, scope=None, uname=None, mail=None, uname_lower=None, mail_lower=None, gravatar=None, student_id='', real_name='', salt='', hash='', role='user', register_ip='0.0.0.0', login_at=None, login_ip='0.0.0.0'):  # noqa: E501
         """User - a model defined in Swagger"""  # noqa: E501
         self._id = None
+        self._created_at = None
+        self._updated_at = None
         self._scope = None
         self._uname = None
         self._mail = None
@@ -80,21 +84,21 @@ class User(object):
         self._hash = None
         self._role = None
         self._register_ip = None
+        self._login_at = None
         self._login_ip = None
-        self._register_timestamp = None
-        self._login_timestamp = None
         self.discriminator = None
         if id is not None:
             self.id = id
+        if created_at is not None:
+            self.created_at = created_at
+        if updated_at is not None:
+            self.updated_at = updated_at
         self.scope = scope
         self.uname = uname
         self.mail = mail
-        if uname_lower is not None:
-            self.uname_lower = uname_lower
-        if mail_lower is not None:
-            self.mail_lower = mail_lower
-        if gravatar is not None:
-            self.gravatar = gravatar
+        self.uname_lower = uname_lower
+        self.mail_lower = mail_lower
+        self.gravatar = gravatar
         if student_id is not None:
             self.student_id = student_id
         if real_name is not None:
@@ -107,10 +111,9 @@ class User(object):
             self.role = role
         if register_ip is not None:
             self.register_ip = register_ip
+        self.login_at = login_at
         if login_ip is not None:
             self.login_ip = login_ip
-        self.register_timestamp = register_timestamp
-        self.login_timestamp = login_timestamp
 
     @property
     def id(self):
@@ -132,6 +135,48 @@ class User(object):
         """
 
         self._id = id
+
+    @property
+    def created_at(self):
+        """Gets the created_at of this User.  # noqa: E501
+
+
+        :return: The created_at of this User.  # noqa: E501
+        :rtype: datetime
+        """
+        return self._created_at
+
+    @created_at.setter
+    def created_at(self, created_at):
+        """Sets the created_at of this User.
+
+
+        :param created_at: The created_at of this User.  # noqa: E501
+        :type: datetime
+        """
+
+        self._created_at = created_at
+
+    @property
+    def updated_at(self):
+        """Gets the updated_at of this User.  # noqa: E501
+
+
+        :return: The updated_at of this User.  # noqa: E501
+        :rtype: datetime
+        """
+        return self._updated_at
+
+    @updated_at.setter
+    def updated_at(self, updated_at):
+        """Sets the updated_at of this User.
+
+
+        :param updated_at: The updated_at of this User.  # noqa: E501
+        :type: datetime
+        """
+
+        self._updated_at = updated_at
 
     @property
     def scope(self):
@@ -220,6 +265,8 @@ class User(object):
         :param uname_lower: The uname_lower of this User.  # noqa: E501
         :type: str
         """
+        if uname_lower is None:
+            raise ValueError("Invalid value for `uname_lower`, must not be `None`")  # noqa: E501
 
         self._uname_lower = uname_lower
 
@@ -241,6 +288,8 @@ class User(object):
         :param mail_lower: The mail_lower of this User.  # noqa: E501
         :type: str
         """
+        if mail_lower is None:
+            raise ValueError("Invalid value for `mail_lower`, must not be `None`")  # noqa: E501
 
         self._mail_lower = mail_lower
 
@@ -262,6 +311,8 @@ class User(object):
         :param gravatar: The gravatar of this User.  # noqa: E501
         :type: str
         """
+        if gravatar is None:
+            raise ValueError("Invalid value for `gravatar`, must not be `None`")  # noqa: E501
 
         self._gravatar = gravatar
 
@@ -392,6 +443,29 @@ class User(object):
         self._register_ip = register_ip
 
     @property
+    def login_at(self):
+        """Gets the login_at of this User.  # noqa: E501
+
+
+        :return: The login_at of this User.  # noqa: E501
+        :rtype: datetime
+        """
+        return self._login_at
+
+    @login_at.setter
+    def login_at(self, login_at):
+        """Sets the login_at of this User.
+
+
+        :param login_at: The login_at of this User.  # noqa: E501
+        :type: datetime
+        """
+        if login_at is None:
+            raise ValueError("Invalid value for `login_at`, must not be `None`")  # noqa: E501
+
+        self._login_at = login_at
+
+    @property
     def login_ip(self):
         """Gets the login_ip of this User.  # noqa: E501
 
@@ -411,52 +485,6 @@ class User(object):
         """
 
         self._login_ip = login_ip
-
-    @property
-    def register_timestamp(self):
-        """Gets the register_timestamp of this User.  # noqa: E501
-
-
-        :return: The register_timestamp of this User.  # noqa: E501
-        :rtype: datetime
-        """
-        return self._register_timestamp
-
-    @register_timestamp.setter
-    def register_timestamp(self, register_timestamp):
-        """Sets the register_timestamp of this User.
-
-
-        :param register_timestamp: The register_timestamp of this User.  # noqa: E501
-        :type: datetime
-        """
-        if register_timestamp is None:
-            raise ValueError("Invalid value for `register_timestamp`, must not be `None`")  # noqa: E501
-
-        self._register_timestamp = register_timestamp
-
-    @property
-    def login_timestamp(self):
-        """Gets the login_timestamp of this User.  # noqa: E501
-
-
-        :return: The login_timestamp of this User.  # noqa: E501
-        :rtype: datetime
-        """
-        return self._login_timestamp
-
-    @login_timestamp.setter
-    def login_timestamp(self, login_timestamp):
-        """Sets the login_timestamp of this User.
-
-
-        :param login_timestamp: The login_timestamp of this User.  # noqa: E501
-        :type: datetime
-        """
-        if login_timestamp is None:
-            raise ValueError("Invalid value for `login_timestamp`, must not be `None`")  # noqa: E501
-
-        self._login_timestamp = login_timestamp
 
     def to_dict(self):
         """Returns the model properties as a dict"""

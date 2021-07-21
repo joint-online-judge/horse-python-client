@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: b209977@2021-07-17 02:38:22  # noqa: E501
+    Git version: 7a3f584@2021-07-21 04:28:13  # noqa: E501
 
     OpenAPI spec version: 0.0.0
     
@@ -126,7 +126,7 @@ class MiscellaneousApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :return: str
+        :return: Null
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -146,7 +146,7 @@ class MiscellaneousApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :return: str
+        :return: Null
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -194,7 +194,7 @@ class MiscellaneousApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='str',  # noqa: E501
+            response_type='Null',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),

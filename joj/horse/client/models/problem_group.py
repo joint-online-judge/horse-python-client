@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: b209977@2021-07-17 02:38:22  # noqa: E501
+    Git version: 7a3f584@2021-07-21 04:28:13  # noqa: E501
 
     OpenAPI spec version: 0.0.0
     
@@ -28,45 +28,19 @@ class ProblemGroup(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'id': 'str',
         'moss_results': 'list[str]'
     }
 
     attribute_map = {
-        'id': 'id',
         'moss_results': 'moss_results'
     }
 
-    def __init__(self, id=None, moss_results=None):  # noqa: E501
+    def __init__(self, moss_results=None):  # noqa: E501
         """ProblemGroup - a model defined in Swagger"""  # noqa: E501
-        self._id = None
         self._moss_results = None
         self.discriminator = None
-        if id is not None:
-            self.id = id
         if moss_results is not None:
             self.moss_results = moss_results
-
-    @property
-    def id(self):
-        """Gets the id of this ProblemGroup.  # noqa: E501
-
-
-        :return: The id of this ProblemGroup.  # noqa: E501
-        :rtype: str
-        """
-        return self._id
-
-    @id.setter
-    def id(self, id):
-        """Sets the id of this ProblemGroup.
-
-
-        :param id: The id of this ProblemGroup.  # noqa: E501
-        :type: str
-        """
-
-        self._id = id
 
     @property
     def moss_results(self):

@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: b209977@2021-07-17 02:38:22  # noqa: E501
+    Git version: 7a3f584@2021-07-21 04:28:13  # noqa: E501
 
     OpenAPI spec version: 0.0.0
     
@@ -29,40 +29,44 @@ class DomainUserPermission(object):
     """
     swagger_types = {
         'id': 'str',
-        'domain': 'AnyOfDomainUserPermissionDomain',
-        'user': 'AnyOfDomainUserPermissionUser',
+        'created_at': 'datetime',
+        'updated_at': 'datetime',
         'role': 'str',
-        'join_at': 'datetime',
-        'permission': 'object'
+        'domain_id': 'str',
+        'user_id': 'str',
+        'permission': 'DomainPermission'
     }
 
     attribute_map = {
         'id': 'id',
-        'domain': 'domain',
-        'user': 'user',
+        'created_at': 'created_at',
+        'updated_at': 'updated_at',
         'role': 'role',
-        'join_at': 'join_at',
+        'domain_id': 'domain_id',
+        'user_id': 'user_id',
         'permission': 'permission'
     }
 
-    def __init__(self, id=None, domain=None, user=None, role=None, join_at=None, permission=None):  # noqa: E501
+    def __init__(self, id=None, created_at=None, updated_at=None, role=None, domain_id=None, user_id=None, permission=None):  # noqa: E501
         """DomainUserPermission - a model defined in Swagger"""  # noqa: E501
         self._id = None
-        self._domain = None
-        self._user = None
+        self._created_at = None
+        self._updated_at = None
         self._role = None
-        self._join_at = None
+        self._domain_id = None
+        self._user_id = None
         self._permission = None
         self.discriminator = None
         if id is not None:
             self.id = id
-        self.domain = domain
-        self.user = user
+        if created_at is not None:
+            self.created_at = created_at
+        if updated_at is not None:
+            self.updated_at = updated_at
         self.role = role
-        if join_at is not None:
-            self.join_at = join_at
-        if permission is not None:
-            self.permission = permission
+        self.domain_id = domain_id
+        self.user_id = user_id
+        self.permission = permission
 
     @property
     def id(self):
@@ -86,50 +90,46 @@ class DomainUserPermission(object):
         self._id = id
 
     @property
-    def domain(self):
-        """Gets the domain of this DomainUserPermission.  # noqa: E501
+    def created_at(self):
+        """Gets the created_at of this DomainUserPermission.  # noqa: E501
 
 
-        :return: The domain of this DomainUserPermission.  # noqa: E501
-        :rtype: AnyOfDomainUserPermissionDomain
+        :return: The created_at of this DomainUserPermission.  # noqa: E501
+        :rtype: datetime
         """
-        return self._domain
+        return self._created_at
 
-    @domain.setter
-    def domain(self, domain):
-        """Sets the domain of this DomainUserPermission.
+    @created_at.setter
+    def created_at(self, created_at):
+        """Sets the created_at of this DomainUserPermission.
 
 
-        :param domain: The domain of this DomainUserPermission.  # noqa: E501
-        :type: AnyOfDomainUserPermissionDomain
+        :param created_at: The created_at of this DomainUserPermission.  # noqa: E501
+        :type: datetime
         """
-        if domain is None:
-            raise ValueError("Invalid value for `domain`, must not be `None`")  # noqa: E501
 
-        self._domain = domain
+        self._created_at = created_at
 
     @property
-    def user(self):
-        """Gets the user of this DomainUserPermission.  # noqa: E501
+    def updated_at(self):
+        """Gets the updated_at of this DomainUserPermission.  # noqa: E501
 
 
-        :return: The user of this DomainUserPermission.  # noqa: E501
-        :rtype: AnyOfDomainUserPermissionUser
+        :return: The updated_at of this DomainUserPermission.  # noqa: E501
+        :rtype: datetime
         """
-        return self._user
+        return self._updated_at
 
-    @user.setter
-    def user(self, user):
-        """Sets the user of this DomainUserPermission.
+    @updated_at.setter
+    def updated_at(self, updated_at):
+        """Sets the updated_at of this DomainUserPermission.
 
 
-        :param user: The user of this DomainUserPermission.  # noqa: E501
-        :type: AnyOfDomainUserPermissionUser
+        :param updated_at: The updated_at of this DomainUserPermission.  # noqa: E501
+        :type: datetime
         """
-        if user is None:
-            raise ValueError("Invalid value for `user`, must not be `None`")  # noqa: E501
 
-        self._user = user
+        self._updated_at = updated_at
 
     @property
     def role(self):
@@ -155,25 +155,50 @@ class DomainUserPermission(object):
         self._role = role
 
     @property
-    def join_at(self):
-        """Gets the join_at of this DomainUserPermission.  # noqa: E501
+    def domain_id(self):
+        """Gets the domain_id of this DomainUserPermission.  # noqa: E501
 
 
-        :return: The join_at of this DomainUserPermission.  # noqa: E501
-        :rtype: datetime
+        :return: The domain_id of this DomainUserPermission.  # noqa: E501
+        :rtype: str
         """
-        return self._join_at
+        return self._domain_id
 
-    @join_at.setter
-    def join_at(self, join_at):
-        """Sets the join_at of this DomainUserPermission.
+    @domain_id.setter
+    def domain_id(self, domain_id):
+        """Sets the domain_id of this DomainUserPermission.
 
 
-        :param join_at: The join_at of this DomainUserPermission.  # noqa: E501
-        :type: datetime
+        :param domain_id: The domain_id of this DomainUserPermission.  # noqa: E501
+        :type: str
         """
+        if domain_id is None:
+            raise ValueError("Invalid value for `domain_id`, must not be `None`")  # noqa: E501
 
-        self._join_at = join_at
+        self._domain_id = domain_id
+
+    @property
+    def user_id(self):
+        """Gets the user_id of this DomainUserPermission.  # noqa: E501
+
+
+        :return: The user_id of this DomainUserPermission.  # noqa: E501
+        :rtype: str
+        """
+        return self._user_id
+
+    @user_id.setter
+    def user_id(self, user_id):
+        """Sets the user_id of this DomainUserPermission.
+
+
+        :param user_id: The user_id of this DomainUserPermission.  # noqa: E501
+        :type: str
+        """
+        if user_id is None:
+            raise ValueError("Invalid value for `user_id`, must not be `None`")  # noqa: E501
+
+        self._user_id = user_id
 
     @property
     def permission(self):
@@ -181,7 +206,7 @@ class DomainUserPermission(object):
 
 
         :return: The permission of this DomainUserPermission.  # noqa: E501
-        :rtype: object
+        :rtype: DomainPermission
         """
         return self._permission
 
@@ -191,8 +216,10 @@ class DomainUserPermission(object):
 
 
         :param permission: The permission of this DomainUserPermission.  # noqa: E501
-        :type: object
+        :type: DomainPermission
         """
+        if permission is None:
+            raise ValueError("Invalid value for `permission`, must not be `None`")  # noqa: E501
 
         self._permission = permission
 

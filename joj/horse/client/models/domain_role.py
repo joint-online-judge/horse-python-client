@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: b209977@2021-07-17 02:38:22  # noqa: E501
+    Git version: 7a3f584@2021-07-21 04:28:13  # noqa: E501
 
     OpenAPI spec version: 0.0.0
     
@@ -29,36 +29,40 @@ class DomainRole(object):
     """
     swagger_types = {
         'id': 'str',
-        'role': 'str',
-        'permission': 'object',
+        'created_at': 'datetime',
         'updated_at': 'datetime',
-        'domain': 'AnyOfDomainRoleDomain'
+        'role': 'str',
+        'permission': 'AllOfDomainRolePermission',
+        'domain_id': 'str'
     }
 
     attribute_map = {
         'id': 'id',
+        'created_at': 'created_at',
+        'updated_at': 'updated_at',
         'role': 'role',
         'permission': 'permission',
-        'updated_at': 'updated_at',
-        'domain': 'domain'
+        'domain_id': 'domain_id'
     }
 
-    def __init__(self, id=None, role=None, permission=None, updated_at=None, domain=None):  # noqa: E501
+    def __init__(self, id=None, created_at=None, updated_at=None, role=None, permission=None, domain_id=None):  # noqa: E501
         """DomainRole - a model defined in Swagger"""  # noqa: E501
         self._id = None
+        self._created_at = None
+        self._updated_at = None
         self._role = None
         self._permission = None
-        self._updated_at = None
-        self._domain = None
+        self._domain_id = None
         self.discriminator = None
         if id is not None:
             self.id = id
-        self.role = role
-        if permission is not None:
-            self.permission = permission
+        if created_at is not None:
+            self.created_at = created_at
         if updated_at is not None:
             self.updated_at = updated_at
-        self.domain = domain
+        self.role = role
+        self.permission = permission
+        self.domain_id = domain_id
 
     @property
     def id(self):
@@ -80,6 +84,48 @@ class DomainRole(object):
         """
 
         self._id = id
+
+    @property
+    def created_at(self):
+        """Gets the created_at of this DomainRole.  # noqa: E501
+
+
+        :return: The created_at of this DomainRole.  # noqa: E501
+        :rtype: datetime
+        """
+        return self._created_at
+
+    @created_at.setter
+    def created_at(self, created_at):
+        """Sets the created_at of this DomainRole.
+
+
+        :param created_at: The created_at of this DomainRole.  # noqa: E501
+        :type: datetime
+        """
+
+        self._created_at = created_at
+
+    @property
+    def updated_at(self):
+        """Gets the updated_at of this DomainRole.  # noqa: E501
+
+
+        :return: The updated_at of this DomainRole.  # noqa: E501
+        :rtype: datetime
+        """
+        return self._updated_at
+
+    @updated_at.setter
+    def updated_at(self, updated_at):
+        """Sets the updated_at of this DomainRole.
+
+
+        :param updated_at: The updated_at of this DomainRole.  # noqa: E501
+        :type: datetime
+        """
+
+        self._updated_at = updated_at
 
     @property
     def role(self):
@@ -110,7 +156,7 @@ class DomainRole(object):
 
 
         :return: The permission of this DomainRole.  # noqa: E501
-        :rtype: object
+        :rtype: AllOfDomainRolePermission
         """
         return self._permission
 
@@ -120,54 +166,35 @@ class DomainRole(object):
 
 
         :param permission: The permission of this DomainRole.  # noqa: E501
-        :type: object
+        :type: AllOfDomainRolePermission
         """
+        if permission is None:
+            raise ValueError("Invalid value for `permission`, must not be `None`")  # noqa: E501
 
         self._permission = permission
 
     @property
-    def updated_at(self):
-        """Gets the updated_at of this DomainRole.  # noqa: E501
+    def domain_id(self):
+        """Gets the domain_id of this DomainRole.  # noqa: E501
 
 
-        :return: The updated_at of this DomainRole.  # noqa: E501
-        :rtype: datetime
+        :return: The domain_id of this DomainRole.  # noqa: E501
+        :rtype: str
         """
-        return self._updated_at
+        return self._domain_id
 
-    @updated_at.setter
-    def updated_at(self, updated_at):
-        """Sets the updated_at of this DomainRole.
+    @domain_id.setter
+    def domain_id(self, domain_id):
+        """Sets the domain_id of this DomainRole.
 
 
-        :param updated_at: The updated_at of this DomainRole.  # noqa: E501
-        :type: datetime
+        :param domain_id: The domain_id of this DomainRole.  # noqa: E501
+        :type: str
         """
+        if domain_id is None:
+            raise ValueError("Invalid value for `domain_id`, must not be `None`")  # noqa: E501
 
-        self._updated_at = updated_at
-
-    @property
-    def domain(self):
-        """Gets the domain of this DomainRole.  # noqa: E501
-
-
-        :return: The domain of this DomainRole.  # noqa: E501
-        :rtype: AnyOfDomainRoleDomain
-        """
-        return self._domain
-
-    @domain.setter
-    def domain(self, domain):
-        """Sets the domain of this DomainRole.
-
-
-        :param domain: The domain of this DomainRole.  # noqa: E501
-        :type: AnyOfDomainRoleDomain
-        """
-        if domain is None:
-            raise ValueError("Invalid value for `domain`, must not be `None`")  # noqa: E501
-
-        self._domain = domain
+        self._domain_id = domain_id
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: b209977@2021-07-17 02:38:22  # noqa: E501
+    Git version: 7a3f584@2021-07-21 04:28:13  # noqa: E501
 
     OpenAPI spec version: 0.0.0
     
@@ -51,7 +51,7 @@ class UserBase(object):
         'real_name': 'real_name'
     }
 
-    def __init__(self, id=None, scope=None, uname=None, mail=None, uname_lower='', mail_lower='', gravatar='', student_id='', real_name=''):  # noqa: E501
+    def __init__(self, id=None, scope=None, uname=None, mail=None, uname_lower=None, mail_lower=None, gravatar=None, student_id='', real_name=''):  # noqa: E501
         """UserBase - a model defined in Swagger"""  # noqa: E501
         self._id = None
         self._scope = None
@@ -68,12 +68,9 @@ class UserBase(object):
         self.scope = scope
         self.uname = uname
         self.mail = mail
-        if uname_lower is not None:
-            self.uname_lower = uname_lower
-        if mail_lower is not None:
-            self.mail_lower = mail_lower
-        if gravatar is not None:
-            self.gravatar = gravatar
+        self.uname_lower = uname_lower
+        self.mail_lower = mail_lower
+        self.gravatar = gravatar
         if student_id is not None:
             self.student_id = student_id
         if real_name is not None:
@@ -187,6 +184,8 @@ class UserBase(object):
         :param uname_lower: The uname_lower of this UserBase.  # noqa: E501
         :type: str
         """
+        if uname_lower is None:
+            raise ValueError("Invalid value for `uname_lower`, must not be `None`")  # noqa: E501
 
         self._uname_lower = uname_lower
 
@@ -208,6 +207,8 @@ class UserBase(object):
         :param mail_lower: The mail_lower of this UserBase.  # noqa: E501
         :type: str
         """
+        if mail_lower is None:
+            raise ValueError("Invalid value for `mail_lower`, must not be `None`")  # noqa: E501
 
         self._mail_lower = mail_lower
 
@@ -229,6 +230,8 @@ class UserBase(object):
         :param gravatar: The gravatar of this UserBase.  # noqa: E501
         :type: str
         """
+        if gravatar is None:
+            raise ValueError("Invalid value for `gravatar`, must not be `None`")  # noqa: E501
 
         self._gravatar = gravatar
 

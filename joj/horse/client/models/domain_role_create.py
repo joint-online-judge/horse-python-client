@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: b209977@2021-07-17 02:38:22  # noqa: E501
+    Git version: 7a3f584@2021-07-21 04:28:13  # noqa: E501
 
     OpenAPI spec version: 0.0.0
     
@@ -29,27 +29,22 @@ class DomainRoleCreate(object):
     """
     swagger_types = {
         'role': 'str',
-        'permission': 'object',
-        'updated_at': 'datetime'
+        'permission': 'AllOfDomainRoleCreatePermission'
     }
 
     attribute_map = {
         'role': 'role',
-        'permission': 'permission',
-        'updated_at': 'updated_at'
+        'permission': 'permission'
     }
 
-    def __init__(self, role=None, permission=None, updated_at=None):  # noqa: E501
+    def __init__(self, role=None, permission=None):  # noqa: E501
         """DomainRoleCreate - a model defined in Swagger"""  # noqa: E501
         self._role = None
         self._permission = None
-        self._updated_at = None
         self.discriminator = None
         self.role = role
         if permission is not None:
             self.permission = permission
-        if updated_at is not None:
-            self.updated_at = updated_at
 
     @property
     def role(self):
@@ -80,7 +75,7 @@ class DomainRoleCreate(object):
 
 
         :return: The permission of this DomainRoleCreate.  # noqa: E501
-        :rtype: object
+        :rtype: AllOfDomainRoleCreatePermission
         """
         return self._permission
 
@@ -90,31 +85,10 @@ class DomainRoleCreate(object):
 
 
         :param permission: The permission of this DomainRoleCreate.  # noqa: E501
-        :type: object
+        :type: AllOfDomainRoleCreatePermission
         """
 
         self._permission = permission
-
-    @property
-    def updated_at(self):
-        """Gets the updated_at of this DomainRoleCreate.  # noqa: E501
-
-
-        :return: The updated_at of this DomainRoleCreate.  # noqa: E501
-        :rtype: datetime
-        """
-        return self._updated_at
-
-    @updated_at.setter
-    def updated_at(self, updated_at):
-        """Sets the updated_at of this DomainRoleCreate.
-
-
-        :param updated_at: The updated_at of this DomainRoleCreate.  # noqa: E501
-        :type: datetime
-        """
-
-        self._updated_at = updated_at
 
     def to_dict(self):
         """Returns the model properties as a dict"""

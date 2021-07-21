@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: b209977@2021-07-17 02:38:22  # noqa: E501
+    Git version: 7a3f584@2021-07-21 04:28:13  # noqa: E501
 
     OpenAPI spec version: 0.0.0
     
@@ -1147,7 +1147,7 @@ class DomainApi(object):
 
         :param async_req bool
         :param str domain: url or ObjectId of the domain (required)
-        :return: ListDomainRolesResp
+        :return: DomainRoleListResp
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -1168,7 +1168,7 @@ class DomainApi(object):
 
         :param async_req bool
         :param str domain: url or ObjectId of the domain (required)
-        :return: ListDomainRolesResp
+        :return: DomainRoleListResp
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -1222,7 +1222,7 @@ class DomainApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='ListDomainRolesResp',  # noqa: E501
+            response_type='DomainRoleListResp',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -1240,7 +1240,7 @@ class DomainApi(object):
 
         :param async_req bool
         :param str domain: url or ObjectId of the domain (required)
-        :return: ListDomainUsersResp
+        :return: DomainUserListResp
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -1261,7 +1261,7 @@ class DomainApi(object):
 
         :param async_req bool
         :param str domain: url or ObjectId of the domain (required)
-        :return: ListDomainUsersResp
+        :return: DomainUserListResp
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -1315,7 +1315,7 @@ class DomainApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='ListDomainUsersResp',  # noqa: E501
+            response_type='DomainUserListResp',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -1334,10 +1334,10 @@ class DomainApi(object):
 
         :param async_req bool
         :param list[str] role:
-        :param SortEnum sort:
-        :param int skip:
+        :param str ordering: Comma seperated list of ordering the results. You may also specify reverse orderings by prefixing the field name with '-'.
+        :param int offset:
         :param int limit:
-        :return: ListDomainsResp
+        :return: DomainListResp
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -1359,15 +1359,15 @@ class DomainApi(object):
 
         :param async_req bool
         :param list[str] role:
-        :param SortEnum sort:
-        :param int skip:
+        :param str ordering: Comma seperated list of ordering the results. You may also specify reverse orderings by prefixing the field name with '-'.
+        :param int offset:
         :param int limit:
-        :return: ListDomainsResp
+        :return: DomainListResp
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['role', 'sort', 'skip', 'limit']  # noqa: E501
+        all_params = ['role', 'ordering', 'offset', 'limit']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -1391,10 +1391,10 @@ class DomainApi(object):
         if 'role' in params:
             query_params.append(('role', params['role']))  # noqa: E501
             collection_formats['role'] = 'multi'  # noqa: E501
-        if 'sort' in params:
-            query_params.append(('sort', params['sort']))  # noqa: E501
-        if 'skip' in params:
-            query_params.append(('skip', params['skip']))  # noqa: E501
+        if 'ordering' in params:
+            query_params.append(('ordering', params['ordering']))  # noqa: E501
+        if 'offset' in params:
+            query_params.append(('offset', params['offset']))  # noqa: E501
         if 'limit' in params:
             query_params.append(('limit', params['limit']))  # noqa: E501
 
@@ -1419,7 +1419,7 @@ class DomainApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='ListDomainsResp',  # noqa: E501
+            response_type='DomainListResp',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
