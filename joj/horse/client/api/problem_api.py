@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: 7a3f584@2021-07-21 04:28:13  # noqa: E501
+    Git version: 50e8fbb@2021-07-28 13:34:13  # noqa: E501
 
     OpenAPI spec version: 0.0.0
     
@@ -456,9 +456,10 @@ class ProblemApi(object):
         :param str domain: url or ObjectId of the domain (required)
         :param str problem_set:
         :param str problem_group:
+        :param str ordering: Comma seperated list of ordering the results. You may also specify reverse orderings by prefixing the field name with '-'.
         :param int offset:
         :param int limit:
-        :return: ListProblemsResp
+        :return: ProblemListResp
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -481,14 +482,15 @@ class ProblemApi(object):
         :param str domain: url or ObjectId of the domain (required)
         :param str problem_set:
         :param str problem_group:
+        :param str ordering: Comma seperated list of ordering the results. You may also specify reverse orderings by prefixing the field name with '-'.
         :param int offset:
         :param int limit:
-        :return: ListProblemsResp
+        :return: ProblemListResp
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['domain', 'problem_set', 'problem_group', 'offset', 'limit']  # noqa: E501
+        all_params = ['domain', 'problem_set', 'problem_group', 'ordering', 'offset', 'limit']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -519,6 +521,8 @@ class ProblemApi(object):
             query_params.append(('problem_set', params['problem_set']))  # noqa: E501
         if 'problem_group' in params:
             query_params.append(('problem_group', params['problem_group']))  # noqa: E501
+        if 'ordering' in params:
+            query_params.append(('ordering', params['ordering']))  # noqa: E501
         if 'offset' in params:
             query_params.append(('offset', params['offset']))  # noqa: E501
         if 'limit' in params:
@@ -545,7 +549,7 @@ class ProblemApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='ListProblemsResp',  # noqa: E501
+            response_type='ProblemListResp',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),

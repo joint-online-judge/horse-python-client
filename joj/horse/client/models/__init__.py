@@ -4,7 +4,7 @@
 """
     JOJ Horse
 
-    Git version: 7a3f584@2021-07-21 04:28:13  # noqa: E501
+    Git version: 50e8fbb@2021-07-28 13:34:13  # noqa: E501
 
     OpenAPI spec version: 0.0.0
     
@@ -75,6 +75,8 @@ from joj.horse.client.models.problem_config_edit import ProblemConfigEdit
 from joj.horse.client.models.problem_create import ProblemCreate
 from joj.horse.client.models.problem_edit import ProblemEdit
 from joj.horse.client.models.problem_group import ProblemGroup
+from joj.horse.client.models.problem_list import ProblemList
+from joj.horse.client.models.problem_list_resp import ProblemListResp
 from joj.horse.client.models.problem_permission import ProblemPermission
 from joj.horse.client.models.problem_resp import ProblemResp
 from joj.horse.client.models.problem_set import ProblemSet

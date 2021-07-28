@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: 7a3f584@2021-07-21 04:28:13  # noqa: E501
+    Git version: 50e8fbb@2021-07-28 13:34:13  # noqa: E501
 
     OpenAPI spec version: 0.0.0
     
@@ -30,26 +30,31 @@ class ProblemCreate(object):
     swagger_types = {
         'url': 'str',
         'title': 'str',
-        'content': 'str'
+        'content': 'str',
+        'hidden': 'bool'
     }
 
     attribute_map = {
         'url': 'url',
         'title': 'title',
-        'content': 'content'
+        'content': 'content',
+        'hidden': 'hidden'
     }
 
-    def __init__(self, url='', title=None, content=''):  # noqa: E501
+    def __init__(self, url='', title=None, content='', hidden=False):  # noqa: E501
         """ProblemCreate - a model defined in Swagger"""  # noqa: E501
         self._url = None
         self._title = None
         self._content = None
+        self._hidden = None
         self.discriminator = None
         if url is not None:
             self.url = url
         self.title = title
         if content is not None:
             self.content = content
+        if hidden is not None:
+            self.hidden = hidden
 
     @property
     def url(self):
@@ -121,6 +126,29 @@ class ProblemCreate(object):
         """
 
         self._content = content
+
+    @property
+    def hidden(self):
+        """Gets the hidden of this ProblemCreate.  # noqa: E501
+
+        is the problem hidden  # noqa: E501
+
+        :return: The hidden of this ProblemCreate.  # noqa: E501
+        :rtype: bool
+        """
+        return self._hidden
+
+    @hidden.setter
+    def hidden(self, hidden):
+        """Sets the hidden of this ProblemCreate.
+
+        is the problem hidden  # noqa: E501
+
+        :param hidden: The hidden of this ProblemCreate.  # noqa: E501
+        :type: bool
+        """
+
+        self._hidden = hidden
 
     def to_dict(self):
         """Returns the model properties as a dict"""

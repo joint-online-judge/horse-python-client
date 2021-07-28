@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: 7a3f584@2021-07-21 04:28:13  # noqa: E501
+    Git version: 50e8fbb@2021-07-28 13:34:13  # noqa: E501
 
     OpenAPI spec version: 0.0.0
     
@@ -28,14 +28,383 @@ class Problem(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'id': 'str',
+        'created_at': 'datetime',
+        'updated_at': 'datetime',
+        'url': 'str',
+        'title': 'str',
+        'content': 'str',
+        'hidden': 'bool',
+        'num_submit': 'int',
+        'num_accept': 'int',
+        'data_version': 'int',
+        'languages': 'str',
+        'domain_id': 'str',
+        'owner_id': 'str',
+        'problem_group_id': 'str'
     }
 
     attribute_map = {
+        'id': 'id',
+        'created_at': 'created_at',
+        'updated_at': 'updated_at',
+        'url': 'url',
+        'title': 'title',
+        'content': 'content',
+        'hidden': 'hidden',
+        'num_submit': 'num_submit',
+        'num_accept': 'num_accept',
+        'data_version': 'data_version',
+        'languages': 'languages',
+        'domain_id': 'domain_id',
+        'owner_id': 'owner_id',
+        'problem_group_id': 'problem_group_id'
     }
 
-    def __init__(self):  # noqa: E501
+    def __init__(self, id=None, created_at=None, updated_at=None, url=None, title=None, content='', hidden=False, num_submit=0, num_accept=0, data_version=2, languages='[]', domain_id=None, owner_id=None, problem_group_id=None):  # noqa: E501
         """Problem - a model defined in Swagger"""  # noqa: E501
+        self._id = None
+        self._created_at = None
+        self._updated_at = None
+        self._url = None
+        self._title = None
+        self._content = None
+        self._hidden = None
+        self._num_submit = None
+        self._num_accept = None
+        self._data_version = None
+        self._languages = None
+        self._domain_id = None
+        self._owner_id = None
+        self._problem_group_id = None
         self.discriminator = None
+        if id is not None:
+            self.id = id
+        if created_at is not None:
+            self.created_at = created_at
+        if updated_at is not None:
+            self.updated_at = updated_at
+        self.url = url
+        self.title = title
+        if content is not None:
+            self.content = content
+        if hidden is not None:
+            self.hidden = hidden
+        if num_submit is not None:
+            self.num_submit = num_submit
+        if num_accept is not None:
+            self.num_accept = num_accept
+        if data_version is not None:
+            self.data_version = data_version
+        if languages is not None:
+            self.languages = languages
+        self.domain_id = domain_id
+        self.owner_id = owner_id
+        self.problem_group_id = problem_group_id
+
+    @property
+    def id(self):
+        """Gets the id of this Problem.  # noqa: E501
+
+
+        :return: The id of this Problem.  # noqa: E501
+        :rtype: str
+        """
+        return self._id
+
+    @id.setter
+    def id(self, id):
+        """Sets the id of this Problem.
+
+
+        :param id: The id of this Problem.  # noqa: E501
+        :type: str
+        """
+
+        self._id = id
+
+    @property
+    def created_at(self):
+        """Gets the created_at of this Problem.  # noqa: E501
+
+
+        :return: The created_at of this Problem.  # noqa: E501
+        :rtype: datetime
+        """
+        return self._created_at
+
+    @created_at.setter
+    def created_at(self, created_at):
+        """Sets the created_at of this Problem.
+
+
+        :param created_at: The created_at of this Problem.  # noqa: E501
+        :type: datetime
+        """
+
+        self._created_at = created_at
+
+    @property
+    def updated_at(self):
+        """Gets the updated_at of this Problem.  # noqa: E501
+
+
+        :return: The updated_at of this Problem.  # noqa: E501
+        :rtype: datetime
+        """
+        return self._updated_at
+
+    @updated_at.setter
+    def updated_at(self, updated_at):
+        """Sets the updated_at of this Problem.
+
+
+        :param updated_at: The updated_at of this Problem.  # noqa: E501
+        :type: datetime
+        """
+
+        self._updated_at = updated_at
+
+    @property
+    def url(self):
+        """Gets the url of this Problem.  # noqa: E501
+
+
+        :return: The url of this Problem.  # noqa: E501
+        :rtype: str
+        """
+        return self._url
+
+    @url.setter
+    def url(self, url):
+        """Sets the url of this Problem.
+
+
+        :param url: The url of this Problem.  # noqa: E501
+        :type: str
+        """
+        if url is None:
+            raise ValueError("Invalid value for `url`, must not be `None`")  # noqa: E501
+
+        self._url = url
+
+    @property
+    def title(self):
+        """Gets the title of this Problem.  # noqa: E501
+
+
+        :return: The title of this Problem.  # noqa: E501
+        :rtype: str
+        """
+        return self._title
+
+    @title.setter
+    def title(self, title):
+        """Sets the title of this Problem.
+
+
+        :param title: The title of this Problem.  # noqa: E501
+        :type: str
+        """
+        if title is None:
+            raise ValueError("Invalid value for `title`, must not be `None`")  # noqa: E501
+
+        self._title = title
+
+    @property
+    def content(self):
+        """Gets the content of this Problem.  # noqa: E501
+
+
+        :return: The content of this Problem.  # noqa: E501
+        :rtype: str
+        """
+        return self._content
+
+    @content.setter
+    def content(self, content):
+        """Sets the content of this Problem.
+
+
+        :param content: The content of this Problem.  # noqa: E501
+        :type: str
+        """
+
+        self._content = content
+
+    @property
+    def hidden(self):
+        """Gets the hidden of this Problem.  # noqa: E501
+
+
+        :return: The hidden of this Problem.  # noqa: E501
+        :rtype: bool
+        """
+        return self._hidden
+
+    @hidden.setter
+    def hidden(self, hidden):
+        """Sets the hidden of this Problem.
+
+
+        :param hidden: The hidden of this Problem.  # noqa: E501
+        :type: bool
+        """
+
+        self._hidden = hidden
+
+    @property
+    def num_submit(self):
+        """Gets the num_submit of this Problem.  # noqa: E501
+
+
+        :return: The num_submit of this Problem.  # noqa: E501
+        :rtype: int
+        """
+        return self._num_submit
+
+    @num_submit.setter
+    def num_submit(self, num_submit):
+        """Sets the num_submit of this Problem.
+
+
+        :param num_submit: The num_submit of this Problem.  # noqa: E501
+        :type: int
+        """
+
+        self._num_submit = num_submit
+
+    @property
+    def num_accept(self):
+        """Gets the num_accept of this Problem.  # noqa: E501
+
+
+        :return: The num_accept of this Problem.  # noqa: E501
+        :rtype: int
+        """
+        return self._num_accept
+
+    @num_accept.setter
+    def num_accept(self, num_accept):
+        """Sets the num_accept of this Problem.
+
+
+        :param num_accept: The num_accept of this Problem.  # noqa: E501
+        :type: int
+        """
+
+        self._num_accept = num_accept
+
+    @property
+    def data_version(self):
+        """Gets the data_version of this Problem.  # noqa: E501
+
+
+        :return: The data_version of this Problem.  # noqa: E501
+        :rtype: int
+        """
+        return self._data_version
+
+    @data_version.setter
+    def data_version(self, data_version):
+        """Sets the data_version of this Problem.
+
+
+        :param data_version: The data_version of this Problem.  # noqa: E501
+        :type: int
+        """
+
+        self._data_version = data_version
+
+    @property
+    def languages(self):
+        """Gets the languages of this Problem.  # noqa: E501
+
+
+        :return: The languages of this Problem.  # noqa: E501
+        :rtype: str
+        """
+        return self._languages
+
+    @languages.setter
+    def languages(self, languages):
+        """Sets the languages of this Problem.
+
+
+        :param languages: The languages of this Problem.  # noqa: E501
+        :type: str
+        """
+
+        self._languages = languages
+
+    @property
+    def domain_id(self):
+        """Gets the domain_id of this Problem.  # noqa: E501
+
+
+        :return: The domain_id of this Problem.  # noqa: E501
+        :rtype: str
+        """
+        return self._domain_id
+
+    @domain_id.setter
+    def domain_id(self, domain_id):
+        """Sets the domain_id of this Problem.
+
+
+        :param domain_id: The domain_id of this Problem.  # noqa: E501
+        :type: str
+        """
+        if domain_id is None:
+            raise ValueError("Invalid value for `domain_id`, must not be `None`")  # noqa: E501
+
+        self._domain_id = domain_id
+
+    @property
+    def owner_id(self):
+        """Gets the owner_id of this Problem.  # noqa: E501
+
+
+        :return: The owner_id of this Problem.  # noqa: E501
+        :rtype: str
+        """
+        return self._owner_id
+
+    @owner_id.setter
+    def owner_id(self, owner_id):
+        """Sets the owner_id of this Problem.
+
+
+        :param owner_id: The owner_id of this Problem.  # noqa: E501
+        :type: str
+        """
+        if owner_id is None:
+            raise ValueError("Invalid value for `owner_id`, must not be `None`")  # noqa: E501
+
+        self._owner_id = owner_id
+
+    @property
+    def problem_group_id(self):
+        """Gets the problem_group_id of this Problem.  # noqa: E501
+
+
+        :return: The problem_group_id of this Problem.  # noqa: E501
+        :rtype: str
+        """
+        return self._problem_group_id
+
+    @problem_group_id.setter
+    def problem_group_id(self, problem_group_id):
+        """Sets the problem_group_id of this Problem.
+
+
+        :param problem_group_id: The problem_group_id of this Problem.  # noqa: E501
+        :type: str
+        """
+        if problem_group_id is None:
+            raise ValueError("Invalid value for `problem_group_id`, must not be `None`")  # noqa: E501
+
+        self._problem_group_id = problem_group_id
 
     def to_dict(self):
         """Returns the model properties as a dict"""
