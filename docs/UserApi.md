@@ -323,7 +323,7 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = joj.horse.client.UserApi()
-redirect_url = 'http://127.0.0.1:34765' # str | Set the redirect url after the authorization. (optional) (default to http://127.0.0.1:34765)
+redirect_url = 'http://localhost:34765' # str | Set the redirect url after the authorization. (optional) (default to http://localhost:34765)
 redirect = true # bool | If true (html link mode), redirect to jaccount site; If false (ajax mode), return the redirect url to the jaccount site, you also need to set the cookies returned manually in ajax mode. (optional) (default to true)
 
 try:
@@ -338,7 +338,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **redirect_url** | **str**| Set the redirect url after the authorization. | [optional] [default to http://127.0.0.1:34765]
+ **redirect_url** | **str**| Set the redirect url after the authorization. | [optional] [default to http://localhost:34765]
  **redirect** | **bool**| If true (html link mode), redirect to jaccount site; If false (ajax mode), return the redirect url to the jaccount site, you also need to set the cookies returned manually in ajax mode. | [optional] [default to true]
 
 ### Return type
@@ -372,7 +372,7 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = joj.horse.client.UserApi(joj.horse.client.ApiClient(configuration))
-redirect_url = 'http://127.0.0.1:34765' # str | Set the redirect url after the logout. (optional) (default to http://127.0.0.1:34765)
+redirect_url = 'http://localhost:34765' # str | Set the redirect url after the logout. (optional) (default to http://localhost:34765)
 redirect = true # bool | If true (html link mode), redirect to a url; If false (ajax mode), return the redirect url, you also need to unset all cookies manually in ajax mode. (optional) (default to true)
 
 try:
@@ -387,7 +387,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **redirect_url** | **str**| Set the redirect url after the logout. | [optional] [default to http://127.0.0.1:34765]
+ **redirect_url** | **str**| Set the redirect url after the logout. | [optional] [default to http://localhost:34765]
  **redirect** | **bool**| If true (html link mode), redirect to a url; If false (ajax mode), return the redirect url, you also need to unset all cookies manually in ajax mode. | [optional] [default to true]
 
 ### Return type
