@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: 3b82b34@2021-09-28 14:44:31  # noqa: E501
+    Git version: a5c2259@2021-11-03T09:25:38Z  # noqa: E501
 
     OpenAPI spec version: 0.1.0
     
@@ -77,7 +77,7 @@ class ProblemClone(object):
     def problem_set(self):
         """Gets the problem_set of this ProblemClone.  # noqa: E501
 
-        url or ObjectId of the problem set  # noqa: E501
+        url or id of the problem set  # noqa: E501
 
         :return: The problem_set of this ProblemClone.  # noqa: E501
         :rtype: str
@@ -88,7 +88,7 @@ class ProblemClone(object):
     def problem_set(self, problem_set):
         """Sets the problem_set of this ProblemClone.
 
-        url or ObjectId of the problem set  # noqa: E501
+        url or id of the problem set  # noqa: E501
 
         :param problem_set: The problem_set of this ProblemClone.  # noqa: E501
         :type: str

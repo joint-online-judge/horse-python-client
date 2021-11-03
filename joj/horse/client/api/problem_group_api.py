@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: 3b82b34@2021-09-28 14:44:31  # noqa: E501
+    Git version: a5c2259@2021-11-03T09:25:38Z  # noqa: E501
 
     OpenAPI spec version: 0.1.0
     
@@ -43,7 +43,7 @@ class ProblemGroupApi(object):
         :param async_req bool
         :param int offset:
         :param int limit:
-        :return: ListProblemGroupsResp
+        :return: ProblemGroupListResp
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -65,7 +65,7 @@ class ProblemGroupApi(object):
         :param async_req bool
         :param int offset:
         :param int limit:
-        :return: ListProblemGroupsResp
+        :return: ProblemGroupListResp
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -117,7 +117,7 @@ class ProblemGroupApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='ListProblemGroupsResp',  # noqa: E501
+            response_type='ProblemGroupListResp',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),

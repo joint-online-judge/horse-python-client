@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: 3b82b34@2021-09-28 14:44:31  # noqa: E501
+    Git version: a5c2259@2021-11-03T09:25:38Z  # noqa: E501
 
     OpenAPI spec version: 0.1.0
     
@@ -28,177 +28,45 @@ class DomainUserPermission(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'id': 'str',
-        'created_at': 'datetime',
-        'updated_at': 'datetime',
-        'role': 'str',
-        'domain_id': 'str',
-        'user_id': 'str',
+        'domain_user': 'DomainUser',
         'permission': 'DomainPermission'
     }
 
     attribute_map = {
-        'id': 'id',
-        'created_at': 'created_at',
-        'updated_at': 'updated_at',
-        'role': 'role',
-        'domain_id': 'domain_id',
-        'user_id': 'user_id',
+        'domain_user': 'domain_user',
         'permission': 'permission'
     }
 
-    def __init__(self, id=None, created_at=None, updated_at=None, role=None, domain_id=None, user_id=None, permission=None):  # noqa: E501
+    def __init__(self, domain_user=None, permission=None):  # noqa: E501
         """DomainUserPermission - a model defined in Swagger"""  # noqa: E501
-        self._id = None
-        self._created_at = None
-        self._updated_at = None
-        self._role = None
-        self._domain_id = None
-        self._user_id = None
+        self._domain_user = None
         self._permission = None
         self.discriminator = None
-        if id is not None:
-            self.id = id
-        if created_at is not None:
-            self.created_at = created_at
-        if updated_at is not None:
-            self.updated_at = updated_at
-        self.role = role
-        self.domain_id = domain_id
-        self.user_id = user_id
+        self.domain_user = domain_user
         self.permission = permission
 
     @property
-    def id(self):
-        """Gets the id of this DomainUserPermission.  # noqa: E501
+    def domain_user(self):
+        """Gets the domain_user of this DomainUserPermission.  # noqa: E501
 
 
-        :return: The id of this DomainUserPermission.  # noqa: E501
-        :rtype: str
+        :return: The domain_user of this DomainUserPermission.  # noqa: E501
+        :rtype: DomainUser
         """
-        return self._id
+        return self._domain_user
 
-    @id.setter
-    def id(self, id):
-        """Sets the id of this DomainUserPermission.
+    @domain_user.setter
+    def domain_user(self, domain_user):
+        """Sets the domain_user of this DomainUserPermission.
 
 
-        :param id: The id of this DomainUserPermission.  # noqa: E501
-        :type: str
+        :param domain_user: The domain_user of this DomainUserPermission.  # noqa: E501
+        :type: DomainUser
         """
+        if domain_user is None:
+            raise ValueError("Invalid value for `domain_user`, must not be `None`")  # noqa: E501
 
-        self._id = id
-
-    @property
-    def created_at(self):
-        """Gets the created_at of this DomainUserPermission.  # noqa: E501
-
-
-        :return: The created_at of this DomainUserPermission.  # noqa: E501
-        :rtype: datetime
-        """
-        return self._created_at
-
-    @created_at.setter
-    def created_at(self, created_at):
-        """Sets the created_at of this DomainUserPermission.
-
-
-        :param created_at: The created_at of this DomainUserPermission.  # noqa: E501
-        :type: datetime
-        """
-
-        self._created_at = created_at
-
-    @property
-    def updated_at(self):
-        """Gets the updated_at of this DomainUserPermission.  # noqa: E501
-
-
-        :return: The updated_at of this DomainUserPermission.  # noqa: E501
-        :rtype: datetime
-        """
-        return self._updated_at
-
-    @updated_at.setter
-    def updated_at(self, updated_at):
-        """Sets the updated_at of this DomainUserPermission.
-
-
-        :param updated_at: The updated_at of this DomainUserPermission.  # noqa: E501
-        :type: datetime
-        """
-
-        self._updated_at = updated_at
-
-    @property
-    def role(self):
-        """Gets the role of this DomainUserPermission.  # noqa: E501
-
-
-        :return: The role of this DomainUserPermission.  # noqa: E501
-        :rtype: str
-        """
-        return self._role
-
-    @role.setter
-    def role(self, role):
-        """Sets the role of this DomainUserPermission.
-
-
-        :param role: The role of this DomainUserPermission.  # noqa: E501
-        :type: str
-        """
-        if role is None:
-            raise ValueError("Invalid value for `role`, must not be `None`")  # noqa: E501
-
-        self._role = role
-
-    @property
-    def domain_id(self):
-        """Gets the domain_id of this DomainUserPermission.  # noqa: E501
-
-
-        :return: The domain_id of this DomainUserPermission.  # noqa: E501
-        :rtype: str
-        """
-        return self._domain_id
-
-    @domain_id.setter
-    def domain_id(self, domain_id):
-        """Sets the domain_id of this DomainUserPermission.
-
-
-        :param domain_id: The domain_id of this DomainUserPermission.  # noqa: E501
-        :type: str
-        """
-        if domain_id is None:
-            raise ValueError("Invalid value for `domain_id`, must not be `None`")  # noqa: E501
-
-        self._domain_id = domain_id
-
-    @property
-    def user_id(self):
-        """Gets the user_id of this DomainUserPermission.  # noqa: E501
-
-
-        :return: The user_id of this DomainUserPermission.  # noqa: E501
-        :rtype: str
-        """
-        return self._user_id
-
-    @user_id.setter
-    def user_id(self, user_id):
-        """Sets the user_id of this DomainUserPermission.
-
-
-        :param user_id: The user_id of this DomainUserPermission.  # noqa: E501
-        :type: str
-        """
-        if user_id is None:
-            raise ValueError("Invalid value for `user_id`, must not be `None`")  # noqa: E501
-
-        self._user_id = user_id
+        self._domain_user = domain_user
 
     @property
     def permission(self):

@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: 3b82b34@2021-09-28 14:44:31  # noqa: E501
+    Git version: a5c2259@2021-11-03T09:25:38Z  # noqa: E501
 
     OpenAPI spec version: 0.1.0
     
@@ -42,7 +42,7 @@ class DomainApi(object):
 
         :param async_req bool
         :param DomainUserAdd body: (required)
-        :param str domain: url or ObjectId of the domain (required)
+        :param str domain: url or id of the domain (required)
         :return: DomainUserResp
                  If the method is called asynchronously,
                  returns the request thread.
@@ -64,7 +64,7 @@ class DomainApi(object):
 
         :param async_req bool
         :param DomainUserAdd body: (required)
-        :param str domain: url or ObjectId of the domain (required)
+        :param str domain: url or id of the domain (required)
         :return: DomainUserResp
                  If the method is called asynchronously,
                  returns the request thread.
@@ -244,7 +244,7 @@ class DomainApi(object):
 
         :param async_req bool
         :param DomainInvitationCreate body: (required)
-        :param str domain: url or ObjectId of the domain (required)
+        :param str domain: url or id of the domain (required)
         :return: DomainInvitationResp
                  If the method is called asynchronously,
                  returns the request thread.
@@ -266,7 +266,7 @@ class DomainApi(object):
 
         :param async_req bool
         :param DomainInvitationCreate body: (required)
-        :param str domain: url or ObjectId of the domain (required)
+        :param str domain: url or id of the domain (required)
         :return: DomainInvitationResp
                  If the method is called asynchronously,
                  returns the request thread.
@@ -349,7 +349,7 @@ class DomainApi(object):
 
         :param async_req bool
         :param DomainRoleCreate body: (required)
-        :param str domain: url or ObjectId of the domain (required)
+        :param str domain: url or id of the domain (required)
         :return: DomainRoleResp
                  If the method is called asynchronously,
                  returns the request thread.
@@ -371,7 +371,7 @@ class DomainApi(object):
 
         :param async_req bool
         :param DomainRoleCreate body: (required)
-        :param str domain: url or ObjectId of the domain (required)
+        :param str domain: url or id of the domain (required)
         :return: DomainRoleResp
                  If the method is called asynchronously,
                  returns the request thread.
@@ -454,7 +454,7 @@ class DomainApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param str domain: url or ObjectId of the domain (required)
+        :param str domain: url or id of the domain (required)
         :return: EmptyResp
                  If the method is called asynchronously,
                  returns the request thread.
@@ -476,7 +476,7 @@ class DomainApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param str domain: url or ObjectId of the domain (required)
+        :param str domain: url or id of the domain (required)
         :return: EmptyResp
                  If the method is called asynchronously,
                  returns the request thread.
@@ -548,8 +548,8 @@ class DomainApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param str domain: url or ObjectId of the domain (required)
-        :param str invitation: ObjectId of the domain invitation (required)
+        :param str domain: url or id of the domain (required)
+        :param str invitation: url or id of the domain invitation (required)
         :return: EmptyResp
                  If the method is called asynchronously,
                  returns the request thread.
@@ -570,8 +570,8 @@ class DomainApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param str domain: url or ObjectId of the domain (required)
-        :param str invitation: ObjectId of the domain invitation (required)
+        :param str domain: url or id of the domain (required)
+        :param str invitation: url or id of the domain invitation (required)
         :return: EmptyResp
                  If the method is called asynchronously,
                  returns the request thread.
@@ -649,7 +649,7 @@ class DomainApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param str domain: url or ObjectId of the domain (required)
+        :param str domain: url or id of the domain (required)
         :param str role: name of the domain role (required)
         :return: EmptyResp
                  If the method is called asynchronously,
@@ -671,7 +671,7 @@ class DomainApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param str domain: url or ObjectId of the domain (required)
+        :param str domain: url or id of the domain (required)
         :param str role: name of the domain role (required)
         :return: EmptyResp
                  If the method is called asynchronously,
@@ -750,7 +750,7 @@ class DomainApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param str domain: url or ObjectId of the domain (required)
+        :param str domain: url or id of the domain (required)
         :return: DomainResp
                  If the method is called asynchronously,
                  returns the request thread.
@@ -771,7 +771,7 @@ class DomainApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param str domain: url or ObjectId of the domain (required)
+        :param str domain: url or id of the domain (required)
         :return: DomainResp
                  If the method is called asynchronously,
                  returns the request thread.
@@ -843,8 +843,8 @@ class DomainApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param str domain: url or ObjectId of the domain (required)
-        :param str user: 'me' or ObjectId of the user (required)
+        :param str domain: url or id of the domain (required)
+        :param str user: user id or 'me' or empty (required)
         :return: DomainUserResp
                  If the method is called asynchronously,
                  returns the request thread.
@@ -865,8 +865,8 @@ class DomainApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param str domain: url or ObjectId of the domain (required)
-        :param str user: 'me' or ObjectId of the user (required)
+        :param str domain: url or id of the domain (required)
+        :param str user: user id or 'me' or empty (required)
         :return: DomainUserResp
                  If the method is called asynchronously,
                  returns the request thread.
@@ -944,8 +944,8 @@ class DomainApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param str domain: url or ObjectId of the domain (required)
-        :param str user: 'me' or ObjectId of the user (required)
+        :param str domain: url or id of the domain (required)
+        :param str user: user id or 'me' or empty (required)
         :return: DomainUserPermissionResp
                  If the method is called asynchronously,
                  returns the request thread.
@@ -966,8 +966,8 @@ class DomainApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param str domain: url or ObjectId of the domain (required)
-        :param str user: 'me' or ObjectId of the user (required)
+        :param str domain: url or id of the domain (required)
+        :param str user: user id or 'me' or empty (required)
         :return: DomainUserPermissionResp
                  If the method is called asynchronously,
                  returns the request thread.
@@ -1045,7 +1045,7 @@ class DomainApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param str domain: url or ObjectId of the domain (required)
+        :param str domain: url or id of the domain (required)
         :param str invitation_code: (required)
         :return: DomainUserResp
                  If the method is called asynchronously,
@@ -1067,7 +1067,7 @@ class DomainApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param str domain: url or ObjectId of the domain (required)
+        :param str domain: url or id of the domain (required)
         :param str invitation_code: (required)
         :return: DomainUserResp
                  If the method is called asynchronously,
@@ -1146,7 +1146,7 @@ class DomainApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param str domain: url or ObjectId of the domain (required)
+        :param str domain: url or id of the domain (required)
         :return: DomainRoleListResp
                  If the method is called asynchronously,
                  returns the request thread.
@@ -1167,7 +1167,7 @@ class DomainApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param str domain: url or ObjectId of the domain (required)
+        :param str domain: url or id of the domain (required)
         :return: DomainRoleListResp
                  If the method is called asynchronously,
                  returns the request thread.
@@ -1239,7 +1239,7 @@ class DomainApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param str domain: url or ObjectId of the domain (required)
+        :param str domain: url or id of the domain (required)
         :return: DomainUserListResp
                  If the method is called asynchronously,
                  returns the request thread.
@@ -1260,7 +1260,7 @@ class DomainApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param str domain: url or ObjectId of the domain (required)
+        :param str domain: url or id of the domain (required)
         :return: DomainUserListResp
                  If the method is called asynchronously,
                  returns the request thread.
@@ -1436,8 +1436,8 @@ class DomainApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param str domain: url or ObjectId of the domain (required)
-        :param str user: 'me' or ObjectId of the user (required)
+        :param str domain: url or id of the domain (required)
+        :param str user: user id or 'me' or empty (required)
         :return: EmptyResp
                  If the method is called asynchronously,
                  returns the request thread.
@@ -1458,8 +1458,8 @@ class DomainApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param str domain: url or ObjectId of the domain (required)
-        :param str user: 'me' or ObjectId of the user (required)
+        :param str domain: url or id of the domain (required)
+        :param str user: user id or 'me' or empty (required)
         :return: EmptyResp
                  If the method is called asynchronously,
                  returns the request thread.
@@ -1538,7 +1538,7 @@ class DomainApi(object):
 
         :param async_req bool
         :param DomainTransfer body: (required)
-        :param str domain: url or ObjectId of the domain (required)
+        :param str domain: url or id of the domain (required)
         :return: DomainResp
                  If the method is called asynchronously,
                  returns the request thread.
@@ -1560,7 +1560,7 @@ class DomainApi(object):
 
         :param async_req bool
         :param DomainTransfer body: (required)
-        :param str domain: url or ObjectId of the domain (required)
+        :param str domain: url or id of the domain (required)
         :return: DomainResp
                  If the method is called asynchronously,
                  returns the request thread.
@@ -1643,7 +1643,7 @@ class DomainApi(object):
 
         :param async_req bool
         :param DomainEdit body: (required)
-        :param str domain: url or ObjectId of the domain (required)
+        :param str domain: url or id of the domain (required)
         :return: DomainResp
                  If the method is called asynchronously,
                  returns the request thread.
@@ -1665,7 +1665,7 @@ class DomainApi(object):
 
         :param async_req bool
         :param DomainEdit body: (required)
-        :param str domain: url or ObjectId of the domain (required)
+        :param str domain: url or id of the domain (required)
         :return: DomainResp
                  If the method is called asynchronously,
                  returns the request thread.
@@ -1748,8 +1748,8 @@ class DomainApi(object):
 
         :param async_req bool
         :param DomainInvitationEdit body: (required)
-        :param str domain: url or ObjectId of the domain (required)
-        :param str invitation: ObjectId of the domain invitation (required)
+        :param str domain: url or id of the domain (required)
+        :param str invitation: url or id of the domain invitation (required)
         :return: DomainInvitationResp
                  If the method is called asynchronously,
                  returns the request thread.
@@ -1771,8 +1771,8 @@ class DomainApi(object):
 
         :param async_req bool
         :param DomainInvitationEdit body: (required)
-        :param str domain: url or ObjectId of the domain (required)
-        :param str invitation: ObjectId of the domain invitation (required)
+        :param str domain: url or id of the domain (required)
+        :param str invitation: url or id of the domain invitation (required)
         :return: DomainInvitationResp
                  If the method is called asynchronously,
                  returns the request thread.
@@ -1861,7 +1861,7 @@ class DomainApi(object):
 
         :param async_req bool
         :param DomainRoleEdit body: (required)
-        :param str domain: url or ObjectId of the domain (required)
+        :param str domain: url or id of the domain (required)
         :param str role: name of the domain role (required)
         :return: DomainRoleResp
                  If the method is called asynchronously,
@@ -1884,7 +1884,7 @@ class DomainApi(object):
 
         :param async_req bool
         :param DomainRoleEdit body: (required)
-        :param str domain: url or ObjectId of the domain (required)
+        :param str domain: url or id of the domain (required)
         :param str role: name of the domain role (required)
         :return: DomainRoleResp
                  If the method is called asynchronously,
@@ -1964,47 +1964,47 @@ class DomainApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def update_domain_user_api_v1_domains_domain_users_user_patch(self, domain, user, **kwargs):  # noqa: E501
+    def update_domain_user_api_v1_domains_domain_users_user_patch(self, body, domain, user, **kwargs):  # noqa: E501
         """Update Domain User  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.update_domain_user_api_v1_domains_domain_users_user_patch(domain, user, async_req=True)
+        >>> thread = api.update_domain_user_api_v1_domains_domain_users_user_patch(body, domain, user, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param str domain: url or ObjectId of the domain (required)
-        :param str user: 'me' or ObjectId of the user (required)
-        :param str body:
+        :param DomainUserUpdate body: (required)
+        :param str domain: url or id of the domain (required)
+        :param str user: user id or 'me' or empty (required)
         :return: DomainUserResp
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.update_domain_user_api_v1_domains_domain_users_user_patch_with_http_info(domain, user, **kwargs)  # noqa: E501
+            return self.update_domain_user_api_v1_domains_domain_users_user_patch_with_http_info(body, domain, user, **kwargs)  # noqa: E501
         else:
-            (data) = self.update_domain_user_api_v1_domains_domain_users_user_patch_with_http_info(domain, user, **kwargs)  # noqa: E501
+            (data) = self.update_domain_user_api_v1_domains_domain_users_user_patch_with_http_info(body, domain, user, **kwargs)  # noqa: E501
             return data
 
-    def update_domain_user_api_v1_domains_domain_users_user_patch_with_http_info(self, domain, user, **kwargs):  # noqa: E501
+    def update_domain_user_api_v1_domains_domain_users_user_patch_with_http_info(self, body, domain, user, **kwargs):  # noqa: E501
         """Update Domain User  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.update_domain_user_api_v1_domains_domain_users_user_patch_with_http_info(domain, user, async_req=True)
+        >>> thread = api.update_domain_user_api_v1_domains_domain_users_user_patch_with_http_info(body, domain, user, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param str domain: url or ObjectId of the domain (required)
-        :param str user: 'me' or ObjectId of the user (required)
-        :param str body:
+        :param DomainUserUpdate body: (required)
+        :param str domain: url or id of the domain (required)
+        :param str user: user id or 'me' or empty (required)
         :return: DomainUserResp
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['domain', 'user', 'body']  # noqa: E501
+        all_params = ['body', 'domain', 'user']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -2019,6 +2019,10 @@ class DomainApi(object):
                 )
             params[key] = val
         del params['kwargs']
+        # verify the required parameter 'body' is set
+        if ('body' not in params or
+                params['body'] is None):
+            raise ValueError("Missing the required parameter `body` when calling `update_domain_user_api_v1_domains_domain_users_user_patch`")  # noqa: E501
         # verify the required parameter 'domain' is set
         if ('domain' not in params or
                 params['domain'] is None):

@@ -223,7 +223,7 @@ problem_set = 'problem_set_example' # str |  (optional)
 problem = 'problem_example' # str |  (optional)
 offset = 0 # int |  (optional) (default to 0)
 limit = 100 # int |  (optional) (default to 100)
-uid = '' # str | uid or 'me' or empty (optional)
+uid = '' # str | user id or 'me' or empty (optional)
 
 try:
     # List Records
@@ -242,7 +242,7 @@ Name | Type | Description  | Notes
  **problem** | **str**|  | [optional] 
  **offset** | **int**|  | [optional] [default to 0]
  **limit** | **int**|  | [optional] [default to 100]
- **uid** | **str**| uid or &#x27;me&#x27; or empty | [optional] 
+ **uid** | **str**| user id or &#x27;me&#x27; or empty | [optional] 
 
 ### Return type
 

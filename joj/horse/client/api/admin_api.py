@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: 3b82b34@2021-09-28 14:44:31  # noqa: E501
+    Git version: a5c2259@2021-11-03T09:25:38Z  # noqa: E501
 
     OpenAPI spec version: 0.1.0
     
@@ -447,7 +447,7 @@ class AdminApi(object):
         :param async_req bool
         :param int offset:
         :param int limit:
-        :return: ListDomainRolesResp
+        :return: DomainRoleListResp
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -469,7 +469,7 @@ class AdminApi(object):
         :param async_req bool
         :param int offset:
         :param int limit:
-        :return: ListDomainRolesResp
+        :return: DomainRoleListResp
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -521,7 +521,7 @@ class AdminApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='ListDomainRolesResp',  # noqa: E501
+            response_type='DomainRoleListResp',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -540,7 +540,7 @@ class AdminApi(object):
         :param async_req bool
         :param int offset:
         :param int limit:
-        :return: ListDomainUsersResp
+        :return: DomainUserListResp
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -562,7 +562,7 @@ class AdminApi(object):
         :param async_req bool
         :param int offset:
         :param int limit:
-        :return: ListDomainUsersResp
+        :return: DomainUserListResp
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -614,7 +614,7 @@ class AdminApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='ListDomainUsersResp',  # noqa: E501
+            response_type='DomainUserListResp',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -633,7 +633,7 @@ class AdminApi(object):
         :param async_req bool
         :param int offset:
         :param int limit:
-        :return: ListUsersResp
+        :return: UserListResp
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -655,7 +655,7 @@ class AdminApi(object):
         :param async_req bool
         :param int offset:
         :param int limit:
-        :return: ListUsersResp
+        :return: UserListResp
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -707,7 +707,7 @@ class AdminApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='ListUsersResp',  # noqa: E501
+            response_type='UserListResp',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -726,7 +726,7 @@ class AdminApi(object):
         :param async_req bool
         :param int offset:
         :param int limit:
-        :return: ListUsersResp
+        :return: UserBaseListResp
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -748,7 +748,7 @@ class AdminApi(object):
         :param async_req bool
         :param int offset:
         :param int limit:
-        :return: ListUsersResp
+        :return: UserBaseListResp
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -800,7 +800,7 @@ class AdminApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='ListUsersResp',  # noqa: E501
+            response_type='UserBaseListResp',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),

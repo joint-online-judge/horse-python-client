@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: 3b82b34@2021-09-28 14:44:31  # noqa: E501
+    Git version: a5c2259@2021-11-03T09:25:38Z  # noqa: E501
 
     OpenAPI spec version: 0.1.0
     
@@ -31,61 +31,58 @@ class User(object):
         'id': 'str',
         'created_at': 'datetime',
         'updated_at': 'datetime',
-        'scope': 'str',
-        'uname': 'str',
-        'mail': 'str',
-        'uname_lower': 'str',
-        'mail_lower': 'str',
+        'username': 'str',
+        'email': 'str',
         'gravatar': 'str',
         'student_id': 'str',
         'real_name': 'str',
-        'salt': 'str',
-        'hash': 'str',
         'role': 'str',
+        'is_active': 'bool',
         'register_ip': 'str',
         'login_at': 'datetime',
-        'login_ip': 'str'
+        'login_ip': 'str',
+        'hashed_password': 'str',
+        'username_lower': 'str',
+        'email_lower': 'str'
     }
 
     attribute_map = {
         'id': 'id',
         'created_at': 'created_at',
         'updated_at': 'updated_at',
-        'scope': 'scope',
-        'uname': 'uname',
-        'mail': 'mail',
-        'uname_lower': 'uname_lower',
-        'mail_lower': 'mail_lower',
+        'username': 'username',
+        'email': 'email',
         'gravatar': 'gravatar',
         'student_id': 'student_id',
         'real_name': 'real_name',
-        'salt': 'salt',
-        'hash': 'hash',
         'role': 'role',
+        'is_active': 'is_active',
         'register_ip': 'register_ip',
         'login_at': 'login_at',
-        'login_ip': 'login_ip'
+        'login_ip': 'login_ip',
+        'hashed_password': 'hashed_password',
+        'username_lower': 'username_lower',
+        'email_lower': 'email_lower'
     }
 
-    def __init__(self, id=None, created_at=None, updated_at=None, scope=None, uname=None, mail=None, uname_lower=None, mail_lower=None, gravatar=None, student_id='', real_name='', salt='', hash='', role='user', register_ip='0.0.0.0', login_at=None, login_ip='0.0.0.0'):  # noqa: E501
+    def __init__(self, id=None, created_at=None, updated_at=None, username=None, email=None, gravatar='', student_id='', real_name='', role='user', is_active=False, register_ip='0.0.0.0', login_at=None, login_ip='0.0.0.0', hashed_password='', username_lower=None, email_lower=None):  # noqa: E501
         """User - a model defined in Swagger"""  # noqa: E501
         self._id = None
         self._created_at = None
         self._updated_at = None
-        self._scope = None
-        self._uname = None
-        self._mail = None
-        self._uname_lower = None
-        self._mail_lower = None
+        self._username = None
+        self._email = None
         self._gravatar = None
         self._student_id = None
         self._real_name = None
-        self._salt = None
-        self._hash = None
         self._role = None
+        self._is_active = None
         self._register_ip = None
         self._login_at = None
         self._login_ip = None
+        self._hashed_password = None
+        self._username_lower = None
+        self._email_lower = None
         self.discriminator = None
         if id is not None:
             self.id = id
@@ -93,27 +90,27 @@ class User(object):
             self.created_at = created_at
         if updated_at is not None:
             self.updated_at = updated_at
-        self.scope = scope
-        self.uname = uname
-        self.mail = mail
-        self.uname_lower = uname_lower
-        self.mail_lower = mail_lower
-        self.gravatar = gravatar
+        self.username = username
+        self.email = email
+        if gravatar is not None:
+            self.gravatar = gravatar
         if student_id is not None:
             self.student_id = student_id
         if real_name is not None:
             self.real_name = real_name
-        if salt is not None:
-            self.salt = salt
-        if hash is not None:
-            self.hash = hash
         if role is not None:
             self.role = role
+        if is_active is not None:
+            self.is_active = is_active
         if register_ip is not None:
             self.register_ip = register_ip
         self.login_at = login_at
         if login_ip is not None:
             self.login_ip = login_ip
+        if hashed_password is not None:
+            self.hashed_password = hashed_password
+        self.username_lower = username_lower
+        self.email_lower = email_lower
 
     @property
     def id(self):
@@ -179,119 +176,50 @@ class User(object):
         self._updated_at = updated_at
 
     @property
-    def scope(self):
-        """Gets the scope of this User.  # noqa: E501
+    def username(self):
+        """Gets the username of this User.  # noqa: E501
 
 
-        :return: The scope of this User.  # noqa: E501
+        :return: The username of this User.  # noqa: E501
         :rtype: str
         """
-        return self._scope
+        return self._username
 
-    @scope.setter
-    def scope(self, scope):
-        """Sets the scope of this User.
+    @username.setter
+    def username(self, username):
+        """Sets the username of this User.
 
 
-        :param scope: The scope of this User.  # noqa: E501
+        :param username: The username of this User.  # noqa: E501
         :type: str
         """
-        if scope is None:
-            raise ValueError("Invalid value for `scope`, must not be `None`")  # noqa: E501
+        if username is None:
+            raise ValueError("Invalid value for `username`, must not be `None`")  # noqa: E501
 
-        self._scope = scope
+        self._username = username
 
     @property
-    def uname(self):
-        """Gets the uname of this User.  # noqa: E501
+    def email(self):
+        """Gets the email of this User.  # noqa: E501
 
 
-        :return: The uname of this User.  # noqa: E501
+        :return: The email of this User.  # noqa: E501
         :rtype: str
         """
-        return self._uname
+        return self._email
 
-    @uname.setter
-    def uname(self, uname):
-        """Sets the uname of this User.
+    @email.setter
+    def email(self, email):
+        """Sets the email of this User.
 
 
-        :param uname: The uname of this User.  # noqa: E501
+        :param email: The email of this User.  # noqa: E501
         :type: str
         """
-        if uname is None:
-            raise ValueError("Invalid value for `uname`, must not be `None`")  # noqa: E501
+        if email is None:
+            raise ValueError("Invalid value for `email`, must not be `None`")  # noqa: E501
 
-        self._uname = uname
-
-    @property
-    def mail(self):
-        """Gets the mail of this User.  # noqa: E501
-
-
-        :return: The mail of this User.  # noqa: E501
-        :rtype: str
-        """
-        return self._mail
-
-    @mail.setter
-    def mail(self, mail):
-        """Sets the mail of this User.
-
-
-        :param mail: The mail of this User.  # noqa: E501
-        :type: str
-        """
-        if mail is None:
-            raise ValueError("Invalid value for `mail`, must not be `None`")  # noqa: E501
-
-        self._mail = mail
-
-    @property
-    def uname_lower(self):
-        """Gets the uname_lower of this User.  # noqa: E501
-
-
-        :return: The uname_lower of this User.  # noqa: E501
-        :rtype: str
-        """
-        return self._uname_lower
-
-    @uname_lower.setter
-    def uname_lower(self, uname_lower):
-        """Sets the uname_lower of this User.
-
-
-        :param uname_lower: The uname_lower of this User.  # noqa: E501
-        :type: str
-        """
-        if uname_lower is None:
-            raise ValueError("Invalid value for `uname_lower`, must not be `None`")  # noqa: E501
-
-        self._uname_lower = uname_lower
-
-    @property
-    def mail_lower(self):
-        """Gets the mail_lower of this User.  # noqa: E501
-
-
-        :return: The mail_lower of this User.  # noqa: E501
-        :rtype: str
-        """
-        return self._mail_lower
-
-    @mail_lower.setter
-    def mail_lower(self, mail_lower):
-        """Sets the mail_lower of this User.
-
-
-        :param mail_lower: The mail_lower of this User.  # noqa: E501
-        :type: str
-        """
-        if mail_lower is None:
-            raise ValueError("Invalid value for `mail_lower`, must not be `None`")  # noqa: E501
-
-        self._mail_lower = mail_lower
+        self._email = email
 
     @property
     def gravatar(self):
@@ -311,8 +239,6 @@ class User(object):
         :param gravatar: The gravatar of this User.  # noqa: E501
         :type: str
         """
-        if gravatar is None:
-            raise ValueError("Invalid value for `gravatar`, must not be `None`")  # noqa: E501
 
         self._gravatar = gravatar
 
@@ -359,48 +285,6 @@ class User(object):
         self._real_name = real_name
 
     @property
-    def salt(self):
-        """Gets the salt of this User.  # noqa: E501
-
-
-        :return: The salt of this User.  # noqa: E501
-        :rtype: str
-        """
-        return self._salt
-
-    @salt.setter
-    def salt(self, salt):
-        """Sets the salt of this User.
-
-
-        :param salt: The salt of this User.  # noqa: E501
-        :type: str
-        """
-
-        self._salt = salt
-
-    @property
-    def hash(self):
-        """Gets the hash of this User.  # noqa: E501
-
-
-        :return: The hash of this User.  # noqa: E501
-        :rtype: str
-        """
-        return self._hash
-
-    @hash.setter
-    def hash(self, hash):
-        """Sets the hash of this User.
-
-
-        :param hash: The hash of this User.  # noqa: E501
-        :type: str
-        """
-
-        self._hash = hash
-
-    @property
     def role(self):
         """Gets the role of this User.  # noqa: E501
 
@@ -420,6 +304,27 @@ class User(object):
         """
 
         self._role = role
+
+    @property
+    def is_active(self):
+        """Gets the is_active of this User.  # noqa: E501
+
+
+        :return: The is_active of this User.  # noqa: E501
+        :rtype: bool
+        """
+        return self._is_active
+
+    @is_active.setter
+    def is_active(self, is_active):
+        """Sets the is_active of this User.
+
+
+        :param is_active: The is_active of this User.  # noqa: E501
+        :type: bool
+        """
+
+        self._is_active = is_active
 
     @property
     def register_ip(self):
@@ -485,6 +390,73 @@ class User(object):
         """
 
         self._login_ip = login_ip
+
+    @property
+    def hashed_password(self):
+        """Gets the hashed_password of this User.  # noqa: E501
+
+
+        :return: The hashed_password of this User.  # noqa: E501
+        :rtype: str
+        """
+        return self._hashed_password
+
+    @hashed_password.setter
+    def hashed_password(self, hashed_password):
+        """Sets the hashed_password of this User.
+
+
+        :param hashed_password: The hashed_password of this User.  # noqa: E501
+        :type: str
+        """
+
+        self._hashed_password = hashed_password
+
+    @property
+    def username_lower(self):
+        """Gets the username_lower of this User.  # noqa: E501
+
+
+        :return: The username_lower of this User.  # noqa: E501
+        :rtype: str
+        """
+        return self._username_lower
+
+    @username_lower.setter
+    def username_lower(self, username_lower):
+        """Sets the username_lower of this User.
+
+
+        :param username_lower: The username_lower of this User.  # noqa: E501
+        :type: str
+        """
+        if username_lower is None:
+            raise ValueError("Invalid value for `username_lower`, must not be `None`")  # noqa: E501
+
+        self._username_lower = username_lower
+
+    @property
+    def email_lower(self):
+        """Gets the email_lower of this User.  # noqa: E501
+
+
+        :return: The email_lower of this User.  # noqa: E501
+        :rtype: str
+        """
+        return self._email_lower
+
+    @email_lower.setter
+    def email_lower(self, email_lower):
+        """Sets the email_lower of this User.
+
+
+        :param email_lower: The email_lower of this User.  # noqa: E501
+        :type: str
+        """
+        if email_lower is None:
+            raise ValueError("Invalid value for `email_lower`, must not be `None`")  # noqa: E501
+
+        self._email_lower = email_lower
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: 3b82b34@2021-09-28 14:44:31  # noqa: E501
+    Git version: a5c2259@2021-11-03T09:25:38Z  # noqa: E501
 
     OpenAPI spec version: 0.1.0
     
@@ -71,7 +71,7 @@ class DomainUserAdd(object):
     def user(self):
         """Gets the user of this DomainUserAdd.  # noqa: E501
 
-        'me' or ObjectId of the user  # noqa: E501
+        'me' or id of the user  # noqa: E501
 
         :return: The user of this DomainUserAdd.  # noqa: E501
         :rtype: str
@@ -82,7 +82,7 @@ class DomainUserAdd(object):
     def user(self, user):
         """Sets the user of this DomainUserAdd.
 
-        'me' or ObjectId of the user  # noqa: E501
+        'me' or id of the user  # noqa: E501
 
         :param user: The user of this DomainUserAdd.  # noqa: E501
         :type: str

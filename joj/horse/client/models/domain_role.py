@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: 3b82b34@2021-09-28 14:44:31  # noqa: E501
+    Git version: a5c2259@2021-11-03T09:25:38Z  # noqa: E501
 
     OpenAPI spec version: 0.1.0
     
@@ -32,7 +32,7 @@ class DomainRole(object):
         'created_at': 'datetime',
         'updated_at': 'datetime',
         'role': 'str',
-        'permission': 'AllOfDomainRolePermission',
+        'permission': 'object',
         'domain_id': 'str'
     }
 
@@ -156,7 +156,7 @@ class DomainRole(object):
 
 
         :return: The permission of this DomainRole.  # noqa: E501
-        :rtype: AllOfDomainRolePermission
+        :rtype: object
         """
         return self._permission
 
@@ -166,7 +166,7 @@ class DomainRole(object):
 
 
         :param permission: The permission of this DomainRole.  # noqa: E501
-        :type: AllOfDomainRolePermission
+        :type: object
         """
         if permission is None:
             raise ValueError("Invalid value for `permission`, must not be `None`")  # noqa: E501

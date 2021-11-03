@@ -7,7 +7,7 @@ Method | HTTP request | Description
 [**list_problem_groups_api_v1_problem_groups_get**](ProblemGroupApi.md#list_problem_groups_api_v1_problem_groups_get) | **GET** /api/v1/problem_groups | List Problem Groups
 
 # **list_problem_groups_api_v1_problem_groups_get**
-> ListProblemGroupsResp list_problem_groups_api_v1_problem_groups_get(offset=offset, limit=limit)
+> ProblemGroupListResp list_problem_groups_api_v1_problem_groups_get(offset=offset, limit=limit)
 
 List Problem Groups
 
@@ -42,7 +42,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ListProblemGroupsResp**](ListProblemGroupsResp.md)
+[**ProblemGroupListResp**](ProblemGroupListResp.md)
 
 ### Authorization
 

@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: 3b82b34@2021-09-28 14:44:31  # noqa: E501
+    Git version: a5c2259@2021-11-03T09:25:38Z  # noqa: E501
 
     OpenAPI spec version: 0.1.0
     
@@ -442,7 +442,7 @@ class RecordApi(object):
         :param str problem:
         :param int offset:
         :param int limit:
-        :param str uid: uid or 'me' or empty
+        :param str uid: user id or 'me' or empty
         :return: ListRecordsResp
                  If the method is called asynchronously,
                  returns the request thread.
@@ -468,7 +468,7 @@ class RecordApi(object):
         :param str problem:
         :param int offset:
         :param int limit:
-        :param str uid: uid or 'me' or empty
+        :param str uid: user id or 'me' or empty
         :return: ListRecordsResp
                  If the method is called asynchronously,
                  returns the request thread.

@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: 3b82b34@2021-09-28 14:44:31  # noqa: E501
+    Git version: a5c2259@2021-11-03T09:25:38Z  # noqa: E501
 
     OpenAPI spec version: 0.1.0
     
@@ -29,52 +29,61 @@ class UserBase(object):
     """
     swagger_types = {
         'id': 'str',
-        'scope': 'str',
-        'uname': 'str',
-        'mail': 'str',
-        'uname_lower': 'str',
-        'mail_lower': 'str',
+        'created_at': 'datetime',
+        'updated_at': 'datetime',
+        'username': 'str',
+        'email': 'str',
         'gravatar': 'str',
         'student_id': 'str',
-        'real_name': 'str'
+        'real_name': 'str',
+        'role': 'str',
+        'is_active': 'bool'
     }
 
     attribute_map = {
         'id': 'id',
-        'scope': 'scope',
-        'uname': 'uname',
-        'mail': 'mail',
-        'uname_lower': 'uname_lower',
-        'mail_lower': 'mail_lower',
+        'created_at': 'created_at',
+        'updated_at': 'updated_at',
+        'username': 'username',
+        'email': 'email',
         'gravatar': 'gravatar',
         'student_id': 'student_id',
-        'real_name': 'real_name'
+        'real_name': 'real_name',
+        'role': 'role',
+        'is_active': 'is_active'
     }
 
-    def __init__(self, id=None, scope=None, uname=None, mail=None, uname_lower=None, mail_lower=None, gravatar=None, student_id='', real_name=''):  # noqa: E501
+    def __init__(self, id=None, created_at=None, updated_at=None, username=None, email=None, gravatar='', student_id='', real_name='', role='user', is_active=False):  # noqa: E501
         """UserBase - a model defined in Swagger"""  # noqa: E501
         self._id = None
-        self._scope = None
-        self._uname = None
-        self._mail = None
-        self._uname_lower = None
-        self._mail_lower = None
+        self._created_at = None
+        self._updated_at = None
+        self._username = None
+        self._email = None
         self._gravatar = None
         self._student_id = None
         self._real_name = None
+        self._role = None
+        self._is_active = None
         self.discriminator = None
         if id is not None:
             self.id = id
-        self.scope = scope
-        self.uname = uname
-        self.mail = mail
-        self.uname_lower = uname_lower
-        self.mail_lower = mail_lower
-        self.gravatar = gravatar
+        if created_at is not None:
+            self.created_at = created_at
+        if updated_at is not None:
+            self.updated_at = updated_at
+        self.username = username
+        self.email = email
+        if gravatar is not None:
+            self.gravatar = gravatar
         if student_id is not None:
             self.student_id = student_id
         if real_name is not None:
             self.real_name = real_name
+        if role is not None:
+            self.role = role
+        if is_active is not None:
+            self.is_active = is_active
 
     @property
     def id(self):
@@ -98,119 +107,92 @@ class UserBase(object):
         self._id = id
 
     @property
-    def scope(self):
-        """Gets the scope of this UserBase.  # noqa: E501
+    def created_at(self):
+        """Gets the created_at of this UserBase.  # noqa: E501
 
 
-        :return: The scope of this UserBase.  # noqa: E501
-        :rtype: str
+        :return: The created_at of this UserBase.  # noqa: E501
+        :rtype: datetime
         """
-        return self._scope
+        return self._created_at
 
-    @scope.setter
-    def scope(self, scope):
-        """Sets the scope of this UserBase.
+    @created_at.setter
+    def created_at(self, created_at):
+        """Sets the created_at of this UserBase.
 
 
-        :param scope: The scope of this UserBase.  # noqa: E501
-        :type: str
+        :param created_at: The created_at of this UserBase.  # noqa: E501
+        :type: datetime
         """
-        if scope is None:
-            raise ValueError("Invalid value for `scope`, must not be `None`")  # noqa: E501
 
-        self._scope = scope
+        self._created_at = created_at
 
     @property
-    def uname(self):
-        """Gets the uname of this UserBase.  # noqa: E501
+    def updated_at(self):
+        """Gets the updated_at of this UserBase.  # noqa: E501
 
 
-        :return: The uname of this UserBase.  # noqa: E501
-        :rtype: str
+        :return: The updated_at of this UserBase.  # noqa: E501
+        :rtype: datetime
         """
-        return self._uname
+        return self._updated_at
 
-    @uname.setter
-    def uname(self, uname):
-        """Sets the uname of this UserBase.
+    @updated_at.setter
+    def updated_at(self, updated_at):
+        """Sets the updated_at of this UserBase.
 
 
-        :param uname: The uname of this UserBase.  # noqa: E501
-        :type: str
+        :param updated_at: The updated_at of this UserBase.  # noqa: E501
+        :type: datetime
         """
-        if uname is None:
-            raise ValueError("Invalid value for `uname`, must not be `None`")  # noqa: E501
 
-        self._uname = uname
+        self._updated_at = updated_at
 
     @property
-    def mail(self):
-        """Gets the mail of this UserBase.  # noqa: E501
+    def username(self):
+        """Gets the username of this UserBase.  # noqa: E501
 
 
-        :return: The mail of this UserBase.  # noqa: E501
+        :return: The username of this UserBase.  # noqa: E501
         :rtype: str
         """
-        return self._mail
+        return self._username
 
-    @mail.setter
-    def mail(self, mail):
-        """Sets the mail of this UserBase.
+    @username.setter
+    def username(self, username):
+        """Sets the username of this UserBase.
 
 
-        :param mail: The mail of this UserBase.  # noqa: E501
+        :param username: The username of this UserBase.  # noqa: E501
         :type: str
         """
-        if mail is None:
-            raise ValueError("Invalid value for `mail`, must not be `None`")  # noqa: E501
+        if username is None:
+            raise ValueError("Invalid value for `username`, must not be `None`")  # noqa: E501
 
-        self._mail = mail
+        self._username = username
 
     @property
-    def uname_lower(self):
-        """Gets the uname_lower of this UserBase.  # noqa: E501
+    def email(self):
+        """Gets the email of this UserBase.  # noqa: E501
 
 
-        :return: The uname_lower of this UserBase.  # noqa: E501
+        :return: The email of this UserBase.  # noqa: E501
         :rtype: str
         """
-        return self._uname_lower
+        return self._email
 
-    @uname_lower.setter
-    def uname_lower(self, uname_lower):
-        """Sets the uname_lower of this UserBase.
+    @email.setter
+    def email(self, email):
+        """Sets the email of this UserBase.
 
 
-        :param uname_lower: The uname_lower of this UserBase.  # noqa: E501
+        :param email: The email of this UserBase.  # noqa: E501
         :type: str
         """
-        if uname_lower is None:
-            raise ValueError("Invalid value for `uname_lower`, must not be `None`")  # noqa: E501
+        if email is None:
+            raise ValueError("Invalid value for `email`, must not be `None`")  # noqa: E501
 
-        self._uname_lower = uname_lower
-
-    @property
-    def mail_lower(self):
-        """Gets the mail_lower of this UserBase.  # noqa: E501
-
-
-        :return: The mail_lower of this UserBase.  # noqa: E501
-        :rtype: str
-        """
-        return self._mail_lower
-
-    @mail_lower.setter
-    def mail_lower(self, mail_lower):
-        """Sets the mail_lower of this UserBase.
-
-
-        :param mail_lower: The mail_lower of this UserBase.  # noqa: E501
-        :type: str
-        """
-        if mail_lower is None:
-            raise ValueError("Invalid value for `mail_lower`, must not be `None`")  # noqa: E501
-
-        self._mail_lower = mail_lower
+        self._email = email
 
     @property
     def gravatar(self):
@@ -230,8 +212,6 @@ class UserBase(object):
         :param gravatar: The gravatar of this UserBase.  # noqa: E501
         :type: str
         """
-        if gravatar is None:
-            raise ValueError("Invalid value for `gravatar`, must not be `None`")  # noqa: E501
 
         self._gravatar = gravatar
 
@@ -276,6 +256,48 @@ class UserBase(object):
         """
 
         self._real_name = real_name
+
+    @property
+    def role(self):
+        """Gets the role of this UserBase.  # noqa: E501
+
+
+        :return: The role of this UserBase.  # noqa: E501
+        :rtype: str
+        """
+        return self._role
+
+    @role.setter
+    def role(self, role):
+        """Sets the role of this UserBase.
+
+
+        :param role: The role of this UserBase.  # noqa: E501
+        :type: str
+        """
+
+        self._role = role
+
+    @property
+    def is_active(self):
+        """Gets the is_active of this UserBase.  # noqa: E501
+
+
+        :return: The is_active of this UserBase.  # noqa: E501
+        :rtype: bool
+        """
+        return self._is_active
+
+    @is_active.setter
+    def is_active(self, is_active):
+        """Sets the is_active of this UserBase.
+
+
+        :param is_active: The is_active of this UserBase.  # noqa: E501
+        :type: bool
+        """
+
+        self._is_active = is_active
 
     def to_dict(self):
         """Returns the model properties as a dict"""

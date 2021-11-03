@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: 3b82b34@2021-09-28 14:44:31  # noqa: E501
+    Git version: a5c2259@2021-11-03T09:25:38Z  # noqa: E501
 
     OpenAPI spec version: 0.1.0
     
@@ -66,16 +66,14 @@ class ProblemSetCreate(object):
             self.hidden = hidden
         if scoreboard_hidden is not None:
             self.scoreboard_hidden = scoreboard_hidden
-        if available_time is not None:
-            self.available_time = available_time
-        if due_time is not None:
-            self.due_time = due_time
+        self.available_time = available_time
+        self.due_time = due_time
 
     @property
     def url(self):
         """Gets the url of this ProblemSetCreate.  # noqa: E501
 
-        (unique in domain) url of the problem set  # noqa: E501
+        (unique) url of the domain  # noqa: E501
 
         :return: The url of this ProblemSetCreate.  # noqa: E501
         :rtype: str
@@ -86,7 +84,7 @@ class ProblemSetCreate(object):
     def url(self, url):
         """Sets the url of this ProblemSetCreate.
 
-        (unique in domain) url of the problem set  # noqa: E501
+        (unique) url of the domain  # noqa: E501
 
         :param url: The url of this ProblemSetCreate.  # noqa: E501
         :type: str
@@ -192,7 +190,6 @@ class ProblemSetCreate(object):
     def available_time(self):
         """Gets the available_time of this ProblemSetCreate.  # noqa: E501
 
-        the problem set is available from  # noqa: E501
 
         :return: The available_time of this ProblemSetCreate.  # noqa: E501
         :rtype: datetime
@@ -203,11 +200,12 @@ class ProblemSetCreate(object):
     def available_time(self, available_time):
         """Sets the available_time of this ProblemSetCreate.
 
-        the problem set is available from  # noqa: E501
 
         :param available_time: The available_time of this ProblemSetCreate.  # noqa: E501
         :type: datetime
         """
+        if available_time is None:
+            raise ValueError("Invalid value for `available_time`, must not be `None`")  # noqa: E501
 
         self._available_time = available_time
 
@@ -215,7 +213,6 @@ class ProblemSetCreate(object):
     def due_time(self):
         """Gets the due_time of this ProblemSetCreate.  # noqa: E501
 
-        the problem set is due at  # noqa: E501
 
         :return: The due_time of this ProblemSetCreate.  # noqa: E501
         :rtype: datetime
@@ -226,11 +223,12 @@ class ProblemSetCreate(object):
     def due_time(self, due_time):
         """Sets the due_time of this ProblemSetCreate.
 
-        the problem set is due at  # noqa: E501
 
         :param due_time: The due_time of this ProblemSetCreate.  # noqa: E501
         :type: datetime
         """
+        if due_time is None:
+            raise ValueError("Invalid value for `due_time`, must not be `None`")  # noqa: E501
 
         self._due_time = due_time
 

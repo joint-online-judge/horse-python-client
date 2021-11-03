@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: 3b82b34@2021-09-28 14:44:31  # noqa: E501
+    Git version: a5c2259@2021-11-03T09:25:38Z  # noqa: E501
 
     OpenAPI spec version: 0.1.0
     
@@ -28,10 +28,17 @@ class TestMiscellaneousApi(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def test_jwt_api_v1_jwt_get(self):
-        """Test case for jwt_api_v1_jwt_get
+    def test_jwt_decoded_api_v1_jwt_decoded_get(self):
+        """Test case for jwt_decoded_api_v1_jwt_decoded_get
 
-        Jwt  # noqa: E501
+        Jwt Decoded  # noqa: E501
+        """
+        pass
+
+    def test_set_root_user_api_v1_set_root_user_post(self):
+        """Test case for set_root_user_api_v1_set_root_user_post
+
+        Set Root User  # noqa: E501
         """
         pass
 

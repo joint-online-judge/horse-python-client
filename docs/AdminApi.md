@@ -210,7 +210,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **list_domain_roles_api_v1_admin_domain_roles_get**
-> ListDomainRolesResp list_domain_roles_api_v1_admin_domain_roles_get(offset=offset, limit=limit)
+> DomainRoleListResp list_domain_roles_api_v1_admin_domain_roles_get(offset=offset, limit=limit)
 
 List Domain Roles
 
@@ -245,7 +245,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ListDomainRolesResp**](ListDomainRolesResp.md)
+[**DomainRoleListResp**](DomainRoleListResp.md)
 
 ### Authorization
 
@@ -259,7 +259,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **list_domain_users_api_v1_admin_domain_users_get**
-> ListDomainUsersResp list_domain_users_api_v1_admin_domain_users_get(offset=offset, limit=limit)
+> DomainUserListResp list_domain_users_api_v1_admin_domain_users_get(offset=offset, limit=limit)
 
 List Domain Users
 
@@ -294,7 +294,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ListDomainUsersResp**](ListDomainUsersResp.md)
+[**DomainUserListResp**](DomainUserListResp.md)
 
 ### Authorization
 
@@ -308,7 +308,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **list_judgers_api_v1_admin_judgers_get**
-> ListUsersResp list_judgers_api_v1_admin_judgers_get(offset=offset, limit=limit)
+> UserListResp list_judgers_api_v1_admin_judgers_get(offset=offset, limit=limit)
 
 List Judgers
 
@@ -343,7 +343,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ListUsersResp**](ListUsersResp.md)
+[**UserListResp**](UserListResp.md)
 
 ### Authorization
 
@@ -357,7 +357,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **list_users_api_v1_admin_users_get**
-> ListUsersResp list_users_api_v1_admin_users_get(offset=offset, limit=limit)
+> UserBaseListResp list_users_api_v1_admin_users_get(offset=offset, limit=limit)
 
 List Users
 
@@ -392,7 +392,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ListUsersResp**](ListUsersResp.md)
+[**UserBaseListResp**](UserBaseListResp.md)
 
 ### Authorization
 

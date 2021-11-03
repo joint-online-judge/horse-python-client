@@ -42,7 +42,7 @@ from pprint import pprint
 # create an instance of the API class
 api_instance = joj.horse.client.DomainApi(joj.horse.client.ApiClient(configuration))
 body = joj.horse.client.DomainUserAdd() # DomainUserAdd | 
-domain = 'domain_example' # str | url or ObjectId of the domain
+domain = 'domain_example' # str | url or id of the domain
 
 try:
     # Add Domain User
@@ -57,7 +57,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**DomainUserAdd**](DomainUserAdd.md)|  | 
- **domain** | **str**| url or ObjectId of the domain | 
+ **domain** | **str**| url or id of the domain | 
 
 ### Return type
 
@@ -138,7 +138,7 @@ from pprint import pprint
 # create an instance of the API class
 api_instance = joj.horse.client.DomainApi(joj.horse.client.ApiClient(configuration))
 body = joj.horse.client.DomainInvitationCreate() # DomainInvitationCreate | 
-domain = 'domain_example' # str | url or ObjectId of the domain
+domain = 'domain_example' # str | url or id of the domain
 
 try:
     # Create Domain Invitation
@@ -153,7 +153,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**DomainInvitationCreate**](DomainInvitationCreate.md)|  | 
- **domain** | **str**| url or ObjectId of the domain | 
+ **domain** | **str**| url or id of the domain | 
 
 ### Return type
 
@@ -187,7 +187,7 @@ from pprint import pprint
 # create an instance of the API class
 api_instance = joj.horse.client.DomainApi(joj.horse.client.ApiClient(configuration))
 body = joj.horse.client.DomainRoleCreate() # DomainRoleCreate | 
-domain = 'domain_example' # str | url or ObjectId of the domain
+domain = 'domain_example' # str | url or id of the domain
 
 try:
     # Create Domain Role
@@ -202,7 +202,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**DomainRoleCreate**](DomainRoleCreate.md)|  | 
- **domain** | **str**| url or ObjectId of the domain | 
+ **domain** | **str**| url or id of the domain | 
 
 ### Return type
 
@@ -237,7 +237,7 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = joj.horse.client.DomainApi(joj.horse.client.ApiClient(configuration))
-domain = 'domain_example' # str | url or ObjectId of the domain
+domain = 'domain_example' # str | url or id of the domain
 
 try:
     # Delete Domain
@@ -251,7 +251,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **domain** | **str**| url or ObjectId of the domain | 
+ **domain** | **str**| url or id of the domain | 
 
 ### Return type
 
@@ -284,8 +284,8 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = joj.horse.client.DomainApi(joj.horse.client.ApiClient(configuration))
-domain = 'domain_example' # str | url or ObjectId of the domain
-invitation = 'invitation_example' # str | ObjectId of the domain invitation
+domain = 'domain_example' # str | url or id of the domain
+invitation = 'invitation_example' # str | url or id of the domain invitation
 
 try:
     # Delete Domain Invitation
@@ -299,8 +299,8 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **domain** | **str**| url or ObjectId of the domain | 
- **invitation** | **str**| ObjectId of the domain invitation | 
+ **domain** | **str**| url or id of the domain | 
+ **invitation** | **str**| url or id of the domain invitation | 
 
 ### Return type
 
@@ -333,7 +333,7 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = joj.horse.client.DomainApi(joj.horse.client.ApiClient(configuration))
-domain = 'domain_example' # str | url or ObjectId of the domain
+domain = 'domain_example' # str | url or id of the domain
 role = 'role_example' # str | name of the domain role
 
 try:
@@ -348,7 +348,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **domain** | **str**| url or ObjectId of the domain | 
+ **domain** | **str**| url or id of the domain | 
  **role** | **str**| name of the domain role | 
 
 ### Return type
@@ -382,7 +382,7 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = joj.horse.client.DomainApi(joj.horse.client.ApiClient(configuration))
-domain = 'domain_example' # str | url or ObjectId of the domain
+domain = 'domain_example' # str | url or id of the domain
 
 try:
     # Get Domain
@@ -396,7 +396,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **domain** | **str**| url or ObjectId of the domain | 
+ **domain** | **str**| url or id of the domain | 
 
 ### Return type
 
@@ -429,8 +429,8 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = joj.horse.client.DomainApi(joj.horse.client.ApiClient(configuration))
-domain = 'domain_example' # str | url or ObjectId of the domain
-user = 'user_example' # str | 'me' or ObjectId of the user
+domain = 'domain_example' # str | url or id of the domain
+user = 'user_example' # str | user id or 'me' or empty
 
 try:
     # Get Domain User
@@ -444,8 +444,8 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **domain** | **str**| url or ObjectId of the domain | 
- **user** | **str**| &#x27;me&#x27; or ObjectId of the user | 
+ **domain** | **str**| url or id of the domain | 
+ **user** | **str**| user id or &#x27;me&#x27; or empty | 
 
 ### Return type
 
@@ -478,8 +478,8 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = joj.horse.client.DomainApi(joj.horse.client.ApiClient(configuration))
-domain = 'domain_example' # str | url or ObjectId of the domain
-user = 'user_example' # str | 'me' or ObjectId of the user
+domain = 'domain_example' # str | url or id of the domain
+user = 'user_example' # str | user id or 'me' or empty
 
 try:
     # Get Domain User Permission
@@ -493,8 +493,8 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **domain** | **str**| url or ObjectId of the domain | 
- **user** | **str**| &#x27;me&#x27; or ObjectId of the user | 
+ **domain** | **str**| url or id of the domain | 
+ **user** | **str**| user id or &#x27;me&#x27; or empty | 
 
 ### Return type
 
@@ -527,7 +527,7 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = joj.horse.client.DomainApi(joj.horse.client.ApiClient(configuration))
-domain = 'domain_example' # str | url or ObjectId of the domain
+domain = 'domain_example' # str | url or id of the domain
 invitation_code = 'invitation_code_example' # str | 
 
 try:
@@ -542,7 +542,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **domain** | **str**| url or ObjectId of the domain | 
+ **domain** | **str**| url or id of the domain | 
  **invitation_code** | **str**|  | 
 
 ### Return type
@@ -576,7 +576,7 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = joj.horse.client.DomainApi(joj.horse.client.ApiClient(configuration))
-domain = 'domain_example' # str | url or ObjectId of the domain
+domain = 'domain_example' # str | url or id of the domain
 
 try:
     # List Domain Roles
@@ -590,7 +590,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **domain** | **str**| url or ObjectId of the domain | 
+ **domain** | **str**| url or id of the domain | 
 
 ### Return type
 
@@ -623,7 +623,7 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = joj.horse.client.DomainApi(joj.horse.client.ApiClient(configuration))
-domain = 'domain_example' # str | url or ObjectId of the domain
+domain = 'domain_example' # str | url or id of the domain
 
 try:
     # List Domain Users
@@ -637,7 +637,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **domain** | **str**| url or ObjectId of the domain | 
+ **domain** | **str**| url or id of the domain | 
 
 ### Return type
 
@@ -725,8 +725,8 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = joj.horse.client.DomainApi(joj.horse.client.ApiClient(configuration))
-domain = 'domain_example' # str | url or ObjectId of the domain
-user = 'user_example' # str | 'me' or ObjectId of the user
+domain = 'domain_example' # str | url or id of the domain
+user = 'user_example' # str | user id or 'me' or empty
 
 try:
     # Remove Domain User
@@ -740,8 +740,8 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **domain** | **str**| url or ObjectId of the domain | 
- **user** | **str**| &#x27;me&#x27; or ObjectId of the user | 
+ **domain** | **str**| url or id of the domain | 
+ **user** | **str**| user id or &#x27;me&#x27; or empty | 
 
 ### Return type
 
@@ -775,7 +775,7 @@ from pprint import pprint
 # create an instance of the API class
 api_instance = joj.horse.client.DomainApi(joj.horse.client.ApiClient(configuration))
 body = joj.horse.client.DomainTransfer() # DomainTransfer | 
-domain = 'domain_example' # str | url or ObjectId of the domain
+domain = 'domain_example' # str | url or id of the domain
 
 try:
     # Transfer Domain
@@ -790,7 +790,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**DomainTransfer**](DomainTransfer.md)|  | 
- **domain** | **str**| url or ObjectId of the domain | 
+ **domain** | **str**| url or id of the domain | 
 
 ### Return type
 
@@ -824,7 +824,7 @@ from pprint import pprint
 # create an instance of the API class
 api_instance = joj.horse.client.DomainApi(joj.horse.client.ApiClient(configuration))
 body = joj.horse.client.DomainEdit() # DomainEdit | 
-domain = 'domain_example' # str | url or ObjectId of the domain
+domain = 'domain_example' # str | url or id of the domain
 
 try:
     # Update Domain
@@ -839,7 +839,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**DomainEdit**](DomainEdit.md)|  | 
- **domain** | **str**| url or ObjectId of the domain | 
+ **domain** | **str**| url or id of the domain | 
 
 ### Return type
 
@@ -873,8 +873,8 @@ from pprint import pprint
 # create an instance of the API class
 api_instance = joj.horse.client.DomainApi(joj.horse.client.ApiClient(configuration))
 body = joj.horse.client.DomainInvitationEdit() # DomainInvitationEdit | 
-domain = 'domain_example' # str | url or ObjectId of the domain
-invitation = 'invitation_example' # str | ObjectId of the domain invitation
+domain = 'domain_example' # str | url or id of the domain
+invitation = 'invitation_example' # str | url or id of the domain invitation
 
 try:
     # Update Domain Invitation
@@ -889,8 +889,8 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**DomainInvitationEdit**](DomainInvitationEdit.md)|  | 
- **domain** | **str**| url or ObjectId of the domain | 
- **invitation** | **str**| ObjectId of the domain invitation | 
+ **domain** | **str**| url or id of the domain | 
+ **invitation** | **str**| url or id of the domain invitation | 
 
 ### Return type
 
@@ -924,7 +924,7 @@ from pprint import pprint
 # create an instance of the API class
 api_instance = joj.horse.client.DomainApi(joj.horse.client.ApiClient(configuration))
 body = joj.horse.client.DomainRoleEdit() # DomainRoleEdit | 
-domain = 'domain_example' # str | url or ObjectId of the domain
+domain = 'domain_example' # str | url or id of the domain
 role = 'role_example' # str | name of the domain role
 
 try:
@@ -940,7 +940,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**DomainRoleEdit**](DomainRoleEdit.md)|  | 
- **domain** | **str**| url or ObjectId of the domain | 
+ **domain** | **str**| url or id of the domain | 
  **role** | **str**| name of the domain role | 
 
 ### Return type
@@ -959,7 +959,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_domain_user_api_v1_domains_domain_users_user_patch**
-> DomainUserResp update_domain_user_api_v1_domains_domain_users_user_patch(domain, user, body=body)
+> DomainUserResp update_domain_user_api_v1_domains_domain_users_user_patch(body, domain, user)
 
 Update Domain User
 
@@ -974,13 +974,13 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = joj.horse.client.DomainApi(joj.horse.client.ApiClient(configuration))
-domain = 'domain_example' # str | url or ObjectId of the domain
-user = 'user_example' # str | 'me' or ObjectId of the user
-body = 'body_example' # str |  (optional)
+body = joj.horse.client.DomainUserUpdate() # DomainUserUpdate | 
+domain = 'domain_example' # str | url or id of the domain
+user = 'user_example' # str | user id or 'me' or empty
 
 try:
     # Update Domain User
-    api_response = api_instance.update_domain_user_api_v1_domains_domain_users_user_patch(domain, user, body=body)
+    api_response = api_instance.update_domain_user_api_v1_domains_domain_users_user_patch(body, domain, user)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling DomainApi->update_domain_user_api_v1_domains_domain_users_user_patch: %s\n" % e)
@@ -990,9 +990,9 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **domain** | **str**| url or ObjectId of the domain | 
- **user** | **str**| &#x27;me&#x27; or ObjectId of the user | 
- **body** | [**str**](str.md)|  | [optional] 
+ **body** | [**DomainUserUpdate**](DomainUserUpdate.md)|  | 
+ **domain** | **str**| url or id of the domain | 
+ **user** | **str**| user id or &#x27;me&#x27; or empty | 
 
 ### Return type
 

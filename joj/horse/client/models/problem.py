@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: 3b82b34@2021-09-28 14:44:31  # noqa: E501
+    Git version: a5c2259@2021-11-03T09:25:38Z  # noqa: E501
 
     OpenAPI spec version: 0.1.0
     
@@ -28,13 +28,13 @@ class Problem(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'id': 'str',
-        'created_at': 'datetime',
-        'updated_at': 'datetime',
         'url': 'str',
         'title': 'str',
         'content': 'str',
         'hidden': 'bool',
+        'id': 'str',
+        'created_at': 'datetime',
+        'updated_at': 'datetime',
         'num_submit': 'int',
         'num_accept': 'int',
         'data_version': 'int',
@@ -45,13 +45,13 @@ class Problem(object):
     }
 
     attribute_map = {
-        'id': 'id',
-        'created_at': 'created_at',
-        'updated_at': 'updated_at',
         'url': 'url',
         'title': 'title',
         'content': 'content',
         'hidden': 'hidden',
+        'id': 'id',
+        'created_at': 'created_at',
+        'updated_at': 'updated_at',
         'num_submit': 'num_submit',
         'num_accept': 'num_accept',
         'data_version': 'data_version',
@@ -61,15 +61,15 @@ class Problem(object):
         'problem_group_id': 'problem_group_id'
     }
 
-    def __init__(self, id=None, created_at=None, updated_at=None, url=None, title=None, content='', hidden=False, num_submit=0, num_accept=0, data_version=2, languages='[]', domain_id=None, owner_id=None, problem_group_id=None):  # noqa: E501
+    def __init__(self, url=None, title=None, content='', hidden=False, id=None, created_at=None, updated_at=None, num_submit=0, num_accept=0, data_version=2, languages='[]', domain_id=None, owner_id=None, problem_group_id=None):  # noqa: E501
         """Problem - a model defined in Swagger"""  # noqa: E501
-        self._id = None
-        self._created_at = None
-        self._updated_at = None
         self._url = None
         self._title = None
         self._content = None
         self._hidden = None
+        self._id = None
+        self._created_at = None
+        self._updated_at = None
         self._num_submit = None
         self._num_accept = None
         self._data_version = None
@@ -78,18 +78,18 @@ class Problem(object):
         self._owner_id = None
         self._problem_group_id = None
         self.discriminator = None
-        if id is not None:
-            self.id = id
-        if created_at is not None:
-            self.created_at = created_at
-        if updated_at is not None:
-            self.updated_at = updated_at
         self.url = url
         self.title = title
         if content is not None:
             self.content = content
         if hidden is not None:
             self.hidden = hidden
+        if id is not None:
+            self.id = id
+        if created_at is not None:
+            self.created_at = created_at
+        if updated_at is not None:
+            self.updated_at = updated_at
         if num_submit is not None:
             self.num_submit = num_submit
         if num_accept is not None:
@@ -101,6 +101,100 @@ class Problem(object):
         self.domain_id = domain_id
         self.owner_id = owner_id
         self.problem_group_id = problem_group_id
+
+    @property
+    def url(self):
+        """Gets the url of this Problem.  # noqa: E501
+
+
+        :return: The url of this Problem.  # noqa: E501
+        :rtype: str
+        """
+        return self._url
+
+    @url.setter
+    def url(self, url):
+        """Sets the url of this Problem.
+
+
+        :param url: The url of this Problem.  # noqa: E501
+        :type: str
+        """
+        if url is None:
+            raise ValueError("Invalid value for `url`, must not be `None`")  # noqa: E501
+
+        self._url = url
+
+    @property
+    def title(self):
+        """Gets the title of this Problem.  # noqa: E501
+
+        title of the problem  # noqa: E501
+
+        :return: The title of this Problem.  # noqa: E501
+        :rtype: str
+        """
+        return self._title
+
+    @title.setter
+    def title(self, title):
+        """Sets the title of this Problem.
+
+        title of the problem  # noqa: E501
+
+        :param title: The title of this Problem.  # noqa: E501
+        :type: str
+        """
+        if title is None:
+            raise ValueError("Invalid value for `title`, must not be `None`")  # noqa: E501
+
+        self._title = title
+
+    @property
+    def content(self):
+        """Gets the content of this Problem.  # noqa: E501
+
+        content of the problem  # noqa: E501
+
+        :return: The content of this Problem.  # noqa: E501
+        :rtype: str
+        """
+        return self._content
+
+    @content.setter
+    def content(self, content):
+        """Sets the content of this Problem.
+
+        content of the problem  # noqa: E501
+
+        :param content: The content of this Problem.  # noqa: E501
+        :type: str
+        """
+
+        self._content = content
+
+    @property
+    def hidden(self):
+        """Gets the hidden of this Problem.  # noqa: E501
+
+        is the problem hidden  # noqa: E501
+
+        :return: The hidden of this Problem.  # noqa: E501
+        :rtype: bool
+        """
+        return self._hidden
+
+    @hidden.setter
+    def hidden(self, hidden):
+        """Sets the hidden of this Problem.
+
+        is the problem hidden  # noqa: E501
+
+        :param hidden: The hidden of this Problem.  # noqa: E501
+        :type: bool
+        """
+
+        self._hidden = hidden
 
     @property
     def id(self):
@@ -164,94 +258,6 @@ class Problem(object):
         """
 
         self._updated_at = updated_at
-
-    @property
-    def url(self):
-        """Gets the url of this Problem.  # noqa: E501
-
-
-        :return: The url of this Problem.  # noqa: E501
-        :rtype: str
-        """
-        return self._url
-
-    @url.setter
-    def url(self, url):
-        """Sets the url of this Problem.
-
-
-        :param url: The url of this Problem.  # noqa: E501
-        :type: str
-        """
-        if url is None:
-            raise ValueError("Invalid value for `url`, must not be `None`")  # noqa: E501
-
-        self._url = url
-
-    @property
-    def title(self):
-        """Gets the title of this Problem.  # noqa: E501
-
-
-        :return: The title of this Problem.  # noqa: E501
-        :rtype: str
-        """
-        return self._title
-
-    @title.setter
-    def title(self, title):
-        """Sets the title of this Problem.
-
-
-        :param title: The title of this Problem.  # noqa: E501
-        :type: str
-        """
-        if title is None:
-            raise ValueError("Invalid value for `title`, must not be `None`")  # noqa: E501
-
-        self._title = title
-
-    @property
-    def content(self):
-        """Gets the content of this Problem.  # noqa: E501
-
-
-        :return: The content of this Problem.  # noqa: E501
-        :rtype: str
-        """
-        return self._content
-
-    @content.setter
-    def content(self, content):
-        """Sets the content of this Problem.
-
-
-        :param content: The content of this Problem.  # noqa: E501
-        :type: str
-        """
-
-        self._content = content
-
-    @property
-    def hidden(self):
-        """Gets the hidden of this Problem.  # noqa: E501
-
-
-        :return: The hidden of this Problem.  # noqa: E501
-        :rtype: bool
-        """
-        return self._hidden
-
-    @hidden.setter
-    def hidden(self, hidden):
-        """Sets the hidden of this Problem.
-
-
-        :param hidden: The hidden of this Problem.  # noqa: E501
-        :type: bool
-        """
-
-        self._hidden = hidden
 
     @property
     def num_submit(self):

@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: 3b82b34@2021-09-28 14:44:31  # noqa: E501
+    Git version: a5c2259@2021-11-03T09:25:38Z  # noqa: E501
 
     OpenAPI spec version: 0.1.0
     
@@ -60,7 +60,7 @@ class ProblemCreate(object):
     def url(self):
         """Gets the url of this ProblemCreate.  # noqa: E501
 
-        (unique in domain) url of the problem  # noqa: E501
+        (unique) url of the domain  # noqa: E501
 
         :return: The url of this ProblemCreate.  # noqa: E501
         :rtype: str
@@ -71,7 +71,7 @@ class ProblemCreate(object):
     def url(self, url):
         """Sets the url of this ProblemCreate.
 
-        (unique in domain) url of the problem  # noqa: E501
+        (unique) url of the domain  # noqa: E501
 
         :param url: The url of this ProblemCreate.  # noqa: E501
         :type: str

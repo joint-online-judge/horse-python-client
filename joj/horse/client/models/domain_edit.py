@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: 3b82b34@2021-09-28 14:44:31  # noqa: E501
+    Git version: a5c2259@2021-11-03T09:25:38Z  # noqa: E501
 
     OpenAPI spec version: 0.1.0
     
@@ -31,22 +31,25 @@ class DomainEdit(object):
         'url': 'str',
         'name': 'str',
         'gravatar': 'str',
-        'bulletin': 'str'
+        'bulletin': 'str',
+        'hidden': 'bool'
     }
 
     attribute_map = {
         'url': 'url',
         'name': 'name',
         'gravatar': 'gravatar',
-        'bulletin': 'bulletin'
+        'bulletin': 'bulletin',
+        'hidden': 'hidden'
     }
 
-    def __init__(self, url=None, name=None, gravatar=None, bulletin=None):  # noqa: E501
+    def __init__(self, url=None, name=None, gravatar=None, bulletin=None, hidden=None):  # noqa: E501
         """DomainEdit - a model defined in Swagger"""  # noqa: E501
         self._url = None
         self._name = None
         self._gravatar = None
         self._bulletin = None
+        self._hidden = None
         self.discriminator = None
         if url is not None:
             self.url = url
@@ -56,6 +59,8 @@ class DomainEdit(object):
             self.gravatar = gravatar
         if bulletin is not None:
             self.bulletin = bulletin
+        if hidden is not None:
+            self.hidden = hidden
 
     @property
     def url(self):
@@ -140,6 +145,27 @@ class DomainEdit(object):
         """
 
         self._bulletin = bulletin
+
+    @property
+    def hidden(self):
+        """Gets the hidden of this DomainEdit.  # noqa: E501
+
+
+        :return: The hidden of this DomainEdit.  # noqa: E501
+        :rtype: bool
+        """
+        return self._hidden
+
+    @hidden.setter
+    def hidden(self, hidden):
+        """Sets the hidden of this DomainEdit.
+
+
+        :param hidden: The hidden of this DomainEdit.  # noqa: E501
+        :type: bool
+        """
+
+        self._hidden = hidden
 
     def to_dict(self):
         """Returns the model properties as a dict"""

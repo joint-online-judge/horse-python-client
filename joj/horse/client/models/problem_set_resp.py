@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: 3b82b34@2021-09-28 14:44:31  # noqa: E501
+    Git version: a5c2259@2021-11-03T09:25:38Z  # noqa: E501
 
     OpenAPI spec version: 0.1.0
     
@@ -30,7 +30,7 @@ class ProblemSetResp(object):
     swagger_types = {
         'error_code': 'ErrorCode',
         'error_msg': 'str',
-        'data': 'ProblemSet'
+        'data': 'JojHorseModelsProblemSetProblemSet'
     }
 
     attribute_map = {
@@ -46,7 +46,8 @@ class ProblemSetResp(object):
         self._data = None
         self.discriminator = None
         self.error_code = error_code
-        self.error_msg = error_msg
+        if error_msg is not None:
+            self.error_msg = error_msg
         if data is not None:
             self.data = data
 
@@ -91,8 +92,6 @@ class ProblemSetResp(object):
         :param error_msg: The error_msg of this ProblemSetResp.  # noqa: E501
         :type: str
         """
-        if error_msg is None:
-            raise ValueError("Invalid value for `error_msg`, must not be `None`")  # noqa: E501
 
         self._error_msg = error_msg
 
@@ -102,7 +101,7 @@ class ProblemSetResp(object):
 
 
         :return: The data of this ProblemSetResp.  # noqa: E501
-        :rtype: ProblemSet
+        :rtype: JojHorseModelsProblemSetProblemSet
         """
         return self._data
 
@@ -112,7 +111,7 @@ class ProblemSetResp(object):
 
 
         :param data: The data of this ProblemSetResp.  # noqa: E501
-        :type: ProblemSet
+        :type: JojHorseModelsProblemSetProblemSet
         """
 
         self._data = data

@@ -14,7 +14,7 @@ Method | HTTP request | Description
 [**update_problem_config_api_v1_domains_domain_problems_problem_config_patch**](ProblemApi.md#update_problem_config_api_v1_domains_domain_problems_problem_config_patch) | **PATCH** /api/v1/domains/{domain}/problems/{problem}/config | Update Problem Config
 
 # **clone_problem_api_v1_domains_domain_problems_clone_post**
-> ListProblemsResp clone_problem_api_v1_domains_domain_problems_clone_post(body, domain)
+> ProblemListResp clone_problem_api_v1_domains_domain_problems_clone_post(body, domain)
 
 Clone Problem
 
@@ -30,7 +30,7 @@ from pprint import pprint
 # create an instance of the API class
 api_instance = joj.horse.client.ProblemApi(joj.horse.client.ApiClient(configuration))
 body = joj.horse.client.ProblemClone() # ProblemClone | 
-domain = 'domain_example' # str | url or ObjectId of the domain
+domain = 'domain_example' # str | url or id of the domain
 
 try:
     # Clone Problem
@@ -45,11 +45,11 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**ProblemClone**](ProblemClone.md)|  | 
- **domain** | **str**| url or ObjectId of the domain | 
+ **domain** | **str**| url or id of the domain | 
 
 ### Return type
 
-[**ListProblemsResp**](ListProblemsResp.md)
+[**ProblemListResp**](ProblemListResp.md)
 
 ### Authorization
 
@@ -79,7 +79,7 @@ from pprint import pprint
 # create an instance of the API class
 api_instance = joj.horse.client.ProblemApi(joj.horse.client.ApiClient(configuration))
 body = joj.horse.client.ProblemCreate() # ProblemCreate | 
-domain = 'domain_example' # str | url or ObjectId of the domain
+domain = 'domain_example' # str | url or id of the domain
 
 try:
     # Create Problem
@@ -94,7 +94,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**ProblemCreate**](ProblemCreate.md)|  | 
- **domain** | **str**| url or ObjectId of the domain | 
+ **domain** | **str**| url or id of the domain | 
 
 ### Return type
 
@@ -127,8 +127,8 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = joj.horse.client.ProblemApi(joj.horse.client.ApiClient(configuration))
-domain = 'domain_example' # str | url or ObjectId of the domain
-problem = 'problem_example' # str | 
+domain = 'domain_example' # str | url or id of the domain
+problem = 'problem_example' # str | url or id of the problem
 
 try:
     # Delete Problem
@@ -142,8 +142,8 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **domain** | **str**| url or ObjectId of the domain | 
- **problem** | **str**|  | 
+ **domain** | **str**| url or id of the domain | 
+ **problem** | **str**| url or id of the problem | 
 
 ### Return type
 
@@ -176,8 +176,8 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = joj.horse.client.ProblemApi(joj.horse.client.ApiClient(configuration))
-domain = 'domain_example' # str | url or ObjectId of the domain
-problem = 'problem_example' # str | 
+domain = 'domain_example' # str | url or id of the domain
+problem = 'problem_example' # str | url or id of the problem
 
 try:
     # Get Problem
@@ -191,8 +191,8 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **domain** | **str**| url or ObjectId of the domain | 
- **problem** | **str**|  | 
+ **domain** | **str**| url or id of the domain | 
+ **problem** | **str**| url or id of the problem | 
 
 ### Return type
 
@@ -225,7 +225,7 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = joj.horse.client.ProblemApi(joj.horse.client.ApiClient(configuration))
-domain = 'domain_example' # str | url or ObjectId of the domain
+domain = 'domain_example' # str | url or id of the domain
 problem_set = 'problem_set_example' # str |  (optional)
 problem_group = 'problem_group_example' # str |  (optional)
 ordering = '' # str | Comma seperated list of ordering the results. You may also specify reverse orderings by prefixing the field name with '-'. (optional)
@@ -244,7 +244,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **domain** | **str**| url or ObjectId of the domain | 
+ **domain** | **str**| url or id of the domain | 
  **problem_set** | **str**|  | [optional] 
  **problem_group** | **str**|  | [optional] 
  **ordering** | **str**| Comma seperated list of ordering the results. You may also specify reverse orderings by prefixing the field name with &#x27;-&#x27;. | [optional] 
@@ -284,8 +284,8 @@ from pprint import pprint
 api_instance = joj.horse.client.ProblemApi(joj.horse.client.ApiClient(configuration))
 code_type = joj.horse.client.RecordCodeType() # RecordCodeType | 
 file = 'file_example' # str | 
-domain = 'domain_example' # str | url or ObjectId of the domain
-problem = 'problem_example' # str | 
+domain = 'domain_example' # str | url or id of the domain
+problem = 'problem_example' # str | url or id of the problem
 
 try:
     # Submit Solution To Problem
@@ -301,8 +301,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **code_type** | [**RecordCodeType**](.md)|  | 
  **file** | **str**|  | 
- **domain** | **str**| url or ObjectId of the domain | 
- **problem** | **str**|  | 
+ **domain** | **str**| url or id of the domain | 
+ **problem** | **str**| url or id of the problem | 
 
 ### Return type
 
@@ -336,8 +336,8 @@ from pprint import pprint
 # create an instance of the API class
 api_instance = joj.horse.client.ProblemApi(joj.horse.client.ApiClient(configuration))
 body = joj.horse.client.ProblemEdit() # ProblemEdit | 
-domain = 'domain_example' # str | url or ObjectId of the domain
-problem = 'problem_example' # str | 
+domain = 'domain_example' # str | url or id of the domain
+problem = 'problem_example' # str | url or id of the problem
 
 try:
     # Update Problem
@@ -352,8 +352,8 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**ProblemEdit**](ProblemEdit.md)|  | 
- **domain** | **str**| url or ObjectId of the domain | 
- **problem** | **str**|  | 
+ **domain** | **str**| url or id of the domain | 
+ **problem** | **str**| url or id of the problem | 
 
 ### Return type
 
@@ -387,8 +387,8 @@ from pprint import pprint
 # create an instance of the API class
 api_instance = joj.horse.client.ProblemApi(joj.horse.client.ApiClient(configuration))
 config = 'config_example' # str | 
-domain = 'domain_example' # str | url or ObjectId of the domain
-problem = 'problem_example' # str | 
+domain = 'domain_example' # str | url or id of the domain
+problem = 'problem_example' # str | url or id of the problem
 
 try:
     # Update Problem Config
@@ -403,8 +403,8 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **config** | **str**|  | 
- **domain** | **str**| url or ObjectId of the domain | 
- **problem** | **str**|  | 
+ **domain** | **str**| url or id of the domain | 
+ **problem** | **str**| url or id of the problem | 
 
 ### Return type
 

@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: 3b82b34@2021-09-28 14:44:31  # noqa: E501
+    Git version: a5c2259@2021-11-03T09:25:38Z  # noqa: E501
 
     OpenAPI spec version: 0.1.0
     
@@ -45,7 +45,7 @@ class DomainTransfer(object):
     def target_user(self):
         """Gets the target_user of this DomainTransfer.  # noqa: E501
 
-        'me' or ObjectId of the user  # noqa: E501
+        'me' or id of the user  # noqa: E501
 
         :return: The target_user of this DomainTransfer.  # noqa: E501
         :rtype: str
@@ -56,7 +56,7 @@ class DomainTransfer(object):
     def target_user(self, target_user):
         """Sets the target_user of this DomainTransfer.
 
-        'me' or ObjectId of the user  # noqa: E501
+        'me' or id of the user  # noqa: E501
 
         :param target_user: The target_user of this DomainTransfer.  # noqa: E501
         :type: str

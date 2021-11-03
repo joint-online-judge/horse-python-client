@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: 3b82b34@2021-09-28 14:44:31  # noqa: E501
+    Git version: a5c2259@2021-11-03T09:25:38Z  # noqa: E501
 
     OpenAPI spec version: 0.1.0
     
@@ -28,29 +28,56 @@ class DomainInvitationCreate(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'url': 'str',
         'code': 'str',
         'expire_at': 'datetime',
         'role': 'str'
     }
 
     attribute_map = {
+        'url': 'url',
         'code': 'code',
         'expire_at': 'expire_at',
         'role': 'role'
     }
 
-    def __init__(self, code='', expire_at=None, role='user'):  # noqa: E501
+    def __init__(self, url='', code='', expire_at=None, role='user'):  # noqa: E501
         """DomainInvitationCreate - a model defined in Swagger"""  # noqa: E501
+        self._url = None
         self._code = None
         self._expire_at = None
         self._role = None
         self.discriminator = None
+        if url is not None:
+            self.url = url
         if code is not None:
             self.code = code
-        if expire_at is not None:
-            self.expire_at = expire_at
+        self.expire_at = expire_at
         if role is not None:
             self.role = role
+
+    @property
+    def url(self):
+        """Gets the url of this DomainInvitationCreate.  # noqa: E501
+
+        (unique) url of the domain  # noqa: E501
+
+        :return: The url of this DomainInvitationCreate.  # noqa: E501
+        :rtype: str
+        """
+        return self._url
+
+    @url.setter
+    def url(self, url):
+        """Sets the url of this DomainInvitationCreate.
+
+        (unique) url of the domain  # noqa: E501
+
+        :param url: The url of this DomainInvitationCreate.  # noqa: E501
+        :type: str
+        """
+
+        self._url = url
 
     @property
     def code(self):
@@ -79,7 +106,6 @@ class DomainInvitationCreate(object):
     def expire_at(self):
         """Gets the expire_at of this DomainInvitationCreate.  # noqa: E501
 
-        expire time of invitation  # noqa: E501
 
         :return: The expire_at of this DomainInvitationCreate.  # noqa: E501
         :rtype: datetime
@@ -90,11 +116,12 @@ class DomainInvitationCreate(object):
     def expire_at(self, expire_at):
         """Sets the expire_at of this DomainInvitationCreate.
 
-        expire time of invitation  # noqa: E501
 
         :param expire_at: The expire_at of this DomainInvitationCreate.  # noqa: E501
         :type: datetime
         """
+        if expire_at is None:
+            raise ValueError("Invalid value for `expire_at`, must not be `None`")  # noqa: E501
 
         self._expire_at = expire_at
 

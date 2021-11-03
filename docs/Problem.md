@@ -3,13 +3,13 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**url** | **str** |  | 
+**title** | **str** | title of the problem | 
+**content** | **str** | content of the problem | [optional] [default to '']
+**hidden** | **bool** | is the problem hidden | [optional] [default to False]
 **id** | **str** |  | [optional] 
 **created_at** | **datetime** |  | [optional] 
 **updated_at** | **datetime** |  | [optional] 
-**url** | **str** |  | 
-**title** | **str** |  | 
-**content** | **str** |  | [optional] [default to '']
-**hidden** | **bool** |  | [optional] [default to False]
 **num_submit** | **int** |  | [optional] [default to 0]
 **num_accept** | **int** |  | [optional] [default to 0]
 **data_version** | **int** |  | [optional] [default to 2]

@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: 3b82b34@2021-09-28 14:44:31  # noqa: E501
+    Git version: a5c2259@2021-11-03T09:25:38Z  # noqa: E501
 
     OpenAPI spec version: 0.1.0
     
@@ -42,8 +42,8 @@ class ProblemApi(object):
 
         :param async_req bool
         :param ProblemClone body: (required)
-        :param str domain: url or ObjectId of the domain (required)
-        :return: ListProblemsResp
+        :param str domain: url or id of the domain (required)
+        :return: ProblemListResp
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -64,8 +64,8 @@ class ProblemApi(object):
 
         :param async_req bool
         :param ProblemClone body: (required)
-        :param str domain: url or ObjectId of the domain (required)
-        :return: ListProblemsResp
+        :param str domain: url or id of the domain (required)
+        :return: ProblemListResp
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -129,7 +129,7 @@ class ProblemApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='ListProblemsResp',  # noqa: E501
+            response_type='ProblemListResp',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -147,7 +147,7 @@ class ProblemApi(object):
 
         :param async_req bool
         :param ProblemCreate body: (required)
-        :param str domain: url or ObjectId of the domain (required)
+        :param str domain: url or id of the domain (required)
         :return: ProblemResp
                  If the method is called asynchronously,
                  returns the request thread.
@@ -169,7 +169,7 @@ class ProblemApi(object):
 
         :param async_req bool
         :param ProblemCreate body: (required)
-        :param str domain: url or ObjectId of the domain (required)
+        :param str domain: url or id of the domain (required)
         :return: ProblemResp
                  If the method is called asynchronously,
                  returns the request thread.
@@ -251,8 +251,8 @@ class ProblemApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param str domain: url or ObjectId of the domain (required)
-        :param str problem: (required)
+        :param str domain: url or id of the domain (required)
+        :param str problem: url or id of the problem (required)
         :return: EmptyResp
                  If the method is called asynchronously,
                  returns the request thread.
@@ -273,8 +273,8 @@ class ProblemApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param str domain: url or ObjectId of the domain (required)
-        :param str problem: (required)
+        :param str domain: url or id of the domain (required)
+        :param str problem: url or id of the problem (required)
         :return: EmptyResp
                  If the method is called asynchronously,
                  returns the request thread.
@@ -352,8 +352,8 @@ class ProblemApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param str domain: url or ObjectId of the domain (required)
-        :param str problem: (required)
+        :param str domain: url or id of the domain (required)
+        :param str problem: url or id of the problem (required)
         :return: ProblemResp
                  If the method is called asynchronously,
                  returns the request thread.
@@ -374,8 +374,8 @@ class ProblemApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param str domain: url or ObjectId of the domain (required)
-        :param str problem: (required)
+        :param str domain: url or id of the domain (required)
+        :param str problem: url or id of the problem (required)
         :return: ProblemResp
                  If the method is called asynchronously,
                  returns the request thread.
@@ -453,7 +453,7 @@ class ProblemApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param str domain: url or ObjectId of the domain (required)
+        :param str domain: url or id of the domain (required)
         :param str problem_set:
         :param str problem_group:
         :param str ordering: Comma seperated list of ordering the results. You may also specify reverse orderings by prefixing the field name with '-'.
@@ -479,7 +479,7 @@ class ProblemApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param str domain: url or ObjectId of the domain (required)
+        :param str domain: url or id of the domain (required)
         :param str problem_set:
         :param str problem_group:
         :param str ordering: Comma seperated list of ordering the results. You may also specify reverse orderings by prefixing the field name with '-'.
@@ -568,8 +568,8 @@ class ProblemApi(object):
         :param async_req bool
         :param RecordCodeType code_type: (required)
         :param str file: (required)
-        :param str domain: url or ObjectId of the domain (required)
-        :param str problem: (required)
+        :param str domain: url or id of the domain (required)
+        :param str problem: url or id of the problem (required)
         :return: RecordResp
                  If the method is called asynchronously,
                  returns the request thread.
@@ -592,8 +592,8 @@ class ProblemApi(object):
         :param async_req bool
         :param RecordCodeType code_type: (required)
         :param str file: (required)
-        :param str domain: url or ObjectId of the domain (required)
-        :param str problem: (required)
+        :param str domain: url or id of the domain (required)
+        :param str problem: url or id of the problem (required)
         :return: RecordResp
                  If the method is called asynchronously,
                  returns the request thread.
@@ -688,8 +688,8 @@ class ProblemApi(object):
 
         :param async_req bool
         :param ProblemEdit body: (required)
-        :param str domain: url or ObjectId of the domain (required)
-        :param str problem: (required)
+        :param str domain: url or id of the domain (required)
+        :param str problem: url or id of the problem (required)
         :return: ProblemResp
                  If the method is called asynchronously,
                  returns the request thread.
@@ -711,8 +711,8 @@ class ProblemApi(object):
 
         :param async_req bool
         :param ProblemEdit body: (required)
-        :param str domain: url or ObjectId of the domain (required)
-        :param str problem: (required)
+        :param str domain: url or id of the domain (required)
+        :param str problem: url or id of the problem (required)
         :return: ProblemResp
                  If the method is called asynchronously,
                  returns the request thread.
@@ -801,8 +801,8 @@ class ProblemApi(object):
 
         :param async_req bool
         :param str config: (required)
-        :param str domain: url or ObjectId of the domain (required)
-        :param str problem: (required)
+        :param str domain: url or id of the domain (required)
+        :param str problem: url or id of the problem (required)
         :return: ProblemResp
                  If the method is called asynchronously,
                  returns the request thread.
@@ -824,8 +824,8 @@ class ProblemApi(object):
 
         :param async_req bool
         :param str config: (required)
-        :param str domain: url or ObjectId of the domain (required)
-        :param str problem: (required)
+        :param str domain: url or id of the domain (required)
+        :param str problem: url or id of the problem (required)
         :return: ProblemResp
                  If the method is called asynchronously,
                  returns the request thread.

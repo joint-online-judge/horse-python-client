@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: 3b82b34@2021-09-28 14:44:31  # noqa: E501
+    Git version: a5c2259@2021-11-03T09:25:38Z  # noqa: E501
 
     OpenAPI spec version: 0.1.0
     
@@ -30,31 +30,36 @@ class DomainCreate(object):
     swagger_types = {
         'url': 'str',
         'name': 'str',
+        'gravatar': 'str',
         'bulletin': 'str',
-        'gravatar': 'str'
+        'hidden': 'bool'
     }
 
     attribute_map = {
         'url': 'url',
         'name': 'name',
+        'gravatar': 'gravatar',
         'bulletin': 'bulletin',
-        'gravatar': 'gravatar'
+        'hidden': 'hidden'
     }
 
-    def __init__(self, url='', name=None, bulletin='', gravatar=''):  # noqa: E501
+    def __init__(self, url='', name=None, gravatar='', bulletin='', hidden=True):  # noqa: E501
         """DomainCreate - a model defined in Swagger"""  # noqa: E501
         self._url = None
         self._name = None
-        self._bulletin = None
         self._gravatar = None
+        self._bulletin = None
+        self._hidden = None
         self.discriminator = None
         if url is not None:
             self.url = url
         self.name = name
-        if bulletin is not None:
-            self.bulletin = bulletin
         if gravatar is not None:
             self.gravatar = gravatar
+        if bulletin is not None:
+            self.bulletin = bulletin
+        if hidden is not None:
+            self.hidden = hidden
 
     @property
     def url(self):
@@ -105,6 +110,29 @@ class DomainCreate(object):
         self._name = name
 
     @property
+    def gravatar(self):
+        """Gets the gravatar of this DomainCreate.  # noqa: E501
+
+        gravatar url of the domain  # noqa: E501
+
+        :return: The gravatar of this DomainCreate.  # noqa: E501
+        :rtype: str
+        """
+        return self._gravatar
+
+    @gravatar.setter
+    def gravatar(self, gravatar):
+        """Sets the gravatar of this DomainCreate.
+
+        gravatar url of the domain  # noqa: E501
+
+        :param gravatar: The gravatar of this DomainCreate.  # noqa: E501
+        :type: str
+        """
+
+        self._gravatar = gravatar
+
+    @property
     def bulletin(self):
         """Gets the bulletin of this DomainCreate.  # noqa: E501
 
@@ -128,27 +156,27 @@ class DomainCreate(object):
         self._bulletin = bulletin
 
     @property
-    def gravatar(self):
-        """Gets the gravatar of this DomainCreate.  # noqa: E501
+    def hidden(self):
+        """Gets the hidden of this DomainCreate.  # noqa: E501
 
-        gravatar url of the domain  # noqa: E501
+        is the domain hidden  # noqa: E501
 
-        :return: The gravatar of this DomainCreate.  # noqa: E501
-        :rtype: str
+        :return: The hidden of this DomainCreate.  # noqa: E501
+        :rtype: bool
         """
-        return self._gravatar
+        return self._hidden
 
-    @gravatar.setter
-    def gravatar(self, gravatar):
-        """Sets the gravatar of this DomainCreate.
+    @hidden.setter
+    def hidden(self, hidden):
+        """Sets the hidden of this DomainCreate.
 
-        gravatar url of the domain  # noqa: E501
+        is the domain hidden  # noqa: E501
 
-        :param gravatar: The gravatar of this DomainCreate.  # noqa: E501
-        :type: str
+        :param hidden: The hidden of this DomainCreate.  # noqa: E501
+        :type: bool
         """
 
-        self._gravatar = gravatar
+        self._hidden = hidden
 
     def to_dict(self):
         """Returns the model properties as a dict"""

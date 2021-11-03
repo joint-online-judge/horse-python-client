@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: 3b82b34@2021-09-28 14:44:31  # noqa: E501
+    Git version: a5c2259@2021-11-03T09:25:38Z  # noqa: E501
 
     OpenAPI spec version: 0.1.0
     
@@ -28,55 +28,173 @@ class Domain(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'id': 'str',
-        'created_at': 'datetime',
-        'updated_at': 'datetime',
         'url': 'str',
         'name': 'str',
         'gravatar': 'str',
         'bulletin': 'str',
-        'owner_id': 'str',
-        'owner': 'UserBase'
+        'hidden': 'bool',
+        'id': 'str',
+        'created_at': 'datetime',
+        'updated_at': 'datetime',
+        'owner_id': 'str'
     }
 
     attribute_map = {
-        'id': 'id',
-        'created_at': 'created_at',
-        'updated_at': 'updated_at',
         'url': 'url',
         'name': 'name',
         'gravatar': 'gravatar',
         'bulletin': 'bulletin',
-        'owner_id': 'owner_id',
-        'owner': 'owner'
+        'hidden': 'hidden',
+        'id': 'id',
+        'created_at': 'created_at',
+        'updated_at': 'updated_at',
+        'owner_id': 'owner_id'
     }
 
-    def __init__(self, id=None, created_at=None, updated_at=None, url=None, name=None, gravatar='', bulletin='', owner_id=None, owner=None):  # noqa: E501
+    def __init__(self, url=None, name=None, gravatar='', bulletin='', hidden=True, id=None, created_at=None, updated_at=None, owner_id=None):  # noqa: E501
         """Domain - a model defined in Swagger"""  # noqa: E501
-        self._id = None
-        self._created_at = None
-        self._updated_at = None
         self._url = None
         self._name = None
         self._gravatar = None
         self._bulletin = None
+        self._hidden = None
+        self._id = None
+        self._created_at = None
+        self._updated_at = None
         self._owner_id = None
-        self._owner = None
         self.discriminator = None
-        if id is not None:
-            self.id = id
-        if created_at is not None:
-            self.created_at = created_at
-        if updated_at is not None:
-            self.updated_at = updated_at
         self.url = url
         self.name = name
         if gravatar is not None:
             self.gravatar = gravatar
         if bulletin is not None:
             self.bulletin = bulletin
+        if hidden is not None:
+            self.hidden = hidden
+        if id is not None:
+            self.id = id
+        if created_at is not None:
+            self.created_at = created_at
+        if updated_at is not None:
+            self.updated_at = updated_at
         self.owner_id = owner_id
-        self.owner = owner
+
+    @property
+    def url(self):
+        """Gets the url of this Domain.  # noqa: E501
+
+
+        :return: The url of this Domain.  # noqa: E501
+        :rtype: str
+        """
+        return self._url
+
+    @url.setter
+    def url(self, url):
+        """Sets the url of this Domain.
+
+
+        :param url: The url of this Domain.  # noqa: E501
+        :type: str
+        """
+        if url is None:
+            raise ValueError("Invalid value for `url`, must not be `None`")  # noqa: E501
+
+        self._url = url
+
+    @property
+    def name(self):
+        """Gets the name of this Domain.  # noqa: E501
+
+        displayed name of the domain  # noqa: E501
+
+        :return: The name of this Domain.  # noqa: E501
+        :rtype: str
+        """
+        return self._name
+
+    @name.setter
+    def name(self, name):
+        """Sets the name of this Domain.
+
+        displayed name of the domain  # noqa: E501
+
+        :param name: The name of this Domain.  # noqa: E501
+        :type: str
+        """
+        if name is None:
+            raise ValueError("Invalid value for `name`, must not be `None`")  # noqa: E501
+
+        self._name = name
+
+    @property
+    def gravatar(self):
+        """Gets the gravatar of this Domain.  # noqa: E501
+
+        gravatar url of the domain  # noqa: E501
+
+        :return: The gravatar of this Domain.  # noqa: E501
+        :rtype: str
+        """
+        return self._gravatar
+
+    @gravatar.setter
+    def gravatar(self, gravatar):
+        """Sets the gravatar of this Domain.
+
+        gravatar url of the domain  # noqa: E501
+
+        :param gravatar: The gravatar of this Domain.  # noqa: E501
+        :type: str
+        """
+
+        self._gravatar = gravatar
+
+    @property
+    def bulletin(self):
+        """Gets the bulletin of this Domain.  # noqa: E501
+
+        bulletin of the domain  # noqa: E501
+
+        :return: The bulletin of this Domain.  # noqa: E501
+        :rtype: str
+        """
+        return self._bulletin
+
+    @bulletin.setter
+    def bulletin(self, bulletin):
+        """Sets the bulletin of this Domain.
+
+        bulletin of the domain  # noqa: E501
+
+        :param bulletin: The bulletin of this Domain.  # noqa: E501
+        :type: str
+        """
+
+        self._bulletin = bulletin
+
+    @property
+    def hidden(self):
+        """Gets the hidden of this Domain.  # noqa: E501
+
+        is the domain hidden  # noqa: E501
+
+        :return: The hidden of this Domain.  # noqa: E501
+        :rtype: bool
+        """
+        return self._hidden
+
+    @hidden.setter
+    def hidden(self, hidden):
+        """Sets the hidden of this Domain.
+
+        is the domain hidden  # noqa: E501
+
+        :param hidden: The hidden of this Domain.  # noqa: E501
+        :type: bool
+        """
+
+        self._hidden = hidden
 
     @property
     def id(self):
@@ -142,94 +260,6 @@ class Domain(object):
         self._updated_at = updated_at
 
     @property
-    def url(self):
-        """Gets the url of this Domain.  # noqa: E501
-
-
-        :return: The url of this Domain.  # noqa: E501
-        :rtype: str
-        """
-        return self._url
-
-    @url.setter
-    def url(self, url):
-        """Sets the url of this Domain.
-
-
-        :param url: The url of this Domain.  # noqa: E501
-        :type: str
-        """
-        if url is None:
-            raise ValueError("Invalid value for `url`, must not be `None`")  # noqa: E501
-
-        self._url = url
-
-    @property
-    def name(self):
-        """Gets the name of this Domain.  # noqa: E501
-
-
-        :return: The name of this Domain.  # noqa: E501
-        :rtype: str
-        """
-        return self._name
-
-    @name.setter
-    def name(self, name):
-        """Sets the name of this Domain.
-
-
-        :param name: The name of this Domain.  # noqa: E501
-        :type: str
-        """
-        if name is None:
-            raise ValueError("Invalid value for `name`, must not be `None`")  # noqa: E501
-
-        self._name = name
-
-    @property
-    def gravatar(self):
-        """Gets the gravatar of this Domain.  # noqa: E501
-
-
-        :return: The gravatar of this Domain.  # noqa: E501
-        :rtype: str
-        """
-        return self._gravatar
-
-    @gravatar.setter
-    def gravatar(self, gravatar):
-        """Sets the gravatar of this Domain.
-
-
-        :param gravatar: The gravatar of this Domain.  # noqa: E501
-        :type: str
-        """
-
-        self._gravatar = gravatar
-
-    @property
-    def bulletin(self):
-        """Gets the bulletin of this Domain.  # noqa: E501
-
-
-        :return: The bulletin of this Domain.  # noqa: E501
-        :rtype: str
-        """
-        return self._bulletin
-
-    @bulletin.setter
-    def bulletin(self, bulletin):
-        """Sets the bulletin of this Domain.
-
-
-        :param bulletin: The bulletin of this Domain.  # noqa: E501
-        :type: str
-        """
-
-        self._bulletin = bulletin
-
-    @property
     def owner_id(self):
         """Gets the owner_id of this Domain.  # noqa: E501
 
@@ -251,29 +281,6 @@ class Domain(object):
             raise ValueError("Invalid value for `owner_id`, must not be `None`")  # noqa: E501
 
         self._owner_id = owner_id
-
-    @property
-    def owner(self):
-        """Gets the owner of this Domain.  # noqa: E501
-
-
-        :return: The owner of this Domain.  # noqa: E501
-        :rtype: UserBase
-        """
-        return self._owner
-
-    @owner.setter
-    def owner(self, owner):
-        """Sets the owner of this Domain.
-
-
-        :param owner: The owner of this Domain.  # noqa: E501
-        :type: UserBase
-        """
-        if owner is None:
-            raise ValueError("Invalid value for `owner`, must not be `None`")  # noqa: E501
-
-        self._owner = owner
 
     def to_dict(self):
         """Returns the model properties as a dict"""

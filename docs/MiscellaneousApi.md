@@ -4,14 +4,15 @@ All URIs are relative to */*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**jwt_api_v1_jwt_get**](MiscellaneousApi.md#jwt_api_v1_jwt_get) | **GET** /api/v1/jwt | Jwt
+[**jwt_decoded_api_v1_jwt_decoded_get**](MiscellaneousApi.md#jwt_decoded_api_v1_jwt_decoded_get) | **GET** /api/v1/jwt_decoded | Jwt Decoded
+[**set_root_user_api_v1_set_root_user_post**](MiscellaneousApi.md#set_root_user_api_v1_set_root_user_post) | **POST** /api/v1/set_root_user | Set Root User
 [**test_sentry_api_v1_test_sentry_get**](MiscellaneousApi.md#test_sentry_api_v1_test_sentry_get) | **GET** /api/v1/test/sentry | Test Sentry
 [**version_api_v1_version_get**](MiscellaneousApi.md#version_api_v1_version_get) | **GET** /api/v1/version | Version
 
-# **jwt_api_v1_jwt_get**
-> JWT jwt_api_v1_jwt_get()
+# **jwt_decoded_api_v1_jwt_decoded_get**
+> JWTAccessTokenResp jwt_decoded_api_v1_jwt_decoded_get()
 
-Jwt
+Jwt Decoded
 
 ### Example
 ```python
@@ -26,11 +27,11 @@ from pprint import pprint
 api_instance = joj.horse.client.MiscellaneousApi(joj.horse.client.ApiClient(configuration))
 
 try:
-    # Jwt
-    api_response = api_instance.jwt_api_v1_jwt_get()
+    # Jwt Decoded
+    api_response = api_instance.jwt_decoded_api_v1_jwt_decoded_get()
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling MiscellaneousApi->jwt_api_v1_jwt_get: %s\n" % e)
+    print("Exception when calling MiscellaneousApi->jwt_decoded_api_v1_jwt_decoded_get: %s\n" % e)
 ```
 
 ### Parameters
@@ -38,7 +39,50 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**JWT**](JWT.md)
+[**JWTAccessTokenResp**](JWTAccessTokenResp.md)
+
+### Authorization
+
+[HTTPBearer](../README.md#HTTPBearer)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **set_root_user_api_v1_set_root_user_post**
+> UserBaseResp set_root_user_api_v1_set_root_user_post()
+
+Set Root User
+
+### Example
+```python
+from __future__ import print_function
+import time
+import joj.horse.client
+from joj.horse.client.rest import ApiException
+from pprint import pprint
+
+
+# create an instance of the API class
+api_instance = joj.horse.client.MiscellaneousApi(joj.horse.client.ApiClient(configuration))
+
+try:
+    # Set Root User
+    api_response = api_instance.set_root_user_api_v1_set_root_user_post()
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling MiscellaneousApi->set_root_user_api_v1_set_root_user_post: %s\n" % e)
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**UserBaseResp**](UserBaseResp.md)
 
 ### Authorization
 

@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: 3b82b34@2021-09-28 14:44:31  # noqa: E501
+    Git version: a5c2259@2021-11-03T09:25:38Z  # noqa: E501
 
     OpenAPI spec version: 0.1.0
     
@@ -28,6 +28,7 @@ class ProblemSetEdit(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'url': 'str',
         'title': 'str',
         'content': 'str',
         'hidden': 'bool',
@@ -37,6 +38,7 @@ class ProblemSetEdit(object):
     }
 
     attribute_map = {
+        'url': 'url',
         'title': 'title',
         'content': 'content',
         'hidden': 'hidden',
@@ -45,8 +47,9 @@ class ProblemSetEdit(object):
         'due_time': 'due_time'
     }
 
-    def __init__(self, title=None, content=None, hidden=None, scoreboard_hidden=None, available_time=None, due_time=None):  # noqa: E501
+    def __init__(self, url=None, title=None, content=None, hidden=None, scoreboard_hidden=None, available_time=None, due_time=None):  # noqa: E501
         """ProblemSetEdit - a model defined in Swagger"""  # noqa: E501
+        self._url = None
         self._title = None
         self._content = None
         self._hidden = None
@@ -54,6 +57,8 @@ class ProblemSetEdit(object):
         self._available_time = None
         self._due_time = None
         self.discriminator = None
+        if url is not None:
+            self.url = url
         if title is not None:
             self.title = title
         if content is not None:
@@ -66,6 +71,27 @@ class ProblemSetEdit(object):
             self.available_time = available_time
         if due_time is not None:
             self.due_time = due_time
+
+    @property
+    def url(self):
+        """Gets the url of this ProblemSetEdit.  # noqa: E501
+
+
+        :return: The url of this ProblemSetEdit.  # noqa: E501
+        :rtype: str
+        """
+        return self._url
+
+    @url.setter
+    def url(self, url):
+        """Sets the url of this ProblemSetEdit.
+
+
+        :param url: The url of this ProblemSetEdit.  # noqa: E501
+        :type: str
+        """
+
+        self._url = url
 
     @property
     def title(self):

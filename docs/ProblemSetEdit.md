@@ -3,6 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**url** | **str** |  | [optional] 
 **title** | **str** |  | [optional] 
 **content** | **str** |  | [optional] 
 **hidden** | **bool** |  | [optional] 

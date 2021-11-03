@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: 3b82b34@2021-09-28 14:44:31  # noqa: E501
+    Git version: a5c2259@2021-11-03T09:25:38Z  # noqa: E501
 
     OpenAPI spec version: 0.1.0
     
@@ -28,7 +28,7 @@ class ListProblemSets(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'results': 'list[ProblemSet]'
+        'results': 'list[JojHorseSchemasProblemSetProblemSet]'
     }
 
     attribute_map = {
@@ -47,7 +47,7 @@ class ListProblemSets(object):
 
 
         :return: The results of this ListProblemSets.  # noqa: E501
-        :rtype: list[ProblemSet]
+        :rtype: list[JojHorseSchemasProblemSetProblemSet]
         """
         return self._results
 
@@ -57,7 +57,7 @@ class ListProblemSets(object):
 
 
         :param results: The results of this ListProblemSets.  # noqa: E501
-        :type: list[ProblemSet]
+        :type: list[JojHorseSchemasProblemSetProblemSet]
         """
         if results is None:
             raise ValueError("Invalid value for `results`, must not be `None`")  # noqa: E501
