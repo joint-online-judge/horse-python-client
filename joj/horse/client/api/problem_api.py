@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: a5c2259@2021-11-03T09:25:38Z  # noqa: E501
+    Git version: bd11f07@2021-11-03T11:20:31Z  # noqa: E501
 
     OpenAPI spec version: 0.1.0
     
@@ -456,7 +456,7 @@ class ProblemApi(object):
         :param str domain: url or id of the domain (required)
         :param str problem_set:
         :param str problem_group:
-        :param str ordering: Comma seperated list of ordering the results. You may also specify reverse orderings by prefixing the field name with '-'.
+        :param str ordering: Comma seperated list of ordering the results. You may specify reverse orderings by prefixing the field name with '-'.  Available fields: Any
         :param int offset:
         :param int limit:
         :return: ProblemListResp
@@ -482,7 +482,7 @@ class ProblemApi(object):
         :param str domain: url or id of the domain (required)
         :param str problem_set:
         :param str problem_group:
-        :param str ordering: Comma seperated list of ordering the results. You may also specify reverse orderings by prefixing the field name with '-'.
+        :param str ordering: Comma seperated list of ordering the results. You may specify reverse orderings by prefixing the field name with '-'.  Available fields: Any
         :param int offset:
         :param int limit:
         :return: ProblemListResp

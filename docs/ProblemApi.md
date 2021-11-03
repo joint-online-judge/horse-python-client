@@ -228,7 +228,7 @@ api_instance = joj.horse.client.ProblemApi(joj.horse.client.ApiClient(configurat
 domain = 'domain_example' # str | url or id of the domain
 problem_set = 'problem_set_example' # str |  (optional)
 problem_group = 'problem_group_example' # str |  (optional)
-ordering = '' # str | Comma seperated list of ordering the results. You may also specify reverse orderings by prefixing the field name with '-'. (optional)
+ordering = '' # str | Comma seperated list of ordering the results. You may specify reverse orderings by prefixing the field name with '-'.  Available fields: Any (optional)
 offset = 0 # int |  (optional) (default to 0)
 limit = 100 # int |  (optional) (default to 100)
 
@@ -247,7 +247,7 @@ Name | Type | Description  | Notes
  **domain** | **str**| url or id of the domain | 
  **problem_set** | **str**|  | [optional] 
  **problem_group** | **str**|  | [optional] 
- **ordering** | **str**| Comma seperated list of ordering the results. You may also specify reverse orderings by prefixing the field name with &#x27;-&#x27;. | [optional] 
+ **ordering** | **str**| Comma seperated list of ordering the results. You may specify reverse orderings by prefixing the field name with &#x27;-&#x27;.  Available fields: Any | [optional] 
  **offset** | **int**|  | [optional] [default to 0]
  **limit** | **int**|  | [optional] [default to 100]
 

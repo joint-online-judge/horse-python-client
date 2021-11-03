@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: a5c2259@2021-11-03T09:25:38Z  # noqa: E501
+    Git version: bd11f07@2021-11-03T11:20:31Z  # noqa: E501
 
     OpenAPI spec version: 0.1.0
     
@@ -1334,7 +1334,7 @@ class DomainApi(object):
 
         :param async_req bool
         :param list[str] role:
-        :param str ordering: Comma seperated list of ordering the results. You may also specify reverse orderings by prefixing the field name with '-'.
+        :param str ordering: Comma seperated list of ordering the results. You may specify reverse orderings by prefixing the field name with '-'.  Available fields: name
         :param int offset:
         :param int limit:
         :return: DomainListResp
@@ -1359,7 +1359,7 @@ class DomainApi(object):
 
         :param async_req bool
         :param list[str] role:
-        :param str ordering: Comma seperated list of ordering the results. You may also specify reverse orderings by prefixing the field name with '-'.
+        :param str ordering: Comma seperated list of ordering the results. You may specify reverse orderings by prefixing the field name with '-'.  Available fields: name
         :param int offset:
         :param int limit:
         :return: DomainListResp
