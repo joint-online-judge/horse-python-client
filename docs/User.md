@@ -13,9 +13,9 @@ Name | Type | Description | Notes
 **real_name** | **str** |  | [optional] [default to '']
 **role** | **str** |  | [optional] [default to 'user']
 **is_active** | **bool** |  | [optional] [default to False]
-**register_ip** | **str** |  | [optional] [default to '0.0.0.0']
+**register_ip** | **str** |  | [optional] [default to '127.0.0.1']
 **login_at** | **datetime** |  | 
-**login_ip** | **str** |  | [optional] [default to '0.0.0.0']
+**login_ip** | **str** |  | [optional] [default to '127.0.0.1']
 **hashed_password** | **str** |  | [optional] [default to '']
 **username_lower** | **str** |  | 
 **email_lower** | **str** |  | 

@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: bd11f07@2021-11-03T11:20:31Z  # noqa: E501
+    Git version: 3474762@2021-11-04T11:53:49Z  # noqa: E501
 
     OpenAPI spec version: 0.1.0
     
@@ -65,7 +65,7 @@ class User(object):
         'email_lower': 'email_lower'
     }
 
-    def __init__(self, id=None, created_at=None, updated_at=None, username=None, email=None, gravatar='', student_id='', real_name='', role='user', is_active=False, register_ip='0.0.0.0', login_at=None, login_ip='0.0.0.0', hashed_password='', username_lower=None, email_lower=None):  # noqa: E501
+    def __init__(self, id=None, created_at=None, updated_at=None, username=None, email=None, gravatar='', student_id='', real_name='', role='user', is_active=False, register_ip='127.0.0.1', login_at=None, login_ip='127.0.0.1', hashed_password='', username_lower=None, email_lower=None):  # noqa: E501
         """User - a model defined in Swagger"""  # noqa: E501
         self._id = None
         self._created_at = None
