@@ -203,7 +203,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **list_records_api_v1_records_get**
-> ListRecordsResp list_records_api_v1_records_get(domain=domain, problem_set=problem_set, problem=problem, offset=offset, limit=limit, uid=uid)
+> RecordListResp list_records_api_v1_records_get(domain=domain, problem_set=problem_set, problem=problem, offset=offset, limit=limit, uid=uid)
 
 List Records
 
@@ -246,7 +246,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ListRecordsResp**](ListRecordsResp.md)
+[**RecordListResp**](RecordListResp.md)
 
 ### Authorization
 

@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: 3474762@2021-11-04T11:53:49Z  # noqa: E501
+    Git version: fcd1dab@2021-11-05T13:40:36Z  # noqa: E501
 
     OpenAPI spec version: 0.1.0
     
@@ -42,15 +42,15 @@ class UserBase(object):
 
     attribute_map = {
         'id': 'id',
-        'created_at': 'created_at',
-        'updated_at': 'updated_at',
+        'created_at': 'createdAt',
+        'updated_at': 'updatedAt',
         'username': 'username',
         'email': 'email',
         'gravatar': 'gravatar',
-        'student_id': 'student_id',
-        'real_name': 'real_name',
+        'student_id': 'studentId',
+        'real_name': 'realName',
         'role': 'role',
-        'is_active': 'is_active'
+        'is_active': 'isActive'
     }
 
     def __init__(self, id=None, created_at=None, updated_at=None, username=None, email=None, gravatar='', student_id='', real_name='', role='user', is_active=False):  # noqa: E501

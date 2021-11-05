@@ -208,7 +208,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **list_problem_sets_api_v1_domains_domain_problem_sets_get**
-> ListProblemSetsResp list_problem_sets_api_v1_domains_domain_problem_sets_get(domain, offset=offset, limit=limit)
+> ProblemSetListResp list_problem_sets_api_v1_domains_domain_problem_sets_get(domain, offset=offset, limit=limit)
 
 List Problem Sets
 
@@ -245,7 +245,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ListProblemSetsResp**](ListProblemSetsResp.md)
+[**ProblemSetListResp**](ProblemSetListResp.md)
 
 ### Authorization
 

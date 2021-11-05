@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: 3474762@2021-11-04T11:53:49Z  # noqa: E501
+    Git version: fcd1dab@2021-11-05T13:40:36Z  # noqa: E501
 
     OpenAPI spec version: 0.1.0
     
@@ -46,9 +46,9 @@ class Domain(object):
         'bulletin': 'bulletin',
         'hidden': 'hidden',
         'id': 'id',
-        'created_at': 'created_at',
-        'updated_at': 'updated_at',
-        'owner_id': 'owner_id'
+        'created_at': 'createdAt',
+        'updated_at': 'updatedAt',
+        'owner_id': 'ownerId'
     }
 
     def __init__(self, url=None, name=None, gravatar='', bulletin='', hidden=True, id=None, created_at=None, updated_at=None, owner_id=None):  # noqa: E501

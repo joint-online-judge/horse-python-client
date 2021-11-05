@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: 3474762@2021-11-04T11:53:49Z  # noqa: E501
+    Git version: fcd1dab@2021-11-05T13:40:36Z  # noqa: E501
 
     OpenAPI spec version: 0.1.0
     
@@ -34,9 +34,9 @@ class AuthTokens(object):
     }
 
     attribute_map = {
-        'access_token': 'access_token',
-        'refresh_token': 'refresh_token',
-        'token_type': 'token_type'
+        'access_token': 'accessToken',
+        'refresh_token': 'refreshToken',
+        'token_type': 'tokenType'
     }
 
     def __init__(self, access_token=None, refresh_token=None, token_type=None):  # noqa: E501

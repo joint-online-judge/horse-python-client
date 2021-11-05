@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: 3474762@2021-11-04T11:53:49Z  # noqa: E501
+    Git version: fcd1dab@2021-11-05T13:40:36Z  # noqa: E501
 
     OpenAPI spec version: 0.1.0
     
@@ -50,15 +50,15 @@ class Problem(object):
         'content': 'content',
         'hidden': 'hidden',
         'id': 'id',
-        'created_at': 'created_at',
-        'updated_at': 'updated_at',
-        'num_submit': 'num_submit',
-        'num_accept': 'num_accept',
-        'data_version': 'data_version',
+        'created_at': 'createdAt',
+        'updated_at': 'updatedAt',
+        'num_submit': 'numSubmit',
+        'num_accept': 'numAccept',
+        'data_version': 'dataVersion',
         'languages': 'languages',
-        'domain_id': 'domain_id',
-        'owner_id': 'owner_id',
-        'problem_group_id': 'problem_group_id'
+        'domain_id': 'domainId',
+        'owner_id': 'ownerId',
+        'problem_group_id': 'problemGroupId'
     }
 
     def __init__(self, url=None, title=None, content='', hidden=False, id=None, created_at=None, updated_at=None, num_submit=0, num_accept=0, data_version=2, languages='[]', domain_id=None, owner_id=None, problem_group_id=None):  # noqa: E501

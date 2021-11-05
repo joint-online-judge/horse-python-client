@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: 3474762@2021-11-04T11:53:49Z  # noqa: E501
+    Git version: fcd1dab@2021-11-05T13:40:36Z  # noqa: E501
 
     OpenAPI spec version: 0.1.0
     
@@ -38,9 +38,9 @@ class RecordResult(object):
     attribute_map = {
         'status': 'status',
         'score': 'score',
-        'time_ms': 'time_ms',
-        'memory_kb': 'memory_kb',
-        'judge_at': 'judge_at'
+        'time_ms': 'timeMs',
+        'memory_kb': 'memoryKb',
+        'judge_at': 'judgeAt'
     }
 
     def __init__(self, status=None, score=None, time_ms=None, memory_kb=None, judge_at=None):  # noqa: E501

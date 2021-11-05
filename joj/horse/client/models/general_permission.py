@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: 3474762@2021-11-04T11:53:49Z  # noqa: E501
+    Git version: fcd1dab@2021-11-05T13:40:36Z  # noqa: E501
 
     OpenAPI spec version: 0.1.0
     
@@ -37,10 +37,10 @@ class GeneralPermission(object):
 
     attribute_map = {
         'view': 'view',
-        'edit_permission': 'edit_permission',
-        'view_mod_badge': 'view_mod_badge',
+        'edit_permission': 'editPermission',
+        'view_mod_badge': 'viewModBadge',
         'edit': 'edit',
-        'unlimited_quota': 'unlimited_quota'
+        'unlimited_quota': 'unlimitedQuota'
     }
 
     def __init__(self, view=True, edit_permission=False, view_mod_badge=True, edit=False, unlimited_quota=False):  # noqa: E501

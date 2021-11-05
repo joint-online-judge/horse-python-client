@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: 3474762@2021-11-04T11:53:49Z  # noqa: E501
+    Git version: fcd1dab@2021-11-05T13:40:36Z  # noqa: E501
 
     OpenAPI spec version: 0.1.0
     
@@ -100,9 +100,9 @@ class AuthApi(object):
         if 'cookie' in params:
             query_params.append(('cookie', params['cookie']))  # noqa: E501
         if 'response_type' in params:
-            query_params.append(('response_type', params['response_type']))  # noqa: E501
+            query_params.append(('responseType', params['response_type']))  # noqa: E501
         if 'redirect_url' in params:
-            query_params.append(('redirect_url', params['redirect_url']))  # noqa: E501
+            query_params.append(('redirectUrl', params['redirect_url']))  # noqa: E501
 
         header_params = {}
 
@@ -237,16 +237,16 @@ class AuthApi(object):
         if 'cookie' in params:
             query_params.append(('cookie', params['cookie']))  # noqa: E501
         if 'response_type' in params:
-            query_params.append(('response_type', params['response_type']))  # noqa: E501
+            query_params.append(('responseType', params['response_type']))  # noqa: E501
         if 'redirect_url' in params:
-            query_params.append(('redirect_url', params['redirect_url']))  # noqa: E501
+            query_params.append(('redirectUrl', params['redirect_url']))  # noqa: E501
 
         header_params = {}
 
         form_params = []
         local_var_files = {}
         if 'grant_type' in params:
-            form_params.append(('grant_type', params['grant_type']))  # noqa: E501
+            form_params.append(('grantType', params['grant_type']))  # noqa: E501
         if 'username' in params:
             form_params.append(('username', params['username']))  # noqa: E501
         if 'password' in params:
@@ -254,9 +254,9 @@ class AuthApi(object):
         if 'scope' in params:
             form_params.append(('scope', params['scope']))  # noqa: E501
         if 'client_id' in params:
-            form_params.append(('client_id', params['client_id']))  # noqa: E501
+            form_params.append(('clientId', params['client_id']))  # noqa: E501
         if 'client_secret' in params:
-            form_params.append(('client_secret', params['client_secret']))  # noqa: E501
+            form_params.append(('clientSecret', params['client_secret']))  # noqa: E501
 
         body_params = None
         # HTTP header `Accept`
@@ -354,9 +354,9 @@ class AuthApi(object):
         if 'cookie' in params:
             query_params.append(('cookie', params['cookie']))  # noqa: E501
         if 'response_type' in params:
-            query_params.append(('response_type', params['response_type']))  # noqa: E501
+            query_params.append(('responseType', params['response_type']))  # noqa: E501
         if 'redirect_url' in params:
-            query_params.append(('redirect_url', params['redirect_url']))  # noqa: E501
+            query_params.append(('redirectUrl', params['redirect_url']))  # noqa: E501
 
         header_params = {}
 
@@ -455,9 +455,9 @@ class AuthApi(object):
         if 'cookie' in params:
             query_params.append(('cookie', params['cookie']))  # noqa: E501
         if 'response_type' in params:
-            query_params.append(('response_type', params['response_type']))  # noqa: E501
+            query_params.append(('responseType', params['response_type']))  # noqa: E501
         if 'redirect_url' in params:
-            query_params.append(('redirect_url', params['redirect_url']))  # noqa: E501
+            query_params.append(('redirectUrl', params['redirect_url']))  # noqa: E501
 
         header_params = {}
 
@@ -562,9 +562,9 @@ class AuthApi(object):
         if 'cookie' in params:
             query_params.append(('cookie', params['cookie']))  # noqa: E501
         if 'response_type' in params:
-            query_params.append(('response_type', params['response_type']))  # noqa: E501
+            query_params.append(('responseType', params['response_type']))  # noqa: E501
         if 'redirect_url' in params:
-            query_params.append(('redirect_url', params['redirect_url']))  # noqa: E501
+            query_params.append(('redirectUrl', params['redirect_url']))  # noqa: E501
 
         header_params = {}
 

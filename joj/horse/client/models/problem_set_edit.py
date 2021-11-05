@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: 3474762@2021-11-04T11:53:49Z  # noqa: E501
+    Git version: fcd1dab@2021-11-05T13:40:36Z  # noqa: E501
 
     OpenAPI spec version: 0.1.0
     
@@ -42,9 +42,9 @@ class ProblemSetEdit(object):
         'title': 'title',
         'content': 'content',
         'hidden': 'hidden',
-        'scoreboard_hidden': 'scoreboard_hidden',
-        'available_time': 'available_time',
-        'due_time': 'due_time'
+        'scoreboard_hidden': 'scoreboardHidden',
+        'available_time': 'availableTime',
+        'due_time': 'dueTime'
     }
 
     def __init__(self, url=None, title=None, content=None, hidden=None, scoreboard_hidden=None, available_time=None, due_time=None):  # noqa: E501

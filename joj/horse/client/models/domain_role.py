@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: 3474762@2021-11-04T11:53:49Z  # noqa: E501
+    Git version: fcd1dab@2021-11-05T13:40:36Z  # noqa: E501
 
     OpenAPI spec version: 0.1.0
     
@@ -38,11 +38,11 @@ class DomainRole(object):
 
     attribute_map = {
         'id': 'id',
-        'created_at': 'created_at',
-        'updated_at': 'updated_at',
+        'created_at': 'createdAt',
+        'updated_at': 'updatedAt',
         'role': 'role',
         'permission': 'permission',
-        'domain_id': 'domain_id'
+        'domain_id': 'domainId'
     }
 
     def __init__(self, id=None, created_at=None, updated_at=None, role=None, permission=None, domain_id=None):  # noqa: E501

@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: 3474762@2021-11-04T11:53:49Z  # noqa: E501
+    Git version: fcd1dab@2021-11-05T13:40:36Z  # noqa: E501
 
     OpenAPI spec version: 0.1.0
     
@@ -443,7 +443,7 @@ class RecordApi(object):
         :param int offset:
         :param int limit:
         :param str uid: user id or 'me' or empty
-        :return: ListRecordsResp
+        :return: RecordListResp
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -469,7 +469,7 @@ class RecordApi(object):
         :param int offset:
         :param int limit:
         :param str uid: user id or 'me' or empty
-        :return: ListRecordsResp
+        :return: RecordListResp
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -498,7 +498,7 @@ class RecordApi(object):
         if 'domain' in params:
             query_params.append(('domain', params['domain']))  # noqa: E501
         if 'problem_set' in params:
-            query_params.append(('problem_set', params['problem_set']))  # noqa: E501
+            query_params.append(('problemSet', params['problem_set']))  # noqa: E501
         if 'problem' in params:
             query_params.append(('problem', params['problem']))  # noqa: E501
         if 'offset' in params:
@@ -529,7 +529,7 @@ class RecordApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='ListRecordsResp',  # noqa: E501
+            response_type='RecordListResp',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),

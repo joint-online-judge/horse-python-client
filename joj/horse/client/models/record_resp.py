@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: 3474762@2021-11-04T11:53:49Z  # noqa: E501
+    Git version: fcd1dab@2021-11-05T13:40:36Z  # noqa: E501
 
     OpenAPI spec version: 0.1.0
     
@@ -30,12 +30,12 @@ class RecordResp(object):
     swagger_types = {
         'error_code': 'ErrorCode',
         'error_msg': 'str',
-        'data': 'JojHorseModelsRecordRecord'
+        'data': 'Record'
     }
 
     attribute_map = {
-        'error_code': 'error_code',
-        'error_msg': 'error_msg',
+        'error_code': 'errorCode',
+        'error_msg': 'errorMsg',
         'data': 'data'
     }
 
@@ -101,7 +101,7 @@ class RecordResp(object):
 
 
         :return: The data of this RecordResp.  # noqa: E501
-        :rtype: JojHorseModelsRecordRecord
+        :rtype: Record
         """
         return self._data
 
@@ -111,7 +111,7 @@ class RecordResp(object):
 
 
         :param data: The data of this RecordResp.  # noqa: E501
-        :type: JojHorseModelsRecordRecord
+        :type: Record
         """
 
         self._data = data

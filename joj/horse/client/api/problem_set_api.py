@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: 3474762@2021-11-04T11:53:49Z  # noqa: E501
+    Git version: fcd1dab@2021-11-05T13:40:36Z  # noqa: E501
 
     OpenAPI spec version: 0.1.0
     
@@ -203,7 +203,7 @@ class ProblemSetApi(object):
 
         path_params = {}
         if 'problem_set' in params:
-            path_params['problem_set'] = params['problem_set']  # noqa: E501
+            path_params['problemSet'] = params['problem_set']  # noqa: E501
         if 'domain' in params:
             path_params['domain'] = params['domain']  # noqa: E501
 
@@ -304,7 +304,7 @@ class ProblemSetApi(object):
 
         path_params = {}
         if 'problem_set' in params:
-            path_params['problem_set'] = params['problem_set']  # noqa: E501
+            path_params['problemSet'] = params['problem_set']  # noqa: E501
         if 'domain' in params:
             path_params['domain'] = params['domain']  # noqa: E501
 
@@ -405,7 +405,7 @@ class ProblemSetApi(object):
 
         path_params = {}
         if 'problem_set' in params:
-            path_params['problem_set'] = params['problem_set']  # noqa: E501
+            path_params['problemSet'] = params['problem_set']  # noqa: E501
         if 'domain' in params:
             path_params['domain'] = params['domain']  # noqa: E501
 
@@ -452,7 +452,7 @@ class ProblemSetApi(object):
         :param str domain: url or id of the domain (required)
         :param int offset:
         :param int limit:
-        :return: ListProblemSetsResp
+        :return: ProblemSetListResp
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -475,7 +475,7 @@ class ProblemSetApi(object):
         :param str domain: url or id of the domain (required)
         :param int offset:
         :param int limit:
-        :return: ListProblemSetsResp
+        :return: ProblemSetListResp
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -533,7 +533,7 @@ class ProblemSetApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='ListProblemSetsResp',  # noqa: E501
+            response_type='ProblemSetListResp',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -613,7 +613,7 @@ class ProblemSetApi(object):
 
         path_params = {}
         if 'problem_set' in params:
-            path_params['problem_set'] = params['problem_set']  # noqa: E501
+            path_params['problemSet'] = params['problem_set']  # noqa: E501
         if 'domain' in params:
             path_params['domain'] = params['domain']  # noqa: E501
 

@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: 3474762@2021-11-04T11:53:49Z  # noqa: E501
+    Git version: fcd1dab@2021-11-05T13:40:36Z  # noqa: E501
 
     OpenAPI spec version: 0.1.0
     
@@ -58,11 +58,11 @@ class JWTAccessToken(object):
         'category': 'category',
         'username': 'username',
         'email': 'email',
-        'student_id': 'student_id',
-        'real_name': 'real_name',
+        'student_id': 'studentId',
+        'real_name': 'realName',
         'role': 'role',
-        'oauth_name': 'oauth_name',
-        'is_active': 'is_active'
+        'oauth_name': 'oauthName',
+        'is_active': 'isActive'
     }
 
     def __init__(self, sub=None, iat=None, nbf=None, jti=None, exp=None, type=None, fresh=False, csrf=None, category=None, username=None, email=None, student_id=None, real_name=None, role=None, oauth_name=None, is_active=None):  # noqa: E501

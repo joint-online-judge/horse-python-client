@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: 3474762@2021-11-04T11:53:49Z  # noqa: E501
+    Git version: fcd1dab@2021-11-05T13:40:36Z  # noqa: E501
 
     OpenAPI spec version: 0.1.0
     
@@ -35,8 +35,8 @@ class ProblemClone(object):
 
     attribute_map = {
         'problems': 'problems',
-        'problem_set': 'problem_set',
-        'new_group': 'new_group'
+        'problem_set': 'problemSet',
+        'new_group': 'newGroup'
     }
 
     def __init__(self, problems=None, problem_set=None, new_group=False):  # noqa: E501

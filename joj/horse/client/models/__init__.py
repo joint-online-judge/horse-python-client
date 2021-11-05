@@ -4,7 +4,7 @@
 """
     JOJ Horse
 
-    Git version: 3474762@2021-11-04T11:53:49Z  # noqa: E501
+    Git version: fcd1dab@2021-11-05T13:40:36Z  # noqa: E501
 
     OpenAPI spec version: 0.1.0
     
@@ -24,7 +24,6 @@ from joj.horse.client.models.all_of_domain_user_update_role import AllOfDomainUs
 from joj.horse.client.models.all_of_record_case_status import AllOfRecordCaseStatus
 from joj.horse.client.models.auth_tokens import AuthTokens
 from joj.horse.client.models.auth_tokens_resp import AuthTokensResp
-from joj.horse.client.models.body_login_api_v1_auth_login_post import BodyLoginApiV1AuthLoginPost
 from joj.horse.client.models.default_role import DefaultRole
 from joj.horse.client.models.detail import Detail
 from joj.horse.client.models.domain import Domain
@@ -61,14 +60,7 @@ from joj.horse.client.models.http_validation_error import HTTPValidationError
 from joj.horse.client.models.jwt import JWT
 from joj.horse.client.models.jwt_access_token import JWTAccessToken
 from joj.horse.client.models.jwt_access_token_resp import JWTAccessTokenResp
-from joj.horse.client.models.joj_horse_models_problem_set_problem_set import JojHorseModelsProblemSetProblemSet
-from joj.horse.client.models.joj_horse_models_record_record import JojHorseModelsRecordRecord
-from joj.horse.client.models.joj_horse_schemas_problem_set_problem_set import JojHorseSchemasProblemSetProblemSet
-from joj.horse.client.models.joj_horse_schemas_record_record import JojHorseSchemasRecordRecord
-from joj.horse.client.models.list_problem_sets import ListProblemSets
-from joj.horse.client.models.list_problem_sets_resp import ListProblemSetsResp
-from joj.horse.client.models.list_records import ListRecords
-from joj.horse.client.models.list_records_resp import ListRecordsResp
+from joj.horse.client.models.o_auth2_password_request_form import OAuth2PasswordRequestForm
 from joj.horse.client.models.problem import Problem
 from joj.horse.client.models.problem_clone import ProblemClone
 from joj.horse.client.models.problem_config_edit import ProblemConfigEdit
@@ -81,14 +73,20 @@ from joj.horse.client.models.problem_list import ProblemList
 from joj.horse.client.models.problem_list_resp import ProblemListResp
 from joj.horse.client.models.problem_permission import ProblemPermission
 from joj.horse.client.models.problem_resp import ProblemResp
+from joj.horse.client.models.problem_set import ProblemSet
 from joj.horse.client.models.problem_set_create import ProblemSetCreate
 from joj.horse.client.models.problem_set_edit import ProblemSetEdit
+from joj.horse.client.models.problem_set_list import ProblemSetList
+from joj.horse.client.models.problem_set_list_resp import ProblemSetListResp
 from joj.horse.client.models.problem_set_permission import ProblemSetPermission
 from joj.horse.client.models.problem_set_resp import ProblemSetResp
 from joj.horse.client.models.problem_solution_submit import ProblemSolutionSubmit
+from joj.horse.client.models.record import Record
 from joj.horse.client.models.record_case import RecordCase
 from joj.horse.client.models.record_case_result import RecordCaseResult
 from joj.horse.client.models.record_code_type import RecordCodeType
+from joj.horse.client.models.record_list import RecordList
+from joj.horse.client.models.record_list_resp import RecordListResp
 from joj.horse.client.models.record_permission import RecordPermission
 from joj.horse.client.models.record_resp import RecordResp
 from joj.horse.client.models.record_result import RecordResult

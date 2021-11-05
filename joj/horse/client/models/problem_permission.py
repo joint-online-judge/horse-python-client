@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: 3474762@2021-11-04T11:53:49Z  # noqa: E501
+    Git version: fcd1dab@2021-11-05T13:40:36Z  # noqa: E501
 
     OpenAPI spec version: 0.1.0
     
@@ -39,10 +39,10 @@ class ProblemPermission(object):
     attribute_map = {
         'create': 'create',
         'view': 'view',
-        'view_hidden': 'view_hidden',
+        'view_hidden': 'viewHidden',
         'submit': 'submit',
         'edit': 'edit',
-        'view_config': 'view_config'
+        'view_config': 'viewConfig'
     }
 
     def __init__(self, create=False, view=True, view_hidden=False, submit=True, edit=False, view_config=False):  # noqa: E501

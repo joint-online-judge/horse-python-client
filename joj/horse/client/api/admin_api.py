@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: 3474762@2021-11-04T11:53:49Z  # noqa: E501
+    Git version: fcd1dab@2021-11-05T13:40:36Z  # noqa: E501
 
     OpenAPI spec version: 0.1.0
     
@@ -213,11 +213,11 @@ class AdminApi(object):
 
         query_params = []
         if 'student_id' in params:
-            query_params.append(('student_id', params['student_id']))  # noqa: E501
+            query_params.append(('studentId', params['student_id']))  # noqa: E501
         if 'jaccount_name' in params:
-            query_params.append(('jaccount_name', params['jaccount_name']))  # noqa: E501
+            query_params.append(('jaccountName', params['jaccount_name']))  # noqa: E501
         if 'real_name' in params:
-            query_params.append(('real_name', params['real_name']))  # noqa: E501
+            query_params.append(('realName', params['real_name']))  # noqa: E501
         if 'ip' in params:
             query_params.append(('ip', params['ip']))  # noqa: E501
 

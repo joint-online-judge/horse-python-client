@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: 3474762@2021-11-04T11:53:49Z  # noqa: E501
+    Git version: fcd1dab@2021-11-05T13:40:36Z  # noqa: E501
 
     OpenAPI spec version: 0.1.0
     
@@ -518,9 +518,9 @@ class ProblemApi(object):
 
         query_params = []
         if 'problem_set' in params:
-            query_params.append(('problem_set', params['problem_set']))  # noqa: E501
+            query_params.append(('problemSet', params['problem_set']))  # noqa: E501
         if 'problem_group' in params:
-            query_params.append(('problem_group', params['problem_group']))  # noqa: E501
+            query_params.append(('problemGroup', params['problem_group']))  # noqa: E501
         if 'ordering' in params:
             query_params.append(('ordering', params['ordering']))  # noqa: E501
         if 'offset' in params:
@@ -646,7 +646,7 @@ class ProblemApi(object):
         form_params = []
         local_var_files = {}
         if 'code_type' in params:
-            form_params.append(('code_type', params['code_type']))  # noqa: E501
+            form_params.append(('codeType', params['code_type']))  # noqa: E501
         if 'file' in params:
             local_var_files['file'] = params['file']  # noqa: E501
 

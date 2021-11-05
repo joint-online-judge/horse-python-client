@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: 3474762@2021-11-04T11:53:49Z  # noqa: E501
+    Git version: fcd1dab@2021-11-05T13:40:36Z  # noqa: E501
 
     OpenAPI spec version: 0.1.0
     
@@ -30,12 +30,12 @@ class ProblemSetResp(object):
     swagger_types = {
         'error_code': 'ErrorCode',
         'error_msg': 'str',
-        'data': 'JojHorseModelsProblemSetProblemSet'
+        'data': 'ProblemSet'
     }
 
     attribute_map = {
-        'error_code': 'error_code',
-        'error_msg': 'error_msg',
+        'error_code': 'errorCode',
+        'error_msg': 'errorMsg',
         'data': 'data'
     }
 
@@ -101,7 +101,7 @@ class ProblemSetResp(object):
 
 
         :return: The data of this ProblemSetResp.  # noqa: E501
-        :rtype: JojHorseModelsProblemSetProblemSet
+        :rtype: ProblemSet
         """
         return self._data
 
@@ -111,7 +111,7 @@ class ProblemSetResp(object):
 
 
         :param data: The data of this ProblemSetResp.  # noqa: E501
-        :type: JojHorseModelsProblemSetProblemSet
+        :type: ProblemSet
         """
 
         self._data = data
