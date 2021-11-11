@@ -6,7 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**jwt_decoded_api_v1_jwt_decoded_get**](MiscellaneousApi.md#jwt_decoded_api_v1_jwt_decoded_get) | **GET** /api/v1/jwt_decoded | Jwt Decoded
 [**set_root_user_api_v1_set_root_user_post**](MiscellaneousApi.md#set_root_user_api_v1_set_root_user_post) | **POST** /api/v1/set_root_user | Set Root User
-[**test_sentry_api_v1_test_sentry_get**](MiscellaneousApi.md#test_sentry_api_v1_test_sentry_get) | **GET** /api/v1/test/sentry | Test Sentry
+[**test_error_report_api_v1_test_report_get**](MiscellaneousApi.md#test_error_report_api_v1_test_report_get) | **GET** /api/v1/test/report | Test Error Report
 [**version_api_v1_version_get**](MiscellaneousApi.md#version_api_v1_version_get) | **GET** /api/v1/version | Version
 
 # **jwt_decoded_api_v1_jwt_decoded_get**
@@ -95,10 +95,10 @@ This endpoint does not need any parameter.
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **test_sentry_api_v1_test_sentry_get**
-> Null test_sentry_api_v1_test_sentry_get()
+# **test_error_report_api_v1_test_report_get**
+> Null test_error_report_api_v1_test_report_get()
 
-Test Sentry
+Test Error Report
 
 ### Example
 ```python
@@ -112,11 +112,11 @@ from pprint import pprint
 api_instance = joj.horse.client.MiscellaneousApi()
 
 try:
-    # Test Sentry
-    api_response = api_instance.test_sentry_api_v1_test_sentry_get()
+    # Test Error Report
+    api_response = api_instance.test_error_report_api_v1_test_report_get()
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling MiscellaneousApi->test_sentry_api_v1_test_sentry_get: %s\n" % e)
+    print("Exception when calling MiscellaneousApi->test_error_report_api_v1_test_report_get: %s\n" % e)
 ```
 
 ### Parameters

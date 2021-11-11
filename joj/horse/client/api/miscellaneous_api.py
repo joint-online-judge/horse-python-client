@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: 232bf8a@2021-11-09T06:46:30Z  # noqa: E501
+    Git version: 307ba8d@2021-11-11T16:39:45Z  # noqa: E501
 
     OpenAPI spec version: 0.1.0
     
@@ -202,12 +202,12 @@ class MiscellaneousApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def test_sentry_api_v1_test_sentry_get(self, **kwargs):  # noqa: E501
-        """Test Sentry  # noqa: E501
+    def test_error_report_api_v1_test_report_get(self, **kwargs):  # noqa: E501
+        """Test Error Report  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.test_sentry_api_v1_test_sentry_get(async_req=True)
+        >>> thread = api.test_error_report_api_v1_test_report_get(async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -217,17 +217,17 @@ class MiscellaneousApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.test_sentry_api_v1_test_sentry_get_with_http_info(**kwargs)  # noqa: E501
+            return self.test_error_report_api_v1_test_report_get_with_http_info(**kwargs)  # noqa: E501
         else:
-            (data) = self.test_sentry_api_v1_test_sentry_get_with_http_info(**kwargs)  # noqa: E501
+            (data) = self.test_error_report_api_v1_test_report_get_with_http_info(**kwargs)  # noqa: E501
             return data
 
-    def test_sentry_api_v1_test_sentry_get_with_http_info(self, **kwargs):  # noqa: E501
-        """Test Sentry  # noqa: E501
+    def test_error_report_api_v1_test_report_get_with_http_info(self, **kwargs):  # noqa: E501
+        """Test Error Report  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.test_sentry_api_v1_test_sentry_get_with_http_info(async_req=True)
+        >>> thread = api.test_error_report_api_v1_test_report_get_with_http_info(async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -247,7 +247,7 @@ class MiscellaneousApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method test_sentry_api_v1_test_sentry_get" % key
+                    " to method test_error_report_api_v1_test_report_get" % key
                 )
             params[key] = val
         del params['kwargs']
@@ -272,7 +272,7 @@ class MiscellaneousApi(object):
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/api/v1/test/sentry', 'GET',
+            '/api/v1/test/report', 'GET',
             path_params,
             query_params,
             header_params,

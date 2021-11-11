@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: 232bf8a@2021-11-09T06:46:30Z  # noqa: E501
+    Git version: 307ba8d@2021-11-11T16:39:45Z  # noqa: E501
 
     OpenAPI spec version: 0.1.0
     
@@ -42,10 +42,10 @@ class TestMiscellaneousApi(unittest.TestCase):
         """
         pass
 
-    def test_test_sentry_api_v1_test_sentry_get(self):
-        """Test case for test_sentry_api_v1_test_sentry_get
+    def test_test_error_report_api_v1_test_report_get(self):
+        """Test case for test_error_report_api_v1_test_report_get
 
-        Test Sentry  # noqa: E501
+        Test Error Report  # noqa: E501
         """
         pass
 
