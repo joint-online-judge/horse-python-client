@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: 307ba8d@2021-11-11T16:39:45Z  # noqa: E501
+    Git version: bef9fbf@2021-11-13T17:48:31Z  # noqa: E501
 
     OpenAPI spec version: 0.1.0
     
@@ -81,6 +81,13 @@ class TestDomainApi(unittest.TestCase):
         """Test case for get_domain_api_v1_domains_domain_get
 
         Get Domain  # noqa: E501
+        """
+        pass
+
+    def test_get_domain_role_api_v1_domains_domain_roles_role_get(self):
+        """Test case for get_domain_role_api_v1_domains_domain_roles_role_get
+
+        Get Domain Role  # noqa: E501
         """
         pass
 

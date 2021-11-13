@@ -9,7 +9,6 @@ Method | HTTP request | Description
 [**delete_user_api_v1_admin_users_uid_delete**](AdminApi.md#delete_user_api_v1_admin_users_uid_delete) | **DELETE** /api/v1/admin/users/{uid} | Delete User
 [**get_judger_jwt_api_v1_admin_judgers_uid_jwt_get**](AdminApi.md#get_judger_jwt_api_v1_admin_judgers_uid_jwt_get) | **GET** /api/v1/admin/judgers/{uid}/jwt | Get Judger Jwt
 [**list_domain_roles_api_v1_admin_domain_roles_get**](AdminApi.md#list_domain_roles_api_v1_admin_domain_roles_get) | **GET** /api/v1/admin/domain_roles | List Domain Roles
-[**list_domain_users_api_v1_admin_domain_users_get**](AdminApi.md#list_domain_users_api_v1_admin_domain_users_get) | **GET** /api/v1/admin/domain_users | List Domain Users
 [**list_judgers_api_v1_admin_judgers_get**](AdminApi.md#list_judgers_api_v1_admin_judgers_get) | **GET** /api/v1/admin/judgers | List Judgers
 [**list_users_api_v1_admin_users_get**](AdminApi.md#list_users_api_v1_admin_users_get) | **GET** /api/v1/admin/users | List Users
 
@@ -258,55 +257,6 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **list_domain_users_api_v1_admin_domain_users_get**
-> DomainUserListResp list_domain_users_api_v1_admin_domain_users_get(offset=offset, limit=limit)
-
-List Domain Users
-
-### Example
-```python
-from __future__ import print_function
-import time
-import joj.horse.client
-from joj.horse.client.rest import ApiException
-from pprint import pprint
-
-
-# create an instance of the API class
-api_instance = joj.horse.client.AdminApi(joj.horse.client.ApiClient(configuration))
-offset = 0 # int |  (optional) (default to 0)
-limit = 100 # int |  (optional) (default to 100)
-
-try:
-    # List Domain Users
-    api_response = api_instance.list_domain_users_api_v1_admin_domain_users_get(offset=offset, limit=limit)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling AdminApi->list_domain_users_api_v1_admin_domain_users_get: %s\n" % e)
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **offset** | **int**|  | [optional] [default to 0]
- **limit** | **int**|  | [optional] [default to 100]
-
-### Return type
-
-[**DomainUserListResp**](DomainUserListResp.md)
-
-### Authorization
-
-[HTTPBearer](../README.md#HTTPBearer)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 # **list_judgers_api_v1_admin_judgers_get**
 > UserListResp list_judgers_api_v1_admin_judgers_get(offset=offset, limit=limit)
 
@@ -357,7 +307,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **list_users_api_v1_admin_users_get**
-> UserBaseListResp list_users_api_v1_admin_users_get(offset=offset, limit=limit)
+> UserListResp list_users_api_v1_admin_users_get(offset=offset, limit=limit)
 
 List Users
 
@@ -392,7 +342,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**UserBaseListResp**](UserBaseListResp.md)
+[**UserListResp**](UserListResp.md)
 
 ### Authorization
 

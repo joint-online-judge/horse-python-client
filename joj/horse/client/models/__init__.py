@@ -4,7 +4,7 @@
 """
     JOJ Horse
 
-    Git version: 307ba8d@2021-11-11T16:39:45Z  # noqa: E501
+    Git version: bef9fbf@2021-11-13T17:48:31Z  # noqa: E501
 
     OpenAPI spec version: 0.1.0
     
@@ -18,7 +18,6 @@ from joj.horse.client.models.all_of_domain_permission_general import AllOfDomain
 from joj.horse.client.models.all_of_domain_permission_problem import AllOfDomainPermissionProblem
 from joj.horse.client.models.all_of_domain_permission_problem_set import AllOfDomainPermissionProblemSet
 from joj.horse.client.models.all_of_domain_permission_record import AllOfDomainPermissionRecord
-from joj.horse.client.models.all_of_domain_role_create_permission import AllOfDomainRoleCreatePermission
 from joj.horse.client.models.all_of_domain_user_add_role import AllOfDomainUserAddRole
 from joj.horse.client.models.all_of_domain_user_update_role import AllOfDomainUserUpdateRole
 from joj.horse.client.models.all_of_record_case_status import AllOfRecordCaseStatus
@@ -28,6 +27,8 @@ from joj.horse.client.models.default_role import DefaultRole
 from joj.horse.client.models.detail import Detail
 from joj.horse.client.models.domain import Domain
 from joj.horse.client.models.domain_create import DomainCreate
+from joj.horse.client.models.domain_detail import DomainDetail
+from joj.horse.client.models.domain_detail_resp import DomainDetailResp
 from joj.horse.client.models.domain_edit import DomainEdit
 from joj.horse.client.models.domain_invitation import DomainInvitation
 from joj.horse.client.models.domain_invitation_create import DomainInvitationCreate
@@ -39,18 +40,16 @@ from joj.horse.client.models.domain_permission import DomainPermission
 from joj.horse.client.models.domain_resp import DomainResp
 from joj.horse.client.models.domain_role import DomainRole
 from joj.horse.client.models.domain_role_create import DomainRoleCreate
+from joj.horse.client.models.domain_role_detail import DomainRoleDetail
+from joj.horse.client.models.domain_role_detail_resp import DomainRoleDetailResp
 from joj.horse.client.models.domain_role_edit import DomainRoleEdit
 from joj.horse.client.models.domain_role_list import DomainRoleList
 from joj.horse.client.models.domain_role_list_resp import DomainRoleListResp
 from joj.horse.client.models.domain_role_resp import DomainRoleResp
 from joj.horse.client.models.domain_transfer import DomainTransfer
-from joj.horse.client.models.domain_user import DomainUser
 from joj.horse.client.models.domain_user_add import DomainUserAdd
-from joj.horse.client.models.domain_user_list import DomainUserList
-from joj.horse.client.models.domain_user_list_resp import DomainUserListResp
 from joj.horse.client.models.domain_user_permission import DomainUserPermission
 from joj.horse.client.models.domain_user_permission_resp import DomainUserPermissionResp
-from joj.horse.client.models.domain_user_resp import DomainUserResp
 from joj.horse.client.models.domain_user_update import DomainUserUpdate
 from joj.horse.client.models.empty import Empty
 from joj.horse.client.models.empty_resp import EmptyResp
@@ -95,10 +94,6 @@ from joj.horse.client.models.score import Score
 from joj.horse.client.models.score_board import ScoreBoard
 from joj.horse.client.models.score_board_resp import ScoreBoardResp
 from joj.horse.client.models.user import User
-from joj.horse.client.models.user_base import UserBase
-from joj.horse.client.models.user_base_list import UserBaseList
-from joj.horse.client.models.user_base_list_resp import UserBaseListResp
-from joj.horse.client.models.user_base_resp import UserBaseResp
 from joj.horse.client.models.user_create import UserCreate
 from joj.horse.client.models.user_detail import UserDetail
 from joj.horse.client.models.user_detail_resp import UserDetailResp
@@ -106,5 +101,9 @@ from joj.horse.client.models.user_list import UserList
 from joj.horse.client.models.user_list_resp import UserListResp
 from joj.horse.client.models.user_resp import UserResp
 from joj.horse.client.models.user_score import UserScore
+from joj.horse.client.models.user_with_domain_role import UserWithDomainRole
+from joj.horse.client.models.user_with_domain_role_list import UserWithDomainRoleList
+from joj.horse.client.models.user_with_domain_role_list_resp import UserWithDomainRoleListResp
+from joj.horse.client.models.user_with_domain_role_resp import UserWithDomainRoleResp
 from joj.horse.client.models.validation_error import ValidationError
 from joj.horse.client.models.version import Version

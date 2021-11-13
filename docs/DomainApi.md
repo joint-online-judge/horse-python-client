@@ -12,6 +12,7 @@ Method | HTTP request | Description
 [**delete_domain_invitation_api_v1_domains_domain_invitations_invitation_delete**](DomainApi.md#delete_domain_invitation_api_v1_domains_domain_invitations_invitation_delete) | **DELETE** /api/v1/domains/{domain}/invitations/{invitation} | Delete Domain Invitation
 [**delete_domain_role_api_v1_domains_domain_roles_role_delete**](DomainApi.md#delete_domain_role_api_v1_domains_domain_roles_role_delete) | **DELETE** /api/v1/domains/{domain}/roles/{role} | Delete Domain Role
 [**get_domain_api_v1_domains_domain_get**](DomainApi.md#get_domain_api_v1_domains_domain_get) | **GET** /api/v1/domains/{domain} | Get Domain
+[**get_domain_role_api_v1_domains_domain_roles_role_get**](DomainApi.md#get_domain_role_api_v1_domains_domain_roles_role_get) | **GET** /api/v1/domains/{domain}/roles/{role} | Get Domain Role
 [**get_domain_user_api_v1_domains_domain_users_user_get**](DomainApi.md#get_domain_user_api_v1_domains_domain_users_user_get) | **GET** /api/v1/domains/{domain}/users/{user} | Get Domain User
 [**get_domain_user_permission_api_v1_domains_domain_users_user_permission_get**](DomainApi.md#get_domain_user_permission_api_v1_domains_domain_users_user_permission_get) | **GET** /api/v1/domains/{domain}/users/{user}/permission | Get Domain User Permission
 [**join_domain_by_invitation_api_v1_domains_domain_join_post**](DomainApi.md#join_domain_by_invitation_api_v1_domains_domain_join_post) | **POST** /api/v1/domains/{domain}/join | Join Domain By Invitation
@@ -26,7 +27,7 @@ Method | HTTP request | Description
 [**update_domain_user_api_v1_domains_domain_users_user_patch**](DomainApi.md#update_domain_user_api_v1_domains_domain_users_user_patch) | **PATCH** /api/v1/domains/{domain}/users/{user} | Update Domain User
 
 # **add_domain_user_api_v1_domains_domain_users_post**
-> DomainUserResp add_domain_user_api_v1_domains_domain_users_post(body, domain)
+> UserWithDomainRoleResp add_domain_user_api_v1_domains_domain_users_post(body, domain)
 
 Add Domain User
 
@@ -61,7 +62,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**DomainUserResp**](DomainUserResp.md)
+[**UserWithDomainRoleResp**](UserWithDomainRoleResp.md)
 
 ### Authorization
 
@@ -367,7 +368,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_domain_api_v1_domains_domain_get**
-> DomainResp get_domain_api_v1_domains_domain_get(domain)
+> DomainDetailResp get_domain_api_v1_domains_domain_get(domain)
 
 Get Domain
 
@@ -400,7 +401,56 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**DomainResp**](DomainResp.md)
+[**DomainDetailResp**](DomainDetailResp.md)
+
+### Authorization
+
+[HTTPBearer](../README.md#HTTPBearer)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_domain_role_api_v1_domains_domain_roles_role_get**
+> DomainRoleDetailResp get_domain_role_api_v1_domains_domain_roles_role_get(domain, role)
+
+Get Domain Role
+
+### Example
+```python
+from __future__ import print_function
+import time
+import joj.horse.client
+from joj.horse.client.rest import ApiException
+from pprint import pprint
+
+
+# create an instance of the API class
+api_instance = joj.horse.client.DomainApi(joj.horse.client.ApiClient(configuration))
+domain = 'domain_example' # str | url or id of the domain
+role = 'role_example' # str | name of the domain role
+
+try:
+    # Get Domain Role
+    api_response = api_instance.get_domain_role_api_v1_domains_domain_roles_role_get(domain, role)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling DomainApi->get_domain_role_api_v1_domains_domain_roles_role_get: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **domain** | **str**| url or id of the domain | 
+ **role** | **str**| name of the domain role | 
+
+### Return type
+
+[**DomainRoleDetailResp**](DomainRoleDetailResp.md)
 
 ### Authorization
 
@@ -414,7 +464,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_domain_user_api_v1_domains_domain_users_user_get**
-> DomainUserResp get_domain_user_api_v1_domains_domain_users_user_get(domain, user)
+> UserWithDomainRoleResp get_domain_user_api_v1_domains_domain_users_user_get(domain, user)
 
 Get Domain User
 
@@ -449,7 +499,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**DomainUserResp**](DomainUserResp.md)
+[**UserWithDomainRoleResp**](UserWithDomainRoleResp.md)
 
 ### Authorization
 
@@ -512,7 +562,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **join_domain_by_invitation_api_v1_domains_domain_join_post**
-> DomainUserResp join_domain_by_invitation_api_v1_domains_domain_join_post(domain, invitation_code)
+> UserWithDomainRoleResp join_domain_by_invitation_api_v1_domains_domain_join_post(domain, invitation_code)
 
 Join Domain By Invitation
 
@@ -547,7 +597,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**DomainUserResp**](DomainUserResp.md)
+[**UserWithDomainRoleResp**](UserWithDomainRoleResp.md)
 
 ### Authorization
 
@@ -608,7 +658,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **list_domain_users_api_v1_domains_domain_users_get**
-> DomainUserListResp list_domain_users_api_v1_domains_domain_users_get(domain)
+> UserWithDomainRoleListResp list_domain_users_api_v1_domains_domain_users_get(domain, ordering=ordering, offset=offset, limit=limit)
 
 List Domain Users
 
@@ -624,10 +674,13 @@ from pprint import pprint
 # create an instance of the API class
 api_instance = joj.horse.client.DomainApi(joj.horse.client.ApiClient(configuration))
 domain = 'domain_example' # str | url or id of the domain
+ordering = '' # str | Comma seperated list of ordering the results. You may specify reverse orderings by prefixing the field name with '-'.  Available fields: name (optional)
+offset = 0 # int |  (optional) (default to 0)
+limit = 100 # int |  (optional) (default to 100)
 
 try:
     # List Domain Users
-    api_response = api_instance.list_domain_users_api_v1_domains_domain_users_get(domain)
+    api_response = api_instance.list_domain_users_api_v1_domains_domain_users_get(domain, ordering=ordering, offset=offset, limit=limit)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling DomainApi->list_domain_users_api_v1_domains_domain_users_get: %s\n" % e)
@@ -638,10 +691,13 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **domain** | **str**| url or id of the domain | 
+ **ordering** | **str**| Comma seperated list of ordering the results. You may specify reverse orderings by prefixing the field name with &#x27;-&#x27;.  Available fields: name | [optional] 
+ **offset** | **int**|  | [optional] [default to 0]
+ **limit** | **int**|  | [optional] [default to 100]
 
 ### Return type
 
-[**DomainUserListResp**](DomainUserListResp.md)
+[**UserWithDomainRoleListResp**](UserWithDomainRoleListResp.md)
 
 ### Authorization
 
@@ -959,7 +1015,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_domain_user_api_v1_domains_domain_users_user_patch**
-> DomainUserResp update_domain_user_api_v1_domains_domain_users_user_patch(body, domain, user)
+> UserWithDomainRoleResp update_domain_user_api_v1_domains_domain_users_user_patch(body, domain, user)
 
 Update Domain User
 
@@ -996,7 +1052,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**DomainUserResp**](DomainUserResp.md)
+[**UserWithDomainRoleResp**](UserWithDomainRoleResp.md)
 
 ### Authorization
 

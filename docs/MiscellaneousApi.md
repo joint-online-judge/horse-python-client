@@ -53,7 +53,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **set_root_user_api_v1_set_root_user_post**
-> UserBaseResp set_root_user_api_v1_set_root_user_post()
+> UserResp set_root_user_api_v1_set_root_user_post()
 
 Set Root User
 
@@ -82,7 +82,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**UserBaseResp**](UserBaseResp.md)
+[**UserResp**](UserResp.md)
 
 ### Authorization
 

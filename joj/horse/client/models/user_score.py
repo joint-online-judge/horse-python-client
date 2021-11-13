@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: 307ba8d@2021-11-11T16:39:45Z  # noqa: E501
+    Git version: bef9fbf@2021-11-13T17:48:31Z  # noqa: E501
 
     OpenAPI spec version: 0.1.0
     
@@ -28,7 +28,7 @@ class UserScore(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'user': 'UserBase',
+        'user': 'User',
         'total_score': 'int',
         'total_time_spent': 'float',
         'scores': 'list[Score]'
@@ -59,7 +59,7 @@ class UserScore(object):
 
 
         :return: The user of this UserScore.  # noqa: E501
-        :rtype: UserBase
+        :rtype: User
         """
         return self._user
 
@@ -69,7 +69,7 @@ class UserScore(object):
 
 
         :param user: The user of this UserScore.  # noqa: E501
-        :type: UserBase
+        :type: User
         """
         if user is None:
             raise ValueError("Invalid value for `user`, must not be `None`")  # noqa: E501

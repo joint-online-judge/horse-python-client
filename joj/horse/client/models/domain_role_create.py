@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: 307ba8d@2021-11-11T16:39:45Z  # noqa: E501
+    Git version: bef9fbf@2021-11-13T17:48:31Z  # noqa: E501
 
     OpenAPI spec version: 0.1.0
     
@@ -29,7 +29,7 @@ class DomainRoleCreate(object):
     """
     swagger_types = {
         'role': 'str',
-        'permission': 'AllOfDomainRoleCreatePermission'
+        'permission': 'DomainPermission'
     }
 
     attribute_map = {
@@ -43,8 +43,7 @@ class DomainRoleCreate(object):
         self._permission = None
         self.discriminator = None
         self.role = role
-        if permission is not None:
-            self.permission = permission
+        self.permission = permission
 
     @property
     def role(self):
@@ -75,7 +74,7 @@ class DomainRoleCreate(object):
 
 
         :return: The permission of this DomainRoleCreate.  # noqa: E501
-        :rtype: AllOfDomainRoleCreatePermission
+        :rtype: DomainPermission
         """
         return self._permission
 
@@ -85,8 +84,10 @@ class DomainRoleCreate(object):
 
 
         :param permission: The permission of this DomainRoleCreate.  # noqa: E501
-        :type: AllOfDomainRoleCreatePermission
+        :type: DomainPermission
         """
+        if permission is None:
+            raise ValueError("Invalid value for `permission`, must not be `None`")  # noqa: E501
 
         self._permission = permission
 

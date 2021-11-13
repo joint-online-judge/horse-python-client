@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: 307ba8d@2021-11-11T16:39:45Z  # noqa: E501
+    Git version: bef9fbf@2021-11-13T17:48:31Z  # noqa: E501
 
     OpenAPI spec version: 0.1.0
     
@@ -29,47 +29,29 @@ class User(object):
     """
     swagger_types = {
         'id': 'str',
-        'created_at': 'datetime',
-        'updated_at': 'datetime',
         'username': 'str',
         'email': 'str',
         'gravatar': 'str',
         'student_id': 'str',
         'real_name': 'str',
         'role': 'str',
-        'is_active': 'bool',
-        'register_ip': 'str',
-        'login_at': 'datetime',
-        'login_ip': 'str',
-        'hashed_password': 'str',
-        'username_lower': 'str',
-        'email_lower': 'str'
+        'is_active': 'bool'
     }
 
     attribute_map = {
         'id': 'id',
-        'created_at': 'createdAt',
-        'updated_at': 'updatedAt',
         'username': 'username',
         'email': 'email',
         'gravatar': 'gravatar',
         'student_id': 'studentId',
         'real_name': 'realName',
         'role': 'role',
-        'is_active': 'isActive',
-        'register_ip': 'registerIp',
-        'login_at': 'loginAt',
-        'login_ip': 'loginIp',
-        'hashed_password': 'hashedPassword',
-        'username_lower': 'usernameLower',
-        'email_lower': 'emailLower'
+        'is_active': 'isActive'
     }
 
-    def __init__(self, id=None, created_at=None, updated_at=None, username=None, email=None, gravatar='', student_id='', real_name='', role='user', is_active=False, register_ip='127.0.0.1', login_at=None, login_ip='127.0.0.1', hashed_password='', username_lower=None, email_lower=None):  # noqa: E501
+    def __init__(self, id=None, username=None, email=None, gravatar='', student_id='', real_name='', role='user', is_active=False):  # noqa: E501
         """User - a model defined in Swagger"""  # noqa: E501
         self._id = None
-        self._created_at = None
-        self._updated_at = None
         self._username = None
         self._email = None
         self._gravatar = None
@@ -77,19 +59,8 @@ class User(object):
         self._real_name = None
         self._role = None
         self._is_active = None
-        self._register_ip = None
-        self._login_at = None
-        self._login_ip = None
-        self._hashed_password = None
-        self._username_lower = None
-        self._email_lower = None
         self.discriminator = None
-        if id is not None:
-            self.id = id
-        if created_at is not None:
-            self.created_at = created_at
-        if updated_at is not None:
-            self.updated_at = updated_at
+        self.id = id
         self.username = username
         self.email = email
         if gravatar is not None:
@@ -102,15 +73,6 @@ class User(object):
             self.role = role
         if is_active is not None:
             self.is_active = is_active
-        if register_ip is not None:
-            self.register_ip = register_ip
-        self.login_at = login_at
-        if login_ip is not None:
-            self.login_ip = login_ip
-        if hashed_password is not None:
-            self.hashed_password = hashed_password
-        self.username_lower = username_lower
-        self.email_lower = email_lower
 
     @property
     def id(self):
@@ -130,50 +92,10 @@ class User(object):
         :param id: The id of this User.  # noqa: E501
         :type: str
         """
+        if id is None:
+            raise ValueError("Invalid value for `id`, must not be `None`")  # noqa: E501
 
         self._id = id
-
-    @property
-    def created_at(self):
-        """Gets the created_at of this User.  # noqa: E501
-
-
-        :return: The created_at of this User.  # noqa: E501
-        :rtype: datetime
-        """
-        return self._created_at
-
-    @created_at.setter
-    def created_at(self, created_at):
-        """Sets the created_at of this User.
-
-
-        :param created_at: The created_at of this User.  # noqa: E501
-        :type: datetime
-        """
-
-        self._created_at = created_at
-
-    @property
-    def updated_at(self):
-        """Gets the updated_at of this User.  # noqa: E501
-
-
-        :return: The updated_at of this User.  # noqa: E501
-        :rtype: datetime
-        """
-        return self._updated_at
-
-    @updated_at.setter
-    def updated_at(self, updated_at):
-        """Sets the updated_at of this User.
-
-
-        :param updated_at: The updated_at of this User.  # noqa: E501
-        :type: datetime
-        """
-
-        self._updated_at = updated_at
 
     @property
     def username(self):
@@ -325,138 +247,6 @@ class User(object):
         """
 
         self._is_active = is_active
-
-    @property
-    def register_ip(self):
-        """Gets the register_ip of this User.  # noqa: E501
-
-
-        :return: The register_ip of this User.  # noqa: E501
-        :rtype: str
-        """
-        return self._register_ip
-
-    @register_ip.setter
-    def register_ip(self, register_ip):
-        """Sets the register_ip of this User.
-
-
-        :param register_ip: The register_ip of this User.  # noqa: E501
-        :type: str
-        """
-
-        self._register_ip = register_ip
-
-    @property
-    def login_at(self):
-        """Gets the login_at of this User.  # noqa: E501
-
-
-        :return: The login_at of this User.  # noqa: E501
-        :rtype: datetime
-        """
-        return self._login_at
-
-    @login_at.setter
-    def login_at(self, login_at):
-        """Sets the login_at of this User.
-
-
-        :param login_at: The login_at of this User.  # noqa: E501
-        :type: datetime
-        """
-        if login_at is None:
-            raise ValueError("Invalid value for `login_at`, must not be `None`")  # noqa: E501
-
-        self._login_at = login_at
-
-    @property
-    def login_ip(self):
-        """Gets the login_ip of this User.  # noqa: E501
-
-
-        :return: The login_ip of this User.  # noqa: E501
-        :rtype: str
-        """
-        return self._login_ip
-
-    @login_ip.setter
-    def login_ip(self, login_ip):
-        """Sets the login_ip of this User.
-
-
-        :param login_ip: The login_ip of this User.  # noqa: E501
-        :type: str
-        """
-
-        self._login_ip = login_ip
-
-    @property
-    def hashed_password(self):
-        """Gets the hashed_password of this User.  # noqa: E501
-
-
-        :return: The hashed_password of this User.  # noqa: E501
-        :rtype: str
-        """
-        return self._hashed_password
-
-    @hashed_password.setter
-    def hashed_password(self, hashed_password):
-        """Sets the hashed_password of this User.
-
-
-        :param hashed_password: The hashed_password of this User.  # noqa: E501
-        :type: str
-        """
-
-        self._hashed_password = hashed_password
-
-    @property
-    def username_lower(self):
-        """Gets the username_lower of this User.  # noqa: E501
-
-
-        :return: The username_lower of this User.  # noqa: E501
-        :rtype: str
-        """
-        return self._username_lower
-
-    @username_lower.setter
-    def username_lower(self, username_lower):
-        """Sets the username_lower of this User.
-
-
-        :param username_lower: The username_lower of this User.  # noqa: E501
-        :type: str
-        """
-        if username_lower is None:
-            raise ValueError("Invalid value for `username_lower`, must not be `None`")  # noqa: E501
-
-        self._username_lower = username_lower
-
-    @property
-    def email_lower(self):
-        """Gets the email_lower of this User.  # noqa: E501
-
-
-        :return: The email_lower of this User.  # noqa: E501
-        :rtype: str
-        """
-        return self._email_lower
-
-    @email_lower.setter
-    def email_lower(self, email_lower):
-        """Sets the email_lower of this User.
-
-
-        :param email_lower: The email_lower of this User.  # noqa: E501
-        :type: str
-        """
-        if email_lower is None:
-            raise ValueError("Invalid value for `email_lower`, must not be `None`")  # noqa: E501
-
-        self._email_lower = email_lower
 
     def to_dict(self):
         """Returns the model properties as a dict"""

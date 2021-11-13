@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: 307ba8d@2021-11-11T16:39:45Z  # noqa: E501
+    Git version: bef9fbf@2021-11-13T17:48:31Z  # noqa: E501
 
     OpenAPI spec version: 0.1.0
     
@@ -28,6 +28,8 @@ class ProblemSet(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'id': 'str',
+        'domain_id': 'str',
         'url': 'str',
         'title': 'str',
         'content': 'str',
@@ -35,16 +37,14 @@ class ProblemSet(object):
         'scoreboard_hidden': 'bool',
         'available_time': 'datetime',
         'due_time': 'datetime',
-        'id': 'str',
-        'created_at': 'datetime',
-        'updated_at': 'datetime',
         'num_submit': 'int',
         'num_accept': 'int',
-        'domain_id': 'str',
         'owner_id': 'str'
     }
 
     attribute_map = {
+        'id': 'id',
+        'domain_id': 'domainId',
         'url': 'url',
         'title': 'title',
         'content': 'content',
@@ -52,17 +52,15 @@ class ProblemSet(object):
         'scoreboard_hidden': 'scoreboardHidden',
         'available_time': 'availableTime',
         'due_time': 'dueTime',
-        'id': 'id',
-        'created_at': 'createdAt',
-        'updated_at': 'updatedAt',
         'num_submit': 'numSubmit',
         'num_accept': 'numAccept',
-        'domain_id': 'domainId',
         'owner_id': 'ownerId'
     }
 
-    def __init__(self, url=None, title=None, content='', hidden=False, scoreboard_hidden=False, available_time=None, due_time=None, id=None, created_at=None, updated_at=None, num_submit=0, num_accept=0, domain_id=None, owner_id=None):  # noqa: E501
+    def __init__(self, id=None, domain_id=None, url='', title=None, content='', hidden=False, scoreboard_hidden=False, available_time=None, due_time=None, num_submit=0, num_accept=0, owner_id=None):  # noqa: E501
         """ProblemSet - a model defined in Swagger"""  # noqa: E501
+        self._id = None
+        self._domain_id = None
         self._url = None
         self._title = None
         self._content = None
@@ -70,15 +68,14 @@ class ProblemSet(object):
         self._scoreboard_hidden = None
         self._available_time = None
         self._due_time = None
-        self._id = None
-        self._created_at = None
-        self._updated_at = None
         self._num_submit = None
         self._num_accept = None
-        self._domain_id = None
         self._owner_id = None
         self.discriminator = None
-        self.url = url
+        self.id = id
+        self.domain_id = domain_id
+        if url is not None:
+            self.url = url
         self.title = title
         if content is not None:
             self.content = content
@@ -90,23 +87,63 @@ class ProblemSet(object):
             self.available_time = available_time
         if due_time is not None:
             self.due_time = due_time
-        if id is not None:
-            self.id = id
-        if created_at is not None:
-            self.created_at = created_at
-        if updated_at is not None:
-            self.updated_at = updated_at
         if num_submit is not None:
             self.num_submit = num_submit
         if num_accept is not None:
             self.num_accept = num_accept
-        self.domain_id = domain_id
         self.owner_id = owner_id
+
+    @property
+    def id(self):
+        """Gets the id of this ProblemSet.  # noqa: E501
+
+
+        :return: The id of this ProblemSet.  # noqa: E501
+        :rtype: str
+        """
+        return self._id
+
+    @id.setter
+    def id(self, id):
+        """Sets the id of this ProblemSet.
+
+
+        :param id: The id of this ProblemSet.  # noqa: E501
+        :type: str
+        """
+        if id is None:
+            raise ValueError("Invalid value for `id`, must not be `None`")  # noqa: E501
+
+        self._id = id
+
+    @property
+    def domain_id(self):
+        """Gets the domain_id of this ProblemSet.  # noqa: E501
+
+
+        :return: The domain_id of this ProblemSet.  # noqa: E501
+        :rtype: str
+        """
+        return self._domain_id
+
+    @domain_id.setter
+    def domain_id(self, domain_id):
+        """Sets the domain_id of this ProblemSet.
+
+
+        :param domain_id: The domain_id of this ProblemSet.  # noqa: E501
+        :type: str
+        """
+        if domain_id is None:
+            raise ValueError("Invalid value for `domain_id`, must not be `None`")  # noqa: E501
+
+        self._domain_id = domain_id
 
     @property
     def url(self):
         """Gets the url of this ProblemSet.  # noqa: E501
 
+        (unique) url of the domain  # noqa: E501
 
         :return: The url of this ProblemSet.  # noqa: E501
         :rtype: str
@@ -117,12 +154,11 @@ class ProblemSet(object):
     def url(self, url):
         """Sets the url of this ProblemSet.
 
+        (unique) url of the domain  # noqa: E501
 
         :param url: The url of this ProblemSet.  # noqa: E501
         :type: str
         """
-        if url is None:
-            raise ValueError("Invalid value for `url`, must not be `None`")  # noqa: E501
 
         self._url = url
 
@@ -267,69 +303,6 @@ class ProblemSet(object):
         self._due_time = due_time
 
     @property
-    def id(self):
-        """Gets the id of this ProblemSet.  # noqa: E501
-
-
-        :return: The id of this ProblemSet.  # noqa: E501
-        :rtype: str
-        """
-        return self._id
-
-    @id.setter
-    def id(self, id):
-        """Sets the id of this ProblemSet.
-
-
-        :param id: The id of this ProblemSet.  # noqa: E501
-        :type: str
-        """
-
-        self._id = id
-
-    @property
-    def created_at(self):
-        """Gets the created_at of this ProblemSet.  # noqa: E501
-
-
-        :return: The created_at of this ProblemSet.  # noqa: E501
-        :rtype: datetime
-        """
-        return self._created_at
-
-    @created_at.setter
-    def created_at(self, created_at):
-        """Sets the created_at of this ProblemSet.
-
-
-        :param created_at: The created_at of this ProblemSet.  # noqa: E501
-        :type: datetime
-        """
-
-        self._created_at = created_at
-
-    @property
-    def updated_at(self):
-        """Gets the updated_at of this ProblemSet.  # noqa: E501
-
-
-        :return: The updated_at of this ProblemSet.  # noqa: E501
-        :rtype: datetime
-        """
-        return self._updated_at
-
-    @updated_at.setter
-    def updated_at(self, updated_at):
-        """Sets the updated_at of this ProblemSet.
-
-
-        :param updated_at: The updated_at of this ProblemSet.  # noqa: E501
-        :type: datetime
-        """
-
-        self._updated_at = updated_at
-
-    @property
     def num_submit(self):
         """Gets the num_submit of this ProblemSet.  # noqa: E501
 
@@ -370,29 +343,6 @@ class ProblemSet(object):
         """
 
         self._num_accept = num_accept
-
-    @property
-    def domain_id(self):
-        """Gets the domain_id of this ProblemSet.  # noqa: E501
-
-
-        :return: The domain_id of this ProblemSet.  # noqa: E501
-        :rtype: str
-        """
-        return self._domain_id
-
-    @domain_id.setter
-    def domain_id(self, domain_id):
-        """Sets the domain_id of this ProblemSet.
-
-
-        :param domain_id: The domain_id of this ProblemSet.  # noqa: E501
-        :type: str
-        """
-        if domain_id is None:
-            raise ValueError("Invalid value for `domain_id`, must not be `None`")  # noqa: E501
-
-        self._domain_id = domain_id
 
     @property
     def owner_id(self):

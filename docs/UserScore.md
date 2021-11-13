@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**user** | [**UserBase**](UserBase.md) |  | 
+**user** | [**User**](User.md) |  | 
 **total_score** | **int** |  | 
 **total_time_spent** | **float** |  | 
 **scores** | [**list[Score]**](Score.md) |  | 

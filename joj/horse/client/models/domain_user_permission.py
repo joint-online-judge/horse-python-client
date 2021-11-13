@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: 307ba8d@2021-11-11T16:39:45Z  # noqa: E501
+    Git version: bef9fbf@2021-11-13T17:48:31Z  # noqa: E501
 
     OpenAPI spec version: 0.1.0
     
@@ -28,45 +28,99 @@ class DomainUserPermission(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'domain_user': 'DomainUser',
+        'domain_id': 'str',
+        'user_id': 'str',
+        'role': 'str',
         'permission': 'DomainPermission'
     }
 
     attribute_map = {
-        'domain_user': 'domainUser',
+        'domain_id': 'domainId',
+        'user_id': 'userId',
+        'role': 'role',
         'permission': 'permission'
     }
 
-    def __init__(self, domain_user=None, permission=None):  # noqa: E501
+    def __init__(self, domain_id=None, user_id=None, role=None, permission=None):  # noqa: E501
         """DomainUserPermission - a model defined in Swagger"""  # noqa: E501
-        self._domain_user = None
+        self._domain_id = None
+        self._user_id = None
+        self._role = None
         self._permission = None
         self.discriminator = None
-        self.domain_user = domain_user
+        self.domain_id = domain_id
+        self.user_id = user_id
+        self.role = role
         self.permission = permission
 
     @property
-    def domain_user(self):
-        """Gets the domain_user of this DomainUserPermission.  # noqa: E501
+    def domain_id(self):
+        """Gets the domain_id of this DomainUserPermission.  # noqa: E501
 
 
-        :return: The domain_user of this DomainUserPermission.  # noqa: E501
-        :rtype: DomainUser
+        :return: The domain_id of this DomainUserPermission.  # noqa: E501
+        :rtype: str
         """
-        return self._domain_user
+        return self._domain_id
 
-    @domain_user.setter
-    def domain_user(self, domain_user):
-        """Sets the domain_user of this DomainUserPermission.
+    @domain_id.setter
+    def domain_id(self, domain_id):
+        """Sets the domain_id of this DomainUserPermission.
 
 
-        :param domain_user: The domain_user of this DomainUserPermission.  # noqa: E501
-        :type: DomainUser
+        :param domain_id: The domain_id of this DomainUserPermission.  # noqa: E501
+        :type: str
         """
-        if domain_user is None:
-            raise ValueError("Invalid value for `domain_user`, must not be `None`")  # noqa: E501
+        if domain_id is None:
+            raise ValueError("Invalid value for `domain_id`, must not be `None`")  # noqa: E501
 
-        self._domain_user = domain_user
+        self._domain_id = domain_id
+
+    @property
+    def user_id(self):
+        """Gets the user_id of this DomainUserPermission.  # noqa: E501
+
+
+        :return: The user_id of this DomainUserPermission.  # noqa: E501
+        :rtype: str
+        """
+        return self._user_id
+
+    @user_id.setter
+    def user_id(self, user_id):
+        """Sets the user_id of this DomainUserPermission.
+
+
+        :param user_id: The user_id of this DomainUserPermission.  # noqa: E501
+        :type: str
+        """
+        if user_id is None:
+            raise ValueError("Invalid value for `user_id`, must not be `None`")  # noqa: E501
+
+        self._user_id = user_id
+
+    @property
+    def role(self):
+        """Gets the role of this DomainUserPermission.  # noqa: E501
+
+
+        :return: The role of this DomainUserPermission.  # noqa: E501
+        :rtype: str
+        """
+        return self._role
+
+    @role.setter
+    def role(self, role):
+        """Sets the role of this DomainUserPermission.
+
+
+        :param role: The role of this DomainUserPermission.  # noqa: E501
+        :type: str
+        """
+        if role is None:
+            raise ValueError("Invalid value for `role`, must not be `None`")  # noqa: E501
+
+        self._role = role
 
     @property
     def permission(self):

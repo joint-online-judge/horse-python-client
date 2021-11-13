@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: 307ba8d@2021-11-11T16:39:45Z  # noqa: E501
+    Git version: bef9fbf@2021-11-13T17:48:31Z  # noqa: E501
 
     OpenAPI spec version: 0.1.0
     
@@ -28,42 +28,38 @@ class Domain(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'id': 'str',
         'url': 'str',
         'name': 'str',
         'gravatar': 'str',
         'bulletin': 'str',
         'hidden': 'bool',
-        'id': 'str',
-        'created_at': 'datetime',
-        'updated_at': 'datetime',
         'owner_id': 'str'
     }
 
     attribute_map = {
+        'id': 'id',
         'url': 'url',
         'name': 'name',
         'gravatar': 'gravatar',
         'bulletin': 'bulletin',
         'hidden': 'hidden',
-        'id': 'id',
-        'created_at': 'createdAt',
-        'updated_at': 'updatedAt',
         'owner_id': 'ownerId'
     }
 
-    def __init__(self, url=None, name=None, gravatar='', bulletin='', hidden=True, id=None, created_at=None, updated_at=None, owner_id=None):  # noqa: E501
+    def __init__(self, id=None, url='', name=None, gravatar='', bulletin='', hidden=True, owner_id=None):  # noqa: E501
         """Domain - a model defined in Swagger"""  # noqa: E501
+        self._id = None
         self._url = None
         self._name = None
         self._gravatar = None
         self._bulletin = None
         self._hidden = None
-        self._id = None
-        self._created_at = None
-        self._updated_at = None
         self._owner_id = None
         self.discriminator = None
-        self.url = url
+        self.id = id
+        if url is not None:
+            self.url = url
         self.name = name
         if gravatar is not None:
             self.gravatar = gravatar
@@ -71,18 +67,36 @@ class Domain(object):
             self.bulletin = bulletin
         if hidden is not None:
             self.hidden = hidden
-        if id is not None:
-            self.id = id
-        if created_at is not None:
-            self.created_at = created_at
-        if updated_at is not None:
-            self.updated_at = updated_at
         self.owner_id = owner_id
+
+    @property
+    def id(self):
+        """Gets the id of this Domain.  # noqa: E501
+
+
+        :return: The id of this Domain.  # noqa: E501
+        :rtype: str
+        """
+        return self._id
+
+    @id.setter
+    def id(self, id):
+        """Sets the id of this Domain.
+
+
+        :param id: The id of this Domain.  # noqa: E501
+        :type: str
+        """
+        if id is None:
+            raise ValueError("Invalid value for `id`, must not be `None`")  # noqa: E501
+
+        self._id = id
 
     @property
     def url(self):
         """Gets the url of this Domain.  # noqa: E501
 
+        (unique) url of the domain  # noqa: E501
 
         :return: The url of this Domain.  # noqa: E501
         :rtype: str
@@ -93,12 +107,11 @@ class Domain(object):
     def url(self, url):
         """Sets the url of this Domain.
 
+        (unique) url of the domain  # noqa: E501
 
         :param url: The url of this Domain.  # noqa: E501
         :type: str
         """
-        if url is None:
-            raise ValueError("Invalid value for `url`, must not be `None`")  # noqa: E501
 
         self._url = url
 
@@ -195,69 +208,6 @@ class Domain(object):
         """
 
         self._hidden = hidden
-
-    @property
-    def id(self):
-        """Gets the id of this Domain.  # noqa: E501
-
-
-        :return: The id of this Domain.  # noqa: E501
-        :rtype: str
-        """
-        return self._id
-
-    @id.setter
-    def id(self, id):
-        """Sets the id of this Domain.
-
-
-        :param id: The id of this Domain.  # noqa: E501
-        :type: str
-        """
-
-        self._id = id
-
-    @property
-    def created_at(self):
-        """Gets the created_at of this Domain.  # noqa: E501
-
-
-        :return: The created_at of this Domain.  # noqa: E501
-        :rtype: datetime
-        """
-        return self._created_at
-
-    @created_at.setter
-    def created_at(self, created_at):
-        """Sets the created_at of this Domain.
-
-
-        :param created_at: The created_at of this Domain.  # noqa: E501
-        :type: datetime
-        """
-
-        self._created_at = created_at
-
-    @property
-    def updated_at(self):
-        """Gets the updated_at of this Domain.  # noqa: E501
-
-
-        :return: The updated_at of this Domain.  # noqa: E501
-        :rtype: datetime
-        """
-        return self._updated_at
-
-    @updated_at.setter
-    def updated_at(self, updated_at):
-        """Sets the updated_at of this Domain.
-
-
-        :param updated_at: The updated_at of this Domain.  # noqa: E501
-        :type: datetime
-        """
-
-        self._updated_at = updated_at
 
     @property
     def owner_id(self):
