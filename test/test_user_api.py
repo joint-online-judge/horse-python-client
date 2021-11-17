@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: 039716b@2021-11-17T14:23:21Z  # noqa: E501
+    Git version: fb13909@2021-11-17T18:47:48Z  # noqa: E501
 
     OpenAPI spec version: 0.1.0
     
@@ -60,6 +60,13 @@ class TestUserApi(unittest.TestCase):
         """Test case for list_user_domains_api_v1_users_uid_domains_get
 
         List User Domains  # noqa: E501
+        """
+        pass
+
+    def test_list_users_api_v1_users_get(self):
+        """Test case for list_users_api_v1_users_get
+
+        List Users  # noqa: E501
         """
         pass
 

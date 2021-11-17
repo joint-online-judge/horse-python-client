@@ -9,6 +9,7 @@ Method | HTTP request | Description
 [**get_user_problems_api_v1_user_problems_get**](UserApi.md#get_user_problems_api_v1_user_problems_get) | **GET** /api/v1/user/problems | Get User Problems
 [**get_user_problems_api_v1_users_uid_problems_get**](UserApi.md#get_user_problems_api_v1_users_uid_problems_get) | **GET** /api/v1/users/{uid}/problems | Get User Problems
 [**list_user_domains_api_v1_users_uid_domains_get**](UserApi.md#list_user_domains_api_v1_users_uid_domains_get) | **GET** /api/v1/users/{uid}/domains | List User Domains
+[**list_users_api_v1_users_get**](UserApi.md#list_users_api_v1_users_get) | **GET** /api/v1/users | List Users
 
 # **get_user_api_v1_user_get**
 > UserDetailResp get_user_api_v1_user_get()
@@ -243,6 +244,59 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**DomainListResp**](DomainListResp.md)
+
+### Authorization
+
+[HTTPBearer](../README.md#HTTPBearer)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **list_users_api_v1_users_get**
+> UserListResp list_users_api_v1_users_get(query=query, ordering=ordering, offset=offset, limit=limit)
+
+List Users
+
+### Example
+```python
+from __future__ import print_function
+import time
+import joj.horse.client
+from joj.horse.client.rest import ApiException
+from pprint import pprint
+
+
+# create an instance of the API class
+api_instance = joj.horse.client.UserApi(joj.horse.client.ApiClient(configuration))
+query = '' # str |  (optional)
+ordering = '' # str | Comma seperated list of ordering the results. You may specify reverse orderings by prefixing the field name with '-'.  Available fields: username (optional)
+offset = 0 # int |  (optional) (default to 0)
+limit = 100 # int |  (optional) (default to 100)
+
+try:
+    # List Users
+    api_response = api_instance.list_users_api_v1_users_get(query=query, ordering=ordering, offset=offset, limit=limit)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling UserApi->list_users_api_v1_users_get: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **query** | **str**|  | [optional] 
+ **ordering** | **str**| Comma seperated list of ordering the results. You may specify reverse orderings by prefixing the field name with &#x27;-&#x27;.  Available fields: username | [optional] 
+ **offset** | **int**|  | [optional] [default to 0]
+ **limit** | **int**|  | [optional] [default to 100]
+
+### Return type
+
+[**UserListResp**](UserListResp.md)
 
 ### Authorization
 

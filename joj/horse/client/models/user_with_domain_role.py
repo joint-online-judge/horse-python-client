@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: 039716b@2021-11-17T14:23:21Z  # noqa: E501
+    Git version: fb13909@2021-11-17T18:47:48Z  # noqa: E501
 
     OpenAPI spec version: 0.1.0
     
@@ -34,8 +34,6 @@ class UserWithDomainRole(object):
         'gravatar': 'str',
         'student_id': 'str',
         'real_name': 'str',
-        'role': 'str',
-        'is_active': 'bool',
         'domain_id': 'str',
         'domain_role': 'str'
     }
@@ -47,13 +45,11 @@ class UserWithDomainRole(object):
         'gravatar': 'gravatar',
         'student_id': 'studentId',
         'real_name': 'realName',
-        'role': 'role',
-        'is_active': 'isActive',
         'domain_id': 'domainId',
         'domain_role': 'domainRole'
     }
 
-    def __init__(self, id=None, username=None, email=None, gravatar='', student_id='', real_name='', role='user', is_active=False, domain_id=None, domain_role=None):  # noqa: E501
+    def __init__(self, id=None, username=None, email=None, gravatar='', student_id='', real_name='', domain_id=None, domain_role=None):  # noqa: E501
         """UserWithDomainRole - a model defined in Swagger"""  # noqa: E501
         self._id = None
         self._username = None
@@ -61,8 +57,6 @@ class UserWithDomainRole(object):
         self._gravatar = None
         self._student_id = None
         self._real_name = None
-        self._role = None
-        self._is_active = None
         self._domain_id = None
         self._domain_role = None
         self.discriminator = None
@@ -75,12 +69,10 @@ class UserWithDomainRole(object):
             self.student_id = student_id
         if real_name is not None:
             self.real_name = real_name
-        if role is not None:
-            self.role = role
-        if is_active is not None:
-            self.is_active = is_active
-        self.domain_id = domain_id
-        self.domain_role = domain_role
+        if domain_id is not None:
+            self.domain_id = domain_id
+        if domain_role is not None:
+            self.domain_role = domain_role
 
     @property
     def id(self):
@@ -215,48 +207,6 @@ class UserWithDomainRole(object):
         self._real_name = real_name
 
     @property
-    def role(self):
-        """Gets the role of this UserWithDomainRole.  # noqa: E501
-
-
-        :return: The role of this UserWithDomainRole.  # noqa: E501
-        :rtype: str
-        """
-        return self._role
-
-    @role.setter
-    def role(self, role):
-        """Sets the role of this UserWithDomainRole.
-
-
-        :param role: The role of this UserWithDomainRole.  # noqa: E501
-        :type: str
-        """
-
-        self._role = role
-
-    @property
-    def is_active(self):
-        """Gets the is_active of this UserWithDomainRole.  # noqa: E501
-
-
-        :return: The is_active of this UserWithDomainRole.  # noqa: E501
-        :rtype: bool
-        """
-        return self._is_active
-
-    @is_active.setter
-    def is_active(self, is_active):
-        """Sets the is_active of this UserWithDomainRole.
-
-
-        :param is_active: The is_active of this UserWithDomainRole.  # noqa: E501
-        :type: bool
-        """
-
-        self._is_active = is_active
-
-    @property
     def domain_id(self):
         """Gets the domain_id of this UserWithDomainRole.  # noqa: E501
 
@@ -274,8 +224,6 @@ class UserWithDomainRole(object):
         :param domain_id: The domain_id of this UserWithDomainRole.  # noqa: E501
         :type: str
         """
-        if domain_id is None:
-            raise ValueError("Invalid value for `domain_id`, must not be `None`")  # noqa: E501
 
         self._domain_id = domain_id
 
@@ -297,8 +245,6 @@ class UserWithDomainRole(object):
         :param domain_role: The domain_role of this UserWithDomainRole.  # noqa: E501
         :type: str
         """
-        if domain_role is None:
-            raise ValueError("Invalid value for `domain_role`, must not be `None`")  # noqa: E501
 
         self._domain_role = domain_role
 

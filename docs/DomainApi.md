@@ -20,6 +20,7 @@ Method | HTTP request | Description
 [**list_domain_users_api_v1_domains_domain_users_get**](DomainApi.md#list_domain_users_api_v1_domains_domain_users_get) | **GET** /api/v1/domains/{domain}/users | List Domain Users
 [**list_domains_api_v1_domains_get**](DomainApi.md#list_domains_api_v1_domains_get) | **GET** /api/v1/domains | List Domains
 [**remove_domain_user_api_v1_domains_domain_users_user_delete**](DomainApi.md#remove_domain_user_api_v1_domains_domain_users_user_delete) | **DELETE** /api/v1/domains/{domain}/users/{user} | Remove Domain User
+[**search_domain_candidates_api_v1_domains_domain_candidates_get**](DomainApi.md#search_domain_candidates_api_v1_domains_domain_candidates_get) | **GET** /api/v1/domains/{domain}/candidates | Search Domain Candidates
 [**transfer_domain_api_v1_domains_domain_transfer_post**](DomainApi.md#transfer_domain_api_v1_domains_domain_transfer_post) | **POST** /api/v1/domains/{domain}/transfer | Transfer Domain
 [**update_domain_api_v1_domains_domain_patch**](DomainApi.md#update_domain_api_v1_domains_domain_patch) | **PATCH** /api/v1/domains/{domain} | Update Domain
 [**update_domain_invitation_api_v1_domains_domain_invitations_invitation_patch**](DomainApi.md#update_domain_invitation_api_v1_domains_domain_invitations_invitation_patch) | **PATCH** /api/v1/domains/{domain}/invitations/{invitation} | Update Domain Invitation
@@ -802,6 +803,57 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**EmptyResp**](EmptyResp.md)
+
+### Authorization
+
+[HTTPBearer](../README.md#HTTPBearer)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **search_domain_candidates_api_v1_domains_domain_candidates_get**
+> UserWithDomainRoleListResp search_domain_candidates_api_v1_domains_domain_candidates_get(domain, query, ordering=ordering)
+
+Search Domain Candidates
+
+### Example
+```python
+from __future__ import print_function
+import time
+import joj.horse.client
+from joj.horse.client.rest import ApiException
+from pprint import pprint
+
+
+# create an instance of the API class
+api_instance = joj.horse.client.DomainApi(joj.horse.client.ApiClient(configuration))
+domain = 'domain_example' # str | url or id of the domain
+query = 'query_example' # str | search query
+ordering = '' # str | Comma seperated list of ordering the results. You may specify reverse orderings by prefixing the field name with '-'.  Available fields: username (optional)
+
+try:
+    # Search Domain Candidates
+    api_response = api_instance.search_domain_candidates_api_v1_domains_domain_candidates_get(domain, query, ordering=ordering)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling DomainApi->search_domain_candidates_api_v1_domains_domain_candidates_get: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **domain** | **str**| url or id of the domain | 
+ **query** | **str**| search query | 
+ **ordering** | **str**| Comma seperated list of ordering the results. You may specify reverse orderings by prefixing the field name with &#x27;-&#x27;.  Available fields: username | [optional] 
+
+### Return type
+
+[**UserWithDomainRoleListResp**](UserWithDomainRoleListResp.md)
 
 ### Authorization
 

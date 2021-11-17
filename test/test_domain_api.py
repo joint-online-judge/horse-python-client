@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: 039716b@2021-11-17T14:23:21Z  # noqa: E501
+    Git version: fb13909@2021-11-17T18:47:48Z  # noqa: E501
 
     OpenAPI spec version: 0.1.0
     
@@ -137,6 +137,13 @@ class TestDomainApi(unittest.TestCase):
         """Test case for remove_domain_user_api_v1_domains_domain_users_user_delete
 
         Remove Domain User  # noqa: E501
+        """
+        pass
+
+    def test_search_domain_candidates_api_v1_domains_domain_candidates_get(self):
+        """Test case for search_domain_candidates_api_v1_domains_domain_candidates_get
+
+        Search Domain Candidates  # noqa: E501
         """
         pass
 
