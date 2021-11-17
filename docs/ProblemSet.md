@@ -10,8 +10,8 @@ Name | Type | Description | Notes
 **content** | **str** | content of the problem set | [optional] [default to '']
 **hidden** | **bool** | whether the problem set is hidden | [optional] [default to False]
 **scoreboard_hidden** | **bool** | whether the scoreboard of the problem set is hidden | [optional] [default to False]
-**available_time** | **datetime** | the problem set is available from | [optional] 
-**due_time** | **datetime** | the problem set is due at | [optional] 
+**available_time** | **datetime** | the problem set is available from | 
+**due_time** | **datetime** | the problem set is due at | 
 **num_submit** | **int** |  | [optional] [default to 0]
 **num_accept** | **int** |  | [optional] [default to 0]
 **owner_id** | **str** |  | 

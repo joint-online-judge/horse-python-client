@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: 60a5a0a@2021-11-15T07:06:19Z  # noqa: E501
+    Git version: 039716b@2021-11-17T14:23:21Z  # noqa: E501
 
     OpenAPI spec version: 0.1.0
     
@@ -354,7 +354,7 @@ class ProblemApi(object):
         :param async_req bool
         :param str domain: url or id of the domain (required)
         :param str problem: url or id of the problem (required)
-        :return: ProblemResp
+        :return: ProblemDetailResp
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -376,7 +376,7 @@ class ProblemApi(object):
         :param async_req bool
         :param str domain: url or id of the domain (required)
         :param str problem: url or id of the problem (required)
-        :return: ProblemResp
+        :return: ProblemDetailResp
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -436,7 +436,7 @@ class ProblemApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='ProblemResp',  # noqa: E501
+            response_type='ProblemDetailResp',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -454,9 +454,7 @@ class ProblemApi(object):
 
         :param async_req bool
         :param str domain: url or id of the domain (required)
-        :param str problem_set:
-        :param str problem_group:
-        :param str ordering: Comma seperated list of ordering the results. You may specify reverse orderings by prefixing the field name with '-'.  Available fields: Any
+        :param str ordering: Comma seperated list of ordering the results. You may specify reverse orderings by prefixing the field name with '-'.  Available fields: name
         :param int offset:
         :param int limit:
         :return: ProblemListResp
@@ -480,9 +478,7 @@ class ProblemApi(object):
 
         :param async_req bool
         :param str domain: url or id of the domain (required)
-        :param str problem_set:
-        :param str problem_group:
-        :param str ordering: Comma seperated list of ordering the results. You may specify reverse orderings by prefixing the field name with '-'.  Available fields: Any
+        :param str ordering: Comma seperated list of ordering the results. You may specify reverse orderings by prefixing the field name with '-'.  Available fields: name
         :param int offset:
         :param int limit:
         :return: ProblemListResp
@@ -490,7 +486,7 @@ class ProblemApi(object):
                  returns the request thread.
         """
 
-        all_params = ['domain', 'problem_set', 'problem_group', 'ordering', 'offset', 'limit']  # noqa: E501
+        all_params = ['domain', 'ordering', 'offset', 'limit']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -517,10 +513,6 @@ class ProblemApi(object):
             path_params['domain'] = params['domain']  # noqa: E501
 
         query_params = []
-        if 'problem_set' in params:
-            query_params.append(('problemSet', params['problem_set']))  # noqa: E501
-        if 'problem_group' in params:
-            query_params.append(('problemGroup', params['problem_group']))  # noqa: E501
         if 'ordering' in params:
             query_params.append(('ordering', params['ordering']))  # noqa: E501
         if 'offset' in params:

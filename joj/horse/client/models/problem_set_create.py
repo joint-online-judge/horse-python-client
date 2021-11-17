@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: 60a5a0a@2021-11-15T07:06:19Z  # noqa: E501
+    Git version: 039716b@2021-11-17T14:23:21Z  # noqa: E501
 
     OpenAPI spec version: 0.1.0
     
@@ -66,8 +66,10 @@ class ProblemSetCreate(object):
             self.hidden = hidden
         if scoreboard_hidden is not None:
             self.scoreboard_hidden = scoreboard_hidden
-        self.available_time = available_time
-        self.due_time = due_time
+        if available_time is not None:
+            self.available_time = available_time
+        if due_time is not None:
+            self.due_time = due_time
 
     @property
     def url(self):
@@ -204,8 +206,6 @@ class ProblemSetCreate(object):
         :param available_time: The available_time of this ProblemSetCreate.  # noqa: E501
         :type: datetime
         """
-        if available_time is None:
-            raise ValueError("Invalid value for `available_time`, must not be `None`")  # noqa: E501
 
         self._available_time = available_time
 
@@ -227,8 +227,6 @@ class ProblemSetCreate(object):
         :param due_time: The due_time of this ProblemSetCreate.  # noqa: E501
         :type: datetime
         """
-        if due_time is None:
-            raise ValueError("Invalid value for `due_time`, must not be `None`")  # noqa: E501
 
         self._due_time = due_time
 

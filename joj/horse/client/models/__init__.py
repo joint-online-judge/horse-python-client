@@ -4,7 +4,7 @@
 """
     JOJ Horse
 
-    Git version: 60a5a0a@2021-11-15T07:06:19Z  # noqa: E501
+    Git version: 039716b@2021-11-17T14:23:21Z  # noqa: E501
 
     OpenAPI spec version: 0.1.0
     
@@ -64,6 +64,8 @@ from joj.horse.client.models.problem import Problem
 from joj.horse.client.models.problem_clone import ProblemClone
 from joj.horse.client.models.problem_config_edit import ProblemConfigEdit
 from joj.horse.client.models.problem_create import ProblemCreate
+from joj.horse.client.models.problem_detail import ProblemDetail
+from joj.horse.client.models.problem_detail_resp import ProblemDetailResp
 from joj.horse.client.models.problem_edit import ProblemEdit
 from joj.horse.client.models.problem_group import ProblemGroup
 from joj.horse.client.models.problem_group_list import ProblemGroupList
@@ -71,14 +73,19 @@ from joj.horse.client.models.problem_group_list_resp import ProblemGroupListResp
 from joj.horse.client.models.problem_list import ProblemList
 from joj.horse.client.models.problem_list_resp import ProblemListResp
 from joj.horse.client.models.problem_permission import ProblemPermission
+from joj.horse.client.models.problem_preview import ProblemPreview
 from joj.horse.client.models.problem_resp import ProblemResp
 from joj.horse.client.models.problem_set import ProblemSet
+from joj.horse.client.models.problem_set_add_problem import ProblemSetAddProblem
 from joj.horse.client.models.problem_set_create import ProblemSetCreate
+from joj.horse.client.models.problem_set_detail import ProblemSetDetail
+from joj.horse.client.models.problem_set_detail_resp import ProblemSetDetailResp
 from joj.horse.client.models.problem_set_edit import ProblemSetEdit
 from joj.horse.client.models.problem_set_list import ProblemSetList
 from joj.horse.client.models.problem_set_list_resp import ProblemSetListResp
 from joj.horse.client.models.problem_set_permission import ProblemSetPermission
 from joj.horse.client.models.problem_set_resp import ProblemSetResp
+from joj.horse.client.models.problem_set_update_problem import ProblemSetUpdateProblem
 from joj.horse.client.models.problem_solution_submit import ProblemSolutionSubmit
 from joj.horse.client.models.record import Record
 from joj.horse.client.models.record_case import RecordCase

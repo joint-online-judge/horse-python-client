@@ -161,7 +161,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_problem_api_v1_domains_domain_problems_problem_get**
-> ProblemResp get_problem_api_v1_domains_domain_problems_problem_get(domain, problem)
+> ProblemDetailResp get_problem_api_v1_domains_domain_problems_problem_get(domain, problem)
 
 Get Problem
 
@@ -196,7 +196,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ProblemResp**](ProblemResp.md)
+[**ProblemDetailResp**](ProblemDetailResp.md)
 
 ### Authorization
 
@@ -210,7 +210,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **list_problems_api_v1_domains_domain_problems_get**
-> ProblemListResp list_problems_api_v1_domains_domain_problems_get(domain, problem_set=problem_set, problem_group=problem_group, ordering=ordering, offset=offset, limit=limit)
+> ProblemListResp list_problems_api_v1_domains_domain_problems_get(domain, ordering=ordering, offset=offset, limit=limit)
 
 List Problems
 
@@ -226,15 +226,13 @@ from pprint import pprint
 # create an instance of the API class
 api_instance = joj.horse.client.ProblemApi(joj.horse.client.ApiClient(configuration))
 domain = 'domain_example' # str | url or id of the domain
-problem_set = 'problem_set_example' # str |  (optional)
-problem_group = 'problem_group_example' # str |  (optional)
-ordering = '' # str | Comma seperated list of ordering the results. You may specify reverse orderings by prefixing the field name with '-'.  Available fields: Any (optional)
+ordering = '' # str | Comma seperated list of ordering the results. You may specify reverse orderings by prefixing the field name with '-'.  Available fields: name (optional)
 offset = 0 # int |  (optional) (default to 0)
 limit = 100 # int |  (optional) (default to 100)
 
 try:
     # List Problems
-    api_response = api_instance.list_problems_api_v1_domains_domain_problems_get(domain, problem_set=problem_set, problem_group=problem_group, ordering=ordering, offset=offset, limit=limit)
+    api_response = api_instance.list_problems_api_v1_domains_domain_problems_get(domain, ordering=ordering, offset=offset, limit=limit)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling ProblemApi->list_problems_api_v1_domains_domain_problems_get: %s\n" % e)
@@ -245,9 +243,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **domain** | **str**| url or id of the domain | 
- **problem_set** | **str**|  | [optional] 
- **problem_group** | **str**|  | [optional] 
- **ordering** | **str**| Comma seperated list of ordering the results. You may specify reverse orderings by prefixing the field name with &#x27;-&#x27;.  Available fields: Any | [optional] 
+ **ordering** | **str**| Comma seperated list of ordering the results. You may specify reverse orderings by prefixing the field name with &#x27;-&#x27;.  Available fields: name | [optional] 
  **offset** | **int**|  | [optional] [default to 0]
  **limit** | **int**|  | [optional] [default to 100]
 
