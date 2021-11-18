@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: fb13909@2021-11-17T18:47:48Z  # noqa: E501
+    Git version: 900ad22@2021-11-18T19:13:08Z  # noqa: E501
 
     OpenAPI spec version: 0.1.0
     
@@ -41,7 +41,7 @@ class DomainInvitationCreate(object):
         'role': 'role'
     }
 
-    def __init__(self, url='', code='', expire_at=None, role='user'):  # noqa: E501
+    def __init__(self, url='', code=None, expire_at=None, role='user'):  # noqa: E501
         """DomainInvitationCreate - a model defined in Swagger"""  # noqa: E501
         self._url = None
         self._code = None
@@ -50,9 +50,9 @@ class DomainInvitationCreate(object):
         self.discriminator = None
         if url is not None:
             self.url = url
-        if code is not None:
-            self.code = code
-        self.expire_at = expire_at
+        self.code = code
+        if expire_at is not None:
+            self.expire_at = expire_at
         if role is not None:
             self.role = role
 
@@ -99,6 +99,8 @@ class DomainInvitationCreate(object):
         :param code: The code of this DomainInvitationCreate.  # noqa: E501
         :type: str
         """
+        if code is None:
+            raise ValueError("Invalid value for `code`, must not be `None`")  # noqa: E501
 
         self._code = code
 
@@ -120,8 +122,6 @@ class DomainInvitationCreate(object):
         :param expire_at: The expire_at of this DomainInvitationCreate.  # noqa: E501
         :type: datetime
         """
-        if expire_at is None:
-            raise ValueError("Invalid value for `expire_at`, must not be `None`")  # noqa: E501
 
         self._expire_at = expire_at
 

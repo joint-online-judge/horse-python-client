@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: fb13909@2021-11-17T18:47:48Z  # noqa: E501
+    Git version: 900ad22@2021-11-18T19:13:08Z  # noqa: E501
 
     OpenAPI spec version: 0.1.0
     
@@ -35,6 +35,6 @@ setup(
     packages=find_packages(),
     include_package_data=True,
     long_description="""\
-    Git version: fb13909@2021-11-17T18:47:48Z  # noqa: E501
+    Git version: 900ad22@2021-11-18T19:13:08Z  # noqa: E501
     """
 )

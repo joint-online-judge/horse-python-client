@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: fb13909@2021-11-17T18:47:48Z  # noqa: E501
+    Git version: 900ad22@2021-11-18T19:13:08Z  # noqa: E501
 
     OpenAPI spec version: 0.1.0
     
@@ -84,6 +84,13 @@ class TestDomainApi(unittest.TestCase):
         """
         pass
 
+    def test_get_domain_invitation_api_v1_domains_domain_invitations_invitation_get(self):
+        """Test case for get_domain_invitation_api_v1_domains_domain_invitations_invitation_get
+
+        Get Domain Invitation  # noqa: E501
+        """
+        pass
+
     def test_get_domain_role_api_v1_domains_domain_roles_role_get(self):
         """Test case for get_domain_role_api_v1_domains_domain_roles_role_get
 
@@ -109,6 +116,13 @@ class TestDomainApi(unittest.TestCase):
         """Test case for join_domain_by_invitation_api_v1_domains_domain_join_post
 
         Join Domain By Invitation  # noqa: E501
+        """
+        pass
+
+    def test_list_domain_invitations_api_v1_domains_domain_invitations_get(self):
+        """Test case for list_domain_invitations_api_v1_domains_domain_invitations_get
+
+        List Domain Invitations  # noqa: E501
         """
         pass
 

@@ -5,7 +5,7 @@
 """
     JOJ Horse
 
-    Git version: fb13909@2021-11-17T18:47:48Z  # noqa: E501
+    Git version: 900ad22@2021-11-18T19:13:08Z  # noqa: E501
 
     OpenAPI spec version: 0.1.0
     
@@ -48,6 +48,8 @@ from joj.horse.client.models.domain_edit import DomainEdit
 from joj.horse.client.models.domain_invitation import DomainInvitation
 from joj.horse.client.models.domain_invitation_create import DomainInvitationCreate
 from joj.horse.client.models.domain_invitation_edit import DomainInvitationEdit
+from joj.horse.client.models.domain_invitation_list import DomainInvitationList
+from joj.horse.client.models.domain_invitation_list_resp import DomainInvitationListResp
 from joj.horse.client.models.domain_invitation_resp import DomainInvitationResp
 from joj.horse.client.models.domain_list import DomainList
 from joj.horse.client.models.domain_list_resp import DomainListResp

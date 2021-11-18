@@ -13,9 +13,9 @@ Name | Type | Description | Notes
 **is_active** | **bool** |  | [optional] [default to False]
 **created_at** | **datetime** |  | 
 **updated_at** | **datetime** |  | 
-**register_ip** | **str** |  | [optional] [default to '127.0.0.1']
+**register_ip** | **str** |  | 
 **login_at** | **datetime** |  | 
-**login_ip** | **str** |  | [optional] [default to '127.0.0.1']
+**login_ip** | **str** |  | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

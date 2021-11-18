@@ -12,10 +12,12 @@ Method | HTTP request | Description
 [**delete_domain_invitation_api_v1_domains_domain_invitations_invitation_delete**](DomainApi.md#delete_domain_invitation_api_v1_domains_domain_invitations_invitation_delete) | **DELETE** /api/v1/domains/{domain}/invitations/{invitation} | Delete Domain Invitation
 [**delete_domain_role_api_v1_domains_domain_roles_role_delete**](DomainApi.md#delete_domain_role_api_v1_domains_domain_roles_role_delete) | **DELETE** /api/v1/domains/{domain}/roles/{role} | Delete Domain Role
 [**get_domain_api_v1_domains_domain_get**](DomainApi.md#get_domain_api_v1_domains_domain_get) | **GET** /api/v1/domains/{domain} | Get Domain
+[**get_domain_invitation_api_v1_domains_domain_invitations_invitation_get**](DomainApi.md#get_domain_invitation_api_v1_domains_domain_invitations_invitation_get) | **GET** /api/v1/domains/{domain}/invitations/{invitation} | Get Domain Invitation
 [**get_domain_role_api_v1_domains_domain_roles_role_get**](DomainApi.md#get_domain_role_api_v1_domains_domain_roles_role_get) | **GET** /api/v1/domains/{domain}/roles/{role} | Get Domain Role
 [**get_domain_user_api_v1_domains_domain_users_user_get**](DomainApi.md#get_domain_user_api_v1_domains_domain_users_user_get) | **GET** /api/v1/domains/{domain}/users/{user} | Get Domain User
 [**get_domain_user_permission_api_v1_domains_domain_users_user_permission_get**](DomainApi.md#get_domain_user_permission_api_v1_domains_domain_users_user_permission_get) | **GET** /api/v1/domains/{domain}/users/{user}/permission | Get Domain User Permission
 [**join_domain_by_invitation_api_v1_domains_domain_join_post**](DomainApi.md#join_domain_by_invitation_api_v1_domains_domain_join_post) | **POST** /api/v1/domains/{domain}/join | Join Domain By Invitation
+[**list_domain_invitations_api_v1_domains_domain_invitations_get**](DomainApi.md#list_domain_invitations_api_v1_domains_domain_invitations_get) | **GET** /api/v1/domains/{domain}/invitations | List Domain Invitations
 [**list_domain_roles_api_v1_domains_domain_roles_get**](DomainApi.md#list_domain_roles_api_v1_domains_domain_roles_get) | **GET** /api/v1/domains/{domain}/roles | List Domain Roles
 [**list_domain_users_api_v1_domains_domain_users_get**](DomainApi.md#list_domain_users_api_v1_domains_domain_users_get) | **GET** /api/v1/domains/{domain}/users | List Domain Users
 [**list_domains_api_v1_domains_get**](DomainApi.md#list_domains_api_v1_domains_get) | **GET** /api/v1/domains | List Domains
@@ -415,6 +417,55 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **get_domain_invitation_api_v1_domains_domain_invitations_invitation_get**
+> DomainInvitationResp get_domain_invitation_api_v1_domains_domain_invitations_invitation_get(domain, invitation)
+
+Get Domain Invitation
+
+### Example
+```python
+from __future__ import print_function
+import time
+import joj.horse.client
+from joj.horse.client.rest import ApiException
+from pprint import pprint
+
+
+# create an instance of the API class
+api_instance = joj.horse.client.DomainApi(joj.horse.client.ApiClient(configuration))
+domain = 'domain_example' # str | url or id of the domain
+invitation = 'invitation_example' # str | url or id of the domain invitation
+
+try:
+    # Get Domain Invitation
+    api_response = api_instance.get_domain_invitation_api_v1_domains_domain_invitations_invitation_get(domain, invitation)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling DomainApi->get_domain_invitation_api_v1_domains_domain_invitations_invitation_get: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **domain** | **str**| url or id of the domain | 
+ **invitation** | **str**| url or id of the domain invitation | 
+
+### Return type
+
+[**DomainInvitationResp**](DomainInvitationResp.md)
+
+### Authorization
+
+[HTTPBearer](../README.md#HTTPBearer)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **get_domain_role_api_v1_domains_domain_roles_role_get**
 > DomainRoleDetailResp get_domain_role_api_v1_domains_domain_roles_role_get(domain, role)
 
@@ -599,6 +650,53 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**UserWithDomainRoleResp**](UserWithDomainRoleResp.md)
+
+### Authorization
+
+[HTTPBearer](../README.md#HTTPBearer)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **list_domain_invitations_api_v1_domains_domain_invitations_get**
+> DomainInvitationListResp list_domain_invitations_api_v1_domains_domain_invitations_get(domain)
+
+List Domain Invitations
+
+### Example
+```python
+from __future__ import print_function
+import time
+import joj.horse.client
+from joj.horse.client.rest import ApiException
+from pprint import pprint
+
+
+# create an instance of the API class
+api_instance = joj.horse.client.DomainApi(joj.horse.client.ApiClient(configuration))
+domain = 'domain_example' # str | url or id of the domain
+
+try:
+    # List Domain Invitations
+    api_response = api_instance.list_domain_invitations_api_v1_domains_domain_invitations_get(domain)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling DomainApi->list_domain_invitations_api_v1_domains_domain_invitations_get: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **domain** | **str**| url or id of the domain | 
+
+### Return type
+
+[**DomainInvitationListResp**](DomainInvitationListResp.md)
 
 ### Authorization
 

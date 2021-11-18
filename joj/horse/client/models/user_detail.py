@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: fb13909@2021-11-17T18:47:48Z  # noqa: E501
+    Git version: 900ad22@2021-11-18T19:13:08Z  # noqa: E501
 
     OpenAPI spec version: 0.1.0
     
@@ -59,7 +59,7 @@ class UserDetail(object):
         'login_ip': 'loginIp'
     }
 
-    def __init__(self, id=None, username=None, email=None, gravatar='', student_id='', real_name='', role='user', is_active=False, created_at=None, updated_at=None, register_ip='127.0.0.1', login_at=None, login_ip='127.0.0.1'):  # noqa: E501
+    def __init__(self, id=None, username=None, email=None, gravatar='', student_id='', real_name='', role='user', is_active=False, created_at=None, updated_at=None, register_ip=None, login_at=None, login_ip=None):  # noqa: E501
         """UserDetail - a model defined in Swagger"""  # noqa: E501
         self._id = None
         self._username = None
@@ -90,11 +90,9 @@ class UserDetail(object):
             self.is_active = is_active
         self.created_at = created_at
         self.updated_at = updated_at
-        if register_ip is not None:
-            self.register_ip = register_ip
+        self.register_ip = register_ip
         self.login_at = login_at
-        if login_ip is not None:
-            self.login_ip = login_ip
+        self.login_ip = login_ip
 
     @property
     def id(self):
@@ -334,6 +332,8 @@ class UserDetail(object):
         :param register_ip: The register_ip of this UserDetail.  # noqa: E501
         :type: str
         """
+        if register_ip is None:
+            raise ValueError("Invalid value for `register_ip`, must not be `None`")  # noqa: E501
 
         self._register_ip = register_ip
 
@@ -378,6 +378,8 @@ class UserDetail(object):
         :param login_ip: The login_ip of this UserDetail.  # noqa: E501
         :type: str
         """
+        if login_ip is None:
+            raise ValueError("Invalid value for `login_ip`, must not be `None`")  # noqa: E501
 
         self._login_ip = login_ip
 

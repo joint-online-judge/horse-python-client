@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: fb13909@2021-11-17T18:47:48Z  # noqa: E501
+    Git version: 900ad22@2021-11-18T19:13:08Z  # noqa: E501
 
     OpenAPI spec version: 0.1.0
     
@@ -45,7 +45,7 @@ class DomainInvitation(object):
         'role': 'role'
     }
 
-    def __init__(self, id=None, domain_id=None, url='', code='', expire_at=None, role='user'):  # noqa: E501
+    def __init__(self, id=None, domain_id=None, url='', code=None, expire_at=None, role='user'):  # noqa: E501
         """DomainInvitation - a model defined in Swagger"""  # noqa: E501
         self._id = None
         self._domain_id = None
@@ -58,8 +58,7 @@ class DomainInvitation(object):
         self.domain_id = domain_id
         if url is not None:
             self.url = url
-        if code is not None:
-            self.code = code
+        self.code = code
         if expire_at is not None:
             self.expire_at = expire_at
         if role is not None:
@@ -154,6 +153,8 @@ class DomainInvitation(object):
         :param code: The code of this DomainInvitation.  # noqa: E501
         :type: str
         """
+        if code is None:
+            raise ValueError("Invalid value for `code`, must not be `None`")  # noqa: E501
 
         self._code = code
 

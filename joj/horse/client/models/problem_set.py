@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: fb13909@2021-11-17T18:47:48Z  # noqa: E501
+    Git version: 900ad22@2021-11-18T19:13:08Z  # noqa: E501
 
     OpenAPI spec version: 0.1.0
     
@@ -35,8 +35,9 @@ class ProblemSet(object):
         'content': 'str',
         'hidden': 'bool',
         'scoreboard_hidden': 'bool',
-        'available_time': 'datetime',
-        'due_time': 'datetime',
+        'due_at': 'datetime',
+        'lock_at': 'datetime',
+        'unlock_at': 'datetime',
         'num_submit': 'int',
         'num_accept': 'int',
         'owner_id': 'str'
@@ -50,14 +51,15 @@ class ProblemSet(object):
         'content': 'content',
         'hidden': 'hidden',
         'scoreboard_hidden': 'scoreboardHidden',
-        'available_time': 'availableTime',
-        'due_time': 'dueTime',
+        'due_at': 'dueAt',
+        'lock_at': 'lockAt',
+        'unlock_at': 'unlockAt',
         'num_submit': 'numSubmit',
         'num_accept': 'numAccept',
         'owner_id': 'ownerId'
     }
 
-    def __init__(self, id=None, domain_id=None, url='', title=None, content='', hidden=False, scoreboard_hidden=False, available_time=None, due_time=None, num_submit=0, num_accept=0, owner_id=None):  # noqa: E501
+    def __init__(self, id=None, domain_id=None, url='', title=None, content='', hidden=False, scoreboard_hidden=False, due_at=None, lock_at=None, unlock_at=None, num_submit=0, num_accept=0, owner_id=None):  # noqa: E501
         """ProblemSet - a model defined in Swagger"""  # noqa: E501
         self._id = None
         self._domain_id = None
@@ -66,8 +68,9 @@ class ProblemSet(object):
         self._content = None
         self._hidden = None
         self._scoreboard_hidden = None
-        self._available_time = None
-        self._due_time = None
+        self._due_at = None
+        self._lock_at = None
+        self._unlock_at = None
         self._num_submit = None
         self._num_accept = None
         self._owner_id = None
@@ -83,13 +86,18 @@ class ProblemSet(object):
             self.hidden = hidden
         if scoreboard_hidden is not None:
             self.scoreboard_hidden = scoreboard_hidden
-        self.available_time = available_time
-        self.due_time = due_time
+        if due_at is not None:
+            self.due_at = due_at
+        if lock_at is not None:
+            self.lock_at = lock_at
+        if unlock_at is not None:
+            self.unlock_at = unlock_at
         if num_submit is not None:
             self.num_submit = num_submit
         if num_accept is not None:
             self.num_accept = num_accept
-        self.owner_id = owner_id
+        if owner_id is not None:
+            self.owner_id = owner_id
 
     @property
     def id(self):
@@ -255,54 +263,73 @@ class ProblemSet(object):
         self._scoreboard_hidden = scoreboard_hidden
 
     @property
-    def available_time(self):
-        """Gets the available_time of this ProblemSet.  # noqa: E501
+    def due_at(self):
+        """Gets the due_at of this ProblemSet.  # noqa: E501
 
-        the problem set is available from  # noqa: E501
+        the problem set is due at this date  # noqa: E501
 
-        :return: The available_time of this ProblemSet.  # noqa: E501
+        :return: The due_at of this ProblemSet.  # noqa: E501
         :rtype: datetime
         """
-        return self._available_time
+        return self._due_at
 
-    @available_time.setter
-    def available_time(self, available_time):
-        """Sets the available_time of this ProblemSet.
+    @due_at.setter
+    def due_at(self, due_at):
+        """Sets the due_at of this ProblemSet.
 
-        the problem set is available from  # noqa: E501
+        the problem set is due at this date  # noqa: E501
 
-        :param available_time: The available_time of this ProblemSet.  # noqa: E501
+        :param due_at: The due_at of this ProblemSet.  # noqa: E501
         :type: datetime
         """
-        if available_time is None:
-            raise ValueError("Invalid value for `available_time`, must not be `None`")  # noqa: E501
 
-        self._available_time = available_time
+        self._due_at = due_at
 
     @property
-    def due_time(self):
-        """Gets the due_time of this ProblemSet.  # noqa: E501
+    def lock_at(self):
+        """Gets the lock_at of this ProblemSet.  # noqa: E501
 
-        the problem set is due at  # noqa: E501
+        the problem set is locked after this date  # noqa: E501
 
-        :return: The due_time of this ProblemSet.  # noqa: E501
+        :return: The lock_at of this ProblemSet.  # noqa: E501
         :rtype: datetime
         """
-        return self._due_time
+        return self._lock_at
 
-    @due_time.setter
-    def due_time(self, due_time):
-        """Sets the due_time of this ProblemSet.
+    @lock_at.setter
+    def lock_at(self, lock_at):
+        """Sets the lock_at of this ProblemSet.
 
-        the problem set is due at  # noqa: E501
+        the problem set is locked after this date  # noqa: E501
 
-        :param due_time: The due_time of this ProblemSet.  # noqa: E501
+        :param lock_at: The lock_at of this ProblemSet.  # noqa: E501
         :type: datetime
         """
-        if due_time is None:
-            raise ValueError("Invalid value for `due_time`, must not be `None`")  # noqa: E501
 
-        self._due_time = due_time
+        self._lock_at = lock_at
+
+    @property
+    def unlock_at(self):
+        """Gets the unlock_at of this ProblemSet.  # noqa: E501
+
+        the problem set is unlocked after this date  # noqa: E501
+
+        :return: The unlock_at of this ProblemSet.  # noqa: E501
+        :rtype: datetime
+        """
+        return self._unlock_at
+
+    @unlock_at.setter
+    def unlock_at(self, unlock_at):
+        """Sets the unlock_at of this ProblemSet.
+
+        the problem set is unlocked after this date  # noqa: E501
+
+        :param unlock_at: The unlock_at of this ProblemSet.  # noqa: E501
+        :type: datetime
+        """
+
+        self._unlock_at = unlock_at
 
     @property
     def num_submit(self):
@@ -364,8 +391,6 @@ class ProblemSet(object):
         :param owner_id: The owner_id of this ProblemSet.  # noqa: E501
         :type: str
         """
-        if owner_id is None:
-            raise ValueError("Invalid value for `owner_id`, must not be `None`")  # noqa: E501
 
         self._owner_id = owner_id
 

@@ -13,8 +13,8 @@ Name | Type | Description | Notes
 **num_accept** | **int** |  | [optional] [default to 0]
 **data_version** | **int** |  | [optional] [default to 2]
 **languages** | **str** |  | [optional] [default to '[]']
-**owner_id** | **str** |  | 
-**problem_group_id** | **str** |  | 
+**owner_id** | **str** |  | [optional] 
+**problem_group_id** | **str** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

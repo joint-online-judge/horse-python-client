@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: fb13909@2021-11-17T18:47:48Z  # noqa: E501
+    Git version: 900ad22@2021-11-18T19:13:08Z  # noqa: E501
 
     OpenAPI spec version: 0.1.0
     
@@ -95,8 +95,10 @@ class ProblemDetail(object):
             self.data_version = data_version
         if languages is not None:
             self.languages = languages
-        self.owner_id = owner_id
-        self.problem_group_id = problem_group_id
+        if owner_id is not None:
+            self.owner_id = owner_id
+        if problem_group_id is not None:
+            self.problem_group_id = problem_group_id
         self.created_at = created_at
         self.updated_at = updated_at
 
@@ -342,8 +344,6 @@ class ProblemDetail(object):
         :param owner_id: The owner_id of this ProblemDetail.  # noqa: E501
         :type: str
         """
-        if owner_id is None:
-            raise ValueError("Invalid value for `owner_id`, must not be `None`")  # noqa: E501
 
         self._owner_id = owner_id
 
@@ -365,8 +365,6 @@ class ProblemDetail(object):
         :param problem_group_id: The problem_group_id of this ProblemDetail.  # noqa: E501
         :type: str
         """
-        if problem_group_id is None:
-            raise ValueError("Invalid value for `problem_group_id`, must not be `None`")  # noqa: E501
 
         self._problem_group_id = problem_group_id
 

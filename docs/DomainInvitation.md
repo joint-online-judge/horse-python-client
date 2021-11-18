@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 **id** | **str** |  | 
 **domain_id** | **str** |  | 
 **url** | **str** | (unique) url of the domain | [optional] [default to '']
-**code** | **str** | invitation code | [optional] [default to '']
+**code** | **str** | invitation code | 
 **expire_at** | **datetime** | expire time of invitation | [optional] 
 **role** | **str** | domain role after invitation | [optional] [default to 'user']
 
