@@ -4,7 +4,7 @@
 """
     JOJ Horse
 
-    Git version: 900ad22@2021-11-18T19:13:08Z  # noqa: E501
+    Git version: cd9daeb@2021-11-20T15:28:43Z  # noqa: E501
 
     OpenAPI spec version: 0.1.0
     
@@ -20,7 +20,7 @@ from joj.horse.client.models.all_of_domain_permission_problem_set import AllOfDo
 from joj.horse.client.models.all_of_domain_permission_record import AllOfDomainPermissionRecord
 from joj.horse.client.models.all_of_domain_user_add_role import AllOfDomainUserAddRole
 from joj.horse.client.models.all_of_domain_user_update_role import AllOfDomainUserUpdateRole
-from joj.horse.client.models.all_of_record_case_status import AllOfRecordCaseStatus
+from joj.horse.client.models.all_of_record_status import AllOfRecordStatus
 from joj.horse.client.models.auth_tokens import AuthTokens
 from joj.horse.client.models.auth_tokens_resp import AuthTokensResp
 from joj.horse.client.models.default_role import DefaultRole
@@ -90,14 +90,9 @@ from joj.horse.client.models.problem_set_resp import ProblemSetResp
 from joj.horse.client.models.problem_set_update_problem import ProblemSetUpdateProblem
 from joj.horse.client.models.problem_solution_submit import ProblemSolutionSubmit
 from joj.horse.client.models.record import Record
-from joj.horse.client.models.record_case import RecordCase
-from joj.horse.client.models.record_case_result import RecordCaseResult
 from joj.horse.client.models.record_code_type import RecordCodeType
-from joj.horse.client.models.record_list import RecordList
-from joj.horse.client.models.record_list_resp import RecordListResp
 from joj.horse.client.models.record_permission import RecordPermission
 from joj.horse.client.models.record_resp import RecordResp
-from joj.horse.client.models.record_result import RecordResult
 from joj.horse.client.models.record_status import RecordStatus
 from joj.horse.client.models.score import Score
 from joj.horse.client.models.score_board import ScoreBoard

@@ -12,6 +12,7 @@ Method | HTTP request | Description
 [**get_problem_set_api_v1_domains_domain_problem_sets_problem_set_get**](ProblemSetApi.md#get_problem_set_api_v1_domains_domain_problem_sets_problem_set_get) | **GET** /api/v1/domains/{domain}/problem_sets/{problemSet} | Get Problem Set
 [**get_scoreboard_api_v1_domains_domain_problem_sets_problem_set_scoreboard_get**](ProblemSetApi.md#get_scoreboard_api_v1_domains_domain_problem_sets_problem_set_scoreboard_get) | **GET** /api/v1/domains/{domain}/problem_sets/{problemSet}/scoreboard | Get Scoreboard
 [**list_problem_sets_api_v1_domains_domain_problem_sets_get**](ProblemSetApi.md#list_problem_sets_api_v1_domains_domain_problem_sets_get) | **GET** /api/v1/domains/{domain}/problem_sets | List Problem Sets
+[**submit_solution_to_problem_set_api_v1_domains_domain_problem_sets_problem_set_problem_problem_submit_post**](ProblemSetApi.md#submit_solution_to_problem_set_api_v1_domains_domain_problem_sets_problem_set_problem_problem_submit_post) | **POST** /api/v1/domains/{domain}/problem_sets/{problemSet}/problem/{problem}/submit | Submit Solution To Problem Set
 [**update_problem_in_problem_set_api_v1_domains_domain_problem_sets_problem_set_problem_problem_patch**](ProblemSetApi.md#update_problem_in_problem_set_api_v1_domains_domain_problem_sets_problem_set_problem_problem_patch) | **PATCH** /api/v1/domains/{domain}/problem_sets/{problemSet}/problem/{problem} | Update Problem In Problem Set
 [**update_problem_set_api_v1_domains_domain_problem_sets_problem_set_patch**](ProblemSetApi.md#update_problem_set_api_v1_domains_domain_problem_sets_problem_set_patch) | **PATCH** /api/v1/domains/{domain}/problem_sets/{problemSet} | Update Problem Set
 
@@ -413,6 +414,61 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **submit_solution_to_problem_set_api_v1_domains_domain_problem_sets_problem_set_problem_problem_submit_post**
+> RecordResp submit_solution_to_problem_set_api_v1_domains_domain_problem_sets_problem_set_problem_problem_submit_post(code_type, file, domain, problem_set, problem)
+
+Submit Solution To Problem Set
+
+### Example
+```python
+from __future__ import print_function
+import time
+import joj.horse.client
+from joj.horse.client.rest import ApiException
+from pprint import pprint
+
+
+# create an instance of the API class
+api_instance = joj.horse.client.ProblemSetApi(joj.horse.client.ApiClient(configuration))
+code_type = joj.horse.client.RecordCodeType() # RecordCodeType | 
+file = 'file_example' # str | 
+domain = 'domain_example' # str | url or id of the domain
+problem_set = 'problem_set_example' # str | url or id of the problem set
+problem = 'problem_example' # str | url or id of the problem
+
+try:
+    # Submit Solution To Problem Set
+    api_response = api_instance.submit_solution_to_problem_set_api_v1_domains_domain_problem_sets_problem_set_problem_problem_submit_post(code_type, file, domain, problem_set, problem)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling ProblemSetApi->submit_solution_to_problem_set_api_v1_domains_domain_problem_sets_problem_set_problem_problem_submit_post: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **code_type** | [**RecordCodeType**](.md)|  | 
+ **file** | **str**|  | 
+ **domain** | **str**| url or id of the domain | 
+ **problem_set** | **str**| url or id of the problem set | 
+ **problem** | **str**| url or id of the problem | 
+
+### Return type
+
+[**RecordResp**](RecordResp.md)
+
+### Authorization
+
+[HTTPBearer](../README.md#HTTPBearer)
+
+### HTTP request headers
+
+ - **Content-Type**: multipart/form-data
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: 900ad22@2021-11-18T19:13:08Z  # noqa: E501
+    Git version: cd9daeb@2021-11-20T15:28:43Z  # noqa: E501
 
     OpenAPI spec version: 0.1.0
     
@@ -869,6 +869,135 @@ class ProblemSetApi(object):
             post_params=form_params,
             files=local_var_files,
             response_type='ProblemSetListResp',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def submit_solution_to_problem_set_api_v1_domains_domain_problem_sets_problem_set_problem_problem_submit_post(self, code_type, file, domain, problem_set, problem, **kwargs):  # noqa: E501
+        """Submit Solution To Problem Set  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.submit_solution_to_problem_set_api_v1_domains_domain_problem_sets_problem_set_problem_problem_submit_post(code_type, file, domain, problem_set, problem, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param RecordCodeType code_type: (required)
+        :param str file: (required)
+        :param str domain: url or id of the domain (required)
+        :param str problem_set: url or id of the problem set (required)
+        :param str problem: url or id of the problem (required)
+        :return: RecordResp
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.submit_solution_to_problem_set_api_v1_domains_domain_problem_sets_problem_set_problem_problem_submit_post_with_http_info(code_type, file, domain, problem_set, problem, **kwargs)  # noqa: E501
+        else:
+            (data) = self.submit_solution_to_problem_set_api_v1_domains_domain_problem_sets_problem_set_problem_problem_submit_post_with_http_info(code_type, file, domain, problem_set, problem, **kwargs)  # noqa: E501
+            return data
+
+    def submit_solution_to_problem_set_api_v1_domains_domain_problem_sets_problem_set_problem_problem_submit_post_with_http_info(self, code_type, file, domain, problem_set, problem, **kwargs):  # noqa: E501
+        """Submit Solution To Problem Set  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.submit_solution_to_problem_set_api_v1_domains_domain_problem_sets_problem_set_problem_problem_submit_post_with_http_info(code_type, file, domain, problem_set, problem, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param RecordCodeType code_type: (required)
+        :param str file: (required)
+        :param str domain: url or id of the domain (required)
+        :param str problem_set: url or id of the problem set (required)
+        :param str problem: url or id of the problem (required)
+        :return: RecordResp
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['code_type', 'file', 'domain', 'problem_set', 'problem']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method submit_solution_to_problem_set_api_v1_domains_domain_problem_sets_problem_set_problem_problem_submit_post" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'code_type' is set
+        if ('code_type' not in params or
+                params['code_type'] is None):
+            raise ValueError("Missing the required parameter `code_type` when calling `submit_solution_to_problem_set_api_v1_domains_domain_problem_sets_problem_set_problem_problem_submit_post`")  # noqa: E501
+        # verify the required parameter 'file' is set
+        if ('file' not in params or
+                params['file'] is None):
+            raise ValueError("Missing the required parameter `file` when calling `submit_solution_to_problem_set_api_v1_domains_domain_problem_sets_problem_set_problem_problem_submit_post`")  # noqa: E501
+        # verify the required parameter 'domain' is set
+        if ('domain' not in params or
+                params['domain'] is None):
+            raise ValueError("Missing the required parameter `domain` when calling `submit_solution_to_problem_set_api_v1_domains_domain_problem_sets_problem_set_problem_problem_submit_post`")  # noqa: E501
+        # verify the required parameter 'problem_set' is set
+        if ('problem_set' not in params or
+                params['problem_set'] is None):
+            raise ValueError("Missing the required parameter `problem_set` when calling `submit_solution_to_problem_set_api_v1_domains_domain_problem_sets_problem_set_problem_problem_submit_post`")  # noqa: E501
+        # verify the required parameter 'problem' is set
+        if ('problem' not in params or
+                params['problem'] is None):
+            raise ValueError("Missing the required parameter `problem` when calling `submit_solution_to_problem_set_api_v1_domains_domain_problem_sets_problem_set_problem_problem_submit_post`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'domain' in params:
+            path_params['domain'] = params['domain']  # noqa: E501
+        if 'problem_set' in params:
+            path_params['problemSet'] = params['problem_set']  # noqa: E501
+        if 'problem' in params:
+            path_params['problem'] = params['problem']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+        if 'code_type' in params:
+            form_params.append(('codeType', params['code_type']))  # noqa: E501
+        if 'file' in params:
+            local_var_files['file'] = params['file']  # noqa: E501
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['multipart/form-data'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['HTTPBearer']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/api/v1/domains/{domain}/problem_sets/{problemSet}/problem/{problem}/submit', 'POST',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='RecordResp',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),

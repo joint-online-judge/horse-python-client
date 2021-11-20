@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: 900ad22@2021-11-18T19:13:08Z  # noqa: E501
+    Git version: cd9daeb@2021-11-20T15:28:43Z  # noqa: E501
 
     OpenAPI spec version: 0.1.0
     
@@ -24,10 +24,8 @@ class RecordCodeType(object):
     """
     allowed enum values
     """
-    _0 = "0"
-    _1 = "1"
-    _2 = "2"
-    _3 = "3"
+    TEXT = "text"
+    ARCHIVE = "archive"
     """
     Attributes:
       swagger_types (dict): The key is attribute name

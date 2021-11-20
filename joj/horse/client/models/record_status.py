@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: 900ad22@2021-11-18T19:13:08Z  # noqa: E501
+    Git version: cd9daeb@2021-11-20T15:28:43Z  # noqa: E501
 
     OpenAPI spec version: 0.1.0
     
@@ -24,18 +24,15 @@ class RecordStatus(object):
     """
     allowed enum values
     """
-    _0 = "0"
-    _20 = "20"
-    _1 = "1"
-    _2 = "2"
-    _3 = "3"
-    _4 = "4"
-    _5 = "5"
-    _6 = "6"
-    _7 = "7"
-    _8 = "8"
-    _9 = "9"
-    _10 = "10"
+    PROCESSING = "processing"
+    QUEUEING = "queueing"
+    FETCHED = "fetched"
+    COMPILING = "compiling"
+    RUNNING = "running"
+    JUDGING = "judging"
+    ACCEPTED = "accepted"
+    REJECTED = "rejected"
+    FAILED = "failed"
     """
     Attributes:
       swagger_types (dict): The key is attribute name

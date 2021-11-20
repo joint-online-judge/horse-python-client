@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: 900ad22@2021-11-18T19:13:08Z  # noqa: E501
+    Git version: cd9daeb@2021-11-20T15:28:43Z  # noqa: E501
 
     OpenAPI spec version: 0.1.0
     
@@ -81,6 +81,13 @@ class TestProblemSetApi(unittest.TestCase):
         """Test case for list_problem_sets_api_v1_domains_domain_problem_sets_get
 
         List Problem Sets  # noqa: E501
+        """
+        pass
+
+    def test_submit_solution_to_problem_set_api_v1_domains_domain_problem_sets_problem_set_problem_problem_submit_post(self):
+        """Test case for submit_solution_to_problem_set_api_v1_domains_domain_problem_sets_problem_set_problem_problem_submit_post
+
+        Submit Solution To Problem Set  # noqa: E501
         """
         pass
 

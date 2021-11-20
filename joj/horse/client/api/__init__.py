@@ -11,5 +11,4 @@ from joj.horse.client.api.miscellaneous_api import MiscellaneousApi
 from joj.horse.client.api.problem_api import ProblemApi
 from joj.horse.client.api.problem_group_api import ProblemGroupApi
 from joj.horse.client.api.problem_set_api import ProblemSetApi
-from joj.horse.client.api.record_api import RecordApi
 from joj.horse.client.api.user_api import UserApi

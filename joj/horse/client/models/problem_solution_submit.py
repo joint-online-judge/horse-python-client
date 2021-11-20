@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: 900ad22@2021-11-18T19:13:08Z  # noqa: E501
+    Git version: cd9daeb@2021-11-20T15:28:43Z  # noqa: E501
 
     OpenAPI spec version: 0.1.0
     
@@ -43,7 +43,8 @@ class ProblemSolutionSubmit(object):
         self._file = None
         self.discriminator = None
         self.code_type = code_type
-        self.file = file
+        if file is not None:
+            self.file = file
 
     @property
     def code_type(self):
@@ -86,8 +87,6 @@ class ProblemSolutionSubmit(object):
         :param file: The file of this ProblemSolutionSubmit.  # noqa: E501
         :type: str
         """
-        if file is None:
-            raise ValueError("Invalid value for `file`, must not be `None`")  # noqa: E501
 
         self._file = file
 
