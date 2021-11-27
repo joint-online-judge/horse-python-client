@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **gravatar** | **str** | gravatar url of the domain | [optional] [default to '']
 **bulletin** | **str** | bulletin of the domain | [optional] [default to '']
 **hidden** | **bool** | is the domain hidden | [optional] [default to True]
+**tag** | **str** | tag of the domain | [optional] [default to '']
 **owner_id** | **str** |  | [optional] 
 **created_at** | **datetime** |  | 
 **updated_at** | **datetime** |  | 

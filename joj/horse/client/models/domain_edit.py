@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: f6a791e@2021-11-27T07:58:36Z  # noqa: E501
+    Git version: e2e4bb0@2021-11-27T11:37:00Z  # noqa: E501
 
     OpenAPI spec version: 0.1.0
     
@@ -32,7 +32,8 @@ class DomainEdit(object):
         'name': 'str',
         'gravatar': 'str',
         'bulletin': 'str',
-        'hidden': 'bool'
+        'hidden': 'bool',
+        'tag': 'str'
     }
 
     attribute_map = {
@@ -40,16 +41,18 @@ class DomainEdit(object):
         'name': 'name',
         'gravatar': 'gravatar',
         'bulletin': 'bulletin',
-        'hidden': 'hidden'
+        'hidden': 'hidden',
+        'tag': 'tag'
     }
 
-    def __init__(self, url=None, name=None, gravatar=None, bulletin=None, hidden=None):  # noqa: E501
+    def __init__(self, url=None, name=None, gravatar=None, bulletin=None, hidden=None, tag=None):  # noqa: E501
         """DomainEdit - a model defined in Swagger"""  # noqa: E501
         self._url = None
         self._name = None
         self._gravatar = None
         self._bulletin = None
         self._hidden = None
+        self._tag = None
         self.discriminator = None
         if url is not None:
             self.url = url
@@ -61,6 +64,8 @@ class DomainEdit(object):
             self.bulletin = bulletin
         if hidden is not None:
             self.hidden = hidden
+        if tag is not None:
+            self.tag = tag
 
     @property
     def url(self):
@@ -166,6 +171,27 @@ class DomainEdit(object):
         """
 
         self._hidden = hidden
+
+    @property
+    def tag(self):
+        """Gets the tag of this DomainEdit.  # noqa: E501
+
+
+        :return: The tag of this DomainEdit.  # noqa: E501
+        :rtype: str
+        """
+        return self._tag
+
+    @tag.setter
+    def tag(self, tag):
+        """Sets the tag of this DomainEdit.
+
+
+        :param tag: The tag of this DomainEdit.  # noqa: E501
+        :type: str
+        """
+
+        self._tag = tag
 
     def to_dict(self):
         """Returns the model properties as a dict"""
