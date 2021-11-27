@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: e2e4bb0@2021-11-27T11:37:00Z  # noqa: E501
+    Git version: 13e2edd@2021-11-27T17:58:14Z  # noqa: E501
 
     OpenAPI spec version: 0.1.0
     
@@ -43,7 +43,7 @@ class ProblemSetDetail(object):
         'owner_id': 'str',
         'created_at': 'datetime',
         'updated_at': 'datetime',
-        'problems': 'list[ProblemPreview]'
+        'problems': 'list[ProblemPreviewWithRecordState]'
     }
 
     attribute_map = {
@@ -109,7 +109,8 @@ class ProblemSetDetail(object):
             self.owner_id = owner_id
         self.created_at = created_at
         self.updated_at = updated_at
-        self.problems = problems
+        if problems is not None:
+            self.problems = problems
 
     @property
     def id(self):
@@ -458,7 +459,7 @@ class ProblemSetDetail(object):
 
 
         :return: The problems of this ProblemSetDetail.  # noqa: E501
-        :rtype: list[ProblemPreview]
+        :rtype: list[ProblemPreviewWithRecordState]
         """
         return self._problems
 
@@ -468,10 +469,8 @@ class ProblemSetDetail(object):
 
 
         :param problems: The problems of this ProblemSetDetail.  # noqa: E501
-        :type: list[ProblemPreview]
+        :type: list[ProblemPreviewWithRecordState]
         """
-        if problems is None:
-            raise ValueError("Invalid value for `problems`, must not be `None`")  # noqa: E501
 
         self._problems = problems
 
