@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: 900ad22@2021-11-18T19:13:08Z  # noqa: E501
+    Git version: f6a791e@2021-11-27T07:58:36Z  # noqa: E501
 
     OpenAPI spec version: 0.1.0
     
@@ -28,7 +28,7 @@ class RecordResult(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'status': 'RecordStatus',
+        'state': 'RecordState',
         'score': 'int',
         'time_ms': 'int',
         'memory_kb': 'int',
@@ -36,49 +36,49 @@ class RecordResult(object):
     }
 
     attribute_map = {
-        'status': 'status',
+        'state': 'state',
         'score': 'score',
         'time_ms': 'timeMs',
         'memory_kb': 'memoryKb',
         'judge_at': 'judgeAt'
     }
 
-    def __init__(self, status=None, score=None, time_ms=None, memory_kb=None, judge_at=None):  # noqa: E501
+    def __init__(self, state=None, score=None, time_ms=None, memory_kb=None, judge_at=None):  # noqa: E501
         """RecordResult - a model defined in Swagger"""  # noqa: E501
-        self._status = None
+        self._state = None
         self._score = None
         self._time_ms = None
         self._memory_kb = None
         self._judge_at = None
         self.discriminator = None
-        self.status = status
+        self.state = state
         self.score = score
         self.time_ms = time_ms
         self.memory_kb = memory_kb
         self.judge_at = judge_at
 
     @property
-    def status(self):
-        """Gets the status of this RecordResult.  # noqa: E501
+    def state(self):
+        """Gets the state of this RecordResult.  # noqa: E501
 
 
-        :return: The status of this RecordResult.  # noqa: E501
-        :rtype: RecordStatus
+        :return: The state of this RecordResult.  # noqa: E501
+        :rtype: RecordState
         """
-        return self._status
+        return self._state
 
-    @status.setter
-    def status(self, status):
-        """Sets the status of this RecordResult.
+    @state.setter
+    def state(self, state):
+        """Sets the state of this RecordResult.
 
 
-        :param status: The status of this RecordResult.  # noqa: E501
-        :type: RecordStatus
+        :param state: The state of this RecordResult.  # noqa: E501
+        :type: RecordState
         """
-        if status is None:
-            raise ValueError("Invalid value for `status`, must not be `None`")  # noqa: E501
+        if state is None:
+            raise ValueError("Invalid value for `state`, must not be `None`")  # noqa: E501
 
-        self._status = status
+        self._state = state
 
     @property
     def score(self):

@@ -4,14 +4,12 @@ All URIs are relative to */*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**get_record_api_v1_records_record_get**](RecordApi.md#get_record_api_v1_records_record_get) | **GET** /api/v1/records/{record} | Get Record
-[**get_record_code_api_v1_records_record_code_get**](RecordApi.md#get_record_code_api_v1_records_record_code_get) | **GET** /api/v1/records/{record}/code | Get Record Code
-[**http_record_api_v1_records_record_http_post**](RecordApi.md#http_record_api_v1_records_record_http_post) | **POST** /api/v1/records/{record}/http | Http Record
-[**http_record_cases_api_v1_records_record_cases_http_post**](RecordApi.md#http_record_cases_api_v1_records_record_cases_http_post) | **POST** /api/v1/records/{record}/cases/http | Http Record Cases
-[**list_records_api_v1_records_get**](RecordApi.md#list_records_api_v1_records_get) | **GET** /api/v1/records | List Records
+[**get_record_api_v1_domains_domain_records_record_get**](RecordApi.md#get_record_api_v1_domains_domain_records_record_get) | **GET** /api/v1/domains/{domain}/records/{record} | Get Record
+[**get_record_code_api_v1_domains_domain_records_record_code_get**](RecordApi.md#get_record_code_api_v1_domains_domain_records_record_code_get) | **GET** /api/v1/domains/{domain}/records/{record}/code | Get Record Code
+[**list_records_in_domain_api_v1_domains_domain_records_get**](RecordApi.md#list_records_in_domain_api_v1_domains_domain_records_get) | **GET** /api/v1/domains/{domain}/records | List Records In Domain
 
-# **get_record_api_v1_records_record_get**
-> RecordResp get_record_api_v1_records_record_get(record)
+# **get_record_api_v1_domains_domain_records_record_get**
+> RecordResp get_record_api_v1_domains_domain_records_record_get(record)
 
 Get Record
 
@@ -30,10 +28,10 @@ record = 'record_example' # str |
 
 try:
     # Get Record
-    api_response = api_instance.get_record_api_v1_records_record_get(record)
+    api_response = api_instance.get_record_api_v1_domains_domain_records_record_get(record)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling RecordApi->get_record_api_v1_records_record_get: %s\n" % e)
+    print("Exception when calling RecordApi->get_record_api_v1_domains_domain_records_record_get: %s\n" % e)
 ```
 
 ### Parameters
@@ -57,8 +55,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **get_record_code_api_v1_records_record_code_get**
-> Object get_record_code_api_v1_records_record_code_get(record)
+# **get_record_code_api_v1_domains_domain_records_record_code_get**
+> object get_record_code_api_v1_domains_domain_records_record_code_get(record)
 
 Get Record Code
 
@@ -77,10 +75,10 @@ record = 'record_example' # str |
 
 try:
     # Get Record Code
-    api_response = api_instance.get_record_code_api_v1_records_record_code_get(record)
+    api_response = api_instance.get_record_code_api_v1_domains_domain_records_record_code_get(record)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling RecordApi->get_record_code_api_v1_records_record_code_get: %s\n" % e)
+    print("Exception when calling RecordApi->get_record_code_api_v1_domains_domain_records_record_code_get: %s\n" % e)
 ```
 
 ### Parameters
@@ -91,7 +89,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Object**](Object.md)
+**object**
 
 ### Authorization
 
@@ -104,59 +102,10 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **http_record_api_v1_records_record_http_post**
-> EmptyResp http_record_api_v1_records_record_http_post(body, record)
+# **list_records_in_domain_api_v1_domains_domain_records_get**
+> RecordListResp list_records_in_domain_api_v1_domains_domain_records_get(domain, problem_set=problem_set, problem=problem, offset=offset, limit=limit, uid=uid)
 
-Http Record
-
-### Example
-```python
-from __future__ import print_function
-import time
-import joj.horse.client
-from joj.horse.client.rest import ApiException
-from pprint import pprint
-
-
-# create an instance of the API class
-api_instance = joj.horse.client.RecordApi(joj.horse.client.ApiClient(configuration))
-body = joj.horse.client.RecordResult() # RecordResult | 
-record = 'record_example' # str | 
-
-try:
-    # Http Record
-    api_response = api_instance.http_record_api_v1_records_record_http_post(body, record)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling RecordApi->http_record_api_v1_records_record_http_post: %s\n" % e)
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**RecordResult**](RecordResult.md)|  | 
- **record** | **str**|  | 
-
-### Return type
-
-[**EmptyResp**](EmptyResp.md)
-
-### Authorization
-
-[HTTPBearer](../README.md#HTTPBearer)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **http_record_cases_api_v1_records_record_cases_http_post**
-> EmptyResp http_record_cases_api_v1_records_record_cases_http_post(body, record)
-
-Http Record Cases
+List Records In Domain
 
 ### Example
 ```python
@@ -169,56 +118,7 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = joj.horse.client.RecordApi(joj.horse.client.ApiClient(configuration))
-body = joj.horse.client.RecordCaseResult() # RecordCaseResult | 
-record = 'record_example' # str | 
-
-try:
-    # Http Record Cases
-    api_response = api_instance.http_record_cases_api_v1_records_record_cases_http_post(body, record)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling RecordApi->http_record_cases_api_v1_records_record_cases_http_post: %s\n" % e)
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**RecordCaseResult**](RecordCaseResult.md)|  | 
- **record** | **str**|  | 
-
-### Return type
-
-[**EmptyResp**](EmptyResp.md)
-
-### Authorization
-
-[HTTPBearer](../README.md#HTTPBearer)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **list_records_api_v1_records_get**
-> RecordListResp list_records_api_v1_records_get(domain=domain, problem_set=problem_set, problem=problem, offset=offset, limit=limit, uid=uid)
-
-List Records
-
-### Example
-```python
-from __future__ import print_function
-import time
-import joj.horse.client
-from joj.horse.client.rest import ApiException
-from pprint import pprint
-
-
-# create an instance of the API class
-api_instance = joj.horse.client.RecordApi(joj.horse.client.ApiClient(configuration))
-domain = 'domain_example' # str |  (optional)
+domain = 'domain_example' # str | 
 problem_set = 'problem_set_example' # str |  (optional)
 problem = 'problem_example' # str |  (optional)
 offset = 0 # int |  (optional) (default to 0)
@@ -226,18 +126,18 @@ limit = 100 # int |  (optional) (default to 100)
 uid = '' # str | user id or 'me' or empty (optional)
 
 try:
-    # List Records
-    api_response = api_instance.list_records_api_v1_records_get(domain=domain, problem_set=problem_set, problem=problem, offset=offset, limit=limit, uid=uid)
+    # List Records In Domain
+    api_response = api_instance.list_records_in_domain_api_v1_domains_domain_records_get(domain, problem_set=problem_set, problem=problem, offset=offset, limit=limit, uid=uid)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling RecordApi->list_records_api_v1_records_get: %s\n" % e)
+    print("Exception when calling RecordApi->list_records_in_domain_api_v1_domains_domain_records_get: %s\n" % e)
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **domain** | **str**|  | [optional] 
+ **domain** | **str**|  | 
  **problem_set** | **str**|  | [optional] 
  **problem** | **str**|  | [optional] 
  **offset** | **int**|  | [optional] [default to 0]

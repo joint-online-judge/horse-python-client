@@ -11,8 +11,6 @@ Name | Type | Description | Notes
 **hidden** | **bool** | is the problem hidden | [optional] [default to False]
 **num_submit** | **int** |  | [optional] [default to 0]
 **num_accept** | **int** |  | [optional] [default to 0]
-**data_version** | **int** |  | [optional] [default to 2]
-**languages** | **str** |  | [optional] [default to '[]']
 **owner_id** | **str** |  | [optional] 
 **problem_group_id** | **str** |  | [optional] 
 **created_at** | **datetime** |  | 

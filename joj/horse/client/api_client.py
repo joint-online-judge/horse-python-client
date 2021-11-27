@@ -2,7 +2,7 @@
 """
     JOJ Horse
 
-    Git version: ae9905f@2021-11-20T17:34:51Z  # noqa: E501
+    Git version: f6a791e@2021-11-27T07:58:36Z  # noqa: E501
 
     OpenAPI spec version: 0.1.0
     
@@ -523,10 +523,14 @@ class ApiClient(object):
             filename = re.search(r'filename=[\'"]?([^\'"\s]+)[\'"]?',
                                  content_disposition).group(1)
             path = os.path.join(os.path.dirname(path), filename)
-
-        with open(path, "wb") as f:
-            f.write(response.data)
-
+            response_data = response.data
+            with open(path, "wb") as f:
+                if isinstance(response_data, str):
+                    # change str to bytes so we can write it
+                    response_data = response_data.encode('utf-8')
+                    f.write(response_data)
+                else:
+                    f.write(response_data)
         return path
 
     def __deserialize_primitive(self, data, klass):

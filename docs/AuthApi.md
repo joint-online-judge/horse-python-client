@@ -123,7 +123,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **logout_api_v1_auth_logout_post**
-> Object logout_api_v1_auth_logout_post(response_type, cookie=cookie, redirect_url=redirect_url)
+> object logout_api_v1_auth_logout_post(response_type, cookie=cookie, redirect_url=redirect_url)
 
 Logout
 
@@ -160,7 +160,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Object**](Object.md)
+**object**
 
 ### Authorization
 

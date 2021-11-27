@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**status** | [**RecordStatus**](RecordStatus.md) |  | 
+**state** | [**RecordState**](RecordState.md) |  | 
 **score** | **int** |  | 
 **time_ms** | **int** |  | 
 **memory_kb** | **int** |  | 

@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: 900ad22@2021-11-18T19:13:08Z  # noqa: E501
+    Git version: f6a791e@2021-11-27T07:58:36Z  # noqa: E501
 
     OpenAPI spec version: 0.1.0
     
@@ -28,38 +28,24 @@ class TestRecordApi(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def test_get_record_api_v1_records_record_get(self):
-        """Test case for get_record_api_v1_records_record_get
+    def test_get_record_api_v1_domains_domain_records_record_get(self):
+        """Test case for get_record_api_v1_domains_domain_records_record_get
 
         Get Record  # noqa: E501
         """
         pass
 
-    def test_get_record_code_api_v1_records_record_code_get(self):
-        """Test case for get_record_code_api_v1_records_record_code_get
+    def test_get_record_code_api_v1_domains_domain_records_record_code_get(self):
+        """Test case for get_record_code_api_v1_domains_domain_records_record_code_get
 
         Get Record Code  # noqa: E501
         """
         pass
 
-    def test_http_record_api_v1_records_record_http_post(self):
-        """Test case for http_record_api_v1_records_record_http_post
+    def test_list_records_in_domain_api_v1_domains_domain_records_get(self):
+        """Test case for list_records_in_domain_api_v1_domains_domain_records_get
 
-        Http Record  # noqa: E501
-        """
-        pass
-
-    def test_http_record_cases_api_v1_records_record_cases_http_post(self):
-        """Test case for http_record_cases_api_v1_records_record_cases_http_post
-
-        Http Record Cases  # noqa: E501
-        """
-        pass
-
-    def test_list_records_api_v1_records_get(self):
-        """Test case for list_records_api_v1_records_get
-
-        List Records  # noqa: E501
+        List Records In Domain  # noqa: E501
         """
         pass
 

@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: ae9905f@2021-11-20T17:34:51Z  # noqa: E501
+    Git version: f6a791e@2021-11-27T07:58:36Z  # noqa: E501
 
     OpenAPI spec version: 0.1.0
     
@@ -298,7 +298,7 @@ class AuthApi(object):
         :param str response_type: (required)
         :param bool cookie: Add Set/Delete-Cookie on response header
         :param str redirect_url: The redirect url after the operation
-        :return: Object
+        :return: object
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -321,7 +321,7 @@ class AuthApi(object):
         :param str response_type: (required)
         :param bool cookie: Add Set/Delete-Cookie on response header
         :param str redirect_url: The redirect url after the operation
-        :return: Object
+        :return: object
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -379,7 +379,7 @@ class AuthApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='Object',  # noqa: E501
+            response_type='object',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),

@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: ae9905f@2021-11-20T17:34:51Z  # noqa: E501
+    Git version: f6a791e@2021-11-27T07:58:36Z  # noqa: E501
 
     OpenAPI spec version: 0.1.0
     
@@ -74,13 +74,6 @@ class TestProblemApi(unittest.TestCase):
         """Test case for update_problem_api_v1_domains_domain_problems_problem_patch
 
         Update Problem  # noqa: E501
-        """
-        pass
-
-    def test_update_problem_config_api_v1_domains_domain_problems_problem_config_patch(self):
-        """Test case for update_problem_config_api_v1_domains_domain_problems_problem_config_patch
-
-        Update Problem Config  # noqa: E501
         """
         pass
 

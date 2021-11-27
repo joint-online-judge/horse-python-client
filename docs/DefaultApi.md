@@ -8,7 +8,7 @@ Method | HTTP request | Description
 [**redirect_to_docs_get**](DefaultApi.md#redirect_to_docs_get) | **GET** / | Redirect To Docs
 
 # **redirect_to_docs_api_get**
-> Object redirect_to_docs_api_get()
+> object redirect_to_docs_api_get()
 
 Redirect To Docs
 
@@ -36,7 +36,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**Object**](Object.md)
+**object**
 
 ### Authorization
 
@@ -50,7 +50,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **redirect_to_docs_get**
-> Object redirect_to_docs_get()
+> object redirect_to_docs_get()
 
 Redirect To Docs
 
@@ -78,7 +78,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**Object**](Object.md)
+**object**
 
 ### Authorization
 

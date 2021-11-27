@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: ae9905f@2021-11-20T17:34:51Z  # noqa: E501
+    Git version: f6a791e@2021-11-27T07:58:36Z  # noqa: E501
 
     OpenAPI spec version: 0.1.0
     
@@ -31,7 +31,6 @@ class RecordPermission(object):
         'view': 'bool',
         'detail': 'bool',
         'code': 'bool',
-        'judge': 'bool',
         'rejudge': 'bool'
     }
 
@@ -39,16 +38,14 @@ class RecordPermission(object):
         'view': 'view',
         'detail': 'detail',
         'code': 'code',
-        'judge': 'judge',
         'rejudge': 'rejudge'
     }
 
-    def __init__(self, view=True, detail=False, code=False, judge=False, rejudge=False):  # noqa: E501
+    def __init__(self, view=True, detail=False, code=False, rejudge=False):  # noqa: E501
         """RecordPermission - a model defined in Swagger"""  # noqa: E501
         self._view = None
         self._detail = None
         self._code = None
-        self._judge = None
         self._rejudge = None
         self.discriminator = None
         if view is not None:
@@ -57,8 +54,6 @@ class RecordPermission(object):
             self.detail = detail
         if code is not None:
             self.code = code
-        if judge is not None:
-            self.judge = judge
         if rejudge is not None:
             self.rejudge = rejudge
 
@@ -124,27 +119,6 @@ class RecordPermission(object):
         """
 
         self._code = code
-
-    @property
-    def judge(self):
-        """Gets the judge of this RecordPermission.  # noqa: E501
-
-
-        :return: The judge of this RecordPermission.  # noqa: E501
-        :rtype: bool
-        """
-        return self._judge
-
-    @judge.setter
-    def judge(self, judge):
-        """Sets the judge of this RecordPermission.
-
-
-        :param judge: The judge of this RecordPermission.  # noqa: E501
-        :type: bool
-        """
-
-        self._judge = judge
 
     @property
     def rejudge(self):

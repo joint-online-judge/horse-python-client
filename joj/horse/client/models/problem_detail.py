@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: ae9905f@2021-11-20T17:34:51Z  # noqa: E501
+    Git version: f6a791e@2021-11-27T07:58:36Z  # noqa: E501
 
     OpenAPI spec version: 0.1.0
     
@@ -36,8 +36,6 @@ class ProblemDetail(object):
         'hidden': 'bool',
         'num_submit': 'int',
         'num_accept': 'int',
-        'data_version': 'int',
-        'languages': 'str',
         'owner_id': 'str',
         'problem_group_id': 'str',
         'created_at': 'datetime',
@@ -53,15 +51,13 @@ class ProblemDetail(object):
         'hidden': 'hidden',
         'num_submit': 'numSubmit',
         'num_accept': 'numAccept',
-        'data_version': 'dataVersion',
-        'languages': 'languages',
         'owner_id': 'ownerId',
         'problem_group_id': 'problemGroupId',
         'created_at': 'createdAt',
         'updated_at': 'updatedAt'
     }
 
-    def __init__(self, id=None, domain_id=None, url='', title=None, content='', hidden=False, num_submit=0, num_accept=0, data_version=2, languages='[]', owner_id=None, problem_group_id=None, created_at=None, updated_at=None):  # noqa: E501
+    def __init__(self, id=None, domain_id=None, url='', title=None, content='', hidden=False, num_submit=0, num_accept=0, owner_id=None, problem_group_id=None, created_at=None, updated_at=None):  # noqa: E501
         """ProblemDetail - a model defined in Swagger"""  # noqa: E501
         self._id = None
         self._domain_id = None
@@ -71,8 +67,6 @@ class ProblemDetail(object):
         self._hidden = None
         self._num_submit = None
         self._num_accept = None
-        self._data_version = None
-        self._languages = None
         self._owner_id = None
         self._problem_group_id = None
         self._created_at = None
@@ -91,10 +85,6 @@ class ProblemDetail(object):
             self.num_submit = num_submit
         if num_accept is not None:
             self.num_accept = num_accept
-        if data_version is not None:
-            self.data_version = data_version
-        if languages is not None:
-            self.languages = languages
         if owner_id is not None:
             self.owner_id = owner_id
         if problem_group_id is not None:
@@ -283,48 +273,6 @@ class ProblemDetail(object):
         """
 
         self._num_accept = num_accept
-
-    @property
-    def data_version(self):
-        """Gets the data_version of this ProblemDetail.  # noqa: E501
-
-
-        :return: The data_version of this ProblemDetail.  # noqa: E501
-        :rtype: int
-        """
-        return self._data_version
-
-    @data_version.setter
-    def data_version(self, data_version):
-        """Sets the data_version of this ProblemDetail.
-
-
-        :param data_version: The data_version of this ProblemDetail.  # noqa: E501
-        :type: int
-        """
-
-        self._data_version = data_version
-
-    @property
-    def languages(self):
-        """Gets the languages of this ProblemDetail.  # noqa: E501
-
-
-        :return: The languages of this ProblemDetail.  # noqa: E501
-        :rtype: str
-        """
-        return self._languages
-
-    @languages.setter
-    def languages(self, languages):
-        """Sets the languages of this ProblemDetail.
-
-
-        :param languages: The languages of this ProblemDetail.  # noqa: E501
-        :type: str
-        """
-
-        self._languages = languages
 
     @property
     def owner_id(self):
