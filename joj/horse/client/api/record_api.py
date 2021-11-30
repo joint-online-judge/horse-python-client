@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: e54a297@2021-11-30T11:09:19Z  # noqa: E501
+    Git version: c1be001@2021-11-30T11:32:42Z  # noqa: E501
 
     OpenAPI spec version: 0.1.0
     
@@ -32,43 +32,45 @@ class RecordApi(object):
             api_client = ApiClient()
         self.api_client = api_client
 
-    def get_record_api_v1_domains_domain_records_record_get(self, record, **kwargs):  # noqa: E501
+    def get_record_api_v1_domains_domain_records_record_get(self, record, domain, **kwargs):  # noqa: E501
         """Get Record  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_record_api_v1_domains_domain_records_record_get(record, async_req=True)
+        >>> thread = api.get_record_api_v1_domains_domain_records_record_get(record, domain, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
         :param str record: (required)
+        :param str domain: url or id of the domain (required)
         :return: RecordResp
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.get_record_api_v1_domains_domain_records_record_get_with_http_info(record, **kwargs)  # noqa: E501
+            return self.get_record_api_v1_domains_domain_records_record_get_with_http_info(record, domain, **kwargs)  # noqa: E501
         else:
-            (data) = self.get_record_api_v1_domains_domain_records_record_get_with_http_info(record, **kwargs)  # noqa: E501
+            (data) = self.get_record_api_v1_domains_domain_records_record_get_with_http_info(record, domain, **kwargs)  # noqa: E501
             return data
 
-    def get_record_api_v1_domains_domain_records_record_get_with_http_info(self, record, **kwargs):  # noqa: E501
+    def get_record_api_v1_domains_domain_records_record_get_with_http_info(self, record, domain, **kwargs):  # noqa: E501
         """Get Record  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_record_api_v1_domains_domain_records_record_get_with_http_info(record, async_req=True)
+        >>> thread = api.get_record_api_v1_domains_domain_records_record_get_with_http_info(record, domain, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
         :param str record: (required)
+        :param str domain: url or id of the domain (required)
         :return: RecordResp
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['record']  # noqa: E501
+        all_params = ['record', 'domain']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -87,12 +89,18 @@ class RecordApi(object):
         if ('record' not in params or
                 params['record'] is None):
             raise ValueError("Missing the required parameter `record` when calling `get_record_api_v1_domains_domain_records_record_get`")  # noqa: E501
+        # verify the required parameter 'domain' is set
+        if ('domain' not in params or
+                params['domain'] is None):
+            raise ValueError("Missing the required parameter `domain` when calling `get_record_api_v1_domains_domain_records_record_get`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
         if 'record' in params:
             path_params['record'] = params['record']  # noqa: E501
+        if 'domain' in params:
+            path_params['domain'] = params['domain']  # noqa: E501
 
         query_params = []
 
@@ -125,43 +133,45 @@ class RecordApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_record_code_api_v1_domains_domain_records_record_code_get(self, record, **kwargs):  # noqa: E501
+    def get_record_code_api_v1_domains_domain_records_record_code_get(self, record, domain, **kwargs):  # noqa: E501
         """Get Record Code  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_record_code_api_v1_domains_domain_records_record_code_get(record, async_req=True)
+        >>> thread = api.get_record_code_api_v1_domains_domain_records_record_code_get(record, domain, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
         :param str record: (required)
+        :param str domain: url or id of the domain (required)
         :return: object
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.get_record_code_api_v1_domains_domain_records_record_code_get_with_http_info(record, **kwargs)  # noqa: E501
+            return self.get_record_code_api_v1_domains_domain_records_record_code_get_with_http_info(record, domain, **kwargs)  # noqa: E501
         else:
-            (data) = self.get_record_code_api_v1_domains_domain_records_record_code_get_with_http_info(record, **kwargs)  # noqa: E501
+            (data) = self.get_record_code_api_v1_domains_domain_records_record_code_get_with_http_info(record, domain, **kwargs)  # noqa: E501
             return data
 
-    def get_record_code_api_v1_domains_domain_records_record_code_get_with_http_info(self, record, **kwargs):  # noqa: E501
+    def get_record_code_api_v1_domains_domain_records_record_code_get_with_http_info(self, record, domain, **kwargs):  # noqa: E501
         """Get Record Code  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_record_code_api_v1_domains_domain_records_record_code_get_with_http_info(record, async_req=True)
+        >>> thread = api.get_record_code_api_v1_domains_domain_records_record_code_get_with_http_info(record, domain, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
         :param str record: (required)
+        :param str domain: url or id of the domain (required)
         :return: object
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['record']  # noqa: E501
+        all_params = ['record', 'domain']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -180,12 +190,18 @@ class RecordApi(object):
         if ('record' not in params or
                 params['record'] is None):
             raise ValueError("Missing the required parameter `record` when calling `get_record_code_api_v1_domains_domain_records_record_code_get`")  # noqa: E501
+        # verify the required parameter 'domain' is set
+        if ('domain' not in params or
+                params['domain'] is None):
+            raise ValueError("Missing the required parameter `domain` when calling `get_record_code_api_v1_domains_domain_records_record_code_get`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
         if 'record' in params:
             path_params['record'] = params['record']  # noqa: E501
+        if 'domain' in params:
+            path_params['domain'] = params['domain']  # noqa: E501
 
         query_params = []
 

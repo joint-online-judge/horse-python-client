@@ -96,7 +96,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **test_error_report_api_v1_test_report_get**
-> Null test_error_report_api_v1_test_report_get()
+> EmptyResp test_error_report_api_v1_test_report_get()
 
 Test Error Report
 
@@ -124,7 +124,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**Null**](Null.md)
+[**EmptyResp**](EmptyResp.md)
 
 ### Authorization
 

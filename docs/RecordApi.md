@@ -9,7 +9,7 @@ Method | HTTP request | Description
 [**list_records_in_domain_api_v1_domains_domain_records_get**](RecordApi.md#list_records_in_domain_api_v1_domains_domain_records_get) | **GET** /api/v1/domains/{domain}/records | List Records In Domain
 
 # **get_record_api_v1_domains_domain_records_record_get**
-> RecordResp get_record_api_v1_domains_domain_records_record_get(record)
+> RecordResp get_record_api_v1_domains_domain_records_record_get(record, domain)
 
 Get Record
 
@@ -25,10 +25,11 @@ from pprint import pprint
 # create an instance of the API class
 api_instance = joj.horse.client.RecordApi(joj.horse.client.ApiClient(configuration))
 record = 'record_example' # str | 
+domain = 'domain_example' # str | url or id of the domain
 
 try:
     # Get Record
-    api_response = api_instance.get_record_api_v1_domains_domain_records_record_get(record)
+    api_response = api_instance.get_record_api_v1_domains_domain_records_record_get(record, domain)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling RecordApi->get_record_api_v1_domains_domain_records_record_get: %s\n" % e)
@@ -39,6 +40,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **record** | **str**|  | 
+ **domain** | **str**| url or id of the domain | 
 
 ### Return type
 
@@ -56,7 +58,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_record_code_api_v1_domains_domain_records_record_code_get**
-> object get_record_code_api_v1_domains_domain_records_record_code_get(record)
+> object get_record_code_api_v1_domains_domain_records_record_code_get(record, domain)
 
 Get Record Code
 
@@ -72,10 +74,11 @@ from pprint import pprint
 # create an instance of the API class
 api_instance = joj.horse.client.RecordApi(joj.horse.client.ApiClient(configuration))
 record = 'record_example' # str | 
+domain = 'domain_example' # str | url or id of the domain
 
 try:
     # Get Record Code
-    api_response = api_instance.get_record_code_api_v1_domains_domain_records_record_code_get(record)
+    api_response = api_instance.get_record_code_api_v1_domains_domain_records_record_code_get(record, domain)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling RecordApi->get_record_code_api_v1_domains_domain_records_record_code_get: %s\n" % e)
@@ -86,6 +89,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **record** | **str**|  | 
+ **domain** | **str**| url or id of the domain | 
 
 ### Return type
 
