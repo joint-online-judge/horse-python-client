@@ -217,7 +217,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_problem_in_problem_set_api_v1_domains_domain_problem_sets_problem_set_problem_problem_get**
-> ProblemDetailResp get_problem_in_problem_set_api_v1_domains_domain_problem_sets_problem_set_problem_problem_get(domain, problem_set, problem)
+> ProblemDetailWithRecordStateResp get_problem_in_problem_set_api_v1_domains_domain_problem_sets_problem_set_problem_problem_get(domain, problem_set, problem)
 
 Get Problem In Problem Set
 
@@ -254,7 +254,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ProblemDetailResp**](ProblemDetailResp.md)
+[**ProblemDetailWithRecordStateResp**](ProblemDetailWithRecordStateResp.md)
 
 ### Authorization
 

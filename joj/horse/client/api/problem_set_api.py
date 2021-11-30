@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: 13e2edd@2021-11-27T17:58:14Z  # noqa: E501
+    Git version: db28c99@2021-11-30T09:01:45Z  # noqa: E501
 
     OpenAPI spec version: 0.1.0
     
@@ -472,7 +472,7 @@ class ProblemSetApi(object):
         :param str domain: url or id of the domain (required)
         :param str problem_set: url or id of the problem set (required)
         :param str problem: url or id of the problem (required)
-        :return: ProblemDetailResp
+        :return: ProblemDetailWithRecordStateResp
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -495,7 +495,7 @@ class ProblemSetApi(object):
         :param str domain: url or id of the domain (required)
         :param str problem_set: url or id of the problem set (required)
         :param str problem: url or id of the problem (required)
-        :return: ProblemDetailResp
+        :return: ProblemDetailWithRecordStateResp
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -561,7 +561,7 @@ class ProblemSetApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='ProblemDetailResp',  # noqa: E501
+            response_type='ProblemDetailWithRecordStateResp',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
