@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: e1ec5a4@2021-11-30T12:04:58Z  # noqa: E501
+    Git version: b2b50a8@2021-11-30T20:07:57Z  # noqa: E501
 
     OpenAPI spec version: 0.1.0
     
@@ -28,8 +28,8 @@ class TestProblemSetApi(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def test_add_problem_in_problem_set_api_v1_domains_domain_problem_sets_problem_set_problem_post(self):
-        """Test case for add_problem_in_problem_set_api_v1_domains_domain_problem_sets_problem_set_problem_post
+    def test_add_problem_in_problem_set_api_v1_domains_domain_problem_sets_problem_set_problems_post(self):
+        """Test case for add_problem_in_problem_set_api_v1_domains_domain_problem_sets_problem_set_problems_post
 
         Add Problem In Problem Set  # noqa: E501
         """
@@ -42,8 +42,8 @@ class TestProblemSetApi(unittest.TestCase):
         """
         pass
 
-    def test_delete_problem_in_problem_set_api_v1_domains_domain_problem_sets_problem_set_problem_problem_delete(self):
-        """Test case for delete_problem_in_problem_set_api_v1_domains_domain_problem_sets_problem_set_problem_problem_delete
+    def test_delete_problem_in_problem_set_api_v1_domains_domain_problem_sets_problem_set_problems_problem_delete(self):
+        """Test case for delete_problem_in_problem_set_api_v1_domains_domain_problem_sets_problem_set_problems_problem_delete
 
         Delete Problem In Problem Set  # noqa: E501
         """
@@ -56,8 +56,8 @@ class TestProblemSetApi(unittest.TestCase):
         """
         pass
 
-    def test_get_problem_in_problem_set_api_v1_domains_domain_problem_sets_problem_set_problem_problem_get(self):
-        """Test case for get_problem_in_problem_set_api_v1_domains_domain_problem_sets_problem_set_problem_problem_get
+    def test_get_problem_in_problem_set_api_v1_domains_domain_problem_sets_problem_set_problems_problem_get(self):
+        """Test case for get_problem_in_problem_set_api_v1_domains_domain_problem_sets_problem_set_problems_problem_get
 
         Get Problem In Problem Set  # noqa: E501
         """
@@ -84,15 +84,22 @@ class TestProblemSetApi(unittest.TestCase):
         """
         pass
 
-    def test_submit_solution_to_problem_set_api_v1_domains_domain_problem_sets_problem_set_problem_problem_submit_post(self):
-        """Test case for submit_solution_to_problem_set_api_v1_domains_domain_problem_sets_problem_set_problem_problem_submit_post
+    def test_list_problems_in_problem_set_api_v1_domains_domain_problem_sets_problem_set_problems_get(self):
+        """Test case for list_problems_in_problem_set_api_v1_domains_domain_problem_sets_problem_set_problems_get
+
+        List Problems In Problem Set  # noqa: E501
+        """
+        pass
+
+    def test_submit_solution_to_problem_set_api_v1_domains_domain_problem_sets_problem_set_problems_problem_submit_post(self):
+        """Test case for submit_solution_to_problem_set_api_v1_domains_domain_problem_sets_problem_set_problems_problem_submit_post
 
         Submit Solution To Problem Set  # noqa: E501
         """
         pass
 
-    def test_update_problem_in_problem_set_api_v1_domains_domain_problem_sets_problem_set_problem_problem_patch(self):
-        """Test case for update_problem_in_problem_set_api_v1_domains_domain_problem_sets_problem_set_problem_problem_patch
+    def test_update_problem_in_problem_set_api_v1_domains_domain_problem_sets_problem_set_problems_problem_patch(self):
+        """Test case for update_problem_in_problem_set_api_v1_domains_domain_problem_sets_problem_set_problems_problem_patch
 
         Update Problem In Problem Set  # noqa: E501
         """
