@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: f24a6d9@2021-12-02T08:21:18Z  # noqa: E501
+    Git version: 193dff2@2021-12-02T15:06:55Z  # noqa: E501
 
     OpenAPI spec version: 0.1.0
     
@@ -26,27 +26,6 @@ class TestAdminApi(unittest.TestCase):
         self.api = AdminApi()  # noqa: E501
 
     def tearDown(self):
-        pass
-
-    def test_create_judger_api_v1_admin_judgers_post(self):
-        """Test case for create_judger_api_v1_admin_judgers_post
-
-        Create Judger  # noqa: E501
-        """
-        pass
-
-    def test_create_user_api_v1_admin_users_post(self):
-        """Test case for create_user_api_v1_admin_users_post
-
-        Create User  # noqa: E501
-        """
-        pass
-
-    def test_delete_user_api_v1_admin_users_uid_delete(self):
-        """Test case for delete_user_api_v1_admin_users_uid_delete
-
-        Delete User  # noqa: E501
-        """
         pass
 
     def test_list_domain_roles_api_v1_admin_domain_roles_get(self):

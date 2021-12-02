@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: f24a6d9@2021-12-02T08:21:18Z  # noqa: E501
+    Git version: 193dff2@2021-12-02T15:06:55Z  # noqa: E501
 
     OpenAPI spec version: 0.1.0
     
@@ -32,317 +32,6 @@ class AdminApi(object):
             api_client = ApiClient()
         self.api_client = api_client
 
-    def create_judger_api_v1_admin_judgers_post(self, uname, mail, **kwargs):  # noqa: E501
-        """Create Judger  # noqa: E501
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.create_judger_api_v1_admin_judgers_post(uname, mail, async_req=True)
-        >>> result = thread.get()
-
-        :param async_req bool
-        :param str uname: (required)
-        :param str mail: (required)
-        :return: UserResp
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
-            return self.create_judger_api_v1_admin_judgers_post_with_http_info(uname, mail, **kwargs)  # noqa: E501
-        else:
-            (data) = self.create_judger_api_v1_admin_judgers_post_with_http_info(uname, mail, **kwargs)  # noqa: E501
-            return data
-
-    def create_judger_api_v1_admin_judgers_post_with_http_info(self, uname, mail, **kwargs):  # noqa: E501
-        """Create Judger  # noqa: E501
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.create_judger_api_v1_admin_judgers_post_with_http_info(uname, mail, async_req=True)
-        >>> result = thread.get()
-
-        :param async_req bool
-        :param str uname: (required)
-        :param str mail: (required)
-        :return: UserResp
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-
-        all_params = ['uname', 'mail']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
-
-        params = locals()
-        for key, val in six.iteritems(params['kwargs']):
-            if key not in all_params:
-                raise TypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method create_judger_api_v1_admin_judgers_post" % key
-                )
-            params[key] = val
-        del params['kwargs']
-        # verify the required parameter 'uname' is set
-        if ('uname' not in params or
-                params['uname'] is None):
-            raise ValueError("Missing the required parameter `uname` when calling `create_judger_api_v1_admin_judgers_post`")  # noqa: E501
-        # verify the required parameter 'mail' is set
-        if ('mail' not in params or
-                params['mail'] is None):
-            raise ValueError("Missing the required parameter `mail` when calling `create_judger_api_v1_admin_judgers_post`")  # noqa: E501
-
-        collection_formats = {}
-
-        path_params = {}
-
-        query_params = []
-        if 'uname' in params:
-            query_params.append(('uname', params['uname']))  # noqa: E501
-        if 'mail' in params:
-            query_params.append(('mail', params['mail']))  # noqa: E501
-
-        header_params = {}
-
-        form_params = []
-        local_var_files = {}
-
-        body_params = None
-        # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])  # noqa: E501
-
-        # Authentication setting
-        auth_settings = ['HTTPBearer']  # noqa: E501
-
-        return self.api_client.call_api(
-            '/api/v1/admin/judgers', 'POST',
-            path_params,
-            query_params,
-            header_params,
-            body=body_params,
-            post_params=form_params,
-            files=local_var_files,
-            response_type='UserResp',  # noqa: E501
-            auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
-
-    def create_user_api_v1_admin_users_post(self, student_id, jaccount_name, real_name, ip, **kwargs):  # noqa: E501
-        """Create User  # noqa: E501
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.create_user_api_v1_admin_users_post(student_id, jaccount_name, real_name, ip, async_req=True)
-        >>> result = thread.get()
-
-        :param async_req bool
-        :param str student_id: (required)
-        :param str jaccount_name: (required)
-        :param str real_name: (required)
-        :param str ip: (required)
-        :return: UserResp
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
-            return self.create_user_api_v1_admin_users_post_with_http_info(student_id, jaccount_name, real_name, ip, **kwargs)  # noqa: E501
-        else:
-            (data) = self.create_user_api_v1_admin_users_post_with_http_info(student_id, jaccount_name, real_name, ip, **kwargs)  # noqa: E501
-            return data
-
-    def create_user_api_v1_admin_users_post_with_http_info(self, student_id, jaccount_name, real_name, ip, **kwargs):  # noqa: E501
-        """Create User  # noqa: E501
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.create_user_api_v1_admin_users_post_with_http_info(student_id, jaccount_name, real_name, ip, async_req=True)
-        >>> result = thread.get()
-
-        :param async_req bool
-        :param str student_id: (required)
-        :param str jaccount_name: (required)
-        :param str real_name: (required)
-        :param str ip: (required)
-        :return: UserResp
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-
-        all_params = ['student_id', 'jaccount_name', 'real_name', 'ip']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
-
-        params = locals()
-        for key, val in six.iteritems(params['kwargs']):
-            if key not in all_params:
-                raise TypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method create_user_api_v1_admin_users_post" % key
-                )
-            params[key] = val
-        del params['kwargs']
-        # verify the required parameter 'student_id' is set
-        if ('student_id' not in params or
-                params['student_id'] is None):
-            raise ValueError("Missing the required parameter `student_id` when calling `create_user_api_v1_admin_users_post`")  # noqa: E501
-        # verify the required parameter 'jaccount_name' is set
-        if ('jaccount_name' not in params or
-                params['jaccount_name'] is None):
-            raise ValueError("Missing the required parameter `jaccount_name` when calling `create_user_api_v1_admin_users_post`")  # noqa: E501
-        # verify the required parameter 'real_name' is set
-        if ('real_name' not in params or
-                params['real_name'] is None):
-            raise ValueError("Missing the required parameter `real_name` when calling `create_user_api_v1_admin_users_post`")  # noqa: E501
-        # verify the required parameter 'ip' is set
-        if ('ip' not in params or
-                params['ip'] is None):
-            raise ValueError("Missing the required parameter `ip` when calling `create_user_api_v1_admin_users_post`")  # noqa: E501
-
-        collection_formats = {}
-
-        path_params = {}
-
-        query_params = []
-        if 'student_id' in params:
-            query_params.append(('studentId', params['student_id']))  # noqa: E501
-        if 'jaccount_name' in params:
-            query_params.append(('jaccountName', params['jaccount_name']))  # noqa: E501
-        if 'real_name' in params:
-            query_params.append(('realName', params['real_name']))  # noqa: E501
-        if 'ip' in params:
-            query_params.append(('ip', params['ip']))  # noqa: E501
-
-        header_params = {}
-
-        form_params = []
-        local_var_files = {}
-
-        body_params = None
-        # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])  # noqa: E501
-
-        # Authentication setting
-        auth_settings = ['HTTPBearer']  # noqa: E501
-
-        return self.api_client.call_api(
-            '/api/v1/admin/users', 'POST',
-            path_params,
-            query_params,
-            header_params,
-            body=body_params,
-            post_params=form_params,
-            files=local_var_files,
-            response_type='UserResp',  # noqa: E501
-            auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
-
-    def delete_user_api_v1_admin_users_uid_delete(self, uid, **kwargs):  # noqa: E501
-        """Delete User  # noqa: E501
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.delete_user_api_v1_admin_users_uid_delete(uid, async_req=True)
-        >>> result = thread.get()
-
-        :param async_req bool
-        :param str uid: (required)
-        :return: EmptyResp
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
-            return self.delete_user_api_v1_admin_users_uid_delete_with_http_info(uid, **kwargs)  # noqa: E501
-        else:
-            (data) = self.delete_user_api_v1_admin_users_uid_delete_with_http_info(uid, **kwargs)  # noqa: E501
-            return data
-
-    def delete_user_api_v1_admin_users_uid_delete_with_http_info(self, uid, **kwargs):  # noqa: E501
-        """Delete User  # noqa: E501
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.delete_user_api_v1_admin_users_uid_delete_with_http_info(uid, async_req=True)
-        >>> result = thread.get()
-
-        :param async_req bool
-        :param str uid: (required)
-        :return: EmptyResp
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-
-        all_params = ['uid']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
-
-        params = locals()
-        for key, val in six.iteritems(params['kwargs']):
-            if key not in all_params:
-                raise TypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method delete_user_api_v1_admin_users_uid_delete" % key
-                )
-            params[key] = val
-        del params['kwargs']
-        # verify the required parameter 'uid' is set
-        if ('uid' not in params or
-                params['uid'] is None):
-            raise ValueError("Missing the required parameter `uid` when calling `delete_user_api_v1_admin_users_uid_delete`")  # noqa: E501
-
-        collection_formats = {}
-
-        path_params = {}
-        if 'uid' in params:
-            path_params['uid'] = params['uid']  # noqa: E501
-
-        query_params = []
-
-        header_params = {}
-
-        form_params = []
-        local_var_files = {}
-
-        body_params = None
-        # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])  # noqa: E501
-
-        # Authentication setting
-        auth_settings = ['HTTPBearer']  # noqa: E501
-
-        return self.api_client.call_api(
-            '/api/v1/admin/users/{uid}', 'DELETE',
-            path_params,
-            query_params,
-            header_params,
-            body=body_params,
-            post_params=form_params,
-            files=local_var_files,
-            response_type='EmptyResp',  # noqa: E501
-            auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
-
     def list_domain_roles_api_v1_admin_domain_roles_get(self, **kwargs):  # noqa: E501
         """List Domain Roles  # noqa: E501
 
@@ -352,6 +41,7 @@ class AdminApi(object):
         >>> result = thread.get()
 
         :param async_req bool
+        :param str ordering: Comma seperated list of ordering the results. You may specify reverse orderings by prefixing the field name with '-'.  Available fields: name
         :param int offset:
         :param int limit:
         :return: DomainRoleListResp
@@ -374,6 +64,7 @@ class AdminApi(object):
         >>> result = thread.get()
 
         :param async_req bool
+        :param str ordering: Comma seperated list of ordering the results. You may specify reverse orderings by prefixing the field name with '-'.  Available fields: name
         :param int offset:
         :param int limit:
         :return: DomainRoleListResp
@@ -381,7 +72,7 @@ class AdminApi(object):
                  returns the request thread.
         """
 
-        all_params = ['offset', 'limit']  # noqa: E501
+        all_params = ['ordering', 'offset', 'limit']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -402,6 +93,8 @@ class AdminApi(object):
         path_params = {}
 
         query_params = []
+        if 'ordering' in params:
+            query_params.append(('ordering', params['ordering']))  # noqa: E501
         if 'offset' in params:
             query_params.append(('offset', params['offset']))  # noqa: E501
         if 'limit' in params:
@@ -445,6 +138,7 @@ class AdminApi(object):
         >>> result = thread.get()
 
         :param async_req bool
+        :param str ordering: Comma seperated list of ordering the results. You may specify reverse orderings by prefixing the field name with '-'.  Available fields: name
         :param int offset:
         :param int limit:
         :return: UserListResp
@@ -467,6 +161,7 @@ class AdminApi(object):
         >>> result = thread.get()
 
         :param async_req bool
+        :param str ordering: Comma seperated list of ordering the results. You may specify reverse orderings by prefixing the field name with '-'.  Available fields: name
         :param int offset:
         :param int limit:
         :return: UserListResp
@@ -474,7 +169,7 @@ class AdminApi(object):
                  returns the request thread.
         """
 
-        all_params = ['offset', 'limit']  # noqa: E501
+        all_params = ['ordering', 'offset', 'limit']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -495,6 +190,8 @@ class AdminApi(object):
         path_params = {}
 
         query_params = []
+        if 'ordering' in params:
+            query_params.append(('ordering', params['ordering']))  # noqa: E501
         if 'offset' in params:
             query_params.append(('offset', params['offset']))  # noqa: E501
         if 'limit' in params:
@@ -538,6 +235,7 @@ class AdminApi(object):
         >>> result = thread.get()
 
         :param async_req bool
+        :param str ordering: Comma seperated list of ordering the results. You may specify reverse orderings by prefixing the field name with '-'.  Available fields: name
         :param int offset:
         :param int limit:
         :return: UserListResp
@@ -560,6 +258,7 @@ class AdminApi(object):
         >>> result = thread.get()
 
         :param async_req bool
+        :param str ordering: Comma seperated list of ordering the results. You may specify reverse orderings by prefixing the field name with '-'.  Available fields: name
         :param int offset:
         :param int limit:
         :return: UserListResp
@@ -567,7 +266,7 @@ class AdminApi(object):
                  returns the request thread.
         """
 
-        all_params = ['offset', 'limit']  # noqa: E501
+        all_params = ['ordering', 'offset', 'limit']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -588,6 +287,8 @@ class AdminApi(object):
         path_params = {}
 
         query_params = []
+        if 'ordering' in params:
+            query_params.append(('ordering', params['ordering']))  # noqa: E501
         if 'offset' in params:
             query_params.append(('offset', params['offset']))  # noqa: E501
         if 'limit' in params:
