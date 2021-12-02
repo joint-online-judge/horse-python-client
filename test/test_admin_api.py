@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: b2b50a8@2021-11-30T20:07:57Z  # noqa: E501
+    Git version: bfefbbd@2021-12-02T07:55:13Z  # noqa: E501
 
     OpenAPI spec version: 0.1.0
     
@@ -46,13 +46,6 @@ class TestAdminApi(unittest.TestCase):
         """Test case for delete_user_api_v1_admin_users_uid_delete
 
         Delete User  # noqa: E501
-        """
-        pass
-
-    def test_get_judger_jwt_api_v1_admin_judgers_uid_jwt_get(self):
-        """Test case for get_judger_jwt_api_v1_admin_judgers_uid_jwt_get
-
-        Get Judger Jwt  # noqa: E501
         """
         pass
 

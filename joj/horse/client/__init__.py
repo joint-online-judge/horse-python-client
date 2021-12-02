@@ -5,7 +5,7 @@
 """
     JOJ Horse
 
-    Git version: b2b50a8@2021-11-30T20:07:57Z  # noqa: E501
+    Git version: bfefbbd@2021-12-02T07:55:13Z  # noqa: E501
 
     OpenAPI spec version: 0.1.0
     
@@ -82,7 +82,6 @@ from joj.horse.client.models.file_info_resp import FileInfoResp
 from joj.horse.client.models.file_upload import FileUpload
 from joj.horse.client.models.general_permission import GeneralPermission
 from joj.horse.client.models.http_validation_error import HTTPValidationError
-from joj.horse.client.models.jwt import JWT
 from joj.horse.client.models.jwt_access_token import JWTAccessToken
 from joj.horse.client.models.jwt_access_token_resp import JWTAccessTokenResp
 from joj.horse.client.models.judge_claim import JudgeClaim
