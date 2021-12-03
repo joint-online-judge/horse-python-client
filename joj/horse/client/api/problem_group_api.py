@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: b6857ef@2021-12-03T15:06:32Z  # noqa: E501
+    Git version: cd3eddf@2021-12-03T16:26:50Z  # noqa: E501
 
     OpenAPI spec version: 0.1.0
     
@@ -41,6 +41,7 @@ class ProblemGroupApi(object):
         >>> result = thread.get()
 
         :param async_req bool
+        :param str ordering: Comma seperated list of ordering the results. You may specify reverse orderings by prefixing the field name with '-'.  Available fields: Any
         :param int offset:
         :param int limit:
         :return: ProblemGroupListResp
@@ -63,6 +64,7 @@ class ProblemGroupApi(object):
         >>> result = thread.get()
 
         :param async_req bool
+        :param str ordering: Comma seperated list of ordering the results. You may specify reverse orderings by prefixing the field name with '-'.  Available fields: Any
         :param int offset:
         :param int limit:
         :return: ProblemGroupListResp
@@ -70,7 +72,7 @@ class ProblemGroupApi(object):
                  returns the request thread.
         """
 
-        all_params = ['offset', 'limit']  # noqa: E501
+        all_params = ['ordering', 'offset', 'limit']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -91,6 +93,8 @@ class ProblemGroupApi(object):
         path_params = {}
 
         query_params = []
+        if 'ordering' in params:
+            query_params.append(('ordering', params['ordering']))  # noqa: E501
         if 'offset' in params:
             query_params.append(('offset', params['offset']))  # noqa: E501
         if 'limit' in params:
