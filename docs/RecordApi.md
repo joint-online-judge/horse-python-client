@@ -107,7 +107,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **list_records_in_domain_api_v1_domains_domain_records_get**
-> RecordListResp list_records_in_domain_api_v1_domains_domain_records_get(domain, problem_set=problem_set, problem=problem, offset=offset, limit=limit, uid=uid)
+> RecordListResp list_records_in_domain_api_v1_domains_domain_records_get(domain, problem_set=problem_set, problem=problem, ordering=ordering, offset=offset, limit=limit, uid=uid)
 
 List Records In Domain
 
@@ -125,13 +125,14 @@ api_instance = joj.horse.client.RecordApi(joj.horse.client.ApiClient(configurati
 domain = 'domain_example' # str | 
 problem_set = 'problem_set_example' # str |  (optional)
 problem = 'problem_example' # str |  (optional)
+ordering = '' # str | Comma seperated list of ordering the results. You may specify reverse orderings by prefixing the field name with '-'.  Available fields: created_at,updated_at (optional)
 offset = 0 # int |  (optional) (default to 0)
 limit = 100 # int |  (optional) (default to 100)
 uid = '' # str | user id or 'me' or empty (optional)
 
 try:
     # List Records In Domain
-    api_response = api_instance.list_records_in_domain_api_v1_domains_domain_records_get(domain, problem_set=problem_set, problem=problem, offset=offset, limit=limit, uid=uid)
+    api_response = api_instance.list_records_in_domain_api_v1_domains_domain_records_get(domain, problem_set=problem_set, problem=problem, ordering=ordering, offset=offset, limit=limit, uid=uid)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling RecordApi->list_records_in_domain_api_v1_domains_domain_records_get: %s\n" % e)
@@ -144,6 +145,7 @@ Name | Type | Description  | Notes
  **domain** | **str**|  | 
  **problem_set** | **str**|  | [optional] 
  **problem** | **str**|  | [optional] 
+ **ordering** | **str**| Comma seperated list of ordering the results. You may specify reverse orderings by prefixing the field name with &#x27;-&#x27;.  Available fields: created_at,updated_at | [optional] 
  **offset** | **int**|  | [optional] [default to 0]
  **limit** | **int**|  | [optional] [default to 100]
  **uid** | **str**| user id or &#x27;me&#x27; or empty | [optional] 

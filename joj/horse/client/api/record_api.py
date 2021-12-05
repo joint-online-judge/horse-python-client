@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: 1525419@2021-12-05T09:30:14Z  # noqa: E501
+    Git version: 1532c54@2021-12-05T18:56:28Z  # noqa: E501
 
     OpenAPI spec version: 0.1.0
     
@@ -246,6 +246,7 @@ class RecordApi(object):
         :param str domain: (required)
         :param str problem_set:
         :param str problem:
+        :param str ordering: Comma seperated list of ordering the results. You may specify reverse orderings by prefixing the field name with '-'.  Available fields: created_at,updated_at
         :param int offset:
         :param int limit:
         :param str uid: user id or 'me' or empty
@@ -272,6 +273,7 @@ class RecordApi(object):
         :param str domain: (required)
         :param str problem_set:
         :param str problem:
+        :param str ordering: Comma seperated list of ordering the results. You may specify reverse orderings by prefixing the field name with '-'.  Available fields: created_at,updated_at
         :param int offset:
         :param int limit:
         :param str uid: user id or 'me' or empty
@@ -280,7 +282,7 @@ class RecordApi(object):
                  returns the request thread.
         """
 
-        all_params = ['domain', 'problem_set', 'problem', 'offset', 'limit', 'uid']  # noqa: E501
+        all_params = ['domain', 'problem_set', 'problem', 'ordering', 'offset', 'limit', 'uid']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -311,6 +313,8 @@ class RecordApi(object):
             query_params.append(('problemSet', params['problem_set']))  # noqa: E501
         if 'problem' in params:
             query_params.append(('problem', params['problem']))  # noqa: E501
+        if 'ordering' in params:
+            query_params.append(('ordering', params['ordering']))  # noqa: E501
         if 'offset' in params:
             query_params.append(('offset', params['offset']))  # noqa: E501
         if 'limit' in params:

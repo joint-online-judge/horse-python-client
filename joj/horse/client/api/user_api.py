@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: 1525419@2021-12-05T09:30:14Z  # noqa: E501
+    Git version: 1532c54@2021-12-05T18:56:28Z  # noqa: E501
 
     OpenAPI spec version: 0.1.0
     
@@ -415,7 +415,7 @@ class UserApi(object):
         :param async_req bool
         :param str uid: (required)
         :param list[str] role:
-        :param str ordering: Comma seperated list of ordering the results. You may specify reverse orderings by prefixing the field name with '-'.  Available fields: name
+        :param str ordering: Comma seperated list of ordering the results. You may specify reverse orderings by prefixing the field name with '-'.  Available fields: created_at,updated_at
         :param int offset:
         :param int limit:
         :return: DomainListResp
@@ -440,7 +440,7 @@ class UserApi(object):
         :param async_req bool
         :param str uid: (required)
         :param list[str] role:
-        :param str ordering: Comma seperated list of ordering the results. You may specify reverse orderings by prefixing the field name with '-'.  Available fields: name
+        :param str ordering: Comma seperated list of ordering the results. You may specify reverse orderings by prefixing the field name with '-'.  Available fields: created_at,updated_at
         :param int offset:
         :param int limit:
         :return: DomainListResp
