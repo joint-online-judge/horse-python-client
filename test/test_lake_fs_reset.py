@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: 6e607f0@2021-12-05T20:00:02Z  # noqa: E501
+    Git version: 18a8a27@2021-12-08T21:19:12Z  # noqa: E501
 
     OpenAPI spec version: 0.1.0
     
@@ -14,9 +14,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import joj.horse.client
-from joj.horse.client.models.lake_fs_reset import LakeFSReset  # noqa: E501
-from joj.horse.client.rest import ApiException
+import joj.horse_client
+from joj.horse_client.models.lake_fs_reset import LakeFSReset  # noqa: E501
+from joj.horse_client.rest import ApiException
 
 
 class TestLakeFSReset(unittest.TestCase):
@@ -31,7 +31,7 @@ class TestLakeFSReset(unittest.TestCase):
     def testLakeFSReset(self):
         """Test LakeFSReset"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = joj.horse.client.models.lake_fs_reset.LakeFSReset()  # noqa: E501
+        # model = joj.horse_client.models.lake_fs_reset.LakeFSReset()  # noqa: E501
         pass
 
 

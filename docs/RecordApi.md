@@ -1,4 +1,4 @@
-# joj.horse.client.RecordApi
+# joj.horse_client.RecordApi
 
 All URIs are relative to */*
 
@@ -17,13 +17,13 @@ Get Record
 ```python
 from __future__ import print_function
 import time
-import joj.horse.client
-from joj.horse.client.rest import ApiException
+import joj.horse_client
+from joj.horse_client.rest import ApiException
 from pprint import pprint
 
 
 # create an instance of the API class
-api_instance = joj.horse.client.RecordApi(joj.horse.client.ApiClient(configuration))
+api_instance = joj.horse_client.RecordApi(joj.horse_client.ApiClient(configuration))
 record = 'record_example' # str | 
 domain = 'domain_example' # str | url or id of the domain
 
@@ -66,13 +66,13 @@ Get Record Code
 ```python
 from __future__ import print_function
 import time
-import joj.horse.client
-from joj.horse.client.rest import ApiException
+import joj.horse_client
+from joj.horse_client.rest import ApiException
 from pprint import pprint
 
 
 # create an instance of the API class
-api_instance = joj.horse.client.RecordApi(joj.horse.client.ApiClient(configuration))
+api_instance = joj.horse_client.RecordApi(joj.horse_client.ApiClient(configuration))
 record = 'record_example' # str | 
 domain = 'domain_example' # str | url or id of the domain
 
@@ -115,13 +115,13 @@ List Records In Domain
 ```python
 from __future__ import print_function
 import time
-import joj.horse.client
-from joj.horse.client.rest import ApiException
+import joj.horse_client
+from joj.horse_client.rest import ApiException
 from pprint import pprint
 
 
 # create an instance of the API class
-api_instance = joj.horse.client.RecordApi(joj.horse.client.ApiClient(configuration))
+api_instance = joj.horse_client.RecordApi(joj.horse_client.ApiClient(configuration))
 domain = 'domain_example' # str | 
 problem_set = 'problem_set_example' # str |  (optional)
 problem = 'problem_example' # str |  (optional)

@@ -1,4 +1,4 @@
-# joj.horse.client.DomainApi
+# joj.horse_client.DomainApi
 
 All URIs are relative to */*
 
@@ -38,14 +38,14 @@ Add Domain User
 ```python
 from __future__ import print_function
 import time
-import joj.horse.client
-from joj.horse.client.rest import ApiException
+import joj.horse_client
+from joj.horse_client.rest import ApiException
 from pprint import pprint
 
 
 # create an instance of the API class
-api_instance = joj.horse.client.DomainApi(joj.horse.client.ApiClient(configuration))
-body = joj.horse.client.DomainUserAdd() # DomainUserAdd | 
+api_instance = joj.horse_client.DomainApi(joj.horse_client.ApiClient(configuration))
+body = joj.horse_client.DomainUserAdd() # DomainUserAdd | 
 domain = 'domain_example' # str | url or id of the domain
 
 try:
@@ -87,14 +87,14 @@ Create Domain
 ```python
 from __future__ import print_function
 import time
-import joj.horse.client
-from joj.horse.client.rest import ApiException
+import joj.horse_client
+from joj.horse_client.rest import ApiException
 from pprint import pprint
 
 
 # create an instance of the API class
-api_instance = joj.horse.client.DomainApi(joj.horse.client.ApiClient(configuration))
-body = joj.horse.client.DomainCreate() # DomainCreate | 
+api_instance = joj.horse_client.DomainApi(joj.horse_client.ApiClient(configuration))
+body = joj.horse_client.DomainCreate() # DomainCreate | 
 
 try:
     # Create Domain
@@ -134,14 +134,14 @@ Create Domain Invitation
 ```python
 from __future__ import print_function
 import time
-import joj.horse.client
-from joj.horse.client.rest import ApiException
+import joj.horse_client
+from joj.horse_client.rest import ApiException
 from pprint import pprint
 
 
 # create an instance of the API class
-api_instance = joj.horse.client.DomainApi(joj.horse.client.ApiClient(configuration))
-body = joj.horse.client.DomainInvitationCreate() # DomainInvitationCreate | 
+api_instance = joj.horse_client.DomainApi(joj.horse_client.ApiClient(configuration))
+body = joj.horse_client.DomainInvitationCreate() # DomainInvitationCreate | 
 domain = 'domain_example' # str | url or id of the domain
 
 try:
@@ -183,14 +183,14 @@ Create Domain Role
 ```python
 from __future__ import print_function
 import time
-import joj.horse.client
-from joj.horse.client.rest import ApiException
+import joj.horse_client
+from joj.horse_client.rest import ApiException
 from pprint import pprint
 
 
 # create an instance of the API class
-api_instance = joj.horse.client.DomainApi(joj.horse.client.ApiClient(configuration))
-body = joj.horse.client.DomainRoleCreate() # DomainRoleCreate | 
+api_instance = joj.horse_client.DomainApi(joj.horse_client.ApiClient(configuration))
+body = joj.horse_client.DomainRoleCreate() # DomainRoleCreate | 
 domain = 'domain_example' # str | url or id of the domain
 
 try:
@@ -234,13 +234,13 @@ TODO: finish this part  tc-imba: delete domain have many side effects, and is no
 ```python
 from __future__ import print_function
 import time
-import joj.horse.client
-from joj.horse.client.rest import ApiException
+import joj.horse_client
+from joj.horse_client.rest import ApiException
 from pprint import pprint
 
 
 # create an instance of the API class
-api_instance = joj.horse.client.DomainApi(joj.horse.client.ApiClient(configuration))
+api_instance = joj.horse_client.DomainApi(joj.horse_client.ApiClient(configuration))
 domain = 'domain_example' # str | url or id of the domain
 
 try:
@@ -281,13 +281,13 @@ Delete Domain Invitation
 ```python
 from __future__ import print_function
 import time
-import joj.horse.client
-from joj.horse.client.rest import ApiException
+import joj.horse_client
+from joj.horse_client.rest import ApiException
 from pprint import pprint
 
 
 # create an instance of the API class
-api_instance = joj.horse.client.DomainApi(joj.horse.client.ApiClient(configuration))
+api_instance = joj.horse_client.DomainApi(joj.horse_client.ApiClient(configuration))
 domain = 'domain_example' # str | url or id of the domain
 invitation = 'invitation_example' # str | url or id of the domain invitation
 
@@ -330,13 +330,13 @@ Delete Domain Role
 ```python
 from __future__ import print_function
 import time
-import joj.horse.client
-from joj.horse.client.rest import ApiException
+import joj.horse_client
+from joj.horse_client.rest import ApiException
 from pprint import pprint
 
 
 # create an instance of the API class
-api_instance = joj.horse.client.DomainApi(joj.horse.client.ApiClient(configuration))
+api_instance = joj.horse_client.DomainApi(joj.horse_client.ApiClient(configuration))
 domain = 'domain_example' # str | url or id of the domain
 role = 'role_example' # str | name of the domain role
 
@@ -379,13 +379,13 @@ Get Domain
 ```python
 from __future__ import print_function
 import time
-import joj.horse.client
-from joj.horse.client.rest import ApiException
+import joj.horse_client
+from joj.horse_client.rest import ApiException
 from pprint import pprint
 
 
 # create an instance of the API class
-api_instance = joj.horse.client.DomainApi(joj.horse.client.ApiClient(configuration))
+api_instance = joj.horse_client.DomainApi(joj.horse_client.ApiClient(configuration))
 domain = 'domain_example' # str | url or id of the domain
 
 try:
@@ -426,13 +426,13 @@ Get Domain Invitation
 ```python
 from __future__ import print_function
 import time
-import joj.horse.client
-from joj.horse.client.rest import ApiException
+import joj.horse_client
+from joj.horse_client.rest import ApiException
 from pprint import pprint
 
 
 # create an instance of the API class
-api_instance = joj.horse.client.DomainApi(joj.horse.client.ApiClient(configuration))
+api_instance = joj.horse_client.DomainApi(joj.horse_client.ApiClient(configuration))
 domain = 'domain_example' # str | url or id of the domain
 invitation = 'invitation_example' # str | url or id of the domain invitation
 
@@ -475,13 +475,13 @@ Get Domain Role
 ```python
 from __future__ import print_function
 import time
-import joj.horse.client
-from joj.horse.client.rest import ApiException
+import joj.horse_client
+from joj.horse_client.rest import ApiException
 from pprint import pprint
 
 
 # create an instance of the API class
-api_instance = joj.horse.client.DomainApi(joj.horse.client.ApiClient(configuration))
+api_instance = joj.horse_client.DomainApi(joj.horse_client.ApiClient(configuration))
 domain = 'domain_example' # str | url or id of the domain
 role = 'role_example' # str | name of the domain role
 
@@ -524,13 +524,13 @@ Get Domain User
 ```python
 from __future__ import print_function
 import time
-import joj.horse.client
-from joj.horse.client.rest import ApiException
+import joj.horse_client
+from joj.horse_client.rest import ApiException
 from pprint import pprint
 
 
 # create an instance of the API class
-api_instance = joj.horse.client.DomainApi(joj.horse.client.ApiClient(configuration))
+api_instance = joj.horse_client.DomainApi(joj.horse_client.ApiClient(configuration))
 domain = 'domain_example' # str | url or id of the domain
 user = 'user_example' # str | user id or 'me' or empty
 
@@ -573,13 +573,13 @@ Get Domain User Permission
 ```python
 from __future__ import print_function
 import time
-import joj.horse.client
-from joj.horse.client.rest import ApiException
+import joj.horse_client
+from joj.horse_client.rest import ApiException
 from pprint import pprint
 
 
 # create an instance of the API class
-api_instance = joj.horse.client.DomainApi(joj.horse.client.ApiClient(configuration))
+api_instance = joj.horse_client.DomainApi(joj.horse_client.ApiClient(configuration))
 domain = 'domain_example' # str | url or id of the domain
 user = 'user_example' # str | user id or 'me' or empty
 
@@ -622,13 +622,13 @@ Join Domain By Invitation
 ```python
 from __future__ import print_function
 import time
-import joj.horse.client
-from joj.horse.client.rest import ApiException
+import joj.horse_client
+from joj.horse_client.rest import ApiException
 from pprint import pprint
 
 
 # create an instance of the API class
-api_instance = joj.horse.client.DomainApi(joj.horse.client.ApiClient(configuration))
+api_instance = joj.horse_client.DomainApi(joj.horse_client.ApiClient(configuration))
 domain = 'domain_example' # str | url or id of the domain
 invitation_code = 'invitation_code_example' # str | 
 
@@ -671,13 +671,13 @@ List Domain Invitations
 ```python
 from __future__ import print_function
 import time
-import joj.horse.client
-from joj.horse.client.rest import ApiException
+import joj.horse_client
+from joj.horse_client.rest import ApiException
 from pprint import pprint
 
 
 # create an instance of the API class
-api_instance = joj.horse.client.DomainApi(joj.horse.client.ApiClient(configuration))
+api_instance = joj.horse_client.DomainApi(joj.horse_client.ApiClient(configuration))
 domain = 'domain_example' # str | url or id of the domain
 
 try:
@@ -718,13 +718,13 @@ List Domain Roles
 ```python
 from __future__ import print_function
 import time
-import joj.horse.client
-from joj.horse.client.rest import ApiException
+import joj.horse_client
+from joj.horse_client.rest import ApiException
 from pprint import pprint
 
 
 # create an instance of the API class
-api_instance = joj.horse.client.DomainApi(joj.horse.client.ApiClient(configuration))
+api_instance = joj.horse_client.DomainApi(joj.horse_client.ApiClient(configuration))
 domain = 'domain_example' # str | url or id of the domain
 
 try:
@@ -765,13 +765,13 @@ List Domain Users
 ```python
 from __future__ import print_function
 import time
-import joj.horse.client
-from joj.horse.client.rest import ApiException
+import joj.horse_client
+from joj.horse_client.rest import ApiException
 from pprint import pprint
 
 
 # create an instance of the API class
-api_instance = joj.horse.client.DomainApi(joj.horse.client.ApiClient(configuration))
+api_instance = joj.horse_client.DomainApi(joj.horse_client.ApiClient(configuration))
 domain = 'domain_example' # str | url or id of the domain
 ordering = '' # str | Comma seperated list of ordering the results. You may specify reverse orderings by prefixing the field name with '-'.  Available fields: created_at,updated_at (optional)
 offset = 0 # int |  (optional) (default to 0)
@@ -820,13 +820,13 @@ List all domains that the current user has a role.
 ```python
 from __future__ import print_function
 import time
-import joj.horse.client
-from joj.horse.client.rest import ApiException
+import joj.horse_client
+from joj.horse_client.rest import ApiException
 from pprint import pprint
 
 
 # create an instance of the API class
-api_instance = joj.horse.client.DomainApi(joj.horse.client.ApiClient(configuration))
+api_instance = joj.horse_client.DomainApi(joj.horse_client.ApiClient(configuration))
 role = ['role_example'] # list[str] |  (optional)
 ordering = '' # str | Comma seperated list of ordering the results. You may specify reverse orderings by prefixing the field name with '-'.  Available fields: created_at,updated_at (optional)
 offset = 0 # int |  (optional) (default to 0)
@@ -873,13 +873,13 @@ Remove Domain User
 ```python
 from __future__ import print_function
 import time
-import joj.horse.client
-from joj.horse.client.rest import ApiException
+import joj.horse_client
+from joj.horse_client.rest import ApiException
 from pprint import pprint
 
 
 # create an instance of the API class
-api_instance = joj.horse.client.DomainApi(joj.horse.client.ApiClient(configuration))
+api_instance = joj.horse_client.DomainApi(joj.horse_client.ApiClient(configuration))
 domain = 'domain_example' # str | url or id of the domain
 user = 'user_example' # str | user id or 'me' or empty
 
@@ -922,13 +922,13 @@ Search Domain Candidates
 ```python
 from __future__ import print_function
 import time
-import joj.horse.client
-from joj.horse.client.rest import ApiException
+import joj.horse_client
+from joj.horse_client.rest import ApiException
 from pprint import pprint
 
 
 # create an instance of the API class
-api_instance = joj.horse.client.DomainApi(joj.horse.client.ApiClient(configuration))
+api_instance = joj.horse_client.DomainApi(joj.horse_client.ApiClient(configuration))
 domain = 'domain_example' # str | url or id of the domain
 query = 'query_example' # str | search query
 ordering = '' # str | Comma seperated list of ordering the results. You may specify reverse orderings by prefixing the field name with '-'.  Available fields: username (optional)
@@ -973,14 +973,14 @@ Transfer Domain
 ```python
 from __future__ import print_function
 import time
-import joj.horse.client
-from joj.horse.client.rest import ApiException
+import joj.horse_client
+from joj.horse_client.rest import ApiException
 from pprint import pprint
 
 
 # create an instance of the API class
-api_instance = joj.horse.client.DomainApi(joj.horse.client.ApiClient(configuration))
-body = joj.horse.client.DomainTransfer() # DomainTransfer | 
+api_instance = joj.horse_client.DomainApi(joj.horse_client.ApiClient(configuration))
+body = joj.horse_client.DomainTransfer() # DomainTransfer | 
 domain = 'domain_example' # str | url or id of the domain
 
 try:
@@ -1022,14 +1022,14 @@ Update Domain
 ```python
 from __future__ import print_function
 import time
-import joj.horse.client
-from joj.horse.client.rest import ApiException
+import joj.horse_client
+from joj.horse_client.rest import ApiException
 from pprint import pprint
 
 
 # create an instance of the API class
-api_instance = joj.horse.client.DomainApi(joj.horse.client.ApiClient(configuration))
-body = joj.horse.client.DomainEdit() # DomainEdit | 
+api_instance = joj.horse_client.DomainApi(joj.horse_client.ApiClient(configuration))
+body = joj.horse_client.DomainEdit() # DomainEdit | 
 domain = 'domain_example' # str | url or id of the domain
 
 try:
@@ -1071,14 +1071,14 @@ Update Domain Invitation
 ```python
 from __future__ import print_function
 import time
-import joj.horse.client
-from joj.horse.client.rest import ApiException
+import joj.horse_client
+from joj.horse_client.rest import ApiException
 from pprint import pprint
 
 
 # create an instance of the API class
-api_instance = joj.horse.client.DomainApi(joj.horse.client.ApiClient(configuration))
-body = joj.horse.client.DomainInvitationEdit() # DomainInvitationEdit | 
+api_instance = joj.horse_client.DomainApi(joj.horse_client.ApiClient(configuration))
+body = joj.horse_client.DomainInvitationEdit() # DomainInvitationEdit | 
 domain = 'domain_example' # str | url or id of the domain
 invitation = 'invitation_example' # str | url or id of the domain invitation
 
@@ -1122,14 +1122,14 @@ Update Domain Role
 ```python
 from __future__ import print_function
 import time
-import joj.horse.client
-from joj.horse.client.rest import ApiException
+import joj.horse_client
+from joj.horse_client.rest import ApiException
 from pprint import pprint
 
 
 # create an instance of the API class
-api_instance = joj.horse.client.DomainApi(joj.horse.client.ApiClient(configuration))
-body = joj.horse.client.DomainRoleEdit() # DomainRoleEdit | 
+api_instance = joj.horse_client.DomainApi(joj.horse_client.ApiClient(configuration))
+body = joj.horse_client.DomainRoleEdit() # DomainRoleEdit | 
 domain = 'domain_example' # str | url or id of the domain
 role = 'role_example' # str | name of the domain role
 
@@ -1173,14 +1173,14 @@ Update Domain User
 ```python
 from __future__ import print_function
 import time
-import joj.horse.client
-from joj.horse.client.rest import ApiException
+import joj.horse_client
+from joj.horse_client.rest import ApiException
 from pprint import pprint
 
 
 # create an instance of the API class
-api_instance = joj.horse.client.DomainApi(joj.horse.client.ApiClient(configuration))
-body = joj.horse.client.DomainUserUpdate() # DomainUserUpdate | 
+api_instance = joj.horse_client.DomainApi(joj.horse_client.ApiClient(configuration))
+body = joj.horse_client.DomainUserUpdate() # DomainUserUpdate | 
 domain = 'domain_example' # str | url or id of the domain
 user = 'user_example' # str | user id or 'me' or empty
 

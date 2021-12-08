@@ -1,4 +1,4 @@
-# joj.horse.client.MiscellaneousApi
+# joj.horse_client.MiscellaneousApi
 
 All URIs are relative to */*
 
@@ -18,13 +18,13 @@ Jwt Decoded
 ```python
 from __future__ import print_function
 import time
-import joj.horse.client
-from joj.horse.client.rest import ApiException
+import joj.horse_client
+from joj.horse_client.rest import ApiException
 from pprint import pprint
 
 
 # create an instance of the API class
-api_instance = joj.horse.client.MiscellaneousApi(joj.horse.client.ApiClient(configuration))
+api_instance = joj.horse_client.MiscellaneousApi(joj.horse_client.ApiClient(configuration))
 
 try:
     # Jwt Decoded
@@ -61,13 +61,13 @@ Set Root User
 ```python
 from __future__ import print_function
 import time
-import joj.horse.client
-from joj.horse.client.rest import ApiException
+import joj.horse_client
+from joj.horse_client.rest import ApiException
 from pprint import pprint
 
 
 # create an instance of the API class
-api_instance = joj.horse.client.MiscellaneousApi(joj.horse.client.ApiClient(configuration))
+api_instance = joj.horse_client.MiscellaneousApi(joj.horse_client.ApiClient(configuration))
 
 try:
     # Set Root User
@@ -104,12 +104,12 @@ Test Error Report
 ```python
 from __future__ import print_function
 import time
-import joj.horse.client
-from joj.horse.client.rest import ApiException
+import joj.horse_client
+from joj.horse_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = joj.horse.client.MiscellaneousApi()
+api_instance = joj.horse_client.MiscellaneousApi()
 
 try:
     # Test Error Report
@@ -146,12 +146,12 @@ Version
 ```python
 from __future__ import print_function
 import time
-import joj.horse.client
-from joj.horse.client.rest import ApiException
+import joj.horse_client
+from joj.horse_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = joj.horse.client.MiscellaneousApi()
+api_instance = joj.horse_client.MiscellaneousApi()
 
 try:
     # Version

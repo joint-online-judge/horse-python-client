@@ -1,4 +1,4 @@
-# joj.horse.client.ProblemSetApi
+# joj.horse_client.ProblemSetApi
 
 All URIs are relative to */*
 
@@ -26,14 +26,14 @@ Add Problem In Problem Set
 ```python
 from __future__ import print_function
 import time
-import joj.horse.client
-from joj.horse.client.rest import ApiException
+import joj.horse_client
+from joj.horse_client.rest import ApiException
 from pprint import pprint
 
 
 # create an instance of the API class
-api_instance = joj.horse.client.ProblemSetApi(joj.horse.client.ApiClient(configuration))
-body = joj.horse.client.ProblemSetAddProblem() # ProblemSetAddProblem | 
+api_instance = joj.horse_client.ProblemSetApi(joj.horse_client.ApiClient(configuration))
+body = joj.horse_client.ProblemSetAddProblem() # ProblemSetAddProblem | 
 domain = 'domain_example' # str | url or id of the domain
 problem_set = 'problem_set_example' # str | url or id of the problem set
 
@@ -77,14 +77,14 @@ Create Problem Set
 ```python
 from __future__ import print_function
 import time
-import joj.horse.client
-from joj.horse.client.rest import ApiException
+import joj.horse_client
+from joj.horse_client.rest import ApiException
 from pprint import pprint
 
 
 # create an instance of the API class
-api_instance = joj.horse.client.ProblemSetApi(joj.horse.client.ApiClient(configuration))
-body = joj.horse.client.ProblemSetCreate() # ProblemSetCreate | 
+api_instance = joj.horse_client.ProblemSetApi(joj.horse_client.ApiClient(configuration))
+body = joj.horse_client.ProblemSetCreate() # ProblemSetCreate | 
 domain = 'domain_example' # str | url or id of the domain
 
 try:
@@ -126,13 +126,13 @@ Delete Problem In Problem Set
 ```python
 from __future__ import print_function
 import time
-import joj.horse.client
-from joj.horse.client.rest import ApiException
+import joj.horse_client
+from joj.horse_client.rest import ApiException
 from pprint import pprint
 
 
 # create an instance of the API class
-api_instance = joj.horse.client.ProblemSetApi(joj.horse.client.ApiClient(configuration))
+api_instance = joj.horse_client.ProblemSetApi(joj.horse_client.ApiClient(configuration))
 domain = 'domain_example' # str | url or id of the domain
 problem_set = 'problem_set_example' # str | url or id of the problem set
 problem = 'problem_example' # str | url or id of the problem
@@ -177,13 +177,13 @@ Delete Problem Set
 ```python
 from __future__ import print_function
 import time
-import joj.horse.client
-from joj.horse.client.rest import ApiException
+import joj.horse_client
+from joj.horse_client.rest import ApiException
 from pprint import pprint
 
 
 # create an instance of the API class
-api_instance = joj.horse.client.ProblemSetApi(joj.horse.client.ApiClient(configuration))
+api_instance = joj.horse_client.ProblemSetApi(joj.horse_client.ApiClient(configuration))
 domain = 'domain_example' # str | url or id of the domain
 problem_set = 'problem_set_example' # str | url or id of the problem set
 
@@ -226,13 +226,13 @@ Get Problem In Problem Set
 ```python
 from __future__ import print_function
 import time
-import joj.horse.client
-from joj.horse.client.rest import ApiException
+import joj.horse_client
+from joj.horse_client.rest import ApiException
 from pprint import pprint
 
 
 # create an instance of the API class
-api_instance = joj.horse.client.ProblemSetApi(joj.horse.client.ApiClient(configuration))
+api_instance = joj.horse_client.ProblemSetApi(joj.horse_client.ApiClient(configuration))
 domain = 'domain_example' # str | url or id of the domain
 problem_set = 'problem_set_example' # str | url or id of the problem set
 problem = 'problem_example' # str | url or id of the problem
@@ -277,13 +277,13 @@ Get Problem Set
 ```python
 from __future__ import print_function
 import time
-import joj.horse.client
-from joj.horse.client.rest import ApiException
+import joj.horse_client
+from joj.horse_client.rest import ApiException
 from pprint import pprint
 
 
 # create an instance of the API class
-api_instance = joj.horse.client.ProblemSetApi(joj.horse.client.ApiClient(configuration))
+api_instance = joj.horse_client.ProblemSetApi(joj.horse_client.ApiClient(configuration))
 domain = 'domain_example' # str | url or id of the domain
 problem_set = 'problem_set_example' # str | url or id of the problem set
 
@@ -326,13 +326,13 @@ Get Scoreboard
 ```python
 from __future__ import print_function
 import time
-import joj.horse.client
-from joj.horse.client.rest import ApiException
+import joj.horse_client
+from joj.horse_client.rest import ApiException
 from pprint import pprint
 
 
 # create an instance of the API class
-api_instance = joj.horse.client.ProblemSetApi(joj.horse.client.ApiClient(configuration))
+api_instance = joj.horse_client.ProblemSetApi(joj.horse_client.ApiClient(configuration))
 problem_set = 'problem_set_example' # str | url or id of the problem set
 domain = 'domain_example' # str | url or id of the domain
 
@@ -375,13 +375,13 @@ List Problem Sets
 ```python
 from __future__ import print_function
 import time
-import joj.horse.client
-from joj.horse.client.rest import ApiException
+import joj.horse_client
+from joj.horse_client.rest import ApiException
 from pprint import pprint
 
 
 # create an instance of the API class
-api_instance = joj.horse.client.ProblemSetApi(joj.horse.client.ApiClient(configuration))
+api_instance = joj.horse_client.ProblemSetApi(joj.horse_client.ApiClient(configuration))
 domain = 'domain_example' # str | url or id of the domain
 ordering = '' # str | Comma seperated list of ordering the results. You may specify reverse orderings by prefixing the field name with '-'.  Available fields: created_at,updated_at (optional)
 offset = 0 # int |  (optional) (default to 0)
@@ -428,13 +428,13 @@ List Problems In Problem Set
 ```python
 from __future__ import print_function
 import time
-import joj.horse.client
-from joj.horse.client.rest import ApiException
+import joj.horse_client
+from joj.horse_client.rest import ApiException
 from pprint import pprint
 
 
 # create an instance of the API class
-api_instance = joj.horse.client.ProblemSetApi(joj.horse.client.ApiClient(configuration))
+api_instance = joj.horse_client.ProblemSetApi(joj.horse_client.ApiClient(configuration))
 domain = 'domain_example' # str | url or id of the domain
 problem_set = 'problem_set_example' # str | url or id of the problem set
 
@@ -477,14 +477,14 @@ Submit Solution To Problem Set
 ```python
 from __future__ import print_function
 import time
-import joj.horse.client
-from joj.horse.client.rest import ApiException
+import joj.horse_client
+from joj.horse_client.rest import ApiException
 from pprint import pprint
 
 
 # create an instance of the API class
-api_instance = joj.horse.client.ProblemSetApi(joj.horse.client.ApiClient(configuration))
-code_type = joj.horse.client.RecordCodeType() # RecordCodeType | 
+api_instance = joj.horse_client.ProblemSetApi(joj.horse_client.ApiClient(configuration))
+code_type = joj.horse_client.RecordCodeType() # RecordCodeType | 
 file = 'file_example' # str | 
 domain = 'domain_example' # str | url or id of the domain
 problem_set = 'problem_set_example' # str | url or id of the problem set
@@ -532,14 +532,14 @@ Update Problem In Problem Set
 ```python
 from __future__ import print_function
 import time
-import joj.horse.client
-from joj.horse.client.rest import ApiException
+import joj.horse_client
+from joj.horse_client.rest import ApiException
 from pprint import pprint
 
 
 # create an instance of the API class
-api_instance = joj.horse.client.ProblemSetApi(joj.horse.client.ApiClient(configuration))
-body = joj.horse.client.ProblemSetUpdateProblem() # ProblemSetUpdateProblem | 
+api_instance = joj.horse_client.ProblemSetApi(joj.horse_client.ApiClient(configuration))
+body = joj.horse_client.ProblemSetUpdateProblem() # ProblemSetUpdateProblem | 
 domain = 'domain_example' # str | url or id of the domain
 problem_set = 'problem_set_example' # str | url or id of the problem set
 problem = 'problem_example' # str | url or id of the problem
@@ -585,14 +585,14 @@ Update Problem Set
 ```python
 from __future__ import print_function
 import time
-import joj.horse.client
-from joj.horse.client.rest import ApiException
+import joj.horse_client
+from joj.horse_client.rest import ApiException
 from pprint import pprint
 
 
 # create an instance of the API class
-api_instance = joj.horse.client.ProblemSetApi(joj.horse.client.ApiClient(configuration))
-body = joj.horse.client.ProblemSetEdit() # ProblemSetEdit | 
+api_instance = joj.horse_client.ProblemSetApi(joj.horse_client.ApiClient(configuration))
+body = joj.horse_client.ProblemSetEdit() # ProblemSetEdit | 
 domain = 'domain_example' # str | url or id of the domain
 problem_set = 'problem_set_example' # str | url or id of the problem set
 

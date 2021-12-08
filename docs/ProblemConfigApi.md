@@ -1,4 +1,4 @@
-# joj.horse.client.ProblemConfigApi
+# joj.horse_client.ProblemConfigApi
 
 All URIs are relative to */*
 
@@ -29,14 +29,14 @@ Commit all changes through upload / delete as a new problem config version.
 ```python
 from __future__ import print_function
 import time
-import joj.horse.client
-from joj.horse.client.rest import ApiException
+import joj.horse_client
+from joj.horse_client.rest import ApiException
 from pprint import pprint
 
 
 # create an instance of the API class
-api_instance = joj.horse.client.ProblemConfigApi(joj.horse.client.ApiClient(configuration))
-body = joj.horse.client.ProblemConfigCommit() # ProblemConfigCommit | 
+api_instance = joj.horse_client.ProblemConfigApi(joj.horse_client.ApiClient(configuration))
+body = joj.horse_client.ProblemConfigCommit() # ProblemConfigCommit | 
 domain = 'domain_example' # str | url or id of the domain
 problem = 'problem_example' # str | url or id of the problem
 
@@ -80,13 +80,13 @@ Delete Directory From Uncommitted Problem Config
 ```python
 from __future__ import print_function
 import time
-import joj.horse.client
-from joj.horse.client.rest import ApiException
+import joj.horse_client
+from joj.horse_client.rest import ApiException
 from pprint import pprint
 
 
 # create an instance of the API class
-api_instance = joj.horse.client.ProblemConfigApi(joj.horse.client.ApiClient(configuration))
+api_instance = joj.horse_client.ProblemConfigApi(joj.horse_client.ApiClient(configuration))
 path = 'path_example' # str | 
 domain = 'domain_example' # str | url or id of the domain
 problem = 'problem_example' # str | url or id of the problem
@@ -133,13 +133,13 @@ Delete File From Uncommitted Problem Config
 ```python
 from __future__ import print_function
 import time
-import joj.horse.client
-from joj.horse.client.rest import ApiException
+import joj.horse_client
+from joj.horse_client.rest import ApiException
 from pprint import pprint
 
 
 # create an instance of the API class
-api_instance = joj.horse.client.ProblemConfigApi(joj.horse.client.ApiClient(configuration))
+api_instance = joj.horse_client.ProblemConfigApi(joj.horse_client.ApiClient(configuration))
 path = 'path_example' # str | 
 domain = 'domain_example' # str | url or id of the domain
 problem = 'problem_example' # str | url or id of the problem
@@ -184,13 +184,13 @@ Download File In Problem Config
 ```python
 from __future__ import print_function
 import time
-import joj.horse.client
-from joj.horse.client.rest import ApiException
+import joj.horse_client
+from joj.horse_client.rest import ApiException
 from pprint import pprint
 
 
 # create an instance of the API class
-api_instance = joj.horse.client.ProblemConfigApi(joj.horse.client.ApiClient(configuration))
+api_instance = joj.horse_client.ProblemConfigApi(joj.horse_client.ApiClient(configuration))
 path = 'path_example' # str | 
 domain = 'domain_example' # str | url or id of the domain
 problem = 'problem_example' # str | url or id of the problem
@@ -237,13 +237,13 @@ Download File In Uncommitted Problem Config
 ```python
 from __future__ import print_function
 import time
-import joj.horse.client
-from joj.horse.client.rest import ApiException
+import joj.horse_client
+from joj.horse_client.rest import ApiException
 from pprint import pprint
 
 
 # create an instance of the API class
-api_instance = joj.horse.client.ProblemConfigApi(joj.horse.client.ApiClient(configuration))
+api_instance = joj.horse_client.ProblemConfigApi(joj.horse_client.ApiClient(configuration))
 path = 'path_example' # str | 
 domain = 'domain_example' # str | url or id of the domain
 problem = 'problem_example' # str | url or id of the problem
@@ -288,17 +288,17 @@ Download Problem Config Archive
 ```python
 from __future__ import print_function
 import time
-import joj.horse.client
-from joj.horse.client.rest import ApiException
+import joj.horse_client
+from joj.horse_client.rest import ApiException
 from pprint import pprint
 
 
 # create an instance of the API class
-api_instance = joj.horse.client.ProblemConfigApi(joj.horse.client.ApiClient(configuration))
+api_instance = joj.horse_client.ProblemConfigApi(joj.horse_client.ApiClient(configuration))
 domain = 'domain_example' # str | url or id of the domain
 problem = 'problem_example' # str | url or id of the problem
 config = 'config_example' # str | 'latest' or id of the config
-archive_format = joj.horse.client.ArchiveFormat1() # ArchiveFormat1 |  (optional)
+archive_format = joj.horse_client.ArchiveFormat1() # ArchiveFormat1 |  (optional)
 
 try:
     # Download Problem Config Archive
@@ -341,16 +341,16 @@ Download Uncommitted Problem Config As Archive
 ```python
 from __future__ import print_function
 import time
-import joj.horse.client
-from joj.horse.client.rest import ApiException
+import joj.horse_client
+from joj.horse_client.rest import ApiException
 from pprint import pprint
 
 
 # create an instance of the API class
-api_instance = joj.horse.client.ProblemConfigApi(joj.horse.client.ApiClient(configuration))
+api_instance = joj.horse_client.ProblemConfigApi(joj.horse_client.ApiClient(configuration))
 domain = 'domain_example' # str | url or id of the domain
 problem = 'problem_example' # str | url or id of the problem
-archive_format = joj.horse.client.ArchiveFormat() # ArchiveFormat |  (optional)
+archive_format = joj.horse_client.ArchiveFormat() # ArchiveFormat |  (optional)
 
 try:
     # Download Uncommitted Problem Config As Archive
@@ -392,13 +392,13 @@ Get File Or Directory Info In Uncommitted Problem Config
 ```python
 from __future__ import print_function
 import time
-import joj.horse.client
-from joj.horse.client.rest import ApiException
+import joj.horse_client
+from joj.horse_client.rest import ApiException
 from pprint import pprint
 
 
 # create an instance of the API class
-api_instance = joj.horse.client.ProblemConfigApi(joj.horse.client.ApiClient(configuration))
+api_instance = joj.horse_client.ProblemConfigApi(joj.horse_client.ApiClient(configuration))
 path = 'path_example' # str | 
 domain = 'domain_example' # str | url or id of the domain
 problem = 'problem_example' # str | url or id of the problem
@@ -443,13 +443,13 @@ Get Problem Config Json
 ```python
 from __future__ import print_function
 import time
-import joj.horse.client
-from joj.horse.client.rest import ApiException
+import joj.horse_client
+from joj.horse_client.rest import ApiException
 from pprint import pprint
 
 
 # create an instance of the API class
-api_instance = joj.horse.client.ProblemConfigApi(joj.horse.client.ApiClient(configuration))
+api_instance = joj.horse_client.ProblemConfigApi(joj.horse_client.ApiClient(configuration))
 domain = 'domain_example' # str | url or id of the domain
 config = 'config_example' # str | 'latest' or id of the config
 problem = 'problem_example' # str | url or id of the problem
@@ -494,14 +494,14 @@ Reset Problem Config
 ```python
 from __future__ import print_function
 import time
-import joj.horse.client
-from joj.horse.client.rest import ApiException
+import joj.horse_client
+from joj.horse_client.rest import ApiException
 from pprint import pprint
 
 
 # create an instance of the API class
-api_instance = joj.horse.client.ProblemConfigApi(joj.horse.client.ApiClient(configuration))
-body = joj.horse.client.LakeFSReset() # LakeFSReset | 
+api_instance = joj.horse_client.ProblemConfigApi(joj.horse_client.ApiClient(configuration))
+body = joj.horse_client.LakeFSReset() # LakeFSReset | 
 domain = 'domain_example' # str | url or id of the domain
 problem = 'problem_example' # str | url or id of the problem
 
@@ -547,13 +547,13 @@ Completely replace the problem config with the archive. This will delete files n
 ```python
 from __future__ import print_function
 import time
-import joj.horse.client
-from joj.horse.client.rest import ApiException
+import joj.horse_client
+from joj.horse_client.rest import ApiException
 from pprint import pprint
 
 
 # create an instance of the API class
-api_instance = joj.horse.client.ProblemConfigApi(joj.horse.client.ApiClient(configuration))
+api_instance = joj.horse_client.ProblemConfigApi(joj.horse_client.ApiClient(configuration))
 file = 'file_example' # str | 
 domain = 'domain_example' # str | url or id of the domain
 problem = 'problem_example' # str | url or id of the problem
@@ -600,13 +600,13 @@ Replace the file with the same path. Create directories if needed along the path
 ```python
 from __future__ import print_function
 import time
-import joj.horse.client
-from joj.horse.client.rest import ApiException
+import joj.horse_client
+from joj.horse_client.rest import ApiException
 from pprint import pprint
 
 
 # create an instance of the API class
-api_instance = joj.horse.client.ProblemConfigApi(joj.horse.client.ApiClient(configuration))
+api_instance = joj.horse_client.ProblemConfigApi(joj.horse_client.ApiClient(configuration))
 file = 'file_example' # str | 
 domain = 'domain_example' # str | url or id of the domain
 problem = 'problem_example' # str | url or id of the problem
@@ -655,13 +655,13 @@ Use the filename as path, file will be uploaded to root of the problem config di
 ```python
 from __future__ import print_function
 import time
-import joj.horse.client
-from joj.horse.client.rest import ApiException
+import joj.horse_client
+from joj.horse_client.rest import ApiException
 from pprint import pprint
 
 
 # create an instance of the API class
-api_instance = joj.horse.client.ProblemConfigApi(joj.horse.client.ApiClient(configuration))
+api_instance = joj.horse_client.ProblemConfigApi(joj.horse_client.ApiClient(configuration))
 file = 'file_example' # str | 
 domain = 'domain_example' # str | url or id of the domain
 problem = 'problem_example' # str | url or id of the problem

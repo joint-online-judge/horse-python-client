@@ -1,4 +1,4 @@
-# joj.horse.client.AuthApi
+# joj.horse_client.AuthApi
 
 All URIs are relative to */*
 
@@ -19,12 +19,12 @@ Get Token
 ```python
 from __future__ import print_function
 import time
-import joj.horse.client
-from joj.horse.client.rest import ApiException
+import joj.horse_client
+from joj.horse_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = joj.horse.client.AuthApi()
+api_instance = joj.horse_client.AuthApi()
 response_type = 'response_type_example' # str | 
 cookie = true # bool | Add Set/Delete-Cookie on response header (optional) (default to true)
 redirect_url = 'redirect_url_example' # str | The redirect url after the operation (optional)
@@ -69,12 +69,12 @@ Login
 ```python
 from __future__ import print_function
 import time
-import joj.horse.client
-from joj.horse.client.rest import ApiException
+import joj.horse_client
+from joj.horse_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = joj.horse.client.AuthApi()
+api_instance = joj.horse_client.AuthApi()
 grant_type = 'grant_type_example' # str | 
 username = 'username_example' # str | 
 password = 'password_example' # str | 
@@ -131,13 +131,13 @@ Logout
 ```python
 from __future__ import print_function
 import time
-import joj.horse.client
-from joj.horse.client.rest import ApiException
+import joj.horse_client
+from joj.horse_client.rest import ApiException
 from pprint import pprint
 
 
 # create an instance of the API class
-api_instance = joj.horse.client.AuthApi(joj.horse.client.ApiClient(configuration))
+api_instance = joj.horse_client.AuthApi(joj.horse_client.ApiClient(configuration))
 response_type = 'response_type_example' # str | 
 cookie = true # bool | Add Set/Delete-Cookie on response header (optional) (default to true)
 redirect_url = 'redirect_url_example' # str | The redirect url after the operation (optional)
@@ -182,12 +182,12 @@ Refresh
 ```python
 from __future__ import print_function
 import time
-import joj.horse.client
-from joj.horse.client.rest import ApiException
+import joj.horse_client
+from joj.horse_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = joj.horse.client.AuthApi()
+api_instance = joj.horse_client.AuthApi()
 response_type = 'response_type_example' # str | 
 cookie = true # bool | Add Set/Delete-Cookie on response header (optional) (default to true)
 redirect_url = 'redirect_url_example' # str | The redirect url after the operation (optional)
@@ -232,14 +232,14 @@ Register
 ```python
 from __future__ import print_function
 import time
-import joj.horse.client
-from joj.horse.client.rest import ApiException
+import joj.horse_client
+from joj.horse_client.rest import ApiException
 from pprint import pprint
 
 
 # create an instance of the API class
-api_instance = joj.horse.client.AuthApi(joj.horse.client.ApiClient(configuration))
-body = joj.horse.client.UserCreate() # UserCreate | 
+api_instance = joj.horse_client.AuthApi(joj.horse_client.ApiClient(configuration))
+body = joj.horse_client.UserCreate() # UserCreate | 
 response_type = 'response_type_example' # str | 
 cookie = true # bool | Add Set/Delete-Cookie on response header (optional) (default to true)
 redirect_url = 'redirect_url_example' # str | The redirect url after the operation (optional)

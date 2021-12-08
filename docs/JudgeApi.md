@@ -1,4 +1,4 @@
-# joj.horse.client.JudgeApi
+# joj.horse_client.JudgeApi
 
 All URIs are relative to */*
 
@@ -18,13 +18,13 @@ Claim Record By Judge
 ```python
 from __future__ import print_function
 import time
-import joj.horse.client
-from joj.horse.client.rest import ApiException
+import joj.horse_client
+from joj.horse_client.rest import ApiException
 from pprint import pprint
 
 
 # create an instance of the API class
-api_instance = joj.horse.client.JudgeApi(joj.horse.client.ApiClient(configuration))
+api_instance = joj.horse_client.JudgeApi(joj.horse_client.ApiClient(configuration))
 record = 'record_example' # str | 
 
 try:
@@ -65,13 +65,13 @@ Get Judge Key
 ```python
 from __future__ import print_function
 import time
-import joj.horse.client
-from joj.horse.client.rest import ApiException
+import joj.horse_client
+from joj.horse_client.rest import ApiException
 from pprint import pprint
 
 
 # create an instance of the API class
-api_instance = joj.horse.client.JudgeApi(joj.horse.client.ApiClient(configuration))
+api_instance = joj.horse_client.JudgeApi(joj.horse_client.ApiClient(configuration))
 
 try:
     # Get Judge Key
@@ -108,14 +108,14 @@ Submit Record By Judge
 ```python
 from __future__ import print_function
 import time
-import joj.horse.client
-from joj.horse.client.rest import ApiException
+import joj.horse_client
+from joj.horse_client.rest import ApiException
 from pprint import pprint
 
 
 # create an instance of the API class
-api_instance = joj.horse.client.JudgeApi(joj.horse.client.ApiClient(configuration))
-body = joj.horse.client.RecordResult() # RecordResult | 
+api_instance = joj.horse_client.JudgeApi(joj.horse_client.ApiClient(configuration))
+body = joj.horse_client.RecordResult() # RecordResult | 
 record = 'record_example' # str | 
 
 try:
@@ -157,13 +157,13 @@ Update Record State By Judge
 ```python
 from __future__ import print_function
 import time
-import joj.horse.client
-from joj.horse.client.rest import ApiException
+import joj.horse_client
+from joj.horse_client.rest import ApiException
 from pprint import pprint
 
 
 # create an instance of the API class
-api_instance = joj.horse.client.JudgeApi(joj.horse.client.ApiClient(configuration))
+api_instance = joj.horse_client.JudgeApi(joj.horse_client.ApiClient(configuration))
 record = 'record_example' # str | 
 
 try:

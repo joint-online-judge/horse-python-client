@@ -1,4 +1,4 @@
-# joj.horse.client.ProblemApi
+# joj.horse_client.ProblemApi
 
 All URIs are relative to */*
 
@@ -21,14 +21,14 @@ Clone Problem
 ```python
 from __future__ import print_function
 import time
-import joj.horse.client
-from joj.horse.client.rest import ApiException
+import joj.horse_client
+from joj.horse_client.rest import ApiException
 from pprint import pprint
 
 
 # create an instance of the API class
-api_instance = joj.horse.client.ProblemApi(joj.horse.client.ApiClient(configuration))
-body = joj.horse.client.ProblemClone() # ProblemClone | 
+api_instance = joj.horse_client.ProblemApi(joj.horse_client.ApiClient(configuration))
+body = joj.horse_client.ProblemClone() # ProblemClone | 
 domain = 'domain_example' # str | url or id of the domain
 
 try:
@@ -70,14 +70,14 @@ Create Problem
 ```python
 from __future__ import print_function
 import time
-import joj.horse.client
-from joj.horse.client.rest import ApiException
+import joj.horse_client
+from joj.horse_client.rest import ApiException
 from pprint import pprint
 
 
 # create an instance of the API class
-api_instance = joj.horse.client.ProblemApi(joj.horse.client.ApiClient(configuration))
-body = joj.horse.client.ProblemCreate() # ProblemCreate | 
+api_instance = joj.horse_client.ProblemApi(joj.horse_client.ApiClient(configuration))
+body = joj.horse_client.ProblemCreate() # ProblemCreate | 
 domain = 'domain_example' # str | url or id of the domain
 
 try:
@@ -119,13 +119,13 @@ Delete Problem
 ```python
 from __future__ import print_function
 import time
-import joj.horse.client
-from joj.horse.client.rest import ApiException
+import joj.horse_client
+from joj.horse_client.rest import ApiException
 from pprint import pprint
 
 
 # create an instance of the API class
-api_instance = joj.horse.client.ProblemApi(joj.horse.client.ApiClient(configuration))
+api_instance = joj.horse_client.ProblemApi(joj.horse_client.ApiClient(configuration))
 domain = 'domain_example' # str | url or id of the domain
 problem = 'problem_example' # str | url or id of the problem
 
@@ -168,13 +168,13 @@ Get Problem
 ```python
 from __future__ import print_function
 import time
-import joj.horse.client
-from joj.horse.client.rest import ApiException
+import joj.horse_client
+from joj.horse_client.rest import ApiException
 from pprint import pprint
 
 
 # create an instance of the API class
-api_instance = joj.horse.client.ProblemApi(joj.horse.client.ApiClient(configuration))
+api_instance = joj.horse_client.ProblemApi(joj.horse_client.ApiClient(configuration))
 domain = 'domain_example' # str | url or id of the domain
 problem = 'problem_example' # str | url or id of the problem
 
@@ -217,13 +217,13 @@ List Problems
 ```python
 from __future__ import print_function
 import time
-import joj.horse.client
-from joj.horse.client.rest import ApiException
+import joj.horse_client
+from joj.horse_client.rest import ApiException
 from pprint import pprint
 
 
 # create an instance of the API class
-api_instance = joj.horse.client.ProblemApi(joj.horse.client.ApiClient(configuration))
+api_instance = joj.horse_client.ProblemApi(joj.horse_client.ApiClient(configuration))
 domain = 'domain_example' # str | url or id of the domain
 ordering = '' # str | Comma seperated list of ordering the results. You may specify reverse orderings by prefixing the field name with '-'.  Available fields: created_at,updated_at (optional)
 offset = 0 # int |  (optional) (default to 0)
@@ -270,14 +270,14 @@ Submit Solution To Problem
 ```python
 from __future__ import print_function
 import time
-import joj.horse.client
-from joj.horse.client.rest import ApiException
+import joj.horse_client
+from joj.horse_client.rest import ApiException
 from pprint import pprint
 
 
 # create an instance of the API class
-api_instance = joj.horse.client.ProblemApi(joj.horse.client.ApiClient(configuration))
-code_type = joj.horse.client.RecordCodeType() # RecordCodeType | 
+api_instance = joj.horse_client.ProblemApi(joj.horse_client.ApiClient(configuration))
+code_type = joj.horse_client.RecordCodeType() # RecordCodeType | 
 file = 'file_example' # str | 
 domain = 'domain_example' # str | url or id of the domain
 problem = 'problem_example' # str | url or id of the problem
@@ -323,14 +323,14 @@ Update Problem
 ```python
 from __future__ import print_function
 import time
-import joj.horse.client
-from joj.horse.client.rest import ApiException
+import joj.horse_client
+from joj.horse_client.rest import ApiException
 from pprint import pprint
 
 
 # create an instance of the API class
-api_instance = joj.horse.client.ProblemApi(joj.horse.client.ApiClient(configuration))
-body = joj.horse.client.ProblemEdit() # ProblemEdit | 
+api_instance = joj.horse_client.ProblemApi(joj.horse_client.ApiClient(configuration))
+body = joj.horse_client.ProblemEdit() # ProblemEdit | 
 domain = 'domain_example' # str | url or id of the domain
 problem = 'problem_example' # str | url or id of the problem
 

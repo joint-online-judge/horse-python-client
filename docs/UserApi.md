@@ -1,4 +1,4 @@
-# joj.horse.client.UserApi
+# joj.horse_client.UserApi
 
 All URIs are relative to */*
 
@@ -20,13 +20,13 @@ Get User
 ```python
 from __future__ import print_function
 import time
-import joj.horse.client
-from joj.horse.client.rest import ApiException
+import joj.horse_client
+from joj.horse_client.rest import ApiException
 from pprint import pprint
 
 
 # create an instance of the API class
-api_instance = joj.horse.client.UserApi(joj.horse.client.ApiClient(configuration))
+api_instance = joj.horse_client.UserApi(joj.horse_client.ApiClient(configuration))
 
 try:
     # Get User
@@ -63,13 +63,13 @@ Get User
 ```python
 from __future__ import print_function
 import time
-import joj.horse.client
-from joj.horse.client.rest import ApiException
+import joj.horse_client
+from joj.horse_client.rest import ApiException
 from pprint import pprint
 
 
 # create an instance of the API class
-api_instance = joj.horse.client.UserApi(joj.horse.client.ApiClient(configuration))
+api_instance = joj.horse_client.UserApi(joj.horse_client.ApiClient(configuration))
 uid = 'uid_example' # str | 
 
 try:
@@ -110,13 +110,13 @@ Get User Problems
 ```python
 from __future__ import print_function
 import time
-import joj.horse.client
-from joj.horse.client.rest import ApiException
+import joj.horse_client
+from joj.horse_client.rest import ApiException
 from pprint import pprint
 
 
 # create an instance of the API class
-api_instance = joj.horse.client.UserApi(joj.horse.client.ApiClient(configuration))
+api_instance = joj.horse_client.UserApi(joj.horse_client.ApiClient(configuration))
 offset = 0 # int |  (optional) (default to 0)
 limit = 100 # int |  (optional) (default to 100)
 
@@ -159,13 +159,13 @@ Get User Problems
 ```python
 from __future__ import print_function
 import time
-import joj.horse.client
-from joj.horse.client.rest import ApiException
+import joj.horse_client
+from joj.horse_client.rest import ApiException
 from pprint import pprint
 
 
 # create an instance of the API class
-api_instance = joj.horse.client.UserApi(joj.horse.client.ApiClient(configuration))
+api_instance = joj.horse_client.UserApi(joj.horse_client.ApiClient(configuration))
 uid = 'uid_example' # str | 
 offset = 0 # int |  (optional) (default to 0)
 limit = 100 # int |  (optional) (default to 100)
@@ -210,13 +210,13 @@ List User Domains
 ```python
 from __future__ import print_function
 import time
-import joj.horse.client
-from joj.horse.client.rest import ApiException
+import joj.horse_client
+from joj.horse_client.rest import ApiException
 from pprint import pprint
 
 
 # create an instance of the API class
-api_instance = joj.horse.client.UserApi(joj.horse.client.ApiClient(configuration))
+api_instance = joj.horse_client.UserApi(joj.horse_client.ApiClient(configuration))
 uid = 'uid_example' # str | 
 role = ['role_example'] # list[str] |  (optional)
 ordering = '' # str | Comma seperated list of ordering the results. You may specify reverse orderings by prefixing the field name with '-'.  Available fields: created_at,updated_at (optional)
@@ -265,13 +265,13 @@ List Users
 ```python
 from __future__ import print_function
 import time
-import joj.horse.client
-from joj.horse.client.rest import ApiException
+import joj.horse_client
+from joj.horse_client.rest import ApiException
 from pprint import pprint
 
 
 # create an instance of the API class
-api_instance = joj.horse.client.UserApi(joj.horse.client.ApiClient(configuration))
+api_instance = joj.horse_client.UserApi(joj.horse_client.ApiClient(configuration))
 query = '' # str |  (optional)
 ordering = '' # str | Comma seperated list of ordering the results. You may specify reverse orderings by prefixing the field name with '-'.  Available fields: username (optional)
 offset = 0 # int |  (optional) (default to 0)

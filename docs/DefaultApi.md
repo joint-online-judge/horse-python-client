@@ -1,4 +1,4 @@
-# joj.horse.client.DefaultApi
+# joj.horse_client.DefaultApi
 
 All URIs are relative to */*
 
@@ -16,12 +16,12 @@ Redirect To Docs
 ```python
 from __future__ import print_function
 import time
-import joj.horse.client
-from joj.horse.client.rest import ApiException
+import joj.horse_client
+from joj.horse_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = joj.horse.client.DefaultApi()
+api_instance = joj.horse_client.DefaultApi()
 
 try:
     # Redirect To Docs
@@ -58,12 +58,12 @@ Redirect To Docs
 ```python
 from __future__ import print_function
 import time
-import joj.horse.client
-from joj.horse.client.rest import ApiException
+import joj.horse_client
+from joj.horse_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = joj.horse.client.DefaultApi()
+api_instance = joj.horse_client.DefaultApi()
 
 try:
     # Redirect To Docs
