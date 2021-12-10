@@ -4,10 +4,10 @@ All URIs are relative to */*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**list_problem_groups_api_v1_problem_groups_get**](ProblemGroupApi.md#list_problem_groups_api_v1_problem_groups_get) | **GET** /api/v1/problem_groups | List Problem Groups
+[**v1_list_problem_groups**](ProblemGroupApi.md#v1_list_problem_groups) | **GET** /problem_groups | List Problem Groups
 
-# **list_problem_groups_api_v1_problem_groups_get**
-> ProblemGroupListResp list_problem_groups_api_v1_problem_groups_get(ordering=ordering, offset=offset, limit=limit)
+# **v1_list_problem_groups**
+> ProblemGroupListResp v1_list_problem_groups(ordering=ordering, offset=offset, limit=limit)
 
 List Problem Groups
 
@@ -28,10 +28,10 @@ limit = 100 # int |  (optional) (default to 100)
 
 try:
     # List Problem Groups
-    api_response = api_instance.list_problem_groups_api_v1_problem_groups_get(ordering=ordering, offset=offset, limit=limit)
+    api_response = api_instance.v1_list_problem_groups(ordering=ordering, offset=offset, limit=limit)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling ProblemGroupApi->list_problem_groups_api_v1_problem_groups_get: %s\n" % e)
+    print("Exception when calling ProblemGroupApi->v1_list_problem_groups: %s\n" % e)
 ```
 
 ### Parameters

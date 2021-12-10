@@ -4,22 +4,22 @@ All URIs are relative to */*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**commit_problem_config_api_v1_domains_domain_problems_problem_config_commit_post**](ProblemConfigApi.md#commit_problem_config_api_v1_domains_domain_problems_problem_config_commit_post) | **POST** /api/v1/domains/{domain}/problems/{problem}/config/commit | Commit Problem Config
-[**delete_directory_from_uncommitted_problem_config_api_v1_domains_domain_problems_problem_config_dirs_path_delete**](ProblemConfigApi.md#delete_directory_from_uncommitted_problem_config_api_v1_domains_domain_problems_problem_config_dirs_path_delete) | **DELETE** /api/v1/domains/{domain}/problems/{problem}/config/dirs/{path} | Delete Directory From Uncommitted Problem Config
-[**delete_file_from_uncommitted_problem_config_api_v1_domains_domain_problems_problem_config_files_path_delete**](ProblemConfigApi.md#delete_file_from_uncommitted_problem_config_api_v1_domains_domain_problems_problem_config_files_path_delete) | **DELETE** /api/v1/domains/{domain}/problems/{problem}/config/files/{path} | Delete File From Uncommitted Problem Config
-[**download_file_in_problem_config_api_v1_domains_domain_problems_problem_configs_config_files_path_get**](ProblemConfigApi.md#download_file_in_problem_config_api_v1_domains_domain_problems_problem_configs_config_files_path_get) | **GET** /api/v1/domains/{domain}/problems/{problem}/configs/{config}/files/{path} | Download File In Problem Config
-[**download_file_in_uncommitted_problem_config_api_v1_domains_domain_problems_problem_config_files_path_get**](ProblemConfigApi.md#download_file_in_uncommitted_problem_config_api_v1_domains_domain_problems_problem_config_files_path_get) | **GET** /api/v1/domains/{domain}/problems/{problem}/config/files/{path} | Download File In Uncommitted Problem Config
-[**download_problem_config_archive_api_v1_domains_domain_problems_problem_configs_config_files_get**](ProblemConfigApi.md#download_problem_config_archive_api_v1_domains_domain_problems_problem_configs_config_files_get) | **GET** /api/v1/domains/{domain}/problems/{problem}/configs/{config}/files | Download Problem Config Archive
-[**download_uncommitted_problem_config_as_archive_api_v1_domains_domain_problems_problem_config_get**](ProblemConfigApi.md#download_uncommitted_problem_config_as_archive_api_v1_domains_domain_problems_problem_config_get) | **GET** /api/v1/domains/{domain}/problems/{problem}/config | Download Uncommitted Problem Config As Archive
-[**get_file_or_directory_info_in_uncommitted_problem_config_api_v1_domains_domain_problems_problem_config_file_info_path_get**](ProblemConfigApi.md#get_file_or_directory_info_in_uncommitted_problem_config_api_v1_domains_domain_problems_problem_config_file_info_path_get) | **GET** /api/v1/domains/{domain}/problems/{problem}/config/file_info/{path} | Get File Or Directory Info In Uncommitted Problem Config
-[**get_problem_config_json_api_v1_domains_domain_problems_problem_configs_config_get**](ProblemConfigApi.md#get_problem_config_json_api_v1_domains_domain_problems_problem_configs_config_get) | **GET** /api/v1/domains/{domain}/problems/{problem}/configs/{config} | Get Problem Config Json
-[**reset_problem_config_api_v1_domains_domain_problems_problem_config_reset_post**](ProblemConfigApi.md#reset_problem_config_api_v1_domains_domain_problems_problem_config_reset_post) | **POST** /api/v1/domains/{domain}/problems/{problem}/config/reset | Reset Problem Config
-[**update_problem_config_by_archive_api_v1_domains_domain_problems_problem_config_put**](ProblemConfigApi.md#update_problem_config_by_archive_api_v1_domains_domain_problems_problem_config_put) | **PUT** /api/v1/domains/{domain}/problems/{problem}/config | Update Problem Config By Archive
-[**upload_file_to_problem_config_api_v1_domains_domain_problems_problem_config_files_path_put**](ProblemConfigApi.md#upload_file_to_problem_config_api_v1_domains_domain_problems_problem_config_files_path_put) | **PUT** /api/v1/domains/{domain}/problems/{problem}/config/files/{path} | Upload File To Problem Config
-[**upload_file_to_root_in_problem_config_api_v1_domains_domain_problems_problem_config_files_put**](ProblemConfigApi.md#upload_file_to_root_in_problem_config_api_v1_domains_domain_problems_problem_config_files_put) | **PUT** /api/v1/domains/{domain}/problems/{problem}/config/files | Upload File To Root In Problem Config
+[**v1_commit_problem_config**](ProblemConfigApi.md#v1_commit_problem_config) | **POST** /domains/{domain}/problems/{problem}/config/commit | Commit Problem Config
+[**v1_delete_directory_from_uncommitted_problem_config**](ProblemConfigApi.md#v1_delete_directory_from_uncommitted_problem_config) | **DELETE** /domains/{domain}/problems/{problem}/config/dirs/{path} | Delete Directory From Uncommitted Problem Config
+[**v1_delete_file_from_uncommitted_problem_config**](ProblemConfigApi.md#v1_delete_file_from_uncommitted_problem_config) | **DELETE** /domains/{domain}/problems/{problem}/config/files/{path} | Delete File From Uncommitted Problem Config
+[**v1_download_file_in_problem_config**](ProblemConfigApi.md#v1_download_file_in_problem_config) | **GET** /domains/{domain}/problems/{problem}/configs/{config}/files/{path} | Download File In Problem Config
+[**v1_download_file_in_uncommitted_problem_config**](ProblemConfigApi.md#v1_download_file_in_uncommitted_problem_config) | **GET** /domains/{domain}/problems/{problem}/config/files/{path} | Download File In Uncommitted Problem Config
+[**v1_download_problem_config_archive**](ProblemConfigApi.md#v1_download_problem_config_archive) | **GET** /domains/{domain}/problems/{problem}/configs/{config}/files | Download Problem Config Archive
+[**v1_download_uncommitted_problem_config_as_archive**](ProblemConfigApi.md#v1_download_uncommitted_problem_config_as_archive) | **GET** /domains/{domain}/problems/{problem}/config | Download Uncommitted Problem Config As Archive
+[**v1_get_file_or_directory_info_in_uncommitted_problem_config**](ProblemConfigApi.md#v1_get_file_or_directory_info_in_uncommitted_problem_config) | **GET** /domains/{domain}/problems/{problem}/config/file_info/{path} | Get File Or Directory Info In Uncommitted Problem Config
+[**v1_get_problem_config_json**](ProblemConfigApi.md#v1_get_problem_config_json) | **GET** /domains/{domain}/problems/{problem}/configs/{config} | Get Problem Config Json
+[**v1_reset_problem_config**](ProblemConfigApi.md#v1_reset_problem_config) | **POST** /domains/{domain}/problems/{problem}/config/reset | Reset Problem Config
+[**v1_update_problem_config_by_archive**](ProblemConfigApi.md#v1_update_problem_config_by_archive) | **PUT** /domains/{domain}/problems/{problem}/config | Update Problem Config By Archive
+[**v1_upload_file_to_problem_config**](ProblemConfigApi.md#v1_upload_file_to_problem_config) | **PUT** /domains/{domain}/problems/{problem}/config/files/{path} | Upload File To Problem Config
+[**v1_upload_file_to_root_in_problem_config**](ProblemConfigApi.md#v1_upload_file_to_root_in_problem_config) | **PUT** /domains/{domain}/problems/{problem}/config/files | Upload File To Root In Problem Config
 
-# **commit_problem_config_api_v1_domains_domain_problems_problem_config_commit_post**
-> ProblemConfigResp commit_problem_config_api_v1_domains_domain_problems_problem_config_commit_post(body, domain, problem)
+# **v1_commit_problem_config**
+> ProblemConfigResp v1_commit_problem_config(body, domain, problem)
 
 Commit Problem Config
 
@@ -42,10 +42,10 @@ problem = 'problem_example' # str | url or id of the problem
 
 try:
     # Commit Problem Config
-    api_response = api_instance.commit_problem_config_api_v1_domains_domain_problems_problem_config_commit_post(body, domain, problem)
+    api_response = api_instance.v1_commit_problem_config(body, domain, problem)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling ProblemConfigApi->commit_problem_config_api_v1_domains_domain_problems_problem_config_commit_post: %s\n" % e)
+    print("Exception when calling ProblemConfigApi->v1_commit_problem_config: %s\n" % e)
 ```
 
 ### Parameters
@@ -71,8 +71,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **delete_directory_from_uncommitted_problem_config_api_v1_domains_domain_problems_problem_config_dirs_path_delete**
-> FileInfoResp delete_directory_from_uncommitted_problem_config_api_v1_domains_domain_problems_problem_config_dirs_path_delete(path, domain, problem, recursive=recursive)
+# **v1_delete_directory_from_uncommitted_problem_config**
+> FileInfoResp v1_delete_directory_from_uncommitted_problem_config(path, domain, problem, recursive=recursive)
 
 Delete Directory From Uncommitted Problem Config
 
@@ -94,10 +94,10 @@ recursive = false # bool | Act as -r in the rm command. If false, only empty dir
 
 try:
     # Delete Directory From Uncommitted Problem Config
-    api_response = api_instance.delete_directory_from_uncommitted_problem_config_api_v1_domains_domain_problems_problem_config_dirs_path_delete(path, domain, problem, recursive=recursive)
+    api_response = api_instance.v1_delete_directory_from_uncommitted_problem_config(path, domain, problem, recursive=recursive)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling ProblemConfigApi->delete_directory_from_uncommitted_problem_config_api_v1_domains_domain_problems_problem_config_dirs_path_delete: %s\n" % e)
+    print("Exception when calling ProblemConfigApi->v1_delete_directory_from_uncommitted_problem_config: %s\n" % e)
 ```
 
 ### Parameters
@@ -124,8 +124,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **delete_file_from_uncommitted_problem_config_api_v1_domains_domain_problems_problem_config_files_path_delete**
-> FileInfoResp delete_file_from_uncommitted_problem_config_api_v1_domains_domain_problems_problem_config_files_path_delete(path, domain, problem)
+# **v1_delete_file_from_uncommitted_problem_config**
+> FileInfoResp v1_delete_file_from_uncommitted_problem_config(path, domain, problem)
 
 Delete File From Uncommitted Problem Config
 
@@ -146,10 +146,10 @@ problem = 'problem_example' # str | url or id of the problem
 
 try:
     # Delete File From Uncommitted Problem Config
-    api_response = api_instance.delete_file_from_uncommitted_problem_config_api_v1_domains_domain_problems_problem_config_files_path_delete(path, domain, problem)
+    api_response = api_instance.v1_delete_file_from_uncommitted_problem_config(path, domain, problem)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling ProblemConfigApi->delete_file_from_uncommitted_problem_config_api_v1_domains_domain_problems_problem_config_files_path_delete: %s\n" % e)
+    print("Exception when calling ProblemConfigApi->v1_delete_file_from_uncommitted_problem_config: %s\n" % e)
 ```
 
 ### Parameters
@@ -175,8 +175,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **download_file_in_problem_config_api_v1_domains_domain_problems_problem_configs_config_files_path_get**
-> object download_file_in_problem_config_api_v1_domains_domain_problems_problem_configs_config_files_path_get(path, domain, problem, config)
+# **v1_download_file_in_problem_config**
+> object v1_download_file_in_problem_config(path, domain, problem, config)
 
 Download File In Problem Config
 
@@ -198,10 +198,10 @@ config = 'config_example' # str | 'latest' or id of the config
 
 try:
     # Download File In Problem Config
-    api_response = api_instance.download_file_in_problem_config_api_v1_domains_domain_problems_problem_configs_config_files_path_get(path, domain, problem, config)
+    api_response = api_instance.v1_download_file_in_problem_config(path, domain, problem, config)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling ProblemConfigApi->download_file_in_problem_config_api_v1_domains_domain_problems_problem_configs_config_files_path_get: %s\n" % e)
+    print("Exception when calling ProblemConfigApi->v1_download_file_in_problem_config: %s\n" % e)
 ```
 
 ### Parameters
@@ -228,8 +228,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **download_file_in_uncommitted_problem_config_api_v1_domains_domain_problems_problem_config_files_path_get**
-> object download_file_in_uncommitted_problem_config_api_v1_domains_domain_problems_problem_config_files_path_get(path, domain, problem)
+# **v1_download_file_in_uncommitted_problem_config**
+> object v1_download_file_in_uncommitted_problem_config(path, domain, problem)
 
 Download File In Uncommitted Problem Config
 
@@ -250,10 +250,10 @@ problem = 'problem_example' # str | url or id of the problem
 
 try:
     # Download File In Uncommitted Problem Config
-    api_response = api_instance.download_file_in_uncommitted_problem_config_api_v1_domains_domain_problems_problem_config_files_path_get(path, domain, problem)
+    api_response = api_instance.v1_download_file_in_uncommitted_problem_config(path, domain, problem)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling ProblemConfigApi->download_file_in_uncommitted_problem_config_api_v1_domains_domain_problems_problem_config_files_path_get: %s\n" % e)
+    print("Exception when calling ProblemConfigApi->v1_download_file_in_uncommitted_problem_config: %s\n" % e)
 ```
 
 ### Parameters
@@ -279,8 +279,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **download_problem_config_archive_api_v1_domains_domain_problems_problem_configs_config_files_get**
-> object download_problem_config_archive_api_v1_domains_domain_problems_problem_configs_config_files_get(domain, problem, config, archive_format=archive_format)
+# **v1_download_problem_config_archive**
+> object v1_download_problem_config_archive(domain, problem, config, archive_format=archive_format)
 
 Download Problem Config Archive
 
@@ -302,10 +302,10 @@ archive_format = joj.horse_client.ArchiveFormat1() # ArchiveFormat1 |  (optional
 
 try:
     # Download Problem Config Archive
-    api_response = api_instance.download_problem_config_archive_api_v1_domains_domain_problems_problem_configs_config_files_get(domain, problem, config, archive_format=archive_format)
+    api_response = api_instance.v1_download_problem_config_archive(domain, problem, config, archive_format=archive_format)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling ProblemConfigApi->download_problem_config_archive_api_v1_domains_domain_problems_problem_configs_config_files_get: %s\n" % e)
+    print("Exception when calling ProblemConfigApi->v1_download_problem_config_archive: %s\n" % e)
 ```
 
 ### Parameters
@@ -332,8 +332,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **download_uncommitted_problem_config_as_archive_api_v1_domains_domain_problems_problem_config_get**
-> EmptyResp download_uncommitted_problem_config_as_archive_api_v1_domains_domain_problems_problem_config_get(domain, problem, archive_format=archive_format)
+# **v1_download_uncommitted_problem_config_as_archive**
+> EmptyResp v1_download_uncommitted_problem_config_as_archive(domain, problem, archive_format=archive_format)
 
 Download Uncommitted Problem Config As Archive
 
@@ -354,10 +354,10 @@ archive_format = joj.horse_client.ArchiveFormat() # ArchiveFormat |  (optional)
 
 try:
     # Download Uncommitted Problem Config As Archive
-    api_response = api_instance.download_uncommitted_problem_config_as_archive_api_v1_domains_domain_problems_problem_config_get(domain, problem, archive_format=archive_format)
+    api_response = api_instance.v1_download_uncommitted_problem_config_as_archive(domain, problem, archive_format=archive_format)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling ProblemConfigApi->download_uncommitted_problem_config_as_archive_api_v1_domains_domain_problems_problem_config_get: %s\n" % e)
+    print("Exception when calling ProblemConfigApi->v1_download_uncommitted_problem_config_as_archive: %s\n" % e)
 ```
 
 ### Parameters
@@ -383,8 +383,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **get_file_or_directory_info_in_uncommitted_problem_config_api_v1_domains_domain_problems_problem_config_file_info_path_get**
-> FileInfoResp get_file_or_directory_info_in_uncommitted_problem_config_api_v1_domains_domain_problems_problem_config_file_info_path_get(path, domain, problem)
+# **v1_get_file_or_directory_info_in_uncommitted_problem_config**
+> FileInfoResp v1_get_file_or_directory_info_in_uncommitted_problem_config(path, domain, problem)
 
 Get File Or Directory Info In Uncommitted Problem Config
 
@@ -405,10 +405,10 @@ problem = 'problem_example' # str | url or id of the problem
 
 try:
     # Get File Or Directory Info In Uncommitted Problem Config
-    api_response = api_instance.get_file_or_directory_info_in_uncommitted_problem_config_api_v1_domains_domain_problems_problem_config_file_info_path_get(path, domain, problem)
+    api_response = api_instance.v1_get_file_or_directory_info_in_uncommitted_problem_config(path, domain, problem)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling ProblemConfigApi->get_file_or_directory_info_in_uncommitted_problem_config_api_v1_domains_domain_problems_problem_config_file_info_path_get: %s\n" % e)
+    print("Exception when calling ProblemConfigApi->v1_get_file_or_directory_info_in_uncommitted_problem_config: %s\n" % e)
 ```
 
 ### Parameters
@@ -434,8 +434,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **get_problem_config_json_api_v1_domains_domain_problems_problem_configs_config_get**
-> ProblemConfigResp get_problem_config_json_api_v1_domains_domain_problems_problem_configs_config_get(domain, config, problem)
+# **v1_get_problem_config_json**
+> ProblemConfigResp v1_get_problem_config_json(domain, config, problem)
 
 Get Problem Config Json
 
@@ -456,10 +456,10 @@ problem = 'problem_example' # str | url or id of the problem
 
 try:
     # Get Problem Config Json
-    api_response = api_instance.get_problem_config_json_api_v1_domains_domain_problems_problem_configs_config_get(domain, config, problem)
+    api_response = api_instance.v1_get_problem_config_json(domain, config, problem)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling ProblemConfigApi->get_problem_config_json_api_v1_domains_domain_problems_problem_configs_config_get: %s\n" % e)
+    print("Exception when calling ProblemConfigApi->v1_get_problem_config_json: %s\n" % e)
 ```
 
 ### Parameters
@@ -485,8 +485,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **reset_problem_config_api_v1_domains_domain_problems_problem_config_reset_post**
-> EmptyResp reset_problem_config_api_v1_domains_domain_problems_problem_config_reset_post(body, domain, problem)
+# **v1_reset_problem_config**
+> EmptyResp v1_reset_problem_config(body, domain, problem)
 
 Reset Problem Config
 
@@ -507,10 +507,10 @@ problem = 'problem_example' # str | url or id of the problem
 
 try:
     # Reset Problem Config
-    api_response = api_instance.reset_problem_config_api_v1_domains_domain_problems_problem_config_reset_post(body, domain, problem)
+    api_response = api_instance.v1_reset_problem_config(body, domain, problem)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling ProblemConfigApi->reset_problem_config_api_v1_domains_domain_problems_problem_config_reset_post: %s\n" % e)
+    print("Exception when calling ProblemConfigApi->v1_reset_problem_config: %s\n" % e)
 ```
 
 ### Parameters
@@ -536,8 +536,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **update_problem_config_by_archive_api_v1_domains_domain_problems_problem_config_put**
-> EmptyResp update_problem_config_by_archive_api_v1_domains_domain_problems_problem_config_put(file, domain, problem)
+# **v1_update_problem_config_by_archive**
+> EmptyResp v1_update_problem_config_by_archive(file, domain, problem)
 
 Update Problem Config By Archive
 
@@ -560,10 +560,10 @@ problem = 'problem_example' # str | url or id of the problem
 
 try:
     # Update Problem Config By Archive
-    api_response = api_instance.update_problem_config_by_archive_api_v1_domains_domain_problems_problem_config_put(file, domain, problem)
+    api_response = api_instance.v1_update_problem_config_by_archive(file, domain, problem)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling ProblemConfigApi->update_problem_config_by_archive_api_v1_domains_domain_problems_problem_config_put: %s\n" % e)
+    print("Exception when calling ProblemConfigApi->v1_update_problem_config_by_archive: %s\n" % e)
 ```
 
 ### Parameters
@@ -589,8 +589,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **upload_file_to_problem_config_api_v1_domains_domain_problems_problem_config_files_path_put**
-> FileInfoResp upload_file_to_problem_config_api_v1_domains_domain_problems_problem_config_files_path_put(file, domain, problem, path)
+# **v1_upload_file_to_problem_config**
+> FileInfoResp v1_upload_file_to_problem_config(file, domain, problem, path)
 
 Upload File To Problem Config
 
@@ -614,10 +614,10 @@ path = 'path_example' # str |
 
 try:
     # Upload File To Problem Config
-    api_response = api_instance.upload_file_to_problem_config_api_v1_domains_domain_problems_problem_config_files_path_put(file, domain, problem, path)
+    api_response = api_instance.v1_upload_file_to_problem_config(file, domain, problem, path)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling ProblemConfigApi->upload_file_to_problem_config_api_v1_domains_domain_problems_problem_config_files_path_put: %s\n" % e)
+    print("Exception when calling ProblemConfigApi->v1_upload_file_to_problem_config: %s\n" % e)
 ```
 
 ### Parameters
@@ -644,8 +644,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **upload_file_to_root_in_problem_config_api_v1_domains_domain_problems_problem_config_files_put**
-> FileInfoResp upload_file_to_root_in_problem_config_api_v1_domains_domain_problems_problem_config_files_put(file, domain, problem)
+# **v1_upload_file_to_root_in_problem_config**
+> FileInfoResp v1_upload_file_to_root_in_problem_config(file, domain, problem)
 
 Upload File To Root In Problem Config
 
@@ -668,10 +668,10 @@ problem = 'problem_example' # str | url or id of the problem
 
 try:
     # Upload File To Root In Problem Config
-    api_response = api_instance.upload_file_to_root_in_problem_config_api_v1_domains_domain_problems_problem_config_files_put(file, domain, problem)
+    api_response = api_instance.v1_upload_file_to_root_in_problem_config(file, domain, problem)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling ProblemConfigApi->upload_file_to_root_in_problem_config_api_v1_domains_domain_problems_problem_config_files_put: %s\n" % e)
+    print("Exception when calling ProblemConfigApi->v1_upload_file_to_root_in_problem_config: %s\n" % e)
 ```
 
 ### Parameters

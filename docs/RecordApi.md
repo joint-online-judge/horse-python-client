@@ -4,12 +4,12 @@ All URIs are relative to */*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**get_record_api_v1_domains_domain_records_record_get**](RecordApi.md#get_record_api_v1_domains_domain_records_record_get) | **GET** /api/v1/domains/{domain}/records/{record} | Get Record
-[**get_record_code_api_v1_domains_domain_records_record_code_get**](RecordApi.md#get_record_code_api_v1_domains_domain_records_record_code_get) | **GET** /api/v1/domains/{domain}/records/{record}/code | Get Record Code
-[**list_records_in_domain_api_v1_domains_domain_records_get**](RecordApi.md#list_records_in_domain_api_v1_domains_domain_records_get) | **GET** /api/v1/domains/{domain}/records | List Records In Domain
+[**v1_get_record**](RecordApi.md#v1_get_record) | **GET** /domains/{domain}/records/{record} | Get Record
+[**v1_get_record_code**](RecordApi.md#v1_get_record_code) | **GET** /domains/{domain}/records/{record}/code | Get Record Code
+[**v1_list_records_in_domain**](RecordApi.md#v1_list_records_in_domain) | **GET** /domains/{domain}/records | List Records In Domain
 
-# **get_record_api_v1_domains_domain_records_record_get**
-> RecordResp get_record_api_v1_domains_domain_records_record_get(record, domain)
+# **v1_get_record**
+> RecordResp v1_get_record(record, domain)
 
 Get Record
 
@@ -29,10 +29,10 @@ domain = 'domain_example' # str | url or id of the domain
 
 try:
     # Get Record
-    api_response = api_instance.get_record_api_v1_domains_domain_records_record_get(record, domain)
+    api_response = api_instance.v1_get_record(record, domain)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling RecordApi->get_record_api_v1_domains_domain_records_record_get: %s\n" % e)
+    print("Exception when calling RecordApi->v1_get_record: %s\n" % e)
 ```
 
 ### Parameters
@@ -57,8 +57,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **get_record_code_api_v1_domains_domain_records_record_code_get**
-> object get_record_code_api_v1_domains_domain_records_record_code_get(record, domain)
+# **v1_get_record_code**
+> object v1_get_record_code(record, domain)
 
 Get Record Code
 
@@ -78,10 +78,10 @@ domain = 'domain_example' # str | url or id of the domain
 
 try:
     # Get Record Code
-    api_response = api_instance.get_record_code_api_v1_domains_domain_records_record_code_get(record, domain)
+    api_response = api_instance.v1_get_record_code(record, domain)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling RecordApi->get_record_code_api_v1_domains_domain_records_record_code_get: %s\n" % e)
+    print("Exception when calling RecordApi->v1_get_record_code: %s\n" % e)
 ```
 
 ### Parameters
@@ -106,8 +106,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **list_records_in_domain_api_v1_domains_domain_records_get**
-> RecordListResp list_records_in_domain_api_v1_domains_domain_records_get(domain, problem_set=problem_set, problem=problem, ordering=ordering, offset=offset, limit=limit, uid=uid)
+# **v1_list_records_in_domain**
+> RecordListResp v1_list_records_in_domain(domain, problem_set=problem_set, problem=problem, ordering=ordering, offset=offset, limit=limit, uid=uid)
 
 List Records In Domain
 
@@ -132,10 +132,10 @@ uid = '' # str | user id or 'me' or empty (optional)
 
 try:
     # List Records In Domain
-    api_response = api_instance.list_records_in_domain_api_v1_domains_domain_records_get(domain, problem_set=problem_set, problem=problem, ordering=ordering, offset=offset, limit=limit, uid=uid)
+    api_response = api_instance.v1_list_records_in_domain(domain, problem_set=problem_set, problem=problem, ordering=ordering, offset=offset, limit=limit, uid=uid)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling RecordApi->list_records_in_domain_api_v1_domains_domain_records_get: %s\n" % e)
+    print("Exception when calling RecordApi->v1_list_records_in_domain: %s\n" % e)
 ```
 
 ### Parameters

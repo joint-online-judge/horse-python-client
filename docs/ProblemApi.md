@@ -4,16 +4,16 @@ All URIs are relative to */*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**clone_problem_api_v1_domains_domain_problems_clone_post**](ProblemApi.md#clone_problem_api_v1_domains_domain_problems_clone_post) | **POST** /api/v1/domains/{domain}/problems/clone | Clone Problem
-[**create_problem_api_v1_domains_domain_problems_post**](ProblemApi.md#create_problem_api_v1_domains_domain_problems_post) | **POST** /api/v1/domains/{domain}/problems | Create Problem
-[**delete_problem_api_v1_domains_domain_problems_problem_delete**](ProblemApi.md#delete_problem_api_v1_domains_domain_problems_problem_delete) | **DELETE** /api/v1/domains/{domain}/problems/{problem} | Delete Problem
-[**get_problem_api_v1_domains_domain_problems_problem_get**](ProblemApi.md#get_problem_api_v1_domains_domain_problems_problem_get) | **GET** /api/v1/domains/{domain}/problems/{problem} | Get Problem
-[**list_problems_api_v1_domains_domain_problems_get**](ProblemApi.md#list_problems_api_v1_domains_domain_problems_get) | **GET** /api/v1/domains/{domain}/problems | List Problems
-[**submit_solution_to_problem_api_v1_domains_domain_problems_problem_post**](ProblemApi.md#submit_solution_to_problem_api_v1_domains_domain_problems_problem_post) | **POST** /api/v1/domains/{domain}/problems/{problem} | Submit Solution To Problem
-[**update_problem_api_v1_domains_domain_problems_problem_patch**](ProblemApi.md#update_problem_api_v1_domains_domain_problems_problem_patch) | **PATCH** /api/v1/domains/{domain}/problems/{problem} | Update Problem
+[**v1_clone_problem**](ProblemApi.md#v1_clone_problem) | **POST** /domains/{domain}/problems/clone | Clone Problem
+[**v1_create_problem**](ProblemApi.md#v1_create_problem) | **POST** /domains/{domain}/problems | Create Problem
+[**v1_delete_problem**](ProblemApi.md#v1_delete_problem) | **DELETE** /domains/{domain}/problems/{problem} | Delete Problem
+[**v1_get_problem**](ProblemApi.md#v1_get_problem) | **GET** /domains/{domain}/problems/{problem} | Get Problem
+[**v1_list_problems**](ProblemApi.md#v1_list_problems) | **GET** /domains/{domain}/problems | List Problems
+[**v1_submit_solution_to_problem**](ProblemApi.md#v1_submit_solution_to_problem) | **POST** /domains/{domain}/problems/{problem} | Submit Solution To Problem
+[**v1_update_problem**](ProblemApi.md#v1_update_problem) | **PATCH** /domains/{domain}/problems/{problem} | Update Problem
 
-# **clone_problem_api_v1_domains_domain_problems_clone_post**
-> ProblemListResp clone_problem_api_v1_domains_domain_problems_clone_post(body, domain)
+# **v1_clone_problem**
+> ProblemListResp v1_clone_problem(body, domain)
 
 Clone Problem
 
@@ -33,10 +33,10 @@ domain = 'domain_example' # str | url or id of the domain
 
 try:
     # Clone Problem
-    api_response = api_instance.clone_problem_api_v1_domains_domain_problems_clone_post(body, domain)
+    api_response = api_instance.v1_clone_problem(body, domain)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling ProblemApi->clone_problem_api_v1_domains_domain_problems_clone_post: %s\n" % e)
+    print("Exception when calling ProblemApi->v1_clone_problem: %s\n" % e)
 ```
 
 ### Parameters
@@ -61,8 +61,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **create_problem_api_v1_domains_domain_problems_post**
-> ProblemResp create_problem_api_v1_domains_domain_problems_post(body, domain)
+# **v1_create_problem**
+> ProblemResp v1_create_problem(body, domain)
 
 Create Problem
 
@@ -82,10 +82,10 @@ domain = 'domain_example' # str | url or id of the domain
 
 try:
     # Create Problem
-    api_response = api_instance.create_problem_api_v1_domains_domain_problems_post(body, domain)
+    api_response = api_instance.v1_create_problem(body, domain)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling ProblemApi->create_problem_api_v1_domains_domain_problems_post: %s\n" % e)
+    print("Exception when calling ProblemApi->v1_create_problem: %s\n" % e)
 ```
 
 ### Parameters
@@ -110,8 +110,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **delete_problem_api_v1_domains_domain_problems_problem_delete**
-> EmptyResp delete_problem_api_v1_domains_domain_problems_problem_delete(domain, problem)
+# **v1_delete_problem**
+> EmptyResp v1_delete_problem(domain, problem)
 
 Delete Problem
 
@@ -131,10 +131,10 @@ problem = 'problem_example' # str | url or id of the problem
 
 try:
     # Delete Problem
-    api_response = api_instance.delete_problem_api_v1_domains_domain_problems_problem_delete(domain, problem)
+    api_response = api_instance.v1_delete_problem(domain, problem)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling ProblemApi->delete_problem_api_v1_domains_domain_problems_problem_delete: %s\n" % e)
+    print("Exception when calling ProblemApi->v1_delete_problem: %s\n" % e)
 ```
 
 ### Parameters
@@ -159,8 +159,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **get_problem_api_v1_domains_domain_problems_problem_get**
-> ProblemDetailResp get_problem_api_v1_domains_domain_problems_problem_get(domain, problem)
+# **v1_get_problem**
+> ProblemDetailResp v1_get_problem(domain, problem)
 
 Get Problem
 
@@ -180,10 +180,10 @@ problem = 'problem_example' # str | url or id of the problem
 
 try:
     # Get Problem
-    api_response = api_instance.get_problem_api_v1_domains_domain_problems_problem_get(domain, problem)
+    api_response = api_instance.v1_get_problem(domain, problem)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling ProblemApi->get_problem_api_v1_domains_domain_problems_problem_get: %s\n" % e)
+    print("Exception when calling ProblemApi->v1_get_problem: %s\n" % e)
 ```
 
 ### Parameters
@@ -208,8 +208,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **list_problems_api_v1_domains_domain_problems_get**
-> ProblemListResp list_problems_api_v1_domains_domain_problems_get(domain, ordering=ordering, offset=offset, limit=limit)
+# **v1_list_problems**
+> ProblemListResp v1_list_problems(domain, ordering=ordering, offset=offset, limit=limit)
 
 List Problems
 
@@ -231,10 +231,10 @@ limit = 100 # int |  (optional) (default to 100)
 
 try:
     # List Problems
-    api_response = api_instance.list_problems_api_v1_domains_domain_problems_get(domain, ordering=ordering, offset=offset, limit=limit)
+    api_response = api_instance.v1_list_problems(domain, ordering=ordering, offset=offset, limit=limit)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling ProblemApi->list_problems_api_v1_domains_domain_problems_get: %s\n" % e)
+    print("Exception when calling ProblemApi->v1_list_problems: %s\n" % e)
 ```
 
 ### Parameters
@@ -261,8 +261,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **submit_solution_to_problem_api_v1_domains_domain_problems_problem_post**
-> RecordResp submit_solution_to_problem_api_v1_domains_domain_problems_problem_post(code_type, file, domain, problem)
+# **v1_submit_solution_to_problem**
+> RecordResp v1_submit_solution_to_problem(code_type, file, domain, problem)
 
 Submit Solution To Problem
 
@@ -284,10 +284,10 @@ problem = 'problem_example' # str | url or id of the problem
 
 try:
     # Submit Solution To Problem
-    api_response = api_instance.submit_solution_to_problem_api_v1_domains_domain_problems_problem_post(code_type, file, domain, problem)
+    api_response = api_instance.v1_submit_solution_to_problem(code_type, file, domain, problem)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling ProblemApi->submit_solution_to_problem_api_v1_domains_domain_problems_problem_post: %s\n" % e)
+    print("Exception when calling ProblemApi->v1_submit_solution_to_problem: %s\n" % e)
 ```
 
 ### Parameters
@@ -314,8 +314,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **update_problem_api_v1_domains_domain_problems_problem_patch**
-> ProblemResp update_problem_api_v1_domains_domain_problems_problem_patch(body, domain, problem)
+# **v1_update_problem**
+> ProblemResp v1_update_problem(body, domain, problem)
 
 Update Problem
 
@@ -336,10 +336,10 @@ problem = 'problem_example' # str | url or id of the problem
 
 try:
     # Update Problem
-    api_response = api_instance.update_problem_api_v1_domains_domain_problems_problem_patch(body, domain, problem)
+    api_response = api_instance.v1_update_problem(body, domain, problem)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling ProblemApi->update_problem_api_v1_domains_domain_problems_problem_patch: %s\n" % e)
+    print("Exception when calling ProblemApi->v1_update_problem: %s\n" % e)
 ```
 
 ### Parameters

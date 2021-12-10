@@ -4,21 +4,21 @@ All URIs are relative to */*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**add_problem_in_problem_set_api_v1_domains_domain_problem_sets_problem_set_problems_post**](ProblemSetApi.md#add_problem_in_problem_set_api_v1_domains_domain_problem_sets_problem_set_problems_post) | **POST** /api/v1/domains/{domain}/problem_sets/{problemSet}/problems | Add Problem In Problem Set
-[**create_problem_set_api_v1_domains_domain_problem_sets_post**](ProblemSetApi.md#create_problem_set_api_v1_domains_domain_problem_sets_post) | **POST** /api/v1/domains/{domain}/problem_sets | Create Problem Set
-[**delete_problem_in_problem_set_api_v1_domains_domain_problem_sets_problem_set_problems_problem_delete**](ProblemSetApi.md#delete_problem_in_problem_set_api_v1_domains_domain_problem_sets_problem_set_problems_problem_delete) | **DELETE** /api/v1/domains/{domain}/problem_sets/{problemSet}/problems/{problem} | Delete Problem In Problem Set
-[**delete_problem_set_api_v1_domains_domain_problem_sets_problem_set_delete**](ProblemSetApi.md#delete_problem_set_api_v1_domains_domain_problem_sets_problem_set_delete) | **DELETE** /api/v1/domains/{domain}/problem_sets/{problemSet} | Delete Problem Set
-[**get_problem_in_problem_set_api_v1_domains_domain_problem_sets_problem_set_problems_problem_get**](ProblemSetApi.md#get_problem_in_problem_set_api_v1_domains_domain_problem_sets_problem_set_problems_problem_get) | **GET** /api/v1/domains/{domain}/problem_sets/{problemSet}/problems/{problem} | Get Problem In Problem Set
-[**get_problem_set_api_v1_domains_domain_problem_sets_problem_set_get**](ProblemSetApi.md#get_problem_set_api_v1_domains_domain_problem_sets_problem_set_get) | **GET** /api/v1/domains/{domain}/problem_sets/{problemSet} | Get Problem Set
-[**get_scoreboard_api_v1_domains_domain_problem_sets_problem_set_scoreboard_get**](ProblemSetApi.md#get_scoreboard_api_v1_domains_domain_problem_sets_problem_set_scoreboard_get) | **GET** /api/v1/domains/{domain}/problem_sets/{problemSet}/scoreboard | Get Scoreboard
-[**list_problem_sets_api_v1_domains_domain_problem_sets_get**](ProblemSetApi.md#list_problem_sets_api_v1_domains_domain_problem_sets_get) | **GET** /api/v1/domains/{domain}/problem_sets | List Problem Sets
-[**list_problems_in_problem_set_api_v1_domains_domain_problem_sets_problem_set_problems_get**](ProblemSetApi.md#list_problems_in_problem_set_api_v1_domains_domain_problem_sets_problem_set_problems_get) | **GET** /api/v1/domains/{domain}/problem_sets/{problemSet}/problems | List Problems In Problem Set
-[**submit_solution_to_problem_set_api_v1_domains_domain_problem_sets_problem_set_problems_problem_submit_post**](ProblemSetApi.md#submit_solution_to_problem_set_api_v1_domains_domain_problem_sets_problem_set_problems_problem_submit_post) | **POST** /api/v1/domains/{domain}/problem_sets/{problemSet}/problems/{problem}/submit | Submit Solution To Problem Set
-[**update_problem_in_problem_set_api_v1_domains_domain_problem_sets_problem_set_problems_problem_patch**](ProblemSetApi.md#update_problem_in_problem_set_api_v1_domains_domain_problem_sets_problem_set_problems_problem_patch) | **PATCH** /api/v1/domains/{domain}/problem_sets/{problemSet}/problems/{problem} | Update Problem In Problem Set
-[**update_problem_set_api_v1_domains_domain_problem_sets_problem_set_patch**](ProblemSetApi.md#update_problem_set_api_v1_domains_domain_problem_sets_problem_set_patch) | **PATCH** /api/v1/domains/{domain}/problem_sets/{problemSet} | Update Problem Set
+[**v1_add_problem_in_problem_set**](ProblemSetApi.md#v1_add_problem_in_problem_set) | **POST** /domains/{domain}/problem_sets/{problemSet}/problems | Add Problem In Problem Set
+[**v1_create_problem_set**](ProblemSetApi.md#v1_create_problem_set) | **POST** /domains/{domain}/problem_sets | Create Problem Set
+[**v1_delete_problem_in_problem_set**](ProblemSetApi.md#v1_delete_problem_in_problem_set) | **DELETE** /domains/{domain}/problem_sets/{problemSet}/problems/{problem} | Delete Problem In Problem Set
+[**v1_delete_problem_set**](ProblemSetApi.md#v1_delete_problem_set) | **DELETE** /domains/{domain}/problem_sets/{problemSet} | Delete Problem Set
+[**v1_get_problem_in_problem_set**](ProblemSetApi.md#v1_get_problem_in_problem_set) | **GET** /domains/{domain}/problem_sets/{problemSet}/problems/{problem} | Get Problem In Problem Set
+[**v1_get_problem_set**](ProblemSetApi.md#v1_get_problem_set) | **GET** /domains/{domain}/problem_sets/{problemSet} | Get Problem Set
+[**v1_get_scoreboard**](ProblemSetApi.md#v1_get_scoreboard) | **GET** /domains/{domain}/problem_sets/{problemSet}/scoreboard | Get Scoreboard
+[**v1_list_problem_sets**](ProblemSetApi.md#v1_list_problem_sets) | **GET** /domains/{domain}/problem_sets | List Problem Sets
+[**v1_list_problems_in_problem_set**](ProblemSetApi.md#v1_list_problems_in_problem_set) | **GET** /domains/{domain}/problem_sets/{problemSet}/problems | List Problems In Problem Set
+[**v1_submit_solution_to_problem_set**](ProblemSetApi.md#v1_submit_solution_to_problem_set) | **POST** /domains/{domain}/problem_sets/{problemSet}/problems/{problem}/submit | Submit Solution To Problem Set
+[**v1_update_problem_in_problem_set**](ProblemSetApi.md#v1_update_problem_in_problem_set) | **PATCH** /domains/{domain}/problem_sets/{problemSet}/problems/{problem} | Update Problem In Problem Set
+[**v1_update_problem_set**](ProblemSetApi.md#v1_update_problem_set) | **PATCH** /domains/{domain}/problem_sets/{problemSet} | Update Problem Set
 
-# **add_problem_in_problem_set_api_v1_domains_domain_problem_sets_problem_set_problems_post**
-> ProblemSetResp add_problem_in_problem_set_api_v1_domains_domain_problem_sets_problem_set_problems_post(body, domain, problem_set)
+# **v1_add_problem_in_problem_set**
+> ProblemSetResp v1_add_problem_in_problem_set(body, domain, problem_set)
 
 Add Problem In Problem Set
 
@@ -39,10 +39,10 @@ problem_set = 'problem_set_example' # str | url or id of the problem set
 
 try:
     # Add Problem In Problem Set
-    api_response = api_instance.add_problem_in_problem_set_api_v1_domains_domain_problem_sets_problem_set_problems_post(body, domain, problem_set)
+    api_response = api_instance.v1_add_problem_in_problem_set(body, domain, problem_set)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling ProblemSetApi->add_problem_in_problem_set_api_v1_domains_domain_problem_sets_problem_set_problems_post: %s\n" % e)
+    print("Exception when calling ProblemSetApi->v1_add_problem_in_problem_set: %s\n" % e)
 ```
 
 ### Parameters
@@ -68,8 +68,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **create_problem_set_api_v1_domains_domain_problem_sets_post**
-> ProblemSetResp create_problem_set_api_v1_domains_domain_problem_sets_post(body, domain)
+# **v1_create_problem_set**
+> ProblemSetResp v1_create_problem_set(body, domain)
 
 Create Problem Set
 
@@ -89,10 +89,10 @@ domain = 'domain_example' # str | url or id of the domain
 
 try:
     # Create Problem Set
-    api_response = api_instance.create_problem_set_api_v1_domains_domain_problem_sets_post(body, domain)
+    api_response = api_instance.v1_create_problem_set(body, domain)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling ProblemSetApi->create_problem_set_api_v1_domains_domain_problem_sets_post: %s\n" % e)
+    print("Exception when calling ProblemSetApi->v1_create_problem_set: %s\n" % e)
 ```
 
 ### Parameters
@@ -117,8 +117,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **delete_problem_in_problem_set_api_v1_domains_domain_problem_sets_problem_set_problems_problem_delete**
-> ProblemSetResp delete_problem_in_problem_set_api_v1_domains_domain_problem_sets_problem_set_problems_problem_delete(domain, problem_set, problem)
+# **v1_delete_problem_in_problem_set**
+> ProblemSetResp v1_delete_problem_in_problem_set(domain, problem_set, problem)
 
 Delete Problem In Problem Set
 
@@ -139,10 +139,10 @@ problem = 'problem_example' # str | url or id of the problem
 
 try:
     # Delete Problem In Problem Set
-    api_response = api_instance.delete_problem_in_problem_set_api_v1_domains_domain_problem_sets_problem_set_problems_problem_delete(domain, problem_set, problem)
+    api_response = api_instance.v1_delete_problem_in_problem_set(domain, problem_set, problem)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling ProblemSetApi->delete_problem_in_problem_set_api_v1_domains_domain_problem_sets_problem_set_problems_problem_delete: %s\n" % e)
+    print("Exception when calling ProblemSetApi->v1_delete_problem_in_problem_set: %s\n" % e)
 ```
 
 ### Parameters
@@ -168,8 +168,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **delete_problem_set_api_v1_domains_domain_problem_sets_problem_set_delete**
-> EmptyResp delete_problem_set_api_v1_domains_domain_problem_sets_problem_set_delete(domain, problem_set)
+# **v1_delete_problem_set**
+> EmptyResp v1_delete_problem_set(domain, problem_set)
 
 Delete Problem Set
 
@@ -189,10 +189,10 @@ problem_set = 'problem_set_example' # str | url or id of the problem set
 
 try:
     # Delete Problem Set
-    api_response = api_instance.delete_problem_set_api_v1_domains_domain_problem_sets_problem_set_delete(domain, problem_set)
+    api_response = api_instance.v1_delete_problem_set(domain, problem_set)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling ProblemSetApi->delete_problem_set_api_v1_domains_domain_problem_sets_problem_set_delete: %s\n" % e)
+    print("Exception when calling ProblemSetApi->v1_delete_problem_set: %s\n" % e)
 ```
 
 ### Parameters
@@ -217,8 +217,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **get_problem_in_problem_set_api_v1_domains_domain_problem_sets_problem_set_problems_problem_get**
-> ProblemDetailWithRecordStateResp get_problem_in_problem_set_api_v1_domains_domain_problem_sets_problem_set_problems_problem_get(domain, problem_set, problem)
+# **v1_get_problem_in_problem_set**
+> ProblemDetailWithRecordStateResp v1_get_problem_in_problem_set(domain, problem_set, problem)
 
 Get Problem In Problem Set
 
@@ -239,10 +239,10 @@ problem = 'problem_example' # str | url or id of the problem
 
 try:
     # Get Problem In Problem Set
-    api_response = api_instance.get_problem_in_problem_set_api_v1_domains_domain_problem_sets_problem_set_problems_problem_get(domain, problem_set, problem)
+    api_response = api_instance.v1_get_problem_in_problem_set(domain, problem_set, problem)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling ProblemSetApi->get_problem_in_problem_set_api_v1_domains_domain_problem_sets_problem_set_problems_problem_get: %s\n" % e)
+    print("Exception when calling ProblemSetApi->v1_get_problem_in_problem_set: %s\n" % e)
 ```
 
 ### Parameters
@@ -268,8 +268,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **get_problem_set_api_v1_domains_domain_problem_sets_problem_set_get**
-> ProblemSetDetailResp get_problem_set_api_v1_domains_domain_problem_sets_problem_set_get(domain, problem_set)
+# **v1_get_problem_set**
+> ProblemSetDetailResp v1_get_problem_set(domain, problem_set)
 
 Get Problem Set
 
@@ -289,10 +289,10 @@ problem_set = 'problem_set_example' # str | url or id of the problem set
 
 try:
     # Get Problem Set
-    api_response = api_instance.get_problem_set_api_v1_domains_domain_problem_sets_problem_set_get(domain, problem_set)
+    api_response = api_instance.v1_get_problem_set(domain, problem_set)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling ProblemSetApi->get_problem_set_api_v1_domains_domain_problem_sets_problem_set_get: %s\n" % e)
+    print("Exception when calling ProblemSetApi->v1_get_problem_set: %s\n" % e)
 ```
 
 ### Parameters
@@ -317,8 +317,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **get_scoreboard_api_v1_domains_domain_problem_sets_problem_set_scoreboard_get**
-> ScoreBoardResp get_scoreboard_api_v1_domains_domain_problem_sets_problem_set_scoreboard_get(problem_set, domain)
+# **v1_get_scoreboard**
+> ScoreBoardResp v1_get_scoreboard(problem_set, domain)
 
 Get Scoreboard
 
@@ -338,10 +338,10 @@ domain = 'domain_example' # str | url or id of the domain
 
 try:
     # Get Scoreboard
-    api_response = api_instance.get_scoreboard_api_v1_domains_domain_problem_sets_problem_set_scoreboard_get(problem_set, domain)
+    api_response = api_instance.v1_get_scoreboard(problem_set, domain)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling ProblemSetApi->get_scoreboard_api_v1_domains_domain_problem_sets_problem_set_scoreboard_get: %s\n" % e)
+    print("Exception when calling ProblemSetApi->v1_get_scoreboard: %s\n" % e)
 ```
 
 ### Parameters
@@ -366,8 +366,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **list_problem_sets_api_v1_domains_domain_problem_sets_get**
-> ProblemSetListResp list_problem_sets_api_v1_domains_domain_problem_sets_get(domain, ordering=ordering, offset=offset, limit=limit)
+# **v1_list_problem_sets**
+> ProblemSetListResp v1_list_problem_sets(domain, ordering=ordering, offset=offset, limit=limit)
 
 List Problem Sets
 
@@ -389,10 +389,10 @@ limit = 100 # int |  (optional) (default to 100)
 
 try:
     # List Problem Sets
-    api_response = api_instance.list_problem_sets_api_v1_domains_domain_problem_sets_get(domain, ordering=ordering, offset=offset, limit=limit)
+    api_response = api_instance.v1_list_problem_sets(domain, ordering=ordering, offset=offset, limit=limit)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling ProblemSetApi->list_problem_sets_api_v1_domains_domain_problem_sets_get: %s\n" % e)
+    print("Exception when calling ProblemSetApi->v1_list_problem_sets: %s\n" % e)
 ```
 
 ### Parameters
@@ -419,8 +419,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **list_problems_in_problem_set_api_v1_domains_domain_problem_sets_problem_set_problems_get**
-> ProblemWithRecordStateListResp list_problems_in_problem_set_api_v1_domains_domain_problem_sets_problem_set_problems_get(domain, problem_set)
+# **v1_list_problems_in_problem_set**
+> ProblemWithRecordStateListResp v1_list_problems_in_problem_set(domain, problem_set)
 
 List Problems In Problem Set
 
@@ -440,10 +440,10 @@ problem_set = 'problem_set_example' # str | url or id of the problem set
 
 try:
     # List Problems In Problem Set
-    api_response = api_instance.list_problems_in_problem_set_api_v1_domains_domain_problem_sets_problem_set_problems_get(domain, problem_set)
+    api_response = api_instance.v1_list_problems_in_problem_set(domain, problem_set)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling ProblemSetApi->list_problems_in_problem_set_api_v1_domains_domain_problem_sets_problem_set_problems_get: %s\n" % e)
+    print("Exception when calling ProblemSetApi->v1_list_problems_in_problem_set: %s\n" % e)
 ```
 
 ### Parameters
@@ -468,8 +468,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **submit_solution_to_problem_set_api_v1_domains_domain_problem_sets_problem_set_problems_problem_submit_post**
-> RecordResp submit_solution_to_problem_set_api_v1_domains_domain_problem_sets_problem_set_problems_problem_submit_post(code_type, file, domain, problem_set, problem)
+# **v1_submit_solution_to_problem_set**
+> RecordResp v1_submit_solution_to_problem_set(code_type, file, domain, problem_set, problem)
 
 Submit Solution To Problem Set
 
@@ -492,10 +492,10 @@ problem = 'problem_example' # str | url or id of the problem
 
 try:
     # Submit Solution To Problem Set
-    api_response = api_instance.submit_solution_to_problem_set_api_v1_domains_domain_problem_sets_problem_set_problems_problem_submit_post(code_type, file, domain, problem_set, problem)
+    api_response = api_instance.v1_submit_solution_to_problem_set(code_type, file, domain, problem_set, problem)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling ProblemSetApi->submit_solution_to_problem_set_api_v1_domains_domain_problem_sets_problem_set_problems_problem_submit_post: %s\n" % e)
+    print("Exception when calling ProblemSetApi->v1_submit_solution_to_problem_set: %s\n" % e)
 ```
 
 ### Parameters
@@ -523,8 +523,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **update_problem_in_problem_set_api_v1_domains_domain_problem_sets_problem_set_problems_problem_patch**
-> ProblemSetResp update_problem_in_problem_set_api_v1_domains_domain_problem_sets_problem_set_problems_problem_patch(body, domain, problem_set, problem)
+# **v1_update_problem_in_problem_set**
+> ProblemSetResp v1_update_problem_in_problem_set(body, domain, problem_set, problem)
 
 Update Problem In Problem Set
 
@@ -546,10 +546,10 @@ problem = 'problem_example' # str | url or id of the problem
 
 try:
     # Update Problem In Problem Set
-    api_response = api_instance.update_problem_in_problem_set_api_v1_domains_domain_problem_sets_problem_set_problems_problem_patch(body, domain, problem_set, problem)
+    api_response = api_instance.v1_update_problem_in_problem_set(body, domain, problem_set, problem)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling ProblemSetApi->update_problem_in_problem_set_api_v1_domains_domain_problem_sets_problem_set_problems_problem_patch: %s\n" % e)
+    print("Exception when calling ProblemSetApi->v1_update_problem_in_problem_set: %s\n" % e)
 ```
 
 ### Parameters
@@ -576,8 +576,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **update_problem_set_api_v1_domains_domain_problem_sets_problem_set_patch**
-> ProblemSetResp update_problem_set_api_v1_domains_domain_problem_sets_problem_set_patch(body, domain, problem_set)
+# **v1_update_problem_set**
+> ProblemSetResp v1_update_problem_set(body, domain, problem_set)
 
 Update Problem Set
 
@@ -598,10 +598,10 @@ problem_set = 'problem_set_example' # str | url or id of the problem set
 
 try:
     # Update Problem Set
-    api_response = api_instance.update_problem_set_api_v1_domains_domain_problem_sets_problem_set_patch(body, domain, problem_set)
+    api_response = api_instance.v1_update_problem_set(body, domain, problem_set)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling ProblemSetApi->update_problem_set_api_v1_domains_domain_problem_sets_problem_set_patch: %s\n" % e)
+    print("Exception when calling ProblemSetApi->v1_update_problem_set: %s\n" % e)
 ```
 
 ### Parameters

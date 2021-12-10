@@ -4,15 +4,15 @@ All URIs are relative to */*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**get_user_api_v1_user_get**](UserApi.md#get_user_api_v1_user_get) | **GET** /api/v1/user | Get User
-[**get_user_api_v1_users_uid_get**](UserApi.md#get_user_api_v1_users_uid_get) | **GET** /api/v1/users/{uid} | Get User
-[**get_user_problems_api_v1_user_problems_get**](UserApi.md#get_user_problems_api_v1_user_problems_get) | **GET** /api/v1/user/problems | Get User Problems
-[**get_user_problems_api_v1_users_uid_problems_get**](UserApi.md#get_user_problems_api_v1_users_uid_problems_get) | **GET** /api/v1/users/{uid}/problems | Get User Problems
-[**list_user_domains_api_v1_users_uid_domains_get**](UserApi.md#list_user_domains_api_v1_users_uid_domains_get) | **GET** /api/v1/users/{uid}/domains | List User Domains
-[**list_users_api_v1_users_get**](UserApi.md#list_users_api_v1_users_get) | **GET** /api/v1/users | List Users
+[**v1_get_user**](UserApi.md#v1_get_user) | **GET** /user | Get User
+[**v1_get_user_0**](UserApi.md#v1_get_user_0) | **GET** /users/{uid} | Get User
+[**v1_get_user_problems**](UserApi.md#v1_get_user_problems) | **GET** /user/problems | Get User Problems
+[**v1_get_user_problems_0**](UserApi.md#v1_get_user_problems_0) | **GET** /users/{uid}/problems | Get User Problems
+[**v1_list_user_domains**](UserApi.md#v1_list_user_domains) | **GET** /users/{uid}/domains | List User Domains
+[**v1_list_users**](UserApi.md#v1_list_users) | **GET** /users | List Users
 
-# **get_user_api_v1_user_get**
-> UserDetailResp get_user_api_v1_user_get()
+# **v1_get_user**
+> UserDetailResp v1_get_user()
 
 Get User
 
@@ -30,10 +30,10 @@ api_instance = joj.horse_client.UserApi(joj.horse_client.ApiClient(configuration
 
 try:
     # Get User
-    api_response = api_instance.get_user_api_v1_user_get()
+    api_response = api_instance.v1_get_user()
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling UserApi->get_user_api_v1_user_get: %s\n" % e)
+    print("Exception when calling UserApi->v1_get_user: %s\n" % e)
 ```
 
 ### Parameters
@@ -54,8 +54,8 @@ This endpoint does not need any parameter.
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **get_user_api_v1_users_uid_get**
-> UserResp get_user_api_v1_users_uid_get(uid)
+# **v1_get_user_0**
+> UserResp v1_get_user_0(uid)
 
 Get User
 
@@ -74,10 +74,10 @@ uid = 'uid_example' # str |
 
 try:
     # Get User
-    api_response = api_instance.get_user_api_v1_users_uid_get(uid)
+    api_response = api_instance.v1_get_user_0(uid)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling UserApi->get_user_api_v1_users_uid_get: %s\n" % e)
+    print("Exception when calling UserApi->v1_get_user_0: %s\n" % e)
 ```
 
 ### Parameters
@@ -101,8 +101,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **get_user_problems_api_v1_user_problems_get**
-> ProblemListResp get_user_problems_api_v1_user_problems_get(offset=offset, limit=limit)
+# **v1_get_user_problems**
+> ProblemListResp v1_get_user_problems(offset=offset, limit=limit)
 
 Get User Problems
 
@@ -122,10 +122,10 @@ limit = 100 # int |  (optional) (default to 100)
 
 try:
     # Get User Problems
-    api_response = api_instance.get_user_problems_api_v1_user_problems_get(offset=offset, limit=limit)
+    api_response = api_instance.v1_get_user_problems(offset=offset, limit=limit)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling UserApi->get_user_problems_api_v1_user_problems_get: %s\n" % e)
+    print("Exception when calling UserApi->v1_get_user_problems: %s\n" % e)
 ```
 
 ### Parameters
@@ -150,8 +150,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **get_user_problems_api_v1_users_uid_problems_get**
-> ProblemListResp get_user_problems_api_v1_users_uid_problems_get(uid, offset=offset, limit=limit)
+# **v1_get_user_problems_0**
+> ProblemListResp v1_get_user_problems_0(uid, offset=offset, limit=limit)
 
 Get User Problems
 
@@ -172,10 +172,10 @@ limit = 100 # int |  (optional) (default to 100)
 
 try:
     # Get User Problems
-    api_response = api_instance.get_user_problems_api_v1_users_uid_problems_get(uid, offset=offset, limit=limit)
+    api_response = api_instance.v1_get_user_problems_0(uid, offset=offset, limit=limit)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling UserApi->get_user_problems_api_v1_users_uid_problems_get: %s\n" % e)
+    print("Exception when calling UserApi->v1_get_user_problems_0: %s\n" % e)
 ```
 
 ### Parameters
@@ -201,8 +201,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **list_user_domains_api_v1_users_uid_domains_get**
-> DomainListResp list_user_domains_api_v1_users_uid_domains_get(uid, role=role, ordering=ordering, offset=offset, limit=limit)
+# **v1_list_user_domains**
+> DomainListResp v1_list_user_domains(uid, role=role, ordering=ordering, offset=offset, limit=limit)
 
 List User Domains
 
@@ -225,10 +225,10 @@ limit = 100 # int |  (optional) (default to 100)
 
 try:
     # List User Domains
-    api_response = api_instance.list_user_domains_api_v1_users_uid_domains_get(uid, role=role, ordering=ordering, offset=offset, limit=limit)
+    api_response = api_instance.v1_list_user_domains(uid, role=role, ordering=ordering, offset=offset, limit=limit)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling UserApi->list_user_domains_api_v1_users_uid_domains_get: %s\n" % e)
+    print("Exception when calling UserApi->v1_list_user_domains: %s\n" % e)
 ```
 
 ### Parameters
@@ -256,8 +256,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **list_users_api_v1_users_get**
-> UserListResp list_users_api_v1_users_get(query=query, ordering=ordering, offset=offset, limit=limit)
+# **v1_list_users**
+> UserListResp v1_list_users(query=query, ordering=ordering, offset=offset, limit=limit)
 
 List Users
 
@@ -279,10 +279,10 @@ limit = 100 # int |  (optional) (default to 100)
 
 try:
     # List Users
-    api_response = api_instance.list_users_api_v1_users_get(query=query, ordering=ordering, offset=offset, limit=limit)
+    api_response = api_instance.v1_list_users(query=query, ordering=ordering, offset=offset, limit=limit)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling UserApi->list_users_api_v1_users_get: %s\n" % e)
+    print("Exception when calling UserApi->v1_list_users: %s\n" % e)
 ```
 
 ### Parameters

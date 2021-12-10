@@ -4,13 +4,13 @@ All URIs are relative to */*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**jwt_decoded_api_v1_jwt_decoded_get**](MiscellaneousApi.md#jwt_decoded_api_v1_jwt_decoded_get) | **GET** /api/v1/jwt_decoded | Jwt Decoded
-[**set_root_user_api_v1_set_root_user_post**](MiscellaneousApi.md#set_root_user_api_v1_set_root_user_post) | **POST** /api/v1/set_root_user | Set Root User
-[**test_error_report_api_v1_test_report_get**](MiscellaneousApi.md#test_error_report_api_v1_test_report_get) | **GET** /api/v1/test/report | Test Error Report
-[**version_api_v1_version_get**](MiscellaneousApi.md#version_api_v1_version_get) | **GET** /api/v1/version | Version
+[**v1_jwt_decoded**](MiscellaneousApi.md#v1_jwt_decoded) | **GET** /jwt_decoded | Jwt Decoded
+[**v1_set_root_user**](MiscellaneousApi.md#v1_set_root_user) | **POST** /set_root_user | Set Root User
+[**v1_test_error_report**](MiscellaneousApi.md#v1_test_error_report) | **GET** /test/report | Test Error Report
+[**v1_version**](MiscellaneousApi.md#v1_version) | **GET** /version | Version
 
-# **jwt_decoded_api_v1_jwt_decoded_get**
-> JWTAccessTokenResp jwt_decoded_api_v1_jwt_decoded_get()
+# **v1_jwt_decoded**
+> JWTAccessTokenResp v1_jwt_decoded()
 
 Jwt Decoded
 
@@ -28,10 +28,10 @@ api_instance = joj.horse_client.MiscellaneousApi(joj.horse_client.ApiClient(conf
 
 try:
     # Jwt Decoded
-    api_response = api_instance.jwt_decoded_api_v1_jwt_decoded_get()
+    api_response = api_instance.v1_jwt_decoded()
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling MiscellaneousApi->jwt_decoded_api_v1_jwt_decoded_get: %s\n" % e)
+    print("Exception when calling MiscellaneousApi->v1_jwt_decoded: %s\n" % e)
 ```
 
 ### Parameters
@@ -52,8 +52,8 @@ This endpoint does not need any parameter.
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **set_root_user_api_v1_set_root_user_post**
-> UserResp set_root_user_api_v1_set_root_user_post()
+# **v1_set_root_user**
+> UserResp v1_set_root_user()
 
 Set Root User
 
@@ -71,10 +71,10 @@ api_instance = joj.horse_client.MiscellaneousApi(joj.horse_client.ApiClient(conf
 
 try:
     # Set Root User
-    api_response = api_instance.set_root_user_api_v1_set_root_user_post()
+    api_response = api_instance.v1_set_root_user()
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling MiscellaneousApi->set_root_user_api_v1_set_root_user_post: %s\n" % e)
+    print("Exception when calling MiscellaneousApi->v1_set_root_user: %s\n" % e)
 ```
 
 ### Parameters
@@ -95,8 +95,8 @@ This endpoint does not need any parameter.
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **test_error_report_api_v1_test_report_get**
-> EmptyResp test_error_report_api_v1_test_report_get()
+# **v1_test_error_report**
+> EmptyResp v1_test_error_report()
 
 Test Error Report
 
@@ -113,10 +113,10 @@ api_instance = joj.horse_client.MiscellaneousApi()
 
 try:
     # Test Error Report
-    api_response = api_instance.test_error_report_api_v1_test_report_get()
+    api_response = api_instance.v1_test_error_report()
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling MiscellaneousApi->test_error_report_api_v1_test_report_get: %s\n" % e)
+    print("Exception when calling MiscellaneousApi->v1_test_error_report: %s\n" % e)
 ```
 
 ### Parameters
@@ -137,8 +137,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **version_api_v1_version_get**
-> Version version_api_v1_version_get()
+# **v1_version**
+> Version v1_version()
 
 Version
 
@@ -155,10 +155,10 @@ api_instance = joj.horse_client.MiscellaneousApi()
 
 try:
     # Version
-    api_response = api_instance.version_api_v1_version_get()
+    api_response = api_instance.v1_version()
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling MiscellaneousApi->version_api_v1_version_get: %s\n" % e)
+    print("Exception when calling MiscellaneousApi->v1_version: %s\n" % e)
 ```
 
 ### Parameters

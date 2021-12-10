@@ -4,33 +4,33 @@ All URIs are relative to */*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**add_domain_user_api_v1_domains_domain_users_post**](DomainApi.md#add_domain_user_api_v1_domains_domain_users_post) | **POST** /api/v1/domains/{domain}/users | Add Domain User
-[**create_domain_api_v1_domains_post**](DomainApi.md#create_domain_api_v1_domains_post) | **POST** /api/v1/domains | Create Domain
-[**create_domain_invitation_api_v1_domains_domain_invitations_post**](DomainApi.md#create_domain_invitation_api_v1_domains_domain_invitations_post) | **POST** /api/v1/domains/{domain}/invitations | Create Domain Invitation
-[**create_domain_role_api_v1_domains_domain_roles_post**](DomainApi.md#create_domain_role_api_v1_domains_domain_roles_post) | **POST** /api/v1/domains/{domain}/roles | Create Domain Role
-[**delete_domain_api_v1_domains_domain_delete**](DomainApi.md#delete_domain_api_v1_domains_domain_delete) | **DELETE** /api/v1/domains/{domain} | Delete Domain
-[**delete_domain_invitation_api_v1_domains_domain_invitations_invitation_delete**](DomainApi.md#delete_domain_invitation_api_v1_domains_domain_invitations_invitation_delete) | **DELETE** /api/v1/domains/{domain}/invitations/{invitation} | Delete Domain Invitation
-[**delete_domain_role_api_v1_domains_domain_roles_role_delete**](DomainApi.md#delete_domain_role_api_v1_domains_domain_roles_role_delete) | **DELETE** /api/v1/domains/{domain}/roles/{role} | Delete Domain Role
-[**get_domain_api_v1_domains_domain_get**](DomainApi.md#get_domain_api_v1_domains_domain_get) | **GET** /api/v1/domains/{domain} | Get Domain
-[**get_domain_invitation_api_v1_domains_domain_invitations_invitation_get**](DomainApi.md#get_domain_invitation_api_v1_domains_domain_invitations_invitation_get) | **GET** /api/v1/domains/{domain}/invitations/{invitation} | Get Domain Invitation
-[**get_domain_role_api_v1_domains_domain_roles_role_get**](DomainApi.md#get_domain_role_api_v1_domains_domain_roles_role_get) | **GET** /api/v1/domains/{domain}/roles/{role} | Get Domain Role
-[**get_domain_user_api_v1_domains_domain_users_user_get**](DomainApi.md#get_domain_user_api_v1_domains_domain_users_user_get) | **GET** /api/v1/domains/{domain}/users/{user} | Get Domain User
-[**get_domain_user_permission_api_v1_domains_domain_users_user_permission_get**](DomainApi.md#get_domain_user_permission_api_v1_domains_domain_users_user_permission_get) | **GET** /api/v1/domains/{domain}/users/{user}/permission | Get Domain User Permission
-[**join_domain_by_invitation_api_v1_domains_domain_join_post**](DomainApi.md#join_domain_by_invitation_api_v1_domains_domain_join_post) | **POST** /api/v1/domains/{domain}/join | Join Domain By Invitation
-[**list_domain_invitations_api_v1_domains_domain_invitations_get**](DomainApi.md#list_domain_invitations_api_v1_domains_domain_invitations_get) | **GET** /api/v1/domains/{domain}/invitations | List Domain Invitations
-[**list_domain_roles_api_v1_domains_domain_roles_get**](DomainApi.md#list_domain_roles_api_v1_domains_domain_roles_get) | **GET** /api/v1/domains/{domain}/roles | List Domain Roles
-[**list_domain_users_api_v1_domains_domain_users_get**](DomainApi.md#list_domain_users_api_v1_domains_domain_users_get) | **GET** /api/v1/domains/{domain}/users | List Domain Users
-[**list_domains_api_v1_domains_get**](DomainApi.md#list_domains_api_v1_domains_get) | **GET** /api/v1/domains | List Domains
-[**remove_domain_user_api_v1_domains_domain_users_user_delete**](DomainApi.md#remove_domain_user_api_v1_domains_domain_users_user_delete) | **DELETE** /api/v1/domains/{domain}/users/{user} | Remove Domain User
-[**search_domain_candidates_api_v1_domains_domain_candidates_get**](DomainApi.md#search_domain_candidates_api_v1_domains_domain_candidates_get) | **GET** /api/v1/domains/{domain}/candidates | Search Domain Candidates
-[**transfer_domain_api_v1_domains_domain_transfer_post**](DomainApi.md#transfer_domain_api_v1_domains_domain_transfer_post) | **POST** /api/v1/domains/{domain}/transfer | Transfer Domain
-[**update_domain_api_v1_domains_domain_patch**](DomainApi.md#update_domain_api_v1_domains_domain_patch) | **PATCH** /api/v1/domains/{domain} | Update Domain
-[**update_domain_invitation_api_v1_domains_domain_invitations_invitation_patch**](DomainApi.md#update_domain_invitation_api_v1_domains_domain_invitations_invitation_patch) | **PATCH** /api/v1/domains/{domain}/invitations/{invitation} | Update Domain Invitation
-[**update_domain_role_api_v1_domains_domain_roles_role_patch**](DomainApi.md#update_domain_role_api_v1_domains_domain_roles_role_patch) | **PATCH** /api/v1/domains/{domain}/roles/{role} | Update Domain Role
-[**update_domain_user_api_v1_domains_domain_users_user_patch**](DomainApi.md#update_domain_user_api_v1_domains_domain_users_user_patch) | **PATCH** /api/v1/domains/{domain}/users/{user} | Update Domain User
+[**v1_add_domain_user**](DomainApi.md#v1_add_domain_user) | **POST** /domains/{domain}/users | Add Domain User
+[**v1_create_domain**](DomainApi.md#v1_create_domain) | **POST** /domains | Create Domain
+[**v1_create_domain_invitation**](DomainApi.md#v1_create_domain_invitation) | **POST** /domains/{domain}/invitations | Create Domain Invitation
+[**v1_create_domain_role**](DomainApi.md#v1_create_domain_role) | **POST** /domains/{domain}/roles | Create Domain Role
+[**v1_delete_domain**](DomainApi.md#v1_delete_domain) | **DELETE** /domains/{domain} | Delete Domain
+[**v1_delete_domain_invitation**](DomainApi.md#v1_delete_domain_invitation) | **DELETE** /domains/{domain}/invitations/{invitation} | Delete Domain Invitation
+[**v1_delete_domain_role**](DomainApi.md#v1_delete_domain_role) | **DELETE** /domains/{domain}/roles/{role} | Delete Domain Role
+[**v1_get_domain**](DomainApi.md#v1_get_domain) | **GET** /domains/{domain} | Get Domain
+[**v1_get_domain_invitation**](DomainApi.md#v1_get_domain_invitation) | **GET** /domains/{domain}/invitations/{invitation} | Get Domain Invitation
+[**v1_get_domain_role**](DomainApi.md#v1_get_domain_role) | **GET** /domains/{domain}/roles/{role} | Get Domain Role
+[**v1_get_domain_user**](DomainApi.md#v1_get_domain_user) | **GET** /domains/{domain}/users/{user} | Get Domain User
+[**v1_get_domain_user_permission**](DomainApi.md#v1_get_domain_user_permission) | **GET** /domains/{domain}/users/{user}/permission | Get Domain User Permission
+[**v1_join_domain_by_invitation**](DomainApi.md#v1_join_domain_by_invitation) | **POST** /domains/{domain}/join | Join Domain By Invitation
+[**v1_list_domain_invitations**](DomainApi.md#v1_list_domain_invitations) | **GET** /domains/{domain}/invitations | List Domain Invitations
+[**v1_list_domain_roles**](DomainApi.md#v1_list_domain_roles) | **GET** /domains/{domain}/roles | List Domain Roles
+[**v1_list_domain_users**](DomainApi.md#v1_list_domain_users) | **GET** /domains/{domain}/users | List Domain Users
+[**v1_list_domains**](DomainApi.md#v1_list_domains) | **GET** /domains | List Domains
+[**v1_remove_domain_user**](DomainApi.md#v1_remove_domain_user) | **DELETE** /domains/{domain}/users/{user} | Remove Domain User
+[**v1_search_domain_candidates**](DomainApi.md#v1_search_domain_candidates) | **GET** /domains/{domain}/candidates | Search Domain Candidates
+[**v1_transfer_domain**](DomainApi.md#v1_transfer_domain) | **POST** /domains/{domain}/transfer | Transfer Domain
+[**v1_update_domain**](DomainApi.md#v1_update_domain) | **PATCH** /domains/{domain} | Update Domain
+[**v1_update_domain_invitation**](DomainApi.md#v1_update_domain_invitation) | **PATCH** /domains/{domain}/invitations/{invitation} | Update Domain Invitation
+[**v1_update_domain_role**](DomainApi.md#v1_update_domain_role) | **PATCH** /domains/{domain}/roles/{role} | Update Domain Role
+[**v1_update_domain_user**](DomainApi.md#v1_update_domain_user) | **PATCH** /domains/{domain}/users/{user} | Update Domain User
 
-# **add_domain_user_api_v1_domains_domain_users_post**
-> UserWithDomainRoleResp add_domain_user_api_v1_domains_domain_users_post(body, domain)
+# **v1_add_domain_user**
+> UserWithDomainRoleResp v1_add_domain_user(body, domain)
 
 Add Domain User
 
@@ -50,10 +50,10 @@ domain = 'domain_example' # str | url or id of the domain
 
 try:
     # Add Domain User
-    api_response = api_instance.add_domain_user_api_v1_domains_domain_users_post(body, domain)
+    api_response = api_instance.v1_add_domain_user(body, domain)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling DomainApi->add_domain_user_api_v1_domains_domain_users_post: %s\n" % e)
+    print("Exception when calling DomainApi->v1_add_domain_user: %s\n" % e)
 ```
 
 ### Parameters
@@ -78,8 +78,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **create_domain_api_v1_domains_post**
-> DomainResp create_domain_api_v1_domains_post(body)
+# **v1_create_domain**
+> DomainResp v1_create_domain(body)
 
 Create Domain
 
@@ -98,10 +98,10 @@ body = joj.horse_client.DomainCreate() # DomainCreate |
 
 try:
     # Create Domain
-    api_response = api_instance.create_domain_api_v1_domains_post(body)
+    api_response = api_instance.v1_create_domain(body)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling DomainApi->create_domain_api_v1_domains_post: %s\n" % e)
+    print("Exception when calling DomainApi->v1_create_domain: %s\n" % e)
 ```
 
 ### Parameters
@@ -125,8 +125,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **create_domain_invitation_api_v1_domains_domain_invitations_post**
-> DomainInvitationResp create_domain_invitation_api_v1_domains_domain_invitations_post(body, domain)
+# **v1_create_domain_invitation**
+> DomainInvitationResp v1_create_domain_invitation(body, domain)
 
 Create Domain Invitation
 
@@ -146,10 +146,10 @@ domain = 'domain_example' # str | url or id of the domain
 
 try:
     # Create Domain Invitation
-    api_response = api_instance.create_domain_invitation_api_v1_domains_domain_invitations_post(body, domain)
+    api_response = api_instance.v1_create_domain_invitation(body, domain)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling DomainApi->create_domain_invitation_api_v1_domains_domain_invitations_post: %s\n" % e)
+    print("Exception when calling DomainApi->v1_create_domain_invitation: %s\n" % e)
 ```
 
 ### Parameters
@@ -174,8 +174,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **create_domain_role_api_v1_domains_domain_roles_post**
-> DomainRoleResp create_domain_role_api_v1_domains_domain_roles_post(body, domain)
+# **v1_create_domain_role**
+> DomainRoleResp v1_create_domain_role(body, domain)
 
 Create Domain Role
 
@@ -195,10 +195,10 @@ domain = 'domain_example' # str | url or id of the domain
 
 try:
     # Create Domain Role
-    api_response = api_instance.create_domain_role_api_v1_domains_domain_roles_post(body, domain)
+    api_response = api_instance.v1_create_domain_role(body, domain)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling DomainApi->create_domain_role_api_v1_domains_domain_roles_post: %s\n" % e)
+    print("Exception when calling DomainApi->v1_create_domain_role: %s\n" % e)
 ```
 
 ### Parameters
@@ -223,8 +223,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **delete_domain_api_v1_domains_domain_delete**
-> EmptyResp delete_domain_api_v1_domains_domain_delete(domain)
+# **v1_delete_domain**
+> EmptyResp v1_delete_domain(domain)
 
 Delete Domain
 
@@ -245,10 +245,10 @@ domain = 'domain_example' # str | url or id of the domain
 
 try:
     # Delete Domain
-    api_response = api_instance.delete_domain_api_v1_domains_domain_delete(domain)
+    api_response = api_instance.v1_delete_domain(domain)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling DomainApi->delete_domain_api_v1_domains_domain_delete: %s\n" % e)
+    print("Exception when calling DomainApi->v1_delete_domain: %s\n" % e)
 ```
 
 ### Parameters
@@ -272,8 +272,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **delete_domain_invitation_api_v1_domains_domain_invitations_invitation_delete**
-> EmptyResp delete_domain_invitation_api_v1_domains_domain_invitations_invitation_delete(domain, invitation)
+# **v1_delete_domain_invitation**
+> EmptyResp v1_delete_domain_invitation(domain, invitation)
 
 Delete Domain Invitation
 
@@ -293,10 +293,10 @@ invitation = 'invitation_example' # str | url or id of the domain invitation
 
 try:
     # Delete Domain Invitation
-    api_response = api_instance.delete_domain_invitation_api_v1_domains_domain_invitations_invitation_delete(domain, invitation)
+    api_response = api_instance.v1_delete_domain_invitation(domain, invitation)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling DomainApi->delete_domain_invitation_api_v1_domains_domain_invitations_invitation_delete: %s\n" % e)
+    print("Exception when calling DomainApi->v1_delete_domain_invitation: %s\n" % e)
 ```
 
 ### Parameters
@@ -321,8 +321,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **delete_domain_role_api_v1_domains_domain_roles_role_delete**
-> EmptyResp delete_domain_role_api_v1_domains_domain_roles_role_delete(domain, role)
+# **v1_delete_domain_role**
+> EmptyResp v1_delete_domain_role(domain, role)
 
 Delete Domain Role
 
@@ -342,10 +342,10 @@ role = 'role_example' # str | name of the domain role
 
 try:
     # Delete Domain Role
-    api_response = api_instance.delete_domain_role_api_v1_domains_domain_roles_role_delete(domain, role)
+    api_response = api_instance.v1_delete_domain_role(domain, role)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling DomainApi->delete_domain_role_api_v1_domains_domain_roles_role_delete: %s\n" % e)
+    print("Exception when calling DomainApi->v1_delete_domain_role: %s\n" % e)
 ```
 
 ### Parameters
@@ -370,8 +370,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **get_domain_api_v1_domains_domain_get**
-> DomainDetailResp get_domain_api_v1_domains_domain_get(domain)
+# **v1_get_domain**
+> DomainDetailResp v1_get_domain(domain)
 
 Get Domain
 
@@ -390,10 +390,10 @@ domain = 'domain_example' # str | url or id of the domain
 
 try:
     # Get Domain
-    api_response = api_instance.get_domain_api_v1_domains_domain_get(domain)
+    api_response = api_instance.v1_get_domain(domain)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling DomainApi->get_domain_api_v1_domains_domain_get: %s\n" % e)
+    print("Exception when calling DomainApi->v1_get_domain: %s\n" % e)
 ```
 
 ### Parameters
@@ -417,8 +417,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **get_domain_invitation_api_v1_domains_domain_invitations_invitation_get**
-> DomainInvitationResp get_domain_invitation_api_v1_domains_domain_invitations_invitation_get(domain, invitation)
+# **v1_get_domain_invitation**
+> DomainInvitationResp v1_get_domain_invitation(domain, invitation)
 
 Get Domain Invitation
 
@@ -438,10 +438,10 @@ invitation = 'invitation_example' # str | url or id of the domain invitation
 
 try:
     # Get Domain Invitation
-    api_response = api_instance.get_domain_invitation_api_v1_domains_domain_invitations_invitation_get(domain, invitation)
+    api_response = api_instance.v1_get_domain_invitation(domain, invitation)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling DomainApi->get_domain_invitation_api_v1_domains_domain_invitations_invitation_get: %s\n" % e)
+    print("Exception when calling DomainApi->v1_get_domain_invitation: %s\n" % e)
 ```
 
 ### Parameters
@@ -466,8 +466,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **get_domain_role_api_v1_domains_domain_roles_role_get**
-> DomainRoleDetailResp get_domain_role_api_v1_domains_domain_roles_role_get(domain, role)
+# **v1_get_domain_role**
+> DomainRoleDetailResp v1_get_domain_role(domain, role)
 
 Get Domain Role
 
@@ -487,10 +487,10 @@ role = 'role_example' # str | name of the domain role
 
 try:
     # Get Domain Role
-    api_response = api_instance.get_domain_role_api_v1_domains_domain_roles_role_get(domain, role)
+    api_response = api_instance.v1_get_domain_role(domain, role)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling DomainApi->get_domain_role_api_v1_domains_domain_roles_role_get: %s\n" % e)
+    print("Exception when calling DomainApi->v1_get_domain_role: %s\n" % e)
 ```
 
 ### Parameters
@@ -515,8 +515,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **get_domain_user_api_v1_domains_domain_users_user_get**
-> UserWithDomainRoleResp get_domain_user_api_v1_domains_domain_users_user_get(domain, user)
+# **v1_get_domain_user**
+> UserWithDomainRoleResp v1_get_domain_user(domain, user)
 
 Get Domain User
 
@@ -536,10 +536,10 @@ user = 'user_example' # str | user id or 'me' or empty
 
 try:
     # Get Domain User
-    api_response = api_instance.get_domain_user_api_v1_domains_domain_users_user_get(domain, user)
+    api_response = api_instance.v1_get_domain_user(domain, user)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling DomainApi->get_domain_user_api_v1_domains_domain_users_user_get: %s\n" % e)
+    print("Exception when calling DomainApi->v1_get_domain_user: %s\n" % e)
 ```
 
 ### Parameters
@@ -564,8 +564,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **get_domain_user_permission_api_v1_domains_domain_users_user_permission_get**
-> DomainUserPermissionResp get_domain_user_permission_api_v1_domains_domain_users_user_permission_get(domain, user)
+# **v1_get_domain_user_permission**
+> DomainUserPermissionResp v1_get_domain_user_permission(domain, user)
 
 Get Domain User Permission
 
@@ -585,10 +585,10 @@ user = 'user_example' # str | user id or 'me' or empty
 
 try:
     # Get Domain User Permission
-    api_response = api_instance.get_domain_user_permission_api_v1_domains_domain_users_user_permission_get(domain, user)
+    api_response = api_instance.v1_get_domain_user_permission(domain, user)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling DomainApi->get_domain_user_permission_api_v1_domains_domain_users_user_permission_get: %s\n" % e)
+    print("Exception when calling DomainApi->v1_get_domain_user_permission: %s\n" % e)
 ```
 
 ### Parameters
@@ -613,8 +613,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **join_domain_by_invitation_api_v1_domains_domain_join_post**
-> UserWithDomainRoleResp join_domain_by_invitation_api_v1_domains_domain_join_post(domain, invitation_code)
+# **v1_join_domain_by_invitation**
+> UserWithDomainRoleResp v1_join_domain_by_invitation(domain, invitation_code)
 
 Join Domain By Invitation
 
@@ -634,10 +634,10 @@ invitation_code = 'invitation_code_example' # str |
 
 try:
     # Join Domain By Invitation
-    api_response = api_instance.join_domain_by_invitation_api_v1_domains_domain_join_post(domain, invitation_code)
+    api_response = api_instance.v1_join_domain_by_invitation(domain, invitation_code)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling DomainApi->join_domain_by_invitation_api_v1_domains_domain_join_post: %s\n" % e)
+    print("Exception when calling DomainApi->v1_join_domain_by_invitation: %s\n" % e)
 ```
 
 ### Parameters
@@ -662,8 +662,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **list_domain_invitations_api_v1_domains_domain_invitations_get**
-> DomainInvitationListResp list_domain_invitations_api_v1_domains_domain_invitations_get(domain)
+# **v1_list_domain_invitations**
+> DomainInvitationListResp v1_list_domain_invitations(domain)
 
 List Domain Invitations
 
@@ -682,10 +682,10 @@ domain = 'domain_example' # str | url or id of the domain
 
 try:
     # List Domain Invitations
-    api_response = api_instance.list_domain_invitations_api_v1_domains_domain_invitations_get(domain)
+    api_response = api_instance.v1_list_domain_invitations(domain)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling DomainApi->list_domain_invitations_api_v1_domains_domain_invitations_get: %s\n" % e)
+    print("Exception when calling DomainApi->v1_list_domain_invitations: %s\n" % e)
 ```
 
 ### Parameters
@@ -709,8 +709,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **list_domain_roles_api_v1_domains_domain_roles_get**
-> DomainRoleListResp list_domain_roles_api_v1_domains_domain_roles_get(domain)
+# **v1_list_domain_roles**
+> DomainRoleListResp v1_list_domain_roles(domain)
 
 List Domain Roles
 
@@ -729,10 +729,10 @@ domain = 'domain_example' # str | url or id of the domain
 
 try:
     # List Domain Roles
-    api_response = api_instance.list_domain_roles_api_v1_domains_domain_roles_get(domain)
+    api_response = api_instance.v1_list_domain_roles(domain)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling DomainApi->list_domain_roles_api_v1_domains_domain_roles_get: %s\n" % e)
+    print("Exception when calling DomainApi->v1_list_domain_roles: %s\n" % e)
 ```
 
 ### Parameters
@@ -756,8 +756,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **list_domain_users_api_v1_domains_domain_users_get**
-> UserWithDomainRoleListResp list_domain_users_api_v1_domains_domain_users_get(domain, ordering=ordering, offset=offset, limit=limit)
+# **v1_list_domain_users**
+> UserWithDomainRoleListResp v1_list_domain_users(domain, ordering=ordering, offset=offset, limit=limit)
 
 List Domain Users
 
@@ -779,10 +779,10 @@ limit = 100 # int |  (optional) (default to 100)
 
 try:
     # List Domain Users
-    api_response = api_instance.list_domain_users_api_v1_domains_domain_users_get(domain, ordering=ordering, offset=offset, limit=limit)
+    api_response = api_instance.v1_list_domain_users(domain, ordering=ordering, offset=offset, limit=limit)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling DomainApi->list_domain_users_api_v1_domains_domain_users_get: %s\n" % e)
+    print("Exception when calling DomainApi->v1_list_domain_users: %s\n" % e)
 ```
 
 ### Parameters
@@ -809,8 +809,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **list_domains_api_v1_domains_get**
-> DomainListResp list_domains_api_v1_domains_get(role=role, ordering=ordering, offset=offset, limit=limit)
+# **v1_list_domains**
+> DomainListResp v1_list_domains(role=role, ordering=ordering, offset=offset, limit=limit)
 
 List Domains
 
@@ -834,10 +834,10 @@ limit = 100 # int |  (optional) (default to 100)
 
 try:
     # List Domains
-    api_response = api_instance.list_domains_api_v1_domains_get(role=role, ordering=ordering, offset=offset, limit=limit)
+    api_response = api_instance.v1_list_domains(role=role, ordering=ordering, offset=offset, limit=limit)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling DomainApi->list_domains_api_v1_domains_get: %s\n" % e)
+    print("Exception when calling DomainApi->v1_list_domains: %s\n" % e)
 ```
 
 ### Parameters
@@ -864,8 +864,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **remove_domain_user_api_v1_domains_domain_users_user_delete**
-> EmptyResp remove_domain_user_api_v1_domains_domain_users_user_delete(domain, user)
+# **v1_remove_domain_user**
+> EmptyResp v1_remove_domain_user(domain, user)
 
 Remove Domain User
 
@@ -885,10 +885,10 @@ user = 'user_example' # str | user id or 'me' or empty
 
 try:
     # Remove Domain User
-    api_response = api_instance.remove_domain_user_api_v1_domains_domain_users_user_delete(domain, user)
+    api_response = api_instance.v1_remove_domain_user(domain, user)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling DomainApi->remove_domain_user_api_v1_domains_domain_users_user_delete: %s\n" % e)
+    print("Exception when calling DomainApi->v1_remove_domain_user: %s\n" % e)
 ```
 
 ### Parameters
@@ -913,8 +913,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **search_domain_candidates_api_v1_domains_domain_candidates_get**
-> UserWithDomainRoleListResp search_domain_candidates_api_v1_domains_domain_candidates_get(domain, query, ordering=ordering)
+# **v1_search_domain_candidates**
+> UserWithDomainRoleListResp v1_search_domain_candidates(domain, query, ordering=ordering)
 
 Search Domain Candidates
 
@@ -935,10 +935,10 @@ ordering = '' # str | Comma seperated list of ordering the results. You may spec
 
 try:
     # Search Domain Candidates
-    api_response = api_instance.search_domain_candidates_api_v1_domains_domain_candidates_get(domain, query, ordering=ordering)
+    api_response = api_instance.v1_search_domain_candidates(domain, query, ordering=ordering)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling DomainApi->search_domain_candidates_api_v1_domains_domain_candidates_get: %s\n" % e)
+    print("Exception when calling DomainApi->v1_search_domain_candidates: %s\n" % e)
 ```
 
 ### Parameters
@@ -964,8 +964,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **transfer_domain_api_v1_domains_domain_transfer_post**
-> DomainResp transfer_domain_api_v1_domains_domain_transfer_post(body, domain)
+# **v1_transfer_domain**
+> DomainResp v1_transfer_domain(body, domain)
 
 Transfer Domain
 
@@ -985,10 +985,10 @@ domain = 'domain_example' # str | url or id of the domain
 
 try:
     # Transfer Domain
-    api_response = api_instance.transfer_domain_api_v1_domains_domain_transfer_post(body, domain)
+    api_response = api_instance.v1_transfer_domain(body, domain)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling DomainApi->transfer_domain_api_v1_domains_domain_transfer_post: %s\n" % e)
+    print("Exception when calling DomainApi->v1_transfer_domain: %s\n" % e)
 ```
 
 ### Parameters
@@ -1013,8 +1013,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **update_domain_api_v1_domains_domain_patch**
-> DomainResp update_domain_api_v1_domains_domain_patch(body, domain)
+# **v1_update_domain**
+> DomainResp v1_update_domain(body, domain)
 
 Update Domain
 
@@ -1034,10 +1034,10 @@ domain = 'domain_example' # str | url or id of the domain
 
 try:
     # Update Domain
-    api_response = api_instance.update_domain_api_v1_domains_domain_patch(body, domain)
+    api_response = api_instance.v1_update_domain(body, domain)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling DomainApi->update_domain_api_v1_domains_domain_patch: %s\n" % e)
+    print("Exception when calling DomainApi->v1_update_domain: %s\n" % e)
 ```
 
 ### Parameters
@@ -1062,8 +1062,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **update_domain_invitation_api_v1_domains_domain_invitations_invitation_patch**
-> DomainInvitationResp update_domain_invitation_api_v1_domains_domain_invitations_invitation_patch(body, domain, invitation)
+# **v1_update_domain_invitation**
+> DomainInvitationResp v1_update_domain_invitation(body, domain, invitation)
 
 Update Domain Invitation
 
@@ -1084,10 +1084,10 @@ invitation = 'invitation_example' # str | url or id of the domain invitation
 
 try:
     # Update Domain Invitation
-    api_response = api_instance.update_domain_invitation_api_v1_domains_domain_invitations_invitation_patch(body, domain, invitation)
+    api_response = api_instance.v1_update_domain_invitation(body, domain, invitation)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling DomainApi->update_domain_invitation_api_v1_domains_domain_invitations_invitation_patch: %s\n" % e)
+    print("Exception when calling DomainApi->v1_update_domain_invitation: %s\n" % e)
 ```
 
 ### Parameters
@@ -1113,8 +1113,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **update_domain_role_api_v1_domains_domain_roles_role_patch**
-> DomainRoleResp update_domain_role_api_v1_domains_domain_roles_role_patch(body, domain, role)
+# **v1_update_domain_role**
+> DomainRoleResp v1_update_domain_role(body, domain, role)
 
 Update Domain Role
 
@@ -1135,10 +1135,10 @@ role = 'role_example' # str | name of the domain role
 
 try:
     # Update Domain Role
-    api_response = api_instance.update_domain_role_api_v1_domains_domain_roles_role_patch(body, domain, role)
+    api_response = api_instance.v1_update_domain_role(body, domain, role)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling DomainApi->update_domain_role_api_v1_domains_domain_roles_role_patch: %s\n" % e)
+    print("Exception when calling DomainApi->v1_update_domain_role: %s\n" % e)
 ```
 
 ### Parameters
@@ -1164,8 +1164,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **update_domain_user_api_v1_domains_domain_users_user_patch**
-> UserWithDomainRoleResp update_domain_user_api_v1_domains_domain_users_user_patch(body, domain, user)
+# **v1_update_domain_user**
+> UserWithDomainRoleResp v1_update_domain_user(body, domain, user)
 
 Update Domain User
 
@@ -1186,10 +1186,10 @@ user = 'user_example' # str | user id or 'me' or empty
 
 try:
     # Update Domain User
-    api_response = api_instance.update_domain_user_api_v1_domains_domain_users_user_patch(body, domain, user)
+    api_response = api_instance.v1_update_domain_user(body, domain, user)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling DomainApi->update_domain_user_api_v1_domains_domain_users_user_patch: %s\n" % e)
+    print("Exception when calling DomainApi->v1_update_domain_user: %s\n" % e)
 ```
 
 ### Parameters

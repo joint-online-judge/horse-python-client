@@ -4,14 +4,14 @@ All URIs are relative to */*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**get_token_api_v1_auth_token_get**](AuthApi.md#get_token_api_v1_auth_token_get) | **GET** /api/v1/auth/token | Get Token
-[**login_api_v1_auth_login_post**](AuthApi.md#login_api_v1_auth_login_post) | **POST** /api/v1/auth/login | Login
-[**logout_api_v1_auth_logout_post**](AuthApi.md#logout_api_v1_auth_logout_post) | **POST** /api/v1/auth/logout | Logout
-[**refresh_api_v1_auth_refresh_post**](AuthApi.md#refresh_api_v1_auth_refresh_post) | **POST** /api/v1/auth/refresh | Refresh
-[**register_api_v1_auth_register_post**](AuthApi.md#register_api_v1_auth_register_post) | **POST** /api/v1/auth/register | Register
+[**v1_get_token**](AuthApi.md#v1_get_token) | **GET** /auth/token | Get Token
+[**v1_login**](AuthApi.md#v1_login) | **POST** /auth/login | Login
+[**v1_logout**](AuthApi.md#v1_logout) | **POST** /auth/logout | Logout
+[**v1_refresh**](AuthApi.md#v1_refresh) | **POST** /auth/refresh | Refresh
+[**v1_register**](AuthApi.md#v1_register) | **POST** /auth/register | Register
 
-# **get_token_api_v1_auth_token_get**
-> AuthTokensResp get_token_api_v1_auth_token_get(response_type, cookie=cookie, redirect_url=redirect_url)
+# **v1_get_token**
+> AuthTokensResp v1_get_token(response_type, cookie=cookie, redirect_url=redirect_url)
 
 Get Token
 
@@ -31,10 +31,10 @@ redirect_url = 'redirect_url_example' # str | The redirect url after the operati
 
 try:
     # Get Token
-    api_response = api_instance.get_token_api_v1_auth_token_get(response_type, cookie=cookie, redirect_url=redirect_url)
+    api_response = api_instance.v1_get_token(response_type, cookie=cookie, redirect_url=redirect_url)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling AuthApi->get_token_api_v1_auth_token_get: %s\n" % e)
+    print("Exception when calling AuthApi->v1_get_token: %s\n" % e)
 ```
 
 ### Parameters
@@ -60,8 +60,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **login_api_v1_auth_login_post**
-> AuthTokensResp login_api_v1_auth_login_post(grant_type, username, password, scope, client_id, client_secret, response_type, cookie=cookie, redirect_url=redirect_url)
+# **v1_login**
+> AuthTokensResp v1_login(grant_type, username, password, scope, client_id, client_secret, response_type, cookie=cookie, redirect_url=redirect_url)
 
 Login
 
@@ -87,10 +87,10 @@ redirect_url = 'redirect_url_example' # str | The redirect url after the operati
 
 try:
     # Login
-    api_response = api_instance.login_api_v1_auth_login_post(grant_type, username, password, scope, client_id, client_secret, response_type, cookie=cookie, redirect_url=redirect_url)
+    api_response = api_instance.v1_login(grant_type, username, password, scope, client_id, client_secret, response_type, cookie=cookie, redirect_url=redirect_url)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling AuthApi->login_api_v1_auth_login_post: %s\n" % e)
+    print("Exception when calling AuthApi->v1_login: %s\n" % e)
 ```
 
 ### Parameters
@@ -122,8 +122,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **logout_api_v1_auth_logout_post**
-> object logout_api_v1_auth_logout_post(response_type, cookie=cookie, redirect_url=redirect_url)
+# **v1_logout**
+> object v1_logout(response_type, cookie=cookie, redirect_url=redirect_url)
 
 Logout
 
@@ -144,10 +144,10 @@ redirect_url = 'redirect_url_example' # str | The redirect url after the operati
 
 try:
     # Logout
-    api_response = api_instance.logout_api_v1_auth_logout_post(response_type, cookie=cookie, redirect_url=redirect_url)
+    api_response = api_instance.v1_logout(response_type, cookie=cookie, redirect_url=redirect_url)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling AuthApi->logout_api_v1_auth_logout_post: %s\n" % e)
+    print("Exception when calling AuthApi->v1_logout: %s\n" % e)
 ```
 
 ### Parameters
@@ -173,8 +173,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **refresh_api_v1_auth_refresh_post**
-> AuthTokensResp refresh_api_v1_auth_refresh_post(response_type, cookie=cookie, redirect_url=redirect_url)
+# **v1_refresh**
+> AuthTokensResp v1_refresh(response_type, cookie=cookie, redirect_url=redirect_url)
 
 Refresh
 
@@ -194,10 +194,10 @@ redirect_url = 'redirect_url_example' # str | The redirect url after the operati
 
 try:
     # Refresh
-    api_response = api_instance.refresh_api_v1_auth_refresh_post(response_type, cookie=cookie, redirect_url=redirect_url)
+    api_response = api_instance.v1_refresh(response_type, cookie=cookie, redirect_url=redirect_url)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling AuthApi->refresh_api_v1_auth_refresh_post: %s\n" % e)
+    print("Exception when calling AuthApi->v1_refresh: %s\n" % e)
 ```
 
 ### Parameters
@@ -223,8 +223,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **register_api_v1_auth_register_post**
-> AuthTokensResp register_api_v1_auth_register_post(body, response_type, cookie=cookie, redirect_url=redirect_url)
+# **v1_register**
+> AuthTokensResp v1_register(body, response_type, cookie=cookie, redirect_url=redirect_url)
 
 Register
 
@@ -246,10 +246,10 @@ redirect_url = 'redirect_url_example' # str | The redirect url after the operati
 
 try:
     # Register
-    api_response = api_instance.register_api_v1_auth_register_post(body, response_type, cookie=cookie, redirect_url=redirect_url)
+    api_response = api_instance.v1_register(body, response_type, cookie=cookie, redirect_url=redirect_url)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling AuthApi->register_api_v1_auth_register_post: %s\n" % e)
+    print("Exception when calling AuthApi->v1_register: %s\n" % e)
 ```
 
 ### Parameters
