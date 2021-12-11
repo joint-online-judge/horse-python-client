@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: 1bc3dd1@2021-12-10T21:54:37Z  # noqa: E501
+    Git version: e179b35@2021-12-11T14:02:24Z  # noqa: E501
 
     OpenAPI spec version: 1
     
@@ -28,6 +28,20 @@ class TestUserApi(unittest.TestCase):
     def tearDown(self):
         pass
 
+    def test_v1_get_current_user(self):
+        """Test case for v1_get_current_user
+
+        Get Current User  # noqa: E501
+        """
+        pass
+
+    def test_v1_get_current_user_problems(self):
+        """Test case for v1_get_current_user_problems
+
+        Get Current User Problems  # noqa: E501
+        """
+        pass
+
     def test_v1_get_user(self):
         """Test case for v1_get_user
 
@@ -35,22 +49,8 @@ class TestUserApi(unittest.TestCase):
         """
         pass
 
-    def test_v1_get_user_0(self):
-        """Test case for v1_get_user_0
-
-        Get User  # noqa: E501
-        """
-        pass
-
     def test_v1_get_user_problems(self):
         """Test case for v1_get_user_problems
-
-        Get User Problems  # noqa: E501
-        """
-        pass
-
-    def test_v1_get_user_problems_0(self):
-        """Test case for v1_get_user_problems_0
 
         Get User Problems  # noqa: E501
         """

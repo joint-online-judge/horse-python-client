@@ -4,17 +4,17 @@ All URIs are relative to */*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**v1_get_user**](UserApi.md#v1_get_user) | **GET** /user | Get User
-[**v1_get_user_0**](UserApi.md#v1_get_user_0) | **GET** /users/{uid} | Get User
-[**v1_get_user_problems**](UserApi.md#v1_get_user_problems) | **GET** /user/problems | Get User Problems
-[**v1_get_user_problems_0**](UserApi.md#v1_get_user_problems_0) | **GET** /users/{uid}/problems | Get User Problems
+[**v1_get_current_user**](UserApi.md#v1_get_current_user) | **GET** /user | Get Current User
+[**v1_get_current_user_problems**](UserApi.md#v1_get_current_user_problems) | **GET** /user/problems | Get Current User Problems
+[**v1_get_user**](UserApi.md#v1_get_user) | **GET** /users/{uid} | Get User
+[**v1_get_user_problems**](UserApi.md#v1_get_user_problems) | **GET** /users/{uid}/problems | Get User Problems
 [**v1_list_user_domains**](UserApi.md#v1_list_user_domains) | **GET** /users/{uid}/domains | List User Domains
 [**v1_list_users**](UserApi.md#v1_list_users) | **GET** /users | List Users
 
-# **v1_get_user**
-> UserDetailResp v1_get_user()
+# **v1_get_current_user**
+> UserDetailResp v1_get_current_user()
 
-Get User
+Get Current User
 
 ### Example
 ```python
@@ -29,11 +29,11 @@ from pprint import pprint
 api_instance = joj.horse_client.UserApi(joj.horse_client.ApiClient(configuration))
 
 try:
-    # Get User
-    api_response = api_instance.v1_get_user()
+    # Get Current User
+    api_response = api_instance.v1_get_current_user()
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling UserApi->v1_get_user: %s\n" % e)
+    print("Exception when calling UserApi->v1_get_current_user: %s\n" % e)
 ```
 
 ### Parameters
@@ -54,57 +54,10 @@ This endpoint does not need any parameter.
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **v1_get_user_0**
-> UserResp v1_get_user_0(uid)
+# **v1_get_current_user_problems**
+> ProblemListResp v1_get_current_user_problems(offset=offset, limit=limit)
 
-Get User
-
-### Example
-```python
-from __future__ import print_function
-import time
-import joj.horse_client
-from joj.horse_client.rest import ApiException
-from pprint import pprint
-
-
-# create an instance of the API class
-api_instance = joj.horse_client.UserApi(joj.horse_client.ApiClient(configuration))
-uid = 'uid_example' # str | 
-
-try:
-    # Get User
-    api_response = api_instance.v1_get_user_0(uid)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling UserApi->v1_get_user_0: %s\n" % e)
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **uid** | **str**|  | 
-
-### Return type
-
-[**UserResp**](UserResp.md)
-
-### Authorization
-
-[HTTPBearer](../README.md#HTTPBearer)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **v1_get_user_problems**
-> ProblemListResp v1_get_user_problems(offset=offset, limit=limit)
-
-Get User Problems
+Get Current User Problems
 
 ### Example
 ```python
@@ -121,11 +74,11 @@ offset = 0 # int |  (optional) (default to 0)
 limit = 100 # int |  (optional) (default to 100)
 
 try:
-    # Get User Problems
-    api_response = api_instance.v1_get_user_problems(offset=offset, limit=limit)
+    # Get Current User Problems
+    api_response = api_instance.v1_get_current_user_problems(offset=offset, limit=limit)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling UserApi->v1_get_user_problems: %s\n" % e)
+    print("Exception when calling UserApi->v1_get_current_user_problems: %s\n" % e)
 ```
 
 ### Parameters
@@ -150,8 +103,55 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **v1_get_user_problems_0**
-> ProblemListResp v1_get_user_problems_0(uid, offset=offset, limit=limit)
+# **v1_get_user**
+> UserResp v1_get_user(uid)
+
+Get User
+
+### Example
+```python
+from __future__ import print_function
+import time
+import joj.horse_client
+from joj.horse_client.rest import ApiException
+from pprint import pprint
+
+
+# create an instance of the API class
+api_instance = joj.horse_client.UserApi(joj.horse_client.ApiClient(configuration))
+uid = 'uid_example' # str | 
+
+try:
+    # Get User
+    api_response = api_instance.v1_get_user(uid)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling UserApi->v1_get_user: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **uid** | **str**|  | 
+
+### Return type
+
+[**UserResp**](UserResp.md)
+
+### Authorization
+
+[HTTPBearer](../README.md#HTTPBearer)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **v1_get_user_problems**
+> ProblemListResp v1_get_user_problems(uid, offset=offset, limit=limit)
 
 Get User Problems
 
@@ -172,10 +172,10 @@ limit = 100 # int |  (optional) (default to 100)
 
 try:
     # Get User Problems
-    api_response = api_instance.v1_get_user_problems_0(uid, offset=offset, limit=limit)
+    api_response = api_instance.v1_get_user_problems(uid, offset=offset, limit=limit)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling UserApi->v1_get_user_problems_0: %s\n" % e)
+    print("Exception when calling UserApi->v1_get_user_problems: %s\n" % e)
 ```
 
 ### Parameters
