@@ -107,7 +107,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_list_records_in_domain**
-> RecordListResp v1_list_records_in_domain(domain, problem_set=problem_set, problem=problem, ordering=ordering, offset=offset, limit=limit, uid=uid)
+> RecordListResp v1_list_records_in_domain(domain, problem_set, problem, ordering=ordering, offset=offset, limit=limit)
 
 List Records In Domain
 
@@ -122,17 +122,16 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = joj.horse_client.RecordApi(joj.horse_client.ApiClient(configuration))
-domain = 'domain_example' # str | 
-problem_set = 'problem_set_example' # str |  (optional)
-problem = 'problem_example' # str |  (optional)
+domain = 'domain_example' # str | url or id of the domain
+problem_set = 'problem_set_example' # str | url or id of the problem set
+problem = 'problem_example' # str | url or id of the problem
 ordering = '' # str | Comma seperated list of ordering the results. You may specify reverse orderings by prefixing the field name with '-'.  Available fields: created_at,updated_at (optional)
 offset = 0 # int |  (optional) (default to 0)
 limit = 100 # int |  (optional) (default to 100)
-uid = '' # str | user id or 'me' or empty (optional)
 
 try:
     # List Records In Domain
-    api_response = api_instance.v1_list_records_in_domain(domain, problem_set=problem_set, problem=problem, ordering=ordering, offset=offset, limit=limit, uid=uid)
+    api_response = api_instance.v1_list_records_in_domain(domain, problem_set, problem, ordering=ordering, offset=offset, limit=limit)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling RecordApi->v1_list_records_in_domain: %s\n" % e)
@@ -142,13 +141,12 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **domain** | **str**|  | 
- **problem_set** | **str**|  | [optional] 
- **problem** | **str**|  | [optional] 
+ **domain** | **str**| url or id of the domain | 
+ **problem_set** | **str**| url or id of the problem set | 
+ **problem** | **str**| url or id of the problem | 
  **ordering** | **str**| Comma seperated list of ordering the results. You may specify reverse orderings by prefixing the field name with &#x27;-&#x27;.  Available fields: created_at,updated_at | [optional] 
  **offset** | **int**|  | [optional] [default to 0]
  **limit** | **int**|  | [optional] [default to 100]
- **uid** | **str**| user id or &#x27;me&#x27; or empty | [optional] 
 
 ### Return type
 
