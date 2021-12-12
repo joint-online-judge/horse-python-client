@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: b5fd765@2021-12-12T03:04:42Z  # noqa: E501
+    Git version: 612488e@2021-12-12T03:32:30Z  # noqa: E501
 
     OpenAPI spec version: 1
     
@@ -234,18 +234,16 @@ class RecordApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def v1_list_records_in_domain(self, domain, problem_set, problem, **kwargs):  # noqa: E501
+    def v1_list_records_in_domain(self, domain, **kwargs):  # noqa: E501
         """List Records In Domain  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.v1_list_records_in_domain(domain, problem_set, problem, async_req=True)
+        >>> thread = api.v1_list_records_in_domain(domain, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
         :param str domain: url or id of the domain (required)
-        :param str problem_set: url or id of the problem set (required)
-        :param str problem: url or id of the problem (required)
         :param str ordering: Comma seperated list of ordering the results. You may specify reverse orderings by prefixing the field name with '-'.  Available fields: created_at,updated_at
         :param int offset:
         :param int limit:
@@ -255,23 +253,21 @@ class RecordApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.v1_list_records_in_domain_with_http_info(domain, problem_set, problem, **kwargs)  # noqa: E501
+            return self.v1_list_records_in_domain_with_http_info(domain, **kwargs)  # noqa: E501
         else:
-            (data) = self.v1_list_records_in_domain_with_http_info(domain, problem_set, problem, **kwargs)  # noqa: E501
+            (data) = self.v1_list_records_in_domain_with_http_info(domain, **kwargs)  # noqa: E501
             return data
 
-    def v1_list_records_in_domain_with_http_info(self, domain, problem_set, problem, **kwargs):  # noqa: E501
+    def v1_list_records_in_domain_with_http_info(self, domain, **kwargs):  # noqa: E501
         """List Records In Domain  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.v1_list_records_in_domain_with_http_info(domain, problem_set, problem, async_req=True)
+        >>> thread = api.v1_list_records_in_domain_with_http_info(domain, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
         :param str domain: url or id of the domain (required)
-        :param str problem_set: url or id of the problem set (required)
-        :param str problem: url or id of the problem (required)
         :param str ordering: Comma seperated list of ordering the results. You may specify reverse orderings by prefixing the field name with '-'.  Available fields: created_at,updated_at
         :param int offset:
         :param int limit:
@@ -280,7 +276,7 @@ class RecordApi(object):
                  returns the request thread.
         """
 
-        all_params = ['domain', 'problem_set', 'problem', 'ordering', 'offset', 'limit']  # noqa: E501
+        all_params = ['domain', 'ordering', 'offset', 'limit']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -299,24 +295,12 @@ class RecordApi(object):
         if ('domain' not in params or
                 params['domain'] is None):
             raise ValueError("Missing the required parameter `domain` when calling `v1_list_records_in_domain`")  # noqa: E501
-        # verify the required parameter 'problem_set' is set
-        if ('problem_set' not in params or
-                params['problem_set'] is None):
-            raise ValueError("Missing the required parameter `problem_set` when calling `v1_list_records_in_domain`")  # noqa: E501
-        # verify the required parameter 'problem' is set
-        if ('problem' not in params or
-                params['problem'] is None):
-            raise ValueError("Missing the required parameter `problem` when calling `v1_list_records_in_domain`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
         if 'domain' in params:
             path_params['domain'] = params['domain']  # noqa: E501
-        if 'problem_set' in params:
-            path_params['problemSet'] = params['problem_set']  # noqa: E501
-        if 'problem' in params:
-            path_params['problem'] = params['problem']  # noqa: E501
 
         query_params = []
         if 'ordering' in params:
