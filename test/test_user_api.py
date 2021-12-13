@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: cb658ac@2021-12-13T14:23:18Z  # noqa: E501
+    Git version: adca461@2021-12-13T17:05:38Z  # noqa: E501
 
     OpenAPI spec version: 1
     
@@ -26,6 +26,13 @@ class TestUserApi(unittest.TestCase):
         self.api = UserApi()  # noqa: E501
 
     def tearDown(self):
+        pass
+
+    def test_v1_change_password(self):
+        """Test case for v1_change_password
+
+        Change Password  # noqa: E501
+        """
         pass
 
     def test_v1_get_current_user(self):
