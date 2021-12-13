@@ -6,8 +6,8 @@ Name | Type | Description | Notes
 **id** | **str** |  | 
 **state** | **AllOfRecordState** |  | [optional] 
 **language** | **str** |  | 
-**toolchains** | **list[str]** |  | [optional] 
 **commit_id** | **str** |  | [optional] 
+**task_id** | **str** |  | [optional] 
 **score** | **int** |  | [optional] [default to 0]
 **time_ms** | **int** |  | [optional] [default to 0]
 **memory_kb** | **int** |  | [optional] [default to 0]

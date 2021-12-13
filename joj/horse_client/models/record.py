@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: 27c86c8@2021-12-12T03:59:40Z  # noqa: E501
+    Git version: cb658ac@2021-12-13T14:23:18Z  # noqa: E501
 
     OpenAPI spec version: 1
     
@@ -31,8 +31,8 @@ class Record(object):
         'id': 'str',
         'state': 'AllOfRecordState',
         'language': 'str',
-        'toolchains': 'list[str]',
         'commit_id': 'str',
+        'task_id': 'str',
         'score': 'int',
         'time_ms': 'int',
         'memory_kb': 'int',
@@ -47,8 +47,8 @@ class Record(object):
         'id': 'id',
         'state': 'state',
         'language': 'language',
-        'toolchains': 'toolchains',
         'commit_id': 'commitId',
+        'task_id': 'taskId',
         'score': 'score',
         'time_ms': 'timeMs',
         'memory_kb': 'memoryKb',
@@ -59,13 +59,13 @@ class Record(object):
         'judger_id': 'judgerId'
     }
 
-    def __init__(self, id=None, state=None, language=None, toolchains=None, commit_id=None, score=0, time_ms=0, memory_kb=0, problem_set_id=None, problem_id=None, problem_config_id=None, committer_id=None, judger_id=None):  # noqa: E501
+    def __init__(self, id=None, state=None, language=None, commit_id=None, task_id=None, score=0, time_ms=0, memory_kb=0, problem_set_id=None, problem_id=None, problem_config_id=None, committer_id=None, judger_id=None):  # noqa: E501
         """Record - a model defined in Swagger"""  # noqa: E501
         self._id = None
         self._state = None
         self._language = None
-        self._toolchains = None
         self._commit_id = None
+        self._task_id = None
         self._score = None
         self._time_ms = None
         self._memory_kb = None
@@ -79,10 +79,10 @@ class Record(object):
         if state is not None:
             self.state = state
         self.language = language
-        if toolchains is not None:
-            self.toolchains = toolchains
         if commit_id is not None:
             self.commit_id = commit_id
+        if task_id is not None:
+            self.task_id = task_id
         if score is not None:
             self.score = score
         if time_ms is not None:
@@ -168,27 +168,6 @@ class Record(object):
         self._language = language
 
     @property
-    def toolchains(self):
-        """Gets the toolchains of this Record.  # noqa: E501
-
-
-        :return: The toolchains of this Record.  # noqa: E501
-        :rtype: list[str]
-        """
-        return self._toolchains
-
-    @toolchains.setter
-    def toolchains(self, toolchains):
-        """Sets the toolchains of this Record.
-
-
-        :param toolchains: The toolchains of this Record.  # noqa: E501
-        :type: list[str]
-        """
-
-        self._toolchains = toolchains
-
-    @property
     def commit_id(self):
         """Gets the commit_id of this Record.  # noqa: E501
 
@@ -208,6 +187,27 @@ class Record(object):
         """
 
         self._commit_id = commit_id
+
+    @property
+    def task_id(self):
+        """Gets the task_id of this Record.  # noqa: E501
+
+
+        :return: The task_id of this Record.  # noqa: E501
+        :rtype: str
+        """
+        return self._task_id
+
+    @task_id.setter
+    def task_id(self, task_id):
+        """Sets the task_id of this Record.
+
+
+        :param task_id: The task_id of this Record.  # noqa: E501
+        :type: str
+        """
+
+        self._task_id = task_id
 
     @property
     def score(self):
