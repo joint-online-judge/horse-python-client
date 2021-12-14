@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: adca461@2021-12-13T17:05:38Z  # noqa: E501
+    Git version: 8da81a6@2021-12-14T07:11:24Z  # noqa: E501
 
     OpenAPI spec version: 1
     
@@ -15,12 +15,12 @@ from __future__ import absolute_import
 import unittest
 
 import joj.horse_client
-from joj.horse_client.models.user_access_key import UserAccessKey  # noqa: E501
+from joj.horse_client.models.judge_credentials import JudgeCredentials  # noqa: E501
 from joj.horse_client.rest import ApiException
 
 
-class TestUserAccessKey(unittest.TestCase):
-    """UserAccessKey unit test stubs"""
+class TestJudgeCredentials(unittest.TestCase):
+    """JudgeCredentials unit test stubs"""
 
     def setUp(self):
         pass
@@ -28,10 +28,10 @@ class TestUserAccessKey(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testUserAccessKey(self):
-        """Test UserAccessKey"""
+    def testJudgeCredentials(self):
+        """Test JudgeCredentials"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = joj.horse_client.models.user_access_key.UserAccessKey()  # noqa: E501
+        # model = joj.horse_client.models.judge_credentials.JudgeCredentials()  # noqa: E501
         pass
 
 

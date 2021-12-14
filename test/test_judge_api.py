@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: adca461@2021-12-13T17:05:38Z  # noqa: E501
+    Git version: 8da81a6@2021-12-14T07:11:24Z  # noqa: E501
 
     OpenAPI spec version: 1
     
@@ -32,13 +32,6 @@ class TestJudgeApi(unittest.TestCase):
         """Test case for v1_claim_record_by_judge
 
         Claim Record By Judge  # noqa: E501
-        """
-        pass
-
-    def test_v1_get_judge_key(self):
-        """Test case for v1_get_judge_key
-
-        Get Judge Key  # noqa: E501
         """
         pass
 

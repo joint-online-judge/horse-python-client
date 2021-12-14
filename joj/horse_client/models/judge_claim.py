@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: adca461@2021-12-13T17:05:38Z  # noqa: E501
+    Git version: 8da81a6@2021-12-14T07:11:24Z  # noqa: E501
 
     OpenAPI spec version: 1
     
@@ -28,122 +28,41 @@ class JudgeClaim(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'problem_config_repo_name': 'str',
-        'problem_config_commit_id': 'str',
-        'record_repo_name': 'str',
-        'record_commit_id': 'str'
+        'task_id': 'str'
     }
 
     attribute_map = {
-        'problem_config_repo_name': 'problemConfigRepoName',
-        'problem_config_commit_id': 'problemConfigCommitId',
-        'record_repo_name': 'recordRepoName',
-        'record_commit_id': 'recordCommitId'
+        'task_id': 'taskId'
     }
 
-    def __init__(self, problem_config_repo_name=None, problem_config_commit_id=None, record_repo_name=None, record_commit_id=None):  # noqa: E501
+    def __init__(self, task_id=None):  # noqa: E501
         """JudgeClaim - a model defined in Swagger"""  # noqa: E501
-        self._problem_config_repo_name = None
-        self._problem_config_commit_id = None
-        self._record_repo_name = None
-        self._record_commit_id = None
+        self._task_id = None
         self.discriminator = None
-        self.problem_config_repo_name = problem_config_repo_name
-        self.problem_config_commit_id = problem_config_commit_id
-        self.record_repo_name = record_repo_name
-        self.record_commit_id = record_commit_id
+        self.task_id = task_id
 
     @property
-    def problem_config_repo_name(self):
-        """Gets the problem_config_repo_name of this JudgeClaim.  # noqa: E501
+    def task_id(self):
+        """Gets the task_id of this JudgeClaim.  # noqa: E501
 
 
-        :return: The problem_config_repo_name of this JudgeClaim.  # noqa: E501
+        :return: The task_id of this JudgeClaim.  # noqa: E501
         :rtype: str
         """
-        return self._problem_config_repo_name
+        return self._task_id
 
-    @problem_config_repo_name.setter
-    def problem_config_repo_name(self, problem_config_repo_name):
-        """Sets the problem_config_repo_name of this JudgeClaim.
+    @task_id.setter
+    def task_id(self, task_id):
+        """Sets the task_id of this JudgeClaim.
 
 
-        :param problem_config_repo_name: The problem_config_repo_name of this JudgeClaim.  # noqa: E501
+        :param task_id: The task_id of this JudgeClaim.  # noqa: E501
         :type: str
         """
-        if problem_config_repo_name is None:
-            raise ValueError("Invalid value for `problem_config_repo_name`, must not be `None`")  # noqa: E501
+        if task_id is None:
+            raise ValueError("Invalid value for `task_id`, must not be `None`")  # noqa: E501
 
-        self._problem_config_repo_name = problem_config_repo_name
-
-    @property
-    def problem_config_commit_id(self):
-        """Gets the problem_config_commit_id of this JudgeClaim.  # noqa: E501
-
-
-        :return: The problem_config_commit_id of this JudgeClaim.  # noqa: E501
-        :rtype: str
-        """
-        return self._problem_config_commit_id
-
-    @problem_config_commit_id.setter
-    def problem_config_commit_id(self, problem_config_commit_id):
-        """Sets the problem_config_commit_id of this JudgeClaim.
-
-
-        :param problem_config_commit_id: The problem_config_commit_id of this JudgeClaim.  # noqa: E501
-        :type: str
-        """
-        if problem_config_commit_id is None:
-            raise ValueError("Invalid value for `problem_config_commit_id`, must not be `None`")  # noqa: E501
-
-        self._problem_config_commit_id = problem_config_commit_id
-
-    @property
-    def record_repo_name(self):
-        """Gets the record_repo_name of this JudgeClaim.  # noqa: E501
-
-
-        :return: The record_repo_name of this JudgeClaim.  # noqa: E501
-        :rtype: str
-        """
-        return self._record_repo_name
-
-    @record_repo_name.setter
-    def record_repo_name(self, record_repo_name):
-        """Sets the record_repo_name of this JudgeClaim.
-
-
-        :param record_repo_name: The record_repo_name of this JudgeClaim.  # noqa: E501
-        :type: str
-        """
-        if record_repo_name is None:
-            raise ValueError("Invalid value for `record_repo_name`, must not be `None`")  # noqa: E501
-
-        self._record_repo_name = record_repo_name
-
-    @property
-    def record_commit_id(self):
-        """Gets the record_commit_id of this JudgeClaim.  # noqa: E501
-
-
-        :return: The record_commit_id of this JudgeClaim.  # noqa: E501
-        :rtype: str
-        """
-        return self._record_commit_id
-
-    @record_commit_id.setter
-    def record_commit_id(self, record_commit_id):
-        """Sets the record_commit_id of this JudgeClaim.
-
-
-        :param record_commit_id: The record_commit_id of this JudgeClaim.  # noqa: E501
-        :type: str
-        """
-        if record_commit_id is None:
-            raise ValueError("Invalid value for `record_commit_id`, must not be `None`")  # noqa: E501
-
-        self._record_commit_id = record_commit_id
+        self._task_id = task_id
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -4,7 +4,7 @@
 """
     JOJ Horse
 
-    Git version: adca461@2021-12-13T17:05:38Z  # noqa: E501
+    Git version: 8da81a6@2021-12-14T07:11:24Z  # noqa: E501
 
     OpenAPI spec version: 1
     
@@ -65,7 +65,8 @@ from joj.horse_client.models.http_validation_error import HTTPValidationError
 from joj.horse_client.models.jwt_access_token import JWTAccessToken
 from joj.horse_client.models.jwt_access_token_resp import JWTAccessTokenResp
 from joj.horse_client.models.judge_claim import JudgeClaim
-from joj.horse_client.models.judge_claim_resp import JudgeClaimResp
+from joj.horse_client.models.judge_credentials import JudgeCredentials
+from joj.horse_client.models.judge_credentials_resp import JudgeCredentialsResp
 from joj.horse_client.models.lake_fs_reset import LakeFSReset
 from joj.horse_client.models.o_auth2_password_request_form import OAuth2PasswordRequestForm
 from joj.horse_client.models.problem import Problem
@@ -114,8 +115,6 @@ from joj.horse_client.models.score import Score
 from joj.horse_client.models.score_board import ScoreBoard
 from joj.horse_client.models.score_board_resp import ScoreBoardResp
 from joj.horse_client.models.user import User
-from joj.horse_client.models.user_access_key import UserAccessKey
-from joj.horse_client.models.user_access_key_resp import UserAccessKeyResp
 from joj.horse_client.models.user_create import UserCreate
 from joj.horse_client.models.user_detail import UserDetail
 from joj.horse_client.models.user_detail_resp import UserDetailResp

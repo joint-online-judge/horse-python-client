@@ -1,13 +1,11 @@
-# UserAccessKey
+# JudgeCredentialsResp
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **str** |  | 
-**service** | **str** |  | 
-**access_key_id** | **str** |  | 
-**secret_access_key** | **str** |  | 
-**user_id** | **str** |  | 
+**error_code** | [**ErrorCode**](ErrorCode.md) |  | 
+**error_msg** | **str** |  | [optional] 
+**data** | [**JudgeCredentials**](JudgeCredentials.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
