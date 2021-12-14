@@ -11,8 +11,8 @@ Name | Type | Description | Notes
 **real_name** | **str** |  | [optional] [default to '']
 **role** | **str** |  | [optional] [default to 'user']
 **is_active** | **bool** |  | [optional] [default to False]
-**created_at** | **datetime** |  | 
-**updated_at** | **datetime** |  | 
+**created_at** | **datetime** |  | [optional] 
+**updated_at** | **datetime** |  | [optional] 
 **register_ip** | **str** |  | 
 **login_at** | **datetime** |  | 
 **login_ip** | **str** |  | 

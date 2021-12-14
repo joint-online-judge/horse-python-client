@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: 8da81a6@2021-12-14T07:11:24Z  # noqa: E501
+    Git version: 6f1193e@2021-12-14T20:40:31Z  # noqa: E501
 
     OpenAPI spec version: 1
     
@@ -67,13 +67,6 @@ class TestProblemSetApi(unittest.TestCase):
         """Test case for v1_get_problem_set
 
         Get Problem Set  # noqa: E501
-        """
-        pass
-
-    def test_v1_get_scoreboard(self):
-        """Test case for v1_get_scoreboard
-
-        Get Scoreboard  # noqa: E501
         """
         pass
 

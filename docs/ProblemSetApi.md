@@ -10,7 +10,6 @@ Method | HTTP request | Description
 [**v1_delete_problem_set**](ProblemSetApi.md#v1_delete_problem_set) | **DELETE** /domains/{domain}/problem_sets/{problemSet} | Delete Problem Set
 [**v1_get_problem_in_problem_set**](ProblemSetApi.md#v1_get_problem_in_problem_set) | **GET** /domains/{domain}/problem_sets/{problemSet}/problems/{problem} | Get Problem In Problem Set
 [**v1_get_problem_set**](ProblemSetApi.md#v1_get_problem_set) | **GET** /domains/{domain}/problem_sets/{problemSet} | Get Problem Set
-[**v1_get_scoreboard**](ProblemSetApi.md#v1_get_scoreboard) | **GET** /domains/{domain}/problem_sets/{problemSet}/scoreboard | Get Scoreboard
 [**v1_list_problem_sets**](ProblemSetApi.md#v1_list_problem_sets) | **GET** /domains/{domain}/problem_sets | List Problem Sets
 [**v1_list_problems_in_problem_set**](ProblemSetApi.md#v1_list_problems_in_problem_set) | **GET** /domains/{domain}/problem_sets/{problemSet}/problems | List Problems In Problem Set
 [**v1_submit_solution_to_problem_set**](ProblemSetApi.md#v1_submit_solution_to_problem_set) | **POST** /domains/{domain}/problem_sets/{problemSet}/problems/{problem}/submit | Submit Solution To Problem Set
@@ -305,55 +304,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ProblemSetDetailResp**](ProblemSetDetailResp.md)
-
-### Authorization
-
-[HTTPBearer](../README.md#HTTPBearer)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **v1_get_scoreboard**
-> ScoreBoardResp v1_get_scoreboard(problem_set, domain)
-
-Get Scoreboard
-
-### Example
-```python
-from __future__ import print_function
-import time
-import joj.horse_client
-from joj.horse_client.rest import ApiException
-from pprint import pprint
-
-
-# create an instance of the API class
-api_instance = joj.horse_client.ProblemSetApi(joj.horse_client.ApiClient(configuration))
-problem_set = 'problem_set_example' # str | url or id of the problem set
-domain = 'domain_example' # str | url or id of the domain
-
-try:
-    # Get Scoreboard
-    api_response = api_instance.v1_get_scoreboard(problem_set, domain)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling ProblemSetApi->v1_get_scoreboard: %s\n" % e)
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **problem_set** | **str**| url or id of the problem set | 
- **domain** | **str**| url or id of the domain | 
-
-### Return type
-
-[**ScoreBoardResp**](ScoreBoardResp.md)
 
 ### Authorization
 

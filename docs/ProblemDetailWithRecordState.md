@@ -13,8 +13,8 @@ Name | Type | Description | Notes
 **num_accept** | **int** |  | [optional] [default to 0]
 **owner_id** | **str** |  | [optional] 
 **problem_group_id** | **str** |  | [optional] 
-**created_at** | **datetime** |  | 
-**updated_at** | **datetime** |  | 
+**created_at** | **datetime** |  | [optional] 
+**updated_at** | **datetime** |  | [optional] 
 **record_id** | **str** |  | [optional] 
 **record_state** | [**RecordState**](RecordState.md) |  | [optional] 
 

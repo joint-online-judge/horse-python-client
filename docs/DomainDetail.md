@@ -11,8 +11,8 @@ Name | Type | Description | Notes
 **hidden** | **bool** | is the domain hidden | [optional] [default to True]
 **tag** | **str** | tag of the domain | [optional] [default to '']
 **owner_id** | **str** |  | [optional] 
-**created_at** | **datetime** |  | 
-**updated_at** | **datetime** |  | 
+**created_at** | **datetime** |  | [optional] 
+**updated_at** | **datetime** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

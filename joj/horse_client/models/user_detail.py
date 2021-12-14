@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: 8da81a6@2021-12-14T07:11:24Z  # noqa: E501
+    Git version: 6f1193e@2021-12-14T20:40:31Z  # noqa: E501
 
     OpenAPI spec version: 1
     
@@ -88,8 +88,10 @@ class UserDetail(object):
             self.role = role
         if is_active is not None:
             self.is_active = is_active
-        self.created_at = created_at
-        self.updated_at = updated_at
+        if created_at is not None:
+            self.created_at = created_at
+        if updated_at is not None:
+            self.updated_at = updated_at
         self.register_ip = register_ip
         self.login_at = login_at
         self.login_ip = login_ip
@@ -286,8 +288,6 @@ class UserDetail(object):
         :param created_at: The created_at of this UserDetail.  # noqa: E501
         :type: datetime
         """
-        if created_at is None:
-            raise ValueError("Invalid value for `created_at`, must not be `None`")  # noqa: E501
 
         self._created_at = created_at
 
@@ -309,8 +309,6 @@ class UserDetail(object):
         :param updated_at: The updated_at of this UserDetail.  # noqa: E501
         :type: datetime
         """
-        if updated_at is None:
-            raise ValueError("Invalid value for `updated_at`, must not be `None`")  # noqa: E501
 
         self._updated_at = updated_at
 
