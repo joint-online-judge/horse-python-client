@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: ad18944@2021-12-14T21:03:52Z  # noqa: E501
+    Git version: eebc26c@2021-12-15T14:51:29Z  # noqa: E501
 
     OpenAPI spec version: 1
     
@@ -1349,6 +1349,9 @@ class DomainApi(object):
 
         :param async_req bool
         :param str domain: url or id of the domain (required)
+        :param str ordering: Comma seperated list of ordering the results. You may specify reverse orderings by prefixing the field name with '-'.  Available fields: created_at,updated_at
+        :param int offset:
+        :param int limit:
         :return: DomainInvitationListResp
                  If the method is called asynchronously,
                  returns the request thread.
@@ -1370,12 +1373,15 @@ class DomainApi(object):
 
         :param async_req bool
         :param str domain: url or id of the domain (required)
+        :param str ordering: Comma seperated list of ordering the results. You may specify reverse orderings by prefixing the field name with '-'.  Available fields: created_at,updated_at
+        :param int offset:
+        :param int limit:
         :return: DomainInvitationListResp
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['domain']  # noqa: E501
+        all_params = ['domain', 'ordering', 'offset', 'limit']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -1402,6 +1408,12 @@ class DomainApi(object):
             path_params['domain'] = params['domain']  # noqa: E501
 
         query_params = []
+        if 'ordering' in params:
+            query_params.append(('ordering', params['ordering']))  # noqa: E501
+        if 'offset' in params:
+            query_params.append(('offset', params['offset']))  # noqa: E501
+        if 'limit' in params:
+            query_params.append(('limit', params['limit']))  # noqa: E501
 
         header_params = {}
 

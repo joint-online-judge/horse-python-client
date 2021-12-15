@@ -663,7 +663,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_list_domain_invitations**
-> DomainInvitationListResp v1_list_domain_invitations(domain)
+> DomainInvitationListResp v1_list_domain_invitations(domain, ordering=ordering, offset=offset, limit=limit)
 
 List Domain Invitations
 
@@ -679,10 +679,13 @@ from pprint import pprint
 # create an instance of the API class
 api_instance = joj.horse_client.DomainApi(joj.horse_client.ApiClient(configuration))
 domain = 'domain_example' # str | url or id of the domain
+ordering = '' # str | Comma seperated list of ordering the results. You may specify reverse orderings by prefixing the field name with '-'.  Available fields: created_at,updated_at (optional)
+offset = 0 # int |  (optional) (default to 0)
+limit = 100 # int |  (optional) (default to 100)
 
 try:
     # List Domain Invitations
-    api_response = api_instance.v1_list_domain_invitations(domain)
+    api_response = api_instance.v1_list_domain_invitations(domain, ordering=ordering, offset=offset, limit=limit)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling DomainApi->v1_list_domain_invitations: %s\n" % e)
@@ -693,6 +696,9 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **domain** | **str**| url or id of the domain | 
+ **ordering** | **str**| Comma seperated list of ordering the results. You may specify reverse orderings by prefixing the field name with &#x27;-&#x27;.  Available fields: created_at,updated_at | [optional] 
+ **offset** | **int**|  | [optional] [default to 0]
+ **limit** | **int**|  | [optional] [default to 100]
 
 ### Return type
 
