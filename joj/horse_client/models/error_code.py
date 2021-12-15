@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: eebc26c@2021-12-15T14:51:29Z  # noqa: E501
+    Git version: 5882f3b@2021-12-15T14:55:00Z  # noqa: E501
 
     OpenAPI spec version: 1
     
@@ -47,6 +47,7 @@ class ErrorCode(object):
     DELETEPROBLEMBADREQUESTERROR = "DeleteProblemBadRequestError"
     USERALREADYINDOMAINBADREQUESTERROR = "UserAlreadyInDomainBadRequestError"
     DOMAININVITATIONBADREQUESTERROR = "DomainInvitationBadRequestError"
+    DOMAININVITATIONEXPIREDERROR = "DomainInvitationExpiredError"
     SCOREBOARDHIDDENBADREQUESTERROR = "ScoreboardHiddenBadRequestError"
     USERNOTJUDGERERROR = "UserNotJudgerError"
     DOMAINNOTOWNERERROR = "DomainNotOwnerError"
