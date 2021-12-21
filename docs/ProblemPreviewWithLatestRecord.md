@@ -1,4 +1,4 @@
-# ProblemPreviewWithRecordState
+# ProblemPreviewWithLatestRecord
 
 ## Properties
 Name | Type | Description | Notes
@@ -8,8 +8,7 @@ Name | Type | Description | Notes
 **title** | **str** | title of the problem | 
 **hidden** | **bool** | is the problem hidden | [optional] [default to False]
 **owner_id** | **str** |  | [optional] 
-**record_id** | **str** |  | [optional] 
-**record_state** | [**RecordState**](RecordState.md) |  | [optional] 
+**latest_record** | [**RecordPreview**](RecordPreview.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: 5882f3b@2021-12-15T14:55:00Z  # noqa: E501
+    Git version: 78d3530@2021-12-21T19:17:45Z  # noqa: E501
 
     OpenAPI spec version: 1
     
@@ -43,7 +43,7 @@ class ProblemSetDetail(object):
         'owner_id': 'str',
         'created_at': 'datetime',
         'updated_at': 'datetime',
-        'problems': 'list[ProblemPreviewWithRecordState]'
+        'problems': 'list[ProblemPreviewWithLatestRecord]'
     }
 
     attribute_map = {
@@ -457,7 +457,7 @@ class ProblemSetDetail(object):
 
 
         :return: The problems of this ProblemSetDetail.  # noqa: E501
-        :rtype: list[ProblemPreviewWithRecordState]
+        :rtype: list[ProblemPreviewWithLatestRecord]
         """
         return self._problems
 
@@ -467,7 +467,7 @@ class ProblemSetDetail(object):
 
 
         :param problems: The problems of this ProblemSetDetail.  # noqa: E501
-        :type: list[ProblemPreviewWithRecordState]
+        :type: list[ProblemPreviewWithLatestRecord]
         """
 
         self._problems = problems

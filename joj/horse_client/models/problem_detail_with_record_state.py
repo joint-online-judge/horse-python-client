@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: 5882f3b@2021-12-15T14:55:00Z  # noqa: E501
+    Git version: 78d3530@2021-12-21T19:17:45Z  # noqa: E501
 
     OpenAPI spec version: 1
     
@@ -40,8 +40,7 @@ class ProblemDetailWithRecordState(object):
         'problem_group_id': 'str',
         'created_at': 'datetime',
         'updated_at': 'datetime',
-        'record_id': 'str',
-        'record_state': 'RecordState'
+        'latest_record': 'RecordPreview'
     }
 
     attribute_map = {
@@ -57,11 +56,10 @@ class ProblemDetailWithRecordState(object):
         'problem_group_id': 'problemGroupId',
         'created_at': 'createdAt',
         'updated_at': 'updatedAt',
-        'record_id': 'recordId',
-        'record_state': 'recordState'
+        'latest_record': 'latestRecord'
     }
 
-    def __init__(self, id=None, domain_id=None, url='', title=None, hidden=False, content='', num_submit=0, num_accept=0, owner_id=None, problem_group_id=None, created_at=None, updated_at=None, record_id=None, record_state=None):  # noqa: E501
+    def __init__(self, id=None, domain_id=None, url='', title=None, hidden=False, content='', num_submit=0, num_accept=0, owner_id=None, problem_group_id=None, created_at=None, updated_at=None, latest_record=None):  # noqa: E501
         """ProblemDetailWithRecordState - a model defined in Swagger"""  # noqa: E501
         self._id = None
         self._domain_id = None
@@ -75,8 +73,7 @@ class ProblemDetailWithRecordState(object):
         self._problem_group_id = None
         self._created_at = None
         self._updated_at = None
-        self._record_id = None
-        self._record_state = None
+        self._latest_record = None
         self.discriminator = None
         self.id = id
         self.domain_id = domain_id
@@ -99,10 +96,8 @@ class ProblemDetailWithRecordState(object):
             self.created_at = created_at
         if updated_at is not None:
             self.updated_at = updated_at
-        if record_id is not None:
-            self.record_id = record_id
-        if record_state is not None:
-            self.record_state = record_state
+        if latest_record is not None:
+            self.latest_record = latest_record
 
     @property
     def id(self):
@@ -371,46 +366,25 @@ class ProblemDetailWithRecordState(object):
         self._updated_at = updated_at
 
     @property
-    def record_id(self):
-        """Gets the record_id of this ProblemDetailWithRecordState.  # noqa: E501
+    def latest_record(self):
+        """Gets the latest_record of this ProblemDetailWithRecordState.  # noqa: E501
 
 
-        :return: The record_id of this ProblemDetailWithRecordState.  # noqa: E501
-        :rtype: str
+        :return: The latest_record of this ProblemDetailWithRecordState.  # noqa: E501
+        :rtype: RecordPreview
         """
-        return self._record_id
+        return self._latest_record
 
-    @record_id.setter
-    def record_id(self, record_id):
-        """Sets the record_id of this ProblemDetailWithRecordState.
-
-
-        :param record_id: The record_id of this ProblemDetailWithRecordState.  # noqa: E501
-        :type: str
-        """
-
-        self._record_id = record_id
-
-    @property
-    def record_state(self):
-        """Gets the record_state of this ProblemDetailWithRecordState.  # noqa: E501
+    @latest_record.setter
+    def latest_record(self, latest_record):
+        """Sets the latest_record of this ProblemDetailWithRecordState.
 
 
-        :return: The record_state of this ProblemDetailWithRecordState.  # noqa: E501
-        :rtype: RecordState
-        """
-        return self._record_state
-
-    @record_state.setter
-    def record_state(self, record_state):
-        """Sets the record_state of this ProblemDetailWithRecordState.
-
-
-        :param record_state: The record_state of this ProblemDetailWithRecordState.  # noqa: E501
-        :type: RecordState
+        :param latest_record: The latest_record of this ProblemDetailWithRecordState.  # noqa: E501
+        :type: RecordPreview
         """
 
-        self._record_state = record_state
+        self._latest_record = latest_record
 
     def to_dict(self):
         """Returns the model properties as a dict"""

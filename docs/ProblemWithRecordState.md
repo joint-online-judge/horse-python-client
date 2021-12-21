@@ -13,8 +13,7 @@ Name | Type | Description | Notes
 **num_accept** | **int** |  | [optional] [default to 0]
 **owner_id** | **str** |  | [optional] 
 **problem_group_id** | **str** |  | [optional] 
-**record_id** | **str** |  | [optional] 
-**record_state** | [**RecordState**](RecordState.md) |  | [optional] 
+**latest_record** | [**RecordPreview**](RecordPreview.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

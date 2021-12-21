@@ -15,8 +15,7 @@ Name | Type | Description | Notes
 **problem_group_id** | **str** |  | [optional] 
 **created_at** | **datetime** |  | [optional] 
 **updated_at** | **datetime** |  | [optional] 
-**record_id** | **str** |  | [optional] 
-**record_state** | [**RecordState**](RecordState.md) |  | [optional] 
+**latest_record** | [**RecordPreview**](RecordPreview.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
