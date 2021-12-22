@@ -14,8 +14,9 @@ Name | Type | Description | Notes
 **category** | **str** |  | 
 **username** | **str** |  | 
 **email** | **str** |  | 
-**student_id** | **str** |  | 
-**real_name** | **str** |  | 
+**gravatar** | **str** |  | [optional] [default to '']
+**student_id** | **str** |  | [optional] [default to '']
+**real_name** | **str** |  | [optional] [default to '']
 **role** | **str** |  | [optional] 
 **oauth_name** | **str** |  | [optional] 
 **is_active** | **bool** |  | 

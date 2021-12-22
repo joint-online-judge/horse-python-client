@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: 5c80f1d@2021-12-22T08:30:51Z  # noqa: E501
+    Git version: 81180bd@2021-12-22T11:27:51Z  # noqa: E501
 
     OpenAPI spec version: 1
     
@@ -39,6 +39,7 @@ class JWTAccessToken(object):
         'category': 'str',
         'username': 'str',
         'email': 'str',
+        'gravatar': 'str',
         'student_id': 'str',
         'real_name': 'str',
         'role': 'str',
@@ -58,6 +59,7 @@ class JWTAccessToken(object):
         'category': 'category',
         'username': 'username',
         'email': 'email',
+        'gravatar': 'gravatar',
         'student_id': 'studentId',
         'real_name': 'realName',
         'role': 'role',
@@ -65,7 +67,7 @@ class JWTAccessToken(object):
         'is_active': 'isActive'
     }
 
-    def __init__(self, sub=None, iat=None, nbf=None, jti=None, exp=None, type=None, fresh=False, csrf=None, category=None, username=None, email=None, student_id=None, real_name=None, role=None, oauth_name=None, is_active=None):  # noqa: E501
+    def __init__(self, sub=None, iat=None, nbf=None, jti=None, exp=None, type=None, fresh=False, csrf=None, category=None, username=None, email=None, gravatar='', student_id='', real_name='', role=None, oauth_name=None, is_active=None):  # noqa: E501
         """JWTAccessToken - a model defined in Swagger"""  # noqa: E501
         self._sub = None
         self._iat = None
@@ -78,6 +80,7 @@ class JWTAccessToken(object):
         self._category = None
         self._username = None
         self._email = None
+        self._gravatar = None
         self._student_id = None
         self._real_name = None
         self._role = None
@@ -97,8 +100,12 @@ class JWTAccessToken(object):
         self.category = category
         self.username = username
         self.email = email
-        self.student_id = student_id
-        self.real_name = real_name
+        if gravatar is not None:
+            self.gravatar = gravatar
+        if student_id is not None:
+            self.student_id = student_id
+        if real_name is not None:
+            self.real_name = real_name
         if role is not None:
             self.role = role
         if oauth_name is not None:
@@ -361,6 +368,27 @@ class JWTAccessToken(object):
         self._email = email
 
     @property
+    def gravatar(self):
+        """Gets the gravatar of this JWTAccessToken.  # noqa: E501
+
+
+        :return: The gravatar of this JWTAccessToken.  # noqa: E501
+        :rtype: str
+        """
+        return self._gravatar
+
+    @gravatar.setter
+    def gravatar(self, gravatar):
+        """Sets the gravatar of this JWTAccessToken.
+
+
+        :param gravatar: The gravatar of this JWTAccessToken.  # noqa: E501
+        :type: str
+        """
+
+        self._gravatar = gravatar
+
+    @property
     def student_id(self):
         """Gets the student_id of this JWTAccessToken.  # noqa: E501
 
@@ -378,8 +406,6 @@ class JWTAccessToken(object):
         :param student_id: The student_id of this JWTAccessToken.  # noqa: E501
         :type: str
         """
-        if student_id is None:
-            raise ValueError("Invalid value for `student_id`, must not be `None`")  # noqa: E501
 
         self._student_id = student_id
 
@@ -401,8 +427,6 @@ class JWTAccessToken(object):
         :param real_name: The real_name of this JWTAccessToken.  # noqa: E501
         :type: str
         """
-        if real_name is None:
-            raise ValueError("Invalid value for `real_name`, must not be `None`")  # noqa: E501
 
         self._real_name = real_name
 
