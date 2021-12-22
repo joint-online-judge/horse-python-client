@@ -5,7 +5,7 @@
 """
     JOJ Horse
 
-    Git version: 78d3530@2021-12-21T19:17:45Z  # noqa: E501
+    Git version: 5c80f1d@2021-12-22T08:30:51Z  # noqa: E501
 
     OpenAPI spec version: 1
     
@@ -91,10 +91,8 @@ from joj.horse_client.models.problem_config import ProblemConfig
 from joj.horse_client.models.problem_config_commit import ProblemConfigCommit
 from joj.horse_client.models.problem_config_resp import ProblemConfigResp
 from joj.horse_client.models.problem_create import ProblemCreate
-from joj.horse_client.models.problem_detail import ProblemDetail
-from joj.horse_client.models.problem_detail_resp import ProblemDetailResp
-from joj.horse_client.models.problem_detail_with_record_state import ProblemDetailWithRecordState
-from joj.horse_client.models.problem_detail_with_record_state_resp import ProblemDetailWithRecordStateResp
+from joj.horse_client.models.problem_detail_with_latest_record import ProblemDetailWithLatestRecord
+from joj.horse_client.models.problem_detail_with_latest_record_resp import ProblemDetailWithLatestRecordResp
 from joj.horse_client.models.problem_edit import ProblemEdit
 from joj.horse_client.models.problem_group import ProblemGroup
 from joj.horse_client.models.problem_group_list import ProblemGroupList
@@ -116,9 +114,9 @@ from joj.horse_client.models.problem_set_permission import ProblemSetPermission
 from joj.horse_client.models.problem_set_resp import ProblemSetResp
 from joj.horse_client.models.problem_set_update_problem import ProblemSetUpdateProblem
 from joj.horse_client.models.problem_solution_submit import ProblemSolutionSubmit
-from joj.horse_client.models.problem_with_record_state import ProblemWithRecordState
-from joj.horse_client.models.problem_with_record_state_list import ProblemWithRecordStateList
-from joj.horse_client.models.problem_with_record_state_list_resp import ProblemWithRecordStateListResp
+from joj.horse_client.models.problem_with_latest_record import ProblemWithLatestRecord
+from joj.horse_client.models.problem_with_latest_record_list import ProblemWithLatestRecordList
+from joj.horse_client.models.problem_with_latest_record_list_resp import ProblemWithLatestRecordListResp
 from joj.horse_client.models.record import Record
 from joj.horse_client.models.record_code_type import RecordCodeType
 from joj.horse_client.models.record_list import RecordList

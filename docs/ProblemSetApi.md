@@ -217,7 +217,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_get_problem_in_problem_set**
-> ProblemDetailWithRecordStateResp v1_get_problem_in_problem_set(domain, problem_set, problem)
+> ProblemDetailWithLatestRecordResp v1_get_problem_in_problem_set(domain, problem_set, problem)
 
 Get Problem In Problem Set
 
@@ -254,7 +254,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ProblemDetailWithRecordStateResp**](ProblemDetailWithRecordStateResp.md)
+[**ProblemDetailWithLatestRecordResp**](ProblemDetailWithLatestRecordResp.md)
 
 ### Authorization
 
@@ -370,7 +370,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_list_problems_in_problem_set**
-> ProblemWithRecordStateListResp v1_list_problems_in_problem_set(domain, problem_set)
+> ProblemWithLatestRecordListResp v1_list_problems_in_problem_set(domain, problem_set)
 
 List Problems In Problem Set
 
@@ -405,7 +405,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ProblemWithRecordStateListResp**](ProblemWithRecordStateListResp.md)
+[**ProblemWithLatestRecordListResp**](ProblemWithLatestRecordListResp.md)
 
 ### Authorization
 

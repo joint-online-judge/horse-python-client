@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: 78d3530@2021-12-21T19:17:45Z  # noqa: E501
+    Git version: 5c80f1d@2021-12-22T08:30:51Z  # noqa: E501
 
     OpenAPI spec version: 1
     
@@ -472,7 +472,7 @@ class ProblemSetApi(object):
         :param str domain: url or id of the domain (required)
         :param str problem_set: url or id of the problem set (required)
         :param str problem: url or id of the problem (required)
-        :return: ProblemDetailWithRecordStateResp
+        :return: ProblemDetailWithLatestRecordResp
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -495,7 +495,7 @@ class ProblemSetApi(object):
         :param str domain: url or id of the domain (required)
         :param str problem_set: url or id of the problem set (required)
         :param str problem: url or id of the problem (required)
-        :return: ProblemDetailWithRecordStateResp
+        :return: ProblemDetailWithLatestRecordResp
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -561,7 +561,7 @@ class ProblemSetApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='ProblemDetailWithRecordStateResp',  # noqa: E501
+            response_type='ProblemDetailWithLatestRecordResp',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -786,7 +786,7 @@ class ProblemSetApi(object):
         :param async_req bool
         :param str domain: url or id of the domain (required)
         :param str problem_set: url or id of the problem set (required)
-        :return: ProblemWithRecordStateListResp
+        :return: ProblemWithLatestRecordListResp
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -808,7 +808,7 @@ class ProblemSetApi(object):
         :param async_req bool
         :param str domain: url or id of the domain (required)
         :param str problem_set: url or id of the problem set (required)
-        :return: ProblemWithRecordStateListResp
+        :return: ProblemWithLatestRecordListResp
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -868,7 +868,7 @@ class ProblemSetApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='ProblemWithRecordStateListResp',  # noqa: E501
+            response_type='ProblemWithLatestRecordListResp',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),

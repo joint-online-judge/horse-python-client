@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: 78d3530@2021-12-21T19:17:45Z  # noqa: E501
+    Git version: 5c80f1d@2021-12-22T08:30:51Z  # noqa: E501
 
     OpenAPI spec version: 1
     
@@ -33,7 +33,6 @@ class Problem(object):
         'url': 'str',
         'title': 'str',
         'hidden': 'bool',
-        'content': 'str',
         'num_submit': 'int',
         'num_accept': 'int',
         'owner_id': 'str',
@@ -46,21 +45,19 @@ class Problem(object):
         'url': 'url',
         'title': 'title',
         'hidden': 'hidden',
-        'content': 'content',
         'num_submit': 'numSubmit',
         'num_accept': 'numAccept',
         'owner_id': 'ownerId',
         'problem_group_id': 'problemGroupId'
     }
 
-    def __init__(self, id=None, domain_id=None, url='', title=None, hidden=False, content='', num_submit=0, num_accept=0, owner_id=None, problem_group_id=None):  # noqa: E501
+    def __init__(self, id=None, domain_id=None, url='', title=None, hidden=False, num_submit=0, num_accept=0, owner_id=None, problem_group_id=None):  # noqa: E501
         """Problem - a model defined in Swagger"""  # noqa: E501
         self._id = None
         self._domain_id = None
         self._url = None
         self._title = None
         self._hidden = None
-        self._content = None
         self._num_submit = None
         self._num_accept = None
         self._owner_id = None
@@ -73,8 +70,6 @@ class Problem(object):
         self.title = title
         if hidden is not None:
             self.hidden = hidden
-        if content is not None:
-            self.content = content
         if num_submit is not None:
             self.num_submit = num_submit
         if num_accept is not None:
@@ -200,29 +195,6 @@ class Problem(object):
         """
 
         self._hidden = hidden
-
-    @property
-    def content(self):
-        """Gets the content of this Problem.  # noqa: E501
-
-        content of the problem  # noqa: E501
-
-        :return: The content of this Problem.  # noqa: E501
-        :rtype: str
-        """
-        return self._content
-
-    @content.setter
-    def content(self, content):
-        """Sets the content of this Problem.
-
-        content of the problem  # noqa: E501
-
-        :param content: The content of this Problem.  # noqa: E501
-        :type: str
-        """
-
-        self._content = content
 
     @property
     def num_submit(self):

@@ -15,12 +15,12 @@ from __future__ import absolute_import
 import unittest
 
 import joj.horse_client
-from joj.horse_client.models.record_code_type import RecordCodeType  # noqa: E501
+from joj.horse_client.models.problem_with_latest_record_list_resp import ProblemWithLatestRecordListResp  # noqa: E501
 from joj.horse_client.rest import ApiException
 
 
-class TestRecordCodeType(unittest.TestCase):
-    """RecordCodeType unit test stubs"""
+class TestProblemWithLatestRecordListResp(unittest.TestCase):
+    """ProblemWithLatestRecordListResp unit test stubs"""
 
     def setUp(self):
         pass
@@ -28,10 +28,10 @@ class TestRecordCodeType(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testRecordCodeType(self):
-        """Test RecordCodeType"""
+    def testProblemWithLatestRecordListResp(self):
+        """Test ProblemWithLatestRecordListResp"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = joj.horse_client.models.record_code_type.RecordCodeType()  # noqa: E501
+        # model = joj.horse_client.models.problem_with_latest_record_list_resp.ProblemWithLatestRecordListResp()  # noqa: E501
         pass
 
 

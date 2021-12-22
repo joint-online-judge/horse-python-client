@@ -1,10 +1,11 @@
-# ProblemWithRecordStateList
+# ProblemDetailWithLatestRecordResp
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**count** | **int** |  | [optional] [default to 0]
-**results** | [**list[ProblemWithRecordState]**](ProblemWithRecordState.md) |  | [optional] 
+**error_code** | [**ErrorCode**](ErrorCode.md) |  | 
+**error_msg** | **str** |  | [optional] 
+**data** | [**ProblemDetailWithLatestRecord**](ProblemDetailWithLatestRecord.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

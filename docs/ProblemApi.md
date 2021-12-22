@@ -160,7 +160,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_get_problem**
-> ProblemDetailResp v1_get_problem(domain, problem)
+> ProblemDetailWithLatestRecordResp v1_get_problem(domain, problem)
 
 Get Problem
 
@@ -195,7 +195,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ProblemDetailResp**](ProblemDetailResp.md)
+[**ProblemDetailWithLatestRecordResp**](ProblemDetailWithLatestRecordResp.md)
 
 ### Authorization
 
@@ -209,7 +209,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_list_problems**
-> ProblemListResp v1_list_problems(domain, ordering=ordering, offset=offset, limit=limit)
+> ProblemWithLatestRecordListResp v1_list_problems(domain, ordering=ordering, offset=offset, limit=limit)
 
 List Problems
 
@@ -248,7 +248,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ProblemListResp**](ProblemListResp.md)
+[**ProblemWithLatestRecordListResp**](ProblemWithLatestRecordListResp.md)
 
 ### Authorization
 

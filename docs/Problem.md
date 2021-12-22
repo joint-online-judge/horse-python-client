@@ -8,7 +8,6 @@ Name | Type | Description | Notes
 **url** | **str** | (unique) url of the domain | [optional] [default to '']
 **title** | **str** | title of the problem | 
 **hidden** | **bool** | is the problem hidden | [optional] [default to False]
-**content** | **str** | content of the problem | [optional] [default to '']
 **num_submit** | **int** |  | [optional] [default to 0]
 **num_accept** | **int** |  | [optional] [default to 0]
 **owner_id** | **str** |  | [optional] 

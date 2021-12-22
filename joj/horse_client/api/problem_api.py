@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: 78d3530@2021-12-21T19:17:45Z  # noqa: E501
+    Git version: 5c80f1d@2021-12-22T08:30:51Z  # noqa: E501
 
     OpenAPI spec version: 1
     
@@ -354,7 +354,7 @@ class ProblemApi(object):
         :param async_req bool
         :param str domain: url or id of the domain (required)
         :param str problem: url or id of the problem (required)
-        :return: ProblemDetailResp
+        :return: ProblemDetailWithLatestRecordResp
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -376,7 +376,7 @@ class ProblemApi(object):
         :param async_req bool
         :param str domain: url or id of the domain (required)
         :param str problem: url or id of the problem (required)
-        :return: ProblemDetailResp
+        :return: ProblemDetailWithLatestRecordResp
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -436,7 +436,7 @@ class ProblemApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='ProblemDetailResp',  # noqa: E501
+            response_type='ProblemDetailWithLatestRecordResp',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -457,7 +457,7 @@ class ProblemApi(object):
         :param str ordering: Comma seperated list of ordering the results. You may specify reverse orderings by prefixing the field name with '-'.  Available fields: created_at,updated_at
         :param int offset:
         :param int limit:
-        :return: ProblemListResp
+        :return: ProblemWithLatestRecordListResp
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -481,7 +481,7 @@ class ProblemApi(object):
         :param str ordering: Comma seperated list of ordering the results. You may specify reverse orderings by prefixing the field name with '-'.  Available fields: created_at,updated_at
         :param int offset:
         :param int limit:
-        :return: ProblemListResp
+        :return: ProblemWithLatestRecordListResp
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -541,7 +541,7 @@ class ProblemApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='ProblemListResp',  # noqa: E501
+            response_type='ProblemWithLatestRecordListResp',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
