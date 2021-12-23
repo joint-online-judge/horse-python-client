@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: 4d93810@2021-12-23T04:29:35Z  # noqa: E501
+    Git version: d0524e9@2021-12-23T19:29:15Z  # noqa: E501
 
     OpenAPI spec version: 1
     
@@ -32,49 +32,49 @@ class ProblemConfigApi(object):
             api_client = ApiClient()
         self.api_client = api_client
 
-    def v1_commit_problem_config(self, body, domain, problem, **kwargs):  # noqa: E501
+    def v1_commit_problem_config(self, body, problem, domain, **kwargs):  # noqa: E501
         """Commit Problem Config  # noqa: E501
 
         Commit all changes through upload / delete as a new problem config version.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.v1_commit_problem_config(body, domain, problem, async_req=True)
+        >>> thread = api.v1_commit_problem_config(body, problem, domain, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
         :param ProblemConfigCommit body: (required)
-        :param str domain: url or id of the domain (required)
         :param str problem: url or id of the problem (required)
+        :param str domain: url or id of the domain (required)
         :return: ProblemConfigResp
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.v1_commit_problem_config_with_http_info(body, domain, problem, **kwargs)  # noqa: E501
+            return self.v1_commit_problem_config_with_http_info(body, problem, domain, **kwargs)  # noqa: E501
         else:
-            (data) = self.v1_commit_problem_config_with_http_info(body, domain, problem, **kwargs)  # noqa: E501
+            (data) = self.v1_commit_problem_config_with_http_info(body, problem, domain, **kwargs)  # noqa: E501
             return data
 
-    def v1_commit_problem_config_with_http_info(self, body, domain, problem, **kwargs):  # noqa: E501
+    def v1_commit_problem_config_with_http_info(self, body, problem, domain, **kwargs):  # noqa: E501
         """Commit Problem Config  # noqa: E501
 
         Commit all changes through upload / delete as a new problem config version.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.v1_commit_problem_config_with_http_info(body, domain, problem, async_req=True)
+        >>> thread = api.v1_commit_problem_config_with_http_info(body, problem, domain, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
         :param ProblemConfigCommit body: (required)
-        :param str domain: url or id of the domain (required)
         :param str problem: url or id of the problem (required)
+        :param str domain: url or id of the domain (required)
         :return: ProblemConfigResp
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['body', 'domain', 'problem']  # noqa: E501
+        all_params = ['body', 'problem', 'domain']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -93,22 +93,22 @@ class ProblemConfigApi(object):
         if ('body' not in params or
                 params['body'] is None):
             raise ValueError("Missing the required parameter `body` when calling `v1_commit_problem_config`")  # noqa: E501
-        # verify the required parameter 'domain' is set
-        if ('domain' not in params or
-                params['domain'] is None):
-            raise ValueError("Missing the required parameter `domain` when calling `v1_commit_problem_config`")  # noqa: E501
         # verify the required parameter 'problem' is set
         if ('problem' not in params or
                 params['problem'] is None):
             raise ValueError("Missing the required parameter `problem` when calling `v1_commit_problem_config`")  # noqa: E501
+        # verify the required parameter 'domain' is set
+        if ('domain' not in params or
+                params['domain'] is None):
+            raise ValueError("Missing the required parameter `domain` when calling `v1_commit_problem_config`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'domain' in params:
-            path_params['domain'] = params['domain']  # noqa: E501
         if 'problem' in params:
             path_params['problem'] = params['problem']  # noqa: E501
+        if 'domain' in params:
+            path_params['domain'] = params['domain']  # noqa: E501
 
         query_params = []
 
@@ -147,18 +147,18 @@ class ProblemConfigApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def v1_delete_directory_from_uncommitted_problem_config(self, path, domain, problem, **kwargs):  # noqa: E501
+    def v1_delete_directory_from_uncommitted_problem_config(self, path, problem, domain, **kwargs):  # noqa: E501
         """Delete Directory From Uncommitted Problem Config  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.v1_delete_directory_from_uncommitted_problem_config(path, domain, problem, async_req=True)
+        >>> thread = api.v1_delete_directory_from_uncommitted_problem_config(path, problem, domain, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
         :param str path: (required)
-        :param str domain: url or id of the domain (required)
         :param str problem: url or id of the problem (required)
+        :param str domain: url or id of the domain (required)
         :param bool recursive: Act as -r in the rm command. If false, only empty directory can be deleted.
         :return: FileInfoResp
                  If the method is called asynchronously,
@@ -166,30 +166,30 @@ class ProblemConfigApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.v1_delete_directory_from_uncommitted_problem_config_with_http_info(path, domain, problem, **kwargs)  # noqa: E501
+            return self.v1_delete_directory_from_uncommitted_problem_config_with_http_info(path, problem, domain, **kwargs)  # noqa: E501
         else:
-            (data) = self.v1_delete_directory_from_uncommitted_problem_config_with_http_info(path, domain, problem, **kwargs)  # noqa: E501
+            (data) = self.v1_delete_directory_from_uncommitted_problem_config_with_http_info(path, problem, domain, **kwargs)  # noqa: E501
             return data
 
-    def v1_delete_directory_from_uncommitted_problem_config_with_http_info(self, path, domain, problem, **kwargs):  # noqa: E501
+    def v1_delete_directory_from_uncommitted_problem_config_with_http_info(self, path, problem, domain, **kwargs):  # noqa: E501
         """Delete Directory From Uncommitted Problem Config  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.v1_delete_directory_from_uncommitted_problem_config_with_http_info(path, domain, problem, async_req=True)
+        >>> thread = api.v1_delete_directory_from_uncommitted_problem_config_with_http_info(path, problem, domain, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
         :param str path: (required)
-        :param str domain: url or id of the domain (required)
         :param str problem: url or id of the problem (required)
+        :param str domain: url or id of the domain (required)
         :param bool recursive: Act as -r in the rm command. If false, only empty directory can be deleted.
         :return: FileInfoResp
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['path', 'domain', 'problem', 'recursive']  # noqa: E501
+        all_params = ['path', 'problem', 'domain', 'recursive']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -208,24 +208,24 @@ class ProblemConfigApi(object):
         if ('path' not in params or
                 params['path'] is None):
             raise ValueError("Missing the required parameter `path` when calling `v1_delete_directory_from_uncommitted_problem_config`")  # noqa: E501
-        # verify the required parameter 'domain' is set
-        if ('domain' not in params or
-                params['domain'] is None):
-            raise ValueError("Missing the required parameter `domain` when calling `v1_delete_directory_from_uncommitted_problem_config`")  # noqa: E501
         # verify the required parameter 'problem' is set
         if ('problem' not in params or
                 params['problem'] is None):
             raise ValueError("Missing the required parameter `problem` when calling `v1_delete_directory_from_uncommitted_problem_config`")  # noqa: E501
+        # verify the required parameter 'domain' is set
+        if ('domain' not in params or
+                params['domain'] is None):
+            raise ValueError("Missing the required parameter `domain` when calling `v1_delete_directory_from_uncommitted_problem_config`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
         if 'path' in params:
             path_params['path'] = params['path']  # noqa: E501
-        if 'domain' in params:
-            path_params['domain'] = params['domain']  # noqa: E501
         if 'problem' in params:
             path_params['problem'] = params['problem']  # noqa: E501
+        if 'domain' in params:
+            path_params['domain'] = params['domain']  # noqa: E501
 
         query_params = []
         if 'recursive' in params:
@@ -260,47 +260,47 @@ class ProblemConfigApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def v1_delete_file_from_uncommitted_problem_config(self, path, domain, problem, **kwargs):  # noqa: E501
+    def v1_delete_file_from_uncommitted_problem_config(self, path, problem, domain, **kwargs):  # noqa: E501
         """Delete File From Uncommitted Problem Config  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.v1_delete_file_from_uncommitted_problem_config(path, domain, problem, async_req=True)
+        >>> thread = api.v1_delete_file_from_uncommitted_problem_config(path, problem, domain, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
         :param str path: (required)
-        :param str domain: url or id of the domain (required)
         :param str problem: url or id of the problem (required)
+        :param str domain: url or id of the domain (required)
         :return: FileInfoResp
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.v1_delete_file_from_uncommitted_problem_config_with_http_info(path, domain, problem, **kwargs)  # noqa: E501
+            return self.v1_delete_file_from_uncommitted_problem_config_with_http_info(path, problem, domain, **kwargs)  # noqa: E501
         else:
-            (data) = self.v1_delete_file_from_uncommitted_problem_config_with_http_info(path, domain, problem, **kwargs)  # noqa: E501
+            (data) = self.v1_delete_file_from_uncommitted_problem_config_with_http_info(path, problem, domain, **kwargs)  # noqa: E501
             return data
 
-    def v1_delete_file_from_uncommitted_problem_config_with_http_info(self, path, domain, problem, **kwargs):  # noqa: E501
+    def v1_delete_file_from_uncommitted_problem_config_with_http_info(self, path, problem, domain, **kwargs):  # noqa: E501
         """Delete File From Uncommitted Problem Config  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.v1_delete_file_from_uncommitted_problem_config_with_http_info(path, domain, problem, async_req=True)
+        >>> thread = api.v1_delete_file_from_uncommitted_problem_config_with_http_info(path, problem, domain, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
         :param str path: (required)
-        :param str domain: url or id of the domain (required)
         :param str problem: url or id of the problem (required)
+        :param str domain: url or id of the domain (required)
         :return: FileInfoResp
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['path', 'domain', 'problem']  # noqa: E501
+        all_params = ['path', 'problem', 'domain']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -319,24 +319,24 @@ class ProblemConfigApi(object):
         if ('path' not in params or
                 params['path'] is None):
             raise ValueError("Missing the required parameter `path` when calling `v1_delete_file_from_uncommitted_problem_config`")  # noqa: E501
-        # verify the required parameter 'domain' is set
-        if ('domain' not in params or
-                params['domain'] is None):
-            raise ValueError("Missing the required parameter `domain` when calling `v1_delete_file_from_uncommitted_problem_config`")  # noqa: E501
         # verify the required parameter 'problem' is set
         if ('problem' not in params or
                 params['problem'] is None):
             raise ValueError("Missing the required parameter `problem` when calling `v1_delete_file_from_uncommitted_problem_config`")  # noqa: E501
+        # verify the required parameter 'domain' is set
+        if ('domain' not in params or
+                params['domain'] is None):
+            raise ValueError("Missing the required parameter `domain` when calling `v1_delete_file_from_uncommitted_problem_config`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
         if 'path' in params:
             path_params['path'] = params['path']  # noqa: E501
-        if 'domain' in params:
-            path_params['domain'] = params['domain']  # noqa: E501
         if 'problem' in params:
             path_params['problem'] = params['problem']  # noqa: E501
+        if 'domain' in params:
+            path_params['domain'] = params['domain']  # noqa: E501
 
         query_params = []
 
@@ -1031,47 +1031,47 @@ class ProblemConfigApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def v1_reset_problem_config(self, body, domain, problem, **kwargs):  # noqa: E501
+    def v1_reset_problem_config(self, body, problem, domain, **kwargs):  # noqa: E501
         """Reset Problem Config  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.v1_reset_problem_config(body, domain, problem, async_req=True)
+        >>> thread = api.v1_reset_problem_config(body, problem, domain, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
         :param LakeFSReset body: (required)
-        :param str domain: url or id of the domain (required)
         :param str problem: url or id of the problem (required)
+        :param str domain: url or id of the domain (required)
         :return: EmptyResp
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.v1_reset_problem_config_with_http_info(body, domain, problem, **kwargs)  # noqa: E501
+            return self.v1_reset_problem_config_with_http_info(body, problem, domain, **kwargs)  # noqa: E501
         else:
-            (data) = self.v1_reset_problem_config_with_http_info(body, domain, problem, **kwargs)  # noqa: E501
+            (data) = self.v1_reset_problem_config_with_http_info(body, problem, domain, **kwargs)  # noqa: E501
             return data
 
-    def v1_reset_problem_config_with_http_info(self, body, domain, problem, **kwargs):  # noqa: E501
+    def v1_reset_problem_config_with_http_info(self, body, problem, domain, **kwargs):  # noqa: E501
         """Reset Problem Config  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.v1_reset_problem_config_with_http_info(body, domain, problem, async_req=True)
+        >>> thread = api.v1_reset_problem_config_with_http_info(body, problem, domain, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
         :param LakeFSReset body: (required)
-        :param str domain: url or id of the domain (required)
         :param str problem: url or id of the problem (required)
+        :param str domain: url or id of the domain (required)
         :return: EmptyResp
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['body', 'domain', 'problem']  # noqa: E501
+        all_params = ['body', 'problem', 'domain']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -1090,22 +1090,22 @@ class ProblemConfigApi(object):
         if ('body' not in params or
                 params['body'] is None):
             raise ValueError("Missing the required parameter `body` when calling `v1_reset_problem_config`")  # noqa: E501
-        # verify the required parameter 'domain' is set
-        if ('domain' not in params or
-                params['domain'] is None):
-            raise ValueError("Missing the required parameter `domain` when calling `v1_reset_problem_config`")  # noqa: E501
         # verify the required parameter 'problem' is set
         if ('problem' not in params or
                 params['problem'] is None):
             raise ValueError("Missing the required parameter `problem` when calling `v1_reset_problem_config`")  # noqa: E501
+        # verify the required parameter 'domain' is set
+        if ('domain' not in params or
+                params['domain'] is None):
+            raise ValueError("Missing the required parameter `domain` when calling `v1_reset_problem_config`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'domain' in params:
-            path_params['domain'] = params['domain']  # noqa: E501
         if 'problem' in params:
             path_params['problem'] = params['problem']  # noqa: E501
+        if 'domain' in params:
+            path_params['domain'] = params['domain']  # noqa: E501
 
         query_params = []
 
@@ -1144,49 +1144,49 @@ class ProblemConfigApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def v1_update_problem_config_by_archive(self, file, domain, problem, **kwargs):  # noqa: E501
+    def v1_update_problem_config_by_archive(self, file, problem, domain, **kwargs):  # noqa: E501
         """Update Problem Config By Archive  # noqa: E501
 
         Completely replace the problem config with the archive. This will delete files not included in the archive.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.v1_update_problem_config_by_archive(file, domain, problem, async_req=True)
+        >>> thread = api.v1_update_problem_config_by_archive(file, problem, domain, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
         :param str file: (required)
-        :param str domain: url or id of the domain (required)
         :param str problem: url or id of the problem (required)
+        :param str domain: url or id of the domain (required)
         :return: EmptyResp
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.v1_update_problem_config_by_archive_with_http_info(file, domain, problem, **kwargs)  # noqa: E501
+            return self.v1_update_problem_config_by_archive_with_http_info(file, problem, domain, **kwargs)  # noqa: E501
         else:
-            (data) = self.v1_update_problem_config_by_archive_with_http_info(file, domain, problem, **kwargs)  # noqa: E501
+            (data) = self.v1_update_problem_config_by_archive_with_http_info(file, problem, domain, **kwargs)  # noqa: E501
             return data
 
-    def v1_update_problem_config_by_archive_with_http_info(self, file, domain, problem, **kwargs):  # noqa: E501
+    def v1_update_problem_config_by_archive_with_http_info(self, file, problem, domain, **kwargs):  # noqa: E501
         """Update Problem Config By Archive  # noqa: E501
 
         Completely replace the problem config with the archive. This will delete files not included in the archive.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.v1_update_problem_config_by_archive_with_http_info(file, domain, problem, async_req=True)
+        >>> thread = api.v1_update_problem_config_by_archive_with_http_info(file, problem, domain, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
         :param str file: (required)
-        :param str domain: url or id of the domain (required)
         :param str problem: url or id of the problem (required)
+        :param str domain: url or id of the domain (required)
         :return: EmptyResp
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['file', 'domain', 'problem']  # noqa: E501
+        all_params = ['file', 'problem', 'domain']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -1205,22 +1205,22 @@ class ProblemConfigApi(object):
         if ('file' not in params or
                 params['file'] is None):
             raise ValueError("Missing the required parameter `file` when calling `v1_update_problem_config_by_archive`")  # noqa: E501
-        # verify the required parameter 'domain' is set
-        if ('domain' not in params or
-                params['domain'] is None):
-            raise ValueError("Missing the required parameter `domain` when calling `v1_update_problem_config_by_archive`")  # noqa: E501
         # verify the required parameter 'problem' is set
         if ('problem' not in params or
                 params['problem'] is None):
             raise ValueError("Missing the required parameter `problem` when calling `v1_update_problem_config_by_archive`")  # noqa: E501
+        # verify the required parameter 'domain' is set
+        if ('domain' not in params or
+                params['domain'] is None):
+            raise ValueError("Missing the required parameter `domain` when calling `v1_update_problem_config_by_archive`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'domain' in params:
-            path_params['domain'] = params['domain']  # noqa: E501
         if 'problem' in params:
             path_params['problem'] = params['problem']  # noqa: E501
+        if 'domain' in params:
+            path_params['domain'] = params['domain']  # noqa: E501
 
         query_params = []
 
@@ -1259,19 +1259,19 @@ class ProblemConfigApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def v1_upload_file_to_problem_config(self, file, domain, problem, path, **kwargs):  # noqa: E501
+    def v1_upload_file_to_problem_config(self, file, problem, domain, path, **kwargs):  # noqa: E501
         """Upload File To Problem Config  # noqa: E501
 
         Replace the file with the same path. Create directories if needed along the path.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.v1_upload_file_to_problem_config(file, domain, problem, path, async_req=True)
+        >>> thread = api.v1_upload_file_to_problem_config(file, problem, domain, path, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
         :param str file: (required)
-        :param str domain: url or id of the domain (required)
         :param str problem: url or id of the problem (required)
+        :param str domain: url or id of the domain (required)
         :param str path: (required)
         :return: FileInfoResp
                  If the method is called asynchronously,
@@ -1279,31 +1279,31 @@ class ProblemConfigApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.v1_upload_file_to_problem_config_with_http_info(file, domain, problem, path, **kwargs)  # noqa: E501
+            return self.v1_upload_file_to_problem_config_with_http_info(file, problem, domain, path, **kwargs)  # noqa: E501
         else:
-            (data) = self.v1_upload_file_to_problem_config_with_http_info(file, domain, problem, path, **kwargs)  # noqa: E501
+            (data) = self.v1_upload_file_to_problem_config_with_http_info(file, problem, domain, path, **kwargs)  # noqa: E501
             return data
 
-    def v1_upload_file_to_problem_config_with_http_info(self, file, domain, problem, path, **kwargs):  # noqa: E501
+    def v1_upload_file_to_problem_config_with_http_info(self, file, problem, domain, path, **kwargs):  # noqa: E501
         """Upload File To Problem Config  # noqa: E501
 
         Replace the file with the same path. Create directories if needed along the path.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.v1_upload_file_to_problem_config_with_http_info(file, domain, problem, path, async_req=True)
+        >>> thread = api.v1_upload_file_to_problem_config_with_http_info(file, problem, domain, path, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
         :param str file: (required)
-        :param str domain: url or id of the domain (required)
         :param str problem: url or id of the problem (required)
+        :param str domain: url or id of the domain (required)
         :param str path: (required)
         :return: FileInfoResp
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['file', 'domain', 'problem', 'path']  # noqa: E501
+        all_params = ['file', 'problem', 'domain', 'path']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -1322,14 +1322,14 @@ class ProblemConfigApi(object):
         if ('file' not in params or
                 params['file'] is None):
             raise ValueError("Missing the required parameter `file` when calling `v1_upload_file_to_problem_config`")  # noqa: E501
-        # verify the required parameter 'domain' is set
-        if ('domain' not in params or
-                params['domain'] is None):
-            raise ValueError("Missing the required parameter `domain` when calling `v1_upload_file_to_problem_config`")  # noqa: E501
         # verify the required parameter 'problem' is set
         if ('problem' not in params or
                 params['problem'] is None):
             raise ValueError("Missing the required parameter `problem` when calling `v1_upload_file_to_problem_config`")  # noqa: E501
+        # verify the required parameter 'domain' is set
+        if ('domain' not in params or
+                params['domain'] is None):
+            raise ValueError("Missing the required parameter `domain` when calling `v1_upload_file_to_problem_config`")  # noqa: E501
         # verify the required parameter 'path' is set
         if ('path' not in params or
                 params['path'] is None):
@@ -1338,10 +1338,10 @@ class ProblemConfigApi(object):
         collection_formats = {}
 
         path_params = {}
-        if 'domain' in params:
-            path_params['domain'] = params['domain']  # noqa: E501
         if 'problem' in params:
             path_params['problem'] = params['problem']  # noqa: E501
+        if 'domain' in params:
+            path_params['domain'] = params['domain']  # noqa: E501
         if 'path' in params:
             path_params['path'] = params['path']  # noqa: E501
 
@@ -1382,49 +1382,49 @@ class ProblemConfigApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def v1_upload_file_to_root_in_problem_config(self, file, domain, problem, **kwargs):  # noqa: E501
+    def v1_upload_file_to_root_in_problem_config(self, file, problem, domain, **kwargs):  # noqa: E501
         """Upload File To Root In Problem Config  # noqa: E501
 
         Use the filename as path, file will be uploaded to root of the problem config directory.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.v1_upload_file_to_root_in_problem_config(file, domain, problem, async_req=True)
+        >>> thread = api.v1_upload_file_to_root_in_problem_config(file, problem, domain, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
         :param str file: (required)
-        :param str domain: url or id of the domain (required)
         :param str problem: url or id of the problem (required)
+        :param str domain: url or id of the domain (required)
         :return: FileInfoResp
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.v1_upload_file_to_root_in_problem_config_with_http_info(file, domain, problem, **kwargs)  # noqa: E501
+            return self.v1_upload_file_to_root_in_problem_config_with_http_info(file, problem, domain, **kwargs)  # noqa: E501
         else:
-            (data) = self.v1_upload_file_to_root_in_problem_config_with_http_info(file, domain, problem, **kwargs)  # noqa: E501
+            (data) = self.v1_upload_file_to_root_in_problem_config_with_http_info(file, problem, domain, **kwargs)  # noqa: E501
             return data
 
-    def v1_upload_file_to_root_in_problem_config_with_http_info(self, file, domain, problem, **kwargs):  # noqa: E501
+    def v1_upload_file_to_root_in_problem_config_with_http_info(self, file, problem, domain, **kwargs):  # noqa: E501
         """Upload File To Root In Problem Config  # noqa: E501
 
         Use the filename as path, file will be uploaded to root of the problem config directory.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.v1_upload_file_to_root_in_problem_config_with_http_info(file, domain, problem, async_req=True)
+        >>> thread = api.v1_upload_file_to_root_in_problem_config_with_http_info(file, problem, domain, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
         :param str file: (required)
-        :param str domain: url or id of the domain (required)
         :param str problem: url or id of the problem (required)
+        :param str domain: url or id of the domain (required)
         :return: FileInfoResp
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['file', 'domain', 'problem']  # noqa: E501
+        all_params = ['file', 'problem', 'domain']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -1443,22 +1443,22 @@ class ProblemConfigApi(object):
         if ('file' not in params or
                 params['file'] is None):
             raise ValueError("Missing the required parameter `file` when calling `v1_upload_file_to_root_in_problem_config`")  # noqa: E501
-        # verify the required parameter 'domain' is set
-        if ('domain' not in params or
-                params['domain'] is None):
-            raise ValueError("Missing the required parameter `domain` when calling `v1_upload_file_to_root_in_problem_config`")  # noqa: E501
         # verify the required parameter 'problem' is set
         if ('problem' not in params or
                 params['problem'] is None):
             raise ValueError("Missing the required parameter `problem` when calling `v1_upload_file_to_root_in_problem_config`")  # noqa: E501
+        # verify the required parameter 'domain' is set
+        if ('domain' not in params or
+                params['domain'] is None):
+            raise ValueError("Missing the required parameter `domain` when calling `v1_upload_file_to_root_in_problem_config`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'domain' in params:
-            path_params['domain'] = params['domain']  # noqa: E501
         if 'problem' in params:
             path_params['problem'] = params['problem']  # noqa: E501
+        if 'domain' in params:
+            path_params['domain'] = params['domain']  # noqa: E501
 
         query_params = []
 

@@ -19,7 +19,7 @@ Method | HTTP request | Description
 [**v1_upload_file_to_root_in_problem_config**](ProblemConfigApi.md#v1_upload_file_to_root_in_problem_config) | **PUT** /domains/{domain}/problems/{problem}/config/files | Upload File To Root In Problem Config
 
 # **v1_commit_problem_config**
-> ProblemConfigResp v1_commit_problem_config(body, domain, problem)
+> ProblemConfigResp v1_commit_problem_config(body, problem, domain)
 
 Commit Problem Config
 
@@ -37,12 +37,12 @@ from pprint import pprint
 # create an instance of the API class
 api_instance = joj.horse_client.ProblemConfigApi(joj.horse_client.ApiClient(configuration))
 body = joj.horse_client.ProblemConfigCommit() # ProblemConfigCommit | 
-domain = 'domain_example' # str | url or id of the domain
 problem = 'problem_example' # str | url or id of the problem
+domain = 'domain_example' # str | url or id of the domain
 
 try:
     # Commit Problem Config
-    api_response = api_instance.v1_commit_problem_config(body, domain, problem)
+    api_response = api_instance.v1_commit_problem_config(body, problem, domain)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling ProblemConfigApi->v1_commit_problem_config: %s\n" % e)
@@ -53,8 +53,8 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**ProblemConfigCommit**](ProblemConfigCommit.md)|  | 
- **domain** | **str**| url or id of the domain | 
  **problem** | **str**| url or id of the problem | 
+ **domain** | **str**| url or id of the domain | 
 
 ### Return type
 
@@ -72,7 +72,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_delete_directory_from_uncommitted_problem_config**
-> FileInfoResp v1_delete_directory_from_uncommitted_problem_config(path, domain, problem, recursive=recursive)
+> FileInfoResp v1_delete_directory_from_uncommitted_problem_config(path, problem, domain, recursive=recursive)
 
 Delete Directory From Uncommitted Problem Config
 
@@ -88,13 +88,13 @@ from pprint import pprint
 # create an instance of the API class
 api_instance = joj.horse_client.ProblemConfigApi(joj.horse_client.ApiClient(configuration))
 path = 'path_example' # str | 
-domain = 'domain_example' # str | url or id of the domain
 problem = 'problem_example' # str | url or id of the problem
+domain = 'domain_example' # str | url or id of the domain
 recursive = false # bool | Act as -r in the rm command. If false, only empty directory can be deleted. (optional) (default to false)
 
 try:
     # Delete Directory From Uncommitted Problem Config
-    api_response = api_instance.v1_delete_directory_from_uncommitted_problem_config(path, domain, problem, recursive=recursive)
+    api_response = api_instance.v1_delete_directory_from_uncommitted_problem_config(path, problem, domain, recursive=recursive)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling ProblemConfigApi->v1_delete_directory_from_uncommitted_problem_config: %s\n" % e)
@@ -105,8 +105,8 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **path** | **str**|  | 
- **domain** | **str**| url or id of the domain | 
  **problem** | **str**| url or id of the problem | 
+ **domain** | **str**| url or id of the domain | 
  **recursive** | **bool**| Act as -r in the rm command. If false, only empty directory can be deleted. | [optional] [default to false]
 
 ### Return type
@@ -125,7 +125,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_delete_file_from_uncommitted_problem_config**
-> FileInfoResp v1_delete_file_from_uncommitted_problem_config(path, domain, problem)
+> FileInfoResp v1_delete_file_from_uncommitted_problem_config(path, problem, domain)
 
 Delete File From Uncommitted Problem Config
 
@@ -141,12 +141,12 @@ from pprint import pprint
 # create an instance of the API class
 api_instance = joj.horse_client.ProblemConfigApi(joj.horse_client.ApiClient(configuration))
 path = 'path_example' # str | 
-domain = 'domain_example' # str | url or id of the domain
 problem = 'problem_example' # str | url or id of the problem
+domain = 'domain_example' # str | url or id of the domain
 
 try:
     # Delete File From Uncommitted Problem Config
-    api_response = api_instance.v1_delete_file_from_uncommitted_problem_config(path, domain, problem)
+    api_response = api_instance.v1_delete_file_from_uncommitted_problem_config(path, problem, domain)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling ProblemConfigApi->v1_delete_file_from_uncommitted_problem_config: %s\n" % e)
@@ -157,8 +157,8 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **path** | **str**|  | 
- **domain** | **str**| url or id of the domain | 
  **problem** | **str**| url or id of the problem | 
+ **domain** | **str**| url or id of the domain | 
 
 ### Return type
 
@@ -486,7 +486,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_reset_problem_config**
-> EmptyResp v1_reset_problem_config(body, domain, problem)
+> EmptyResp v1_reset_problem_config(body, problem, domain)
 
 Reset Problem Config
 
@@ -502,12 +502,12 @@ from pprint import pprint
 # create an instance of the API class
 api_instance = joj.horse_client.ProblemConfigApi(joj.horse_client.ApiClient(configuration))
 body = joj.horse_client.LakeFSReset() # LakeFSReset | 
-domain = 'domain_example' # str | url or id of the domain
 problem = 'problem_example' # str | url or id of the problem
+domain = 'domain_example' # str | url or id of the domain
 
 try:
     # Reset Problem Config
-    api_response = api_instance.v1_reset_problem_config(body, domain, problem)
+    api_response = api_instance.v1_reset_problem_config(body, problem, domain)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling ProblemConfigApi->v1_reset_problem_config: %s\n" % e)
@@ -518,8 +518,8 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**LakeFSReset**](LakeFSReset.md)|  | 
- **domain** | **str**| url or id of the domain | 
  **problem** | **str**| url or id of the problem | 
+ **domain** | **str**| url or id of the domain | 
 
 ### Return type
 
@@ -537,7 +537,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_update_problem_config_by_archive**
-> EmptyResp v1_update_problem_config_by_archive(file, domain, problem)
+> EmptyResp v1_update_problem_config_by_archive(file, problem, domain)
 
 Update Problem Config By Archive
 
@@ -555,12 +555,12 @@ from pprint import pprint
 # create an instance of the API class
 api_instance = joj.horse_client.ProblemConfigApi(joj.horse_client.ApiClient(configuration))
 file = 'file_example' # str | 
-domain = 'domain_example' # str | url or id of the domain
 problem = 'problem_example' # str | url or id of the problem
+domain = 'domain_example' # str | url or id of the domain
 
 try:
     # Update Problem Config By Archive
-    api_response = api_instance.v1_update_problem_config_by_archive(file, domain, problem)
+    api_response = api_instance.v1_update_problem_config_by_archive(file, problem, domain)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling ProblemConfigApi->v1_update_problem_config_by_archive: %s\n" % e)
@@ -571,8 +571,8 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **file** | **str**|  | 
- **domain** | **str**| url or id of the domain | 
  **problem** | **str**| url or id of the problem | 
+ **domain** | **str**| url or id of the domain | 
 
 ### Return type
 
@@ -590,7 +590,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_upload_file_to_problem_config**
-> FileInfoResp v1_upload_file_to_problem_config(file, domain, problem, path)
+> FileInfoResp v1_upload_file_to_problem_config(file, problem, domain, path)
 
 Upload File To Problem Config
 
@@ -608,13 +608,13 @@ from pprint import pprint
 # create an instance of the API class
 api_instance = joj.horse_client.ProblemConfigApi(joj.horse_client.ApiClient(configuration))
 file = 'file_example' # str | 
-domain = 'domain_example' # str | url or id of the domain
 problem = 'problem_example' # str | url or id of the problem
+domain = 'domain_example' # str | url or id of the domain
 path = 'path_example' # str | 
 
 try:
     # Upload File To Problem Config
-    api_response = api_instance.v1_upload_file_to_problem_config(file, domain, problem, path)
+    api_response = api_instance.v1_upload_file_to_problem_config(file, problem, domain, path)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling ProblemConfigApi->v1_upload_file_to_problem_config: %s\n" % e)
@@ -625,8 +625,8 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **file** | **str**|  | 
- **domain** | **str**| url or id of the domain | 
  **problem** | **str**| url or id of the problem | 
+ **domain** | **str**| url or id of the domain | 
  **path** | **str**|  | 
 
 ### Return type
@@ -645,7 +645,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_upload_file_to_root_in_problem_config**
-> FileInfoResp v1_upload_file_to_root_in_problem_config(file, domain, problem)
+> FileInfoResp v1_upload_file_to_root_in_problem_config(file, problem, domain)
 
 Upload File To Root In Problem Config
 
@@ -663,12 +663,12 @@ from pprint import pprint
 # create an instance of the API class
 api_instance = joj.horse_client.ProblemConfigApi(joj.horse_client.ApiClient(configuration))
 file = 'file_example' # str | 
-domain = 'domain_example' # str | url or id of the domain
 problem = 'problem_example' # str | url or id of the problem
+domain = 'domain_example' # str | url or id of the domain
 
 try:
     # Upload File To Root In Problem Config
-    api_response = api_instance.v1_upload_file_to_root_in_problem_config(file, domain, problem)
+    api_response = api_instance.v1_upload_file_to_root_in_problem_config(file, problem, domain)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling ProblemConfigApi->v1_upload_file_to_root_in_problem_config: %s\n" % e)
@@ -679,8 +679,8 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **file** | **str**|  | 
- **domain** | **str**| url or id of the domain | 
  **problem** | **str**| url or id of the problem | 
+ **domain** | **str**| url or id of the domain | 
 
 ### Return type
 
