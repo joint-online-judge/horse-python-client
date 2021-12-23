@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: 81180bd@2021-12-22T11:27:51Z  # noqa: E501
+    Git version: 4d93810@2021-12-23T04:29:35Z  # noqa: E501
 
     OpenAPI spec version: 1
     
@@ -28,14 +28,66 @@ class ProblemConfigCommit(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'message': 'str',
+        'data_version': 'int'
     }
 
     attribute_map = {
+        'message': 'message',
+        'data_version': 'dataVersion'
     }
 
-    def __init__(self):  # noqa: E501
+    def __init__(self, message='', data_version=2):  # noqa: E501
         """ProblemConfigCommit - a model defined in Swagger"""  # noqa: E501
+        self._message = None
+        self._data_version = None
         self.discriminator = None
+        if message is not None:
+            self.message = message
+        if data_version is not None:
+            self.data_version = data_version
+
+    @property
+    def message(self):
+        """Gets the message of this ProblemConfigCommit.  # noqa: E501
+
+
+        :return: The message of this ProblemConfigCommit.  # noqa: E501
+        :rtype: str
+        """
+        return self._message
+
+    @message.setter
+    def message(self, message):
+        """Sets the message of this ProblemConfigCommit.
+
+
+        :param message: The message of this ProblemConfigCommit.  # noqa: E501
+        :type: str
+        """
+
+        self._message = message
+
+    @property
+    def data_version(self):
+        """Gets the data_version of this ProblemConfigCommit.  # noqa: E501
+
+
+        :return: The data_version of this ProblemConfigCommit.  # noqa: E501
+        :rtype: int
+        """
+        return self._data_version
+
+    @data_version.setter
+    def data_version(self, data_version):
+        """Sets the data_version of this ProblemConfigCommit.
+
+
+        :param data_version: The data_version of this ProblemConfigCommit.  # noqa: E501
+        :type: int
+        """
+
+        self._data_version = data_version
 
     def to_dict(self):
         """Returns the model properties as a dict"""
