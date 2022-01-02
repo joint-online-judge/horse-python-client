@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: 11d34df@2022-01-02T07:42:26Z  # noqa: E501
+    Git version: 5f46238@2022-01-02T08:09:18Z  # noqa: E501
 
     OpenAPI spec version: 1
     
@@ -35,6 +35,13 @@ class TestAuthApi(unittest.TestCase):
         """
         pass
 
+    def test_v1_list_oauth2(self):
+        """Test case for v1_list_oauth2
+
+        List Oauth2  # noqa: E501
+        """
+        pass
+
     def test_v1_login(self):
         """Test case for v1_login
 
@@ -46,6 +53,13 @@ class TestAuthApi(unittest.TestCase):
         """Test case for v1_logout
 
         Logout  # noqa: E501
+        """
+        pass
+
+    def test_v1_oauth_authorize(self):
+        """Test case for v1_oauth_authorize
+
+        Oauth Authorize  # noqa: E501
         """
         pass
 

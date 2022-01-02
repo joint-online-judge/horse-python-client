@@ -4,7 +4,7 @@
 """
     JOJ Horse
 
-    Git version: 11d34df@2022-01-02T07:42:26Z  # noqa: E501
+    Git version: 5f46238@2022-01-02T08:09:18Z  # noqa: E501
 
     OpenAPI spec version: 1
     
@@ -68,6 +68,9 @@ from joj.horse_client.models.judge_claim import JudgeClaim
 from joj.horse_client.models.judge_credentials import JudgeCredentials
 from joj.horse_client.models.judge_credentials_resp import JudgeCredentialsResp
 from joj.horse_client.models.lake_fs_reset import LakeFSReset
+from joj.horse_client.models.o_auth2_client import OAuth2Client
+from joj.horse_client.models.o_auth2_client_list import OAuth2ClientList
+from joj.horse_client.models.o_auth2_client_list_resp import OAuth2ClientListResp
 from joj.horse_client.models.o_auth2_password_request_form import OAuth2PasswordRequestForm
 from joj.horse_client.models.problem import Problem
 from joj.horse_client.models.problem_clone import ProblemClone
@@ -110,6 +113,8 @@ from joj.horse_client.models.record_preview import RecordPreview
 from joj.horse_client.models.record_resp import RecordResp
 from joj.horse_client.models.record_result import RecordResult
 from joj.horse_client.models.record_state import RecordState
+from joj.horse_client.models.redirect import Redirect
+from joj.horse_client.models.redirect_resp import RedirectResp
 from joj.horse_client.models.user import User
 from joj.horse_client.models.user_create import UserCreate
 from joj.horse_client.models.user_detail import UserDetail
