@@ -15,12 +15,12 @@ from __future__ import absolute_import
 import unittest
 
 import joj.horse_client
-from joj.horse_client.models.record_state import RecordState  # noqa: E501
+from joj.horse_client.models.user_edit import UserEdit  # noqa: E501
 from joj.horse_client.rest import ApiException
 
 
-class TestRecordState(unittest.TestCase):
-    """RecordState unit test stubs"""
+class TestUserEdit(unittest.TestCase):
+    """UserEdit unit test stubs"""
 
     def setUp(self):
         pass
@@ -28,10 +28,10 @@ class TestRecordState(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testRecordState(self):
-        """Test RecordState"""
+    def testUserEdit(self):
+        """Test UserEdit"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = joj.horse_client.models.record_state.RecordState()  # noqa: E501
+        # model = joj.horse_client.models.user_edit.UserEdit()  # noqa: E501
         pass
 
 

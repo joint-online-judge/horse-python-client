@@ -10,6 +10,7 @@ Method | HTTP request | Description
 [**v1_get_user_problems**](UserApi.md#v1_get_user_problems) | **GET** /users/{uid}/problems | Get User Problems
 [**v1_list_user_domains**](UserApi.md#v1_list_user_domains) | **GET** /users/{uid}/domains | List User Domains
 [**v1_list_users**](UserApi.md#v1_list_users) | **GET** /users | List Users
+[**v1_update_current_user**](UserApi.md#v1_update_current_user) | **PATCH** /user | Update Current User
 
 # **v1_change_password**
 > UserResp v1_change_password(body)
@@ -303,6 +304,53 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **v1_update_current_user**
+> UserResp v1_update_current_user(body)
+
+Update Current User
+
+### Example
+```python
+from __future__ import print_function
+import time
+import joj.horse_client
+from joj.horse_client.rest import ApiException
+from pprint import pprint
+
+
+# create an instance of the API class
+api_instance = joj.horse_client.UserApi(joj.horse_client.ApiClient(configuration))
+body = joj.horse_client.UserEdit() # UserEdit | 
+
+try:
+    # Update Current User
+    api_response = api_instance.v1_update_current_user(body)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling UserApi->v1_update_current_user: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**UserEdit**](UserEdit.md)|  | 
+
+### Return type
+
+[**UserResp**](UserResp.md)
+
+### Authorization
+
+[HTTPBearer](../README.md#HTTPBearer)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

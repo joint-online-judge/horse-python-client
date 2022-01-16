@@ -4,7 +4,7 @@
 """
     JOJ Horse
 
-    Git version: 9d456e8@2022-01-08T02:21:38Z  # noqa: E501
+    Git version: 07b808e@2022-01-16T17:39:01Z  # noqa: E501
 
     OpenAPI spec version: 1
     
@@ -119,6 +119,7 @@ from joj.horse_client.models.user import User
 from joj.horse_client.models.user_create import UserCreate
 from joj.horse_client.models.user_detail import UserDetail
 from joj.horse_client.models.user_detail_resp import UserDetailResp
+from joj.horse_client.models.user_edit import UserEdit
 from joj.horse_client.models.user_list import UserList
 from joj.horse_client.models.user_list_resp import UserListResp
 from joj.horse_client.models.user_reset_password import UserResetPassword
