@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: 07b808e@2022-01-16T17:39:01Z  # noqa: E501
+    Git version: eaa141a@2022-01-17T16:33:07Z  # noqa: E501
 
     OpenAPI spec version: 1
     
@@ -43,7 +43,7 @@ class RecordPermission(object):
         'rejudge': 'rejudge'
     }
 
-    def __init__(self, view=True, detail=False, code=False, judge=False, rejudge=False):  # noqa: E501
+    def __init__(self, view=False, detail=False, code=False, judge=False, rejudge=False):  # noqa: E501
         """RecordPermission - a model defined in Swagger"""  # noqa: E501
         self._view = None
         self._detail = None

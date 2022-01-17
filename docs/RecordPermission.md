@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**view** | **bool** |  | [optional] [default to True]
+**view** | **bool** |  | [optional] [default to False]
 **detail** | **bool** |  | [optional] [default to False]
 **code** | **bool** |  | [optional] [default to False]
 **judge** | **bool** |  | [optional] [default to False]

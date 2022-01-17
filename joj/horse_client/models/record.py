@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: 07b808e@2022-01-16T17:39:01Z  # noqa: E501
+    Git version: eaa141a@2022-01-17T16:33:07Z  # noqa: E501
 
     OpenAPI spec version: 1
     
@@ -29,76 +29,45 @@ class Record(object):
     """
     swagger_types = {
         'id': 'str',
+        'domain_id': 'str',
         'state': 'AllOfRecordState',
         'language': 'str',
-        'commit_id': 'str',
-        'task_id': 'str',
         'score': 'int',
         'time_ms': 'int',
-        'memory_kb': 'int',
-        'problem_set_id': 'str',
-        'problem_id': 'str',
-        'problem_config_id': 'str',
-        'committer_id': 'str',
-        'judger_id': 'str'
+        'memory_kb': 'int'
     }
 
     attribute_map = {
         'id': 'id',
+        'domain_id': 'domainId',
         'state': 'state',
         'language': 'language',
-        'commit_id': 'commitId',
-        'task_id': 'taskId',
         'score': 'score',
         'time_ms': 'timeMs',
-        'memory_kb': 'memoryKb',
-        'problem_set_id': 'problemSetId',
-        'problem_id': 'problemId',
-        'problem_config_id': 'problemConfigId',
-        'committer_id': 'committerId',
-        'judger_id': 'judgerId'
+        'memory_kb': 'memoryKb'
     }
 
-    def __init__(self, id=None, state=None, language=None, commit_id=None, task_id=None, score=0, time_ms=0, memory_kb=0, problem_set_id=None, problem_id=None, problem_config_id=None, committer_id=None, judger_id=None):  # noqa: E501
+    def __init__(self, id=None, domain_id=None, state=None, language=None, score=0, time_ms=0, memory_kb=0):  # noqa: E501
         """Record - a model defined in Swagger"""  # noqa: E501
         self._id = None
+        self._domain_id = None
         self._state = None
         self._language = None
-        self._commit_id = None
-        self._task_id = None
         self._score = None
         self._time_ms = None
         self._memory_kb = None
-        self._problem_set_id = None
-        self._problem_id = None
-        self._problem_config_id = None
-        self._committer_id = None
-        self._judger_id = None
         self.discriminator = None
         self.id = id
+        self.domain_id = domain_id
         if state is not None:
             self.state = state
         self.language = language
-        if commit_id is not None:
-            self.commit_id = commit_id
-        if task_id is not None:
-            self.task_id = task_id
         if score is not None:
             self.score = score
         if time_ms is not None:
             self.time_ms = time_ms
         if memory_kb is not None:
             self.memory_kb = memory_kb
-        if problem_set_id is not None:
-            self.problem_set_id = problem_set_id
-        if problem_id is not None:
-            self.problem_id = problem_id
-        if problem_config_id is not None:
-            self.problem_config_id = problem_config_id
-        if committer_id is not None:
-            self.committer_id = committer_id
-        if judger_id is not None:
-            self.judger_id = judger_id
 
     @property
     def id(self):
@@ -122,6 +91,29 @@ class Record(object):
             raise ValueError("Invalid value for `id`, must not be `None`")  # noqa: E501
 
         self._id = id
+
+    @property
+    def domain_id(self):
+        """Gets the domain_id of this Record.  # noqa: E501
+
+
+        :return: The domain_id of this Record.  # noqa: E501
+        :rtype: str
+        """
+        return self._domain_id
+
+    @domain_id.setter
+    def domain_id(self, domain_id):
+        """Sets the domain_id of this Record.
+
+
+        :param domain_id: The domain_id of this Record.  # noqa: E501
+        :type: str
+        """
+        if domain_id is None:
+            raise ValueError("Invalid value for `domain_id`, must not be `None`")  # noqa: E501
+
+        self._domain_id = domain_id
 
     @property
     def state(self):
@@ -166,48 +158,6 @@ class Record(object):
             raise ValueError("Invalid value for `language`, must not be `None`")  # noqa: E501
 
         self._language = language
-
-    @property
-    def commit_id(self):
-        """Gets the commit_id of this Record.  # noqa: E501
-
-
-        :return: The commit_id of this Record.  # noqa: E501
-        :rtype: str
-        """
-        return self._commit_id
-
-    @commit_id.setter
-    def commit_id(self, commit_id):
-        """Sets the commit_id of this Record.
-
-
-        :param commit_id: The commit_id of this Record.  # noqa: E501
-        :type: str
-        """
-
-        self._commit_id = commit_id
-
-    @property
-    def task_id(self):
-        """Gets the task_id of this Record.  # noqa: E501
-
-
-        :return: The task_id of this Record.  # noqa: E501
-        :rtype: str
-        """
-        return self._task_id
-
-    @task_id.setter
-    def task_id(self, task_id):
-        """Sets the task_id of this Record.
-
-
-        :param task_id: The task_id of this Record.  # noqa: E501
-        :type: str
-        """
-
-        self._task_id = task_id
 
     @property
     def score(self):
@@ -271,111 +221,6 @@ class Record(object):
         """
 
         self._memory_kb = memory_kb
-
-    @property
-    def problem_set_id(self):
-        """Gets the problem_set_id of this Record.  # noqa: E501
-
-
-        :return: The problem_set_id of this Record.  # noqa: E501
-        :rtype: str
-        """
-        return self._problem_set_id
-
-    @problem_set_id.setter
-    def problem_set_id(self, problem_set_id):
-        """Sets the problem_set_id of this Record.
-
-
-        :param problem_set_id: The problem_set_id of this Record.  # noqa: E501
-        :type: str
-        """
-
-        self._problem_set_id = problem_set_id
-
-    @property
-    def problem_id(self):
-        """Gets the problem_id of this Record.  # noqa: E501
-
-
-        :return: The problem_id of this Record.  # noqa: E501
-        :rtype: str
-        """
-        return self._problem_id
-
-    @problem_id.setter
-    def problem_id(self, problem_id):
-        """Sets the problem_id of this Record.
-
-
-        :param problem_id: The problem_id of this Record.  # noqa: E501
-        :type: str
-        """
-
-        self._problem_id = problem_id
-
-    @property
-    def problem_config_id(self):
-        """Gets the problem_config_id of this Record.  # noqa: E501
-
-
-        :return: The problem_config_id of this Record.  # noqa: E501
-        :rtype: str
-        """
-        return self._problem_config_id
-
-    @problem_config_id.setter
-    def problem_config_id(self, problem_config_id):
-        """Sets the problem_config_id of this Record.
-
-
-        :param problem_config_id: The problem_config_id of this Record.  # noqa: E501
-        :type: str
-        """
-
-        self._problem_config_id = problem_config_id
-
-    @property
-    def committer_id(self):
-        """Gets the committer_id of this Record.  # noqa: E501
-
-
-        :return: The committer_id of this Record.  # noqa: E501
-        :rtype: str
-        """
-        return self._committer_id
-
-    @committer_id.setter
-    def committer_id(self, committer_id):
-        """Sets the committer_id of this Record.
-
-
-        :param committer_id: The committer_id of this Record.  # noqa: E501
-        :type: str
-        """
-
-        self._committer_id = committer_id
-
-    @property
-    def judger_id(self):
-        """Gets the judger_id of this Record.  # noqa: E501
-
-
-        :return: The judger_id of this Record.  # noqa: E501
-        :rtype: str
-        """
-        return self._judger_id
-
-    @judger_id.setter
-    def judger_id(self, judger_id):
-        """Sets the judger_id of this Record.
-
-
-        :param judger_id: The judger_id of this Record.  # noqa: E501
-        :type: str
-        """
-
-        self._judger_id = judger_id
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -9,7 +9,7 @@ Method | HTTP request | Description
 [**v1_list_records_in_domain**](RecordApi.md#v1_list_records_in_domain) | **GET** /domains/{domain}/records | List Records In Domain
 
 # **v1_get_record**
-> RecordResp v1_get_record(record, domain)
+> RecordDetailResp v1_get_record(record, domain)
 
 Get Record
 
@@ -24,7 +24,7 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = joj.horse_client.RecordApi(joj.horse_client.ApiClient(configuration))
-record = 'record_example' # str | 
+record = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # str | 
 domain = 'domain_example' # str | url or id of the domain
 
 try:
@@ -39,12 +39,12 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **record** | **str**|  | 
+ **record** | [**str**](.md)|  | 
  **domain** | **str**| url or id of the domain | 
 
 ### Return type
 
-[**RecordResp**](RecordResp.md)
+[**RecordDetailResp**](RecordDetailResp.md)
 
 ### Authorization
 
@@ -73,7 +73,7 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = joj.horse_client.RecordApi(joj.horse_client.ApiClient(configuration))
-record = 'record_example' # str | 
+record = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # str | 
 domain = 'domain_example' # str | url or id of the domain
 
 try:
@@ -88,7 +88,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **record** | **str**|  | 
+ **record** | [**str**](.md)|  | 
  **domain** | **str**| url or id of the domain | 
 
 ### Return type
@@ -107,7 +107,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_list_records_in_domain**
-> RecordListResp v1_list_records_in_domain(domain, ordering=ordering, offset=offset, limit=limit)
+> RecordListResp v1_list_records_in_domain(domain, problem_set=problem_set, problem=problem, submitter_id=submitter_id, ordering=ordering, offset=offset, limit=limit)
 
 List Records In Domain
 
@@ -123,13 +123,16 @@ from pprint import pprint
 # create an instance of the API class
 api_instance = joj.horse_client.RecordApi(joj.horse_client.ApiClient(configuration))
 domain = 'domain_example' # str | url or id of the domain
+problem_set = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # str | problem set id (optional)
+problem = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # str | problem id (optional)
+submitter_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # str | submitter uid (optional)
 ordering = '' # str | Comma seperated list of ordering the results. You may specify reverse orderings by prefixing the field name with '-'.  Available fields: created_at,updated_at (optional)
 offset = 0 # int |  (optional) (default to 0)
 limit = 100 # int |  (optional) (default to 100)
 
 try:
     # List Records In Domain
-    api_response = api_instance.v1_list_records_in_domain(domain, ordering=ordering, offset=offset, limit=limit)
+    api_response = api_instance.v1_list_records_in_domain(domain, problem_set=problem_set, problem=problem, submitter_id=submitter_id, ordering=ordering, offset=offset, limit=limit)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling RecordApi->v1_list_records_in_domain: %s\n" % e)
@@ -140,6 +143,9 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **domain** | **str**| url or id of the domain | 
+ **problem_set** | [**str**](.md)| problem set id | [optional] 
+ **problem** | [**str**](.md)| problem id | [optional] 
+ **submitter_id** | [**str**](.md)| submitter uid | [optional] 
  **ordering** | **str**| Comma seperated list of ordering the results. You may specify reverse orderings by prefixing the field name with &#x27;-&#x27;.  Available fields: created_at,updated_at | [optional] 
  **offset** | **int**|  | [optional] [default to 0]
  **limit** | **int**|  | [optional] [default to 100]

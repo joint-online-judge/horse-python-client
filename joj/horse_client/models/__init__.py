@@ -4,7 +4,7 @@
 """
     JOJ Horse
 
-    Git version: 07b808e@2022-01-16T17:39:01Z  # noqa: E501
+    Git version: eaa141a@2022-01-17T16:33:07Z  # noqa: E501
 
     OpenAPI spec version: 1
     
@@ -18,6 +18,8 @@ from joj.horse_client.models.all_of_domain_permission_general import AllOfDomain
 from joj.horse_client.models.all_of_domain_permission_problem import AllOfDomainPermissionProblem
 from joj.horse_client.models.all_of_domain_permission_problem_set import AllOfDomainPermissionProblemSet
 from joj.horse_client.models.all_of_domain_permission_record import AllOfDomainPermissionRecord
+from joj.horse_client.models.all_of_record_case_state import AllOfRecordCaseState
+from joj.horse_client.models.all_of_record_detail_state import AllOfRecordDetailState
 from joj.horse_client.models.all_of_record_state import AllOfRecordState
 from joj.horse_client.models.any_of_file_info_mtime import AnyOfFileInfoMtime
 from joj.horse_client.models.archive_format import ArchiveFormat
@@ -78,6 +80,8 @@ from joj.horse_client.models.problem_config import ProblemConfig
 from joj.horse_client.models.problem_config_commit import ProblemConfigCommit
 from joj.horse_client.models.problem_config_resp import ProblemConfigResp
 from joj.horse_client.models.problem_create import ProblemCreate
+from joj.horse_client.models.problem_detail import ProblemDetail
+from joj.horse_client.models.problem_detail_resp import ProblemDetailResp
 from joj.horse_client.models.problem_detail_with_latest_record import ProblemDetailWithLatestRecord
 from joj.horse_client.models.problem_detail_with_latest_record_resp import ProblemDetailWithLatestRecordResp
 from joj.horse_client.models.problem_edit import ProblemEdit
@@ -105,7 +109,11 @@ from joj.horse_client.models.problem_with_latest_record import ProblemWithLatest
 from joj.horse_client.models.problem_with_latest_record_list import ProblemWithLatestRecordList
 from joj.horse_client.models.problem_with_latest_record_list_resp import ProblemWithLatestRecordListResp
 from joj.horse_client.models.record import Record
+from joj.horse_client.models.record_case import RecordCase
+from joj.horse_client.models.record_case_result import RecordCaseResult
 from joj.horse_client.models.record_code_type import RecordCodeType
+from joj.horse_client.models.record_detail import RecordDetail
+from joj.horse_client.models.record_detail_resp import RecordDetailResp
 from joj.horse_client.models.record_list import RecordList
 from joj.horse_client.models.record_list_resp import RecordListResp
 from joj.horse_client.models.record_permission import RecordPermission

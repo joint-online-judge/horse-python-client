@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: 07b808e@2022-01-16T17:39:01Z  # noqa: E501
+    Git version: eaa141a@2022-01-17T16:33:07Z  # noqa: E501
 
     OpenAPI spec version: 1
     
@@ -43,7 +43,7 @@ class RecordApi(object):
         :param async_req bool
         :param str record: (required)
         :param str domain: url or id of the domain (required)
-        :return: RecordResp
+        :return: RecordDetailResp
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -65,7 +65,7 @@ class RecordApi(object):
         :param async_req bool
         :param str record: (required)
         :param str domain: url or id of the domain (required)
-        :return: RecordResp
+        :return: RecordDetailResp
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -125,7 +125,7 @@ class RecordApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='RecordResp',  # noqa: E501
+            response_type='RecordDetailResp',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -244,6 +244,9 @@ class RecordApi(object):
 
         :param async_req bool
         :param str domain: url or id of the domain (required)
+        :param str problem_set: problem set id
+        :param str problem: problem id
+        :param str submitter_id: submitter uid
         :param str ordering: Comma seperated list of ordering the results. You may specify reverse orderings by prefixing the field name with '-'.  Available fields: created_at,updated_at
         :param int offset:
         :param int limit:
@@ -268,6 +271,9 @@ class RecordApi(object):
 
         :param async_req bool
         :param str domain: url or id of the domain (required)
+        :param str problem_set: problem set id
+        :param str problem: problem id
+        :param str submitter_id: submitter uid
         :param str ordering: Comma seperated list of ordering the results. You may specify reverse orderings by prefixing the field name with '-'.  Available fields: created_at,updated_at
         :param int offset:
         :param int limit:
@@ -276,7 +282,7 @@ class RecordApi(object):
                  returns the request thread.
         """
 
-        all_params = ['domain', 'ordering', 'offset', 'limit']  # noqa: E501
+        all_params = ['domain', 'problem_set', 'problem', 'submitter_id', 'ordering', 'offset', 'limit']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -303,6 +309,12 @@ class RecordApi(object):
             path_params['domain'] = params['domain']  # noqa: E501
 
         query_params = []
+        if 'problem_set' in params:
+            query_params.append(('problemSet', params['problem_set']))  # noqa: E501
+        if 'problem' in params:
+            query_params.append(('problem', params['problem']))  # noqa: E501
+        if 'submitter_id' in params:
+            query_params.append(('submitterId', params['submitter_id']))  # noqa: E501
         if 'ordering' in params:
             query_params.append(('ordering', params['ordering']))  # noqa: E501
         if 'offset' in params:

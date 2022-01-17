@@ -62,7 +62,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_create_problem**
-> ProblemResp v1_create_problem(body, domain)
+> ProblemDetailResp v1_create_problem(body, domain)
 
 Create Problem
 
@@ -97,7 +97,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ProblemResp**](ProblemResp.md)
+[**ProblemDetailResp**](ProblemDetailResp.md)
 
 ### Authorization
 
