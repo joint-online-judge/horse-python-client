@@ -3,6 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**created_at** | **datetime** |  | [optional] 
+**updated_at** | **datetime** |  | [optional] 
 **id** | **str** |  | 
 **domain_id** | **str** |  | 
 **state** | **AllOfRecordState** |  | [optional] 

@@ -3,6 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**created_at** | **datetime** |  | [optional] 
+**updated_at** | **datetime** |  | [optional] 
 **id** | **str** |  | 
 **domain_id** | **str** |  | 
 **state** | **AllOfRecordDetailState** |  | [optional] 
@@ -10,8 +12,6 @@ Name | Type | Description | Notes
 **score** | **int** |  | [optional] [default to 0]
 **time_ms** | **int** |  | [optional] [default to 0]
 **memory_kb** | **int** |  | [optional] [default to 0]
-**created_at** | **datetime** |  | [optional] 
-**updated_at** | **datetime** |  | [optional] 
 **commit_id** | **str** |  | [optional] 
 **task_id** | **str** |  | [optional] 
 **cases** | [**list[RecordCase]**](RecordCase.md) |  | [optional] 

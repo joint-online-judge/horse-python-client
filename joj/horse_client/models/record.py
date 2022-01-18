@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: eaa141a@2022-01-17T16:33:07Z  # noqa: E501
+    Git version: 62435b4@2022-01-18T20:38:54Z  # noqa: E501
 
     OpenAPI spec version: 1
     
@@ -28,6 +28,8 @@ class Record(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'created_at': 'datetime',
+        'updated_at': 'datetime',
         'id': 'str',
         'domain_id': 'str',
         'state': 'AllOfRecordState',
@@ -38,6 +40,8 @@ class Record(object):
     }
 
     attribute_map = {
+        'created_at': 'createdAt',
+        'updated_at': 'updatedAt',
         'id': 'id',
         'domain_id': 'domainId',
         'state': 'state',
@@ -47,8 +51,10 @@ class Record(object):
         'memory_kb': 'memoryKb'
     }
 
-    def __init__(self, id=None, domain_id=None, state=None, language=None, score=0, time_ms=0, memory_kb=0):  # noqa: E501
+    def __init__(self, created_at=None, updated_at=None, id=None, domain_id=None, state=None, language=None, score=0, time_ms=0, memory_kb=0):  # noqa: E501
         """Record - a model defined in Swagger"""  # noqa: E501
+        self._created_at = None
+        self._updated_at = None
         self._id = None
         self._domain_id = None
         self._state = None
@@ -57,6 +63,10 @@ class Record(object):
         self._time_ms = None
         self._memory_kb = None
         self.discriminator = None
+        if created_at is not None:
+            self.created_at = created_at
+        if updated_at is not None:
+            self.updated_at = updated_at
         self.id = id
         self.domain_id = domain_id
         if state is not None:
@@ -68,6 +78,48 @@ class Record(object):
             self.time_ms = time_ms
         if memory_kb is not None:
             self.memory_kb = memory_kb
+
+    @property
+    def created_at(self):
+        """Gets the created_at of this Record.  # noqa: E501
+
+
+        :return: The created_at of this Record.  # noqa: E501
+        :rtype: datetime
+        """
+        return self._created_at
+
+    @created_at.setter
+    def created_at(self, created_at):
+        """Sets the created_at of this Record.
+
+
+        :param created_at: The created_at of this Record.  # noqa: E501
+        :type: datetime
+        """
+
+        self._created_at = created_at
+
+    @property
+    def updated_at(self):
+        """Gets the updated_at of this Record.  # noqa: E501
+
+
+        :return: The updated_at of this Record.  # noqa: E501
+        :rtype: datetime
+        """
+        return self._updated_at
+
+    @updated_at.setter
+    def updated_at(self, updated_at):
+        """Sets the updated_at of this Record.
+
+
+        :param updated_at: The updated_at of this Record.  # noqa: E501
+        :type: datetime
+        """
+
+        self._updated_at = updated_at
 
     @property
     def id(self):
