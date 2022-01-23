@@ -716,7 +716,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_list_domain_roles**
-> DomainRoleListResp v1_list_domain_roles(domain)
+> DomainRoleListResp v1_list_domain_roles(domain, ordering=ordering)
 
 List Domain Roles
 
@@ -732,10 +732,11 @@ from pprint import pprint
 # create an instance of the API class
 api_instance = joj.horse_client.DomainApi(joj.horse_client.ApiClient(configuration))
 domain = 'domain_example' # str | url or id of the domain
+ordering = '' # str | Comma seperated list of ordering the results. You may specify reverse orderings by prefixing the field name with '-'.  Available fields: created_at,updated_at (optional)
 
 try:
     # List Domain Roles
-    api_response = api_instance.v1_list_domain_roles(domain)
+    api_response = api_instance.v1_list_domain_roles(domain, ordering=ordering)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling DomainApi->v1_list_domain_roles: %s\n" % e)
@@ -746,6 +747,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **domain** | **str**| url or id of the domain | 
+ **ordering** | **str**| Comma seperated list of ordering the results. You may specify reverse orderings by prefixing the field name with &#x27;-&#x27;.  Available fields: created_at,updated_at | [optional] 
 
 ### Return type
 

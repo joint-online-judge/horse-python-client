@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: b241594@2022-01-23T16:17:20Z  # noqa: E501
+    Git version: f3b5abe@2022-01-23T23:30:52Z  # noqa: E501
 
     OpenAPI spec version: 1
     
@@ -28,47 +28,19 @@ class DomainRoleEdit(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'role': 'str',
         'permission': 'object'
     }
 
     attribute_map = {
-        'role': 'role',
         'permission': 'permission'
     }
 
-    def __init__(self, role=None, permission=None):  # noqa: E501
+    def __init__(self, permission=None):  # noqa: E501
         """DomainRoleEdit - a model defined in Swagger"""  # noqa: E501
-        self._role = None
         self._permission = None
         self.discriminator = None
-        if role is not None:
-            self.role = role
         if permission is not None:
             self.permission = permission
-
-    @property
-    def role(self):
-        """Gets the role of this DomainRoleEdit.  # noqa: E501
-
-        New role name  # noqa: E501
-
-        :return: The role of this DomainRoleEdit.  # noqa: E501
-        :rtype: str
-        """
-        return self._role
-
-    @role.setter
-    def role(self, role):
-        """Sets the role of this DomainRoleEdit.
-
-        New role name  # noqa: E501
-
-        :param role: The role of this DomainRoleEdit.  # noqa: E501
-        :type: str
-        """
-
-        self._role = role
 
     @property
     def permission(self):

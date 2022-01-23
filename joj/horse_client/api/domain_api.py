@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: b241594@2022-01-23T16:17:20Z  # noqa: E501
+    Git version: f3b5abe@2022-01-23T23:30:52Z  # noqa: E501
 
     OpenAPI spec version: 1
     
@@ -1454,6 +1454,7 @@ class DomainApi(object):
 
         :param async_req bool
         :param str domain: url or id of the domain (required)
+        :param str ordering: Comma seperated list of ordering the results. You may specify reverse orderings by prefixing the field name with '-'.  Available fields: created_at,updated_at
         :return: DomainRoleListResp
                  If the method is called asynchronously,
                  returns the request thread.
@@ -1475,12 +1476,13 @@ class DomainApi(object):
 
         :param async_req bool
         :param str domain: url or id of the domain (required)
+        :param str ordering: Comma seperated list of ordering the results. You may specify reverse orderings by prefixing the field name with '-'.  Available fields: created_at,updated_at
         :return: DomainRoleListResp
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['domain']  # noqa: E501
+        all_params = ['domain', 'ordering']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -1507,6 +1509,8 @@ class DomainApi(object):
             path_params['domain'] = params['domain']  # noqa: E501
 
         query_params = []
+        if 'ordering' in params:
+            query_params.append(('ordering', params['ordering']))  # noqa: E501
 
         header_params = {}
 
