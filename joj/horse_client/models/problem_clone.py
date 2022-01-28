@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: f77c7db@2022-01-28T14:58:26Z  # noqa: E501
+    Git version: fa5e9c9@2022-01-28T15:03:21Z  # noqa: E501
 
     OpenAPI spec version: 1
     
@@ -28,27 +28,52 @@ class ProblemClone(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'from_domain': 'str',
         'problems': 'list[str]',
-        'problem_set': 'str',
         'new_group': 'bool'
     }
 
     attribute_map = {
+        'from_domain': 'fromDomain',
         'problems': 'problems',
-        'problem_set': 'problemSet',
         'new_group': 'newGroup'
     }
 
-    def __init__(self, problems=None, problem_set=None, new_group=False):  # noqa: E501
+    def __init__(self, from_domain=None, problems=None, new_group=False):  # noqa: E501
         """ProblemClone - a model defined in Swagger"""  # noqa: E501
+        self._from_domain = None
         self._problems = None
-        self._problem_set = None
         self._new_group = None
         self.discriminator = None
+        self.from_domain = from_domain
         self.problems = problems
-        self.problem_set = problem_set
         if new_group is not None:
             self.new_group = new_group
+
+    @property
+    def from_domain(self):
+        """Gets the from_domain of this ProblemClone.  # noqa: E501
+
+        url or id of the domain to clone from  # noqa: E501
+
+        :return: The from_domain of this ProblemClone.  # noqa: E501
+        :rtype: str
+        """
+        return self._from_domain
+
+    @from_domain.setter
+    def from_domain(self, from_domain):
+        """Sets the from_domain of this ProblemClone.
+
+        url or id of the domain to clone from  # noqa: E501
+
+        :param from_domain: The from_domain of this ProblemClone.  # noqa: E501
+        :type: str
+        """
+        if from_domain is None:
+            raise ValueError("Invalid value for `from_domain`, must not be `None`")  # noqa: E501
+
+        self._from_domain = from_domain
 
     @property
     def problems(self):
@@ -72,31 +97,6 @@ class ProblemClone(object):
             raise ValueError("Invalid value for `problems`, must not be `None`")  # noqa: E501
 
         self._problems = problems
-
-    @property
-    def problem_set(self):
-        """Gets the problem_set of this ProblemClone.  # noqa: E501
-
-        url or id of the problem set  # noqa: E501
-
-        :return: The problem_set of this ProblemClone.  # noqa: E501
-        :rtype: str
-        """
-        return self._problem_set
-
-    @problem_set.setter
-    def problem_set(self, problem_set):
-        """Sets the problem_set of this ProblemClone.
-
-        url or id of the problem set  # noqa: E501
-
-        :param problem_set: The problem_set of this ProblemClone.  # noqa: E501
-        :type: str
-        """
-        if problem_set is None:
-            raise ValueError("Invalid value for `problem_set`, must not be `None`")  # noqa: E501
-
-        self._problem_set = problem_set
 
     @property
     def new_group(self):
