@@ -23,6 +23,7 @@ Method | HTTP request | Description
 [**v1_list_domains**](DomainApi.md#v1_list_domains) | **GET** /domains | List Domains
 [**v1_remove_domain_user**](DomainApi.md#v1_remove_domain_user) | **DELETE** /domains/{domain}/users/{user} | Remove Domain User
 [**v1_search_domain_candidates**](DomainApi.md#v1_search_domain_candidates) | **GET** /domains/{domain}/candidates | Search Domain Candidates
+[**v1_search_domain_tags**](DomainApi.md#v1_search_domain_tags) | **GET** /domains/tags | Search Domain Tags
 [**v1_transfer_domain**](DomainApi.md#v1_transfer_domain) | **POST** /domains/{domain}/transfer | Transfer Domain
 [**v1_update_domain**](DomainApi.md#v1_update_domain) | **PATCH** /domains/{domain} | Update Domain
 [**v1_update_domain_invitation**](DomainApi.md#v1_update_domain_invitation) | **PATCH** /domains/{domain}/invitations/{invitation} | Update Domain Invitation
@@ -960,6 +961,53 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**UserWithDomainRoleListResp**](UserWithDomainRoleListResp.md)
+
+### Authorization
+
+[HTTPBearer](../README.md#HTTPBearer)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **v1_search_domain_tags**
+> DomainTagListResp v1_search_domain_tags(query)
+
+Search Domain Tags
+
+### Example
+```python
+from __future__ import print_function
+import time
+import joj.horse_client
+from joj.horse_client.rest import ApiException
+from pprint import pprint
+
+
+# create an instance of the API class
+api_instance = joj.horse_client.DomainApi(joj.horse_client.ApiClient(configuration))
+query = 'query_example' # str | search query
+
+try:
+    # Search Domain Tags
+    api_response = api_instance.v1_search_domain_tags(query)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling DomainApi->v1_search_domain_tags: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **query** | **str**| search query | 
+
+### Return type
+
+[**DomainTagListResp**](DomainTagListResp.md)
 
 ### Authorization
 
