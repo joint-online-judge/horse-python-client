@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: 4e88176@2022-02-19T13:04:07Z  # noqa: E501
+    Git version: 1654841@2022-02-19T13:17:30Z  # noqa: E501
 
     OpenAPI spec version: 1
     
@@ -1656,7 +1656,8 @@ class DomainApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param list[str] role:
+        :param list[str] roles:
+        :param list[str] tags:
         :param str ordering: Comma seperated list of ordering the results. You may specify reverse orderings by prefixing the field name with '-'.  Available fields: created_at,updated_at
         :param int offset:
         :param int limit:
@@ -1681,7 +1682,8 @@ class DomainApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param list[str] role:
+        :param list[str] roles:
+        :param list[str] tags:
         :param str ordering: Comma seperated list of ordering the results. You may specify reverse orderings by prefixing the field name with '-'.  Available fields: created_at,updated_at
         :param int offset:
         :param int limit:
@@ -1690,7 +1692,7 @@ class DomainApi(object):
                  returns the request thread.
         """
 
-        all_params = ['role', 'ordering', 'offset', 'limit']  # noqa: E501
+        all_params = ['roles', 'tags', 'ordering', 'offset', 'limit']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -1711,9 +1713,12 @@ class DomainApi(object):
         path_params = {}
 
         query_params = []
-        if 'role' in params:
-            query_params.append(('role', params['role']))  # noqa: E501
-            collection_formats['role'] = 'multi'  # noqa: E501
+        if 'roles' in params:
+            query_params.append(('roles', params['roles']))  # noqa: E501
+            collection_formats['roles'] = 'multi'  # noqa: E501
+        if 'tags' in params:
+            query_params.append(('tags', params['tags']))  # noqa: E501
+            collection_formats['tags'] = 'multi'  # noqa: E501
         if 'ordering' in params:
             query_params.append(('ordering', params['ordering']))  # noqa: E501
         if 'offset' in params:
