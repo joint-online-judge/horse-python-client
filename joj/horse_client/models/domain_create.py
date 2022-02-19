@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: 6cd4dbf@2022-02-19T13:21:15Z  # noqa: E501
+    Git version: 7bd720a@2022-02-19T13:26:22Z  # noqa: E501
 
     OpenAPI spec version: 1
     
@@ -33,7 +33,7 @@ class DomainCreate(object):
         'gravatar': 'str',
         'bulletin': 'str',
         'hidden': 'bool',
-        'tag': 'str'
+        'group': 'str'
     }
 
     attribute_map = {
@@ -42,17 +42,17 @@ class DomainCreate(object):
         'gravatar': 'gravatar',
         'bulletin': 'bulletin',
         'hidden': 'hidden',
-        'tag': 'tag'
+        'group': 'group'
     }
 
-    def __init__(self, url='', name=None, gravatar='', bulletin='', hidden=True, tag=''):  # noqa: E501
+    def __init__(self, url='', name=None, gravatar='', bulletin='', hidden=True, group=''):  # noqa: E501
         """DomainCreate - a model defined in Swagger"""  # noqa: E501
         self._url = None
         self._name = None
         self._gravatar = None
         self._bulletin = None
         self._hidden = None
-        self._tag = None
+        self._group = None
         self.discriminator = None
         if url is not None:
             self.url = url
@@ -63,8 +63,8 @@ class DomainCreate(object):
             self.bulletin = bulletin
         if hidden is not None:
             self.hidden = hidden
-        if tag is not None:
-            self.tag = tag
+        if group is not None:
+            self.group = group
 
     @property
     def url(self):
@@ -184,27 +184,27 @@ class DomainCreate(object):
         self._hidden = hidden
 
     @property
-    def tag(self):
-        """Gets the tag of this DomainCreate.  # noqa: E501
+    def group(self):
+        """Gets the group of this DomainCreate.  # noqa: E501
 
-        tag of the domain  # noqa: E501
+        group name of the domain  # noqa: E501
 
-        :return: The tag of this DomainCreate.  # noqa: E501
+        :return: The group of this DomainCreate.  # noqa: E501
         :rtype: str
         """
-        return self._tag
+        return self._group
 
-    @tag.setter
-    def tag(self, tag):
-        """Sets the tag of this DomainCreate.
+    @group.setter
+    def group(self, group):
+        """Sets the group of this DomainCreate.
 
-        tag of the domain  # noqa: E501
+        group name of the domain  # noqa: E501
 
-        :param tag: The tag of this DomainCreate.  # noqa: E501
+        :param group: The group of this DomainCreate.  # noqa: E501
         :type: str
         """
 
-        self._tag = tag
+        self._group = group
 
     def to_dict(self):
         """Returns the model properties as a dict"""

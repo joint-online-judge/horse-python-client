@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: 6cd4dbf@2022-02-19T13:21:15Z  # noqa: E501
+    Git version: 7bd720a@2022-02-19T13:26:22Z  # noqa: E501
 
     OpenAPI spec version: 1
     
@@ -34,7 +34,7 @@ class Domain(object):
         'gravatar': 'str',
         'bulletin': 'str',
         'hidden': 'bool',
-        'tag': 'str',
+        'group': 'str',
         'owner_id': 'str'
     }
 
@@ -45,11 +45,11 @@ class Domain(object):
         'gravatar': 'gravatar',
         'bulletin': 'bulletin',
         'hidden': 'hidden',
-        'tag': 'tag',
+        'group': 'group',
         'owner_id': 'ownerId'
     }
 
-    def __init__(self, id=None, url='', name=None, gravatar='', bulletin='', hidden=True, tag='', owner_id=None):  # noqa: E501
+    def __init__(self, id=None, url='', name=None, gravatar='', bulletin='', hidden=True, group='', owner_id=None):  # noqa: E501
         """Domain - a model defined in Swagger"""  # noqa: E501
         self._id = None
         self._url = None
@@ -57,7 +57,7 @@ class Domain(object):
         self._gravatar = None
         self._bulletin = None
         self._hidden = None
-        self._tag = None
+        self._group = None
         self._owner_id = None
         self.discriminator = None
         self.id = id
@@ -70,8 +70,8 @@ class Domain(object):
             self.bulletin = bulletin
         if hidden is not None:
             self.hidden = hidden
-        if tag is not None:
-            self.tag = tag
+        if group is not None:
+            self.group = group
         if owner_id is not None:
             self.owner_id = owner_id
 
@@ -216,27 +216,27 @@ class Domain(object):
         self._hidden = hidden
 
     @property
-    def tag(self):
-        """Gets the tag of this Domain.  # noqa: E501
+    def group(self):
+        """Gets the group of this Domain.  # noqa: E501
 
-        tag of the domain  # noqa: E501
+        group name of the domain  # noqa: E501
 
-        :return: The tag of this Domain.  # noqa: E501
+        :return: The group of this Domain.  # noqa: E501
         :rtype: str
         """
-        return self._tag
+        return self._group
 
-    @tag.setter
-    def tag(self, tag):
-        """Sets the tag of this Domain.
+    @group.setter
+    def group(self, group):
+        """Sets the group of this Domain.
 
-        tag of the domain  # noqa: E501
+        group name of the domain  # noqa: E501
 
-        :param tag: The tag of this Domain.  # noqa: E501
+        :param group: The group of this Domain.  # noqa: E501
         :type: str
         """
 
-        self._tag = tag
+        self._group = group
 
     @property
     def owner_id(self):
