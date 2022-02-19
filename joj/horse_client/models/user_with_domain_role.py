@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: 07316f1@2022-02-19T10:40:47Z  # noqa: E501
+    Git version: 9a6ad1c@2022-02-19T11:02:02Z  # noqa: E501
 
     OpenAPI spec version: 1
     
@@ -30,10 +30,7 @@ class UserWithDomainRole(object):
     swagger_types = {
         'id': 'str',
         'username': 'str',
-        'email': 'str',
         'gravatar': 'str',
-        'student_id': 'str',
-        'real_name': 'str',
         'domain_id': 'str',
         'domain_role': 'str'
     }
@@ -41,34 +38,23 @@ class UserWithDomainRole(object):
     attribute_map = {
         'id': 'id',
         'username': 'username',
-        'email': 'email',
         'gravatar': 'gravatar',
-        'student_id': 'studentId',
-        'real_name': 'realName',
         'domain_id': 'domainId',
         'domain_role': 'domainRole'
     }
 
-    def __init__(self, id=None, username=None, email=None, gravatar='', student_id='', real_name='', domain_id=None, domain_role=None):  # noqa: E501
+    def __init__(self, id=None, username=None, gravatar='', domain_id=None, domain_role=None):  # noqa: E501
         """UserWithDomainRole - a model defined in Swagger"""  # noqa: E501
         self._id = None
         self._username = None
-        self._email = None
         self._gravatar = None
-        self._student_id = None
-        self._real_name = None
         self._domain_id = None
         self._domain_role = None
         self.discriminator = None
         self.id = id
         self.username = username
-        self.email = email
         if gravatar is not None:
             self.gravatar = gravatar
-        if student_id is not None:
-            self.student_id = student_id
-        if real_name is not None:
-            self.real_name = real_name
         if domain_id is not None:
             self.domain_id = domain_id
         if domain_role is not None:
@@ -121,29 +107,6 @@ class UserWithDomainRole(object):
         self._username = username
 
     @property
-    def email(self):
-        """Gets the email of this UserWithDomainRole.  # noqa: E501
-
-
-        :return: The email of this UserWithDomainRole.  # noqa: E501
-        :rtype: str
-        """
-        return self._email
-
-    @email.setter
-    def email(self, email):
-        """Sets the email of this UserWithDomainRole.
-
-
-        :param email: The email of this UserWithDomainRole.  # noqa: E501
-        :type: str
-        """
-        if email is None:
-            raise ValueError("Invalid value for `email`, must not be `None`")  # noqa: E501
-
-        self._email = email
-
-    @property
     def gravatar(self):
         """Gets the gravatar of this UserWithDomainRole.  # noqa: E501
 
@@ -163,48 +126,6 @@ class UserWithDomainRole(object):
         """
 
         self._gravatar = gravatar
-
-    @property
-    def student_id(self):
-        """Gets the student_id of this UserWithDomainRole.  # noqa: E501
-
-
-        :return: The student_id of this UserWithDomainRole.  # noqa: E501
-        :rtype: str
-        """
-        return self._student_id
-
-    @student_id.setter
-    def student_id(self, student_id):
-        """Sets the student_id of this UserWithDomainRole.
-
-
-        :param student_id: The student_id of this UserWithDomainRole.  # noqa: E501
-        :type: str
-        """
-
-        self._student_id = student_id
-
-    @property
-    def real_name(self):
-        """Gets the real_name of this UserWithDomainRole.  # noqa: E501
-
-
-        :return: The real_name of this UserWithDomainRole.  # noqa: E501
-        :rtype: str
-        """
-        return self._real_name
-
-    @real_name.setter
-    def real_name(self, real_name):
-        """Sets the real_name of this UserWithDomainRole.
-
-
-        :param real_name: The real_name of this UserWithDomainRole.  # noqa: E501
-        :type: str
-        """
-
-        self._real_name = real_name
 
     @property
     def domain_id(self):

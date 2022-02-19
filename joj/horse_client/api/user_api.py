@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: 07316f1@2022-02-19T10:40:47Z  # noqa: E501
+    Git version: 9a6ad1c@2022-02-19T11:02:02Z  # noqa: E501
 
     OpenAPI spec version: 1
     
@@ -42,7 +42,7 @@ class UserApi(object):
 
         :param async_req bool
         :param UserResetPassword body: (required)
-        :return: UserResp
+        :return: UserDetailResp
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -63,7 +63,7 @@ class UserApi(object):
 
         :param async_req bool
         :param UserResetPassword body: (required)
-        :return: UserResp
+        :return: UserDetailResp
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -121,7 +121,7 @@ class UserApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='UserResp',  # noqa: E501
+            response_type='UserDetailResp',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -629,7 +629,7 @@ class UserApi(object):
 
         :param async_req bool
         :param UserEdit body: (required)
-        :return: UserResp
+        :return: UserDetailResp
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -650,7 +650,7 @@ class UserApi(object):
 
         :param async_req bool
         :param UserEdit body: (required)
-        :return: UserResp
+        :return: UserDetailResp
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -708,7 +708,7 @@ class UserApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='UserResp',  # noqa: E501
+            response_type='UserDetailResp',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),

@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: 07316f1@2022-02-19T10:40:47Z  # noqa: E501
+    Git version: 9a6ad1c@2022-02-19T11:02:02Z  # noqa: E501
 
     OpenAPI spec version: 1
     
@@ -30,10 +30,7 @@ class User(object):
     swagger_types = {
         'id': 'str',
         'username': 'str',
-        'email': 'str',
         'gravatar': 'str',
-        'student_id': 'str',
-        'real_name': 'str',
         'role': 'str',
         'is_active': 'bool'
     }
@@ -41,34 +38,23 @@ class User(object):
     attribute_map = {
         'id': 'id',
         'username': 'username',
-        'email': 'email',
         'gravatar': 'gravatar',
-        'student_id': 'studentId',
-        'real_name': 'realName',
         'role': 'role',
         'is_active': 'isActive'
     }
 
-    def __init__(self, id=None, username=None, email=None, gravatar='', student_id='', real_name='', role='user', is_active=False):  # noqa: E501
+    def __init__(self, id=None, username=None, gravatar='', role='user', is_active=False):  # noqa: E501
         """User - a model defined in Swagger"""  # noqa: E501
         self._id = None
         self._username = None
-        self._email = None
         self._gravatar = None
-        self._student_id = None
-        self._real_name = None
         self._role = None
         self._is_active = None
         self.discriminator = None
         self.id = id
         self.username = username
-        self.email = email
         if gravatar is not None:
             self.gravatar = gravatar
-        if student_id is not None:
-            self.student_id = student_id
-        if real_name is not None:
-            self.real_name = real_name
         if role is not None:
             self.role = role
         if is_active is not None:
@@ -121,29 +107,6 @@ class User(object):
         self._username = username
 
     @property
-    def email(self):
-        """Gets the email of this User.  # noqa: E501
-
-
-        :return: The email of this User.  # noqa: E501
-        :rtype: str
-        """
-        return self._email
-
-    @email.setter
-    def email(self, email):
-        """Sets the email of this User.
-
-
-        :param email: The email of this User.  # noqa: E501
-        :type: str
-        """
-        if email is None:
-            raise ValueError("Invalid value for `email`, must not be `None`")  # noqa: E501
-
-        self._email = email
-
-    @property
     def gravatar(self):
         """Gets the gravatar of this User.  # noqa: E501
 
@@ -163,48 +126,6 @@ class User(object):
         """
 
         self._gravatar = gravatar
-
-    @property
-    def student_id(self):
-        """Gets the student_id of this User.  # noqa: E501
-
-
-        :return: The student_id of this User.  # noqa: E501
-        :rtype: str
-        """
-        return self._student_id
-
-    @student_id.setter
-    def student_id(self, student_id):
-        """Sets the student_id of this User.
-
-
-        :param student_id: The student_id of this User.  # noqa: E501
-        :type: str
-        """
-
-        self._student_id = student_id
-
-    @property
-    def real_name(self):
-        """Gets the real_name of this User.  # noqa: E501
-
-
-        :return: The real_name of this User.  # noqa: E501
-        :rtype: str
-        """
-        return self._real_name
-
-    @real_name.setter
-    def real_name(self, real_name):
-        """Sets the real_name of this User.
-
-
-        :param real_name: The real_name of this User.  # noqa: E501
-        :type: str
-        """
-
-        self._real_name = real_name
 
     @property
     def role(self):

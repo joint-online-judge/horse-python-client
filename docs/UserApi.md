@@ -13,7 +13,7 @@ Method | HTTP request | Description
 [**v1_update_current_user**](UserApi.md#v1_update_current_user) | **PATCH** /user | Update Current User
 
 # **v1_change_password**
-> UserResp v1_change_password(body)
+> UserDetailResp v1_change_password(body)
 
 Change Password
 
@@ -46,7 +46,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**UserResp**](UserResp.md)
+[**UserDetailResp**](UserDetailResp.md)
 
 ### Authorization
 
@@ -309,7 +309,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_update_current_user**
-> UserResp v1_update_current_user(body)
+> UserDetailResp v1_update_current_user(body)
 
 Update Current User
 
@@ -342,7 +342,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**UserResp**](UserResp.md)
+[**UserDetailResp**](UserDetailResp.md)
 
 ### Authorization
 

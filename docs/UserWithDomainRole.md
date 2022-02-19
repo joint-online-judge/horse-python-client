@@ -5,10 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **str** |  | 
 **username** | **str** |  | 
-**email** | **str** |  | 
 **gravatar** | **str** |  | [optional] [default to '']
-**student_id** | **str** |  | [optional] [default to '']
-**real_name** | **str** |  | [optional] [default to '']
 **domain_id** | **str** |  | [optional] 
 **domain_role** | **str** |  | [optional] 
 
