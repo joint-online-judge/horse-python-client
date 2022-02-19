@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: 1654841@2022-02-19T13:17:30Z  # noqa: E501
+    Git version: 6cd4dbf@2022-02-19T13:21:15Z  # noqa: E501
 
     OpenAPI spec version: 1
     
@@ -1657,7 +1657,7 @@ class DomainApi(object):
 
         :param async_req bool
         :param list[str] roles:
-        :param list[str] tags:
+        :param list[str] groups:
         :param str ordering: Comma seperated list of ordering the results. You may specify reverse orderings by prefixing the field name with '-'.  Available fields: created_at,updated_at
         :param int offset:
         :param int limit:
@@ -1683,7 +1683,7 @@ class DomainApi(object):
 
         :param async_req bool
         :param list[str] roles:
-        :param list[str] tags:
+        :param list[str] groups:
         :param str ordering: Comma seperated list of ordering the results. You may specify reverse orderings by prefixing the field name with '-'.  Available fields: created_at,updated_at
         :param int offset:
         :param int limit:
@@ -1692,7 +1692,7 @@ class DomainApi(object):
                  returns the request thread.
         """
 
-        all_params = ['roles', 'tags', 'ordering', 'offset', 'limit']  # noqa: E501
+        all_params = ['roles', 'groups', 'ordering', 'offset', 'limit']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -1716,9 +1716,9 @@ class DomainApi(object):
         if 'roles' in params:
             query_params.append(('roles', params['roles']))  # noqa: E501
             collection_formats['roles'] = 'multi'  # noqa: E501
-        if 'tags' in params:
-            query_params.append(('tags', params['tags']))  # noqa: E501
-            collection_formats['tags'] = 'multi'  # noqa: E501
+        if 'groups' in params:
+            query_params.append(('groups', params['groups']))  # noqa: E501
+            collection_formats['groups'] = 'multi'  # noqa: E501
         if 'ordering' in params:
             query_params.append(('ordering', params['ordering']))  # noqa: E501
         if 'offset' in params:
@@ -1961,12 +1961,12 @@ class DomainApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def v1_search_domain_tags(self, query, **kwargs):  # noqa: E501
-        """Search Domain Tags  # noqa: E501
+    def v1_search_domain_groups(self, query, **kwargs):  # noqa: E501
+        """Search Domain Groups  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.v1_search_domain_tags(query, async_req=True)
+        >>> thread = api.v1_search_domain_groups(query, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -1977,17 +1977,17 @@ class DomainApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.v1_search_domain_tags_with_http_info(query, **kwargs)  # noqa: E501
+            return self.v1_search_domain_groups_with_http_info(query, **kwargs)  # noqa: E501
         else:
-            (data) = self.v1_search_domain_tags_with_http_info(query, **kwargs)  # noqa: E501
+            (data) = self.v1_search_domain_groups_with_http_info(query, **kwargs)  # noqa: E501
             return data
 
-    def v1_search_domain_tags_with_http_info(self, query, **kwargs):  # noqa: E501
-        """Search Domain Tags  # noqa: E501
+    def v1_search_domain_groups_with_http_info(self, query, **kwargs):  # noqa: E501
+        """Search Domain Groups  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.v1_search_domain_tags_with_http_info(query, async_req=True)
+        >>> thread = api.v1_search_domain_groups_with_http_info(query, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -2008,14 +2008,14 @@ class DomainApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method v1_search_domain_tags" % key
+                    " to method v1_search_domain_groups" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'query' is set
         if ('query' not in params or
                 params['query'] is None):
-            raise ValueError("Missing the required parameter `query` when calling `v1_search_domain_tags`")  # noqa: E501
+            raise ValueError("Missing the required parameter `query` when calling `v1_search_domain_groups`")  # noqa: E501
 
         collection_formats = {}
 
@@ -2039,7 +2039,7 @@ class DomainApi(object):
         auth_settings = ['HTTPBearer']  # noqa: E501
 
         return self.api_client.call_api(
-            '/domains/tags', 'GET',
+            '/domains/groups', 'GET',
             path_params,
             query_params,
             header_params,

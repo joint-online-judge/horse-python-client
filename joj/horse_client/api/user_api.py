@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: 1654841@2022-02-19T13:17:30Z  # noqa: E501
+    Git version: 6cd4dbf@2022-02-19T13:21:15Z  # noqa: E501
 
     OpenAPI spec version: 1
     
@@ -419,7 +419,7 @@ class UserApi(object):
         :param async_req bool
         :param str uid: (required)
         :param list[str] role:
-        :param list[str] tags:
+        :param list[str] groups:
         :param str ordering: Comma seperated list of ordering the results. You may specify reverse orderings by prefixing the field name with '-'.  Available fields: created_at,updated_at
         :param int offset:
         :param int limit:
@@ -445,7 +445,7 @@ class UserApi(object):
         :param async_req bool
         :param str uid: (required)
         :param list[str] role:
-        :param list[str] tags:
+        :param list[str] groups:
         :param str ordering: Comma seperated list of ordering the results. You may specify reverse orderings by prefixing the field name with '-'.  Available fields: created_at,updated_at
         :param int offset:
         :param int limit:
@@ -454,7 +454,7 @@ class UserApi(object):
                  returns the request thread.
         """
 
-        all_params = ['uid', 'role', 'tags', 'ordering', 'offset', 'limit']  # noqa: E501
+        all_params = ['uid', 'role', 'groups', 'ordering', 'offset', 'limit']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -484,9 +484,9 @@ class UserApi(object):
         if 'role' in params:
             query_params.append(('role', params['role']))  # noqa: E501
             collection_formats['role'] = 'multi'  # noqa: E501
-        if 'tags' in params:
-            query_params.append(('tags', params['tags']))  # noqa: E501
-            collection_formats['tags'] = 'multi'  # noqa: E501
+        if 'groups' in params:
+            query_params.append(('groups', params['groups']))  # noqa: E501
+            collection_formats['groups'] = 'multi'  # noqa: E501
         if 'ordering' in params:
             query_params.append(('ordering', params['ordering']))  # noqa: E501
         if 'offset' in params:

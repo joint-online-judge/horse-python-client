@@ -23,7 +23,7 @@ Method | HTTP request | Description
 [**v1_list_domains**](DomainApi.md#v1_list_domains) | **GET** /domains | List Domains
 [**v1_remove_domain_user**](DomainApi.md#v1_remove_domain_user) | **DELETE** /domains/{domain}/users/{user} | Remove Domain User
 [**v1_search_domain_candidates**](DomainApi.md#v1_search_domain_candidates) | **GET** /domains/{domain}/candidates | Search Domain Candidates
-[**v1_search_domain_tags**](DomainApi.md#v1_search_domain_tags) | **GET** /domains/tags | Search Domain Tags
+[**v1_search_domain_groups**](DomainApi.md#v1_search_domain_groups) | **GET** /domains/groups | Search Domain Groups
 [**v1_transfer_domain**](DomainApi.md#v1_transfer_domain) | **POST** /domains/{domain}/transfer | Transfer Domain
 [**v1_update_domain**](DomainApi.md#v1_update_domain) | **PATCH** /domains/{domain} | Update Domain
 [**v1_update_domain_invitation**](DomainApi.md#v1_update_domain_invitation) | **PATCH** /domains/{domain}/invitations/{invitation} | Update Domain Invitation
@@ -819,7 +819,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_list_domains**
-> DomainListResp v1_list_domains(roles=roles, tags=tags, ordering=ordering, offset=offset, limit=limit)
+> DomainListResp v1_list_domains(roles=roles, groups=groups, ordering=ordering, offset=offset, limit=limit)
 
 List Domains
 
@@ -837,14 +837,14 @@ from pprint import pprint
 # create an instance of the API class
 api_instance = joj.horse_client.DomainApi(joj.horse_client.ApiClient(configuration))
 roles = ['roles_example'] # list[str] |  (optional)
-tags = ['tags_example'] # list[str] |  (optional)
+groups = ['groups_example'] # list[str] |  (optional)
 ordering = '' # str | Comma seperated list of ordering the results. You may specify reverse orderings by prefixing the field name with '-'.  Available fields: created_at,updated_at (optional)
 offset = 0 # int |  (optional) (default to 0)
 limit = 100 # int |  (optional) (default to 100)
 
 try:
     # List Domains
-    api_response = api_instance.v1_list_domains(roles=roles, tags=tags, ordering=ordering, offset=offset, limit=limit)
+    api_response = api_instance.v1_list_domains(roles=roles, groups=groups, ordering=ordering, offset=offset, limit=limit)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling DomainApi->v1_list_domains: %s\n" % e)
@@ -855,7 +855,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **roles** | [**list[str]**](str.md)|  | [optional] 
- **tags** | [**list[str]**](str.md)|  | [optional] 
+ **groups** | [**list[str]**](str.md)|  | [optional] 
  **ordering** | **str**| Comma seperated list of ordering the results. You may specify reverse orderings by prefixing the field name with &#x27;-&#x27;.  Available fields: created_at,updated_at | [optional] 
  **offset** | **int**|  | [optional] [default to 0]
  **limit** | **int**|  | [optional] [default to 100]
@@ -975,10 +975,10 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **v1_search_domain_tags**
-> DomainTagListResp v1_search_domain_tags(query)
+# **v1_search_domain_groups**
+> DomainTagListResp v1_search_domain_groups(query)
 
-Search Domain Tags
+Search Domain Groups
 
 ### Example
 ```python
@@ -994,11 +994,11 @@ api_instance = joj.horse_client.DomainApi(joj.horse_client.ApiClient(configurati
 query = 'query_example' # str | search query
 
 try:
-    # Search Domain Tags
-    api_response = api_instance.v1_search_domain_tags(query)
+    # Search Domain Groups
+    api_response = api_instance.v1_search_domain_groups(query)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling DomainApi->v1_search_domain_tags: %s\n" % e)
+    print("Exception when calling DomainApi->v1_search_domain_groups: %s\n" % e)
 ```
 
 ### Parameters

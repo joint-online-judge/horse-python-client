@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: 1654841@2022-02-19T13:17:30Z  # noqa: E501
+    Git version: 6cd4dbf@2022-02-19T13:21:15Z  # noqa: E501
 
     OpenAPI spec version: 1
     
@@ -161,10 +161,10 @@ class TestDomainApi(unittest.TestCase):
         """
         pass
 
-    def test_v1_search_domain_tags(self):
-        """Test case for v1_search_domain_tags
+    def test_v1_search_domain_groups(self):
+        """Test case for v1_search_domain_groups
 
-        Search Domain Tags  # noqa: E501
+        Search Domain Groups  # noqa: E501
         """
         pass
 
