@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: 095866f@2022-03-03T13:20:06Z  # noqa: E501
+    Git version: 1ba9201@2022-03-06T09:39:13Z  # noqa: E501
 
     OpenAPI spec version: 1
     
@@ -43,7 +43,7 @@ class DomainApi(object):
         :param async_req bool
         :param DomainUserAdd body: (required)
         :param str domain: url or id of the domain (required)
-        :return: UserWithDomainRoleResp
+        :return: UserDetailWithDomainRoleResp
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -65,7 +65,7 @@ class DomainApi(object):
         :param async_req bool
         :param DomainUserAdd body: (required)
         :param str domain: url or id of the domain (required)
-        :return: UserWithDomainRoleResp
+        :return: UserDetailWithDomainRoleResp
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -129,7 +129,7 @@ class DomainApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='UserWithDomainRoleResp',  # noqa: E501
+            response_type='UserDetailWithDomainRoleResp',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -1868,7 +1868,7 @@ class DomainApi(object):
         :param str domain: url or id of the domain (required)
         :param str query: search query (required)
         :param str ordering: Comma seperated list of ordering the results. You may specify reverse orderings by prefixing the field name with '-'.  Available fields: username
-        :return: UserWithDomainRoleListResp
+        :return: UserDetailWithDomainRoleListResp
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -1891,7 +1891,7 @@ class DomainApi(object):
         :param str domain: url or id of the domain (required)
         :param str query: search query (required)
         :param str ordering: Comma seperated list of ordering the results. You may specify reverse orderings by prefixing the field name with '-'.  Available fields: username
-        :return: UserWithDomainRoleListResp
+        :return: UserDetailWithDomainRoleListResp
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -1953,7 +1953,7 @@ class DomainApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='UserWithDomainRoleListResp',  # noqa: E501
+            response_type='UserDetailWithDomainRoleListResp',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -2502,7 +2502,7 @@ class DomainApi(object):
         :param DomainUserUpdate body: (required)
         :param str domain: url or id of the domain (required)
         :param str user: user id or 'me' or empty (required)
-        :return: UserWithDomainRoleResp
+        :return: UserDetailWithDomainRoleResp
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -2525,7 +2525,7 @@ class DomainApi(object):
         :param DomainUserUpdate body: (required)
         :param str domain: url or id of the domain (required)
         :param str user: user id or 'me' or empty (required)
-        :return: UserWithDomainRoleResp
+        :return: UserDetailWithDomainRoleResp
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -2595,7 +2595,7 @@ class DomainApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='UserWithDomainRoleResp',  # noqa: E501
+            response_type='UserDetailWithDomainRoleResp',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),

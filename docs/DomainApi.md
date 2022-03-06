@@ -31,7 +31,7 @@ Method | HTTP request | Description
 [**v1_update_domain_user**](DomainApi.md#v1_update_domain_user) | **PATCH** /domains/{domain}/users/{user} | Update Domain User
 
 # **v1_add_domain_user**
-> UserWithDomainRoleResp v1_add_domain_user(body, domain)
+> UserDetailWithDomainRoleResp v1_add_domain_user(body, domain)
 
 Add Domain User
 
@@ -66,7 +66,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**UserWithDomainRoleResp**](UserWithDomainRoleResp.md)
+[**UserDetailWithDomainRoleResp**](UserDetailWithDomainRoleResp.md)
 
 ### Authorization
 
@@ -925,7 +925,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_search_domain_candidates**
-> UserWithDomainRoleListResp v1_search_domain_candidates(domain, query, ordering=ordering)
+> UserDetailWithDomainRoleListResp v1_search_domain_candidates(domain, query, ordering=ordering)
 
 Search Domain Candidates
 
@@ -962,7 +962,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**UserWithDomainRoleListResp**](UserWithDomainRoleListResp.md)
+[**UserDetailWithDomainRoleListResp**](UserDetailWithDomainRoleListResp.md)
 
 ### Authorization
 
@@ -1223,7 +1223,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_update_domain_user**
-> UserWithDomainRoleResp v1_update_domain_user(body, domain, user)
+> UserDetailWithDomainRoleResp v1_update_domain_user(body, domain, user)
 
 Update Domain User
 
@@ -1260,7 +1260,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**UserWithDomainRoleResp**](UserWithDomainRoleResp.md)
+[**UserDetailWithDomainRoleResp**](UserDetailWithDomainRoleResp.md)
 
 ### Authorization
 
