@@ -262,7 +262,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_submit_solution_to_problem**
-> RecordResp v1_submit_solution_to_problem(code_type, file, domain, problem)
+> RecordResp v1_submit_solution_to_problem(language, code_type, file, code_text, domain, problem)
 
 Submit Solution To Problem
 
@@ -277,14 +277,16 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = joj.horse_client.ProblemApi(joj.horse_client.ApiClient(configuration))
+language = 'language_example' # str | 
 code_type = joj.horse_client.RecordCodeType() # RecordCodeType | 
 file = 'file_example' # str | 
+code_text = 'code_text_example' # str | 
 domain = 'domain_example' # str | url or id of the domain
 problem = 'problem_example' # str | url or id of the problem
 
 try:
     # Submit Solution To Problem
-    api_response = api_instance.v1_submit_solution_to_problem(code_type, file, domain, problem)
+    api_response = api_instance.v1_submit_solution_to_problem(language, code_type, file, code_text, domain, problem)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling ProblemApi->v1_submit_solution_to_problem: %s\n" % e)
@@ -294,8 +296,10 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **language** | **str**|  | 
  **code_type** | [**RecordCodeType**](.md)|  | 
  **file** | **str**|  | 
+ **code_text** | **str**|  | 
  **domain** | **str**| url or id of the domain | 
  **problem** | **str**| url or id of the problem | 
 

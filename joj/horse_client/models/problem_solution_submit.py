@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: 97b01fb@2022-04-29T05:21:52Z  # noqa: E501
+    Git version: 2a4ec65@2022-05-02T14:38:26Z  # noqa: E501
 
     OpenAPI spec version: 1
     
@@ -28,23 +28,55 @@ class ProblemSolutionSubmit(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'language': 'str',
         'code_type': 'RecordCodeType',
-        'file': 'str'
+        'file': 'str',
+        'code_text': 'str'
     }
 
     attribute_map = {
+        'language': 'language',
         'code_type': 'codeType',
-        'file': 'file'
+        'file': 'file',
+        'code_text': 'codeText'
     }
 
-    def __init__(self, code_type=None, file=None):  # noqa: E501
+    def __init__(self, language=None, code_type=None, file=None, code_text=None):  # noqa: E501
         """ProblemSolutionSubmit - a model defined in Swagger"""  # noqa: E501
+        self._language = None
         self._code_type = None
         self._file = None
+        self._code_text = None
         self.discriminator = None
+        self.language = language
         self.code_type = code_type
         if file is not None:
             self.file = file
+        if code_text is not None:
+            self.code_text = code_text
+
+    @property
+    def language(self):
+        """Gets the language of this ProblemSolutionSubmit.  # noqa: E501
+
+
+        :return: The language of this ProblemSolutionSubmit.  # noqa: E501
+        :rtype: str
+        """
+        return self._language
+
+    @language.setter
+    def language(self, language):
+        """Sets the language of this ProblemSolutionSubmit.
+
+
+        :param language: The language of this ProblemSolutionSubmit.  # noqa: E501
+        :type: str
+        """
+        if language is None:
+            raise ValueError("Invalid value for `language`, must not be `None`")  # noqa: E501
+
+        self._language = language
 
     @property
     def code_type(self):
@@ -89,6 +121,27 @@ class ProblemSolutionSubmit(object):
         """
 
         self._file = file
+
+    @property
+    def code_text(self):
+        """Gets the code_text of this ProblemSolutionSubmit.  # noqa: E501
+
+
+        :return: The code_text of this ProblemSolutionSubmit.  # noqa: E501
+        :rtype: str
+        """
+        return self._code_text
+
+    @code_text.setter
+    def code_text(self, code_text):
+        """Sets the code_text of this ProblemSolutionSubmit.
+
+
+        :param code_text: The code_text of this ProblemSolutionSubmit.  # noqa: E501
+        :type: str
+        """
+
+        self._code_text = code_text
 
     def to_dict(self):
         """Returns the model properties as a dict"""

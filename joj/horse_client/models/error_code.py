@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: 97b01fb@2022-04-29T05:21:52Z  # noqa: E501
+    Git version: 2a4ec65@2022-05-02T14:38:26Z  # noqa: E501
 
     OpenAPI spec version: 1
     
@@ -41,9 +41,10 @@ class ErrorCode(object):
     PROBLEMSETNOTFOUNDERROR = "ProblemSetNotFoundError"
     PROBLEMGROUPNOTFOUNDERROR = "ProblemGroupNotFoundError"
     PROBLEMCONFIGNOTFOUNDERROR = "ProblemConfigNotFoundError"
-    PROBLEMCONFIGVALIDATIONERROR = "ProblemConfigValidationError"
-    PROBLEMCONFIGUPDATEERROR = "ProblemConfigUpdateError"
-    PROBLEMCONFIGDOWNLOADERROR = "ProblemConfigDownloadError"
+    FILEVALIDATIONERROR = "FileValidationError"
+    FILEUPDATEERROR = "FileUpdateError"
+    FILEDOWNLOADERROR = "FileDownloadError"
+    UNSUPPORTEDLANGUAGEERROR = "UnsupportedLanguageError"
     RECORDNOTFOUNDERROR = "RecordNotFoundError"
     DELETEPROBLEMBADREQUESTERROR = "DeleteProblemBadRequestError"
     USERALREADYINDOMAINBADREQUESTERROR = "UserAlreadyInDomainBadRequestError"

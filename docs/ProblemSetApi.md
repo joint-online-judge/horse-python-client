@@ -419,7 +419,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_submit_solution_to_problem_set**
-> RecordResp v1_submit_solution_to_problem_set(code_type, file, domain, problem_set, problem)
+> RecordResp v1_submit_solution_to_problem_set(language, code_type, file, code_text, domain, problem_set, problem)
 
 Submit Solution To Problem Set
 
@@ -434,15 +434,17 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = joj.horse_client.ProblemSetApi(joj.horse_client.ApiClient(configuration))
+language = 'language_example' # str | 
 code_type = joj.horse_client.RecordCodeType() # RecordCodeType | 
 file = 'file_example' # str | 
+code_text = 'code_text_example' # str | 
 domain = 'domain_example' # str | url or id of the domain
 problem_set = 'problem_set_example' # str | url or id of the problem set
 problem = 'problem_example' # str | url or id of the problem
 
 try:
     # Submit Solution To Problem Set
-    api_response = api_instance.v1_submit_solution_to_problem_set(code_type, file, domain, problem_set, problem)
+    api_response = api_instance.v1_submit_solution_to_problem_set(language, code_type, file, code_text, domain, problem_set, problem)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling ProblemSetApi->v1_submit_solution_to_problem_set: %s\n" % e)
@@ -452,8 +454,10 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **language** | **str**|  | 
  **code_type** | [**RecordCodeType**](.md)|  | 
  **file** | **str**|  | 
+ **code_text** | **str**|  | 
  **domain** | **str**| url or id of the domain | 
  **problem_set** | **str**| url or id of the problem set | 
  **problem** | **str**| url or id of the problem | 
