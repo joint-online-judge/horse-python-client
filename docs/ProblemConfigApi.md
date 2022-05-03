@@ -15,6 +15,7 @@ Method | HTTP request | Description
 [**v1_get_problem_config_json**](ProblemConfigApi.md#v1_get_problem_config_json) | **GET** /domains/{domain}/problems/{problem}/configs/{config} | Get Problem Config Json
 [**v1_reset_problem_config**](ProblemConfigApi.md#v1_reset_problem_config) | **POST** /domains/{domain}/problems/{problem}/config/reset | Reset Problem Config
 [**v1_update_problem_config_by_archive**](ProblemConfigApi.md#v1_update_problem_config_by_archive) | **PUT** /domains/{domain}/problems/{problem}/config | Update Problem Config By Archive
+[**v1_update_problem_config_json**](ProblemConfigApi.md#v1_update_problem_config_json) | **PUT** /domains/{domain}/problems/{problem}/configs | Update Problem Config Json
 [**v1_upload_file_to_problem_config**](ProblemConfigApi.md#v1_upload_file_to_problem_config) | **PUT** /domains/{domain}/problems/{problem}/config/files/{path} | Upload File To Problem Config
 [**v1_upload_file_to_root_in_problem_config**](ProblemConfigApi.md#v1_upload_file_to_root_in_problem_config) | **PUT** /domains/{domain}/problems/{problem}/config/files | Upload File To Root In Problem Config
 
@@ -585,6 +586,57 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: multipart/form-data
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **v1_update_problem_config_json**
+> FileInfoResp v1_update_problem_config_json(body, problem, domain)
+
+Update Problem Config Json
+
+### Example
+```python
+from __future__ import print_function
+import time
+import joj.horse_client
+from joj.horse_client.rest import ApiException
+from pprint import pprint
+
+
+# create an instance of the API class
+api_instance = joj.horse_client.ProblemConfigApi(joj.horse_client.ApiClient(configuration))
+body = NULL # object | 
+problem = 'problem_example' # str | url or id of the problem
+domain = 'domain_example' # str | url or id of the domain
+
+try:
+    # Update Problem Config Json
+    api_response = api_instance.v1_update_problem_config_json(body, problem, domain)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling ProblemConfigApi->v1_update_problem_config_json: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**object**](object.md)|  | 
+ **problem** | **str**| url or id of the problem | 
+ **domain** | **str**| url or id of the domain | 
+
+### Return type
+
+[**FileInfoResp**](FileInfoResp.md)
+
+### Authorization
+
+[HTTPBearer](../README.md#HTTPBearer)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

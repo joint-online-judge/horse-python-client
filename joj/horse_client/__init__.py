@@ -5,7 +5,7 @@
 """
     JOJ Horse
 
-    Git version: 9b73af8@2022-05-02T19:19:37Z  # noqa: E501
+    Git version: f5a4712@2022-05-03T17:15:26Z  # noqa: E501
 
     OpenAPI spec version: 1
     
@@ -130,7 +130,6 @@ from joj.horse_client.models.problem_with_latest_record_list_resp import Problem
 from joj.horse_client.models.record import Record
 from joj.horse_client.models.record_case import RecordCase
 from joj.horse_client.models.record_case_result import RecordCaseResult
-from joj.horse_client.models.record_code_type import RecordCodeType
 from joj.horse_client.models.record_detail import RecordDetail
 from joj.horse_client.models.record_detail_resp import RecordDetailResp
 from joj.horse_client.models.record_list import RecordList

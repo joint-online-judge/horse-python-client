@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: 9b73af8@2022-05-02T19:19:37Z  # noqa: E501
+    Git version: f5a4712@2022-05-03T17:15:26Z  # noqa: E501
 
     OpenAPI spec version: 1
     
@@ -876,19 +876,17 @@ class ProblemSetApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def v1_submit_solution_to_problem_set(self, language, code_type, file, code_text, domain, problem_set, problem, **kwargs):  # noqa: E501
+    def v1_submit_solution_to_problem_set(self, language, files, domain, problem_set, problem, **kwargs):  # noqa: E501
         """Submit Solution To Problem Set  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.v1_submit_solution_to_problem_set(language, code_type, file, code_text, domain, problem_set, problem, async_req=True)
+        >>> thread = api.v1_submit_solution_to_problem_set(language, files, domain, problem_set, problem, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
         :param str language: (required)
-        :param RecordCodeType code_type: (required)
-        :param str file: (required)
-        :param str code_text: (required)
+        :param list[str] files: (required)
         :param str domain: url or id of the domain (required)
         :param str problem_set: url or id of the problem set (required)
         :param str problem: url or id of the problem (required)
@@ -898,24 +896,22 @@ class ProblemSetApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.v1_submit_solution_to_problem_set_with_http_info(language, code_type, file, code_text, domain, problem_set, problem, **kwargs)  # noqa: E501
+            return self.v1_submit_solution_to_problem_set_with_http_info(language, files, domain, problem_set, problem, **kwargs)  # noqa: E501
         else:
-            (data) = self.v1_submit_solution_to_problem_set_with_http_info(language, code_type, file, code_text, domain, problem_set, problem, **kwargs)  # noqa: E501
+            (data) = self.v1_submit_solution_to_problem_set_with_http_info(language, files, domain, problem_set, problem, **kwargs)  # noqa: E501
             return data
 
-    def v1_submit_solution_to_problem_set_with_http_info(self, language, code_type, file, code_text, domain, problem_set, problem, **kwargs):  # noqa: E501
+    def v1_submit_solution_to_problem_set_with_http_info(self, language, files, domain, problem_set, problem, **kwargs):  # noqa: E501
         """Submit Solution To Problem Set  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.v1_submit_solution_to_problem_set_with_http_info(language, code_type, file, code_text, domain, problem_set, problem, async_req=True)
+        >>> thread = api.v1_submit_solution_to_problem_set_with_http_info(language, files, domain, problem_set, problem, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
         :param str language: (required)
-        :param RecordCodeType code_type: (required)
-        :param str file: (required)
-        :param str code_text: (required)
+        :param list[str] files: (required)
         :param str domain: url or id of the domain (required)
         :param str problem_set: url or id of the problem set (required)
         :param str problem: url or id of the problem (required)
@@ -924,7 +920,7 @@ class ProblemSetApi(object):
                  returns the request thread.
         """
 
-        all_params = ['language', 'code_type', 'file', 'code_text', 'domain', 'problem_set', 'problem']  # noqa: E501
+        all_params = ['language', 'files', 'domain', 'problem_set', 'problem']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -943,18 +939,10 @@ class ProblemSetApi(object):
         if ('language' not in params or
                 params['language'] is None):
             raise ValueError("Missing the required parameter `language` when calling `v1_submit_solution_to_problem_set`")  # noqa: E501
-        # verify the required parameter 'code_type' is set
-        if ('code_type' not in params or
-                params['code_type'] is None):
-            raise ValueError("Missing the required parameter `code_type` when calling `v1_submit_solution_to_problem_set`")  # noqa: E501
-        # verify the required parameter 'file' is set
-        if ('file' not in params or
-                params['file'] is None):
-            raise ValueError("Missing the required parameter `file` when calling `v1_submit_solution_to_problem_set`")  # noqa: E501
-        # verify the required parameter 'code_text' is set
-        if ('code_text' not in params or
-                params['code_text'] is None):
-            raise ValueError("Missing the required parameter `code_text` when calling `v1_submit_solution_to_problem_set`")  # noqa: E501
+        # verify the required parameter 'files' is set
+        if ('files' not in params or
+                params['files'] is None):
+            raise ValueError("Missing the required parameter `files` when calling `v1_submit_solution_to_problem_set`")  # noqa: E501
         # verify the required parameter 'domain' is set
         if ('domain' not in params or
                 params['domain'] is None):
@@ -986,12 +974,9 @@ class ProblemSetApi(object):
         local_var_files = {}
         if 'language' in params:
             form_params.append(('language', params['language']))  # noqa: E501
-        if 'code_type' in params:
-            form_params.append(('codeType', params['code_type']))  # noqa: E501
-        if 'file' in params:
-            local_var_files['file'] = params['file']  # noqa: E501
-        if 'code_text' in params:
-            form_params.append(('codeText', params['code_text']))  # noqa: E501
+        if 'files' in params:
+            form_params.append(('files', params['files']))  # noqa: E501
+            collection_formats['files'] = 'multi'  # noqa: E501
 
         body_params = None
         # HTTP header `Accept`

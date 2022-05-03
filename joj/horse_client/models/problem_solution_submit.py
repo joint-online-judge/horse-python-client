@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: 9b73af8@2022-05-02T19:19:37Z  # noqa: E501
+    Git version: f5a4712@2022-05-03T17:15:26Z  # noqa: E501
 
     OpenAPI spec version: 1
     
@@ -29,31 +29,21 @@ class ProblemSolutionSubmit(object):
     """
     swagger_types = {
         'language': 'str',
-        'code_type': 'RecordCodeType',
-        'file': 'str',
-        'code_text': 'str'
+        'files': 'list[str]'
     }
 
     attribute_map = {
         'language': 'language',
-        'code_type': 'codeType',
-        'file': 'file',
-        'code_text': 'codeText'
+        'files': 'files'
     }
 
-    def __init__(self, language=None, code_type=None, file=None, code_text=None):  # noqa: E501
+    def __init__(self, language=None, files=None):  # noqa: E501
         """ProblemSolutionSubmit - a model defined in Swagger"""  # noqa: E501
         self._language = None
-        self._code_type = None
-        self._file = None
-        self._code_text = None
+        self._files = None
         self.discriminator = None
         self.language = language
-        self.code_type = code_type
-        if file is not None:
-            self.file = file
-        if code_text is not None:
-            self.code_text = code_text
+        self.files = files
 
     @property
     def language(self):
@@ -79,69 +69,27 @@ class ProblemSolutionSubmit(object):
         self._language = language
 
     @property
-    def code_type(self):
-        """Gets the code_type of this ProblemSolutionSubmit.  # noqa: E501
+    def files(self):
+        """Gets the files of this ProblemSolutionSubmit.  # noqa: E501
 
 
-        :return: The code_type of this ProblemSolutionSubmit.  # noqa: E501
-        :rtype: RecordCodeType
+        :return: The files of this ProblemSolutionSubmit.  # noqa: E501
+        :rtype: list[str]
         """
-        return self._code_type
+        return self._files
 
-    @code_type.setter
-    def code_type(self, code_type):
-        """Sets the code_type of this ProblemSolutionSubmit.
+    @files.setter
+    def files(self, files):
+        """Sets the files of this ProblemSolutionSubmit.
 
 
-        :param code_type: The code_type of this ProblemSolutionSubmit.  # noqa: E501
-        :type: RecordCodeType
+        :param files: The files of this ProblemSolutionSubmit.  # noqa: E501
+        :type: list[str]
         """
-        if code_type is None:
-            raise ValueError("Invalid value for `code_type`, must not be `None`")  # noqa: E501
+        if files is None:
+            raise ValueError("Invalid value for `files`, must not be `None`")  # noqa: E501
 
-        self._code_type = code_type
-
-    @property
-    def file(self):
-        """Gets the file of this ProblemSolutionSubmit.  # noqa: E501
-
-
-        :return: The file of this ProblemSolutionSubmit.  # noqa: E501
-        :rtype: str
-        """
-        return self._file
-
-    @file.setter
-    def file(self, file):
-        """Sets the file of this ProblemSolutionSubmit.
-
-
-        :param file: The file of this ProblemSolutionSubmit.  # noqa: E501
-        :type: str
-        """
-
-        self._file = file
-
-    @property
-    def code_text(self):
-        """Gets the code_text of this ProblemSolutionSubmit.  # noqa: E501
-
-
-        :return: The code_text of this ProblemSolutionSubmit.  # noqa: E501
-        :rtype: str
-        """
-        return self._code_text
-
-    @code_text.setter
-    def code_text(self, code_text):
-        """Sets the code_text of this ProblemSolutionSubmit.
-
-
-        :param code_text: The code_text of this ProblemSolutionSubmit.  # noqa: E501
-        :type: str
-        """
-
-        self._code_text = code_text
+        self._files = files
 
     def to_dict(self):
         """Returns the model properties as a dict"""
