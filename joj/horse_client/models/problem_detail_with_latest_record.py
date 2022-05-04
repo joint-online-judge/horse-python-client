@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: 33a5688@2022-05-03T22:27:18Z  # noqa: E501
+    Git version: 40ddcb7@2022-05-04T05:20:29Z  # noqa: E501
 
     OpenAPI spec version: 1
     
@@ -40,6 +40,7 @@ class ProblemDetailWithLatestRecord(object):
         'content': 'str',
         'created_at': 'datetime',
         'updated_at': 'datetime',
+        'languages': 'list[str]',
         'latest_record': 'RecordPreview'
     }
 
@@ -56,10 +57,11 @@ class ProblemDetailWithLatestRecord(object):
         'content': 'content',
         'created_at': 'createdAt',
         'updated_at': 'updatedAt',
+        'languages': 'languages',
         'latest_record': 'latestRecord'
     }
 
-    def __init__(self, id=None, domain_id=None, url='', title=None, hidden=False, num_submit=0, num_accept=0, owner_id=None, problem_group_id=None, content='', created_at=None, updated_at=None, latest_record=None):  # noqa: E501
+    def __init__(self, id=None, domain_id=None, url='', title=None, hidden=False, num_submit=0, num_accept=0, owner_id=None, problem_group_id=None, content='', created_at=None, updated_at=None, languages=None, latest_record=None):  # noqa: E501
         """ProblemDetailWithLatestRecord - a model defined in Swagger"""  # noqa: E501
         self._id = None
         self._domain_id = None
@@ -73,6 +75,7 @@ class ProblemDetailWithLatestRecord(object):
         self._content = None
         self._created_at = None
         self._updated_at = None
+        self._languages = None
         self._latest_record = None
         self.discriminator = None
         self.id = id
@@ -96,6 +99,8 @@ class ProblemDetailWithLatestRecord(object):
             self.created_at = created_at
         if updated_at is not None:
             self.updated_at = updated_at
+        if languages is not None:
+            self.languages = languages
         if latest_record is not None:
             self.latest_record = latest_record
 
@@ -364,6 +369,27 @@ class ProblemDetailWithLatestRecord(object):
         """
 
         self._updated_at = updated_at
+
+    @property
+    def languages(self):
+        """Gets the languages of this ProblemDetailWithLatestRecord.  # noqa: E501
+
+
+        :return: The languages of this ProblemDetailWithLatestRecord.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._languages
+
+    @languages.setter
+    def languages(self, languages):
+        """Sets the languages of this ProblemDetailWithLatestRecord.
+
+
+        :param languages: The languages of this ProblemDetailWithLatestRecord.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._languages = languages
 
     @property
     def latest_record(self):

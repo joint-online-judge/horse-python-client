@@ -15,6 +15,7 @@ Name | Type | Description | Notes
 **content** | **str** | content of the problem | [optional] [default to '']
 **created_at** | **datetime** |  | [optional] 
 **updated_at** | **datetime** |  | [optional] 
+**languages** | **list[str]** |  | [optional] 
 **latest_record** | [**RecordPreview**](RecordPreview.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
