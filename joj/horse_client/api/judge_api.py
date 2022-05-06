@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: 12d10a5@2022-05-06T16:12:55Z  # noqa: E501
+    Git version: 46b709e@2022-05-06T20:04:13Z  # noqa: E501
 
     OpenAPI spec version: 1
     
@@ -130,7 +130,7 @@ class JudgeApi(object):
         auth_settings = ['HTTPBearer']  # noqa: E501
 
         return self.api_client.call_api(
-            '/judge/records/{record}/claim', 'POST',
+            '/domains/{domain}/records/{record}/judge/claim', 'POST',
             path_params,
             query_params,
             header_params,
@@ -243,7 +243,7 @@ class JudgeApi(object):
         auth_settings = ['HTTPBearer']  # noqa: E501
 
         return self.api_client.call_api(
-            '/judge/records/{record}/judgment', 'POST',
+            '/domains/{domain}/records/{record}/judge/judgment', 'POST',
             path_params,
             query_params,
             header_params,
@@ -344,7 +344,7 @@ class JudgeApi(object):
         auth_settings = ['HTTPBearer']  # noqa: E501
 
         return self.api_client.call_api(
-            '/judge/records/{record}/state', 'POST',
+            '/domains/{domain}/records/{record}/judge/state', 'POST',
             path_params,
             query_params,
             header_params,

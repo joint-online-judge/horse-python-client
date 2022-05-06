@@ -4,9 +4,9 @@ All URIs are relative to */*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**v1_claim_record_by_judge**](JudgeApi.md#v1_claim_record_by_judge) | **POST** /judge/records/{record}/claim | Claim Record By Judge
-[**v1_submit_record_by_judge**](JudgeApi.md#v1_submit_record_by_judge) | **POST** /judge/records/{record}/judgment | Submit Record By Judge
-[**v1_update_record_state_by_judge**](JudgeApi.md#v1_update_record_state_by_judge) | **POST** /judge/records/{record}/state | Update Record State By Judge
+[**v1_claim_record_by_judge**](JudgeApi.md#v1_claim_record_by_judge) | **POST** /domains/{domain}/records/{record}/judge/claim | Claim Record By Judge
+[**v1_submit_record_by_judge**](JudgeApi.md#v1_submit_record_by_judge) | **POST** /domains/{domain}/records/{record}/judge/judgment | Submit Record By Judge
+[**v1_update_record_state_by_judge**](JudgeApi.md#v1_update_record_state_by_judge) | **POST** /domains/{domain}/records/{record}/judge/state | Update Record State By Judge
 
 # **v1_claim_record_by_judge**
 > JudgeCredentialsResp v1_claim_record_by_judge(body, domain, record)

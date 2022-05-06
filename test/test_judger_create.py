@@ -15,12 +15,12 @@ from __future__ import absolute_import
 import unittest
 
 import joj.horse_client
-from joj.horse_client.models.domain_edit import DomainEdit  # noqa: E501
+from joj.horse_client.models.judger_create import JudgerCreate  # noqa: E501
 from joj.horse_client.rest import ApiException
 
 
-class TestDomainEdit(unittest.TestCase):
-    """DomainEdit unit test stubs"""
+class TestJudgerCreate(unittest.TestCase):
+    """JudgerCreate unit test stubs"""
 
     def setUp(self):
         pass
@@ -28,10 +28,10 @@ class TestDomainEdit(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testDomainEdit(self):
-        """Test DomainEdit"""
+    def testJudgerCreate(self):
+        """Test JudgerCreate"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = joj.horse_client.models.domain_edit.DomainEdit()  # noqa: E501
+        # model = joj.horse_client.models.judger_create.JudgerCreate()  # noqa: E501
         pass
 
 

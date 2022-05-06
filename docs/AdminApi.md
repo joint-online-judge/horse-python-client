@@ -4,9 +4,57 @@ All URIs are relative to */*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**v1_create_judger**](AdminApi.md#v1_create_judger) | **POST** /admin/judgers | Create Judger
 [**v1_list_domain_roles**](AdminApi.md#v1_list_domain_roles) | **GET** /admin/domain_roles | List Domain Roles
 [**v1_list_judgers**](AdminApi.md#v1_list_judgers) | **GET** /admin/judgers | List Judgers
 [**v1_list_users**](AdminApi.md#v1_list_users) | **GET** /admin/users | List Users
+
+# **v1_create_judger**
+> AuthTokensResp v1_create_judger(body)
+
+Create Judger
+
+### Example
+```python
+from __future__ import print_function
+import time
+import joj.horse_client
+from joj.horse_client.rest import ApiException
+from pprint import pprint
+
+
+# create an instance of the API class
+api_instance = joj.horse_client.AdminApi(joj.horse_client.ApiClient(configuration))
+body = joj.horse_client.JudgerCreate() # JudgerCreate | 
+
+try:
+    # Create Judger
+    api_response = api_instance.v1_create_judger(body)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling AdminApi->v1_create_judger: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**JudgerCreate**](JudgerCreate.md)|  | 
+
+### Return type
+
+[**AuthTokensResp**](AuthTokensResp.md)
+
+### Authorization
+
+[HTTPBearer](../README.md#HTTPBearer)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_list_domain_roles**
 > DomainRoleListResp v1_list_domain_roles(ordering=ordering, offset=offset, limit=limit)

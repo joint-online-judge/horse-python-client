@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: 12d10a5@2022-05-06T16:12:55Z  # noqa: E501
+    Git version: 46b709e@2022-05-06T20:04:13Z  # noqa: E501
 
     OpenAPI spec version: 1
     
@@ -26,6 +26,13 @@ class TestAdminApi(unittest.TestCase):
         self.api = AdminApi()  # noqa: E501
 
     def tearDown(self):
+        pass
+
+    def test_v1_create_judger(self):
+        """Test case for v1_create_judger
+
+        Create Judger  # noqa: E501
+        """
         pass
 
     def test_v1_list_domain_roles(self):

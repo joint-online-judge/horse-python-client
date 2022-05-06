@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: 12d10a5@2022-05-06T16:12:55Z  # noqa: E501
+    Git version: 46b709e@2022-05-06T20:04:13Z  # noqa: E501
 
     OpenAPI spec version: 1
     
@@ -29,34 +29,34 @@ class UserCreate(object):
     """
     swagger_types = {
         'username': 'str',
-        'email': 'str',
         'password': 'str',
+        'email': 'str',
         'oauth_name': 'str',
         'oauth_account_id': 'str'
     }
 
     attribute_map = {
         'username': 'username',
-        'email': 'email',
         'password': 'password',
+        'email': 'email',
         'oauth_name': 'oauth_name',
         'oauth_account_id': 'oauth_account_id'
     }
 
-    def __init__(self, username=None, email=None, password=None, oauth_name=None, oauth_account_id=None):  # noqa: E501
+    def __init__(self, username=None, password=None, email=None, oauth_name=None, oauth_account_id=None):  # noqa: E501
         """UserCreate - a model defined in Swagger"""  # noqa: E501
         self._username = None
-        self._email = None
         self._password = None
+        self._email = None
         self._oauth_name = None
         self._oauth_account_id = None
         self.discriminator = None
         if username is not None:
             self.username = username
-        if email is not None:
-            self.email = email
         if password is not None:
             self.password = password
+        if email is not None:
+            self.email = email
         if oauth_name is not None:
             self.oauth_name = oauth_name
         if oauth_account_id is not None:
@@ -84,27 +84,6 @@ class UserCreate(object):
         self._username = username
 
     @property
-    def email(self):
-        """Gets the email of this UserCreate.  # noqa: E501
-
-
-        :return: The email of this UserCreate.  # noqa: E501
-        :rtype: str
-        """
-        return self._email
-
-    @email.setter
-    def email(self, email):
-        """Sets the email of this UserCreate.
-
-
-        :param email: The email of this UserCreate.  # noqa: E501
-        :type: str
-        """
-
-        self._email = email
-
-    @property
     def password(self):
         """Gets the password of this UserCreate.  # noqa: E501
 
@@ -124,6 +103,27 @@ class UserCreate(object):
         """
 
         self._password = password
+
+    @property
+    def email(self):
+        """Gets the email of this UserCreate.  # noqa: E501
+
+
+        :return: The email of this UserCreate.  # noqa: E501
+        :rtype: str
+        """
+        return self._email
+
+    @email.setter
+    def email(self, email):
+        """Sets the email of this UserCreate.
+
+
+        :param email: The email of this UserCreate.  # noqa: E501
+        :type: str
+        """
+
+        self._email = email
 
     @property
     def oauth_name(self):
