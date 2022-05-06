@@ -1,11 +1,9 @@
-# JudgeCredentialsResp
+# JudgerClaim
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**error_code** | [**ErrorCode**](ErrorCode.md) |  | 
-**error_msg** | **str** |  | [optional] 
-**data** | [**JudgeCredentials**](JudgeCredentials.md) |  | [optional] 
+**task_id** | **str** |  | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

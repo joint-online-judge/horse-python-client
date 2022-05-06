@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: aa366f6@2022-05-06T20:09:31Z  # noqa: E501
+    Git version: 0ada93f@2022-05-06T20:49:07Z  # noqa: E501
 
     OpenAPI spec version: 1
     
@@ -15,12 +15,12 @@ from __future__ import absolute_import
 import unittest
 
 import joj.horse_client
-from joj.horse_client.models.judge_claim import JudgeClaim  # noqa: E501
+from joj.horse_client.models.judger_claim import JudgerClaim  # noqa: E501
 from joj.horse_client.rest import ApiException
 
 
-class TestJudgeClaim(unittest.TestCase):
-    """JudgeClaim unit test stubs"""
+class TestJudgerClaim(unittest.TestCase):
+    """JudgerClaim unit test stubs"""
 
     def setUp(self):
         pass
@@ -28,10 +28,10 @@ class TestJudgeClaim(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testJudgeClaim(self):
-        """Test JudgeClaim"""
+    def testJudgerClaim(self):
+        """Test JudgerClaim"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = joj.horse_client.models.judge_claim.JudgeClaim()  # noqa: E501
+        # model = joj.horse_client.models.judger_claim.JudgerClaim()  # noqa: E501
         pass
 
 

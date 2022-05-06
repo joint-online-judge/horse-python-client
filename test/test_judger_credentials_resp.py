@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: aa366f6@2022-05-06T20:09:31Z  # noqa: E501
+    Git version: 0ada93f@2022-05-06T20:49:07Z  # noqa: E501
 
     OpenAPI spec version: 1
     
@@ -15,12 +15,12 @@ from __future__ import absolute_import
 import unittest
 
 import joj.horse_client
-from joj.horse_client.models.judge_credentials import JudgeCredentials  # noqa: E501
+from joj.horse_client.models.judger_credentials_resp import JudgerCredentialsResp  # noqa: E501
 from joj.horse_client.rest import ApiException
 
 
-class TestJudgeCredentials(unittest.TestCase):
-    """JudgeCredentials unit test stubs"""
+class TestJudgerCredentialsResp(unittest.TestCase):
+    """JudgerCredentialsResp unit test stubs"""
 
     def setUp(self):
         pass
@@ -28,10 +28,10 @@ class TestJudgeCredentials(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testJudgeCredentials(self):
-        """Test JudgeCredentials"""
+    def testJudgerCredentialsResp(self):
+        """Test JudgerCredentialsResp"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = joj.horse_client.models.judge_credentials.JudgeCredentials()  # noqa: E501
+        # model = joj.horse_client.models.judger_credentials_resp.JudgerCredentialsResp()  # noqa: E501
         pass
 
 

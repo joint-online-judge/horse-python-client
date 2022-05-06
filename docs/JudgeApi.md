@@ -4,14 +4,14 @@ All URIs are relative to */*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**v1_claim_record_by_judge**](JudgeApi.md#v1_claim_record_by_judge) | **POST** /domains/{domain}/records/{record}/judge/claim | Claim Record By Judge
-[**v1_submit_record_by_judge**](JudgeApi.md#v1_submit_record_by_judge) | **POST** /domains/{domain}/records/{record}/judge/judgment | Submit Record By Judge
-[**v1_update_record_state_by_judge**](JudgeApi.md#v1_update_record_state_by_judge) | **POST** /domains/{domain}/records/{record}/judge/state | Update Record State By Judge
+[**v1_claim_record_by_judger**](JudgeApi.md#v1_claim_record_by_judger) | **POST** /domains/{domain}/records/{record}/judge/claim | Claim Record By Judger
+[**v1_submit_record_by_judger**](JudgeApi.md#v1_submit_record_by_judger) | **POST** /domains/{domain}/records/{record}/judge/judgment | Submit Record By Judger
+[**v1_update_record_state_by_judger**](JudgeApi.md#v1_update_record_state_by_judger) | **POST** /domains/{domain}/records/{record}/judge/state | Update Record State By Judger
 
-# **v1_claim_record_by_judge**
-> JudgeCredentialsResp v1_claim_record_by_judge(body, domain, record)
+# **v1_claim_record_by_judger**
+> JudgerCredentialsResp v1_claim_record_by_judger(body, domain, record)
 
-Claim Record By Judge
+Claim Record By Judger
 
 ### Example
 ```python
@@ -24,29 +24,29 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = joj.horse_client.JudgeApi(joj.horse_client.ApiClient(configuration))
-body = joj.horse_client.JudgeClaim() # JudgeClaim | 
+body = joj.horse_client.JudgerClaim() # JudgerClaim | 
 domain = 'domain_example' # str | url or id of the domain
 record = 'record_example' # str | 
 
 try:
-    # Claim Record By Judge
-    api_response = api_instance.v1_claim_record_by_judge(body, domain, record)
+    # Claim Record By Judger
+    api_response = api_instance.v1_claim_record_by_judger(body, domain, record)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling JudgeApi->v1_claim_record_by_judge: %s\n" % e)
+    print("Exception when calling JudgeApi->v1_claim_record_by_judger: %s\n" % e)
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**JudgeClaim**](JudgeClaim.md)|  | 
+ **body** | [**JudgerClaim**](JudgerClaim.md)|  | 
  **domain** | **str**| url or id of the domain | 
  **record** | **str**|  | 
 
 ### Return type
 
-[**JudgeCredentialsResp**](JudgeCredentialsResp.md)
+[**JudgerCredentialsResp**](JudgerCredentialsResp.md)
 
 ### Authorization
 
@@ -59,10 +59,10 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **v1_submit_record_by_judge**
-> EmptyResp v1_submit_record_by_judge(body, domain, record)
+# **v1_submit_record_by_judger**
+> EmptyResp v1_submit_record_by_judger(body, domain, record)
 
-Submit Record By Judge
+Submit Record By Judger
 
 ### Example
 ```python
@@ -80,11 +80,11 @@ domain = 'domain_example' # str | url or id of the domain
 record = 'record_example' # str | 
 
 try:
-    # Submit Record By Judge
-    api_response = api_instance.v1_submit_record_by_judge(body, domain, record)
+    # Submit Record By Judger
+    api_response = api_instance.v1_submit_record_by_judger(body, domain, record)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling JudgeApi->v1_submit_record_by_judge: %s\n" % e)
+    print("Exception when calling JudgeApi->v1_submit_record_by_judger: %s\n" % e)
 ```
 
 ### Parameters
@@ -110,10 +110,10 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **v1_update_record_state_by_judge**
-> RecordResp v1_update_record_state_by_judge(domain, record)
+# **v1_update_record_state_by_judger**
+> RecordResp v1_update_record_state_by_judger(domain, record)
 
-Update Record State By Judge
+Update Record State By Judger
 
 ### Example
 ```python
@@ -130,11 +130,11 @@ domain = 'domain_example' # str | url or id of the domain
 record = 'record_example' # str | 
 
 try:
-    # Update Record State By Judge
-    api_response = api_instance.v1_update_record_state_by_judge(domain, record)
+    # Update Record State By Judger
+    api_response = api_instance.v1_update_record_state_by_judger(domain, record)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling JudgeApi->v1_update_record_state_by_judge: %s\n" % e)
+    print("Exception when calling JudgeApi->v1_update_record_state_by_judger: %s\n" % e)
 ```
 
 ### Parameters

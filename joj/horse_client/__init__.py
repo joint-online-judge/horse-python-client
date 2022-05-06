@@ -5,7 +5,7 @@
 """
     JOJ Horse
 
-    Git version: aa366f6@2022-05-06T20:09:31Z  # noqa: E501
+    Git version: 0ada93f@2022-05-06T20:49:07Z  # noqa: E501
 
     OpenAPI spec version: 1
     
@@ -85,10 +85,10 @@ from joj.horse_client.models.general_permission import GeneralPermission
 from joj.horse_client.models.http_validation_error import HTTPValidationError
 from joj.horse_client.models.jwt_access_token import JWTAccessToken
 from joj.horse_client.models.jwt_access_token_resp import JWTAccessTokenResp
-from joj.horse_client.models.judge_claim import JudgeClaim
-from joj.horse_client.models.judge_credentials import JudgeCredentials
-from joj.horse_client.models.judge_credentials_resp import JudgeCredentialsResp
+from joj.horse_client.models.judger_claim import JudgerClaim
 from joj.horse_client.models.judger_create import JudgerCreate
+from joj.horse_client.models.judger_credentials import JudgerCredentials
+from joj.horse_client.models.judger_credentials_resp import JudgerCredentialsResp
 from joj.horse_client.models.lake_fs_reset import LakeFSReset
 from joj.horse_client.models.o_auth2_client import OAuth2Client
 from joj.horse_client.models.o_auth2_client_list import OAuth2ClientList

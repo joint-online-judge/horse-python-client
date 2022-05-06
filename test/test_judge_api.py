@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: aa366f6@2022-05-06T20:09:31Z  # noqa: E501
+    Git version: 0ada93f@2022-05-06T20:49:07Z  # noqa: E501
 
     OpenAPI spec version: 1
     
@@ -28,24 +28,24 @@ class TestJudgeApi(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def test_v1_claim_record_by_judge(self):
-        """Test case for v1_claim_record_by_judge
+    def test_v1_claim_record_by_judger(self):
+        """Test case for v1_claim_record_by_judger
 
-        Claim Record By Judge  # noqa: E501
+        Claim Record By Judger  # noqa: E501
         """
         pass
 
-    def test_v1_submit_record_by_judge(self):
-        """Test case for v1_submit_record_by_judge
+    def test_v1_submit_record_by_judger(self):
+        """Test case for v1_submit_record_by_judger
 
-        Submit Record By Judge  # noqa: E501
+        Submit Record By Judger  # noqa: E501
         """
         pass
 
-    def test_v1_update_record_state_by_judge(self):
-        """Test case for v1_update_record_state_by_judge
+    def test_v1_update_record_state_by_judger(self):
+        """Test case for v1_update_record_state_by_judger
 
-        Update Record State By Judge  # noqa: E501
+        Update Record State By Judger  # noqa: E501
         """
         pass
 
