@@ -12,6 +12,7 @@ Name | Type | Description | Notes
 **score** | **int** |  | [optional] [default to 0]
 **time_ms** | **int** |  | [optional] [default to 0]
 **memory_kb** | **int** |  | [optional] [default to 0]
+**judged_at** | **datetime** |  | [optional] 
 **commit_id** | **str** |  | [optional] 
 **task_id** | **str** |  | [optional] 
 **cases** | [**list[RecordCase]**](RecordCase.md) |  | [optional] 

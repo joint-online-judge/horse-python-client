@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: 0ada93f@2022-05-06T20:49:07Z  # noqa: E501
+    Git version: 6c53391@2022-05-07T19:36:22Z  # noqa: E501
 
     OpenAPI spec version: 1
     
@@ -37,6 +37,7 @@ class RecordDetail(object):
         'score': 'int',
         'time_ms': 'int',
         'memory_kb': 'int',
+        'judged_at': 'datetime',
         'commit_id': 'str',
         'task_id': 'str',
         'cases': 'list[RecordCase]',
@@ -57,6 +58,7 @@ class RecordDetail(object):
         'score': 'score',
         'time_ms': 'timeMs',
         'memory_kb': 'memoryKb',
+        'judged_at': 'judgedAt',
         'commit_id': 'commitId',
         'task_id': 'taskId',
         'cases': 'cases',
@@ -67,7 +69,7 @@ class RecordDetail(object):
         'judger_id': 'judgerId'
     }
 
-    def __init__(self, created_at=None, updated_at=None, id=None, domain_id=None, state=None, language=None, score=0, time_ms=0, memory_kb=0, commit_id=None, task_id=None, cases=None, problem_set_id=None, problem_id=None, problem_config_id=None, committer_id=None, judger_id=None):  # noqa: E501
+    def __init__(self, created_at=None, updated_at=None, id=None, domain_id=None, state=None, language=None, score=0, time_ms=0, memory_kb=0, judged_at=None, commit_id=None, task_id=None, cases=None, problem_set_id=None, problem_id=None, problem_config_id=None, committer_id=None, judger_id=None):  # noqa: E501
         """RecordDetail - a model defined in Swagger"""  # noqa: E501
         self._created_at = None
         self._updated_at = None
@@ -78,6 +80,7 @@ class RecordDetail(object):
         self._score = None
         self._time_ms = None
         self._memory_kb = None
+        self._judged_at = None
         self._commit_id = None
         self._task_id = None
         self._cases = None
@@ -102,6 +105,8 @@ class RecordDetail(object):
             self.time_ms = time_ms
         if memory_kb is not None:
             self.memory_kb = memory_kb
+        if judged_at is not None:
+            self.judged_at = judged_at
         if commit_id is not None:
             self.commit_id = commit_id
         if task_id is not None:
@@ -313,6 +318,27 @@ class RecordDetail(object):
         """
 
         self._memory_kb = memory_kb
+
+    @property
+    def judged_at(self):
+        """Gets the judged_at of this RecordDetail.  # noqa: E501
+
+
+        :return: The judged_at of this RecordDetail.  # noqa: E501
+        :rtype: datetime
+        """
+        return self._judged_at
+
+    @judged_at.setter
+    def judged_at(self, judged_at):
+        """Sets the judged_at of this RecordDetail.
+
+
+        :param judged_at: The judged_at of this RecordDetail.  # noqa: E501
+        :type: datetime
+        """
+
+        self._judged_at = judged_at
 
     @property
     def commit_id(self):

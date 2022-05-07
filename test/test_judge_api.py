@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: 0ada93f@2022-05-06T20:49:07Z  # noqa: E501
+    Git version: 6c53391@2022-05-07T19:36:22Z  # noqa: E501
 
     OpenAPI spec version: 1
     
@@ -35,17 +35,17 @@ class TestJudgeApi(unittest.TestCase):
         """
         pass
 
+    def test_v1_submit_case_by_judger(self):
+        """Test case for v1_submit_case_by_judger
+
+        Submit Case By Judger  # noqa: E501
+        """
+        pass
+
     def test_v1_submit_record_by_judger(self):
         """Test case for v1_submit_record_by_judger
 
         Submit Record By Judger  # noqa: E501
-        """
-        pass
-
-    def test_v1_update_record_state_by_judger(self):
-        """Test case for v1_update_record_state_by_judger
-
-        Update Record State By Judger  # noqa: E501
         """
         pass
 

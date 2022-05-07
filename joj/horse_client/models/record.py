@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: 0ada93f@2022-05-06T20:49:07Z  # noqa: E501
+    Git version: 6c53391@2022-05-07T19:36:22Z  # noqa: E501
 
     OpenAPI spec version: 1
     
@@ -36,7 +36,8 @@ class Record(object):
         'language': 'str',
         'score': 'int',
         'time_ms': 'int',
-        'memory_kb': 'int'
+        'memory_kb': 'int',
+        'judged_at': 'datetime'
     }
 
     attribute_map = {
@@ -48,10 +49,11 @@ class Record(object):
         'language': 'language',
         'score': 'score',
         'time_ms': 'timeMs',
-        'memory_kb': 'memoryKb'
+        'memory_kb': 'memoryKb',
+        'judged_at': 'judgedAt'
     }
 
-    def __init__(self, created_at=None, updated_at=None, id=None, domain_id=None, state=None, language=None, score=0, time_ms=0, memory_kb=0):  # noqa: E501
+    def __init__(self, created_at=None, updated_at=None, id=None, domain_id=None, state=None, language=None, score=0, time_ms=0, memory_kb=0, judged_at=None):  # noqa: E501
         """Record - a model defined in Swagger"""  # noqa: E501
         self._created_at = None
         self._updated_at = None
@@ -62,6 +64,7 @@ class Record(object):
         self._score = None
         self._time_ms = None
         self._memory_kb = None
+        self._judged_at = None
         self.discriminator = None
         if created_at is not None:
             self.created_at = created_at
@@ -78,6 +81,8 @@ class Record(object):
             self.time_ms = time_ms
         if memory_kb is not None:
             self.memory_kb = memory_kb
+        if judged_at is not None:
+            self.judged_at = judged_at
 
     @property
     def created_at(self):
@@ -273,6 +278,27 @@ class Record(object):
         """
 
         self._memory_kb = memory_kb
+
+    @property
+    def judged_at(self):
+        """Gets the judged_at of this Record.  # noqa: E501
+
+
+        :return: The judged_at of this Record.  # noqa: E501
+        :rtype: datetime
+        """
+        return self._judged_at
+
+    @judged_at.setter
+    def judged_at(self, judged_at):
+        """Sets the judged_at of this Record.
+
+
+        :param judged_at: The judged_at of this Record.  # noqa: E501
+        :type: datetime
+        """
+
+        self._judged_at = judged_at
 
     def to_dict(self):
         """Returns the model properties as a dict"""

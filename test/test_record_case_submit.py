@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: 0ada93f@2022-05-06T20:49:07Z  # noqa: E501
+    Git version: 6c53391@2022-05-07T19:36:22Z  # noqa: E501
 
     OpenAPI spec version: 1
     
@@ -15,12 +15,12 @@ from __future__ import absolute_import
 import unittest
 
 import joj.horse_client
-from joj.horse_client.models.record_result import RecordResult  # noqa: E501
+from joj.horse_client.models.record_case_submit import RecordCaseSubmit  # noqa: E501
 from joj.horse_client.rest import ApiException
 
 
-class TestRecordResult(unittest.TestCase):
-    """RecordResult unit test stubs"""
+class TestRecordCaseSubmit(unittest.TestCase):
+    """RecordCaseSubmit unit test stubs"""
 
     def setUp(self):
         pass
@@ -28,10 +28,10 @@ class TestRecordResult(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testRecordResult(self):
-        """Test RecordResult"""
+    def testRecordCaseSubmit(self):
+        """Test RecordCaseSubmit"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = joj.horse_client.models.record_result.RecordResult()  # noqa: E501
+        # model = joj.horse_client.models.record_case_submit.RecordCaseSubmit()  # noqa: E501
         pass
 
 

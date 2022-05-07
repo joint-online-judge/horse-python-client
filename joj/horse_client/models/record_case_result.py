@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: 0ada93f@2022-05-06T20:49:07Z  # noqa: E501
+    Git version: 6c53391@2022-05-07T19:36:22Z  # noqa: E501
 
     OpenAPI spec version: 1
     
@@ -24,16 +24,16 @@ class RecordCaseResult(object):
     """
     allowed enum values
     """
-    _1 = "1"
-    _2 = "2"
-    _3 = "3"
-    _4 = "4"
-    _5 = "5"
-    _6 = "6"
-    _7 = "7"
-    _8 = "8"
-    _9 = "9"
-    _10 = "10"
+    ACCEPTED = "accepted"
+    WRONG_ANSWER = "wrong_answer"
+    TIME_LIMIT_EXCEEDED = "time_limit_exceeded"
+    MEMORY_LIMIT_EXCEEDED = "memory_limit_exceeded"
+    OUTPUT_LIMIT_EXCEEDED = "output_limit_exceeded"
+    RUNTIME_ERROR = "runtime_error"
+    COMPILE_ERROR = "compile_error"
+    SYSTEM_ERROR = "system_error"
+    CANCELED = "canceled"
+    ETC = "etc"
     """
     Attributes:
       swagger_types (dict): The key is attribute name
