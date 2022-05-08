@@ -60,7 +60,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_submit_case_by_judger**
-> EmptyResp v1_submit_case_by_judger(body, case, domain, record)
+> EmptyResp v1_submit_case_by_judger(body, case, record, domain)
 
 Submit Case By Judger
 
@@ -77,12 +77,12 @@ from pprint import pprint
 api_instance = joj.horse_client.JudgeApi(joj.horse_client.ApiClient(configuration))
 body = joj.horse_client.RecordCaseSubmit() # RecordCaseSubmit | 
 case = 56 # int | 
-domain = 'domain_example' # str | url or id of the domain
 record = 'record_example' # str | 
+domain = 'domain_example' # str | url or id of the domain
 
 try:
     # Submit Case By Judger
-    api_response = api_instance.v1_submit_case_by_judger(body, case, domain, record)
+    api_response = api_instance.v1_submit_case_by_judger(body, case, record, domain)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling JudgeApi->v1_submit_case_by_judger: %s\n" % e)
@@ -94,8 +94,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**RecordCaseSubmit**](RecordCaseSubmit.md)|  | 
  **case** | **int**|  | 
- **domain** | **str**| url or id of the domain | 
  **record** | **str**|  | 
+ **domain** | **str**| url or id of the domain | 
 
 ### Return type
 
@@ -113,7 +113,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_submit_record_by_judger**
-> EmptyResp v1_submit_record_by_judger(body, domain, record)
+> EmptyResp v1_submit_record_by_judger(body, record, domain)
 
 Submit Record By Judger
 
@@ -129,12 +129,12 @@ from pprint import pprint
 # create an instance of the API class
 api_instance = joj.horse_client.JudgeApi(joj.horse_client.ApiClient(configuration))
 body = joj.horse_client.RecordSubmit() # RecordSubmit | 
-domain = 'domain_example' # str | url or id of the domain
 record = 'record_example' # str | 
+domain = 'domain_example' # str | url or id of the domain
 
 try:
     # Submit Record By Judger
-    api_response = api_instance.v1_submit_record_by_judger(body, domain, record)
+    api_response = api_instance.v1_submit_record_by_judger(body, record, domain)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling JudgeApi->v1_submit_record_by_judger: %s\n" % e)
@@ -145,8 +145,8 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**RecordSubmit**](RecordSubmit.md)|  | 
- **domain** | **str**| url or id of the domain | 
  **record** | **str**|  | 
+ **domain** | **str**| url or id of the domain | 
 
 ### Return type
 
