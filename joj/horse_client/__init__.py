@@ -5,7 +5,7 @@
 """
     JOJ Horse
 
-    Git version: b343911@2022-05-10T10:42:09Z  # noqa: E501
+    Git version: 4555c06@2022-05-10T17:39:17Z  # noqa: E501
 
     OpenAPI spec version: 1
     
@@ -36,6 +36,7 @@ from joj.horse_client.models.all_of_domain_permission_problem_set import AllOfDo
 from joj.horse_client.models.all_of_domain_permission_record import AllOfDomainPermissionRecord
 from joj.horse_client.models.all_of_record_case_state import AllOfRecordCaseState
 from joj.horse_client.models.all_of_record_detail_state import AllOfRecordDetailState
+from joj.horse_client.models.all_of_record_list_detail_state import AllOfRecordListDetailState
 from joj.horse_client.models.all_of_record_state import AllOfRecordState
 from joj.horse_client.models.any_of_file_info_mtime import AnyOfFileInfoMtime
 from joj.horse_client.models.archive_format import ArchiveFormat
@@ -134,8 +135,9 @@ from joj.horse_client.models.record_case_result import RecordCaseResult
 from joj.horse_client.models.record_case_submit import RecordCaseSubmit
 from joj.horse_client.models.record_detail import RecordDetail
 from joj.horse_client.models.record_detail_resp import RecordDetailResp
-from joj.horse_client.models.record_list import RecordList
-from joj.horse_client.models.record_list_resp import RecordListResp
+from joj.horse_client.models.record_list_detail import RecordListDetail
+from joj.horse_client.models.record_list_detail_list import RecordListDetailList
+from joj.horse_client.models.record_list_detail_list_resp import RecordListDetailListResp
 from joj.horse_client.models.record_permission import RecordPermission
 from joj.horse_client.models.record_preview import RecordPreview
 from joj.horse_client.models.record_resp import RecordResp

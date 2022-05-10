@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: b343911@2022-05-10T10:42:09Z  # noqa: E501
+    Git version: 4555c06@2022-05-10T17:39:17Z  # noqa: E501
 
     OpenAPI spec version: 1
     
@@ -250,7 +250,7 @@ class RecordApi(object):
         :param str ordering: Comma seperated list of ordering the results. You may specify reverse orderings by prefixing the field name with '-'.  Available fields: created_at,updated_at
         :param int offset:
         :param int limit:
-        :return: RecordListResp
+        :return: RecordListDetailListResp
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -277,7 +277,7 @@ class RecordApi(object):
         :param str ordering: Comma seperated list of ordering the results. You may specify reverse orderings by prefixing the field name with '-'.  Available fields: created_at,updated_at
         :param int offset:
         :param int limit:
-        :return: RecordListResp
+        :return: RecordListDetailListResp
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -343,7 +343,7 @@ class RecordApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='RecordListResp',  # noqa: E501
+            response_type='RecordListDetailListResp',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),

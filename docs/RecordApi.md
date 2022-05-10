@@ -107,7 +107,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_list_records_in_domain**
-> RecordListResp v1_list_records_in_domain(domain, problem_set=problem_set, problem=problem, submitter_id=submitter_id, ordering=ordering, offset=offset, limit=limit)
+> RecordListDetailListResp v1_list_records_in_domain(domain, problem_set=problem_set, problem=problem, submitter_id=submitter_id, ordering=ordering, offset=offset, limit=limit)
 
 List Records In Domain
 
@@ -152,7 +152,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**RecordListResp**](RecordListResp.md)
+[**RecordListDetailListResp**](RecordListDetailListResp.md)
 
 ### Authorization
 

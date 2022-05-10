@@ -1,11 +1,11 @@
-# RecordListResp
+# RecordListDetailListResp
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **error_code** | [**ErrorCode**](ErrorCode.md) |  | 
 **error_msg** | **str** |  | [optional] 
-**data** | [**RecordList**](RecordList.md) |  | [optional] 
+**data** | [**RecordListDetailList**](RecordListDetailList.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
