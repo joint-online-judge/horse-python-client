@@ -436,7 +436,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_get_problem_config_json**
-> ProblemConfigResp v1_get_problem_config_json(domain, config, problem)
+> ProblemConfigDataDetailResp v1_get_problem_config_json(domain, config, problem)
 
 Get Problem Config Json
 
@@ -473,7 +473,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ProblemConfigResp**](ProblemConfigResp.md)
+[**ProblemConfigDataDetailResp**](ProblemConfigDataDetailResp.md)
 
 ### Authorization
 

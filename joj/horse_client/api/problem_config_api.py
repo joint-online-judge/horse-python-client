@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: 4555c06@2022-05-10T17:39:17Z  # noqa: E501
+    Git version: c3a0def@2022-05-10T18:12:53Z  # noqa: E501
 
     OpenAPI spec version: 1
     
@@ -934,7 +934,7 @@ class ProblemConfigApi(object):
         :param str domain: url or id of the domain (required)
         :param str config: 'latest' or id of the config (required)
         :param str problem: url or id of the problem (required)
-        :return: ProblemConfigResp
+        :return: ProblemConfigDataDetailResp
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -957,7 +957,7 @@ class ProblemConfigApi(object):
         :param str domain: url or id of the domain (required)
         :param str config: 'latest' or id of the config (required)
         :param str problem: url or id of the problem (required)
-        :return: ProblemConfigResp
+        :return: ProblemConfigDataDetailResp
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -1023,7 +1023,7 @@ class ProblemConfigApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='ProblemConfigResp',  # noqa: E501
+            response_type='ProblemConfigDataDetailResp',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
