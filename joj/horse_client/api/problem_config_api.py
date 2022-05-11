@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: c3a0def@2022-05-10T18:12:53Z  # noqa: E501
+    Git version: 229685b@2022-05-11T18:09:02Z  # noqa: E501
 
     OpenAPI spec version: 1
     
@@ -1268,7 +1268,7 @@ class ProblemConfigApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param object body: (required)
+        :param ProblemConfigJson body: (required)
         :param str problem: url or id of the problem (required)
         :param str domain: url or id of the domain (required)
         :return: FileInfoResp
@@ -1291,7 +1291,7 @@ class ProblemConfigApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param object body: (required)
+        :param ProblemConfigJson body: (required)
         :param str problem: url or id of the problem (required)
         :param str domain: url or id of the domain (required)
         :return: FileInfoResp

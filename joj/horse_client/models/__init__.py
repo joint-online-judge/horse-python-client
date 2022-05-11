@@ -4,7 +4,7 @@
 """
     JOJ Horse
 
-    Git version: c3a0def@2022-05-10T18:12:53Z  # noqa: E501
+    Git version: 229685b@2022-05-11T18:09:02Z  # noqa: E501
 
     OpenAPI spec version: 1
     
@@ -28,6 +28,7 @@ from joj.horse_client.models.archive_format1 import ArchiveFormat1
 from joj.horse_client.models.archive_type import ArchiveType
 from joj.horse_client.models.auth_tokens import AuthTokens
 from joj.horse_client.models.auth_tokens_resp import AuthTokensResp
+from joj.horse_client.models.case import Case
 from joj.horse_client.models.detail import Detail
 from joj.horse_client.models.domain import Domain
 from joj.horse_client.models.domain_create import DomainCreate
@@ -75,6 +76,8 @@ from joj.horse_client.models.judger_create import JudgerCreate
 from joj.horse_client.models.judger_credentials import JudgerCredentials
 from joj.horse_client.models.judger_credentials_resp import JudgerCredentialsResp
 from joj.horse_client.models.lake_fs_reset import LakeFSReset
+from joj.horse_client.models.language import Language
+from joj.horse_client.models.language_default import LanguageDefault
 from joj.horse_client.models.o_auth2_client import OAuth2Client
 from joj.horse_client.models.o_auth2_client_list import OAuth2ClientList
 from joj.horse_client.models.o_auth2_client_list_resp import OAuth2ClientListResp
@@ -85,6 +88,7 @@ from joj.horse_client.models.problem_config import ProblemConfig
 from joj.horse_client.models.problem_config_commit import ProblemConfigCommit
 from joj.horse_client.models.problem_config_data_detail import ProblemConfigDataDetail
 from joj.horse_client.models.problem_config_data_detail_resp import ProblemConfigDataDetailResp
+from joj.horse_client.models.problem_config_json import ProblemConfigJson
 from joj.horse_client.models.problem_config_resp import ProblemConfigResp
 from joj.horse_client.models.problem_create import ProblemCreate
 from joj.horse_client.models.problem_detail import ProblemDetail

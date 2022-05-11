@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: c3a0def@2022-05-10T18:12:53Z  # noqa: E501
+    Git version: 229685b@2022-05-11T18:09:02Z  # noqa: E501
 
     OpenAPI spec version: 1
     
@@ -31,7 +31,6 @@ class ProblemConfig(object):
         'id': 'str',
         'commit_message': 'str',
         'data_version': 'int',
-        'languages': 'list[str]',
         'commit_id': 'str',
         'committer_id': 'str'
     }
@@ -40,17 +39,15 @@ class ProblemConfig(object):
         'id': 'id',
         'commit_message': 'commitMessage',
         'data_version': 'dataVersion',
-        'languages': 'languages',
         'commit_id': 'commitId',
         'committer_id': 'committerId'
     }
 
-    def __init__(self, id=None, commit_message='', data_version=2, languages=None, commit_id='', committer_id=None):  # noqa: E501
+    def __init__(self, id=None, commit_message='', data_version=2, commit_id='', committer_id=None):  # noqa: E501
         """ProblemConfig - a model defined in Swagger"""  # noqa: E501
         self._id = None
         self._commit_message = None
         self._data_version = None
-        self._languages = None
         self._commit_id = None
         self._committer_id = None
         self.discriminator = None
@@ -59,8 +56,6 @@ class ProblemConfig(object):
             self.commit_message = commit_message
         if data_version is not None:
             self.data_version = data_version
-        if languages is not None:
-            self.languages = languages
         if commit_id is not None:
             self.commit_id = commit_id
         if committer_id is not None:
@@ -130,27 +125,6 @@ class ProblemConfig(object):
         """
 
         self._data_version = data_version
-
-    @property
-    def languages(self):
-        """Gets the languages of this ProblemConfig.  # noqa: E501
-
-
-        :return: The languages of this ProblemConfig.  # noqa: E501
-        :rtype: list[str]
-        """
-        return self._languages
-
-    @languages.setter
-    def languages(self, languages):
-        """Sets the languages of this ProblemConfig.
-
-
-        :param languages: The languages of this ProblemConfig.  # noqa: E501
-        :type: list[str]
-        """
-
-        self._languages = languages
 
     @property
     def commit_id(self):

@@ -606,7 +606,7 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = joj.horse_client.ProblemConfigApi(joj.horse_client.ApiClient(configuration))
-body = NULL # object | 
+body = joj.horse_client.ProblemConfigJson() # ProblemConfigJson | 
 problem = 'problem_example' # str | url or id of the problem
 domain = 'domain_example' # str | url or id of the domain
 
@@ -622,7 +622,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**object**](object.md)|  | 
+ **body** | [**ProblemConfigJson**](ProblemConfigJson.md)|  | 
  **problem** | **str**| url or id of the problem | 
  **domain** | **str**| url or id of the domain | 
 
