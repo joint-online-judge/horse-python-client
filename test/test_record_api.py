@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: ed0122c@2022-05-12T03:18:43Z  # noqa: E501
+    Git version: 9123c97@2022-05-12T03:29:47Z  # noqa: E501
 
     OpenAPI spec version: 1
     
@@ -32,13 +32,6 @@ class TestRecordApi(unittest.TestCase):
         """Test case for v1_get_record
 
         Get Record  # noqa: E501
-        """
-        pass
-
-    def test_v1_get_record_code(self):
-        """Test case for v1_get_record_code
-
-        Get Record Code  # noqa: E501
         """
         pass
 
