@@ -1,6 +1,6 @@
 # joj.horse_client.AdminApi
 
-All URIs are relative to */*
+All URIs are relative to */api/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------

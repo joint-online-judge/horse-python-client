@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: c31343f@2022-05-12T02:05:27Z  # noqa: E501
+    Git version: 64cd9ac@2022-05-12T02:56:21Z  # noqa: E501
 
     OpenAPI spec version: 1
     
@@ -46,7 +46,7 @@ class Configuration(six.with_metaclass(TypeWithDefault, object)):
     def __init__(self):
         """Constructor"""
         # Default Base url
-        self.host = "/"
+        self.host = "/api/v1"
         # Temp file folder for downloading files
         self.temp_folder_path = None
 
