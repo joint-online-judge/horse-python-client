@@ -5,7 +5,7 @@ All URIs are relative to */*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**v1_claim_record_by_judger**](JudgeApi.md#v1_claim_record_by_judger) | **POST** /domains/{domain}/records/{record}/judge/claim | Claim Record By Judger
-[**v1_submit_case_by_judger**](JudgeApi.md#v1_submit_case_by_judger) | **PUT** /domains/{domain}/records/{record}/cases/{case}/judge | Submit Case By Judger
+[**v1_submit_case_by_judger**](JudgeApi.md#v1_submit_case_by_judger) | **PUT** /domains/{domain}/records/{record}/cases/{index}/judge | Submit Case By Judger
 [**v1_submit_record_by_judger**](JudgeApi.md#v1_submit_record_by_judger) | **PUT** /domains/{domain}/records/{record}/judge | Submit Record By Judger
 
 # **v1_claim_record_by_judger**
@@ -60,7 +60,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_submit_case_by_judger**
-> EmptyResp v1_submit_case_by_judger(body, case, record, domain)
+> EmptyResp v1_submit_case_by_judger(body, index, record, domain)
 
 Submit Case By Judger
 
@@ -76,13 +76,13 @@ from pprint import pprint
 # create an instance of the API class
 api_instance = joj.horse_client.JudgeApi(joj.horse_client.ApiClient(configuration))
 body = joj.horse_client.RecordCaseSubmit() # RecordCaseSubmit | 
-case = 56 # int | 
+index = 56 # int | 
 record = 'record_example' # str | 
 domain = 'domain_example' # str | url or id of the domain
 
 try:
     # Submit Case By Judger
-    api_response = api_instance.v1_submit_case_by_judger(body, case, record, domain)
+    api_response = api_instance.v1_submit_case_by_judger(body, index, record, domain)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling JudgeApi->v1_submit_case_by_judger: %s\n" % e)
@@ -93,7 +93,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**RecordCaseSubmit**](RecordCaseSubmit.md)|  | 
- **case** | **int**|  | 
+ **index** | **int**|  | 
  **record** | **str**|  | 
  **domain** | **str**| url or id of the domain | 
 

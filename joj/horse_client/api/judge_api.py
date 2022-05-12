@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: 229685b@2022-05-11T18:09:02Z  # noqa: E501
+    Git version: c31343f@2022-05-12T02:05:27Z  # noqa: E501
 
     OpenAPI spec version: 1
     
@@ -145,17 +145,17 @@ class JudgeApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def v1_submit_case_by_judger(self, body, case, record, domain, **kwargs):  # noqa: E501
+    def v1_submit_case_by_judger(self, body, index, record, domain, **kwargs):  # noqa: E501
         """Submit Case By Judger  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.v1_submit_case_by_judger(body, case, record, domain, async_req=True)
+        >>> thread = api.v1_submit_case_by_judger(body, index, record, domain, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
         :param RecordCaseSubmit body: (required)
-        :param int case: (required)
+        :param int index: (required)
         :param str record: (required)
         :param str domain: url or id of the domain (required)
         :return: EmptyResp
@@ -164,22 +164,22 @@ class JudgeApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.v1_submit_case_by_judger_with_http_info(body, case, record, domain, **kwargs)  # noqa: E501
+            return self.v1_submit_case_by_judger_with_http_info(body, index, record, domain, **kwargs)  # noqa: E501
         else:
-            (data) = self.v1_submit_case_by_judger_with_http_info(body, case, record, domain, **kwargs)  # noqa: E501
+            (data) = self.v1_submit_case_by_judger_with_http_info(body, index, record, domain, **kwargs)  # noqa: E501
             return data
 
-    def v1_submit_case_by_judger_with_http_info(self, body, case, record, domain, **kwargs):  # noqa: E501
+    def v1_submit_case_by_judger_with_http_info(self, body, index, record, domain, **kwargs):  # noqa: E501
         """Submit Case By Judger  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.v1_submit_case_by_judger_with_http_info(body, case, record, domain, async_req=True)
+        >>> thread = api.v1_submit_case_by_judger_with_http_info(body, index, record, domain, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
         :param RecordCaseSubmit body: (required)
-        :param int case: (required)
+        :param int index: (required)
         :param str record: (required)
         :param str domain: url or id of the domain (required)
         :return: EmptyResp
@@ -187,7 +187,7 @@ class JudgeApi(object):
                  returns the request thread.
         """
 
-        all_params = ['body', 'case', 'record', 'domain']  # noqa: E501
+        all_params = ['body', 'index', 'record', 'domain']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -206,10 +206,10 @@ class JudgeApi(object):
         if ('body' not in params or
                 params['body'] is None):
             raise ValueError("Missing the required parameter `body` when calling `v1_submit_case_by_judger`")  # noqa: E501
-        # verify the required parameter 'case' is set
-        if ('case' not in params or
-                params['case'] is None):
-            raise ValueError("Missing the required parameter `case` when calling `v1_submit_case_by_judger`")  # noqa: E501
+        # verify the required parameter 'index' is set
+        if ('index' not in params or
+                params['index'] is None):
+            raise ValueError("Missing the required parameter `index` when calling `v1_submit_case_by_judger`")  # noqa: E501
         # verify the required parameter 'record' is set
         if ('record' not in params or
                 params['record'] is None):
@@ -222,8 +222,8 @@ class JudgeApi(object):
         collection_formats = {}
 
         path_params = {}
-        if 'case' in params:
-            path_params['case'] = params['case']  # noqa: E501
+        if 'index' in params:
+            path_params['index'] = params['index']  # noqa: E501
         if 'record' in params:
             path_params['record'] = params['record']  # noqa: E501
         if 'domain' in params:
@@ -251,7 +251,7 @@ class JudgeApi(object):
         auth_settings = ['HTTPBearer']  # noqa: E501
 
         return self.api_client.call_api(
-            '/domains/{domain}/records/{record}/cases/{case}/judge', 'PUT',
+            '/domains/{domain}/records/{record}/cases/{index}/judge', 'PUT',
             path_params,
             query_params,
             header_params,
