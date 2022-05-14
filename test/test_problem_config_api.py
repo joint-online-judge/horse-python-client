@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: b3db0dc@2022-05-14T18:00:18Z  # noqa: E501
+    Git version: 4bafe89@2022-05-14T18:47:05Z  # noqa: E501
 
     OpenAPI spec version: 1
     
@@ -49,6 +49,13 @@ class TestProblemConfigApi(unittest.TestCase):
         """
         pass
 
+    def test_v1_diff_problem_config_default_branch(self):
+        """Test case for v1_diff_problem_config_default_branch
+
+        Diff Problem Config Default Branch  # noqa: E501
+        """
+        pass
+
     def test_v1_download_file_in_problem_config(self):
         """Test case for v1_download_file_in_problem_config
 
@@ -88,6 +95,13 @@ class TestProblemConfigApi(unittest.TestCase):
         """Test case for v1_get_problem_config_json
 
         Get Problem Config Json  # noqa: E501
+        """
+        pass
+
+    def test_v1_list_latest_problem_config_objects_under_a_given_prefix(self):
+        """Test case for v1_list_latest_problem_config_objects_under_a_given_prefix
+
+        List Latest Problem Config Objects Under A Given Prefix  # noqa: E501
         """
         pass
 

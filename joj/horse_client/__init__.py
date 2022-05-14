@@ -5,7 +5,7 @@
 """
     JOJ Horse
 
-    Git version: b3db0dc@2022-05-14T18:00:18Z  # noqa: E501
+    Git version: 4bafe89@2022-05-14T18:47:05Z  # noqa: E501
 
     OpenAPI spec version: 1
     
@@ -46,6 +46,10 @@ from joj.horse_client.models.auth_tokens import AuthTokens
 from joj.horse_client.models.auth_tokens_resp import AuthTokensResp
 from joj.horse_client.models.case import Case
 from joj.horse_client.models.detail import Detail
+from joj.horse_client.models.diff import Diff
+from joj.horse_client.models.diff_list import DiffList
+from joj.horse_client.models.diff_list_resp import DiffListResp
+from joj.horse_client.models.diff_type_enum import DiffTypeEnum
 from joj.horse_client.models.domain import Domain
 from joj.horse_client.models.domain_create import DomainCreate
 from joj.horse_client.models.domain_detail import DomainDetail
@@ -98,6 +102,11 @@ from joj.horse_client.models.o_auth2_client import OAuth2Client
 from joj.horse_client.models.o_auth2_client_list import OAuth2ClientList
 from joj.horse_client.models.o_auth2_client_list_resp import OAuth2ClientListResp
 from joj.horse_client.models.o_auth2_password_request_form import OAuth2PasswordRequestForm
+from joj.horse_client.models.object_stats import ObjectStats
+from joj.horse_client.models.object_stats_list import ObjectStatsList
+from joj.horse_client.models.object_stats_list_resp import ObjectStatsListResp
+from joj.horse_client.models.pagination import Pagination
+from joj.horse_client.models.path_type_enum import PathTypeEnum
 from joj.horse_client.models.problem import Problem
 from joj.horse_client.models.problem_clone import ProblemClone
 from joj.horse_client.models.problem_config import ProblemConfig

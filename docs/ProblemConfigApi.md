@@ -7,12 +7,14 @@ Method | HTTP request | Description
 [**v1_commit_problem_config**](ProblemConfigApi.md#v1_commit_problem_config) | **POST** /domains/{domain}/problems/{problem}/config/commit | Commit Problem Config
 [**v1_delete_directory_from_uncommitted_problem_config**](ProblemConfigApi.md#v1_delete_directory_from_uncommitted_problem_config) | **DELETE** /domains/{domain}/problems/{problem}/config/dirs/{path} | Delete Directory From Uncommitted Problem Config
 [**v1_delete_file_from_uncommitted_problem_config**](ProblemConfigApi.md#v1_delete_file_from_uncommitted_problem_config) | **DELETE** /domains/{domain}/problems/{problem}/config/files/{path} | Delete File From Uncommitted Problem Config
+[**v1_diff_problem_config_default_branch**](ProblemConfigApi.md#v1_diff_problem_config_default_branch) | **GET** /domains/{domain}/problems/{problem}/config/diff | Diff Problem Config Default Branch
 [**v1_download_file_in_problem_config**](ProblemConfigApi.md#v1_download_file_in_problem_config) | **GET** /domains/{domain}/problems/{problem}/configs/{config}/files/{path} | Download File In Problem Config
 [**v1_download_file_in_uncommitted_problem_config**](ProblemConfigApi.md#v1_download_file_in_uncommitted_problem_config) | **GET** /domains/{domain}/problems/{problem}/config/files/{path} | Download File In Uncommitted Problem Config
 [**v1_download_problem_config_archive**](ProblemConfigApi.md#v1_download_problem_config_archive) | **GET** /domains/{domain}/problems/{problem}/configs/{config}/files | Download Problem Config Archive
 [**v1_download_uncommitted_problem_config_as_archive**](ProblemConfigApi.md#v1_download_uncommitted_problem_config_as_archive) | **GET** /domains/{domain}/problems/{problem}/config | Download Uncommitted Problem Config As Archive
 [**v1_get_file_or_directory_info_in_uncommitted_problem_config**](ProblemConfigApi.md#v1_get_file_or_directory_info_in_uncommitted_problem_config) | **GET** /domains/{domain}/problems/{problem}/config/file_info/{path} | Get File Or Directory Info In Uncommitted Problem Config
 [**v1_get_problem_config_json**](ProblemConfigApi.md#v1_get_problem_config_json) | **GET** /domains/{domain}/problems/{problem}/configs/{config} | Get Problem Config Json
+[**v1_list_latest_problem_config_objects_under_a_given_prefix**](ProblemConfigApi.md#v1_list_latest_problem_config_objects_under_a_given_prefix) | **GET** /domains/{domain}/problems/{problem}/config/ls | List Latest Problem Config Objects Under A Given Prefix
 [**v1_reset_problem_config**](ProblemConfigApi.md#v1_reset_problem_config) | **POST** /domains/{domain}/problems/{problem}/config/reset | Reset Problem Config
 [**v1_update_problem_config_by_archive**](ProblemConfigApi.md#v1_update_problem_config_by_archive) | **PUT** /domains/{domain}/problems/{problem}/config | Update Problem Config By Archive
 [**v1_update_problem_config_json**](ProblemConfigApi.md#v1_update_problem_config_json) | **PUT** /domains/{domain}/problems/{problem}/configs | Update Problem Config Json
@@ -164,6 +166,63 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**FileInfoResp**](FileInfoResp.md)
+
+### Authorization
+
+[HTTPBearer](../README.md#HTTPBearer)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **v1_diff_problem_config_default_branch**
+> DiffListResp v1_diff_problem_config_default_branch(domain, problem, after=after, amount=amount, delimiter=delimiter, prefix=prefix)
+
+Diff Problem Config Default Branch
+
+### Example
+```python
+from __future__ import print_function
+import time
+import joj.horse_client
+from joj.horse_client.rest import ApiException
+from pprint import pprint
+
+
+# create an instance of the API class
+api_instance = joj.horse_client.ProblemConfigApi(joj.horse_client.ApiClient(configuration))
+domain = 'domain_example' # str | url or id of the domain
+problem = 'problem_example' # str | url or id of the problem
+after = '' # str | return items after this value (optional)
+amount = 100 # int | how many items to return (optional) (default to 100)
+delimiter = '' # str | delimiter used to group common prefixes by (optional)
+prefix = '' # str | return items prefixed with this value (optional)
+
+try:
+    # Diff Problem Config Default Branch
+    api_response = api_instance.v1_diff_problem_config_default_branch(domain, problem, after=after, amount=amount, delimiter=delimiter, prefix=prefix)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling ProblemConfigApi->v1_diff_problem_config_default_branch: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **domain** | **str**| url or id of the domain | 
+ **problem** | **str**| url or id of the problem | 
+ **after** | **str**| return items after this value | [optional] 
+ **amount** | **int**| how many items to return | [optional] [default to 100]
+ **delimiter** | **str**| delimiter used to group common prefixes by | [optional] 
+ **prefix** | **str**| return items prefixed with this value | [optional] 
+
+### Return type
+
+[**DiffListResp**](DiffListResp.md)
 
 ### Authorization
 
@@ -474,6 +533,63 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ProblemConfigDataDetailResp**](ProblemConfigDataDetailResp.md)
+
+### Authorization
+
+[HTTPBearer](../README.md#HTTPBearer)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **v1_list_latest_problem_config_objects_under_a_given_prefix**
+> ObjectStatsListResp v1_list_latest_problem_config_objects_under_a_given_prefix(domain, problem, after=after, amount=amount, delimiter=delimiter, prefix=prefix)
+
+List Latest Problem Config Objects Under A Given Prefix
+
+### Example
+```python
+from __future__ import print_function
+import time
+import joj.horse_client
+from joj.horse_client.rest import ApiException
+from pprint import pprint
+
+
+# create an instance of the API class
+api_instance = joj.horse_client.ProblemConfigApi(joj.horse_client.ApiClient(configuration))
+domain = 'domain_example' # str | url or id of the domain
+problem = 'problem_example' # str | url or id of the problem
+after = '' # str | return items after this value (optional)
+amount = 100 # int | how many items to return (optional) (default to 100)
+delimiter = '' # str | delimiter used to group common prefixes by (optional)
+prefix = '' # str | return items prefixed with this value (optional)
+
+try:
+    # List Latest Problem Config Objects Under A Given Prefix
+    api_response = api_instance.v1_list_latest_problem_config_objects_under_a_given_prefix(domain, problem, after=after, amount=amount, delimiter=delimiter, prefix=prefix)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling ProblemConfigApi->v1_list_latest_problem_config_objects_under_a_given_prefix: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **domain** | **str**| url or id of the domain | 
+ **problem** | **str**| url or id of the problem | 
+ **after** | **str**| return items after this value | [optional] 
+ **amount** | **int**| how many items to return | [optional] [default to 100]
+ **delimiter** | **str**| delimiter used to group common prefixes by | [optional] 
+ **prefix** | **str**| return items prefixed with this value | [optional] 
+
+### Return type
+
+[**ObjectStatsListResp**](ObjectStatsListResp.md)
 
 ### Authorization
 
