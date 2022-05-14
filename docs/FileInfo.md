@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **is_dir** | **bool** |  | 
 **checksum** | **str** |  | [optional] 
 **mtime** | **AnyOfFileInfoMtime** |  | [optional] 
-**size_bytes** | **int** |  | [optional] [default to 0]
+**size_bytes** | **int** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

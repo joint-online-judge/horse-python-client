@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: 0528610@2022-05-14T16:56:19Z  # noqa: E501
+    Git version: b3db0dc@2022-05-14T18:00:18Z  # noqa: E501
 
     OpenAPI spec version: 1
     
@@ -43,7 +43,7 @@ class FileInfo(object):
         'size_bytes': 'size_bytes'
     }
 
-    def __init__(self, path=None, is_dir=None, checksum=None, mtime=None, size_bytes=0):  # noqa: E501
+    def __init__(self, path=None, is_dir=None, checksum=None, mtime=None, size_bytes=None):  # noqa: E501
         """FileInfo - a model defined in Swagger"""  # noqa: E501
         self._path = None
         self._is_dir = None
