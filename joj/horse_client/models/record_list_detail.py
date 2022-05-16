@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: f04fcdd@2022-05-14T19:01:31Z  # noqa: E501
+    Git version: eb69285@2022-05-16T11:33:39Z  # noqa: E501
 
     OpenAPI spec version: 1
     
@@ -41,7 +41,9 @@ class RecordListDetail(object):
         'problem_set_id': 'str',
         'problem_set_title': 'str',
         'problem_id': 'str',
-        'problem_title': 'str'
+        'problem_title': 'str',
+        'committer_id': 'str',
+        'committer_username': 'str'
     }
 
     attribute_map = {
@@ -58,10 +60,12 @@ class RecordListDetail(object):
         'problem_set_id': 'problemSetId',
         'problem_set_title': 'problemSetTitle',
         'problem_id': 'problemId',
-        'problem_title': 'problemTitle'
+        'problem_title': 'problemTitle',
+        'committer_id': 'committerId',
+        'committer_username': 'committerUsername'
     }
 
-    def __init__(self, created_at=None, updated_at=None, id=None, domain_id=None, state=None, language=None, score=0, time_ms=0, memory_kb=0, judged_at=None, problem_set_id=None, problem_set_title=None, problem_id=None, problem_title=None):  # noqa: E501
+    def __init__(self, created_at=None, updated_at=None, id=None, domain_id=None, state=None, language=None, score=0, time_ms=0, memory_kb=0, judged_at=None, problem_set_id=None, problem_set_title=None, problem_id=None, problem_title=None, committer_id=None, committer_username=None):  # noqa: E501
         """RecordListDetail - a model defined in Swagger"""  # noqa: E501
         self._created_at = None
         self._updated_at = None
@@ -77,6 +81,8 @@ class RecordListDetail(object):
         self._problem_set_title = None
         self._problem_id = None
         self._problem_title = None
+        self._committer_id = None
+        self._committer_username = None
         self.discriminator = None
         if created_at is not None:
             self.created_at = created_at
@@ -103,6 +109,10 @@ class RecordListDetail(object):
             self.problem_id = problem_id
         if problem_title is not None:
             self.problem_title = problem_title
+        if committer_id is not None:
+            self.committer_id = committer_id
+        if committer_username is not None:
+            self.committer_username = committer_username
 
     @property
     def created_at(self):
@@ -403,6 +413,48 @@ class RecordListDetail(object):
         """
 
         self._problem_title = problem_title
+
+    @property
+    def committer_id(self):
+        """Gets the committer_id of this RecordListDetail.  # noqa: E501
+
+
+        :return: The committer_id of this RecordListDetail.  # noqa: E501
+        :rtype: str
+        """
+        return self._committer_id
+
+    @committer_id.setter
+    def committer_id(self, committer_id):
+        """Sets the committer_id of this RecordListDetail.
+
+
+        :param committer_id: The committer_id of this RecordListDetail.  # noqa: E501
+        :type: str
+        """
+
+        self._committer_id = committer_id
+
+    @property
+    def committer_username(self):
+        """Gets the committer_username of this RecordListDetail.  # noqa: E501
+
+
+        :return: The committer_username of this RecordListDetail.  # noqa: E501
+        :rtype: str
+        """
+        return self._committer_username
+
+    @committer_username.setter
+    def committer_username(self, committer_username):
+        """Sets the committer_username of this RecordListDetail.
+
+
+        :param committer_username: The committer_username of this RecordListDetail.  # noqa: E501
+        :type: str
+        """
+
+        self._committer_username = committer_username
 
     def to_dict(self):
         """Returns the model properties as a dict"""

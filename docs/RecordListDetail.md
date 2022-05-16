@@ -17,6 +17,8 @@ Name | Type | Description | Notes
 **problem_set_title** | **str** |  | [optional] 
 **problem_id** | **str** |  | [optional] 
 **problem_title** | **str** |  | [optional] 
+**committer_id** | **str** |  | [optional] 
+**committer_username** | **str** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
