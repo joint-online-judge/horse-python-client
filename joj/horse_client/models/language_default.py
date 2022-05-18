@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: 961f678@2022-05-17T03:46:15Z  # noqa: E501
+    Git version: ded693e@2022-05-18T20:23:21Z  # noqa: E501
 
     OpenAPI spec version: 1
     
@@ -30,8 +30,6 @@ class LanguageDefault(object):
     swagger_types = {
         'compile_files': 'list[str]',
         'compile_args': 'list[str]',
-        'lint_files': 'list[str]',
-        'lint_args': 'list[str]',
         'case_default': 'Case',
         'cases': 'list[Case]'
     }
@@ -39,18 +37,14 @@ class LanguageDefault(object):
     attribute_map = {
         'compile_files': 'compileFiles',
         'compile_args': 'compileArgs',
-        'lint_files': 'lintFiles',
-        'lint_args': 'lintArgs',
         'case_default': 'caseDefault',
         'cases': 'cases'
     }
 
-    def __init__(self, compile_files=None, compile_args=None, lint_files=None, lint_args=None, case_default=None, cases=None):  # noqa: E501
+    def __init__(self, compile_files=None, compile_args=None, case_default=None, cases=None):  # noqa: E501
         """LanguageDefault - a model defined in Swagger"""  # noqa: E501
         self._compile_files = None
         self._compile_args = None
-        self._lint_files = None
-        self._lint_args = None
         self._case_default = None
         self._cases = None
         self.discriminator = None
@@ -58,10 +52,6 @@ class LanguageDefault(object):
             self.compile_files = compile_files
         if compile_args is not None:
             self.compile_args = compile_args
-        if lint_files is not None:
-            self.lint_files = lint_files
-        if lint_args is not None:
-            self.lint_args = lint_args
         if case_default is not None:
             self.case_default = case_default
         if cases is not None:
@@ -108,48 +98,6 @@ class LanguageDefault(object):
         """
 
         self._compile_args = compile_args
-
-    @property
-    def lint_files(self):
-        """Gets the lint_files of this LanguageDefault.  # noqa: E501
-
-
-        :return: The lint_files of this LanguageDefault.  # noqa: E501
-        :rtype: list[str]
-        """
-        return self._lint_files
-
-    @lint_files.setter
-    def lint_files(self, lint_files):
-        """Sets the lint_files of this LanguageDefault.
-
-
-        :param lint_files: The lint_files of this LanguageDefault.  # noqa: E501
-        :type: list[str]
-        """
-
-        self._lint_files = lint_files
-
-    @property
-    def lint_args(self):
-        """Gets the lint_args of this LanguageDefault.  # noqa: E501
-
-
-        :return: The lint_args of this LanguageDefault.  # noqa: E501
-        :rtype: list[str]
-        """
-        return self._lint_args
-
-    @lint_args.setter
-    def lint_args(self, lint_args):
-        """Sets the lint_args of this LanguageDefault.
-
-
-        :param lint_args: The lint_args of this LanguageDefault.  # noqa: E501
-        :type: list[str]
-        """
-
-        self._lint_args = lint_args
 
     @property
     def case_default(self):
