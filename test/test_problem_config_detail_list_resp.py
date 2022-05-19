@@ -15,12 +15,12 @@ from __future__ import absolute_import
 import unittest
 
 import joj.horse_client
-from joj.horse_client.models.jwt_access_token_resp import JWTAccessTokenResp  # noqa: E501
+from joj.horse_client.models.problem_config_detail_list_resp import ProblemConfigDetailListResp  # noqa: E501
 from joj.horse_client.rest import ApiException
 
 
-class TestJWTAccessTokenResp(unittest.TestCase):
-    """JWTAccessTokenResp unit test stubs"""
+class TestProblemConfigDetailListResp(unittest.TestCase):
+    """ProblemConfigDetailListResp unit test stubs"""
 
     def setUp(self):
         pass
@@ -28,10 +28,10 @@ class TestJWTAccessTokenResp(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testJWTAccessTokenResp(self):
-        """Test JWTAccessTokenResp"""
+    def testProblemConfigDetailListResp(self):
+        """Test ProblemConfigDetailListResp"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = joj.horse_client.models.jwt_access_token_resp.JWTAccessTokenResp()  # noqa: E501
+        # model = joj.horse_client.models.problem_config_detail_list_resp.ProblemConfigDetailListResp()  # noqa: E501
         pass
 
 

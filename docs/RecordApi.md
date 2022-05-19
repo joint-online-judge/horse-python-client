@@ -76,7 +76,7 @@ domain = 'domain_example' # str | url or id of the domain
 problem_set = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # str | problem set id (optional)
 problem = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # str | problem id (optional)
 submitter_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # str | submitter uid (optional)
-ordering = '' # str | Comma seperated list of ordering the results. You may specify reverse orderings by prefixing the field name with '-'.  Available fields: created_at,updated_at (optional)
+ordering = '' # str | Comma separated list of ordering the results. You may specify reverse orderings by prefixing the field name with '-'.  Available fields: created_at,updated_at (optional)
 offset = 0 # int |  (optional) (default to 0)
 limit = 100 # int |  (optional) (default to 100)
 
@@ -96,7 +96,7 @@ Name | Type | Description  | Notes
  **problem_set** | [**str**](.md)| problem set id | [optional] 
  **problem** | [**str**](.md)| problem id | [optional] 
  **submitter_id** | [**str**](.md)| submitter uid | [optional] 
- **ordering** | **str**| Comma seperated list of ordering the results. You may specify reverse orderings by prefixing the field name with &#x27;-&#x27;.  Available fields: created_at,updated_at | [optional] 
+ **ordering** | **str**| Comma separated list of ordering the results. You may specify reverse orderings by prefixing the field name with &#x27;-&#x27;.  Available fields: created_at,updated_at | [optional] 
  **offset** | **int**|  | [optional] [default to 0]
  **limit** | **int**|  | [optional] [default to 100]
 

@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: c41bfc4@2022-05-18T21:45:42Z  # noqa: E501
+    Git version: 6a64ecc@2022-05-19T15:50:22Z  # noqa: E501
 
     OpenAPI spec version: 1
     
@@ -1349,7 +1349,7 @@ class DomainApi(object):
 
         :param async_req bool
         :param str domain: url or id of the domain (required)
-        :param str ordering: Comma seperated list of ordering the results. You may specify reverse orderings by prefixing the field name with '-'.  Available fields: created_at,updated_at
+        :param str ordering: Comma separated list of ordering the results. You may specify reverse orderings by prefixing the field name with '-'.  Available fields: created_at,updated_at
         :param int offset:
         :param int limit:
         :return: DomainInvitationListResp
@@ -1373,7 +1373,7 @@ class DomainApi(object):
 
         :param async_req bool
         :param str domain: url or id of the domain (required)
-        :param str ordering: Comma seperated list of ordering the results. You may specify reverse orderings by prefixing the field name with '-'.  Available fields: created_at,updated_at
+        :param str ordering: Comma separated list of ordering the results. You may specify reverse orderings by prefixing the field name with '-'.  Available fields: created_at,updated_at
         :param int offset:
         :param int limit:
         :return: DomainInvitationListResp
@@ -1454,7 +1454,7 @@ class DomainApi(object):
 
         :param async_req bool
         :param str domain: url or id of the domain (required)
-        :param str ordering: Comma seperated list of ordering the results. You may specify reverse orderings by prefixing the field name with '-'.  Available fields: created_at,updated_at
+        :param str ordering: Comma separated list of ordering the results. You may specify reverse orderings by prefixing the field name with '-'.  Available fields: created_at,updated_at
         :return: DomainRoleListResp
                  If the method is called asynchronously,
                  returns the request thread.
@@ -1476,7 +1476,7 @@ class DomainApi(object):
 
         :param async_req bool
         :param str domain: url or id of the domain (required)
-        :param str ordering: Comma seperated list of ordering the results. You may specify reverse orderings by prefixing the field name with '-'.  Available fields: created_at,updated_at
+        :param str ordering: Comma separated list of ordering the results. You may specify reverse orderings by prefixing the field name with '-'.  Available fields: created_at,updated_at
         :return: DomainRoleListResp
                  If the method is called asynchronously,
                  returns the request thread.
@@ -1551,7 +1551,7 @@ class DomainApi(object):
 
         :param async_req bool
         :param str domain: url or id of the domain (required)
-        :param str ordering: Comma seperated list of ordering the results. You may specify reverse orderings by prefixing the field name with '-'.  Available fields: created_at,updated_at
+        :param str ordering: Comma separated list of ordering the results. You may specify reverse orderings by prefixing the field name with '-'.  Available fields: created_at,updated_at
         :param int offset:
         :param int limit:
         :return: UserWithDomainRoleListResp
@@ -1575,7 +1575,7 @@ class DomainApi(object):
 
         :param async_req bool
         :param str domain: url or id of the domain (required)
-        :param str ordering: Comma seperated list of ordering the results. You may specify reverse orderings by prefixing the field name with '-'.  Available fields: created_at,updated_at
+        :param str ordering: Comma separated list of ordering the results. You may specify reverse orderings by prefixing the field name with '-'.  Available fields: created_at,updated_at
         :param int offset:
         :param int limit:
         :return: UserWithDomainRoleListResp
@@ -1658,7 +1658,7 @@ class DomainApi(object):
         :param async_req bool
         :param list[str] roles:
         :param list[str] groups:
-        :param str ordering: Comma seperated list of ordering the results. You may specify reverse orderings by prefixing the field name with '-'.  Available fields: created_at,updated_at
+        :param str ordering: Comma separated list of ordering the results. You may specify reverse orderings by prefixing the field name with '-'.  Available fields: created_at,updated_at
         :param int offset:
         :param int limit:
         :return: DomainListResp
@@ -1684,7 +1684,7 @@ class DomainApi(object):
         :param async_req bool
         :param list[str] roles:
         :param list[str] groups:
-        :param str ordering: Comma seperated list of ordering the results. You may specify reverse orderings by prefixing the field name with '-'.  Available fields: created_at,updated_at
+        :param str ordering: Comma separated list of ordering the results. You may specify reverse orderings by prefixing the field name with '-'.  Available fields: created_at,updated_at
         :param int offset:
         :param int limit:
         :return: DomainListResp
@@ -1867,7 +1867,7 @@ class DomainApi(object):
         :param async_req bool
         :param str domain: url or id of the domain (required)
         :param str query: search query (required)
-        :param str ordering: Comma seperated list of ordering the results. You may specify reverse orderings by prefixing the field name with '-'.  Available fields: username
+        :param str ordering: Comma separated list of ordering the results. You may specify reverse orderings by prefixing the field name with '-'.  Available fields: username
         :return: UserDetailWithDomainRoleListResp
                  If the method is called asynchronously,
                  returns the request thread.
@@ -1890,7 +1890,7 @@ class DomainApi(object):
         :param async_req bool
         :param str domain: url or id of the domain (required)
         :param str query: search query (required)
-        :param str ordering: Comma seperated list of ordering the results. You may specify reverse orderings by prefixing the field name with '-'.  Available fields: username
+        :param str ordering: Comma separated list of ordering the results. You may specify reverse orderings by prefixing the field name with '-'.  Available fields: username
         :return: UserDetailWithDomainRoleListResp
                  If the method is called asynchronously,
                  returns the request thread.

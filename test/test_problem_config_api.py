@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: c41bfc4@2022-05-18T21:45:42Z  # noqa: E501
+    Git version: 6a64ecc@2022-05-19T15:50:22Z  # noqa: E501
 
     OpenAPI spec version: 1
     
@@ -28,27 +28,6 @@ class TestProblemConfigApi(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def test_v1_commit_problem_config(self):
-        """Test case for v1_commit_problem_config
-
-        Commit Problem Config  # noqa: E501
-        """
-        pass
-
-    def test_v1_delete_directory_from_uncommitted_problem_config(self):
-        """Test case for v1_delete_directory_from_uncommitted_problem_config
-
-        Delete Directory From Uncommitted Problem Config  # noqa: E501
-        """
-        pass
-
-    def test_v1_delete_file_from_uncommitted_problem_config(self):
-        """Test case for v1_delete_file_from_uncommitted_problem_config
-
-        Delete File From Uncommitted Problem Config  # noqa: E501
-        """
-        pass
-
     def test_v1_diff_problem_config_default_branch(self):
         """Test case for v1_diff_problem_config_default_branch
 
@@ -56,38 +35,10 @@ class TestProblemConfigApi(unittest.TestCase):
         """
         pass
 
-    def test_v1_download_file_in_problem_config(self):
-        """Test case for v1_download_file_in_problem_config
-
-        Download File In Problem Config  # noqa: E501
-        """
-        pass
-
-    def test_v1_download_file_in_uncommitted_problem_config(self):
-        """Test case for v1_download_file_in_uncommitted_problem_config
-
-        Download File In Uncommitted Problem Config  # noqa: E501
-        """
-        pass
-
     def test_v1_download_problem_config_archive(self):
         """Test case for v1_download_problem_config_archive
 
         Download Problem Config Archive  # noqa: E501
-        """
-        pass
-
-    def test_v1_download_uncommitted_problem_config_as_archive(self):
-        """Test case for v1_download_uncommitted_problem_config_as_archive
-
-        Download Uncommitted Problem Config As Archive  # noqa: E501
-        """
-        pass
-
-    def test_v1_get_file_or_directory_info_in_uncommitted_problem_config(self):
-        """Test case for v1_get_file_or_directory_info_in_uncommitted_problem_config
-
-        Get File Or Directory Info In Uncommitted Problem Config  # noqa: E501
         """
         pass
 
@@ -105,10 +56,10 @@ class TestProblemConfigApi(unittest.TestCase):
         """
         pass
 
-    def test_v1_reset_problem_config(self):
-        """Test case for v1_reset_problem_config
+    def test_v1_list_problem_config_commits(self):
+        """Test case for v1_list_problem_config_commits
 
-        Reset Problem Config  # noqa: E501
+        List Problem Config Commits  # noqa: E501
         """
         pass
 
@@ -123,20 +74,6 @@ class TestProblemConfigApi(unittest.TestCase):
         """Test case for v1_update_problem_config_json
 
         Update Problem Config Json  # noqa: E501
-        """
-        pass
-
-    def test_v1_upload_file_to_problem_config(self):
-        """Test case for v1_upload_file_to_problem_config
-
-        Upload File To Problem Config  # noqa: E501
-        """
-        pass
-
-    def test_v1_upload_file_to_root_in_problem_config(self):
-        """Test case for v1_upload_file_to_root_in_problem_config
-
-        Upload File To Root In Problem Config  # noqa: E501
         """
         pass
 

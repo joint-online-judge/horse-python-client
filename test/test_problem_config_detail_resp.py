@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: c41bfc4@2022-05-18T21:45:42Z  # noqa: E501
+    Git version: 6a64ecc@2022-05-19T15:50:22Z  # noqa: E501
 
     OpenAPI spec version: 1
     
@@ -15,12 +15,12 @@ from __future__ import absolute_import
 import unittest
 
 import joj.horse_client
-from joj.horse_client.models.any_of_file_info_mtime import AnyOfFileInfoMtime  # noqa: E501
+from joj.horse_client.models.problem_config_detail_resp import ProblemConfigDetailResp  # noqa: E501
 from joj.horse_client.rest import ApiException
 
 
-class TestAnyOfFileInfoMtime(unittest.TestCase):
-    """AnyOfFileInfoMtime unit test stubs"""
+class TestProblemConfigDetailResp(unittest.TestCase):
+    """ProblemConfigDetailResp unit test stubs"""
 
     def setUp(self):
         pass
@@ -28,10 +28,10 @@ class TestAnyOfFileInfoMtime(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testAnyOfFileInfoMtime(self):
-        """Test AnyOfFileInfoMtime"""
+    def testProblemConfigDetailResp(self):
+        """Test ProblemConfigDetailResp"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = joj.horse_client.models.any_of_file_info_mtime.AnyOfFileInfoMtime()  # noqa: E501
+        # model = joj.horse_client.models.problem_config_detail_resp.ProblemConfigDetailResp()  # noqa: E501
         pass
 
 
