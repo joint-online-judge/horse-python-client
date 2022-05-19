@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: 6a64ecc@2022-05-19T15:50:22Z  # noqa: E501
+    Git version: c32fb09@2022-05-19T19:02:43Z  # noqa: E501
 
     OpenAPI spec version: 1
     
@@ -28,10 +28,11 @@ class Case(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'category': 'str',
         'time': 'str',
         'memory': 'str',
         'score': 'int',
-        'category': 'str',
+        'ignore_whitespace': 'bool',
         'execute_files': 'list[str]',
         'execute_args': 'list[str]',
         'execute_input_file': 'str',
@@ -39,35 +40,39 @@ class Case(object):
     }
 
     attribute_map = {
+        'category': 'category',
         'time': 'time',
         'memory': 'memory',
         'score': 'score',
-        'category': 'category',
+        'ignore_whitespace': 'ignoreWhitespace',
         'execute_files': 'executeFiles',
         'execute_args': 'executeArgs',
         'execute_input_file': 'executeInputFile',
         'execute_output_file': 'executeOutputFile'
     }
 
-    def __init__(self, time=None, memory=None, score=None, category=None, execute_files=None, execute_args=None, execute_input_file=None, execute_output_file=None):  # noqa: E501
+    def __init__(self, category='pretest', time='1s', memory='64m', score=10, ignore_whitespace=True, execute_files=None, execute_args=None, execute_input_file='case.in', execute_output_file='case.out'):  # noqa: E501
         """Case - a model defined in Swagger"""  # noqa: E501
+        self._category = None
         self._time = None
         self._memory = None
         self._score = None
-        self._category = None
+        self._ignore_whitespace = None
         self._execute_files = None
         self._execute_args = None
         self._execute_input_file = None
         self._execute_output_file = None
         self.discriminator = None
+        if category is not None:
+            self.category = category
         if time is not None:
             self.time = time
         if memory is not None:
             self.memory = memory
         if score is not None:
             self.score = score
-        if category is not None:
-            self.category = category
+        if ignore_whitespace is not None:
+            self.ignore_whitespace = ignore_whitespace
         if execute_files is not None:
             self.execute_files = execute_files
         if execute_args is not None:
@@ -76,6 +81,27 @@ class Case(object):
             self.execute_input_file = execute_input_file
         if execute_output_file is not None:
             self.execute_output_file = execute_output_file
+
+    @property
+    def category(self):
+        """Gets the category of this Case.  # noqa: E501
+
+
+        :return: The category of this Case.  # noqa: E501
+        :rtype: str
+        """
+        return self._category
+
+    @category.setter
+    def category(self, category):
+        """Sets the category of this Case.
+
+
+        :param category: The category of this Case.  # noqa: E501
+        :type: str
+        """
+
+        self._category = category
 
     @property
     def time(self):
@@ -141,25 +167,25 @@ class Case(object):
         self._score = score
 
     @property
-    def category(self):
-        """Gets the category of this Case.  # noqa: E501
+    def ignore_whitespace(self):
+        """Gets the ignore_whitespace of this Case.  # noqa: E501
 
 
-        :return: The category of this Case.  # noqa: E501
-        :rtype: str
+        :return: The ignore_whitespace of this Case.  # noqa: E501
+        :rtype: bool
         """
-        return self._category
+        return self._ignore_whitespace
 
-    @category.setter
-    def category(self, category):
-        """Sets the category of this Case.
+    @ignore_whitespace.setter
+    def ignore_whitespace(self, ignore_whitespace):
+        """Sets the ignore_whitespace of this Case.
 
 
-        :param category: The category of this Case.  # noqa: E501
-        :type: str
+        :param ignore_whitespace: The ignore_whitespace of this Case.  # noqa: E501
+        :type: bool
         """
 
-        self._category = category
+        self._ignore_whitespace = ignore_whitespace
 
     @property
     def execute_files(self):
