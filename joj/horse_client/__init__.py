@@ -5,7 +5,7 @@
 """
     JOJ Horse
 
-    Git version: fc491db@2022-05-20T21:40:10Z  # noqa: E501
+    Git version: 59b0930@2022-05-20T21:53:14Z  # noqa: E501
 
     OpenAPI spec version: 1
     
@@ -42,6 +42,8 @@ from joj.horse_client.models.archive_format import ArchiveFormat
 from joj.horse_client.models.archive_type import ArchiveType
 from joj.horse_client.models.auth_tokens import AuthTokens
 from joj.horse_client.models.auth_tokens_resp import AuthTokensResp
+from joj.horse_client.models.auth_tokens_with_lakefs import AuthTokensWithLakefs
+from joj.horse_client.models.auth_tokens_with_lakefs_resp import AuthTokensWithLakefsResp
 from joj.horse_client.models.case import Case
 from joj.horse_client.models.config_json_on_missing import ConfigJsonOnMissing
 from joj.horse_client.models.config_missing import ConfigMissing

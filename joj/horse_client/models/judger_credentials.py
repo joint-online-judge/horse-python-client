@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: fc491db@2022-05-20T21:40:10Z  # noqa: E501
+    Git version: 59b0930@2022-05-20T21:53:14Z  # noqa: E501
 
     OpenAPI spec version: 1
     
@@ -28,8 +28,6 @@ class JudgerCredentials(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'access_key_id': 'str',
-        'secret_access_key': 'str',
         'problem_config_repo_name': 'str',
         'problem_config_commit_id': 'str',
         'record_repo_name': 'str',
@@ -37,75 +35,23 @@ class JudgerCredentials(object):
     }
 
     attribute_map = {
-        'access_key_id': 'accessKeyId',
-        'secret_access_key': 'secretAccessKey',
         'problem_config_repo_name': 'problemConfigRepoName',
         'problem_config_commit_id': 'problemConfigCommitId',
         'record_repo_name': 'recordRepoName',
         'record_commit_id': 'recordCommitId'
     }
 
-    def __init__(self, access_key_id=None, secret_access_key=None, problem_config_repo_name=None, problem_config_commit_id=None, record_repo_name=None, record_commit_id=None):  # noqa: E501
+    def __init__(self, problem_config_repo_name=None, problem_config_commit_id=None, record_repo_name=None, record_commit_id=None):  # noqa: E501
         """JudgerCredentials - a model defined in Swagger"""  # noqa: E501
-        self._access_key_id = None
-        self._secret_access_key = None
         self._problem_config_repo_name = None
         self._problem_config_commit_id = None
         self._record_repo_name = None
         self._record_commit_id = None
         self.discriminator = None
-        self.access_key_id = access_key_id
-        self.secret_access_key = secret_access_key
         self.problem_config_repo_name = problem_config_repo_name
         self.problem_config_commit_id = problem_config_commit_id
         self.record_repo_name = record_repo_name
         self.record_commit_id = record_commit_id
-
-    @property
-    def access_key_id(self):
-        """Gets the access_key_id of this JudgerCredentials.  # noqa: E501
-
-
-        :return: The access_key_id of this JudgerCredentials.  # noqa: E501
-        :rtype: str
-        """
-        return self._access_key_id
-
-    @access_key_id.setter
-    def access_key_id(self, access_key_id):
-        """Sets the access_key_id of this JudgerCredentials.
-
-
-        :param access_key_id: The access_key_id of this JudgerCredentials.  # noqa: E501
-        :type: str
-        """
-        if access_key_id is None:
-            raise ValueError("Invalid value for `access_key_id`, must not be `None`")  # noqa: E501
-
-        self._access_key_id = access_key_id
-
-    @property
-    def secret_access_key(self):
-        """Gets the secret_access_key of this JudgerCredentials.  # noqa: E501
-
-
-        :return: The secret_access_key of this JudgerCredentials.  # noqa: E501
-        :rtype: str
-        """
-        return self._secret_access_key
-
-    @secret_access_key.setter
-    def secret_access_key(self, secret_access_key):
-        """Sets the secret_access_key of this JudgerCredentials.
-
-
-        :param secret_access_key: The secret_access_key of this JudgerCredentials.  # noqa: E501
-        :type: str
-        """
-        if secret_access_key is None:
-            raise ValueError("Invalid value for `secret_access_key`, must not be `None`")  # noqa: E501
-
-        self._secret_access_key = secret_access_key
 
     @property
     def problem_config_repo_name(self):

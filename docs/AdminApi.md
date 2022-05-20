@@ -10,7 +10,7 @@ Method | HTTP request | Description
 [**v1_list_users**](AdminApi.md#v1_list_users) | **GET** /admin/users | List Users
 
 # **v1_create_judger**
-> AuthTokensResp v1_create_judger(body)
+> AuthTokensWithLakefsResp v1_create_judger(body)
 
 Create Judger
 
@@ -43,7 +43,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**AuthTokensResp**](AuthTokensResp.md)
+[**AuthTokensWithLakefsResp**](AuthTokensWithLakefsResp.md)
 
 ### Authorization
 

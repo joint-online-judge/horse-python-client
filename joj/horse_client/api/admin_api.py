@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: fc491db@2022-05-20T21:40:10Z  # noqa: E501
+    Git version: 59b0930@2022-05-20T21:53:14Z  # noqa: E501
 
     OpenAPI spec version: 1
     
@@ -42,7 +42,7 @@ class AdminApi(object):
 
         :param async_req bool
         :param JudgerCreate body: (required)
-        :return: AuthTokensResp
+        :return: AuthTokensWithLakefsResp
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -63,7 +63,7 @@ class AdminApi(object):
 
         :param async_req bool
         :param JudgerCreate body: (required)
-        :return: AuthTokensResp
+        :return: AuthTokensWithLakefsResp
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -121,7 +121,7 @@ class AdminApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='AuthTokensResp',  # noqa: E501
+            response_type='AuthTokensWithLakefsResp',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
