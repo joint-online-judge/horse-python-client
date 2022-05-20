@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: e16d47c@2022-05-20T20:50:54Z  # noqa: E501
+    Git version: fc491db@2022-05-20T21:40:10Z  # noqa: E501
 
     OpenAPI spec version: 1
     
@@ -37,7 +37,8 @@ class DomainDetail(object):
         'group': 'str',
         'owner_id': 'str',
         'created_at': 'datetime',
-        'updated_at': 'datetime'
+        'updated_at': 'datetime',
+        'tag': 'str'
     }
 
     attribute_map = {
@@ -50,10 +51,11 @@ class DomainDetail(object):
         'group': 'group',
         'owner_id': 'ownerId',
         'created_at': 'createdAt',
-        'updated_at': 'updatedAt'
+        'updated_at': 'updatedAt',
+        'tag': 'tag'
     }
 
-    def __init__(self, id=None, url='', name=None, gravatar='', bulletin='', hidden=True, group='', owner_id=None, created_at=None, updated_at=None):  # noqa: E501
+    def __init__(self, id=None, url='', name=None, gravatar='', bulletin='', hidden=True, group='', owner_id=None, created_at=None, updated_at=None, tag=None):  # noqa: E501
         """DomainDetail - a model defined in Swagger"""  # noqa: E501
         self._id = None
         self._url = None
@@ -65,6 +67,7 @@ class DomainDetail(object):
         self._owner_id = None
         self._created_at = None
         self._updated_at = None
+        self._tag = None
         self.discriminator = None
         self.id = id
         if url is not None:
@@ -84,6 +87,8 @@ class DomainDetail(object):
             self.created_at = created_at
         if updated_at is not None:
             self.updated_at = updated_at
+        if tag is not None:
+            self.tag = tag
 
     @property
     def id(self):
@@ -310,6 +315,27 @@ class DomainDetail(object):
         """
 
         self._updated_at = updated_at
+
+    @property
+    def tag(self):
+        """Gets the tag of this DomainDetail.  # noqa: E501
+
+
+        :return: The tag of this DomainDetail.  # noqa: E501
+        :rtype: str
+        """
+        return self._tag
+
+    @tag.setter
+    def tag(self, tag):
+        """Sets the tag of this DomainDetail.
+
+
+        :param tag: The tag of this DomainDetail.  # noqa: E501
+        :type: str
+        """
+
+        self._tag = tag
 
     def to_dict(self):
         """Returns the model properties as a dict"""
