@@ -286,7 +286,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_update_problem_config_by_archive**
-> ProblemConfigDetailResp v1_update_problem_config_by_archive(file, problem, domain)
+> ProblemConfigDetailResp v1_update_problem_config_by_archive(file, problem, domain, config_json_on_missing=config_json_on_missing)
 
 Update Problem Config By Archive
 
@@ -306,10 +306,11 @@ api_instance = joj.horse_client.ProblemConfigApi(joj.horse_client.ApiClient(conf
 file = 'file_example' # str | 
 problem = 'problem_example' # str | url or id of the problem
 domain = 'domain_example' # str | url or id of the domain
+config_json_on_missing = joj.horse_client.ConfigJsonOnMissing() # ConfigJsonOnMissing |  (optional)
 
 try:
     # Update Problem Config By Archive
-    api_response = api_instance.v1_update_problem_config_by_archive(file, problem, domain)
+    api_response = api_instance.v1_update_problem_config_by_archive(file, problem, domain, config_json_on_missing=config_json_on_missing)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling ProblemConfigApi->v1_update_problem_config_by_archive: %s\n" % e)
@@ -322,6 +323,7 @@ Name | Type | Description  | Notes
  **file** | **str**|  | 
  **problem** | **str**| url or id of the problem | 
  **domain** | **str**| url or id of the domain | 
+ **config_json_on_missing** | [**ConfigJsonOnMissing**](.md)|  | [optional] 
 
 ### Return type
 

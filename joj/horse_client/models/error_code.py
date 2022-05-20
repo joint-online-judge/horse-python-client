@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: c32fb09@2022-05-19T19:02:43Z  # noqa: E501
+    Git version: 068be7d@2022-05-20T16:37:16Z  # noqa: E501
 
     OpenAPI spec version: 1
     
@@ -41,6 +41,7 @@ class ErrorCode(object):
     PROBLEMSETNOTFOUNDERROR = "ProblemSetNotFoundError"
     PROBLEMGROUPNOTFOUNDERROR = "ProblemGroupNotFoundError"
     PROBLEMCONFIGNOTFOUNDERROR = "ProblemConfigNotFoundError"
+    PROBLEMCONFIGJSONNOTFOUNDERROR = "ProblemConfigJsonNotFoundError"
     FILEVALIDATIONERROR = "FileValidationError"
     FILEUPDATEERROR = "FileUpdateError"
     FILEDOWNLOADERROR = "FileDownloadError"

@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: c32fb09@2022-05-19T19:02:43Z  # noqa: E501
+    Git version: 068be7d@2022-05-20T16:37:16Z  # noqa: E501
 
     OpenAPI spec version: 1
     
@@ -614,6 +614,7 @@ class ProblemConfigApi(object):
         :param str file: (required)
         :param str problem: url or id of the problem (required)
         :param str domain: url or id of the domain (required)
+        :param ConfigJsonOnMissing config_json_on_missing:
         :return: ProblemConfigDetailResp
                  If the method is called asynchronously,
                  returns the request thread.
@@ -638,12 +639,13 @@ class ProblemConfigApi(object):
         :param str file: (required)
         :param str problem: url or id of the problem (required)
         :param str domain: url or id of the domain (required)
+        :param ConfigJsonOnMissing config_json_on_missing:
         :return: ProblemConfigDetailResp
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['file', 'problem', 'domain']  # noqa: E501
+        all_params = ['file', 'problem', 'domain', 'config_json_on_missing']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -680,6 +682,8 @@ class ProblemConfigApi(object):
             path_params['domain'] = params['domain']  # noqa: E501
 
         query_params = []
+        if 'config_json_on_missing' in params:
+            query_params.append(('configJsonOnMissing', params['config_json_on_missing']))  # noqa: E501
 
         header_params = {}
 
