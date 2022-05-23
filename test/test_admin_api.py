@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: 59b0930@2022-05-20T21:53:14Z  # noqa: E501
+    Git version: 3520346@2022-05-23T03:34:13Z  # noqa: E501
 
     OpenAPI spec version: 1
     
@@ -35,6 +35,13 @@ class TestAdminApi(unittest.TestCase):
         """
         pass
 
+    def test_v1_get_user(self):
+        """Test case for v1_get_user
+
+        Get User  # noqa: E501
+        """
+        pass
+
     def test_v1_list_domain_roles(self):
         """Test case for v1_list_domain_roles
 
@@ -46,6 +53,13 @@ class TestAdminApi(unittest.TestCase):
         """Test case for v1_list_judgers
 
         List Judgers  # noqa: E501
+        """
+        pass
+
+    def test_v1_list_user_domains(self):
+        """Test case for v1_list_user_domains
+
+        List User Domains  # noqa: E501
         """
         pass
 
