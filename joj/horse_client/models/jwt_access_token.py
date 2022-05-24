@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: 3520346@2022-05-23T03:34:13Z  # noqa: E501
+    Git version: 9a397f7@2022-05-24T21:29:56Z  # noqa: E501
 
     OpenAPI spec version: 1
     
@@ -38,13 +38,10 @@ class JWTAccessToken(object):
         'csrf': 'str',
         'category': 'str',
         'username': 'str',
-        'email': 'str',
         'gravatar': 'str',
-        'student_id': 'str',
-        'real_name': 'str',
         'role': 'str',
-        'oauth_name': 'str',
-        'is_active': 'bool'
+        'is_active': 'bool',
+        'oauth_name': 'str'
     }
 
     attribute_map = {
@@ -58,16 +55,13 @@ class JWTAccessToken(object):
         'csrf': 'csrf',
         'category': 'category',
         'username': 'username',
-        'email': 'email',
         'gravatar': 'gravatar',
-        'student_id': 'studentId',
-        'real_name': 'realName',
         'role': 'role',
-        'oauth_name': 'oauthName',
-        'is_active': 'isActive'
+        'is_active': 'isActive',
+        'oauth_name': 'oauthName'
     }
 
-    def __init__(self, sub=None, iat=None, nbf=None, jti=None, exp=None, type=None, fresh=False, csrf=None, category=None, username=None, email=None, gravatar='', student_id='', real_name='', role=None, oauth_name=None, is_active=None):  # noqa: E501
+    def __init__(self, sub=None, iat=None, nbf=None, jti=None, exp=None, type=None, fresh=False, csrf=None, category=None, username=None, gravatar='', role=None, is_active=None, oauth_name=None):  # noqa: E501
         """JWTAccessToken - a model defined in Swagger"""  # noqa: E501
         self._sub = None
         self._iat = None
@@ -79,13 +73,10 @@ class JWTAccessToken(object):
         self._csrf = None
         self._category = None
         self._username = None
-        self._email = None
         self._gravatar = None
-        self._student_id = None
-        self._real_name = None
         self._role = None
-        self._oauth_name = None
         self._is_active = None
+        self._oauth_name = None
         self.discriminator = None
         self.sub = sub
         self.iat = iat
@@ -99,18 +90,13 @@ class JWTAccessToken(object):
             self.csrf = csrf
         self.category = category
         self.username = username
-        self.email = email
         if gravatar is not None:
             self.gravatar = gravatar
-        if student_id is not None:
-            self.student_id = student_id
-        if real_name is not None:
-            self.real_name = real_name
         if role is not None:
             self.role = role
+        self.is_active = is_active
         if oauth_name is not None:
             self.oauth_name = oauth_name
-        self.is_active = is_active
 
     @property
     def sub(self):
@@ -345,29 +331,6 @@ class JWTAccessToken(object):
         self._username = username
 
     @property
-    def email(self):
-        """Gets the email of this JWTAccessToken.  # noqa: E501
-
-
-        :return: The email of this JWTAccessToken.  # noqa: E501
-        :rtype: str
-        """
-        return self._email
-
-    @email.setter
-    def email(self, email):
-        """Sets the email of this JWTAccessToken.
-
-
-        :param email: The email of this JWTAccessToken.  # noqa: E501
-        :type: str
-        """
-        if email is None:
-            raise ValueError("Invalid value for `email`, must not be `None`")  # noqa: E501
-
-        self._email = email
-
-    @property
     def gravatar(self):
         """Gets the gravatar of this JWTAccessToken.  # noqa: E501
 
@@ -387,48 +350,6 @@ class JWTAccessToken(object):
         """
 
         self._gravatar = gravatar
-
-    @property
-    def student_id(self):
-        """Gets the student_id of this JWTAccessToken.  # noqa: E501
-
-
-        :return: The student_id of this JWTAccessToken.  # noqa: E501
-        :rtype: str
-        """
-        return self._student_id
-
-    @student_id.setter
-    def student_id(self, student_id):
-        """Sets the student_id of this JWTAccessToken.
-
-
-        :param student_id: The student_id of this JWTAccessToken.  # noqa: E501
-        :type: str
-        """
-
-        self._student_id = student_id
-
-    @property
-    def real_name(self):
-        """Gets the real_name of this JWTAccessToken.  # noqa: E501
-
-
-        :return: The real_name of this JWTAccessToken.  # noqa: E501
-        :rtype: str
-        """
-        return self._real_name
-
-    @real_name.setter
-    def real_name(self, real_name):
-        """Sets the real_name of this JWTAccessToken.
-
-
-        :param real_name: The real_name of this JWTAccessToken.  # noqa: E501
-        :type: str
-        """
-
-        self._real_name = real_name
 
     @property
     def role(self):
@@ -452,27 +373,6 @@ class JWTAccessToken(object):
         self._role = role
 
     @property
-    def oauth_name(self):
-        """Gets the oauth_name of this JWTAccessToken.  # noqa: E501
-
-
-        :return: The oauth_name of this JWTAccessToken.  # noqa: E501
-        :rtype: str
-        """
-        return self._oauth_name
-
-    @oauth_name.setter
-    def oauth_name(self, oauth_name):
-        """Sets the oauth_name of this JWTAccessToken.
-
-
-        :param oauth_name: The oauth_name of this JWTAccessToken.  # noqa: E501
-        :type: str
-        """
-
-        self._oauth_name = oauth_name
-
-    @property
     def is_active(self):
         """Gets the is_active of this JWTAccessToken.  # noqa: E501
 
@@ -494,6 +394,27 @@ class JWTAccessToken(object):
             raise ValueError("Invalid value for `is_active`, must not be `None`")  # noqa: E501
 
         self._is_active = is_active
+
+    @property
+    def oauth_name(self):
+        """Gets the oauth_name of this JWTAccessToken.  # noqa: E501
+
+
+        :return: The oauth_name of this JWTAccessToken.  # noqa: E501
+        :rtype: str
+        """
+        return self._oauth_name
+
+    @oauth_name.setter
+    def oauth_name(self, oauth_name):
+        """Sets the oauth_name of this JWTAccessToken.
+
+
+        :param oauth_name: The oauth_name of this JWTAccessToken.  # noqa: E501
+        :type: str
+        """
+
+        self._oauth_name = oauth_name
 
     def to_dict(self):
         """Returns the model properties as a dict"""
