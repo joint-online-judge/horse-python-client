@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: d0459ba@2022-05-25T05:19:46Z  # noqa: E501
+    Git version: 8ddb50e@2022-05-25T10:22:49Z  # noqa: E501
 
     OpenAPI spec version: 1
     
@@ -28,7 +28,7 @@ class ValidationError(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'loc': 'list[str]',
+        'loc': 'list[AnyOfValidationErrorLocItems]',
         'msg': 'str',
         'type': 'str'
     }
@@ -55,7 +55,7 @@ class ValidationError(object):
 
 
         :return: The loc of this ValidationError.  # noqa: E501
-        :rtype: list[str]
+        :rtype: list[AnyOfValidationErrorLocItems]
         """
         return self._loc
 
@@ -65,7 +65,7 @@ class ValidationError(object):
 
 
         :param loc: The loc of this ValidationError.  # noqa: E501
-        :type: list[str]
+        :type: list[AnyOfValidationErrorLocItems]
         """
         if loc is None:
             raise ValueError("Invalid value for `loc`, must not be `None`")  # noqa: E501

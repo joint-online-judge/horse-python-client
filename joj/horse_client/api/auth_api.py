@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: d0459ba@2022-05-25T05:19:46Z  # noqa: E501
+    Git version: 8ddb50e@2022-05-25T10:22:49Z  # noqa: E501
 
     OpenAPI spec version: 1
     
@@ -218,22 +218,22 @@ class AuthApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def v1_login(self, grant_type, username, password, scope, client_id, client_secret, response_type, **kwargs):  # noqa: E501
+    def v1_login(self, response_type, **kwargs):  # noqa: E501
         """Login  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.v1_login(grant_type, username, password, scope, client_id, client_secret, response_type, async_req=True)
+        >>> thread = api.v1_login(response_type, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param str grant_type: (required)
-        :param str username: (required)
-        :param str password: (required)
-        :param str scope: (required)
-        :param str client_id: (required)
-        :param str client_secret: (required)
         :param str response_type: (required)
+        :param str grant_type:
+        :param str username:
+        :param str password:
+        :param str scope:
+        :param str client_id:
+        :param str client_secret:
         :param bool cookie: Add Set/Delete-Cookie on response header
         :param str redirect_url: The redirect url after the operation
         :return: AuthTokensResp
@@ -242,27 +242,27 @@ class AuthApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.v1_login_with_http_info(grant_type, username, password, scope, client_id, client_secret, response_type, **kwargs)  # noqa: E501
+            return self.v1_login_with_http_info(response_type, **kwargs)  # noqa: E501
         else:
-            (data) = self.v1_login_with_http_info(grant_type, username, password, scope, client_id, client_secret, response_type, **kwargs)  # noqa: E501
+            (data) = self.v1_login_with_http_info(response_type, **kwargs)  # noqa: E501
             return data
 
-    def v1_login_with_http_info(self, grant_type, username, password, scope, client_id, client_secret, response_type, **kwargs):  # noqa: E501
+    def v1_login_with_http_info(self, response_type, **kwargs):  # noqa: E501
         """Login  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.v1_login_with_http_info(grant_type, username, password, scope, client_id, client_secret, response_type, async_req=True)
+        >>> thread = api.v1_login_with_http_info(response_type, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param str grant_type: (required)
-        :param str username: (required)
-        :param str password: (required)
-        :param str scope: (required)
-        :param str client_id: (required)
-        :param str client_secret: (required)
         :param str response_type: (required)
+        :param str grant_type:
+        :param str username:
+        :param str password:
+        :param str scope:
+        :param str client_id:
+        :param str client_secret:
         :param bool cookie: Add Set/Delete-Cookie on response header
         :param str redirect_url: The redirect url after the operation
         :return: AuthTokensResp
@@ -270,7 +270,7 @@ class AuthApi(object):
                  returns the request thread.
         """
 
-        all_params = ['grant_type', 'username', 'password', 'scope', 'client_id', 'client_secret', 'response_type', 'cookie', 'redirect_url']  # noqa: E501
+        all_params = ['response_type', 'grant_type', 'username', 'password', 'scope', 'client_id', 'client_secret', 'cookie', 'redirect_url']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -285,30 +285,6 @@ class AuthApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'grant_type' is set
-        if ('grant_type' not in params or
-                params['grant_type'] is None):
-            raise ValueError("Missing the required parameter `grant_type` when calling `v1_login`")  # noqa: E501
-        # verify the required parameter 'username' is set
-        if ('username' not in params or
-                params['username'] is None):
-            raise ValueError("Missing the required parameter `username` when calling `v1_login`")  # noqa: E501
-        # verify the required parameter 'password' is set
-        if ('password' not in params or
-                params['password'] is None):
-            raise ValueError("Missing the required parameter `password` when calling `v1_login`")  # noqa: E501
-        # verify the required parameter 'scope' is set
-        if ('scope' not in params or
-                params['scope'] is None):
-            raise ValueError("Missing the required parameter `scope` when calling `v1_login`")  # noqa: E501
-        # verify the required parameter 'client_id' is set
-        if ('client_id' not in params or
-                params['client_id'] is None):
-            raise ValueError("Missing the required parameter `client_id` when calling `v1_login`")  # noqa: E501
-        # verify the required parameter 'client_secret' is set
-        if ('client_secret' not in params or
-                params['client_secret'] is None):
-            raise ValueError("Missing the required parameter `client_secret` when calling `v1_login`")  # noqa: E501
         # verify the required parameter 'response_type' is set
         if ('response_type' not in params or
                 params['response_type'] is None):

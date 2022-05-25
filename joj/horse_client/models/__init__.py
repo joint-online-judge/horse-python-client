@@ -4,7 +4,7 @@
 """
     JOJ Horse
 
-    Git version: d0459ba@2022-05-25T05:19:46Z  # noqa: E501
+    Git version: 8ddb50e@2022-05-25T10:22:49Z  # noqa: E501
 
     OpenAPI spec version: 1
     
@@ -22,6 +22,7 @@ from joj.horse_client.models.all_of_record_case_state import AllOfRecordCaseStat
 from joj.horse_client.models.all_of_record_detail_state import AllOfRecordDetailState
 from joj.horse_client.models.all_of_record_list_detail_state import AllOfRecordListDetailState
 from joj.horse_client.models.all_of_record_state import AllOfRecordState
+from joj.horse_client.models.any_of_validation_error_loc_items import AnyOfValidationErrorLocItems
 from joj.horse_client.models.archive_format import ArchiveFormat
 from joj.horse_client.models.archive_type import ArchiveType
 from joj.horse_client.models.auth_tokens import AuthTokens

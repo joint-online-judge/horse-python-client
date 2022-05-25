@@ -4,8 +4,8 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **grant_type** | **str** |  | [optional] 
-**username** | **str** |  | 
-**password** | **str** |  | 
+**username** | **str** |  | [optional] 
+**password** | **str** |  | [optional] 
 **scope** | **str** |  | [optional] [default to '']
 **client_id** | **str** |  | [optional] 
 **client_secret** | **str** |  | [optional] 

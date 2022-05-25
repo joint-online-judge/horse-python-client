@@ -105,7 +105,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_login**
-> AuthTokensResp v1_login(grant_type, username, password, scope, client_id, client_secret, response_type, cookie=cookie, redirect_url=redirect_url)
+> AuthTokensResp v1_login(response_type, grant_type=grant_type, username=username, password=password, scope=scope, client_id=client_id, client_secret=client_secret, cookie=cookie, redirect_url=redirect_url)
 
 Login
 
@@ -119,19 +119,19 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = joj.horse_client.AuthApi()
-grant_type = 'grant_type_example' # str | 
-username = 'username_example' # str | 
-password = 'password_example' # str | 
-scope = 'scope_example' # str | 
-client_id = 'client_id_example' # str | 
-client_secret = 'client_secret_example' # str | 
 response_type = 'response_type_example' # str | 
+grant_type = 'grant_type_example' # str |  (optional)
+username = 'username_example' # str |  (optional)
+password = 'password_example' # str |  (optional)
+scope = 'scope_example' # str |  (optional)
+client_id = 'client_id_example' # str |  (optional)
+client_secret = 'client_secret_example' # str |  (optional)
 cookie = true # bool | Add Set/Delete-Cookie on response header (optional) (default to true)
 redirect_url = 'redirect_url_example' # str | The redirect url after the operation (optional)
 
 try:
     # Login
-    api_response = api_instance.v1_login(grant_type, username, password, scope, client_id, client_secret, response_type, cookie=cookie, redirect_url=redirect_url)
+    api_response = api_instance.v1_login(response_type, grant_type=grant_type, username=username, password=password, scope=scope, client_id=client_id, client_secret=client_secret, cookie=cookie, redirect_url=redirect_url)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling AuthApi->v1_login: %s\n" % e)
@@ -141,13 +141,13 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **grant_type** | **str**|  | 
- **username** | **str**|  | 
- **password** | **str**|  | 
- **scope** | **str**|  | 
- **client_id** | **str**|  | 
- **client_secret** | **str**|  | 
  **response_type** | **str**|  | 
+ **grant_type** | **str**|  | [optional] 
+ **username** | **str**|  | [optional] 
+ **password** | **str**|  | [optional] 
+ **scope** | **str**|  | [optional] 
+ **client_id** | **str**|  | [optional] 
+ **client_secret** | **str**|  | [optional] 
  **cookie** | **bool**| Add Set/Delete-Cookie on response header | [optional] [default to true]
  **redirect_url** | **str**| The redirect url after the operation | [optional] 
 

@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: d0459ba@2022-05-25T05:19:46Z  # noqa: E501
+    Git version: 8ddb50e@2022-05-25T10:22:49Z  # noqa: E501
 
     OpenAPI spec version: 1
     
@@ -56,8 +56,10 @@ class OAuth2PasswordRequestForm(object):
         self.discriminator = None
         if grant_type is not None:
             self.grant_type = grant_type
-        self.username = username
-        self.password = password
+        if username is not None:
+            self.username = username
+        if password is not None:
+            self.password = password
         if scope is not None:
             self.scope = scope
         if client_id is not None:
@@ -104,8 +106,6 @@ class OAuth2PasswordRequestForm(object):
         :param username: The username of this OAuth2PasswordRequestForm.  # noqa: E501
         :type: str
         """
-        if username is None:
-            raise ValueError("Invalid value for `username`, must not be `None`")  # noqa: E501
 
         self._username = username
 
@@ -127,8 +127,6 @@ class OAuth2PasswordRequestForm(object):
         :param password: The password of this OAuth2PasswordRequestForm.  # noqa: E501
         :type: str
         """
-        if password is None:
-            raise ValueError("Invalid value for `password`, must not be `None`")  # noqa: E501
 
         self._password = password
 

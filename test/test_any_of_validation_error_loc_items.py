@@ -15,12 +15,12 @@ from __future__ import absolute_import
 import unittest
 
 import joj.horse_client
-from joj.horse_client.models.empty import Empty  # noqa: E501
+from joj.horse_client.models.any_of_validation_error_loc_items import AnyOfValidationErrorLocItems  # noqa: E501
 from joj.horse_client.rest import ApiException
 
 
-class TestEmpty(unittest.TestCase):
-    """Empty unit test stubs"""
+class TestAnyOfValidationErrorLocItems(unittest.TestCase):
+    """AnyOfValidationErrorLocItems unit test stubs"""
 
     def setUp(self):
         pass
@@ -28,10 +28,10 @@ class TestEmpty(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testEmpty(self):
-        """Test Empty"""
+    def testAnyOfValidationErrorLocItems(self):
+        """Test AnyOfValidationErrorLocItems"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = joj.horse_client.models.empty.Empty()  # noqa: E501
+        # model = joj.horse_client.models.any_of_validation_error_loc_items.AnyOfValidationErrorLocItems()  # noqa: E501
         pass
 
 
