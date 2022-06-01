@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: c4a9464@2022-05-31T05:05:16Z  # noqa: E501
+    Git version: 0e14009@2022-06-01T22:09:10Z  # noqa: E501
 
     OpenAPI spec version: 1
     
