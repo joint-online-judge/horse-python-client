@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: 23b9b03@2022-06-02T08:07:16Z  # noqa: E501
+    Git version: 3deba0b@2022-06-02T14:50:42Z  # noqa: E501
 
     OpenAPI spec version: 1
     
@@ -32,12 +32,12 @@ class AdminApi(object):
             api_client = ApiClient()
         self.api_client = api_client
 
-    def v1_create_judger(self, body, **kwargs):  # noqa: E501
-        """Create Judger  # noqa: E501
+    def v1_admin_create_judger(self, body, **kwargs):  # noqa: E501
+        """Admin Create Judger  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.v1_create_judger(body, async_req=True)
+        >>> thread = api.v1_admin_create_judger(body, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -48,17 +48,17 @@ class AdminApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.v1_create_judger_with_http_info(body, **kwargs)  # noqa: E501
+            return self.v1_admin_create_judger_with_http_info(body, **kwargs)  # noqa: E501
         else:
-            (data) = self.v1_create_judger_with_http_info(body, **kwargs)  # noqa: E501
+            (data) = self.v1_admin_create_judger_with_http_info(body, **kwargs)  # noqa: E501
             return data
 
-    def v1_create_judger_with_http_info(self, body, **kwargs):  # noqa: E501
-        """Create Judger  # noqa: E501
+    def v1_admin_create_judger_with_http_info(self, body, **kwargs):  # noqa: E501
+        """Admin Create Judger  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.v1_create_judger_with_http_info(body, async_req=True)
+        >>> thread = api.v1_admin_create_judger_with_http_info(body, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -79,14 +79,14 @@ class AdminApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method v1_create_judger" % key
+                    " to method v1_admin_create_judger" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'body' is set
         if ('body' not in params or
                 params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `v1_create_judger`")  # noqa: E501
+            raise ValueError("Missing the required parameter `body` when calling `v1_admin_create_judger`")  # noqa: E501
 
         collection_formats = {}
 
@@ -129,12 +129,12 @@ class AdminApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def v1_get_user(self, uid, **kwargs):  # noqa: E501
-        """Get User  # noqa: E501
+    def v1_admin_get_user(self, uid, **kwargs):  # noqa: E501
+        """Admin Get User  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.v1_get_user(uid, async_req=True)
+        >>> thread = api.v1_admin_get_user(uid, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -145,17 +145,17 @@ class AdminApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.v1_get_user_with_http_info(uid, **kwargs)  # noqa: E501
+            return self.v1_admin_get_user_with_http_info(uid, **kwargs)  # noqa: E501
         else:
-            (data) = self.v1_get_user_with_http_info(uid, **kwargs)  # noqa: E501
+            (data) = self.v1_admin_get_user_with_http_info(uid, **kwargs)  # noqa: E501
             return data
 
-    def v1_get_user_with_http_info(self, uid, **kwargs):  # noqa: E501
-        """Get User  # noqa: E501
+    def v1_admin_get_user_with_http_info(self, uid, **kwargs):  # noqa: E501
+        """Admin Get User  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.v1_get_user_with_http_info(uid, async_req=True)
+        >>> thread = api.v1_admin_get_user_with_http_info(uid, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -176,14 +176,14 @@ class AdminApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method v1_get_user" % key
+                    " to method v1_admin_get_user" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'uid' is set
         if ('uid' not in params or
                 params['uid'] is None):
-            raise ValueError("Missing the required parameter `uid` when calling `v1_get_user`")  # noqa: E501
+            raise ValueError("Missing the required parameter `uid` when calling `v1_admin_get_user`")  # noqa: E501
 
         collection_formats = {}
 
@@ -222,12 +222,12 @@ class AdminApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def v1_list_domain_roles(self, **kwargs):  # noqa: E501
-        """List Domain Roles  # noqa: E501
+    def v1_admin_list_domain_roles(self, **kwargs):  # noqa: E501
+        """Admin List Domain Roles  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.v1_list_domain_roles(async_req=True)
+        >>> thread = api.v1_admin_list_domain_roles(async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -240,17 +240,17 @@ class AdminApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.v1_list_domain_roles_with_http_info(**kwargs)  # noqa: E501
+            return self.v1_admin_list_domain_roles_with_http_info(**kwargs)  # noqa: E501
         else:
-            (data) = self.v1_list_domain_roles_with_http_info(**kwargs)  # noqa: E501
+            (data) = self.v1_admin_list_domain_roles_with_http_info(**kwargs)  # noqa: E501
             return data
 
-    def v1_list_domain_roles_with_http_info(self, **kwargs):  # noqa: E501
-        """List Domain Roles  # noqa: E501
+    def v1_admin_list_domain_roles_with_http_info(self, **kwargs):  # noqa: E501
+        """Admin List Domain Roles  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.v1_list_domain_roles_with_http_info(async_req=True)
+        >>> thread = api.v1_admin_list_domain_roles_with_http_info(async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -273,7 +273,7 @@ class AdminApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method v1_list_domain_roles" % key
+                    " to method v1_admin_list_domain_roles" % key
                 )
             params[key] = val
         del params['kwargs']
@@ -319,42 +319,42 @@ class AdminApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def v1_list_judgers(self, **kwargs):  # noqa: E501
-        """List Judgers  # noqa: E501
+    def v1_admin_list_judgers(self, **kwargs):  # noqa: E501
+        """Admin List Judgers  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.v1_list_judgers(async_req=True)
+        >>> thread = api.v1_admin_list_judgers(async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
         :param str ordering: Comma separated list of ordering the results. You may specify reverse orderings by prefixing the field name with '-'.  Available fields: created_at,updated_at
         :param int offset:
         :param int limit:
-        :return: UserListResp
+        :return: JudgerDetailListResp
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.v1_list_judgers_with_http_info(**kwargs)  # noqa: E501
+            return self.v1_admin_list_judgers_with_http_info(**kwargs)  # noqa: E501
         else:
-            (data) = self.v1_list_judgers_with_http_info(**kwargs)  # noqa: E501
+            (data) = self.v1_admin_list_judgers_with_http_info(**kwargs)  # noqa: E501
             return data
 
-    def v1_list_judgers_with_http_info(self, **kwargs):  # noqa: E501
-        """List Judgers  # noqa: E501
+    def v1_admin_list_judgers_with_http_info(self, **kwargs):  # noqa: E501
+        """Admin List Judgers  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.v1_list_judgers_with_http_info(async_req=True)
+        >>> thread = api.v1_admin_list_judgers_with_http_info(async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
         :param str ordering: Comma separated list of ordering the results. You may specify reverse orderings by prefixing the field name with '-'.  Available fields: created_at,updated_at
         :param int offset:
         :param int limit:
-        :return: UserListResp
+        :return: JudgerDetailListResp
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -370,7 +370,7 @@ class AdminApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method v1_list_judgers" % key
+                    " to method v1_admin_list_judgers" % key
                 )
             params[key] = val
         del params['kwargs']
@@ -408,7 +408,7 @@ class AdminApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='UserListResp',  # noqa: E501
+            response_type='JudgerDetailListResp',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -416,12 +416,12 @@ class AdminApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def v1_list_user_domains(self, uid, **kwargs):  # noqa: E501
-        """List User Domains  # noqa: E501
+    def v1_admin_list_user_domains(self, uid, **kwargs):  # noqa: E501
+        """Admin List User Domains  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.v1_list_user_domains(uid, async_req=True)
+        >>> thread = api.v1_admin_list_user_domains(uid, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -437,17 +437,17 @@ class AdminApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.v1_list_user_domains_with_http_info(uid, **kwargs)  # noqa: E501
+            return self.v1_admin_list_user_domains_with_http_info(uid, **kwargs)  # noqa: E501
         else:
-            (data) = self.v1_list_user_domains_with_http_info(uid, **kwargs)  # noqa: E501
+            (data) = self.v1_admin_list_user_domains_with_http_info(uid, **kwargs)  # noqa: E501
             return data
 
-    def v1_list_user_domains_with_http_info(self, uid, **kwargs):  # noqa: E501
-        """List User Domains  # noqa: E501
+    def v1_admin_list_user_domains_with_http_info(self, uid, **kwargs):  # noqa: E501
+        """Admin List User Domains  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.v1_list_user_domains_with_http_info(uid, async_req=True)
+        >>> thread = api.v1_admin_list_user_domains_with_http_info(uid, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -473,14 +473,14 @@ class AdminApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method v1_list_user_domains" % key
+                    " to method v1_admin_list_user_domains" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'uid' is set
         if ('uid' not in params or
                 params['uid'] is None):
-            raise ValueError("Missing the required parameter `uid` when calling `v1_list_user_domains`")  # noqa: E501
+            raise ValueError("Missing the required parameter `uid` when calling `v1_admin_list_user_domains`")  # noqa: E501
 
         collection_formats = {}
 
@@ -531,12 +531,12 @@ class AdminApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def v1_list_users(self, **kwargs):  # noqa: E501
-        """List Users  # noqa: E501
+    def v1_admin_list_users(self, **kwargs):  # noqa: E501
+        """Admin List Users  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.v1_list_users(async_req=True)
+        >>> thread = api.v1_admin_list_users(async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -549,17 +549,17 @@ class AdminApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.v1_list_users_with_http_info(**kwargs)  # noqa: E501
+            return self.v1_admin_list_users_with_http_info(**kwargs)  # noqa: E501
         else:
-            (data) = self.v1_list_users_with_http_info(**kwargs)  # noqa: E501
+            (data) = self.v1_admin_list_users_with_http_info(**kwargs)  # noqa: E501
             return data
 
-    def v1_list_users_with_http_info(self, **kwargs):  # noqa: E501
-        """List Users  # noqa: E501
+    def v1_admin_list_users_with_http_info(self, **kwargs):  # noqa: E501
+        """Admin List Users  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.v1_list_users_with_http_info(async_req=True)
+        >>> thread = api.v1_admin_list_users_with_http_info(async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -582,7 +582,7 @@ class AdminApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method v1_list_users" % key
+                    " to method v1_admin_list_users" % key
                 )
             params[key] = val
         del params['kwargs']

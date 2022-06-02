@@ -4,17 +4,17 @@ All URIs are relative to */api/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**v1_create_judger**](AdminApi.md#v1_create_judger) | **POST** /admin/judgers | Create Judger
-[**v1_get_user**](AdminApi.md#v1_get_user) | **GET** /admin/{uid} | Get User
-[**v1_list_domain_roles**](AdminApi.md#v1_list_domain_roles) | **GET** /admin/domain_roles | List Domain Roles
-[**v1_list_judgers**](AdminApi.md#v1_list_judgers) | **GET** /admin/judgers | List Judgers
-[**v1_list_user_domains**](AdminApi.md#v1_list_user_domains) | **GET** /admin/{uid}/domains | List User Domains
-[**v1_list_users**](AdminApi.md#v1_list_users) | **GET** /admin/users | List Users
+[**v1_admin_create_judger**](AdminApi.md#v1_admin_create_judger) | **POST** /admin/judgers | Admin Create Judger
+[**v1_admin_get_user**](AdminApi.md#v1_admin_get_user) | **GET** /admin/{uid} | Admin Get User
+[**v1_admin_list_domain_roles**](AdminApi.md#v1_admin_list_domain_roles) | **GET** /admin/domain_roles | Admin List Domain Roles
+[**v1_admin_list_judgers**](AdminApi.md#v1_admin_list_judgers) | **GET** /admin/judgers | Admin List Judgers
+[**v1_admin_list_user_domains**](AdminApi.md#v1_admin_list_user_domains) | **GET** /admin/{uid}/domains | Admin List User Domains
+[**v1_admin_list_users**](AdminApi.md#v1_admin_list_users) | **GET** /admin/users | Admin List Users
 
-# **v1_create_judger**
-> AuthTokensWithLakefsResp v1_create_judger(body)
+# **v1_admin_create_judger**
+> AuthTokensWithLakefsResp v1_admin_create_judger(body)
 
-Create Judger
+Admin Create Judger
 
 ### Example
 ```python
@@ -30,11 +30,11 @@ api_instance = joj.horse_client.AdminApi(joj.horse_client.ApiClient(configuratio
 body = joj.horse_client.JudgerCreate() # JudgerCreate | 
 
 try:
-    # Create Judger
-    api_response = api_instance.v1_create_judger(body)
+    # Admin Create Judger
+    api_response = api_instance.v1_admin_create_judger(body)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling AdminApi->v1_create_judger: %s\n" % e)
+    print("Exception when calling AdminApi->v1_admin_create_judger: %s\n" % e)
 ```
 
 ### Parameters
@@ -58,10 +58,10 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **v1_get_user**
-> UserDetailResp v1_get_user(uid)
+# **v1_admin_get_user**
+> UserDetailResp v1_admin_get_user(uid)
 
-Get User
+Admin Get User
 
 ### Example
 ```python
@@ -77,11 +77,11 @@ api_instance = joj.horse_client.AdminApi(joj.horse_client.ApiClient(configuratio
 uid = 'uid_example' # str | 
 
 try:
-    # Get User
-    api_response = api_instance.v1_get_user(uid)
+    # Admin Get User
+    api_response = api_instance.v1_admin_get_user(uid)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling AdminApi->v1_get_user: %s\n" % e)
+    print("Exception when calling AdminApi->v1_admin_get_user: %s\n" % e)
 ```
 
 ### Parameters
@@ -105,10 +105,10 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **v1_list_domain_roles**
-> DomainRoleListResp v1_list_domain_roles(ordering=ordering, offset=offset, limit=limit)
+# **v1_admin_list_domain_roles**
+> DomainRoleListResp v1_admin_list_domain_roles(ordering=ordering, offset=offset, limit=limit)
 
-List Domain Roles
+Admin List Domain Roles
 
 ### Example
 ```python
@@ -126,11 +126,11 @@ offset = 0 # int |  (optional) (default to 0)
 limit = 100 # int |  (optional) (default to 100)
 
 try:
-    # List Domain Roles
-    api_response = api_instance.v1_list_domain_roles(ordering=ordering, offset=offset, limit=limit)
+    # Admin List Domain Roles
+    api_response = api_instance.v1_admin_list_domain_roles(ordering=ordering, offset=offset, limit=limit)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling AdminApi->v1_list_domain_roles: %s\n" % e)
+    print("Exception when calling AdminApi->v1_admin_list_domain_roles: %s\n" % e)
 ```
 
 ### Parameters
@@ -156,10 +156,10 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **v1_list_judgers**
-> UserListResp v1_list_judgers(ordering=ordering, offset=offset, limit=limit)
+# **v1_admin_list_judgers**
+> JudgerDetailListResp v1_admin_list_judgers(ordering=ordering, offset=offset, limit=limit)
 
-List Judgers
+Admin List Judgers
 
 ### Example
 ```python
@@ -177,11 +177,11 @@ offset = 0 # int |  (optional) (default to 0)
 limit = 100 # int |  (optional) (default to 100)
 
 try:
-    # List Judgers
-    api_response = api_instance.v1_list_judgers(ordering=ordering, offset=offset, limit=limit)
+    # Admin List Judgers
+    api_response = api_instance.v1_admin_list_judgers(ordering=ordering, offset=offset, limit=limit)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling AdminApi->v1_list_judgers: %s\n" % e)
+    print("Exception when calling AdminApi->v1_admin_list_judgers: %s\n" % e)
 ```
 
 ### Parameters
@@ -194,7 +194,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**UserListResp**](UserListResp.md)
+[**JudgerDetailListResp**](JudgerDetailListResp.md)
 
 ### Authorization
 
@@ -207,10 +207,10 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **v1_list_user_domains**
-> DomainListResp v1_list_user_domains(uid, role=role, groups=groups, ordering=ordering, offset=offset, limit=limit)
+# **v1_admin_list_user_domains**
+> DomainListResp v1_admin_list_user_domains(uid, role=role, groups=groups, ordering=ordering, offset=offset, limit=limit)
 
-List User Domains
+Admin List User Domains
 
 ### Example
 ```python
@@ -231,11 +231,11 @@ offset = 0 # int |  (optional) (default to 0)
 limit = 100 # int |  (optional) (default to 100)
 
 try:
-    # List User Domains
-    api_response = api_instance.v1_list_user_domains(uid, role=role, groups=groups, ordering=ordering, offset=offset, limit=limit)
+    # Admin List User Domains
+    api_response = api_instance.v1_admin_list_user_domains(uid, role=role, groups=groups, ordering=ordering, offset=offset, limit=limit)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling AdminApi->v1_list_user_domains: %s\n" % e)
+    print("Exception when calling AdminApi->v1_admin_list_user_domains: %s\n" % e)
 ```
 
 ### Parameters
@@ -264,10 +264,10 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **v1_list_users**
-> UserListResp v1_list_users(ordering=ordering, offset=offset, limit=limit)
+# **v1_admin_list_users**
+> UserListResp v1_admin_list_users(ordering=ordering, offset=offset, limit=limit)
 
-List Users
+Admin List Users
 
 ### Example
 ```python
@@ -285,11 +285,11 @@ offset = 0 # int |  (optional) (default to 0)
 limit = 100 # int |  (optional) (default to 100)
 
 try:
-    # List Users
-    api_response = api_instance.v1_list_users(ordering=ordering, offset=offset, limit=limit)
+    # Admin List Users
+    api_response = api_instance.v1_admin_list_users(ordering=ordering, offset=offset, limit=limit)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling AdminApi->v1_list_users: %s\n" % e)
+    print("Exception when calling AdminApi->v1_admin_list_users: %s\n" % e)
 ```
 
 ### Parameters

@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: 23b9b03@2022-06-02T08:07:16Z  # noqa: E501
+    Git version: 3deba0b@2022-06-02T14:50:42Z  # noqa: E501
 
     OpenAPI spec version: 1
     
@@ -28,45 +28,45 @@ class TestAdminApi(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def test_v1_create_judger(self):
-        """Test case for v1_create_judger
+    def test_v1_admin_create_judger(self):
+        """Test case for v1_admin_create_judger
 
-        Create Judger  # noqa: E501
+        Admin Create Judger  # noqa: E501
         """
         pass
 
-    def test_v1_get_user(self):
-        """Test case for v1_get_user
+    def test_v1_admin_get_user(self):
+        """Test case for v1_admin_get_user
 
-        Get User  # noqa: E501
+        Admin Get User  # noqa: E501
         """
         pass
 
-    def test_v1_list_domain_roles(self):
-        """Test case for v1_list_domain_roles
+    def test_v1_admin_list_domain_roles(self):
+        """Test case for v1_admin_list_domain_roles
 
-        List Domain Roles  # noqa: E501
+        Admin List Domain Roles  # noqa: E501
         """
         pass
 
-    def test_v1_list_judgers(self):
-        """Test case for v1_list_judgers
+    def test_v1_admin_list_judgers(self):
+        """Test case for v1_admin_list_judgers
 
-        List Judgers  # noqa: E501
+        Admin List Judgers  # noqa: E501
         """
         pass
 
-    def test_v1_list_user_domains(self):
-        """Test case for v1_list_user_domains
+    def test_v1_admin_list_user_domains(self):
+        """Test case for v1_admin_list_user_domains
 
-        List User Domains  # noqa: E501
+        Admin List User Domains  # noqa: E501
         """
         pass
 
-    def test_v1_list_users(self):
-        """Test case for v1_list_users
+    def test_v1_admin_list_users(self):
+        """Test case for v1_admin_list_users
 
-        List Users  # noqa: E501
+        Admin List Users  # noqa: E501
         """
         pass
 
