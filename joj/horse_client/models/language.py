@@ -3,7 +3,7 @@
 """
     JOJ Horse
 
-    Git version: 52894e2@2023-02-02T07:47:05Z  # noqa: E501
+    Git version: 0ae99f8@2023-02-03T06:54:51Z  # noqa: E501
 
     OpenAPI spec version: 1
     
@@ -43,7 +43,7 @@ class Language(object):
         'name': 'name'
     }
 
-    def __init__(self, compile_files=None, compile_args=None, case_default=None, cases=None, name=None):  # noqa: E501
+    def __init__(self, compile_files=None, compile_args=None, case_default=None, cases=None, name='c++'):  # noqa: E501
         """Language - a model defined in Swagger"""  # noqa: E501
         self._compile_files = None
         self._compile_args = None
@@ -59,7 +59,8 @@ class Language(object):
             self.case_default = case_default
         if cases is not None:
             self.cases = cases
-        self.name = name
+        if name is not None:
+            self.name = name
 
     @property
     def compile_files(self):
@@ -163,8 +164,6 @@ class Language(object):
         :param name: The name of this Language.  # noqa: E501
         :type: str
         """
-        if name is None:
-            raise ValueError("Invalid value for `name`, must not be `None`")  # noqa: E501
 
         self._name = name
 
